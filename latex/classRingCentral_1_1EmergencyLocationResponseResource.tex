@@ -1,0 +1,167 @@
+\hypertarget{classRingCentral_1_1EmergencyLocationResponseResource}{}\doxysection{Ring\+Central.\+Emergency\+Location\+Response\+Resource Class Reference}
+\label{classRingCentral_1_1EmergencyLocationResponseResource}\index{RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}}
+
+
+Company emergency response location details  
+
+
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1EmergencyLocationResponseResource_afcd889e93621589f2c2906954f747db0}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of an emergency response location \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1CommonEmergencyLocationAddressInfo}{Common\+Emergency\+Location\+Address\+Info}} \mbox{\hyperlink{classRingCentral_1_1EmergencyLocationResponseResource_a3bfb72efa5e7ff9960205d7123913717}{address}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1EmergencyLocationResponseResource_a2f9d28ee2a4f40232134fd458098aa40}{name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Emergency response location name \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1ShortSiteInfo}{Short\+Site\+Info}} \mbox{\hyperlink{classRingCentral_1_1EmergencyLocationResponseResource_aa45e2195901d30993624d89a6c9a78d5}{site}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1EmergencyLocationResponseResource_a34765c4c5c13120c815beb833780f29c}{address\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Emergency address status Enum\+: Valid, Invalid, Provisioning \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1EmergencyLocationResponseResource_a8c3e5fca1b261674e05de3b604a7d96c}{usage\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Status of emergency response location usage. Enum\+: Active, Inactive \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1EmergencyLocationResponseResource_a6e7205a8fb86f6cc3ccbdc714421522a}{sync\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Resulting status of emergency address synchronization. Returned if {\ttfamily sync\+Emergency\+Address} parameter is set to {\ttfamily true} Enum\+: Verified, Updated, Deleted, Activation\+Process, Not\+Required, Unsupported, Failed \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1EmergencyLocationResponseResource_a8e423130b7af40a43444db8bf4f003a8}{address\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enum\+: Location\+With\+Elins, Location\+With\+Endpoint \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1EmergencyLocationResponseResource_a0e0f302dcddeac1f6499ec77c657b8fd}{visibility}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Visibility of an emergency response location. If {\ttfamily Private} is set, then location is visible only for the restricted number of users, specified in {\ttfamily owners} array Default\+: Public Enum\+: Private, Public \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRingCentral_1_1LocationOwnerInfo}{Location\+Owner\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1EmergencyLocationResponseResource_a16c5dc4f07b546defd87ebdb03daa052}{owners}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of private location owners \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1EmergencyLocationResponseResource_a6388bba2c79cc47714bdd9afdc8d086c}{address\+Format\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Address format ID \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1EmergencyLocationResponseResource_ab18221babf1cb96cb693c5418455b954}{trusted}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If \textquotesingle{}true\textquotesingle{} address validation for non-\/us addresses is skipped \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Company emergency response location details 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classRingCentral_1_1EmergencyLocationResponseResource_a3bfb72efa5e7ff9960205d7123913717}\label{classRingCentral_1_1EmergencyLocationResponseResource_a3bfb72efa5e7ff9960205d7123913717}} 
+\index{RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}!address@{address}}
+\index{address@{address}!RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}}
+\doxysubsubsection{\texorpdfstring{address}{address}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1CommonEmergencyLocationAddressInfo}{Common\+Emergency\+Location\+Address\+Info}} Ring\+Central.\+Emergency\+Location\+Response\+Resource.\+address\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1EmergencyLocationResponseResource_a6388bba2c79cc47714bdd9afdc8d086c}\label{classRingCentral_1_1EmergencyLocationResponseResource_a6388bba2c79cc47714bdd9afdc8d086c}} 
+\index{RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}!addressFormatId@{addressFormatId}}
+\index{addressFormatId@{addressFormatId}!RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}}
+\doxysubsubsection{\texorpdfstring{addressFormatId}{addressFormatId}}
+{\footnotesize\ttfamily string Ring\+Central.\+Emergency\+Location\+Response\+Resource.\+address\+Format\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Address format ID 
+
+\mbox{\Hypertarget{classRingCentral_1_1EmergencyLocationResponseResource_a34765c4c5c13120c815beb833780f29c}\label{classRingCentral_1_1EmergencyLocationResponseResource_a34765c4c5c13120c815beb833780f29c}} 
+\index{RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}!addressStatus@{addressStatus}}
+\index{addressStatus@{addressStatus}!RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}}
+\doxysubsubsection{\texorpdfstring{addressStatus}{addressStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Emergency\+Location\+Response\+Resource.\+address\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Emergency address status Enum\+: Valid, Invalid, Provisioning 
+
+\mbox{\Hypertarget{classRingCentral_1_1EmergencyLocationResponseResource_a8e423130b7af40a43444db8bf4f003a8}\label{classRingCentral_1_1EmergencyLocationResponseResource_a8e423130b7af40a43444db8bf4f003a8}} 
+\index{RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}!addressType@{addressType}}
+\index{addressType@{addressType}!RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}}
+\doxysubsubsection{\texorpdfstring{addressType}{addressType}}
+{\footnotesize\ttfamily string Ring\+Central.\+Emergency\+Location\+Response\+Resource.\+address\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Enum\+: Location\+With\+Elins, Location\+With\+Endpoint 
+
+\mbox{\Hypertarget{classRingCentral_1_1EmergencyLocationResponseResource_afcd889e93621589f2c2906954f747db0}\label{classRingCentral_1_1EmergencyLocationResponseResource_afcd889e93621589f2c2906954f747db0}} 
+\index{RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}!id@{id}}
+\index{id@{id}!RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily string Ring\+Central.\+Emergency\+Location\+Response\+Resource.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of an emergency response location 
+
+\mbox{\Hypertarget{classRingCentral_1_1EmergencyLocationResponseResource_a2f9d28ee2a4f40232134fd458098aa40}\label{classRingCentral_1_1EmergencyLocationResponseResource_a2f9d28ee2a4f40232134fd458098aa40}} 
+\index{RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}!name@{name}}
+\index{name@{name}!RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string Ring\+Central.\+Emergency\+Location\+Response\+Resource.\+name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Emergency response location name 
+
+\mbox{\Hypertarget{classRingCentral_1_1EmergencyLocationResponseResource_a16c5dc4f07b546defd87ebdb03daa052}\label{classRingCentral_1_1EmergencyLocationResponseResource_a16c5dc4f07b546defd87ebdb03daa052}} 
+\index{RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}!owners@{owners}}
+\index{owners@{owners}!RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}}
+\doxysubsubsection{\texorpdfstring{owners}{owners}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1LocationOwnerInfo}{Location\+Owner\+Info}} \mbox{[}$\,$\mbox{]} Ring\+Central.\+Emergency\+Location\+Response\+Resource.\+owners\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of private location owners 
+
+\mbox{\Hypertarget{classRingCentral_1_1EmergencyLocationResponseResource_aa45e2195901d30993624d89a6c9a78d5}\label{classRingCentral_1_1EmergencyLocationResponseResource_aa45e2195901d30993624d89a6c9a78d5}} 
+\index{RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}!site@{site}}
+\index{site@{site}!RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}}
+\doxysubsubsection{\texorpdfstring{site}{site}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRingCentral_1_1ShortSiteInfo}{Short\+Site\+Info}} Ring\+Central.\+Emergency\+Location\+Response\+Resource.\+site\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+
+
+\mbox{\Hypertarget{classRingCentral_1_1EmergencyLocationResponseResource_a6e7205a8fb86f6cc3ccbdc714421522a}\label{classRingCentral_1_1EmergencyLocationResponseResource_a6e7205a8fb86f6cc3ccbdc714421522a}} 
+\index{RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}!syncStatus@{syncStatus}}
+\index{syncStatus@{syncStatus}!RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}}
+\doxysubsubsection{\texorpdfstring{syncStatus}{syncStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Emergency\+Location\+Response\+Resource.\+sync\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Resulting status of emergency address synchronization. Returned if {\ttfamily sync\+Emergency\+Address} parameter is set to {\ttfamily true} Enum\+: Verified, Updated, Deleted, Activation\+Process, Not\+Required, Unsupported, Failed 
+
+\mbox{\Hypertarget{classRingCentral_1_1EmergencyLocationResponseResource_ab18221babf1cb96cb693c5418455b954}\label{classRingCentral_1_1EmergencyLocationResponseResource_ab18221babf1cb96cb693c5418455b954}} 
+\index{RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}!trusted@{trusted}}
+\index{trusted@{trusted}!RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}}
+\doxysubsubsection{\texorpdfstring{trusted}{trusted}}
+{\footnotesize\ttfamily bool? Ring\+Central.\+Emergency\+Location\+Response\+Resource.\+trusted\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If \textquotesingle{}true\textquotesingle{} address validation for non-\/us addresses is skipped 
+
+\mbox{\Hypertarget{classRingCentral_1_1EmergencyLocationResponseResource_a8c3e5fca1b261674e05de3b604a7d96c}\label{classRingCentral_1_1EmergencyLocationResponseResource_a8c3e5fca1b261674e05de3b604a7d96c}} 
+\index{RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}!usageStatus@{usageStatus}}
+\index{usageStatus@{usageStatus}!RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}}
+\doxysubsubsection{\texorpdfstring{usageStatus}{usageStatus}}
+{\footnotesize\ttfamily string Ring\+Central.\+Emergency\+Location\+Response\+Resource.\+usage\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Status of emergency response location usage. Enum\+: Active, Inactive 
+
+\mbox{\Hypertarget{classRingCentral_1_1EmergencyLocationResponseResource_a0e0f302dcddeac1f6499ec77c657b8fd}\label{classRingCentral_1_1EmergencyLocationResponseResource_a0e0f302dcddeac1f6499ec77c657b8fd}} 
+\index{RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}!visibility@{visibility}}
+\index{visibility@{visibility}!RingCentral.EmergencyLocationResponseResource@{RingCentral.EmergencyLocationResponseResource}}
+\doxysubsubsection{\texorpdfstring{visibility}{visibility}}
+{\footnotesize\ttfamily string Ring\+Central.\+Emergency\+Location\+Response\+Resource.\+visibility\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Visibility of an emergency response location. If {\ttfamily Private} is set, then location is visible only for the restricted number of users, specified in {\ttfamily owners} array Default\+: Public Enum\+: Private, Public 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Emergency\+Location\+Response\+Resource.\+cs\end{DoxyCompactItemize}

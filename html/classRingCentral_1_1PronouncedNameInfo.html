@@ -76,10 +76,10 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:a6248df1e9c99bca23ed2d70d448058cb"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRingCentral_1_1PronouncedNameInfo.html#a6248df1e9c99bca23ed2d70d448058cb">type</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:a6248df1e9c99bca23ed2d70d448058cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Voice name type. 'Default' - default extension name; first name and last name specified in user profile; 'TextToSpeech' - custom text; user name spelled the way it sounds and specified by user; 'Recorded'  <a href="classRingCentral_1_1PronouncedNameInfo.html#a6248df1e9c99bca23ed2d70d448058cb">More...</a><br /></td></tr>
+<tr class="memdesc:a6248df1e9c99bca23ed2d70d448058cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method used to pronounce the user's name:  <a href="classRingCentral_1_1PronouncedNameInfo.html#a6248df1e9c99bca23ed2d70d448058cb">More...</a><br /></td></tr>
 <tr class="separator:a6248df1e9c99bca23ed2d70d448058cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c2d51f3c89ad1ce7b64a8f99a5ff64c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRingCentral_1_1PronouncedNameInfo.html#a4c2d51f3c89ad1ce7b64a8f99a5ff64c">text</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:a4c2d51f3c89ad1ce7b64a8f99a5ff64c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom text  <a href="classRingCentral_1_1PronouncedNameInfo.html#a4c2d51f3c89ad1ce7b64a8f99a5ff64c">More...</a><br /></td></tr>
+<tr class="memdesc:a4c2d51f3c89ad1ce7b64a8f99a5ff64c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom text (for <code>TextToSpeech</code> type only)  <a href="classRingCentral_1_1PronouncedNameInfo.html#a4c2d51f3c89ad1ce7b64a8f99a5ff64c">More...</a><br /></td></tr>
 <tr class="separator:a4c2d51f3c89ad1ce7b64a8f99a5ff64c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6bbb639f9be98ee2c32b17be3867397"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRingCentral_1_1PronouncedNamePromptInfo.html">PronouncedNamePromptInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRingCentral_1_1PronouncedNameInfo.html#ac6bbb639f9be98ee2c32b17be3867397">prompt</a><code> [get, set]</code></td></tr>
 <tr class="separator:ac6bbb639f9be98ee2c32b17be3867397"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,7 +129,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Custom text </p>
+<p>Custom text (for <code>TextToSpeech</code> type only) </p>
 
 </div>
 </div>
@@ -153,9 +153,11 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Voice name type. 'Default' - default extension name; first name and last name specified in user profile; 'TextToSpeech' - custom text; user name spelled the way it sounds and specified by user; 'Recorded' </p>
+<p>The method used to pronounce the user's name: </p>
 <ul>
-<li>custom audio, user name recorded in user's own voice (supported only for extension retrieval) Enum: Default, TextToSpeech, Recorded</li>
+<li><code>Default</code> - default extension name; first and last name specified in user's profile are pronounced using text-to-speech;</li>
+<li><code>TextToSpeech</code> - custom text specified by a user pronounced using text-to-speech;</li>
+<li><code>Recorded</code> - custom audio uploaded by a user, the name recorded in user's own voice (supported only for extension retrieval). Enum: Default, TextToSpeech, Recorded</li>
 </ul>
 
 </div>

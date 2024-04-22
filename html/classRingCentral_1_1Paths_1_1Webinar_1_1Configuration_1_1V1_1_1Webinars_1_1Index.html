@@ -249,7 +249,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>webinarId</b></td><
 
 <p>Updates a <a class="el" href="namespaceRingCentral_1_1Paths_1_1Webinar.html">Webinar</a>. The payload may contain just changed fields of a <a class="el" href="namespaceRingCentral_1_1Paths_1_1Webinar.html">Webinar</a> resource (it is a partial update): </p>
 <ul>
-<li>host cannot be changed and host user information cannot be updated;</li>
+<li>host cannot be changed, and host user information cannot be updated;</li>
 <li>only the settings which are not mandated at account level or are unlocked can be changed;</li>
 <li>in order to reset a webinar password it should be passed as an empty string;</li>
 <li>"registrationStatus" cannot be changed. HTTP Method: patch Endpoint: /webinar/configuration/v1/webinars/{webinarId} Rate Limit Group: Heavy App Permission: EditWebinars</li>

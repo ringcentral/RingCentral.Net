@@ -32,7 +32,7 @@ string \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_a3ac89db42
 \mbox{\hyperlink{classRingCentral_1_1DevicePhoneLinesInfo}{Device\+Phone\+Lines\+Info}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_a7ee139e11af3d53265f548860f2e113e}{phone\+Lines}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Phone lines information \end{DoxyCompactList}\item 
 long? \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_a62da46ea22dfaab38e12b7fc2a852e15}{box\+Billing\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Box billing identifier of a device. Applicable only for Hard\+Phones. It is an alternative way to identify the device to be ordered. Either model structure, or box\+Billing\+Id must be specified forT?Hard\+Phone Format\+: int64 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Box billing identifier of a device. Applicable only for devices of {\ttfamily Hard\+Phone} type. Format\+: int64 \end{DoxyCompactList}\item 
 bool? \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_ade06eef45591ca4f3bd34271c385c174}{use\+As\+Common\+Phone}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Supported only for devices assigned to Limited extensions. If true, enables users to log in to this phone as a common phone. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_a0d3cce75e4f219f97df55a671ff7bd14}{line\+Pooling}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
@@ -54,7 +54,7 @@ string \mbox{\hyperlink{classRingCentral_1_1SipRegistrationDeviceInfo_ae75882c60
 
 
 
-Box billing identifier of a device. Applicable only for Hard\+Phones. It is an alternative way to identify the device to be ordered. Either model structure, or box\+Billing\+Id must be specified forT?Hard\+Phone Format\+: int64 
+Box billing identifier of a device. Applicable only for devices of {\ttfamily Hard\+Phone} type. Format\+: int64 
 
 \mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_a3ac89db42e63097d51513b38ab4b6d98}\label{classRingCentral_1_1SipRegistrationDeviceInfo_a3ac89db42e63097d51513b38ab4b6d98}} 
 \index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!computerName@{computerName}}
@@ -138,9 +138,9 @@ Pooling type of device\+:
 
 
 \begin{DoxyItemize}
-\item {\ttfamily \mbox{\hyperlink{classRingCentral_1_1Host}{Host}}} -\/ device with standalone paid phone line which can be linked to soft phone client instance
-\item {\ttfamily Guest} -\/ device with a linked phone line
-\item {\ttfamily None} -\/ device without a phone line or with specific line (free, BLA, etc.) Enum\+: \mbox{\hyperlink{classRingCentral_1_1Host}{Host}}, Guest, None
+\item {\ttfamily \mbox{\hyperlink{classRingCentral_1_1Host}{Host}}} -\/ device with a standalone paid phone line which can be linked to soft phone client instance;
+\item {\ttfamily Guest} -\/ device with a linked phone line;
+\item {\ttfamily None} -\/ device without a phone line or with a specific line (free, BLA, etc.) Enum\+: \mbox{\hyperlink{classRingCentral_1_1Host}{Host}}, Guest, None
 \end{DoxyItemize}\mbox{\Hypertarget{classRingCentral_1_1SipRegistrationDeviceInfo_aa2374ca46848ae0410c4f1b36aa0e34f}\label{classRingCentral_1_1SipRegistrationDeviceInfo_aa2374ca46848ae0410c4f1b36aa0e34f}} 
 \index{RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}!model@{model}}
 \index{model@{model}!RingCentral.SipRegistrationDeviceInfo@{RingCentral.SipRegistrationDeviceInfo}}

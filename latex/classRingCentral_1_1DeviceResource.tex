@@ -32,7 +32,7 @@ string \mbox{\hyperlink{classRingCentral_1_1DeviceResource_ad6dc195fa4294c5ac112
 \mbox{\hyperlink{classRingCentral_1_1ShippingInfo}{Shipping\+Info}} \mbox{\hyperlink{classRingCentral_1_1DeviceResource_a256c2dba707e15477af428b9b910ca48}{shipping}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \item 
 long? \mbox{\hyperlink{classRingCentral_1_1DeviceResource_af458e1fefeec8d168f8db99effedbb06}{box\+Billing\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Box billing identifier of a device. Applicable only for Hard\+Phones. It is an alternative way to identify the device to be ordered. Either model structure, or box\+Billing\+Id must be specified for Hard\+Phone Format\+: int64 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Box billing identifier of a device. Applicable only for devices of {\ttfamily Hard\+Phone} type. It is an alternative way to identify the device to be ordered. Either {\ttfamily model} structure, or {\ttfamily box\+Billing\+Id} must be specified Format\+: int64 \end{DoxyCompactList}\item 
 bool? \mbox{\hyperlink{classRingCentral_1_1DeviceResource_a37eaf697f2fb5584bda2f4ead1fc7cb0}{use\+As\+Common\+Phone}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Supported only for devices assigned to Limited extensions. If true, enables users to log in to this phone as a common phone. \end{DoxyCompactList}\item 
 bool? \mbox{\hyperlink{classRingCentral_1_1DeviceResource_a10d7752adcb086518992ad26c700c577}{hot\+Desk\+Device}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
@@ -68,7 +68,7 @@ string \mbox{\hyperlink{classRingCentral_1_1DeviceResource_a0ce4a41c9dd46a9380cf
 
 
 
-Box billing identifier of a device. Applicable only for Hard\+Phones. It is an alternative way to identify the device to be ordered. Either model structure, or box\+Billing\+Id must be specified for Hard\+Phone Format\+: int64 
+Box billing identifier of a device. Applicable only for devices of {\ttfamily Hard\+Phone} type. It is an alternative way to identify the device to be ordered. Either {\ttfamily model} structure, or {\ttfamily box\+Billing\+Id} must be specified Format\+: int64 
 
 \mbox{\Hypertarget{classRingCentral_1_1DeviceResource_ad6dc195fa4294c5ac112d7dde0c85d29}\label{classRingCentral_1_1DeviceResource_ad6dc195fa4294c5ac112d7dde0c85d29}} 
 \index{RingCentral.DeviceResource@{RingCentral.DeviceResource}!computerName@{computerName}}
@@ -162,9 +162,9 @@ Pooling type of device\+:
 
 
 \begin{DoxyItemize}
-\item \mbox{\hyperlink{classRingCentral_1_1Host}{Host}} -\/ a device with standalone paid phone line which can be linked to a soft client instance
-\item Guest -\/ a device with a linked phone line
-\item None -\/ a device without a phone line or with specific line (free, BLA, etc.) Enum\+: \mbox{\hyperlink{classRingCentral_1_1Host}{Host}}, Guest, None
+\item {\ttfamily \mbox{\hyperlink{classRingCentral_1_1Host}{Host}}} -\/ device with a standalone paid phone line which can be linked to soft phone client instance;
+\item {\ttfamily Guest} -\/ device with a linked phone line;
+\item {\ttfamily None} -\/ device without a phone line or with a specific line (free, BLA, etc.) Enum\+: \mbox{\hyperlink{classRingCentral_1_1Host}{Host}}, Guest, None
 \end{DoxyItemize}\mbox{\Hypertarget{classRingCentral_1_1DeviceResource_a5f27bf731345485886054a7bf5b4c064}\label{classRingCentral_1_1DeviceResource_a5f27bf731345485886054a7bf5b4c064}} 
 \index{RingCentral.DeviceResource@{RingCentral.DeviceResource}!model@{model}}
 \index{model@{model}!RingCentral.DeviceResource@{RingCentral.DeviceResource}}

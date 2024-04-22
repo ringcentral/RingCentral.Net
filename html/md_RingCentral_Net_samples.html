@@ -3859,32 +3859,6 @@ socMsgGetIdentity</h1>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Identities-socMsgGetIdentity">Try it out</a> in API Explorer.</p>
 <h1><a class="anchor" id="autotoc_md147"></a>
-socMsgImportIdentity</h1>
-<p>Import Identity</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Name   </th><th class="markdownTableHeadNone">Value    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">HTTP Method   </td><td class="markdownTableBodyNone"><code>POST</code>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Endpoint   </td><td class="markdownTableBodyNone"><code>/cx/social-messaging/v1/identities/import</code>    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Rate Limit Group   </td><td class="markdownTableBodyNone"><code>Light</code>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">App Permission   </td><td class="markdownTableBodyNone"><code>SocialMessaging</code>    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">User Permission   </td><td class="markdownTableBodyNone"><code>N/A</code>   </td></tr>
-</table>
-<div class="fragment"><div class="line">var rc = <span class="keyword">new</span> RestClient(<span class="stringliteral">&quot;clientID&quot;</span>, <span class="stringliteral">&quot;clientSecret&quot;</span>, <span class="stringliteral">&quot;serverURL&quot;</span>);</div>
-<div class="line">await rc.Authorize(<span class="stringliteral">&quot;jwtToken&quot;</span>);</div>
-<div class="line">var result = await rc.Cx().SocialMessaging().V1().Identities().Import().Post(importIdentityRequest);</div>
-<div class="line">await rc.Revoke();</div>
-</div><!-- fragment --><ul>
-<li><code>importIdentityRequest</code> is of type <a href="./Definitions/ImportIdentityRequest.cs">ImportIdentityRequest</a></li>
-<li><code>result</code> is an empty string</li>
-</ul>
-<p><a href="https://developer.ringcentral.com/api-reference#Identities-socMsgImportIdentity">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md148"></a>
 getExtensionRecordings</h1>
 <p>List User Recordings</p>
 <table class="markdownTable">
@@ -3912,7 +3886,7 @@ getExtensionRecordings</h1>
 <li><code>result</code> is of type <a href="./Definitions/CloudRecordings.cs">CloudRecordings</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Meeting-Recordings-getExtensionRecordings">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md149"></a>
+<h1><a class="anchor" id="autotoc_md148"></a>
 getAccountRecordings</h1>
 <p>List Account Recordings</p>
 <table class="markdownTable">
@@ -3939,7 +3913,7 @@ getAccountRecordings</h1>
 <li><code>result</code> is of type <a href="./Definitions/CloudRecordings.cs">CloudRecordings</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Meeting-Recordings-getAccountRecordings">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md150"></a>
+<h1><a class="anchor" id="autotoc_md149"></a>
 rcvListDelegators</h1>
 <p>Get Delegators</p>
 <table class="markdownTable">
@@ -3964,7 +3938,7 @@ rcvListDelegators</h1>
 <li><code>result</code> is of type <a href="./Definitions/DelegatorsListResult.cs">DelegatorsListResult</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Delegation-Management-rcvListDelegators">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md151"></a>
+<h1><a class="anchor" id="autotoc_md150"></a>
 createBridge</h1>
 <p>Create Bridge</p>
 <table class="markdownTable">
@@ -3992,7 +3966,7 @@ createBridge</h1>
 <li><code>result</code> is of type <a href="./Definitions/BridgeResponse.cs">BridgeResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Bridge-Management-createBridge">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md152"></a>
+<h1><a class="anchor" id="autotoc_md151"></a>
 addDeviceToInventory</h1>
 <p>Add Phone to Inventory</p>
 <table class="markdownTable">
@@ -4018,7 +3992,7 @@ addDeviceToInventory</h1>
 <li><code>result</code> is of type <a href="./Definitions/AddDeviceToInventoryResponse.cs">AddDeviceToInventoryResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Devices-addDeviceToInventory">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md153"></a>
+<h1><a class="anchor" id="autotoc_md152"></a>
 deleteDeviceFromInventory</h1>
 <p>Delete Device from Inventory</p>
 <table class="markdownTable">
@@ -4044,7 +4018,7 @@ deleteDeviceFromInventory</h1>
 <li><code>result</code> is of type <a href="./Definitions/DeleteDeviceFromInventoryResponse.cs">DeleteDeviceFromInventoryResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Devices-deleteDeviceFromInventory">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md154"></a>
+<h1><a class="anchor" id="autotoc_md153"></a>
 bulkAddDevicesV2</h1>
 <p>Add BYOD Devices</p>
 <table class="markdownTable">
@@ -4070,7 +4044,7 @@ bulkAddDevicesV2</h1>
 <li><code>result</code> is of type <a href="./Definitions/BulkAddDevicesResponse.cs">BulkAddDevicesResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Devices-bulkAddDevicesV2">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md155"></a>
+<h1><a class="anchor" id="autotoc_md154"></a>
 bulkDeleteUsersV2</h1>
 <p>Delete User Extensions</p>
 <table class="markdownTable">
@@ -4096,7 +4070,7 @@ bulkDeleteUsersV2</h1>
 <li><code>result</code> is of type <a href="./Definitions/BulkDeleteUsersResponse.cs">BulkDeleteUsersResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#User-Settings-bulkDeleteUsersV2">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md156"></a>
+<h1><a class="anchor" id="autotoc_md155"></a>
 listAccountPhoneNumbersV2</h1>
 <p>List Account Phone Numbers</p>
 <table class="markdownTable">
@@ -4122,7 +4096,7 @@ listAccountPhoneNumbersV2</h1>
 <li><code>result</code> is of type <a href="./Definitions/AccountPhoneNumberList.cs">AccountPhoneNumberList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Phone-Numbers-listAccountPhoneNumbersV2">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md157"></a>
+<h1><a class="anchor" id="autotoc_md156"></a>
 deleteNumbersFromInventoryV2</h1>
 <p>Delete Numbers from Inventory</p>
 <table class="markdownTable">
@@ -4148,7 +4122,7 @@ deleteNumbersFromInventoryV2</h1>
 <li><code>result</code> is of type <a href="./Definitions/DeletePhoneNumbersResponse.cs">DeletePhoneNumbersResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Phone-Numbers-deleteNumbersFromInventoryV2">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md158"></a>
+<h1><a class="anchor" id="autotoc_md157"></a>
 assignPhoneNumberV2</h1>
 <p>Assign Phone Number</p>
 <table class="markdownTable">
@@ -4174,7 +4148,7 @@ assignPhoneNumberV2</h1>
 <li><code>result</code> is of type <a href="./Definitions/AccountPhoneNumberInfo.cs">AccountPhoneNumberInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Phone-Numbers-assignPhoneNumberV2">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md159"></a>
+<h1><a class="anchor" id="autotoc_md158"></a>
 replacePhoneNumberV2</h1>
 <p>Replace Phone Number</p>
 <table class="markdownTable">
@@ -4200,7 +4174,7 @@ replacePhoneNumberV2</h1>
 <li><code>result</code> is of type <a href="./Definitions/AccountPhoneNumberInfo.cs">AccountPhoneNumberInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Phone-Numbers-replacePhoneNumberV2">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md160"></a>
+<h1><a class="anchor" id="autotoc_md159"></a>
 sendWelcomeEmailV2</h1>
 <p>Send/Resend Welcome Email</p>
 <table class="markdownTable">
@@ -4226,7 +4200,7 @@ sendWelcomeEmailV2</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Company-sendWelcomeEmailV2">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md161"></a>
+<h1><a class="anchor" id="autotoc_md160"></a>
 listA2PBatches</h1>
 <p>List A2P SMS Batches</p>
 <table class="markdownTable">
@@ -4254,7 +4228,7 @@ listA2PBatches</h1>
 <li><code>result</code> is of type <a href="./Definitions/BatchListResponse.cs">BatchListResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#High-Volume-SMS-listA2PBatches">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md162"></a>
+<h1><a class="anchor" id="autotoc_md161"></a>
 createA2PSMS</h1>
 <p>Send A2P SMS</p>
 <table class="markdownTable">
@@ -4282,7 +4256,7 @@ createA2PSMS</h1>
 <li><code>result</code> is of type <a href="./Definitions/MessageBatchResponse.cs">MessageBatchResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#High-Volume-SMS-createA2PSMS">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md163"></a>
+<h1><a class="anchor" id="autotoc_md162"></a>
 readA2PBatch</h1>
 <p>Get A2P SMS Batch</p>
 <table class="markdownTable">
@@ -4309,7 +4283,7 @@ readA2PBatch</h1>
 <li><code>result</code> is of type <a href="./Definitions/MessageBatchResponse.cs">MessageBatchResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#High-Volume-SMS-readA2PBatch">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md164"></a>
+<h1><a class="anchor" id="autotoc_md163"></a>
 listA2PSMS</h1>
 <p>List A2P SMS Messages</p>
 <table class="markdownTable">
@@ -4337,7 +4311,7 @@ listA2PSMS</h1>
 <li><code>result</code> is of type <a href="./Definitions/MessageListResponse.cs">MessageListResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#High-Volume-SMS-listA2PSMS">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md165"></a>
+<h1><a class="anchor" id="autotoc_md164"></a>
 readA2PSMS</h1>
 <p>Get A2P SMS</p>
 <table class="markdownTable">
@@ -4364,9 +4338,9 @@ readA2PSMS</h1>
 <li><code>result</code> is of type <a href="./Definitions/MessageDetailsResponse.cs">MessageDetailsResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#High-Volume-SMS-readA2PSMS">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md166"></a>
+<h1><a class="anchor" id="autotoc_md165"></a>
 readA2PSMSOptOuts</h1>
-<p>Get Opted Out Numbers</p>
+<p>List Opted Out Numbers</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Name   </th><th class="markdownTableHeadNone">Value    </th></tr>
@@ -4392,7 +4366,7 @@ readA2PSMSOptOuts</h1>
 <li><code>result</code> is of type <a href="./Definitions/OptOutListResponse.cs">OptOutListResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#High-Volume-SMS-readA2PSMSOptOuts">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md167"></a>
+<h1><a class="anchor" id="autotoc_md166"></a>
 aggregateA2PSMSStatuses</h1>
 <p>List A2P SMS Statuses</p>
 <table class="markdownTable">
@@ -4420,7 +4394,7 @@ aggregateA2PSMSStatuses</h1>
 <li><code>result</code> is of type <a href="./Definitions/MessageStatusesResponse.cs">MessageStatusesResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#High-Volume-SMS-aggregateA2PSMSStatuses">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md168"></a>
+<h1><a class="anchor" id="autotoc_md167"></a>
 addressBookBulkUpload</h1>
 <p>Upload Multiple User Contacts</p>
 <table class="markdownTable">
@@ -4448,7 +4422,7 @@ addressBookBulkUpload</h1>
 <li><code>result</code> is of type <a href="./Definitions/AddressBookBulkUploadResponse.cs">AddressBookBulkUploadResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#External-Contacts-addressBookBulkUpload">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md169"></a>
+<h1><a class="anchor" id="autotoc_md168"></a>
 listCompanyAnsweringRules</h1>
 <p>List Company Call Handling Rules</p>
 <table class="markdownTable">
@@ -4476,7 +4450,7 @@ listCompanyAnsweringRules</h1>
 <li><code>result</code> is of type <a href="./Definitions/CompanyAnsweringRuleList.cs">CompanyAnsweringRuleList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Handling-Rules-listCompanyAnsweringRules">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md170"></a>
+<h1><a class="anchor" id="autotoc_md169"></a>
 createCompanyAnsweringRule</h1>
 <p>Create Company Call Handling Rule</p>
 <table class="markdownTable">
@@ -4504,7 +4478,7 @@ createCompanyAnsweringRule</h1>
 <li><code>result</code> is of type <a href="./Definitions/CompanyAnsweringRuleInfo.cs">CompanyAnsweringRuleInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Handling-Rules-createCompanyAnsweringRule">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md171"></a>
+<h1><a class="anchor" id="autotoc_md170"></a>
 readCompanyAnsweringRule</h1>
 <p>Get Company Call Handling Rule</p>
 <table class="markdownTable">
@@ -4531,7 +4505,7 @@ readCompanyAnsweringRule</h1>
 <li><code>result</code> is of type <a href="./Definitions/CompanyAnsweringRuleInfo.cs">CompanyAnsweringRuleInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Handling-Rules-readCompanyAnsweringRule">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md172"></a>
+<h1><a class="anchor" id="autotoc_md171"></a>
 updateCompanyAnsweringRule</h1>
 <p>Update Company Call Handling Rule</p>
 <table class="markdownTable">
@@ -4559,7 +4533,7 @@ updateCompanyAnsweringRule</h1>
 <li><code>result</code> is of type <a href="./Definitions/CompanyAnsweringRuleInfo.cs">CompanyAnsweringRuleInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Handling-Rules-updateCompanyAnsweringRule">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md173"></a>
+<h1><a class="anchor" id="autotoc_md172"></a>
 deleteCompanyAnsweringRule</h1>
 <p>Delete Company Call Handling Rule</p>
 <table class="markdownTable">
@@ -4586,7 +4560,7 @@ deleteCompanyAnsweringRule</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Handling-Rules-deleteCompanyAnsweringRule">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md174"></a>
+<h1><a class="anchor" id="autotoc_md173"></a>
 listAssignedRoles</h1>
 <p>List Company Assigned Roles</p>
 <table class="markdownTable">
@@ -4614,7 +4588,7 @@ listAssignedRoles</h1>
 <li><code>result</code> is of type <a href="./Definitions/ExtensionWithRolesCollectionResource.cs">ExtensionWithRolesCollectionResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Role-Management-listAssignedRoles">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md175"></a>
+<h1><a class="anchor" id="autotoc_md174"></a>
 auditTrailSearch</h1>
 <p>Search Audit Trail Data</p>
 <table class="markdownTable">
@@ -4642,7 +4616,7 @@ auditTrailSearch</h1>
 <li><code>result</code> is of type <a href="./Definitions/AccountHistorySearchPublicResponse.cs">AccountHistorySearchPublicResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Audit-Trail-auditTrailSearch">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md176"></a>
+<h1><a class="anchor" id="autotoc_md175"></a>
 readAccountBusinessAddress</h1>
 <p>Get Account Business Address</p>
 <table class="markdownTable">
@@ -4669,7 +4643,7 @@ readAccountBusinessAddress</h1>
 <li><code>result</code> is of type <a href="./Definitions/AccountBusinessAddressResource.cs">AccountBusinessAddressResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Company-readAccountBusinessAddress">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md177"></a>
+<h1><a class="anchor" id="autotoc_md176"></a>
 updateAccountBusinessAddress</h1>
 <p>Update Company Business Address</p>
 <table class="markdownTable">
@@ -4697,7 +4671,7 @@ updateAccountBusinessAddress</h1>
 <li><code>result</code> is of type <a href="./Definitions/AccountBusinessAddressResource.cs">AccountBusinessAddressResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Company-updateAccountBusinessAddress">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md178"></a>
+<h1><a class="anchor" id="autotoc_md177"></a>
 readCompanyBusinessHours</h1>
 <p>Get Company Business Hours</p>
 <table class="markdownTable">
@@ -4724,7 +4698,7 @@ readCompanyBusinessHours</h1>
 <li><code>result</code> is of type <a href="./Definitions/CompanyBusinessHours.cs">CompanyBusinessHours</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Business-Hours-readCompanyBusinessHours">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md179"></a>
+<h1><a class="anchor" id="autotoc_md178"></a>
 updateCompanyBusinessHours</h1>
 <p>Update Company Business Hours</p>
 <table class="markdownTable">
@@ -4752,7 +4726,7 @@ updateCompanyBusinessHours</h1>
 <li><code>result</code> is of type <a href="./Definitions/CompanyBusinessHours.cs">CompanyBusinessHours</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Business-Hours-updateCompanyBusinessHours">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md180"></a>
+<h1><a class="anchor" id="autotoc_md179"></a>
 syncAccountCallLog</h1>
 <p>Sync Company Call Log</p>
 <table class="markdownTable">
@@ -4780,7 +4754,7 @@ syncAccountCallLog</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallLogSyncResponse.cs">CallLogSyncResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Log-syncAccountCallLog">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md181"></a>
+<h1><a class="anchor" id="autotoc_md180"></a>
 listCallMonitoringGroups</h1>
 <p>List Call Monitoring Groups</p>
 <table class="markdownTable">
@@ -4808,7 +4782,7 @@ listCallMonitoringGroups</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallMonitoringGroups.cs">CallMonitoringGroups</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-listCallMonitoringGroups">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md182"></a>
+<h1><a class="anchor" id="autotoc_md181"></a>
 createCallMonitoringGroup</h1>
 <p>Create Call Monitoring Group</p>
 <table class="markdownTable">
@@ -4836,7 +4810,7 @@ createCallMonitoringGroup</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallMonitoringGroup.cs">CallMonitoringGroup</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-createCallMonitoringGroup">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md183"></a>
+<h1><a class="anchor" id="autotoc_md182"></a>
 updateCallMonitoringGroup</h1>
 <p>Update Call Monitoring Group</p>
 <table class="markdownTable">
@@ -4864,7 +4838,7 @@ updateCallMonitoringGroup</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallMonitoringGroup.cs">CallMonitoringGroup</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-updateCallMonitoringGroup">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md184"></a>
+<h1><a class="anchor" id="autotoc_md183"></a>
 deleteCallMonitoringGroup</h1>
 <p>Delete Call Monitoring Group</p>
 <table class="markdownTable">
@@ -4891,7 +4865,7 @@ deleteCallMonitoringGroup</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-deleteCallMonitoringGroup">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md185"></a>
+<h1><a class="anchor" id="autotoc_md184"></a>
 assignMultipleCallQueueMembers</h1>
 <p>Assign Multiple Call Queue Members</p>
 <table class="markdownTable">
@@ -4919,7 +4893,7 @@ assignMultipleCallQueueMembers</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Queues-assignMultipleCallQueueMembers">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md186"></a>
+<h1><a class="anchor" id="autotoc_md185"></a>
 listCallQueueMembers</h1>
 <p>List Call Queue Members</p>
 <table class="markdownTable">
@@ -4947,7 +4921,7 @@ listCallQueueMembers</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallQueueMembers.cs">CallQueueMembers</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Queues-listCallQueueMembers">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md187"></a>
+<h1><a class="anchor" id="autotoc_md186"></a>
 readCallQueuePresence</h1>
 <p>Get Call Queue Presence</p>
 <table class="markdownTable">
@@ -4974,7 +4948,7 @@ readCallQueuePresence</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallQueuePresence.cs">CallQueuePresence</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Presence-readCallQueuePresence">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md188"></a>
+<h1><a class="anchor" id="autotoc_md187"></a>
 updateCallQueuePresence</h1>
 <p>Update Call Queue Presence</p>
 <table class="markdownTable">
@@ -5002,7 +4976,7 @@ updateCallQueuePresence</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallQueuePresence.cs">CallQueuePresence</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Presence-updateCallQueuePresence">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md189"></a>
+<h1><a class="anchor" id="autotoc_md188"></a>
 readCallRecordingSettings</h1>
 <p>Get Call Recording Settings</p>
 <table class="markdownTable">
@@ -5029,7 +5003,7 @@ readCallRecordingSettings</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallRecordingSettingsResource.cs">CallRecordingSettingsResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Recording-Settings-readCallRecordingSettings">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md190"></a>
+<h1><a class="anchor" id="autotoc_md189"></a>
 updateCallRecordingSettings</h1>
 <p>Update Call Recording Settings</p>
 <table class="markdownTable">
@@ -5057,6 +5031,33 @@ updateCallRecordingSettings</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallRecordingSettingsResource.cs">CallRecordingSettingsResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Recording-Settings-updateCallRecordingSettings">Try it out</a> in API Explorer.</p>
+<h1><a class="anchor" id="autotoc_md190"></a>
+listCallRecordingExtensions</h1>
+<p>Get Call Recording Extension List</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Name   </th><th class="markdownTableHeadNone">Value    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">HTTP Method   </td><td class="markdownTableBodyNone"><code>GET</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Endpoint   </td><td class="markdownTableBodyNone"><code>/restapi/{apiVersion}/account/{accountId}/call-recording/extensions</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Rate Limit Group   </td><td class="markdownTableBodyNone"><code>Medium</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">App Permission   </td><td class="markdownTableBodyNone"><code>ReadAccounts</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">User Permission   </td><td class="markdownTableBodyNone"><code>ReadCompanyInfo</code>   </td></tr>
+</table>
+<div class="fragment"><div class="line">var rc = <span class="keyword">new</span> RestClient(<span class="stringliteral">&quot;clientID&quot;</span>, <span class="stringliteral">&quot;clientSecret&quot;</span>, <span class="stringliteral">&quot;serverURL&quot;</span>);</div>
+<div class="line">await rc.Authorize(<span class="stringliteral">&quot;jwtToken&quot;</span>);</div>
+<div class="line">var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Extensions().Get();</div>
+<div class="line">await rc.Revoke();</div>
+</div><!-- fragment --><ul>
+<li>Parameter <code>apiVersion</code> is optional with default value <code>v1.0</code></li>
+<li>Parameter <code>accountId</code> is optional with default value <code>~</code></li>
+<li><code>result</code> is of type <a href="./Definitions/CallRecordingExtensions.cs">CallRecordingExtensions</a></li>
+</ul>
+<p><a href="https://developer.ringcentral.com/api-reference#Call-Recording-Settings-listCallRecordingExtensions">Try it out</a> in API Explorer.</p>
 <h1><a class="anchor" id="autotoc_md191"></a>
 deleteCompanyCallRecordings</h1>
 <p>Delete Company Call Recordings</p>
@@ -5409,13 +5410,13 @@ createEmergencyLocation</h1>
 </table>
 <div class="fragment"><div class="line">var rc = <span class="keyword">new</span> RestClient(<span class="stringliteral">&quot;clientID&quot;</span>, <span class="stringliteral">&quot;clientSecret&quot;</span>, <span class="stringliteral">&quot;serverURL&quot;</span>);</div>
 <div class="line">await rc.Authorize(<span class="stringliteral">&quot;jwtToken&quot;</span>);</div>
-<div class="line">var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().Post(emergencyLocationInfoRequest);</div>
+<div class="line">var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations().Post(emergencyLocationRequestResource);</div>
 <div class="line">await rc.Revoke();</div>
 </div><!-- fragment --><ul>
 <li>Parameter <code>apiVersion</code> is optional with default value <code>v1.0</code></li>
 <li>Parameter <code>accountId</code> is optional with default value <code>~</code></li>
-<li><code>emergencyLocationInfoRequest</code> is of type <a href="./Definitions/EmergencyLocationInfoRequest.cs">EmergencyLocationInfoRequest</a></li>
-<li><code>result</code> is of type <a href="./Definitions/CommonEmergencyLocationResource.cs">CommonEmergencyLocationResource</a></li>
+<li><code>emergencyLocationRequestResource</code> is of type <a href="./Definitions/EmergencyLocationRequestResource.cs">EmergencyLocationRequestResource</a></li>
+<li><code>result</code> is of type <a href="./Definitions/EmergencyLocationResponseResource.cs">EmergencyLocationResponseResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createEmergencyLocation">Try it out</a> in API Explorer.</p>
 <h1><a class="anchor" id="autotoc_md204"></a>
@@ -5465,13 +5466,13 @@ updateEmergencyLocation</h1>
 </table>
 <div class="fragment"><div class="line">var rc = <span class="keyword">new</span> RestClient(<span class="stringliteral">&quot;clientID&quot;</span>, <span class="stringliteral">&quot;clientSecret&quot;</span>, <span class="stringliteral">&quot;serverURL&quot;</span>);</div>
 <div class="line">await rc.Authorize(<span class="stringliteral">&quot;jwtToken&quot;</span>);</div>
-<div class="line">var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Put(emergencyLocationInfoRequest);</div>
+<div class="line">var result = await rc.Restapi(apiVersion).Account(accountId).EmergencyLocations(locationId).Put(emergencyLocationRequestResource);</div>
 <div class="line">await rc.Revoke();</div>
 </div><!-- fragment --><ul>
 <li>Parameter <code>apiVersion</code> is optional with default value <code>v1.0</code></li>
 <li>Parameter <code>accountId</code> is optional with default value <code>~</code></li>
-<li><code>emergencyLocationInfoRequest</code> is of type <a href="./Definitions/EmergencyLocationInfoRequest.cs">EmergencyLocationInfoRequest</a></li>
-<li><code>result</code> is of type <a href="./Definitions/CommonEmergencyLocationResource.cs">CommonEmergencyLocationResource</a></li>
+<li><code>emergencyLocationRequestResource</code> is of type <a href="./Definitions/EmergencyLocationRequestResource.cs">EmergencyLocationRequestResource</a></li>
+<li><code>result</code> is of type <a href="./Definitions/EmergencyLocationResponseResource.cs">EmergencyLocationResponseResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateEmergencyLocation">Try it out</a> in API Explorer.</p>
 <h1><a class="anchor" id="autotoc_md206"></a>
@@ -5718,7 +5719,7 @@ listUserAssignedRoles</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">App Permission   </td><td class="markdownTableBodyNone"><code>ReadAccounts</code>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">User Permission   </td><td class="markdownTableBodyNone"><code>ReadExtensions</code>   </td></tr>
+<td class="markdownTableBodyNone">User Permission   </td><td class="markdownTableBodyNone"><code>ReadAssignedRoles</code>   </td></tr>
 </table>
 <div class="fragment"><div class="line">var rc = <span class="keyword">new</span> RestClient(<span class="stringliteral">&quot;clientID&quot;</span>, <span class="stringliteral">&quot;clientSecret&quot;</span>, <span class="stringliteral">&quot;serverURL&quot;</span>);</div>
 <div class="line">await rc.Authorize(<span class="stringliteral">&quot;jwtToken&quot;</span>);</div>
@@ -5993,6 +5994,63 @@ updateUserCallQueues</h1>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Queues-updateUserCallQueues">Try it out</a> in API Explorer.</p>
 <h1><a class="anchor" id="autotoc_md224"></a>
+readCallerBlockingSettings</h1>
+<p>Get Caller Blocking Settings</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Name   </th><th class="markdownTableHeadNone">Value    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">HTTP Method   </td><td class="markdownTableBodyNone"><code>GET</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Endpoint   </td><td class="markdownTableBodyNone"><code>/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Rate Limit Group   </td><td class="markdownTableBodyNone"><code>Light</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">App Permission   </td><td class="markdownTableBodyNone"><code>ReadAccounts</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">User Permission   </td><td class="markdownTableBodyNone"><code>ReadBlockedNumbers</code>   </td></tr>
+</table>
+<div class="fragment"><div class="line">var rc = <span class="keyword">new</span> RestClient(<span class="stringliteral">&quot;clientID&quot;</span>, <span class="stringliteral">&quot;clientSecret&quot;</span>, <span class="stringliteral">&quot;serverURL&quot;</span>);</div>
+<div class="line">await rc.Authorize(<span class="stringliteral">&quot;jwtToken&quot;</span>);</div>
+<div class="line">var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Get();</div>
+<div class="line">await rc.Revoke();</div>
+</div><!-- fragment --><ul>
+<li>Parameter <code>apiVersion</code> is optional with default value <code>v1.0</code></li>
+<li>Parameter <code>accountId</code> is optional with default value <code>~</code></li>
+<li>Parameter <code>extensionId</code> is optional with default value <code>~</code></li>
+<li><code>result</code> is of type <a href="./Definitions/CallerBlockingSettings.cs">CallerBlockingSettings</a></li>
+</ul>
+<p><a href="https://developer.ringcentral.com/api-reference#Call-Blocking-readCallerBlockingSettings">Try it out</a> in API Explorer.</p>
+<h1><a class="anchor" id="autotoc_md225"></a>
+updateCallerBlockingSettings</h1>
+<p>Update Caller Blocking Settings</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Name   </th><th class="markdownTableHeadNone">Value    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">HTTP Method   </td><td class="markdownTableBodyNone"><code>PUT</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Endpoint   </td><td class="markdownTableBodyNone"><code>/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Rate Limit Group   </td><td class="markdownTableBodyNone"><code>Light</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">App Permission   </td><td class="markdownTableBodyNone"><code>EditExtensions</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">User Permission   </td><td class="markdownTableBodyNone"><code>EditBlockedNumbers</code>   </td></tr>
+</table>
+<div class="fragment"><div class="line">var rc = <span class="keyword">new</span> RestClient(<span class="stringliteral">&quot;clientID&quot;</span>, <span class="stringliteral">&quot;clientSecret&quot;</span>, <span class="stringliteral">&quot;serverURL&quot;</span>);</div>
+<div class="line">await rc.Authorize(<span class="stringliteral">&quot;jwtToken&quot;</span>);</div>
+<div class="line">var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Put(callerBlockingSettingsUpdate);</div>
+<div class="line">await rc.Revoke();</div>
+</div><!-- fragment --><ul>
+<li>Parameter <code>apiVersion</code> is optional with default value <code>v1.0</code></li>
+<li>Parameter <code>accountId</code> is optional with default value <code>~</code></li>
+<li>Parameter <code>extensionId</code> is optional with default value <code>~</code></li>
+<li><code>callerBlockingSettingsUpdate</code> is of type <a href="./Definitions/CallerBlockingSettingsUpdate.cs">CallerBlockingSettingsUpdate</a></li>
+<li><code>result</code> is of type <a href="./Definitions/CallerBlockingSettings.cs">CallerBlockingSettings</a></li>
+</ul>
+<p><a href="https://developer.ringcentral.com/api-reference#Call-Blocking-updateCallerBlockingSettings">Try it out</a> in API Explorer.</p>
+<h1><a class="anchor" id="autotoc_md226"></a>
 readExtensionCallerId</h1>
 <p>Get Extension Caller ID</p>
 <table class="markdownTable">
@@ -6020,7 +6078,7 @@ readExtensionCallerId</h1>
 <li><code>result</code> is of type <a href="./Definitions/ExtensionCallerIdInfo.cs">ExtensionCallerIdInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#User-Settings-readExtensionCallerId">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md225"></a>
+<h1><a class="anchor" id="autotoc_md227"></a>
 updateExtensionCallerId</h1>
 <p>Update Extension Caller ID</p>
 <table class="markdownTable">
@@ -6049,7 +6107,7 @@ updateExtensionCallerId</h1>
 <li><code>result</code> is of type <a href="./Definitions/ExtensionCallerIdInfo.cs">ExtensionCallerIdInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#User-Settings-updateExtensionCallerId">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md226"></a>
+<h1><a class="anchor" id="autotoc_md228"></a>
 createInternalTextMessage</h1>
 <p>Create Internal Text Message</p>
 <table class="markdownTable">
@@ -6078,7 +6136,7 @@ createInternalTextMessage</h1>
 <li><code>result</code> is of type <a href="./Definitions/GetInternalTextMessageInfoResponse.cs">GetInternalTextMessageInfoResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Pager-Messages-createInternalTextMessage">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md227"></a>
+<h1><a class="anchor" id="autotoc_md229"></a>
 readConferencingSettings</h1>
 <p>Get User Conferencing Settings</p>
 <table class="markdownTable">
@@ -6107,7 +6165,7 @@ readConferencingSettings</h1>
 <li><code>result</code> is of type <a href="./Definitions/GetConferencingInfoResponse.cs">GetConferencingInfoResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#User-Settings-readConferencingSettings">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md228"></a>
+<h1><a class="anchor" id="autotoc_md230"></a>
 updateConferencingSettings</h1>
 <p>Update User Conferencing Settings</p>
 <table class="markdownTable">
@@ -6136,7 +6194,7 @@ updateConferencingSettings</h1>
 <li><code>result</code> is of type <a href="./Definitions/GetConferencingInfoResponse.cs">GetConferencingInfoResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#User-Settings-updateConferencingSettings">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md229"></a>
+<h1><a class="anchor" id="autotoc_md231"></a>
 listExtensionDevices</h1>
 <p>List Extension Devices</p>
 <table class="markdownTable">
@@ -6165,7 +6223,7 @@ listExtensionDevices</h1>
 <li><code>result</code> is of type <a href="./Definitions/GetExtensionDevicesResponse.cs">GetExtensionDevicesResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Devices-listExtensionDevices">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md230"></a>
+<h1><a class="anchor" id="autotoc_md232"></a>
 listFavoriteContacts</h1>
 <p>List Favorite Contacts</p>
 <table class="markdownTable">
@@ -6193,7 +6251,7 @@ listFavoriteContacts</h1>
 <li><code>result</code> is of type <a href="./Definitions/FavoriteContactList.cs">FavoriteContactList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#External-Contacts-listFavoriteContacts">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md231"></a>
+<h1><a class="anchor" id="autotoc_md233"></a>
 updateFavoriteContactList</h1>
 <p>Update Favorite Contact List</p>
 <table class="markdownTable">
@@ -6222,7 +6280,7 @@ updateFavoriteContactList</h1>
 <li><code>result</code> is of type <a href="./Definitions/FavoriteContactList.cs">FavoriteContactList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#External-Contacts-updateFavoriteContactList">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md232"></a>
+<h1><a class="anchor" id="autotoc_md234"></a>
 readExtensionFeatures</h1>
 <p>Get User Features</p>
 <table class="markdownTable">
@@ -6251,7 +6309,7 @@ readExtensionFeatures</h1>
 <li><code>result</code> is of type <a href="./Definitions/FeatureList.cs">FeatureList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Features-readExtensionFeatures">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md233"></a>
+<h1><a class="anchor" id="autotoc_md235"></a>
 listExtensionGrants</h1>
 <p>List Extension Grants</p>
 <table class="markdownTable">
@@ -6280,7 +6338,7 @@ listExtensionGrants</h1>
 <li><code>result</code> is of type <a href="./Definitions/GetExtensionGrantListResponse.cs">GetExtensionGrantListResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#User-Settings-listExtensionGrants">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md234"></a>
+<h1><a class="anchor" id="autotoc_md236"></a>
 createCustomUserGreeting</h1>
 <p>Create Custom User Greeting</p>
 <table class="markdownTable">
@@ -6310,7 +6368,7 @@ createCustomUserGreeting</h1>
 <li><code>result</code> is of type <a href="./Definitions/CustomUserGreetingInfo.cs">CustomUserGreetingInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Greetings-createCustomUserGreeting">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md235"></a>
+<h1><a class="anchor" id="autotoc_md237"></a>
 readCustomGreeting</h1>
 <p>Get Custom Greeting</p>
 <table class="markdownTable">
@@ -6338,7 +6396,7 @@ readCustomGreeting</h1>
 <li><code>result</code> is of type <a href="./Definitions/CustomUserGreetingInfo.cs">CustomUserGreetingInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Greetings-readCustomGreeting">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md236"></a>
+<h1><a class="anchor" id="autotoc_md238"></a>
 listMessages</h1>
 <p>List Messages</p>
 <table class="markdownTable">
@@ -6367,7 +6425,7 @@ listMessages</h1>
 <li><code>result</code> is of type <a href="./Definitions/GetMessageList.cs">GetMessageList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Message-Store-listMessages">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md237"></a>
+<h1><a class="anchor" id="autotoc_md239"></a>
 deleteMessageByFilter</h1>
 <p>Delete Conversation</p>
 <table class="markdownTable">
@@ -6396,7 +6454,7 @@ deleteMessageByFilter</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Message-Store-deleteMessageByFilter">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md238"></a>
+<h1><a class="anchor" id="autotoc_md240"></a>
 readMessage</h1>
 <p>Get Message(s)</p>
 <table class="markdownTable">
@@ -6424,7 +6482,7 @@ readMessage</h1>
 <li><code>result</code> is of type <a href="./Definitions/GetMessageInfoResponse.cs">GetMessageInfoResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Message-Store-readMessage">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md239"></a>
+<h1><a class="anchor" id="autotoc_md241"></a>
 updateMessage</h1>
 <p>Update Message(s)</p>
 <table class="markdownTable">
@@ -6453,7 +6511,7 @@ updateMessage</h1>
 <li><code>result</code> is of type <a href="./Definitions/GetMessageInfoResponse.cs">GetMessageInfoResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Message-Store-updateMessage">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md240"></a>
+<h1><a class="anchor" id="autotoc_md242"></a>
 deleteMessage</h1>
 <p>Delete Message</p>
 <table class="markdownTable">
@@ -6483,7 +6541,7 @@ deleteMessage</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Message-Store-deleteMessage">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md241"></a>
+<h1><a class="anchor" id="autotoc_md243"></a>
 patchMessage</h1>
 <p>Patch Message(s)</p>
 <table class="markdownTable">
@@ -6512,7 +6570,7 @@ patchMessage</h1>
 <li><code>result</code> is of type <a href="./Definitions/GetMessageInfoResponse.cs">GetMessageInfoResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Message-Store-patchMessage">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md242"></a>
+<h1><a class="anchor" id="autotoc_md244"></a>
 syncMessages</h1>
 <p>Sync Messages</p>
 <table class="markdownTable">
@@ -6541,7 +6599,7 @@ syncMessages</h1>
 <li><code>result</code> is of type <a href="./Definitions/GetMessageSyncResponse.cs">GetMessageSyncResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Message-Store-syncMessages">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md243"></a>
+<h1><a class="anchor" id="autotoc_md245"></a>
 readUserPresenceStatus</h1>
 <p>Get User Presence Status</p>
 <table class="markdownTable">
@@ -6570,7 +6628,7 @@ readUserPresenceStatus</h1>
 <li><code>result</code> is of type <a href="./Definitions/GetPresenceInfo.cs">GetPresenceInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Presence-readUserPresenceStatus">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md244"></a>
+<h1><a class="anchor" id="autotoc_md246"></a>
 updateUserPresenceStatus</h1>
 <p>Update User Presence Status</p>
 <table class="markdownTable">
@@ -6599,7 +6657,7 @@ updateUserPresenceStatus</h1>
 <li><code>result</code> is of type <a href="./Definitions/PresenceInfoResponse.cs">PresenceInfoResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Presence-updateUserPresenceStatus">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md245"></a>
+<h1><a class="anchor" id="autotoc_md247"></a>
 readUserProfileImageLegacy</h1>
 <p>Get User Profile Image</p>
 <table class="markdownTable">
@@ -6626,11 +6684,11 @@ readUserProfileImageLegacy</h1>
 <li>Parameter <code>extensionId</code> is optional with default value <code>~</code></li>
 <li><code>result</code> is of type <code>byte[]</code></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md246"></a>
+<h2><a class="anchor" id="autotoc_md248"></a>
 ❗❗❗ Code sample above may not work</h2>
 <p>Please refer to <a href="/README.md#Binary-content-downloading">Binary content downloading</a>.</p>
 <p><a href="https://developer.ringcentral.com/api-reference#User-Settings-readUserProfileImageLegacy">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md247"></a>
+<h1><a class="anchor" id="autotoc_md249"></a>
 createUserProfileImage</h1>
 <p>Upload User Profile Image</p>
 <table class="markdownTable">
@@ -6659,7 +6717,7 @@ createUserProfileImage</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#User-Settings-createUserProfileImage">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md248"></a>
+<h1><a class="anchor" id="autotoc_md250"></a>
 updateUserProfileImage</h1>
 <p>Update User Profile Image</p>
 <table class="markdownTable">
@@ -6688,7 +6746,7 @@ updateUserProfileImage</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#User-Settings-updateUserProfileImage">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md249"></a>
+<h1><a class="anchor" id="autotoc_md251"></a>
 deleteUserProfileImage</h1>
 <p>Delete User Profile Image</p>
 <table class="markdownTable">
@@ -6716,7 +6774,7 @@ deleteUserProfileImage</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#User-Settings-deleteUserProfileImage">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md250"></a>
+<h1><a class="anchor" id="autotoc_md252"></a>
 readScaledProfileImage</h1>
 <p>Get Scaled Profile Image</p>
 <table class="markdownTable">
@@ -6744,11 +6802,11 @@ readScaledProfileImage</h1>
 <li><code>readScaledProfileImageParameters</code> is of type <a href="./Definitions/ReadScaledProfileImageParameters.cs">ReadScaledProfileImageParameters</a></li>
 <li><code>result</code> is of type <code>byte[]</code></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md251"></a>
+<h2><a class="anchor" id="autotoc_md253"></a>
 ❗❗❗ Code sample above may not work</h2>
 <p>Please refer to <a href="/README.md#Binary-content-downloading">Binary content downloading</a>.</p>
 <p><a href="https://developer.ringcentral.com/api-reference#User-Settings-readScaledProfileImage">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md252"></a>
+<h1><a class="anchor" id="autotoc_md254"></a>
 createRingOutCall</h1>
 <p>Make RingOut Call</p>
 <table class="markdownTable">
@@ -6777,7 +6835,7 @@ createRingOutCall</h1>
 <li><code>result</code> is of type <a href="./Definitions/GetRingOutStatusResponse.cs">GetRingOutStatusResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#RingOut-createRingOutCall">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md253"></a>
+<h1><a class="anchor" id="autotoc_md255"></a>
 readRingOutCallStatus</h1>
 <p>Get RingOut Call Status</p>
 <table class="markdownTable">
@@ -6805,7 +6863,7 @@ readRingOutCallStatus</h1>
 <li><code>result</code> is of type <a href="./Definitions/GetRingOutStatusResponse.cs">GetRingOutStatusResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#RingOut-readRingOutCallStatus">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md254"></a>
+<h1><a class="anchor" id="autotoc_md256"></a>
 deleteRingOutCall</h1>
 <p>Cancel RingOut Call</p>
 <table class="markdownTable">
@@ -6833,7 +6891,7 @@ deleteRingOutCall</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#RingOut-deleteRingOutCall">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md255"></a>
+<h1><a class="anchor" id="autotoc_md257"></a>
 getForwardAllCompanyCalls</h1>
 <p>Get Forward All Company Calls</p>
 <table class="markdownTable">
@@ -6860,7 +6918,7 @@ getForwardAllCompanyCalls</h1>
 <li><code>result</code> is of type <a href="./Definitions/ForwardAllCompanyCallsInfo.cs">ForwardAllCompanyCallsInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Handling-Rules-getForwardAllCompanyCalls">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md256"></a>
+<h1><a class="anchor" id="autotoc_md258"></a>
 updateForwardAllCompanyCalls</h1>
 <p>Update Forward All Company Calls</p>
 <table class="markdownTable">
@@ -6888,7 +6946,7 @@ updateForwardAllCompanyCalls</h1>
 <li><code>result</code> is of type <a href="./Definitions/ForwardAllCompanyCallsInfo.cs">ForwardAllCompanyCallsInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Handling-Rules-updateForwardAllCompanyCalls">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md257"></a>
+<h1><a class="anchor" id="autotoc_md259"></a>
 readAccountGreetingContent</h1>
 <p>Get Account Greeting Media Content</p>
 <table class="markdownTable">
@@ -6915,11 +6973,11 @@ readAccountGreetingContent</h1>
 <li><code>readAccountGreetingContentParameters</code> is of type <a href="./Definitions/ReadAccountGreetingContentParameters.cs">ReadAccountGreetingContentParameters</a></li>
 <li><code>result</code> is of type <code>byte[]</code></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md258"></a>
+<h2><a class="anchor" id="autotoc_md260"></a>
 ❗❗❗ Code sample above may not work</h2>
 <p>Please refer to <a href="/README.md#Binary-content-downloading">Binary content downloading</a>.</p>
 <p><a href="https://developer.ringcentral.com/api-reference#Greetings-readAccountGreetingContent">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md259"></a>
+<h1><a class="anchor" id="autotoc_md261"></a>
 readIVRPromptContent</h1>
 <p>Get IVR Prompt Content</p>
 <table class="markdownTable">
@@ -6946,11 +7004,11 @@ readIVRPromptContent</h1>
 <li><code>readIVRPromptContentParameters</code> is of type <a href="./Definitions/ReadIVRPromptContentParameters.cs">ReadIVRPromptContentParameters</a></li>
 <li><code>result</code> is of type <code>byte[]</code></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md260"></a>
+<h2><a class="anchor" id="autotoc_md262"></a>
 ❗❗❗ Code sample above may not work</h2>
 <p>Please refer to <a href="/README.md#Binary-content-downloading">Binary content downloading</a>.</p>
 <p><a href="https://developer.ringcentral.com/api-reference#IVR-readIVRPromptContent">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md261"></a>
+<h1><a class="anchor" id="autotoc_md263"></a>
 createMessageStoreReport</h1>
 <p>Create Message Store Report</p>
 <table class="markdownTable">
@@ -6978,7 +7036,7 @@ createMessageStoreReport</h1>
 <li><code>result</code> is of type <a href="./Definitions/MessageStoreReport.cs">MessageStoreReport</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Message-Exports-createMessageStoreReport">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md262"></a>
+<h1><a class="anchor" id="autotoc_md264"></a>
 readMessageStoreReportTask</h1>
 <p>Get Message Store Report Task</p>
 <table class="markdownTable">
@@ -7005,7 +7063,7 @@ readMessageStoreReportTask</h1>
 <li><code>result</code> is of type <a href="./Definitions/MessageStoreReport.cs">MessageStoreReport</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Message-Exports-readMessageStoreReportTask">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md263"></a>
+<h1><a class="anchor" id="autotoc_md265"></a>
 readCallRecordingContent</h1>
 <p>Get Call Recording Content</p>
 <table class="markdownTable">
@@ -7032,11 +7090,11 @@ readCallRecordingContent</h1>
 <li><code>readCallRecordingContentParameters</code> is of type <a href="./Definitions/ReadCallRecordingContentParameters.cs">ReadCallRecordingContentParameters</a></li>
 <li><code>result</code> is of type <code>byte[]</code></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md264"></a>
+<h2><a class="anchor" id="autotoc_md266"></a>
 ❗❗❗ Code sample above may not work</h2>
 <p>Please refer to <a href="/README.md#Binary-content-downloading">Binary content downloading</a>.</p>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Recordings-readCallRecordingContent">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md265"></a>
+<h1><a class="anchor" id="autotoc_md267"></a>
 assignMultipleSites</h1>
 <p>Edit Sites</p>
 <table class="markdownTable">
@@ -7064,7 +7122,7 @@ assignMultipleSites</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Multi-Site-assignMultipleSites">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md266"></a>
+<h1><a class="anchor" id="autotoc_md268"></a>
 listSiteMembers</h1>
 <p>List Site Members</p>
 <table class="markdownTable">
@@ -7091,7 +7149,7 @@ listSiteMembers</h1>
 <li><code>result</code> is of type <a href="./Definitions/SiteMembersList.cs">SiteMembersList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Multi-Site-listSiteMembers">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md267"></a>
+<h1><a class="anchor" id="autotoc_md269"></a>
 createCallOutCallSession</h1>
 <p>Make CallOut</p>
 <table class="markdownTable">
@@ -7119,7 +7177,7 @@ createCallOutCallSession</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallSession.cs">CallSession</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-createCallOutCallSession">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md268"></a>
+<h1><a class="anchor" id="autotoc_md270"></a>
 createConferenceCallSession</h1>
 <p>Start Conference Call Session</p>
 <table class="markdownTable">
@@ -7146,7 +7204,7 @@ createConferenceCallSession</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallSession.cs">CallSession</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-createConferenceCallSession">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md269"></a>
+<h1><a class="anchor" id="autotoc_md271"></a>
 readCallSessionStatus</h1>
 <p>Get Call Session Status</p>
 <table class="markdownTable">
@@ -7174,7 +7232,7 @@ readCallSessionStatus</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallSessionObject.cs">CallSessionObject</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-readCallSessionStatus">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md270"></a>
+<h1><a class="anchor" id="autotoc_md272"></a>
 deleteCallSession</h1>
 <p>Drop Call Session</p>
 <table class="markdownTable">
@@ -7201,7 +7259,7 @@ deleteCallSession</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-deleteCallSession">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md271"></a>
+<h1><a class="anchor" id="autotoc_md273"></a>
 readDefaultRole</h1>
 <p>Get Default User Role</p>
 <table class="markdownTable">
@@ -7228,7 +7286,7 @@ readDefaultRole</h1>
 <li><code>result</code> is of type <a href="./Definitions/DefaultUserRole.cs">DefaultUserRole</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Role-Management-readDefaultRole">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md272"></a>
+<h1><a class="anchor" id="autotoc_md274"></a>
 updateDefaultUserRole</h1>
 <p>Set Default User Role</p>
 <table class="markdownTable">
@@ -7256,7 +7314,7 @@ updateDefaultUserRole</h1>
 <li><code>result</code> is of type <a href="./Definitions/DefaultUserRole.cs">DefaultUserRole</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Role-Management-updateDefaultUserRole">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md273"></a>
+<h1><a class="anchor" id="autotoc_md275"></a>
 assignMultipleUserRoles</h1>
 <p>Assign Multiple User Roles</p>
 <table class="markdownTable">
@@ -7284,7 +7342,7 @@ assignMultipleUserRoles</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Role-Management-assignMultipleUserRoles">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md274"></a>
+<h1><a class="anchor" id="autotoc_md276"></a>
 createSIPRegistration</h1>
 <p>Register Device</p>
 <table class="markdownTable">
@@ -7311,7 +7369,7 @@ createSIPRegistration</h1>
 <li><code>result</code> is of type <a href="./Definitions/CreateSipRegistrationResponse.cs">CreateSipRegistrationResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Device-SIP-Registration-createSIPRegistration">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md275"></a>
+<h1><a class="anchor" id="autotoc_md277"></a>
 listFaxCoverPages</h1>
 <p>List Fax Cover Pages</p>
 <table class="markdownTable">
@@ -7338,7 +7396,7 @@ listFaxCoverPages</h1>
 <li><code>result</code> is of type <a href="./Definitions/ListFaxCoverPagesResponse.cs">ListFaxCoverPagesResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Fax-listFaxCoverPages">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md276"></a>
+<h1><a class="anchor" id="autotoc_md278"></a>
 listPermissions</h1>
 <p>List Permissions</p>
 <table class="markdownTable">
@@ -7365,7 +7423,7 @@ listPermissions</h1>
 <li><code>result</code> is of type <a href="./Definitions/PermissionCollectionResource.cs">PermissionCollectionResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#User-Permissions-listPermissions">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md277"></a>
+<h1><a class="anchor" id="autotoc_md279"></a>
 readPermission</h1>
 <p>Get Permission</p>
 <table class="markdownTable">
@@ -7391,7 +7449,7 @@ readPermission</h1>
 <li><code>result</code> is of type <a href="./Definitions/PermissionResource.cs">PermissionResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#User-Permissions-readPermission">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md278"></a>
+<h1><a class="anchor" id="autotoc_md280"></a>
 getGlipAdaptiveCardNew</h1>
 <p>Get Adaptive Card</p>
 <table class="markdownTable">
@@ -7416,7 +7474,7 @@ getGlipAdaptiveCardNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/AdaptiveCardInfo.cs">AdaptiveCardInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Adaptive-Cards-getGlipAdaptiveCardNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md279"></a>
+<h1><a class="anchor" id="autotoc_md281"></a>
 updateGlipAdaptiveCardNew</h1>
 <p>Update Adaptive Card</p>
 <table class="markdownTable">
@@ -7442,7 +7500,7 @@ updateGlipAdaptiveCardNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/AdaptiveCardShortInfo.cs">AdaptiveCardShortInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Adaptive-Cards-updateGlipAdaptiveCardNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md280"></a>
+<h1><a class="anchor" id="autotoc_md282"></a>
 deleteGlipAdaptiveCardNew</h1>
 <p>Delete Adaptive Card</p>
 <table class="markdownTable">
@@ -7467,7 +7525,7 @@ deleteGlipAdaptiveCardNew</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Adaptive-Cards-deleteGlipAdaptiveCardNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md281"></a>
+<h1><a class="anchor" id="autotoc_md283"></a>
 favoriteGlipChatNew</h1>
 <p>Add Chat to Favorites</p>
 <table class="markdownTable">
@@ -7492,7 +7550,7 @@ favoriteGlipChatNew</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Chats-favoriteGlipChatNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md282"></a>
+<h1><a class="anchor" id="autotoc_md284"></a>
 listChatNotesNew</h1>
 <p>List Notes</p>
 <table class="markdownTable">
@@ -7518,7 +7576,7 @@ listChatNotesNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/TMNoteList.cs">TMNoteList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Notes-listChatNotesNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md283"></a>
+<h1><a class="anchor" id="autotoc_md285"></a>
 createChatNoteNew</h1>
 <p>Create Note</p>
 <table class="markdownTable">
@@ -7544,7 +7602,7 @@ createChatNoteNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/TMNoteInfo.cs">TMNoteInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Notes-createChatNoteNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md284"></a>
+<h1><a class="anchor" id="autotoc_md286"></a>
 readGlipPostsNew</h1>
 <p>List Posts</p>
 <table class="markdownTable">
@@ -7570,7 +7628,7 @@ readGlipPostsNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/TMPostsList.cs">TMPostsList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Posts-readGlipPostsNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md285"></a>
+<h1><a class="anchor" id="autotoc_md287"></a>
 createGlipPostNew</h1>
 <p>Create Post</p>
 <table class="markdownTable">
@@ -7596,7 +7654,7 @@ createGlipPostNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/TMPostInfo.cs">TMPostInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Posts-createGlipPostNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md286"></a>
+<h1><a class="anchor" id="autotoc_md288"></a>
 readGlipPostNew</h1>
 <p>Get Post</p>
 <table class="markdownTable">
@@ -7621,7 +7679,7 @@ readGlipPostNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/TMPostInfo.cs">TMPostInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Posts-readGlipPostNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md287"></a>
+<h1><a class="anchor" id="autotoc_md289"></a>
 deleteGlipPostNew</h1>
 <p>Delete Post</p>
 <table class="markdownTable">
@@ -7646,7 +7704,7 @@ deleteGlipPostNew</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Posts-deleteGlipPostNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md288"></a>
+<h1><a class="anchor" id="autotoc_md290"></a>
 patchGlipPostNew</h1>
 <p>Update Post</p>
 <table class="markdownTable">
@@ -7672,7 +7730,7 @@ patchGlipPostNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/TMPostInfo.cs">TMPostInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Posts-patchGlipPostNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md289"></a>
+<h1><a class="anchor" id="autotoc_md291"></a>
 listChatTasksNew</h1>
 <p>List Chat Tasks</p>
 <table class="markdownTable">
@@ -7698,7 +7756,7 @@ listChatTasksNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/TMTaskList.cs">TMTaskList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Tasks-listChatTasksNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md290"></a>
+<h1><a class="anchor" id="autotoc_md292"></a>
 createTaskNew</h1>
 <p>Create Task</p>
 <table class="markdownTable">
@@ -7724,7 +7782,7 @@ createTaskNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/TMTaskInfo.cs">TMTaskInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Tasks-createTaskNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md291"></a>
+<h1><a class="anchor" id="autotoc_md293"></a>
 unfavoriteGlipChatNew</h1>
 <p>Remove Chat from Favorites</p>
 <table class="markdownTable">
@@ -7749,7 +7807,7 @@ unfavoriteGlipChatNew</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Chats-unfavoriteGlipChatNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md292"></a>
+<h1><a class="anchor" id="autotoc_md294"></a>
 listGlipConversationsNew</h1>
 <p>List Conversations</p>
 <table class="markdownTable">
@@ -7775,7 +7833,7 @@ listGlipConversationsNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/TMConversationList.cs">TMConversationList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Conversations-listGlipConversationsNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md293"></a>
+<h1><a class="anchor" id="autotoc_md295"></a>
 createGlipConversationNew</h1>
 <p>Create/Open Conversation</p>
 <table class="markdownTable">
@@ -7801,7 +7859,7 @@ createGlipConversationNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/TMConversationInfo.cs">TMConversationInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Conversations-createGlipConversationNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md294"></a>
+<h1><a class="anchor" id="autotoc_md296"></a>
 readGlipConversationNew</h1>
 <p>Get Conversation</p>
 <table class="markdownTable">
@@ -7826,7 +7884,7 @@ readGlipConversationNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/TMConversationInfo.cs">TMConversationInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Conversations-readGlipConversationNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md295"></a>
+<h1><a class="anchor" id="autotoc_md297"></a>
 listDataExportTasksNew</h1>
 <p>List Data Export Tasks</p>
 <table class="markdownTable">
@@ -7852,7 +7910,7 @@ listDataExportTasksNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/DataExportTaskList.cs">DataExportTaskList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Compliance-Exports-listDataExportTasksNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md296"></a>
+<h1><a class="anchor" id="autotoc_md298"></a>
 createDataExportTaskNew</h1>
 <p>Create Data Export Task</p>
 <table class="markdownTable">
@@ -7878,7 +7936,7 @@ createDataExportTaskNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/DataExportTask.cs">DataExportTask</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Compliance-Exports-createDataExportTaskNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md297"></a>
+<h1><a class="anchor" id="autotoc_md299"></a>
 readDataExportTaskNew</h1>
 <p>Get Data Export Task</p>
 <table class="markdownTable">
@@ -7903,7 +7961,7 @@ readDataExportTaskNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/DataExportTask.cs">DataExportTask</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Compliance-Exports-readDataExportTaskNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md298"></a>
+<h1><a class="anchor" id="autotoc_md300"></a>
 listGroupEventsNew</h1>
 <p>List Group Events</p>
 <table class="markdownTable">
@@ -7928,7 +7986,7 @@ listGroupEventsNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/TMEventInfo.cs">TMEventInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Calendar-Events-listGroupEventsNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md299"></a>
+<h1><a class="anchor" id="autotoc_md301"></a>
 createEventByGroupIdNew</h1>
 <p>Create Event by Group ID</p>
 <table class="markdownTable">
@@ -7954,7 +8012,7 @@ createEventByGroupIdNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/TMEventInfo.cs">TMEventInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Calendar-Events-createEventByGroupIdNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md300"></a>
+<h1><a class="anchor" id="autotoc_md302"></a>
 listGlipGroupWebhooksNew</h1>
 <p>List Webhooks in Group</p>
 <table class="markdownTable">
@@ -7979,7 +8037,7 @@ listGlipGroupWebhooksNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/TMWebhookList.cs">TMWebhookList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Incoming-Webhooks-listGlipGroupWebhooksNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md301"></a>
+<h1><a class="anchor" id="autotoc_md303"></a>
 createGlipGroupWebhookNew</h1>
 <p>Create Webhook in Group</p>
 <table class="markdownTable">
@@ -8004,7 +8062,7 @@ createGlipGroupWebhookNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/TMWebhookInfo.cs">TMWebhookInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Incoming-Webhooks-createGlipGroupWebhookNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md302"></a>
+<h1><a class="anchor" id="autotoc_md304"></a>
 publishNoteNew</h1>
 <p>Publish Note</p>
 <table class="markdownTable">
@@ -8029,7 +8087,7 @@ publishNoteNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/TMNoteInfo.cs">TMNoteInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Notes-publishNoteNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md303"></a>
+<h1><a class="anchor" id="autotoc_md305"></a>
 unlockNoteNew</h1>
 <p>Unlock Note</p>
 <table class="markdownTable">
@@ -8054,7 +8112,7 @@ unlockNoteNew</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Notes-unlockNoteNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md304"></a>
+<h1><a class="anchor" id="autotoc_md306"></a>
 listRecentChatsNew</h1>
 <p>List Recent Chats</p>
 <table class="markdownTable">
@@ -8080,7 +8138,7 @@ listRecentChatsNew</h1>
 <li><code>result</code> is of type <a href="./Definitions/TMChatListWithoutNavigation.cs">TMChatListWithoutNavigation</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Chats-listRecentChatsNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md305"></a>
+<h1><a class="anchor" id="autotoc_md307"></a>
 completeTaskNew</h1>
 <p>Complete Task</p>
 <table class="markdownTable">
@@ -8106,7 +8164,7 @@ completeTaskNew</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Tasks-completeTaskNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md306"></a>
+<h1><a class="anchor" id="autotoc_md308"></a>
 archiveGlipTeamNew</h1>
 <p>Archive Team</p>
 <table class="markdownTable">
@@ -8131,7 +8189,7 @@ archiveGlipTeamNew</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Teams-archiveGlipTeamNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md307"></a>
+<h1><a class="anchor" id="autotoc_md309"></a>
 leaveGlipTeamNew</h1>
 <p>Leave Team</p>
 <table class="markdownTable">
@@ -8156,7 +8214,7 @@ leaveGlipTeamNew</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Teams-leaveGlipTeamNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md308"></a>
+<h1><a class="anchor" id="autotoc_md310"></a>
 removeGlipTeamMembersNew</h1>
 <p>Remove Team Members</p>
 <table class="markdownTable">
@@ -8182,7 +8240,7 @@ removeGlipTeamMembersNew</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Teams-removeGlipTeamMembersNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md309"></a>
+<h1><a class="anchor" id="autotoc_md311"></a>
 unarchiveGlipTeamNew</h1>
 <p>Unarchive Team</p>
 <table class="markdownTable">
@@ -8207,7 +8265,7 @@ unarchiveGlipTeamNew</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Teams-unarchiveGlipTeamNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md310"></a>
+<h1><a class="anchor" id="autotoc_md312"></a>
 activateGlipWebhookNew</h1>
 <p>Activate Webhook</p>
 <table class="markdownTable">
@@ -8232,7 +8290,7 @@ activateGlipWebhookNew</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Incoming-Webhooks-activateGlipWebhookNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md311"></a>
+<h1><a class="anchor" id="autotoc_md313"></a>
 suspendGlipWebhookNew</h1>
 <p>Suspend Webhook</p>
 <table class="markdownTable">
@@ -8257,7 +8315,7 @@ suspendGlipWebhookNew</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Incoming-Webhooks-suspendGlipWebhookNew">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md312"></a>
+<h1><a class="anchor" id="autotoc_md314"></a>
 rcwConfigListAllSessions</h1>
 <p>List Sessions across Multiple Webinars</p>
 <table class="markdownTable">
@@ -8283,7 +8341,7 @@ rcwConfigListAllSessions</h1>
 <li><code>result</code> is of type <a href="./Definitions/WcsSessionGlobalListResource.cs">WcsSessionGlobalListResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Webinars-and-Sessions-rcwConfigListAllSessions">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md313"></a>
+<h1><a class="anchor" id="autotoc_md315"></a>
 rcwConfigListWebinars</h1>
 <p>List User's Webinars</p>
 <table class="markdownTable">
@@ -8309,7 +8367,7 @@ rcwConfigListWebinars</h1>
 <li><code>result</code> is of type <a href="./Definitions/WebinarListResource.cs">WebinarListResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Webinars-and-Sessions-rcwConfigListWebinars">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md314"></a>
+<h1><a class="anchor" id="autotoc_md316"></a>
 rcwConfigCreateWebinar</h1>
 <p>Create Webinar</p>
 <table class="markdownTable">
@@ -8335,7 +8393,7 @@ rcwConfigCreateWebinar</h1>
 <li><code>result</code> is of type <a href="./Definitions/WcsWebinarResource.cs">WcsWebinarResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Webinars-and-Sessions-rcwConfigCreateWebinar">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md315"></a>
+<h1><a class="anchor" id="autotoc_md317"></a>
 rcwConfigGetWebinar</h1>
 <p>Get Webinar</p>
 <table class="markdownTable">
@@ -8360,7 +8418,7 @@ rcwConfigGetWebinar</h1>
 <li><code>result</code> is of type <a href="./Definitions/WcsWebinarResource.cs">WcsWebinarResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Webinars-and-Sessions-rcwConfigGetWebinar">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md316"></a>
+<h1><a class="anchor" id="autotoc_md318"></a>
 rcwConfigDeleteWebinar</h1>
 <p>Delete Webinar</p>
 <table class="markdownTable">
@@ -8385,7 +8443,7 @@ rcwConfigDeleteWebinar</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Webinars-and-Sessions-rcwConfigDeleteWebinar">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md317"></a>
+<h1><a class="anchor" id="autotoc_md319"></a>
 rcwConfigUpdateWebinar</h1>
 <p>Update Webinar</p>
 <table class="markdownTable">
@@ -8411,7 +8469,7 @@ rcwConfigUpdateWebinar</h1>
 <li><code>result</code> is of type <a href="./Definitions/WcsWebinarResource.cs">WcsWebinarResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Webinars-and-Sessions-rcwConfigUpdateWebinar">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md318"></a>
+<h1><a class="anchor" id="autotoc_md320"></a>
 rcwHistoryListAllCompanySessions</h1>
 <p>List Historical Webinar Sessions across Multiple Webinars / Hosts</p>
 <table class="markdownTable">
@@ -8437,7 +8495,7 @@ rcwHistoryListAllCompanySessions</h1>
 <li><code>result</code> is of type <a href="./Definitions/SessionGlobalListResource.cs">SessionGlobalListResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Historical-Webinars-rcwHistoryListAllCompanySessions">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md319"></a>
+<h1><a class="anchor" id="autotoc_md321"></a>
 rcwHistoryListRecordings</h1>
 <p>List Webinar Recordings</p>
 <table class="markdownTable">
@@ -8463,7 +8521,7 @@ rcwHistoryListRecordings</h1>
 <li><code>result</code> is of type <a href="./Definitions/RecordingListResource.cs">RecordingListResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Historical-Recordings-rcwHistoryListRecordings">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md320"></a>
+<h1><a class="anchor" id="autotoc_md322"></a>
 rcwHistoryGetRecording</h1>
 <p>Get Webinar Recording</p>
 <table class="markdownTable">
@@ -8488,7 +8546,7 @@ rcwHistoryGetRecording</h1>
 <li><code>result</code> is of type <a href="./Definitions/RecordingItemExtendedModel.cs">RecordingItemExtendedModel</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Historical-Recordings-rcwHistoryGetRecording">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md321"></a>
+<h1><a class="anchor" id="autotoc_md323"></a>
 rcwHistoryAdminListRecordings</h1>
 <p>List Webinar Recordings (Admin)</p>
 <table class="markdownTable">
@@ -8514,7 +8572,7 @@ rcwHistoryAdminListRecordings</h1>
 <li><code>result</code> is of type <a href="./Definitions/RecordingAdminListResource.cs">RecordingAdminListResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Historical-Recordings-rcwHistoryAdminListRecordings">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md322"></a>
+<h1><a class="anchor" id="autotoc_md324"></a>
 rcwHistoryAdminGetRecording</h1>
 <p>Get Webinar Recording (Admin)</p>
 <table class="markdownTable">
@@ -8539,7 +8597,7 @@ rcwHistoryAdminGetRecording</h1>
 <li><code>result</code> is of type <a href="./Definitions/RecordingAdminExtendedItemModel.cs">RecordingAdminExtendedItemModel</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Historical-Recordings-rcwHistoryAdminGetRecording">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md323"></a>
+<h1><a class="anchor" id="autotoc_md325"></a>
 rcwHistoryGetSession</h1>
 <p>Get Historical Webinar Session</p>
 <table class="markdownTable">
@@ -8564,63 +8622,6 @@ rcwHistoryGetSession</h1>
 <li><code>result</code> is of type <a href="./Definitions/SessionResource.cs">SessionResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Historical-Webinars-rcwHistoryGetSession">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md324"></a>
-readCallerBlockingSettings</h1>
-<p>Get Caller Blocking Settings</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Name   </th><th class="markdownTableHeadNone">Value    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">HTTP Method   </td><td class="markdownTableBodyNone"><code>GET</code>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Endpoint   </td><td class="markdownTableBodyNone"><code>/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking</code>    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Rate Limit Group   </td><td class="markdownTableBodyNone"><code>Light</code>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">App Permission   </td><td class="markdownTableBodyNone"><code>ReadAccounts</code>    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">User Permission   </td><td class="markdownTableBodyNone"><code>ReadBlockedNumbers</code>   </td></tr>
-</table>
-<div class="fragment"><div class="line">var rc = <span class="keyword">new</span> RestClient(<span class="stringliteral">&quot;clientID&quot;</span>, <span class="stringliteral">&quot;clientSecret&quot;</span>, <span class="stringliteral">&quot;serverURL&quot;</span>);</div>
-<div class="line">await rc.Authorize(<span class="stringliteral">&quot;jwtToken&quot;</span>);</div>
-<div class="line">var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Get();</div>
-<div class="line">await rc.Revoke();</div>
-</div><!-- fragment --><ul>
-<li>Parameter <code>apiVersion</code> is optional with default value <code>v1.0</code></li>
-<li>Parameter <code>accountId</code> is optional with default value <code>~</code></li>
-<li>Parameter <code>extensionId</code> is optional with default value <code>~</code></li>
-<li><code>result</code> is of type <a href="./Definitions/CallerBlockingSettings.cs">CallerBlockingSettings</a></li>
-</ul>
-<p><a href="https://developer.ringcentral.com/api-reference#Call-Blocking-readCallerBlockingSettings">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md325"></a>
-updateCallerBlockingSettings</h1>
-<p>Update Caller Blocking Settings</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Name   </th><th class="markdownTableHeadNone">Value    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">HTTP Method   </td><td class="markdownTableBodyNone"><code>PUT</code>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Endpoint   </td><td class="markdownTableBodyNone"><code>/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking</code>    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Rate Limit Group   </td><td class="markdownTableBodyNone"><code>Light</code>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">App Permission   </td><td class="markdownTableBodyNone"><code>EditExtensions</code>    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">User Permission   </td><td class="markdownTableBodyNone"><code>EditBlockedNumbers</code>   </td></tr>
-</table>
-<div class="fragment"><div class="line">var rc = <span class="keyword">new</span> RestClient(<span class="stringliteral">&quot;clientID&quot;</span>, <span class="stringliteral">&quot;clientSecret&quot;</span>, <span class="stringliteral">&quot;serverURL&quot;</span>);</div>
-<div class="line">await rc.Authorize(<span class="stringliteral">&quot;jwtToken&quot;</span>);</div>
-<div class="line">var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).CallerBlocking().Put(callerBlockingSettingsUpdate);</div>
-<div class="line">await rc.Revoke();</div>
-</div><!-- fragment --><ul>
-<li>Parameter <code>apiVersion</code> is optional with default value <code>v1.0</code></li>
-<li>Parameter <code>accountId</code> is optional with default value <code>~</code></li>
-<li>Parameter <code>extensionId</code> is optional with default value <code>~</code></li>
-<li><code>callerBlockingSettingsUpdate</code> is of type <a href="./Definitions/CallerBlockingSettingsUpdate.cs">CallerBlockingSettingsUpdate</a></li>
-<li><code>result</code> is of type <a href="./Definitions/CallerBlockingSettings.cs">CallerBlockingSettings</a></li>
-</ul>
-<p><a href="https://developer.ringcentral.com/api-reference#Call-Blocking-updateCallerBlockingSettings">Try it out</a> in API Explorer.</p>
 <h1><a class="anchor" id="autotoc_md326"></a>
 listExtensionPhoneNumbers</h1>
 <p>Get Extension Phone Number List</p>
@@ -8965,56 +8966,6 @@ analyticsCallsTimelineFetch</h1>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Business-Analytics-analyticsCallsTimelineFetch">Try it out</a> in API Explorer.</p>
 <h1><a class="anchor" id="autotoc_md339"></a>
-socMsgAnonymizeIdentity</h1>
-<p>Anonymize Identity</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Name   </th><th class="markdownTableHeadNone">Value    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">HTTP Method   </td><td class="markdownTableBodyNone"><code>POST</code>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Endpoint   </td><td class="markdownTableBodyNone"><code>/cx/social-messaging/v1/identities/{identityId}/anonymize</code>    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Rate Limit Group   </td><td class="markdownTableBodyNone"><code>Light</code>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">App Permission   </td><td class="markdownTableBodyNone"><code>SocialMessaging</code>    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">User Permission   </td><td class="markdownTableBodyNone"><code>N/A</code>   </td></tr>
-</table>
-<div class="fragment"><div class="line">var rc = <span class="keyword">new</span> RestClient(<span class="stringliteral">&quot;clientID&quot;</span>, <span class="stringliteral">&quot;clientSecret&quot;</span>, <span class="stringliteral">&quot;serverURL&quot;</span>);</div>
-<div class="line">await rc.Authorize(<span class="stringliteral">&quot;jwtToken&quot;</span>);</div>
-<div class="line">var result = await rc.Cx().SocialMessaging().V1().Identities(identityId).Anonymize().Post();</div>
-<div class="line">await rc.Revoke();</div>
-</div><!-- fragment --><ul>
-<li><code>result</code> is an empty string</li>
-</ul>
-<p><a href="https://developer.ringcentral.com/api-reference#Identities-socMsgAnonymizeIdentity">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md340"></a>
-socMsgDeanonymizeIdentity</h1>
-<p>Deanonymize Identity</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Name   </th><th class="markdownTableHeadNone">Value    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">HTTP Method   </td><td class="markdownTableBodyNone"><code>POST</code>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Endpoint   </td><td class="markdownTableBodyNone"><code>/cx/social-messaging/v1/identities/{identityId}/deanonymize</code>    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Rate Limit Group   </td><td class="markdownTableBodyNone"><code>Light</code>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">App Permission   </td><td class="markdownTableBodyNone"><code>SocialMessaging</code>    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">User Permission   </td><td class="markdownTableBodyNone"><code>N/A</code>   </td></tr>
-</table>
-<div class="fragment"><div class="line">var rc = <span class="keyword">new</span> RestClient(<span class="stringliteral">&quot;clientID&quot;</span>, <span class="stringliteral">&quot;clientSecret&quot;</span>, <span class="stringliteral">&quot;serverURL&quot;</span>);</div>
-<div class="line">await rc.Authorize(<span class="stringliteral">&quot;jwtToken&quot;</span>);</div>
-<div class="line">var result = await rc.Cx().SocialMessaging().V1().Identities(identityId).Deanonymize().Post();</div>
-<div class="line">await rc.Revoke();</div>
-</div><!-- fragment --><ul>
-<li><code>result</code> is an empty string</li>
-</ul>
-<p><a href="https://developer.ringcentral.com/api-reference#Identities-socMsgDeanonymizeIdentity">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md341"></a>
 getDefaultBridge</h1>
 <p>Get User's Default Bridge</p>
 <table class="markdownTable">
@@ -9041,7 +8992,7 @@ getDefaultBridge</h1>
 <li><code>result</code> is of type <a href="./Definitions/BridgeResponse.cs">BridgeResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Bridge-Management-getDefaultBridge">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md342"></a>
+<h1><a class="anchor" id="autotoc_md340"></a>
 postBatchProvisionUsers</h1>
 <p>Create Multiple User Extensions</p>
 <table class="markdownTable">
@@ -9067,7 +9018,7 @@ postBatchProvisionUsers</h1>
 <li><code>result</code> is of type <a href="./Definitions/BatchProvisionUsersResponse.cs">BatchProvisionUsersResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#User-Settings-postBatchProvisionUsers">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md343"></a>
+<h1><a class="anchor" id="autotoc_md341"></a>
 replaceDevicesJWSPublic</h1>
 <p>Swap Devices</p>
 <table class="markdownTable">
@@ -9093,7 +9044,7 @@ replaceDevicesJWSPublic</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Devices-replaceDevicesJWSPublic">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md344"></a>
+<h1><a class="anchor" id="autotoc_md342"></a>
 addNumbersToInventoryV2</h1>
 <p>Add Numbers to Inventory</p>
 <table class="markdownTable">
@@ -9119,7 +9070,7 @@ addNumbersToInventoryV2</h1>
 <li><code>result</code> is of type <a href="./Definitions/AddPhoneNumbersResponse.cs">AddPhoneNumbersResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Phone-Numbers-addNumbersToInventoryV2">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md345"></a>
+<h1><a class="anchor" id="autotoc_md343"></a>
 getBulkAddTaskResultsV2</h1>
 <p>Get Add Numbers Task Results</p>
 <table class="markdownTable">
@@ -9144,7 +9095,7 @@ getBulkAddTaskResultsV2</h1>
 <li><code>result</code> is of type <a href="./Definitions/GetBulkAddTaskResultsV2Response.cs">GetBulkAddTaskResultsV2Response</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Phone-Numbers-getBulkAddTaskResultsV2">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md346"></a>
+<h1><a class="anchor" id="autotoc_md344"></a>
 sendActivationEmailV2</h1>
 <p>Send/Resend Activation Email</p>
 <table class="markdownTable">
@@ -9169,7 +9120,7 @@ sendActivationEmailV2</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Company-sendActivationEmailV2">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md347"></a>
+<h1><a class="anchor" id="autotoc_md345"></a>
 addA2PSMSOptOuts</h1>
 <p>Add Opt-In/Out Numbers</p>
 <table class="markdownTable">
@@ -9197,7 +9148,7 @@ addA2PSMSOptOuts</h1>
 <li><code>result</code> is of type <a href="./Definitions/OptOutBulkAssignResponse.cs">OptOutBulkAssignResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#High-Volume-SMS-addA2PSMSOptOuts">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md348"></a>
+<h1><a class="anchor" id="autotoc_md346"></a>
 getAddressBookBulkUploadTask</h1>
 <p>Get Contacts Upload Task</p>
 <table class="markdownTable">
@@ -9224,7 +9175,7 @@ getAddressBookBulkUploadTask</h1>
 <li><code>result</code> is of type <a href="./Definitions/AddressBookBulkUploadResponse.cs">AddressBookBulkUploadResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#External-Contacts-getAddressBookBulkUploadTask">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md349"></a>
+<h1><a class="anchor" id="autotoc_md347"></a>
 listCallMonitoringGroupMembers</h1>
 <p>List Call Monitoring Group Members</p>
 <table class="markdownTable">
@@ -9252,7 +9203,7 @@ listCallMonitoringGroupMembers</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallMonitoringGroupMemberList.cs">CallMonitoringGroupMemberList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-listCallMonitoringGroupMembers">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md350"></a>
+<h1><a class="anchor" id="autotoc_md348"></a>
 updateCallRecordingExtensionList</h1>
 <p>Update Call Recording Extension List</p>
 <table class="markdownTable">
@@ -9280,34 +9231,7 @@ updateCallRecordingExtensionList</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Recording-Settings-updateCallRecordingExtensionList">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md351"></a>
-listCallRecordingExtensions</h1>
-<p>Get Call Recording Extension List</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Name   </th><th class="markdownTableHeadNone">Value    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">HTTP Method   </td><td class="markdownTableBodyNone"><code>GET</code>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Endpoint   </td><td class="markdownTableBodyNone"><code>/restapi/{apiVersion}/account/{accountId}/call-recording/extensions</code>    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Rate Limit Group   </td><td class="markdownTableBodyNone"><code>Medium</code>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">App Permission   </td><td class="markdownTableBodyNone"><code>ReadAccounts</code>    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">User Permission   </td><td class="markdownTableBodyNone"><code>ReadCompanyInfo</code>   </td></tr>
-</table>
-<div class="fragment"><div class="line">var rc = <span class="keyword">new</span> RestClient(<span class="stringliteral">&quot;clientID&quot;</span>, <span class="stringliteral">&quot;clientSecret&quot;</span>, <span class="stringliteral">&quot;serverURL&quot;</span>);</div>
-<div class="line">await rc.Authorize(<span class="stringliteral">&quot;jwtToken&quot;</span>);</div>
-<div class="line">var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Extensions().Get();</div>
-<div class="line">await rc.Revoke();</div>
-</div><!-- fragment --><ul>
-<li>Parameter <code>apiVersion</code> is optional with default value <code>v1.0</code></li>
-<li>Parameter <code>accountId</code> is optional with default value <code>~</code></li>
-<li><code>result</code> is of type <a href="./Definitions/CallRecordingExtensions.cs">CallRecordingExtensions</a></li>
-</ul>
-<p><a href="https://developer.ringcentral.com/api-reference#Call-Recording-Settings-listCallRecordingExtensions">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md352"></a>
+<h1><a class="anchor" id="autotoc_md349"></a>
 getExtensionBulkUpdateTask</h1>
 <p>Get Extension Update Task Status</p>
 <table class="markdownTable">
@@ -9334,7 +9258,7 @@ getExtensionBulkUpdateTask</h1>
 <li><code>result</code> is of type <a href="./Definitions/ExtensionBulkUpdateTaskResource.cs">ExtensionBulkUpdateTaskResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Extensions-getExtensionBulkUpdateTask">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md353"></a>
+<h1><a class="anchor" id="autotoc_md350"></a>
 getCallQueueOverflowSettings</h1>
 <p>Get Call Queue Overflow Settings</p>
 <table class="markdownTable">
@@ -9361,7 +9285,7 @@ getCallQueueOverflowSettings</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallQueueOverflowSettings.cs">CallQueueOverflowSettings</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Queues-getCallQueueOverflowSettings">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md354"></a>
+<h1><a class="anchor" id="autotoc_md351"></a>
 updateCallQueueOverflowSettings</h1>
 <p>Update Call Queue Overflow Settings</p>
 <table class="markdownTable">
@@ -9389,7 +9313,7 @@ updateCallQueueOverflowSettings</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallQueueOverflowSettings.cs">CallQueueOverflowSettings</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Queues-updateCallQueueOverflowSettings">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md355"></a>
+<h1><a class="anchor" id="autotoc_md352"></a>
 syncAddressBook</h1>
 <p>Address Book Synchronization</p>
 <table class="markdownTable">
@@ -9418,7 +9342,7 @@ syncAddressBook</h1>
 <li><code>result</code> is of type <a href="./Definitions/AddressBookSync.cs">AddressBookSync</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#External-Contacts-syncAddressBook">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md356"></a>
+<h1><a class="anchor" id="autotoc_md353"></a>
 listContacts</h1>
 <p>List Contacts</p>
 <table class="markdownTable">
@@ -9447,7 +9371,7 @@ listContacts</h1>
 <li><code>result</code> is of type <a href="./Definitions/ContactList.cs">ContactList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#External-Contacts-listContacts">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md357"></a>
+<h1><a class="anchor" id="autotoc_md354"></a>
 createContact</h1>
 <p>Create User Contact</p>
 <table class="markdownTable">
@@ -9477,7 +9401,7 @@ createContact</h1>
 <li><code>result</code> is of type <a href="./Definitions/PersonalContactResource.cs">PersonalContactResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#External-Contacts-createContact">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md358"></a>
+<h1><a class="anchor" id="autotoc_md355"></a>
 readContact</h1>
 <p>Get User Contact(s)</p>
 <table class="markdownTable">
@@ -9505,7 +9429,7 @@ readContact</h1>
 <li><code>result</code> is of type <a href="./Definitions/PersonalContactResource.cs">PersonalContactResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#External-Contacts-readContact">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md359"></a>
+<h1><a class="anchor" id="autotoc_md356"></a>
 updateContact</h1>
 <p>Update User Contact(s)</p>
 <table class="markdownTable">
@@ -9535,7 +9459,7 @@ updateContact</h1>
 <li><code>result</code> is of type <a href="./Definitions/PersonalContactResource.cs">PersonalContactResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#External-Contacts-updateContact">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md360"></a>
+<h1><a class="anchor" id="autotoc_md357"></a>
 deleteContact</h1>
 <p>Delete User Contact(s)</p>
 <table class="markdownTable">
@@ -9563,7 +9487,7 @@ deleteContact</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#External-Contacts-deleteContact">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md361"></a>
+<h1><a class="anchor" id="autotoc_md358"></a>
 patchContact</h1>
 <p>Update Contact Attributes</p>
 <table class="markdownTable">
@@ -9593,7 +9517,7 @@ patchContact</h1>
 <li><code>result</code> is of type <a href="./Definitions/PersonalContactResource.cs">PersonalContactResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#External-Contacts-patchContact">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md362"></a>
+<h1><a class="anchor" id="autotoc_md359"></a>
 listAdministeredSites</h1>
 <p>List User Administered Sites</p>
 <table class="markdownTable">
@@ -9621,7 +9545,7 @@ listAdministeredSites</h1>
 <li><code>result</code> is of type <a href="./Definitions/BusinessSiteCollectionResource.cs">BusinessSiteCollectionResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Site-Administration-listAdministeredSites">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md363"></a>
+<h1><a class="anchor" id="autotoc_md360"></a>
 updateUserAdministeredSites</h1>
 <p>Update User Administered Sites</p>
 <table class="markdownTable">
@@ -9650,7 +9574,7 @@ updateUserAdministeredSites</h1>
 <li><code>result</code> is of type <a href="./Definitions/BusinessSiteCollectionResource.cs">BusinessSiteCollectionResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Site-Administration-updateUserAdministeredSites">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md364"></a>
+<h1><a class="anchor" id="autotoc_md361"></a>
 listOfAvailableForAssigningRoles</h1>
 <p>List Assignable Roles</p>
 <table class="markdownTable">
@@ -9679,7 +9603,7 @@ listOfAvailableForAssigningRoles</h1>
 <li><code>result</code> is of type <a href="./Definitions/RolesCollectionResource.cs">RolesCollectionResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Role-Management-listOfAvailableForAssigningRoles">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md365"></a>
+<h1><a class="anchor" id="autotoc_md362"></a>
 checkUserPermission</h1>
 <p>Check User Permission</p>
 <table class="markdownTable">
@@ -9708,7 +9632,7 @@ checkUserPermission</h1>
 <li><code>result</code> is of type <a href="./Definitions/AuthProfileCheckResource.cs">AuthProfileCheckResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#User-Permissions-checkUserPermission">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md366"></a>
+<h1><a class="anchor" id="autotoc_md363"></a>
 readExtensionCallQueuePresence</h1>
 <p>Get Agent’s Call Queue Presence</p>
 <table class="markdownTable">
@@ -9737,7 +9661,7 @@ readExtensionCallQueuePresence</h1>
 <li><code>result</code> is of type <a href="./Definitions/ExtensionCallQueuePresenceList.cs">ExtensionCallQueuePresenceList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Presence-readExtensionCallQueuePresence">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md367"></a>
+<h1><a class="anchor" id="autotoc_md364"></a>
 updateExtensionCallQueuePresence</h1>
 <p>Update Call Queue Presence</p>
 <table class="markdownTable">
@@ -9766,7 +9690,7 @@ updateExtensionCallQueuePresence</h1>
 <li><code>result</code> is of type <a href="./Definitions/ExtensionCallQueuePresenceList.cs">ExtensionCallQueuePresenceList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Presence-updateExtensionCallQueuePresence">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md368"></a>
+<h1><a class="anchor" id="autotoc_md365"></a>
 getExtensionEmergencyLocations</h1>
 <p>List User Emergency Locations</p>
 <table class="markdownTable">
@@ -9795,7 +9719,7 @@ getExtensionEmergencyLocations</h1>
 <li><code>result</code> is of type <a href="./Definitions/EmergencyLocationsResource.cs">EmergencyLocationsResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-getExtensionEmergencyLocations">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md369"></a>
+<h1><a class="anchor" id="autotoc_md366"></a>
 createExtensionEmergencyLocation</h1>
 <p>Create User Emergency Location</p>
 <table class="markdownTable">
@@ -9821,10 +9745,10 @@ createExtensionEmergencyLocation</h1>
 <li>Parameter <code>accountId</code> is optional with default value <code>~</code></li>
 <li>Parameter <code>extensionId</code> is optional with default value <code>~</code></li>
 <li><code>createUserEmergencyLocationRequest</code> is of type <a href="./Definitions/CreateUserEmergencyLocationRequest.cs">CreateUserEmergencyLocationRequest</a></li>
-<li><code>result</code> is of type <a href="./Definitions/CommonEmergencyLocationResource.cs">CommonEmergencyLocationResource</a></li>
+<li><code>result</code> is of type <a href="./Definitions/EmergencyLocationResponseResource.cs">EmergencyLocationResponseResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createExtensionEmergencyLocation">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md370"></a>
+<h1><a class="anchor" id="autotoc_md367"></a>
 getExtensionEmergencyLocation</h1>
 <p>Get User Emergency Location</p>
 <table class="markdownTable">
@@ -9852,7 +9776,7 @@ getExtensionEmergencyLocation</h1>
 <li><code>result</code> is of type <a href="./Definitions/CommonEmergencyLocationResource.cs">CommonEmergencyLocationResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-getExtensionEmergencyLocation">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md371"></a>
+<h1><a class="anchor" id="autotoc_md368"></a>
 updateExtensionEmergencyLocation</h1>
 <p>Update User Emergency Location</p>
 <table class="markdownTable">
@@ -9871,17 +9795,17 @@ updateExtensionEmergencyLocation</h1>
 </table>
 <div class="fragment"><div class="line">var rc = <span class="keyword">new</span> RestClient(<span class="stringliteral">&quot;clientID&quot;</span>, <span class="stringliteral">&quot;clientSecret&quot;</span>, <span class="stringliteral">&quot;serverURL&quot;</span>);</div>
 <div class="line">await rc.Authorize(<span class="stringliteral">&quot;jwtToken&quot;</span>);</div>
-<div class="line">var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).EmergencyLocations(locationId).Put(emergencyLocationInfoRequest);</div>
+<div class="line">var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).EmergencyLocations(locationId).Put(emergencyLocationRequestResource);</div>
 <div class="line">await rc.Revoke();</div>
 </div><!-- fragment --><ul>
 <li>Parameter <code>apiVersion</code> is optional with default value <code>v1.0</code></li>
 <li>Parameter <code>accountId</code> is optional with default value <code>~</code></li>
 <li>Parameter <code>extensionId</code> is optional with default value <code>~</code></li>
-<li><code>emergencyLocationInfoRequest</code> is of type <a href="./Definitions/EmergencyLocationInfoRequest.cs">EmergencyLocationInfoRequest</a></li>
-<li><code>result</code> is of type <a href="./Definitions/CommonEmergencyLocationResource.cs">CommonEmergencyLocationResource</a></li>
+<li><code>emergencyLocationRequestResource</code> is of type <a href="./Definitions/EmergencyLocationRequestResource.cs">EmergencyLocationRequestResource</a></li>
+<li><code>result</code> is of type <a href="./Definitions/EmergencyLocationResponseResource.cs">EmergencyLocationResponseResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateExtensionEmergencyLocation">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md372"></a>
+<h1><a class="anchor" id="autotoc_md369"></a>
 deleteExtensionEmergencyLocation</h1>
 <p>Delete User Emergency Location</p>
 <table class="markdownTable">
@@ -9910,7 +9834,7 @@ deleteExtensionEmergencyLocation</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-deleteExtensionEmergencyLocation">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md373"></a>
+<h1><a class="anchor" id="autotoc_md370"></a>
 listForwardingNumbers</h1>
 <p>List Forwarding Numbers</p>
 <table class="markdownTable">
@@ -9939,7 +9863,7 @@ listForwardingNumbers</h1>
 <li><code>result</code> is of type <a href="./Definitions/GetExtensionForwardingNumberListResponse.cs">GetExtensionForwardingNumberListResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Forwarding-listForwardingNumbers">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md374"></a>
+<h1><a class="anchor" id="autotoc_md371"></a>
 createForwardingNumber</h1>
 <p>Create Forwarding Number</p>
 <table class="markdownTable">
@@ -9968,7 +9892,7 @@ createForwardingNumber</h1>
 <li><code>result</code> is of type <a href="./Definitions/ForwardingNumberInfo.cs">ForwardingNumberInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Forwarding-createForwardingNumber">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md375"></a>
+<h1><a class="anchor" id="autotoc_md372"></a>
 deleteForwardingNumbers</h1>
 <p>Delete Forwarding Numbers</p>
 <table class="markdownTable">
@@ -9997,7 +9921,7 @@ deleteForwardingNumbers</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Forwarding-deleteForwardingNumbers">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md376"></a>
+<h1><a class="anchor" id="autotoc_md373"></a>
 readForwardingNumber</h1>
 <p>Get Forwarding Number</p>
 <table class="markdownTable">
@@ -10025,7 +9949,7 @@ readForwardingNumber</h1>
 <li><code>result</code> is of type <a href="./Definitions/ForwardingNumberResource.cs">ForwardingNumberResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Forwarding-readForwardingNumber">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md377"></a>
+<h1><a class="anchor" id="autotoc_md374"></a>
 updateForwardingNumber</h1>
 <p>Update Forwarding Number</p>
 <table class="markdownTable">
@@ -10054,7 +9978,7 @@ updateForwardingNumber</h1>
 <li><code>result</code> is of type <a href="./Definitions/ForwardingNumberInfo.cs">ForwardingNumberInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Forwarding-updateForwardingNumber">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md378"></a>
+<h1><a class="anchor" id="autotoc_md375"></a>
 deleteForwardingNumber</h1>
 <p>Delete Forwarding Number</p>
 <table class="markdownTable">
@@ -10082,7 +10006,7 @@ deleteForwardingNumber</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Forwarding-deleteForwardingNumber">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md379"></a>
+<h1><a class="anchor" id="autotoc_md376"></a>
 readGreetingContent</h1>
 <p>Get Extension Greeting Media Content</p>
 <table class="markdownTable">
@@ -10110,11 +10034,43 @@ readGreetingContent</h1>
 <li><code>readGreetingContentParameters</code> is of type <a href="./Definitions/ReadGreetingContentParameters.cs">ReadGreetingContentParameters</a></li>
 <li><code>result</code> is of type <code>byte[]</code></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md380"></a>
+<h2><a class="anchor" id="autotoc_md377"></a>
 ❗❗❗ Code sample above may not work</h2>
 <p>Please refer to <a href="/README.md#Binary-content-downloading">Binary content downloading</a>.</p>
 <p><a href="https://developer.ringcentral.com/api-reference#Greetings-readGreetingContent">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md381"></a>
+<h1><a class="anchor" id="autotoc_md378"></a>
+readMessageContent</h1>
+<p>Get Message Attachment Content</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Name   </th><th class="markdownTableHeadNone">Value    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">HTTP Method   </td><td class="markdownTableBodyNone"><code>GET</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Endpoint   </td><td class="markdownTableBodyNone"><code>/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Rate Limit Group   </td><td class="markdownTableBodyNone"><code>Medium</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">App Permission   </td><td class="markdownTableBodyNone"><code>ReadMessages</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">User Permission   </td><td class="markdownTableBodyNone"><code>N/A</code>   </td></tr>
+</table>
+<div class="fragment"><div class="line">var rc = <span class="keyword">new</span> RestClient(<span class="stringliteral">&quot;clientID&quot;</span>, <span class="stringliteral">&quot;clientSecret&quot;</span>, <span class="stringliteral">&quot;serverURL&quot;</span>);</div>
+<div class="line">await rc.Authorize(<span class="stringliteral">&quot;jwtToken&quot;</span>);</div>
+<div class="line">var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Content(attachmentId).Get(readMessageContentParameters);</div>
+<div class="line">await rc.Revoke();</div>
+</div><!-- fragment --><ul>
+<li>Parameter <code>apiVersion</code> is optional with default value <code>v1.0</code></li>
+<li>Parameter <code>accountId</code> is optional with default value <code>~</code></li>
+<li>Parameter <code>extensionId</code> is optional with default value <code>~</code></li>
+<li><code>readMessageContentParameters</code> is of type <a href="./Definitions/ReadMessageContentParameters.cs">ReadMessageContentParameters</a></li>
+<li><code>result</code> is of type <code>byte[]</code></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md379"></a>
+❗❗❗ Code sample above may not work</h2>
+<p>Please refer to <a href="/README.md#Binary-content-downloading">Binary content downloading</a>.</p>
+<p><a href="https://developer.ringcentral.com/api-reference#Message-Store-readMessageContent">Try it out</a> in API Explorer.</p>
+<h1><a class="anchor" id="autotoc_md380"></a>
 readUnifiedPresence</h1>
 <p>Get Unified Presence</p>
 <table class="markdownTable">
@@ -10142,7 +10098,7 @@ readUnifiedPresence</h1>
 <li><code>result</code> is of type <a href="./Definitions/UnifiedPresence.cs">UnifiedPresence</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Presence-readUnifiedPresence">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md382"></a>
+<h1><a class="anchor" id="autotoc_md381"></a>
 updateUnifiedPresence</h1>
 <p>Update Unified Presence</p>
 <table class="markdownTable">
@@ -10171,7 +10127,7 @@ updateUnifiedPresence</h1>
 <li><code>result</code> is of type <a href="./Definitions/UnifiedPresence.cs">UnifiedPresence</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Presence-updateUnifiedPresence">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md383"></a>
+<h1><a class="anchor" id="autotoc_md382"></a>
 readUserVideoConfiguration</h1>
 <p>Get User Video Configuration</p>
 <table class="markdownTable">
@@ -10199,7 +10155,7 @@ readUserVideoConfiguration</h1>
 <li><code>result</code> is of type <a href="./Definitions/UserVideoConfiguration.cs">UserVideoConfiguration</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Video-Configuration-readUserVideoConfiguration">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md384"></a>
+<h1><a class="anchor" id="autotoc_md383"></a>
 readMessageStoreConfiguration</h1>
 <p>Get Message Store Configuration</p>
 <table class="markdownTable">
@@ -10226,7 +10182,7 @@ readMessageStoreConfiguration</h1>
 <li><code>result</code> is of type <a href="./Definitions/MessageStoreConfiguration.cs">MessageStoreConfiguration</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Message-Store-readMessageStoreConfiguration">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md385"></a>
+<h1><a class="anchor" id="autotoc_md384"></a>
 updateMessageStoreConfiguration</h1>
 <p>Update Message Store Configuration</p>
 <table class="markdownTable">
@@ -10254,7 +10210,7 @@ updateMessageStoreConfiguration</h1>
 <li><code>result</code> is of type <a href="./Definitions/MessageStoreConfiguration.cs">MessageStoreConfiguration</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Message-Store-updateMessageStoreConfiguration">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md386"></a>
+<h1><a class="anchor" id="autotoc_md385"></a>
 readMessageStoreReportArchive</h1>
 <p>Get Message Store Report Archive</p>
 <table class="markdownTable">
@@ -10281,7 +10237,7 @@ readMessageStoreReportArchive</h1>
 <li><code>result</code> is of type <a href="./Definitions/MessageStoreReportArchive.cs">MessageStoreReportArchive</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Message-Exports-readMessageStoreReportArchive">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md387"></a>
+<h1><a class="anchor" id="autotoc_md386"></a>
 assignMultiplePagingGroupUsersDevices</h1>
 <p>Assign Paging Group Users and Devices</p>
 <table class="markdownTable">
@@ -10309,7 +10265,7 @@ assignMultiplePagingGroupUsersDevices</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Paging-Only-Groups-assignMultiplePagingGroupUsersDevices">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md388"></a>
+<h1><a class="anchor" id="autotoc_md387"></a>
 listPagingGroupDevices</h1>
 <p>Get Paging Group Devices</p>
 <table class="markdownTable">
@@ -10337,7 +10293,7 @@ listPagingGroupDevices</h1>
 <li><code>result</code> is of type <a href="./Definitions/PagingOnlyGroupDevices.cs">PagingOnlyGroupDevices</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Paging-Only-Groups-listPagingGroupDevices">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md389"></a>
+<h1><a class="anchor" id="autotoc_md388"></a>
 readCallPartyStatus</h1>
 <p>Get Call Party Status</p>
 <table class="markdownTable">
@@ -10364,7 +10320,7 @@ readCallPartyStatus</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallParty.cs">CallParty</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-readCallPartyStatus">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md390"></a>
+<h1><a class="anchor" id="autotoc_md389"></a>
 deleteCallParty</h1>
 <p>Delete Call Party</p>
 <table class="markdownTable">
@@ -10391,7 +10347,7 @@ deleteCallParty</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-deleteCallParty">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md391"></a>
+<h1><a class="anchor" id="autotoc_md390"></a>
 updateCallParty</h1>
 <p>Update Call Party</p>
 <table class="markdownTable">
@@ -10419,7 +10375,62 @@ updateCallParty</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallParty.cs">CallParty</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-updateCallParty">Try it out</a> in API Explorer.</p>
+<h1><a class="anchor" id="autotoc_md391"></a>
+callFlipParty</h1>
+<p>Call Flip on Party</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Name   </th><th class="markdownTableHeadNone">Value    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">HTTP Method   </td><td class="markdownTableBodyNone"><code>POST</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Endpoint   </td><td class="markdownTableBodyNone"><code>/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Rate Limit Group   </td><td class="markdownTableBodyNone"><code>Light</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">App Permission   </td><td class="markdownTableBodyNone"><code>CallControl</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">User Permission   </td><td class="markdownTableBodyNone"><code>N/A</code>   </td></tr>
+</table>
+<div class="fragment"><div class="line">var rc = <span class="keyword">new</span> RestClient(<span class="stringliteral">&quot;clientID&quot;</span>, <span class="stringliteral">&quot;clientSecret&quot;</span>, <span class="stringliteral">&quot;serverURL&quot;</span>);</div>
+<div class="line">await rc.Authorize(<span class="stringliteral">&quot;jwtToken&quot;</span>);</div>
+<div class="line">var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Flip().Post(callPartyFlip);</div>
+<div class="line">await rc.Revoke();</div>
+</div><!-- fragment --><ul>
+<li>Parameter <code>apiVersion</code> is optional with default value <code>v1.0</code></li>
+<li>Parameter <code>accountId</code> is optional with default value <code>~</code></li>
+<li><code>callPartyFlip</code> is of type <a href="./Definitions/CallPartyFlip.cs">CallPartyFlip</a></li>
+<li><code>result</code> is an empty string</li>
+</ul>
+<p><a href="https://developer.ringcentral.com/api-reference#Call-Control-callFlipParty">Try it out</a> in API Explorer.</p>
 <h1><a class="anchor" id="autotoc_md392"></a>
+callParkParty</h1>
+<p>Call Park</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Name   </th><th class="markdownTableHeadNone">Value    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">HTTP Method   </td><td class="markdownTableBodyNone"><code>POST</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Endpoint   </td><td class="markdownTableBodyNone"><code>/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Rate Limit Group   </td><td class="markdownTableBodyNone"><code>Light</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">App Permission   </td><td class="markdownTableBodyNone"><code>CallControl</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">User Permission   </td><td class="markdownTableBodyNone"><code>N/A</code>   </td></tr>
+</table>
+<div class="fragment"><div class="line">var rc = <span class="keyword">new</span> RestClient(<span class="stringliteral">&quot;clientID&quot;</span>, <span class="stringliteral">&quot;clientSecret&quot;</span>, <span class="stringliteral">&quot;serverURL&quot;</span>);</div>
+<div class="line">await rc.Authorize(<span class="stringliteral">&quot;jwtToken&quot;</span>);</div>
+<div class="line">var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Park().Post();</div>
+<div class="line">await rc.Revoke();</div>
+</div><!-- fragment --><ul>
+<li>Parameter <code>apiVersion</code> is optional with default value <code>v1.0</code></li>
+<li>Parameter <code>accountId</code> is optional with default value <code>~</code></li>
+<li><code>result</code> is of type <a href="./Definitions/CallParty.cs">CallParty</a></li>
+</ul>
+<p><a href="https://developer.ringcentral.com/api-reference#Call-Control-callParkParty">Try it out</a> in API Explorer.</p>
+<h1><a class="anchor" id="autotoc_md393"></a>
 superviseCallSession</h1>
 <p>Supervise Call Session</p>
 <table class="markdownTable">
@@ -10447,7 +10458,7 @@ superviseCallSession</h1>
 <li><code>result</code> is of type <a href="./Definitions/SuperviseCallSessionResponse.cs">SuperviseCallSessionResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-superviseCallSession">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md393"></a>
+<h1><a class="anchor" id="autotoc_md394"></a>
 listContractedCountries</h1>
 <p>List Contracted Countries</p>
 <table class="markdownTable">
@@ -10473,7 +10484,7 @@ listContractedCountries</h1>
 <li><code>result</code> is of type <a href="./Definitions/ContractedCountryListResponse.cs">ContractedCountryListResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Company-listContractedCountries">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md394"></a>
+<h1><a class="anchor" id="autotoc_md395"></a>
 listDomesticCountries</h1>
 <p>List Domestic Countries</p>
 <table class="markdownTable">
@@ -10500,7 +10511,7 @@ listDomesticCountries</h1>
 <li><code>result</code> is of type <a href="./Definitions/CountryListDictionaryModel.cs">CountryListDictionaryModel</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Company-listDomesticCountries">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md395"></a>
+<h1><a class="anchor" id="autotoc_md396"></a>
 rcwConfigListAllCompanySessions</h1>
 <p>List Sessions across Multiple Webinars/Hosts</p>
 <table class="markdownTable">
@@ -10526,7 +10537,7 @@ rcwConfigListAllCompanySessions</h1>
 <li><code>result</code> is of type <a href="./Definitions/WcsSessionGlobalListResource.cs">WcsSessionGlobalListResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Webinars-and-Sessions-rcwConfigListAllCompanySessions">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md396"></a>
+<h1><a class="anchor" id="autotoc_md397"></a>
 rcwConfigCreateSession</h1>
 <p>Create Webinar Session</p>
 <table class="markdownTable">
@@ -10552,7 +10563,7 @@ rcwConfigCreateSession</h1>
 <li><code>result</code> is of type <a href="./Definitions/WcsSessionResource.cs">WcsSessionResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Webinars-and-Sessions-rcwConfigCreateSession">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md397"></a>
+<h1><a class="anchor" id="autotoc_md398"></a>
 rcwConfigGetSession</h1>
 <p>Get Webinar Session</p>
 <table class="markdownTable">
@@ -10577,7 +10588,7 @@ rcwConfigGetSession</h1>
 <li><code>result</code> is of type <a href="./Definitions/WcsSessionResource.cs">WcsSessionResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Webinars-and-Sessions-rcwConfigGetSession">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md398"></a>
+<h1><a class="anchor" id="autotoc_md399"></a>
 rcwConfigDeleteSession</h1>
 <p>Delete Webinar Session</p>
 <table class="markdownTable">
@@ -10602,7 +10613,7 @@ rcwConfigDeleteSession</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Webinars-and-Sessions-rcwConfigDeleteSession">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md399"></a>
+<h1><a class="anchor" id="autotoc_md400"></a>
 rcwConfigUpdateSession</h1>
 <p>Update Webinar Session</p>
 <table class="markdownTable">
@@ -10628,7 +10639,7 @@ rcwConfigUpdateSession</h1>
 <li><code>result</code> is of type <a href="./Definitions/WcsSessionResource.cs">WcsSessionResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Webinars-and-Sessions-rcwConfigUpdateSession">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md400"></a>
+<h1><a class="anchor" id="autotoc_md401"></a>
 rcwHistoryListInvitees</h1>
 <p>List Session Invitees</p>
 <table class="markdownTable">
@@ -10654,7 +10665,7 @@ rcwHistoryListInvitees</h1>
 <li><code>result</code> is of type <a href="./Definitions/InviteeListResource.cs">InviteeListResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Historical-Webinars-rcwHistoryListInvitees">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md401"></a>
+<h1><a class="anchor" id="autotoc_md402"></a>
 rcwHistoryGetInvitee</h1>
 <p>Get Session Invitee</p>
 <table class="markdownTable">
@@ -10679,7 +10690,7 @@ rcwHistoryGetInvitee</h1>
 <li><code>result</code> is of type <a href="./Definitions/InviteeModel.cs">InviteeModel</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Historical-Webinars-rcwHistoryGetInvitee">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md402"></a>
+<h1><a class="anchor" id="autotoc_md403"></a>
 rcwN11sRenewSubscription</h1>
 <p>Renew Webinar Subscription</p>
 <table class="markdownTable">
@@ -10704,7 +10715,7 @@ rcwN11sRenewSubscription</h1>
 <li><code>result</code> is of type <a href="./Definitions/SubscriptionInfo.cs">SubscriptionInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Webinar-Subscriptions-rcwN11sRenewSubscription">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md403"></a>
+<h1><a class="anchor" id="autotoc_md404"></a>
 rcwRegGetSession</h1>
 <p>Get Registration Session Info</p>
 <table class="markdownTable">
@@ -10729,7 +10740,7 @@ rcwRegGetSession</h1>
 <li><code>result</code> is of type <a href="./Definitions/RegSessionModel.cs">RegSessionModel</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Registration-Management-rcwRegGetSession">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md404"></a>
+<h1><a class="anchor" id="autotoc_md405"></a>
 rcwRegUpdateSession</h1>
 <p>Update Registration Session</p>
 <table class="markdownTable">
@@ -10755,7 +10766,7 @@ rcwRegUpdateSession</h1>
 <li><code>result</code> is of type <a href="./Definitions/RegSessionModel.cs">RegSessionModel</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Registration-Management-rcwRegUpdateSession">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md405"></a>
+<h1><a class="anchor" id="autotoc_md406"></a>
 rcwRegListRegistrants</h1>
 <p>List Session Registrants</p>
 <table class="markdownTable">
@@ -10781,7 +10792,7 @@ rcwRegListRegistrants</h1>
 <li><code>result</code> is of type <a href="./Definitions/RegistrantListResource.cs">RegistrantListResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Registrants-rcwRegListRegistrants">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md406"></a>
+<h1><a class="anchor" id="autotoc_md407"></a>
 rcwRegCreateRegistrant</h1>
 <p>Create Registrant</p>
 <table class="markdownTable">
@@ -10807,7 +10818,7 @@ rcwRegCreateRegistrant</h1>
 <li><code>result</code> is of type <a href="./Definitions/RegistrantModelResponsePostWithQuestionnaire.cs">RegistrantModelResponsePostWithQuestionnaire</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Registrants-rcwRegCreateRegistrant">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md407"></a>
+<h1><a class="anchor" id="autotoc_md408"></a>
 rcwRegGetRegistrant</h1>
 <p>Get Registrant</p>
 <table class="markdownTable">
@@ -10833,7 +10844,7 @@ rcwRegGetRegistrant</h1>
 <li><code>result</code> is of type <a href="./Definitions/RegistrantModelWithQuestionnaire.cs">RegistrantModelWithQuestionnaire</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Registrants-rcwRegGetRegistrant">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md408"></a>
+<h1><a class="anchor" id="autotoc_md409"></a>
 rcwRegDeleteRegistrant</h1>
 <p>Delete Registrant</p>
 <table class="markdownTable">
@@ -10858,7 +10869,7 @@ rcwRegDeleteRegistrant</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Registrants-rcwRegDeleteRegistrant">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md409"></a>
+<h1><a class="anchor" id="autotoc_md410"></a>
 updateCallMonitoringGroupList</h1>
 <p>Update Call Monitoring Group List</p>
 <table class="markdownTable">
@@ -10886,7 +10897,7 @@ updateCallMonitoringGroupList</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Monitoring-Groups-updateCallMonitoringGroupList">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md410"></a>
+<h1><a class="anchor" id="autotoc_md411"></a>
 listCallRecordingCustomGreetings</h1>
 <p>Get Call Recording Custom Greeting List</p>
 <table class="markdownTable">
@@ -10914,7 +10925,7 @@ listCallRecordingCustomGreetings</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallRecordingCustomGreetings.cs">CallRecordingCustomGreetings</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Recording-Settings-listCallRecordingCustomGreetings">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md411"></a>
+<h1><a class="anchor" id="autotoc_md412"></a>
 deleteCallRecordingCustomGreetingList</h1>
 <p>Delete Call Recording Custom Greeting List</p>
 <table class="markdownTable">
@@ -10941,7 +10952,7 @@ deleteCallRecordingCustomGreetingList</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Recording-Settings-deleteCallRecordingCustomGreetingList">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md412"></a>
+<h1><a class="anchor" id="autotoc_md413"></a>
 deleteCallRecordingCustomGreeting</h1>
 <p>Delete Call Recording Custom Greeting</p>
 <table class="markdownTable">
@@ -10968,7 +10979,7 @@ deleteCallRecordingCustomGreeting</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Recording-Settings-deleteCallRecordingCustomGreeting">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md413"></a>
+<h1><a class="anchor" id="autotoc_md414"></a>
 listDevicesAutomaticLocationUpdates</h1>
 <p>List Devices</p>
 <table class="markdownTable">
@@ -10996,7 +11007,7 @@ listDevicesAutomaticLocationUpdates</h1>
 <li><code>result</code> is of type <a href="./Definitions/ListDevicesAutomaticLocationUpdates.cs">ListDevicesAutomaticLocationUpdates</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listDevicesAutomaticLocationUpdates">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md414"></a>
+<h1><a class="anchor" id="autotoc_md415"></a>
 assignMultipleDevicesAutomaticLocationUpdates</h1>
 <p>Enable Automatic Location Updates Feature</p>
 <table class="markdownTable">
@@ -11024,7 +11035,7 @@ assignMultipleDevicesAutomaticLocationUpdates</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-assignMultipleDevicesAutomaticLocationUpdates">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md415"></a>
+<h1><a class="anchor" id="autotoc_md416"></a>
 listNetworks</h1>
 <p>Get Network Map</p>
 <table class="markdownTable">
@@ -11052,7 +11063,7 @@ listNetworks</h1>
 <li><code>result</code> is of type <a href="./Definitions/NetworksList.cs">NetworksList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listNetworks">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md416"></a>
+<h1><a class="anchor" id="autotoc_md417"></a>
 createNetwork</h1>
 <p>Create Network</p>
 <table class="markdownTable">
@@ -11080,7 +11091,7 @@ createNetwork</h1>
 <li><code>result</code> is of type <a href="./Definitions/NetworkInfo.cs">NetworkInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createNetwork">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md417"></a>
+<h1><a class="anchor" id="autotoc_md418"></a>
 readNetwork</h1>
 <p>Get Network</p>
 <table class="markdownTable">
@@ -11107,7 +11118,7 @@ readNetwork</h1>
 <li><code>result</code> is of type <a href="./Definitions/NetworkInfo.cs">NetworkInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-readNetwork">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md418"></a>
+<h1><a class="anchor" id="autotoc_md419"></a>
 updateNetwork</h1>
 <p>Update Network</p>
 <table class="markdownTable">
@@ -11135,7 +11146,7 @@ updateNetwork</h1>
 <li><code>result</code> is of type <a href="./Definitions/NetworkInfo.cs">NetworkInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateNetwork">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md419"></a>
+<h1><a class="anchor" id="autotoc_md420"></a>
 deleteNetwork</h1>
 <p>Delete Network</p>
 <table class="markdownTable">
@@ -11162,7 +11173,7 @@ deleteNetwork</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-deleteNetwork">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md420"></a>
+<h1><a class="anchor" id="autotoc_md421"></a>
 listAccountSwitches</h1>
 <p>List Account Switches</p>
 <table class="markdownTable">
@@ -11190,7 +11201,7 @@ listAccountSwitches</h1>
 <li><code>result</code> is of type <a href="./Definitions/SwitchesList.cs">SwitchesList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listAccountSwitches">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md421"></a>
+<h1><a class="anchor" id="autotoc_md422"></a>
 createSwitch</h1>
 <p>Create Switch</p>
 <table class="markdownTable">
@@ -11218,7 +11229,7 @@ createSwitch</h1>
 <li><code>result</code> is of type <a href="./Definitions/SwitchInfo.cs">SwitchInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createSwitch">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md422"></a>
+<h1><a class="anchor" id="autotoc_md423"></a>
 readSwitch</h1>
 <p>Get Switch</p>
 <table class="markdownTable">
@@ -11245,7 +11256,7 @@ readSwitch</h1>
 <li><code>result</code> is of type <a href="./Definitions/SwitchInfo.cs">SwitchInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-readSwitch">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md423"></a>
+<h1><a class="anchor" id="autotoc_md424"></a>
 updateSwitch</h1>
 <p>Update Switch</p>
 <table class="markdownTable">
@@ -11273,7 +11284,7 @@ updateSwitch</h1>
 <li><code>result</code> is of type <a href="./Definitions/SwitchInfo.cs">SwitchInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateSwitch">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md424"></a>
+<h1><a class="anchor" id="autotoc_md425"></a>
 deleteSwitch</h1>
 <p>Delete Switch</p>
 <table class="markdownTable">
@@ -11300,7 +11311,7 @@ deleteSwitch</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-deleteSwitch">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md425"></a>
+<h1><a class="anchor" id="autotoc_md426"></a>
 createMultipleSwitches</h1>
 <p>Create Multiple Switches</p>
 <table class="markdownTable">
@@ -11328,7 +11339,7 @@ createMultipleSwitches</h1>
 <li><code>result</code> is of type <a href="./Definitions/CreateMultipleSwitchesResponse.cs">CreateMultipleSwitchesResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createMultipleSwitches">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md426"></a>
+<h1><a class="anchor" id="autotoc_md427"></a>
 updateMultipleSwitches</h1>
 <p>Update Multiple Switches</p>
 <table class="markdownTable">
@@ -11356,7 +11367,7 @@ updateMultipleSwitches</h1>
 <li><code>result</code> is of type <a href="./Definitions/UpdateMultipleSwitchesResponse.cs">UpdateMultipleSwitchesResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateMultipleSwitches">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md427"></a>
+<h1><a class="anchor" id="autotoc_md428"></a>
 validateMultipleSwitches</h1>
 <p>Validate Multiple Switches</p>
 <table class="markdownTable">
@@ -11384,7 +11395,7 @@ validateMultipleSwitches</h1>
 <li><code>result</code> is of type <a href="./Definitions/ValidateMultipleSwitchesResponse.cs">ValidateMultipleSwitchesResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-validateMultipleSwitches">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md428"></a>
+<h1><a class="anchor" id="autotoc_md429"></a>
 readAutomaticLocationUpdatesTask</h1>
 <p>Get Emergency Map Configuration Task</p>
 <table class="markdownTable">
@@ -11411,7 +11422,7 @@ readAutomaticLocationUpdatesTask</h1>
 <li><code>result</code> is of type <a href="./Definitions/AutomaticLocationUpdatesTaskInfo.cs">AutomaticLocationUpdatesTaskInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-readAutomaticLocationUpdatesTask">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md429"></a>
+<h1><a class="anchor" id="autotoc_md430"></a>
 listAutomaticLocationUpdatesUsers</h1>
 <p>List Users</p>
 <table class="markdownTable">
@@ -11439,7 +11450,7 @@ listAutomaticLocationUpdatesUsers</h1>
 <li><code>result</code> is of type <a href="./Definitions/AutomaticLocationUpdatesUserList.cs">AutomaticLocationUpdatesUserList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listAutomaticLocationUpdatesUsers">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md430"></a>
+<h1><a class="anchor" id="autotoc_md431"></a>
 assignMultipleAutomaticLocationUpdatesUsers</h1>
 <p>Enable Automatic Location Updates for Users</p>
 <table class="markdownTable">
@@ -11467,7 +11478,7 @@ assignMultipleAutomaticLocationUpdatesUsers</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-assignMultipleAutomaticLocationUpdatesUsers">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md431"></a>
+<h1><a class="anchor" id="autotoc_md432"></a>
 listWirelessPoints</h1>
 <p>List Wireless Points</p>
 <table class="markdownTable">
@@ -11495,7 +11506,7 @@ listWirelessPoints</h1>
 <li><code>result</code> is of type <a href="./Definitions/WirelessPointsList.cs">WirelessPointsList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-listWirelessPoints">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md432"></a>
+<h1><a class="anchor" id="autotoc_md433"></a>
 createWirelessPoint</h1>
 <p>Create Wireless Point</p>
 <table class="markdownTable">
@@ -11523,7 +11534,7 @@ createWirelessPoint</h1>
 <li><code>result</code> is of type <a href="./Definitions/WirelessPointInfo.cs">WirelessPointInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createWirelessPoint">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md433"></a>
+<h1><a class="anchor" id="autotoc_md434"></a>
 readWirelessPoint</h1>
 <p>Get Wireless Point</p>
 <table class="markdownTable">
@@ -11550,7 +11561,7 @@ readWirelessPoint</h1>
 <li><code>result</code> is of type <a href="./Definitions/WirelessPointInfo.cs">WirelessPointInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-readWirelessPoint">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md434"></a>
+<h1><a class="anchor" id="autotoc_md435"></a>
 updateWirelessPoint</h1>
 <p>Update Wireless Point</p>
 <table class="markdownTable">
@@ -11578,7 +11589,7 @@ updateWirelessPoint</h1>
 <li><code>result</code> is of type <a href="./Definitions/WirelessPointInfo.cs">WirelessPointInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateWirelessPoint">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md435"></a>
+<h1><a class="anchor" id="autotoc_md436"></a>
 deleteWirelessPoint</h1>
 <p>Delete Wireless Point</p>
 <table class="markdownTable">
@@ -11605,7 +11616,7 @@ deleteWirelessPoint</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-deleteWirelessPoint">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md436"></a>
+<h1><a class="anchor" id="autotoc_md437"></a>
 createMultipleWirelessPoints</h1>
 <p>Create Multiple Wireless Points</p>
 <table class="markdownTable">
@@ -11633,7 +11644,7 @@ createMultipleWirelessPoints</h1>
 <li><code>result</code> is of type <a href="./Definitions/CreateMultipleWirelessPointsResponse.cs">CreateMultipleWirelessPointsResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-createMultipleWirelessPoints">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md437"></a>
+<h1><a class="anchor" id="autotoc_md438"></a>
 updateMultipleWirelessPoints</h1>
 <p>Update Multiple Wireless Points</p>
 <table class="markdownTable">
@@ -11661,7 +11672,7 @@ updateMultipleWirelessPoints</h1>
 <li><code>result</code> is of type <a href="./Definitions/UpdateMultipleWirelessPointsResponse.cs">UpdateMultipleWirelessPointsResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-updateMultipleWirelessPoints">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md438"></a>
+<h1><a class="anchor" id="autotoc_md439"></a>
 validateMultipleWirelessPoints</h1>
 <p>Validate Multiple Wireless Points</p>
 <table class="markdownTable">
@@ -11689,7 +11700,7 @@ validateMultipleWirelessPoints</h1>
 <li><code>result</code> is of type <a href="./Definitions/ValidateMultipleWirelessPointsResponse.cs">ValidateMultipleWirelessPointsResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Automatic-Location-Updates-validateMultipleWirelessPoints">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md439"></a>
+<h1><a class="anchor" id="autotoc_md440"></a>
 assignDefaultRole</h1>
 <p>Assign Default Role</p>
 <table class="markdownTable">
@@ -11717,7 +11728,7 @@ assignDefaultRole</h1>
 <li><code>result</code> is of type <a href="./Definitions/AssignedRolesResource.cs">AssignedRolesResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Role-Management-assignDefaultRole">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md440"></a>
+<h1><a class="anchor" id="autotoc_md441"></a>
 listBlockedAllowedNumbers</h1>
 <p>List Blocked/Allowed Phone Numbers</p>
 <table class="markdownTable">
@@ -11746,7 +11757,7 @@ listBlockedAllowedNumbers</h1>
 <li><code>result</code> is of type <a href="./Definitions/BlockedAllowedPhoneNumbersList.cs">BlockedAllowedPhoneNumbersList</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Blocking-listBlockedAllowedNumbers">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md441"></a>
+<h1><a class="anchor" id="autotoc_md442"></a>
 createBlockedAllowedNumber</h1>
 <p>Add Blocked/Allowed Number</p>
 <table class="markdownTable">
@@ -11775,7 +11786,7 @@ createBlockedAllowedNumber</h1>
 <li><code>result</code> is of type <a href="./Definitions/BlockedAllowedPhoneNumberInfo.cs">BlockedAllowedPhoneNumberInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Blocking-createBlockedAllowedNumber">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md442"></a>
+<h1><a class="anchor" id="autotoc_md443"></a>
 readBlockedAllowedNumber</h1>
 <p>Get Blocked/Allowed Number</p>
 <table class="markdownTable">
@@ -11803,7 +11814,7 @@ readBlockedAllowedNumber</h1>
 <li><code>result</code> is of type <a href="./Definitions/BlockedAllowedPhoneNumberInfo.cs">BlockedAllowedPhoneNumberInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Blocking-readBlockedAllowedNumber">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md443"></a>
+<h1><a class="anchor" id="autotoc_md444"></a>
 updateBlockedAllowedNumber</h1>
 <p>Update Blocked/Allowed Number</p>
 <table class="markdownTable">
@@ -11832,7 +11843,7 @@ updateBlockedAllowedNumber</h1>
 <li><code>result</code> is of type <a href="./Definitions/BlockedAllowedPhoneNumberInfo.cs">BlockedAllowedPhoneNumberInfo</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Blocking-updateBlockedAllowedNumber">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md444"></a>
+<h1><a class="anchor" id="autotoc_md445"></a>
 deleteBlockedAllowedNumber</h1>
 <p>Delete Blocked/Allowed Number</p>
 <table class="markdownTable">
@@ -11860,39 +11871,7 @@ deleteBlockedAllowedNumber</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Blocking-deleteBlockedAllowedNumber">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md445"></a>
-readMessageContent</h1>
-<p>Get Message Attachment Content</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Name   </th><th class="markdownTableHeadNone">Value    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">HTTP Method   </td><td class="markdownTableBodyNone"><code>GET</code>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Endpoint   </td><td class="markdownTableBodyNone"><code>/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}</code>    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Rate Limit Group   </td><td class="markdownTableBodyNone"><code>Medium</code>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">App Permission   </td><td class="markdownTableBodyNone"><code>ReadMessages</code>    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">User Permission   </td><td class="markdownTableBodyNone"><code>N/A</code>   </td></tr>
-</table>
-<div class="fragment"><div class="line">var rc = <span class="keyword">new</span> RestClient(<span class="stringliteral">&quot;clientID&quot;</span>, <span class="stringliteral">&quot;clientSecret&quot;</span>, <span class="stringliteral">&quot;serverURL&quot;</span>);</div>
-<div class="line">await rc.Authorize(<span class="stringliteral">&quot;jwtToken&quot;</span>);</div>
-<div class="line">var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStore(messageId).Content(attachmentId).Get(readMessageContentParameters);</div>
-<div class="line">await rc.Revoke();</div>
-</div><!-- fragment --><ul>
-<li>Parameter <code>apiVersion</code> is optional with default value <code>v1.0</code></li>
-<li>Parameter <code>accountId</code> is optional with default value <code>~</code></li>
-<li>Parameter <code>extensionId</code> is optional with default value <code>~</code></li>
-<li><code>readMessageContentParameters</code> is of type <a href="./Definitions/ReadMessageContentParameters.cs">ReadMessageContentParameters</a></li>
-<li><code>result</code> is of type <code>byte[]</code></li>
-</ul>
-<h2><a class="anchor" id="autotoc_md446"></a>
-❗❗❗ Code sample above may not work</h2>
-<p>Please refer to <a href="/README.md#Binary-content-downloading">Binary content downloading</a>.</p>
-<p><a href="https://developer.ringcentral.com/api-reference#Message-Store-readMessageContent">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md447"></a>
+<h1><a class="anchor" id="autotoc_md446"></a>
 readNotificationSettings</h1>
 <p>Get Notification Settings</p>
 <table class="markdownTable">
@@ -11920,7 +11899,7 @@ readNotificationSettings</h1>
 <li><code>result</code> is of type <a href="./Definitions/NotificationSettings.cs">NotificationSettings</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#User-Settings-readNotificationSettings">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md448"></a>
+<h1><a class="anchor" id="autotoc_md447"></a>
 updateNotificationSettings</h1>
 <p>Update Notification Settings</p>
 <table class="markdownTable">
@@ -11949,7 +11928,7 @@ updateNotificationSettings</h1>
 <li><code>result</code> is of type <a href="./Definitions/NotificationSettings.cs">NotificationSettings</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#User-Settings-updateNotificationSettings">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md449"></a>
+<h1><a class="anchor" id="autotoc_md448"></a>
 createCallPartyWithBringIn</h1>
 <p>Bring-In Call Party</p>
 <table class="markdownTable">
@@ -11977,7 +11956,7 @@ createCallPartyWithBringIn</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallParty.cs">CallParty</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-createCallPartyWithBringIn">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md450"></a>
+<h1><a class="anchor" id="autotoc_md449"></a>
 answerCallParty</h1>
 <p>Answer Call Party</p>
 <table class="markdownTable">
@@ -12005,7 +11984,7 @@ answerCallParty</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallParty.cs">CallParty</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-answerCallParty">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md451"></a>
+<h1><a class="anchor" id="autotoc_md450"></a>
 bridgeCallParty</h1>
 <p>Bridge Call Party</p>
 <table class="markdownTable">
@@ -12033,35 +12012,7 @@ bridgeCallParty</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallParty.cs">CallParty</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-bridgeCallParty">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md452"></a>
-callFlipParty</h1>
-<p>Call Flip on Party</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Name   </th><th class="markdownTableHeadNone">Value    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">HTTP Method   </td><td class="markdownTableBodyNone"><code>POST</code>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Endpoint   </td><td class="markdownTableBodyNone"><code>/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip</code>    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Rate Limit Group   </td><td class="markdownTableBodyNone"><code>Light</code>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">App Permission   </td><td class="markdownTableBodyNone"><code>CallControl</code>    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">User Permission   </td><td class="markdownTableBodyNone"><code>N/A</code>   </td></tr>
-</table>
-<div class="fragment"><div class="line">var rc = <span class="keyword">new</span> RestClient(<span class="stringliteral">&quot;clientID&quot;</span>, <span class="stringliteral">&quot;clientSecret&quot;</span>, <span class="stringliteral">&quot;serverURL&quot;</span>);</div>
-<div class="line">await rc.Authorize(<span class="stringliteral">&quot;jwtToken&quot;</span>);</div>
-<div class="line">var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Flip().Post(callPartyFlip);</div>
-<div class="line">await rc.Revoke();</div>
-</div><!-- fragment --><ul>
-<li>Parameter <code>apiVersion</code> is optional with default value <code>v1.0</code></li>
-<li>Parameter <code>accountId</code> is optional with default value <code>~</code></li>
-<li><code>callPartyFlip</code> is of type <a href="./Definitions/CallPartyFlip.cs">CallPartyFlip</a></li>
-<li><code>result</code> is an empty string</li>
-</ul>
-<p><a href="https://developer.ringcentral.com/api-reference#Call-Control-callFlipParty">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md453"></a>
+<h1><a class="anchor" id="autotoc_md451"></a>
 forwardCallParty</h1>
 <p>Forward Call Party</p>
 <table class="markdownTable">
@@ -12089,7 +12040,7 @@ forwardCallParty</h1>
 <li><code>result</code> is of type <a href="./Definitions/ForwardCallPartyResponse.cs">ForwardCallPartyResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-forwardCallParty">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md454"></a>
+<h1><a class="anchor" id="autotoc_md452"></a>
 holdCallParty</h1>
 <p>Hold Call Party</p>
 <table class="markdownTable">
@@ -12117,7 +12068,7 @@ holdCallParty</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallParty.cs">CallParty</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-holdCallParty">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md455"></a>
+<h1><a class="anchor" id="autotoc_md453"></a>
 ignoreCallInQueue</h1>
 <p>Ignore Call in Queue</p>
 <table class="markdownTable">
@@ -12145,34 +12096,7 @@ ignoreCallInQueue</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-ignoreCallInQueue">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md456"></a>
-callParkParty</h1>
-<p>Call Park</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Name   </th><th class="markdownTableHeadNone">Value    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">HTTP Method   </td><td class="markdownTableBodyNone"><code>POST</code>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Endpoint   </td><td class="markdownTableBodyNone"><code>/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park</code>    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Rate Limit Group   </td><td class="markdownTableBodyNone"><code>Light</code>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">App Permission   </td><td class="markdownTableBodyNone"><code>CallControl</code>    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">User Permission   </td><td class="markdownTableBodyNone"><code>N/A</code>   </td></tr>
-</table>
-<div class="fragment"><div class="line">var rc = <span class="keyword">new</span> RestClient(<span class="stringliteral">&quot;clientID&quot;</span>, <span class="stringliteral">&quot;clientSecret&quot;</span>, <span class="stringliteral">&quot;serverURL&quot;</span>);</div>
-<div class="line">await rc.Authorize(<span class="stringliteral">&quot;jwtToken&quot;</span>);</div>
-<div class="line">var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Park().Post();</div>
-<div class="line">await rc.Revoke();</div>
-</div><!-- fragment --><ul>
-<li>Parameter <code>apiVersion</code> is optional with default value <code>v1.0</code></li>
-<li>Parameter <code>accountId</code> is optional with default value <code>~</code></li>
-<li><code>result</code> is of type <a href="./Definitions/CallParty.cs">CallParty</a></li>
-</ul>
-<p><a href="https://developer.ringcentral.com/api-reference#Call-Control-callParkParty">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md457"></a>
+<h1><a class="anchor" id="autotoc_md454"></a>
 pickupCallParty</h1>
 <p>Pickup Call</p>
 <table class="markdownTable">
@@ -12200,7 +12124,7 @@ pickupCallParty</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallParty.cs">CallParty</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-pickupCallParty">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md458"></a>
+<h1><a class="anchor" id="autotoc_md455"></a>
 startCallRecording</h1>
 <p>Create Recording</p>
 <table class="markdownTable">
@@ -12227,7 +12151,7 @@ startCallRecording</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-startCallRecording">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md459"></a>
+<h1><a class="anchor" id="autotoc_md456"></a>
 pauseResumeCallRecording</h1>
 <p>Pause/Resume Recording</p>
 <table class="markdownTable">
@@ -12256,7 +12180,7 @@ pauseResumeCallRecording</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallRecording.cs">CallRecording</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-pauseResumeCallRecording">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md460"></a>
+<h1><a class="anchor" id="autotoc_md457"></a>
 rejectParty</h1>
 <p>Reject Call Party</p>
 <table class="markdownTable">
@@ -12283,7 +12207,7 @@ rejectParty</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-rejectParty">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md461"></a>
+<h1><a class="anchor" id="autotoc_md458"></a>
 replyParty</h1>
 <p>Reply with Text</p>
 <table class="markdownTable">
@@ -12311,7 +12235,7 @@ replyParty</h1>
 <li><code>result</code> is of type <a href="./Definitions/ReplyParty.cs">ReplyParty</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-replyParty">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md462"></a>
+<h1><a class="anchor" id="autotoc_md459"></a>
 superviseCallParty</h1>
 <p>Supervise Call Party</p>
 <table class="markdownTable">
@@ -12339,7 +12263,7 @@ superviseCallParty</h1>
 <li><code>result</code> is of type <a href="./Definitions/PartySuperviseResponse.cs">PartySuperviseResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-superviseCallParty">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md463"></a>
+<h1><a class="anchor" id="autotoc_md460"></a>
 transferCallParty</h1>
 <p>Transfer Call Party</p>
 <table class="markdownTable">
@@ -12367,7 +12291,7 @@ transferCallParty</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallParty.cs">CallParty</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-transferCallParty">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md464"></a>
+<h1><a class="anchor" id="autotoc_md461"></a>
 unholdCallParty</h1>
 <p>Un-hold Call Party</p>
 <table class="markdownTable">
@@ -12394,7 +12318,7 @@ unholdCallParty</h1>
 <li><code>result</code> is of type <a href="./Definitions/CallParty.cs">CallParty</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Call-Control-unholdCallParty">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md465"></a>
+<h1><a class="anchor" id="autotoc_md462"></a>
 rcwConfigListInvitees</h1>
 <p>List Session Invitees</p>
 <table class="markdownTable">
@@ -12420,7 +12344,7 @@ rcwConfigListInvitees</h1>
 <li><code>result</code> is of type <a href="./Definitions/WcsInviteeListResource.cs">WcsInviteeListResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Invitees-rcwConfigListInvitees">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md466"></a>
+<h1><a class="anchor" id="autotoc_md463"></a>
 rcwConfigUpdateInvitees</h1>
 <p>Bulk Add/Delete Session Invitees</p>
 <table class="markdownTable">
@@ -12446,7 +12370,7 @@ rcwConfigUpdateInvitees</h1>
 <li><code>result</code> is of type <a href="./Definitions/BulkUpdateInviteesResponse.cs">BulkUpdateInviteesResponse</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Invitees-rcwConfigUpdateInvitees">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md467"></a>
+<h1><a class="anchor" id="autotoc_md464"></a>
 rcwConfigGetInvitee</h1>
 <p>Get Session Invitee</p>
 <table class="markdownTable">
@@ -12471,7 +12395,7 @@ rcwConfigGetInvitee</h1>
 <li><code>result</code> is of type <a href="./Definitions/InviteeResource.cs">InviteeResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Invitees-rcwConfigGetInvitee">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md468"></a>
+<h1><a class="anchor" id="autotoc_md465"></a>
 rcwConfigUpdateInvitee</h1>
 <p>Update Session Invitee</p>
 <table class="markdownTable">
@@ -12497,7 +12421,7 @@ rcwConfigUpdateInvitee</h1>
 <li><code>result</code> is of type <a href="./Definitions/InviteeResource.cs">InviteeResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Invitees-rcwConfigUpdateInvitee">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md469"></a>
+<h1><a class="anchor" id="autotoc_md466"></a>
 rcwConfigDeleteInvitee</h1>
 <p>Delete Session Invitee</p>
 <table class="markdownTable">
@@ -12522,7 +12446,7 @@ rcwConfigDeleteInvitee</h1>
 <li><code>result</code> is an empty string</li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Invitees-rcwConfigDeleteInvitee">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md470"></a>
+<h1><a class="anchor" id="autotoc_md467"></a>
 rcwHistoryListParticipants</h1>
 <p>List Session Participants</p>
 <table class="markdownTable">
@@ -12548,7 +12472,7 @@ rcwHistoryListParticipants</h1>
 <li><code>result</code> is of type <a href="./Definitions/ParticipantListResource.cs">ParticipantListResource</a></li>
 </ul>
 <p><a href="https://developer.ringcentral.com/api-reference#Historical-Webinars-rcwHistoryListParticipants">Try it out</a> in API Explorer.</p>
-<h1><a class="anchor" id="autotoc_md471"></a>
+<h1><a class="anchor" id="autotoc_md468"></a>
 rcwHistoryGetParticipantInfo</h1>
 <p>Get Participant Information</p>
 <table class="markdownTable">

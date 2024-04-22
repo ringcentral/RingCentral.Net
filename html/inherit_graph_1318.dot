@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="RingCentral.ReadUserPresence\lStatusParameters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1ReadUserPresenceStatusParameters.html",tooltip="Query parameters for operation readUserPresenceStatus"];
+  Node0 [label="RingCentral.ReasonInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1ReasonInfo.html",tooltip="Reason for the feature unavailability. Returned only if available is set to false"];
 }

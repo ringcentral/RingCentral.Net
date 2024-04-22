@@ -11,11 +11,11 @@ Query parameters for operation sync\+User\+Call\+Log
 string \mbox{\hyperlink{classRingCentral_1_1SyncUserCallLogParameters_a11c50927066b562e464702d8bf4ee2d4}{sync\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Type of call log synchronization request\+: full or incremental sync Default\+: FSync Enum\+: FSync, ISync \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{classRingCentral_1_1SyncUserCallLogParameters_abe559835880d2c3beed38cd7295c3759}{sync\+Token}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Value of sync\+Token property of last sync request response. Mandatory parameter for \textquotesingle{}ISync\textquotesingle{} sync type \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em A {\ttfamily sync\+Token} value from the previous sync response (for {\ttfamily ISync} mode only, mandatory) \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{classRingCentral_1_1SyncUserCallLogParameters_a0f588a739b1e6596f21b8950e94b47a0}{date\+From}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em The start datetime for resulting records in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z. The default value is the current moment Format\+: date-\/time \end{DoxyCompactList}\item 
 long? \mbox{\hyperlink{classRingCentral_1_1SyncUserCallLogParameters_afbdc02b23957e21865e45a74bdb29e01}{record\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em For \textquotesingle{}FSync\textquotesingle{} the parameter is mandatory, it limits the number of records to be returned in response. For \textquotesingle{}ISync\textquotesingle{} it specifies with how many records to extend sync Frame to the past, the maximum number of records is 250 Format\+: int32 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em For {\ttfamily FSync} mode this parameter is mandatory, it limits the number of records to be returned in response. For {\ttfamily ISync} mode this parameter specifies the number of records to extend the sync frame with to the past (the maximum number of records is 250) Format\+: int32 \end{DoxyCompactList}\item 
 string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SyncUserCallLogParameters_a6835485a2f9ace02ecdedf445fa71753}{status\+Group}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Type of calls to be returned Enum\+: Missed, All \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{classRingCentral_1_1SyncUserCallLogParameters_acde5990c83f74e32a88bbf77e2c4962c}{view}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
@@ -52,7 +52,7 @@ The start datetime for resulting records in ISO 8601 format including timezone, 
 
 
 
-For \textquotesingle{}FSync\textquotesingle{} the parameter is mandatory, it limits the number of records to be returned in response. For \textquotesingle{}ISync\textquotesingle{} it specifies with how many records to extend sync Frame to the past, the maximum number of records is 250 Format\+: int32 
+For {\ttfamily FSync} mode this parameter is mandatory, it limits the number of records to be returned in response. For {\ttfamily ISync} mode this parameter specifies the number of records to extend the sync frame with to the past (the maximum number of records is 250) Format\+: int32 
 
 \mbox{\Hypertarget{classRingCentral_1_1SyncUserCallLogParameters_ad097db8dd1bbc34d42e7c93a93ee06c0}\label{classRingCentral_1_1SyncUserCallLogParameters_ad097db8dd1bbc34d42e7c93a93ee06c0}} 
 \index{RingCentral.SyncUserCallLogParameters@{RingCentral.SyncUserCallLogParameters}!recordingType@{recordingType}}
@@ -92,7 +92,7 @@ Type of calls to be returned Enum\+: Missed, All
 
 
 
-Value of sync\+Token property of last sync request response. Mandatory parameter for \textquotesingle{}ISync\textquotesingle{} sync type 
+A {\ttfamily sync\+Token} value from the previous sync response (for {\ttfamily ISync} mode only, mandatory) 
 
 \mbox{\Hypertarget{classRingCentral_1_1SyncUserCallLogParameters_a11c50927066b562e464702d8bf4ee2d4}\label{classRingCentral_1_1SyncUserCallLogParameters_a11c50927066b562e464702d8bf4ee2d4}} 
 \index{RingCentral.SyncUserCallLogParameters@{RingCentral.SyncUserCallLogParameters}!syncType@{syncType}}

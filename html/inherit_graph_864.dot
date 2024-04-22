@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="RingCentral.OriginInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1OriginInfo.html",tooltip="Session origin details"];
+  Node0 [label="RingCentral.OriginalRole\lModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1OriginalRoleModel.html",tooltip="Role assigned to participant when invite was sent or during join time (if an invite was not sent)"];
 }

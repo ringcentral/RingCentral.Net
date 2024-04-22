@@ -15,7 +15,7 @@ string \mbox{\hyperlink{classRingCentral_1_1SyncAccountCallLogParameters_aca97dc
 string \mbox{\hyperlink{classRingCentral_1_1SyncAccountCallLogParameters_a501617eaeb9b516824f07cafe696e2e8}{date\+From}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em The start datetime for resulting records in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z. The default value is the current moment Format\+: date-\/time \end{DoxyCompactList}\item 
 long? \mbox{\hyperlink{classRingCentral_1_1SyncAccountCallLogParameters_adccb69a81de12282d182e87b27d760e1}{record\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em For \textquotesingle{}FSync\textquotesingle{} the parameter is mandatory, it limits the number of records to be returned in response. For \textquotesingle{}ISync\textquotesingle{} it specifies with how many records to extend sync frame to the past, the maximum number of records is 250 Minimum\+: 1 Format\+: int32 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em For {\ttfamily FSync} mode this parameter is mandatory, it limits the number of records to be returned in response. For {\ttfamily ISync} mode this parameter specifies the number of records to extend the sync frame with to the past (the maximum number of records is 250) Minimum\+: 1 Format\+: int32 \end{DoxyCompactList}\item 
 string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1SyncAccountCallLogParameters_a5748307d7269c23b905e004cd25a4915}{status\+Group}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Type of calls to be returned Enum\+: Missed, All \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{classRingCentral_1_1SyncAccountCallLogParameters_aa15d413ffb14dee025beb58053d8841f}{view}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
@@ -52,7 +52,7 @@ The start datetime for resulting records in ISO 8601 format including timezone, 
 
 
 
-For \textquotesingle{}FSync\textquotesingle{} the parameter is mandatory, it limits the number of records to be returned in response. For \textquotesingle{}ISync\textquotesingle{} it specifies with how many records to extend sync frame to the past, the maximum number of records is 250 Minimum\+: 1 Format\+: int32 
+For {\ttfamily FSync} mode this parameter is mandatory, it limits the number of records to be returned in response. For {\ttfamily ISync} mode this parameter specifies the number of records to extend the sync frame with to the past (the maximum number of records is 250) Minimum\+: 1 Format\+: int32 
 
 \mbox{\Hypertarget{classRingCentral_1_1SyncAccountCallLogParameters_a245eb1c7947292eeeef8499277aa3305}\label{classRingCentral_1_1SyncAccountCallLogParameters_a245eb1c7947292eeeef8499277aa3305}} 
 \index{RingCentral.SyncAccountCallLogParameters@{RingCentral.SyncAccountCallLogParameters}!recordingType@{recordingType}}

@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="RingCentral.ExtensionBulk\lUpdateTaskResource",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1ExtensionBulkUpdateTaskResource.html",tooltip="Information on a task for updating multiple extensions"];
+  Node0 [label="RingCentral.ExtensionBulk\lUpdateInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1ExtensionBulkUpdateInfo.html",tooltip=" "];
 }

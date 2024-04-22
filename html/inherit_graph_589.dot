@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="RingCentral.ForwardAllCompany\lCallsInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1ForwardAllCompanyCallsInfo.html",tooltip=" "];
+  Node0 [label="RingCentral.FormattingLocaleInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1FormattingLocaleInfo.html",tooltip="Formatting language preferences for numbers, dates and currencies"];
 }

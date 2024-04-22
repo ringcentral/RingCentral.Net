@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="RingCentral.Provisioning\lSiteInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1ProvisioningSiteInfo.html",tooltip="Site data. If multi-site feature is turned on for an account, then ID of a site must be specified...."];
+  Node0 [label="RingCentral.PublicMeeting\lInvitationResponse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1PublicMeetingInvitationResponse.html",tooltip=" "];
 }

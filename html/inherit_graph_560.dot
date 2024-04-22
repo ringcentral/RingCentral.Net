@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="RingCentral.ExtensionPresence\lEventBody",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1ExtensionPresenceEventBody.html",tooltip=" "];
+  Node0 [label="RingCentral.ExtensionPermissions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1ExtensionPermissions.html",tooltip="Extension permissions, corresponding to the Service Web permissions 'Admin' and 'InternationalCalling..."];
 }

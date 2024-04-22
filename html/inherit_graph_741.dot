@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="RingCentral.ListPagingGroup\lDevicesParameters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1ListPagingGroupDevicesParameters.html",tooltip="Query parameters for operation listPagingGroupDevices"];
+  Node0 [label="RingCentral.ListOfAvailable\lForAssigningRolesParameters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1ListOfAvailableForAssigningRolesParameters.html",tooltip="Query parameters for operation listOfAvailableForAssigningRoles"];
 }

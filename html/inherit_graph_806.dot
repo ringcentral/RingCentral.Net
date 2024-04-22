@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="RingCentral.MessageStatuses\lResponse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1MessageStatusesResponse.html",tooltip="The messages status object with details of each status"];
+  Node0 [label="RingCentral.MessageStatus\lCounts",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1MessageStatusCounts.html",tooltip="Message status parameters"];
 }

@@ -113,7 +113,7 @@ Properties</h2></td></tr>
 <tr class="memitem:a256c2dba707e15477af428b9b910ca48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRingCentral_1_1ShippingInfo.html">ShippingInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRingCentral_1_1DeviceResource.html#a256c2dba707e15477af428b9b910ca48">shipping</a><code> [get, set]</code></td></tr>
 <tr class="separator:a256c2dba707e15477af428b9b910ca48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af458e1fefeec8d168f8db99effedbb06"><td class="memItemLeft" align="right" valign="top">long?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRingCentral_1_1DeviceResource.html#af458e1fefeec8d168f8db99effedbb06">boxBillingId</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:af458e1fefeec8d168f8db99effedbb06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Box billing identifier of a device. Applicable only for HardPhones. It is an alternative way to identify the device to be ordered. Either model structure, or boxBillingId must be specified for HardPhone Format: int64  <a href="classRingCentral_1_1DeviceResource.html#af458e1fefeec8d168f8db99effedbb06">More...</a><br /></td></tr>
+<tr class="memdesc:af458e1fefeec8d168f8db99effedbb06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Box billing identifier of a device. Applicable only for devices of <code>HardPhone</code> type. It is an alternative way to identify the device to be ordered. Either <code>model</code> structure, or <code>boxBillingId</code> must be specified Format: int64  <a href="classRingCentral_1_1DeviceResource.html#af458e1fefeec8d168f8db99effedbb06">More...</a><br /></td></tr>
 <tr class="separator:af458e1fefeec8d168f8db99effedbb06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37eaf697f2fb5584bda2f4ead1fc7cb0"><td class="memItemLeft" align="right" valign="top">bool?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRingCentral_1_1DeviceResource.html#a37eaf697f2fb5584bda2f4ead1fc7cb0">useAsCommonPhone</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a37eaf697f2fb5584bda2f4ead1fc7cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supported only for devices assigned to Limited extensions. If true, enables users to log in to this phone as a common phone.  <a href="classRingCentral_1_1DeviceResource.html#a37eaf697f2fb5584bda2f4ead1fc7cb0">More...</a><br /></td></tr>
@@ -180,7 +180,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Box billing identifier of a device. Applicable only for HardPhones. It is an alternative way to identify the device to be ordered. Either model structure, or boxBillingId must be specified for HardPhone Format: int64 </p>
+<p>Box billing identifier of a device. Applicable only for devices of <code>HardPhone</code> type. It is an alternative way to identify the device to be ordered. Either <code>model</code> structure, or <code>boxBillingId</code> must be specified Format: int64 </p>
 
 </div>
 </div>
@@ -398,9 +398,9 @@ Properties</h2></td></tr>
 
 <p>Pooling type of device: </p>
 <ul>
-<li><a class="el" href="classRingCentral_1_1Host.html" title="Meeting host">Host</a> - a device with standalone paid phone line which can be linked to a soft client instance</li>
-<li>Guest - a device with a linked phone line</li>
-<li>None - a device without a phone line or with specific line (free, BLA, etc.) Enum: <a class="el" href="classRingCentral_1_1Host.html" title="Meeting host">Host</a>, Guest, None</li>
+<li><code><a class="el" href="classRingCentral_1_1Host.html" title="Meeting host">Host</a></code> - device with a standalone paid phone line which can be linked to soft phone client instance;</li>
+<li><code>Guest</code> - device with a linked phone line;</li>
+<li><code>None</code> - device without a phone line or with a specific line (free, BLA, etc.) Enum: <a class="el" href="classRingCentral_1_1Host.html" title="Meeting host">Host</a>, Guest, None</li>
 </ul>
 
 </div>

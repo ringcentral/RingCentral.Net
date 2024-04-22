@@ -75,11 +75,11 @@ $(function() {
 <div class="line">    redirect_uri = <span class="stringliteral">&quot;http://localhost:3000/callback&quot;</span>,</div>
 <div class="line">    state = <span class="stringliteral">&quot;myState&quot;</span></div>
 <div class="line">});</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md473"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md470"></a>
 PKCE</h1>
 <p>Please refer to the <a href="https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/authorize-uri#pkce">TypeScript SDK documentation</a> for more information. These two SDKs are very similar.</p>
 <p>In short, when you invoke the <code>BuildUri</code> method, if you can pass in a <code>code_challenge_method</code> property with value <code>"S256"</code>, the method will auto generate <code>codeVerifer</code> and <code>code_challenge</code> for you. codeVerifier is accessible via <code>authorizeUriExtension.codeVerifier</code> after the method is called. <code>code_challenge</code> is included in the URI.</p>
-<h1><a class="anchor" id="autotoc_md474"></a>
+<h1><a class="anchor" id="autotoc_md471"></a>
 More documentation</h1>
 <p>This extension is inspired by <a href="https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/authorize-uri">its TypeScript counterpart</a> , check its documentation for more information. </p>
 </div></div><!-- contents -->

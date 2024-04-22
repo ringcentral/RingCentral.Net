@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="RingCentral.MakeCallOutCaller\lInfoRequestFrom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1MakeCallOutCallerInfoRequestFrom.html",tooltip="Instance id of the caller. It corresponds to the 1st leg of the CallOut call."];
+  Node0 [label="RingCentral.LockedByInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1LockedByInfo.html",tooltip="Returned for the note being edited (locked) at the current moment. Information on the user editing th..."];
 }

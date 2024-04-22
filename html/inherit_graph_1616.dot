@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="RingCentral.UserContacts\lPagingInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1UserContactsPagingInfo.html",tooltip="Information on paging"];
+  Node0 [label="RingCentral.UserMeetingRecording\lSetting",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1UserMeetingRecordingSetting.html",tooltip="Meeting recording settings locked on account level"];
 }

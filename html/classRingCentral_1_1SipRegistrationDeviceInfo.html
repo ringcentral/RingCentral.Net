@@ -113,7 +113,7 @@ Properties</h2></td></tr>
 <tr class="memdesc:a7ee139e11af3d53265f548860f2e113e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Phone lines information  <a href="classRingCentral_1_1SipRegistrationDeviceInfo.html#a7ee139e11af3d53265f548860f2e113e">More...</a><br /></td></tr>
 <tr class="separator:a7ee139e11af3d53265f548860f2e113e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62da46ea22dfaab38e12b7fc2a852e15"><td class="memItemLeft" align="right" valign="top">long?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRingCentral_1_1SipRegistrationDeviceInfo.html#a62da46ea22dfaab38e12b7fc2a852e15">boxBillingId</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:a62da46ea22dfaab38e12b7fc2a852e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Box billing identifier of a device. Applicable only for HardPhones. It is an alternative way to identify the device to be ordered. Either model structure, or boxBillingId must be specified forT?HardPhone Format: int64  <a href="classRingCentral_1_1SipRegistrationDeviceInfo.html#a62da46ea22dfaab38e12b7fc2a852e15">More...</a><br /></td></tr>
+<tr class="memdesc:a62da46ea22dfaab38e12b7fc2a852e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Box billing identifier of a device. Applicable only for devices of <code>HardPhone</code> type. Format: int64  <a href="classRingCentral_1_1SipRegistrationDeviceInfo.html#a62da46ea22dfaab38e12b7fc2a852e15">More...</a><br /></td></tr>
 <tr class="separator:a62da46ea22dfaab38e12b7fc2a852e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade06eef45591ca4f3bd34271c385c174"><td class="memItemLeft" align="right" valign="top">bool?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRingCentral_1_1SipRegistrationDeviceInfo.html#ade06eef45591ca4f3bd34271c385c174">useAsCommonPhone</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:ade06eef45591ca4f3bd34271c385c174"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supported only for devices assigned to Limited extensions. If true, enables users to log in to this phone as a common phone.  <a href="classRingCentral_1_1SipRegistrationDeviceInfo.html#ade06eef45591ca4f3bd34271c385c174">More...</a><br /></td></tr>
@@ -151,7 +151,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Box billing identifier of a device. Applicable only for HardPhones. It is an alternative way to identify the device to be ordered. Either model structure, or boxBillingId must be specified forT?HardPhone Format: int64 </p>
+<p>Box billing identifier of a device. Applicable only for devices of <code>HardPhone</code> type. Format: int64 </p>
 
 </div>
 </div>
@@ -345,9 +345,9 @@ Properties</h2></td></tr>
 
 <p>Pooling type of device: </p>
 <ul>
-<li><code><a class="el" href="classRingCentral_1_1Host.html" title="Meeting host">Host</a></code> - device with standalone paid phone line which can be linked to soft phone client instance</li>
-<li><code>Guest</code> - device with a linked phone line</li>
-<li><code>None</code> - device without a phone line or with specific line (free, BLA, etc.) Enum: <a class="el" href="classRingCentral_1_1Host.html" title="Meeting host">Host</a>, Guest, None</li>
+<li><code><a class="el" href="classRingCentral_1_1Host.html" title="Meeting host">Host</a></code> - device with a standalone paid phone line which can be linked to soft phone client instance;</li>
+<li><code>Guest</code> - device with a linked phone line;</li>
+<li><code>None</code> - device without a phone line or with a specific line (free, BLA, etc.) Enum: <a class="el" href="classRingCentral_1_1Host.html" title="Meeting host">Host</a>, Guest, None</li>
 </ul>
 
 </div>

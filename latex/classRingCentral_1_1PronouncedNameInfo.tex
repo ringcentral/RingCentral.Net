@@ -4,9 +4,9 @@
 \begin{DoxyCompactItemize}
 \item 
 string \mbox{\hyperlink{classRingCentral_1_1PronouncedNameInfo_a6248df1e9c99bca23ed2d70d448058cb}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Voice name type. \textquotesingle{}Default\textquotesingle{} -\/ default extension name; first name and last name specified in user profile; \textquotesingle{}Text\+To\+Speech\textquotesingle{} -\/ custom text; user name spelled the way it sounds and specified by user; \textquotesingle{}Recorded\textquotesingle{} \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The method used to pronounce the user\textquotesingle{}s name\+: \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{classRingCentral_1_1PronouncedNameInfo_a4c2d51f3c89ad1ce7b64a8f99a5ff64c}{text}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Custom text \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Custom text (for {\ttfamily Text\+To\+Speech} type only) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classRingCentral_1_1PronouncedNamePromptInfo}{Pronounced\+Name\+Prompt\+Info}} \mbox{\hyperlink{classRingCentral_1_1PronouncedNameInfo_ac6bbb639f9be98ee2c32b17be3867397}{prompt}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \end{DoxyCompactItemize}
 
@@ -30,7 +30,7 @@ string \mbox{\hyperlink{classRingCentral_1_1PronouncedNameInfo_a4c2d51f3c89ad1ce
 
 
 
-Custom text 
+Custom text (for {\ttfamily Text\+To\+Speech} type only) 
 
 \mbox{\Hypertarget{classRingCentral_1_1PronouncedNameInfo_a6248df1e9c99bca23ed2d70d448058cb}\label{classRingCentral_1_1PronouncedNameInfo_a6248df1e9c99bca23ed2d70d448058cb}} 
 \index{RingCentral.PronouncedNameInfo@{RingCentral.PronouncedNameInfo}!type@{type}}
@@ -40,11 +40,13 @@ Custom text
 
 
 
-Voice name type. \textquotesingle{}Default\textquotesingle{} -\/ default extension name; first name and last name specified in user profile; \textquotesingle{}Text\+To\+Speech\textquotesingle{} -\/ custom text; user name spelled the way it sounds and specified by user; \textquotesingle{}Recorded\textquotesingle{} 
+The method used to pronounce the user\textquotesingle{}s name\+: 
 
 
 \begin{DoxyItemize}
-\item custom audio, user name recorded in user\textquotesingle{}s own voice (supported only for extension retrieval) Enum\+: Default, Text\+To\+Speech, Recorded
+\item {\ttfamily Default} -\/ default extension name; first and last name specified in user\textquotesingle{}s profile are pronounced using text-\/to-\/speech;
+\item {\ttfamily Text\+To\+Speech} -\/ custom text specified by a user pronounced using text-\/to-\/speech;
+\item {\ttfamily Recorded} -\/ custom audio uploaded by a user, the name recorded in user\textquotesingle{}s own voice (supported only for extension retrieval). Enum\+: Default, Text\+To\+Speech, Recorded
 \end{DoxyItemize}
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

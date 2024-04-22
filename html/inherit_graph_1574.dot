@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="RingCentral.TransferredExtension",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1TransferredExtension.html",tooltip="Transfer extension settings, set/returned if callHandlingAction is specified as TransferToExtension"];
+  Node0 [label="RingCentral.TransferTarget",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1TransferTarget.html",tooltip="Identifier of a call party the call will be transferred to. Only one of these parameters: phoneNumber..."];
 }

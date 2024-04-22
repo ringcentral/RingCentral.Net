@@ -4,7 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node667 [label="IDisposable",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
-  Node667 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node0 [label="RingCentral.RestClient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1RestClient.html",tooltip=" "];
+  Node0 [label="RingCentral.RevokeTokenParameters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1RevokeTokenParameters.html",tooltip="Query parameters for operation revokeToken"];
 }

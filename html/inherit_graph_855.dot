@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="RingCentral.OptOutBulkAssign\lFailedEntry",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1OptOutBulkAssignFailedEntry.html",tooltip="Represents a failure of adding opt-out / opt-in. A pair of a recipient phone number and an error mess..."];
+  Node0 [label="RingCentral.OperatorInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1OperatorInfo.html",tooltip="Site Fax/SMS recipient (operator) reference. Multi-level IVR should be enabled"];
 }
