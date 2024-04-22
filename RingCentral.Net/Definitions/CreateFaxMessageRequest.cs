@@ -27,7 +27,8 @@ namespace RingCentral
         public string sendTime { get; set; }
 
         /// <summary>
-        ///     ISO Code. e.g UK
+        ///     Alpha-2 ISO Code of a country
+        ///     Example: US
         /// </summary>
         public string isoCode { get; set; }
 

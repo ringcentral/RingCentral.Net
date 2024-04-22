@@ -56,7 +56,7 @@ namespace RingCentral
         public long? recordCount { get; set; }
 
         /// <summary>
-        ///     Value of syncToken property of last sync request response
+        ///     A `syncToken` value from the previous sync response (for `ISync` mode only, mandatory)
         /// </summary>
         public string syncToken { get; set; }
 

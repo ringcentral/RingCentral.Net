@@ -13,6 +13,11 @@ namespace RingCentral
         public string addressFormatId { get; set; }
 
         /// <summary>
+        ///     If 'true' address validation for non-us addresses is skipped
+        /// </summary>
+        public bool? trusted { get; set; }
+
+        /// <summary>
         /// </summary>
         public CommonEmergencyLocationAddressInfo address { get; set; }
     }

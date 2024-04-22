@@ -1,50 +1,49 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Contact detailed information
+    ///     Detailed contact information
     /// </summary>
     public class ContactInfo
     {
         /// <summary>
-        ///     For User extension type only. Extension user first name
+        ///     User's first name (for extensions of `User` type only)
         /// </summary>
         public string firstName { get; set; }
 
         /// <summary>
-        ///     For User extension type only. Extension user last name
+        ///     For User extension type only. User's last name (for extensions of `User` type only)
         /// </summary>
         public string lastName { get; set; }
 
         /// <summary>
-        ///     Extension user name (first name and last name)
+        ///     Extension name (for extensions of `User` type - concatenation of first and last name)
         /// </summary>
         public string name { get; set; }
 
         /// <summary>
-        ///     Extension user company name
+        ///     User's company name
         /// </summary>
         public string company { get; set; }
 
         /// <summary>
+        ///     User's job title
         /// </summary>
         public string jobTitle { get; set; }
 
         /// <summary>
-        ///     Contact email of extension user
+        ///     User's contact email
         ///     Format: email
         /// </summary>
         public string email { get; set; }
 
         /// <summary>
-        ///     Extension user contact phone number in
-        ///     [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+        ///     User's contact phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
         ///     (with '+' sign) format
         /// </summary>
         public string businessPhone { get; set; }
 
         /// <summary>
-        ///     Extension user mobile (**non** Toll Free) phone number in
-        ///     [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+        ///     User's mobile (**non** Toll Free) phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
         ///     (with '+' sign) format
         /// </summary>
         public string mobilePhone { get; set; }
@@ -54,8 +53,8 @@ namespace RingCentral
         public ContactBusinessAddressInfo businessAddress { get; set; }
 
         /// <summary>
-        ///     If `true` then contact email is enabled as login name for this
-        ///     user. Please note that email should be unique in this case.
+        ///     Indicates that the contact email is enabled as a login name for this
+        ///     user. Please note that the email must be unique in this case.
         /// </summary>
         public bool? emailAsLoginName { get; set; }
 
@@ -64,7 +63,7 @@ namespace RingCentral
         public PronouncedNameInfo pronouncedName { get; set; }
 
         /// <summary>
-        ///     Extension user department, if any
+        ///     User's department name
         /// </summary>
         public string department { get; set; }
     }

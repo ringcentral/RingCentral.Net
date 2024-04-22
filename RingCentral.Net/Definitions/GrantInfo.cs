@@ -63,6 +63,11 @@ namespace RingCentral
         public bool? callQueueMessages { get; set; }
 
         /// <summary>
+        ///     Specifies whether the current extension is granted *Forward All Calls (FAC)* permission
+        /// </summary>
+        public bool? callQueueFacSetup { get; set; }
+
+        /// <summary>
         ///     Specifies whether the user referenced in extension object is sharing voicemails
         ///     with the current extension
         /// </summary>

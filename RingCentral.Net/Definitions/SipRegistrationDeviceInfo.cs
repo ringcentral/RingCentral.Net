@@ -76,9 +76,7 @@ namespace RingCentral
         public DevicePhoneLinesInfo[] phoneLines { get; set; }
 
         /// <summary>
-        ///     Box billing identifier of a device. Applicable only for HardPhones.
-        ///     It is an alternative way to identify the device to be ordered. Either
-        ///     model  structure, or  boxBillingId  must be specified forT?HardPhone
+        ///     Box billing identifier of a device. Applicable only for devices of `HardPhone` type.
         ///     Format: int64
         /// </summary>
         public long? boxBillingId { get; set; }
@@ -91,10 +89,9 @@ namespace RingCentral
 
         /// <summary>
         ///     Pooling type of device:
-        ///     - `Host` - device with standalone paid
-        ///     phone line which can be linked to soft phone client instance
-        ///     - `Guest` - device with a linked phone line
-        ///     - `None` - device without a phone line or with specific line (free, BLA, etc.)
+        ///     - `Host` - device with a standalone paid phone line which can be linked to soft phone client instance;
+        ///     - `Guest` - device with a linked phone line;
+        ///     - `None` - device without a phone line or with a specific line (free, BLA, etc.)
         ///     Enum: Host, Guest, None
         /// </summary>
         public string linePooling { get; set; }

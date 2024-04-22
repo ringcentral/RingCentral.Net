@@ -39,9 +39,8 @@ namespace RingCentral
         public ServiceInfo serviceInfo { get; set; }
 
         /// <summary>
-        ///     Specifies account configuration wizard state (web service setup)
-        ///     Default: NotStarted
-        ///     Enum: NotStarted, Incomplete, Completed
+        ///     Initial configuration wizard state
+        ///     Enum: NotStarted, Incomplete, Completed, Unknown
         /// </summary>
         public string setupWizardState { get; set; }
 

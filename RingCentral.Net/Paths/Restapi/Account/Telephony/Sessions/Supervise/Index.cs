@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Supervise
         }
 
         /// <summary>
-        ///     Allows to monitor a call session in 'Listen' mode. Input parameters should contain internal identifiers of a
+        ///     Allows monitoring a call session in 'Listen' mode. Input parameters should contain internal identifiers of a
         ///     monitored user and a supervisor's device. Call session should be specified in path. Please note that this method
         ///     supports single channel audio flow, which means that audio of both call participants is mixed and delivered to the
         ///     supervisor in single audio channel. Currently this method is supported for Softphone/Hardphone only, since device

@@ -24,7 +24,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AssignedRole
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/assigned-role
         ///     Rate Limit Group: Light
         ///     App Permission: ReadAccounts
-        ///     User Permission: ReadExtensions
+        ///     User Permission: ReadAssignedRoles
         /// </summary>
         public async Task<AssignedRolesResource> Get(ListUserAssignedRolesParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)

@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Ai.Audio.V1.Async.SpeakerIdentify
         }
 
         /// <summary>
-        ///     Returns Speaker Identification to the provided webhook uri.
+        ///     Returns Speaker Identification to the provided webhook URI.
         ///     HTTP Method: post
         ///     Endpoint: /ai/audio/v1/async/speaker-identify
         ///     Rate Limit Group: Heavy

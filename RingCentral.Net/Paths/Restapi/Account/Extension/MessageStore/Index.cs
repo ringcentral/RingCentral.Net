@@ -71,8 +71,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         }
 
         /// <summary>
-        ///     Updates message(s) by their ID(s). Currently only message read status
-        ///     can be updated through this method.
+        ///     Updates message(s) by their ID(s). Currently, only the `readStatus`
+        ///     can be updated using this method.
         ///     Bulk syntax is supported, max number of IDs passed as query/path
         ///     parameters is 50. Alternative bulk syntax is also supported - user messages can be updated
         ///     by passing multiple IDs in request body as an array of string, max number
@@ -111,7 +111,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         }
 
         /// <summary>
-        ///     Patches message(s) by ID(s). Currently only message read status update and
+        ///     Patches message(s) by ID(s). Currently, only updating the `readStatus` and
         ///     restoring deleted messages are supported through this method.
         ///     For changing status of a message send `readStatus` set to either 'Read' or 'Unread' in request.
         ///     It is possible to restore a message and its attachments (if message status is 'Deleted') by sending

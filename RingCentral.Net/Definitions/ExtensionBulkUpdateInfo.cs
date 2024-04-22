@@ -40,6 +40,8 @@ namespace RingCentral
         public ExtensionRegionalSettingRequest regionalSettings { get; set; }
 
         /// <summary>
+        ///     Initial configuration wizard state
+        ///     Default: NotStarted
         ///     Enum: NotStarted, Incomplete, Completed
         /// </summary>
         public string setupWizardState { get; set; }

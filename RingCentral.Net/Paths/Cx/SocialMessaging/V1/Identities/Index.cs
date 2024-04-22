@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Paths.Cx.SocialMessaging.V1.Identities
 {
-    public partial class Index
+    public class Index
     {
         public string identityId;
         public V1.Index parent;

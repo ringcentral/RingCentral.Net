@@ -19,8 +19,9 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.OptOuts
         }
 
         /// <summary>
-        ///     Returns the list of numbers opted out from the account. The list can be filtered by `to`/`from` phone number query
-        ///     parameters. Specifying `text/csv` in the Accept header downloads the data in CSV format.
+        ///     Returns the list of numbers opted out from the account. The list
+        ///     can be filtered by `to`/`from` phone number query parameters. Specifying `text/csv`
+        ///     in the `Accept` header lets download the data in the CSV format.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/a2p-sms/opt-outs
         ///     Rate Limit Group: Light

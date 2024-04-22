@@ -62,7 +62,7 @@ namespace RingCentral.Paths.Webinar.Notifications.V1.Subscriptions
         ///     Updates the existing subscription. The client application can extend/narrow
         ///     the list of events for which it receives notifications within this subscription.
         ///     If event filters are specified, calling this method modifies them for the
-        ///     existing subscription. The method also allows to set the subscription expiration time.
+        ///     existing subscription. The method also allows setting the subscription expiration time.
         ///     If other than `events` and `expiresIn` parameters are passed in the request they will be ignored.
         ///     If the request body is empty then the specified subscription will be just renewed without any
         ///     event filter modifications and with default expiration time.

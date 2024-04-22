@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 using RingCentral.Net.WebSocket;
 using Xunit;
@@ -37,9 +36,7 @@ namespace RingCentral.Tests
             await rc.InstallExtension(webSocketExtension);
             var eventFilters = new[] {"/restapi/v1.0/account/~/extension/~/message-store"};
             var subscription = await webSocketExtension.Subscribe(eventFilters, message => { });
-            webSocketExtension.RawMessageReceived += (sender, s) =>
-            {
-            };
+            webSocketExtension.RawMessageReceived += (sender, s) => { };
             await Task.Delay(5000);
             await subscription.Revoke();
             webSocketExtension.enabled = false;

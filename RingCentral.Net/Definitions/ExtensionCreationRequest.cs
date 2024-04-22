@@ -45,8 +45,7 @@ namespace RingCentral
         public string ivrPin { get; set; }
 
         /// <summary>
-        ///     Specifies extension configuration wizard state (web service
-        ///     setup).
+        ///     Initial configuration wizard state
         ///     Default: NotStarted
         ///     Enum: NotStarted, Incomplete, Completed
         /// </summary>

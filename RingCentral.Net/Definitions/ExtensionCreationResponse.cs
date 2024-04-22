@@ -74,8 +74,8 @@ namespace RingCentral
         public ExtensionServiceFeatureInfo[] serviceFeatures { get; set; }
 
         /// <summary>
-        ///     Specifies extension configuration wizard state (web service
-        ///     setup). The default value is 'NotStarted'
+        ///     Initial configuration wizard state
+        ///     Default: NotStarted
         ///     Enum: NotStarted, Incomplete, Completed
         /// </summary>
         public string setupWizardState { get; set; }

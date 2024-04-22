@@ -58,7 +58,7 @@ namespace RingCentral
         public string endpoint_id { get; set; }
 
         /// <summary>
-        ///     OIDC ID token (if OpenId Connect flow was activated during authorization)
+        ///     OIDC ID token (if OpenID Connect flow was activated during authorization)
         /// </summary>
         public string id_token { get; set; }
 
@@ -68,13 +68,13 @@ namespace RingCentral
         public string session_id { get; set; }
 
         /// <summary>
-        ///     Absolute value of session expiration time as ISO datetime
+        ///     Absolute value of session expiration time as an ISO timestamp
         ///     Format: date-time
         /// </summary>
         public string session_expiration_time { get; set; }
 
         /// <summary>
-        ///     Remaining time (in seconds) until session expiration due to absolute timeout
+        ///     Remaining time (in seconds) until session expiration due to the absolute timeout
         ///     Format: int32
         /// </summary>
         public long? session_expires_in { get; set; }
