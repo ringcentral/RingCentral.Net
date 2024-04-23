@@ -8,7 +8,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void GetDeviceList()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             var r = await rc.Get("/restapi/v1.0/account/~/device");
             var str = r.Content.ReadAsStringAsync();
             Assert.NotNull(str);

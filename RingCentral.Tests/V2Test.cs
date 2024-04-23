@@ -11,7 +11,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void GetAccountInfo()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             var path = rc.Restapi().V2().Accounts().Path();
             Assert.Equal("/restapi/v2/accounts/~", path);

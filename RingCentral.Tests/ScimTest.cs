@@ -13,7 +13,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void GetServiceProviderConfig()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             // to get the whole response as a string
             var str = await rc.Get<string>("/scim/v2/ServiceProviderConfig");
             Assert.Contains("urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig", str);
@@ -28,7 +28,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void CheckHealth()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             // // "OK" means SCIM system has no problem
             // var str = await rc.Scim().Health().Get();
@@ -43,7 +43,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void GetUsers()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             // list all SCIM users
             var userSearchResponse = await rc.Scim().Users().List();
@@ -56,7 +56,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void CreateUser()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             // delete existing user first, we don't want to create duplicate users
             var searchRequest = new ScimSearchRequest
@@ -100,7 +100,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void SearchUser()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             // search user and return 10 results
             var searchRequest = new ScimSearchRequest
@@ -117,7 +117,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void GetUserById()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             // list 10 users and use the first one for testing
             var searchRequest = new ScimSearchRequest
@@ -138,7 +138,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void UpdateUser()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             var searchRequest = new ScimSearchRequest
             {
@@ -169,7 +169,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void PatchUser()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             var searchRequest = new ScimSearchRequest
             {

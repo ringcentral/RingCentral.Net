@@ -9,7 +9,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void GetCallLogs()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             var callLogResponse = await rc.Restapi().Account().CallLog().List(new ReadCompanyCallLogParameters
             {
@@ -22,7 +22,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void FilterByPhoneNumber()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             var callLogResponse = await rc.Restapi().Account().Extension().CallLog().List(
                 new ReadUserCallLogParameters

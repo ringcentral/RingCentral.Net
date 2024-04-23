@@ -13,7 +13,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void CancelAfter()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             var sendFaxMessageRequest = new CreateFaxMessageRequest
             {

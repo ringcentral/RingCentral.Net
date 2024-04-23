@@ -11,7 +11,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void DifferentResponseTypes()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             // return a definition type
             var country = await rc.Get<CountryInfoDictionaryModel>("/restapi/v1.0/dictionary/country/46");
@@ -33,7 +33,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void GetExtensionInfo()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             // normal way to get extension info
             var extInfo = await rc.Restapi().Account().Extension().Get();
             Assert.NotNull(extInfo.id);

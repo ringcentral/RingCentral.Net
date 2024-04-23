@@ -8,7 +8,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void ParseNumber()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             var r = await rc.Restapi().NumberParser().Parse().Post(new ParsePhoneNumberRequest
             {

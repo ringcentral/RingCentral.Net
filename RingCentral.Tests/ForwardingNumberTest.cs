@@ -8,7 +8,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void GetForwardingNumberList()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             var extension = rc.Restapi().Account().Extension();
 
             var r = await extension.ForwardingNumber().List();

@@ -9,7 +9,7 @@ namespace RingCentral.Tests.Extensions
         [Fact]
         public async void EnableDebugMode()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             var debugExtension = new DebugExtension();
             await rc.InstallExtension(debugExtension);
             debugExtension.enabled = false; // remove this line to enable debug mode

@@ -9,7 +9,7 @@ namespace RingCentral.Tests.Extensions
         [Fact]
         public async void EnableAutoRetry()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             var retryExtension = new RetryExtension();
             await rc.InstallExtension(retryExtension);
             retryExtension.enabled = false; // remove this line to enable auto retry

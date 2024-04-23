@@ -10,7 +10,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void SendMms()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             var extension = rc.Restapi().Account().Extension();
             var attachments = new[]
             {

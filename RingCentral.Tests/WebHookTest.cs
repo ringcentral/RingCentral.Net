@@ -8,7 +8,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void SetupWebHook()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             try
             {
                 await rc.Restapi().Subscription().Post(new CreateSubscriptionRequest

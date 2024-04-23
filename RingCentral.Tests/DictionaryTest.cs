@@ -22,7 +22,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void TestGet()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             var country = rc.Restapi().Dictionary().Country("46");
             var response = await rc.Get(country.Path());
             Assert.NotNull(response);

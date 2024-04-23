@@ -11,7 +11,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void Renew()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             var eventFilters = new[] {"/restapi/v1.0/account/~/extension/~/message-store"};
             var requestBody = new

@@ -9,7 +9,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void ContactActions()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             const string phoneNumber = "+15889546648";
             var addressBook = rc.Restapi().Account().Extension().AddressBook();
 

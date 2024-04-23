@@ -9,7 +9,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void ServiceInfo()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             // account service-info
             var account = rc.Restapi().Account();

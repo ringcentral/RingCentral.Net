@@ -8,7 +8,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void PostAttachment()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             var groupId = (await rc.TeamMessaging().V1().Chats().List()).records[0].id;
             // https://jira.ringcentral.com/browse/PLD-803
             // var postInfo = await rc.Restapi().Glip().Groups(groupId).Posts().Post(new GlipCreatePost

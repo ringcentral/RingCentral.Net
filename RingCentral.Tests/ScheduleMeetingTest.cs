@@ -8,7 +8,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void ScheduleMeeting()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             // meetings api is being deprecated
 

@@ -9,7 +9,7 @@ namespace RingCentral.Tests.Extensions
         [Fact]
         public async void EnableRateLimit()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             var rateLimitExtension = new RateLimitExtension();
             await rc.InstallExtension(rateLimitExtension);
             rateLimitExtension.enabled = false; // remove this line to enable rate limit

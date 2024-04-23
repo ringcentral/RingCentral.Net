@@ -8,7 +8,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void UpdateGlipPostText()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             var currentExtension = await rc.Restapi().Account().Extension().Get();
 

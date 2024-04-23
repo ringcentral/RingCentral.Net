@@ -33,7 +33,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void TestSetupSubscription()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             var webSocketExtension = new WebSocketExtension();
             await rc.InstallExtension(webSocketExtension);

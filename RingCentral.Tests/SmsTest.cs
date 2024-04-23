@@ -13,7 +13,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void SendSms()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             var messageInfo = await rc.Restapi().Account().Extension().Sms().Post(new CreateSMSMessage
             {
@@ -38,7 +38,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void SendSmsComplicated()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             var httpContent = new StringContent(JsonConvert.SerializeObject(new
             {
                 from = new

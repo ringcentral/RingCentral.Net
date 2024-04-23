@@ -9,7 +9,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void UpdateCompanyGreeting()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             var account = rc.Restapi().Account();
             var companyAnsweringRuleList = await account.AnsweringRule().List();
             var answeringRule = companyAnsweringRuleList.records.Last();
@@ -46,7 +46,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void UpdateUserGreeting()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             var extension = rc.Restapi().Account().Extension();
             var userAnsweringRuleList = await extension.AnsweringRule().List();
             var answeringRule = userAnsweringRuleList.records.Last();

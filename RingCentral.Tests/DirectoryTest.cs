@@ -9,7 +9,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void FetchDirectory()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             var directoryResource = await rc.Restapi().Account().Directory().Entries().List();
             var sites = directoryResource.records.Select(r => r.site).ToArray();
         }

@@ -17,7 +17,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void SendFax()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             var sendFaxMessageRequest = new CreateFaxMessageRequest
             {
                 to = new[]
@@ -54,7 +54,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void SendFaxComplicated()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             var requestObj = new CreateFaxMessageRequest
             {
@@ -116,7 +116,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void SendFaxMoreComplicated()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             var multipartFormDataContent = new MultipartFormDataContent();
 

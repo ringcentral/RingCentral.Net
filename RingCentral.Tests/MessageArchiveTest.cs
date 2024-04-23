@@ -8,7 +8,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void DownloadMessageReportArchive()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
 //                var messageStoreReport = await rc.Restapi().Account().MessageStoreReport().Post(
 //                    new CreateMessageStoreReportRequest

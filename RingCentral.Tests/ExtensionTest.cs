@@ -9,7 +9,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void TestGet()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             var extension = await rc.Restapi().Account().Extension().Get();
             Assert.NotNull(extension);
             Assert.True(extension.contact.firstName.Length > 0);

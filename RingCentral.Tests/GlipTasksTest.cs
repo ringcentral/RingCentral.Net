@@ -8,7 +8,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void AllTaskOperations()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             // Find the group with type "Personal" where you can talk to yourself
             var groups = await rc.TeamMessaging().V1().Chats().List(new ListGlipChatsNewParameters

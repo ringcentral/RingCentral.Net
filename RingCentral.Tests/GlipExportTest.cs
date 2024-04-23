@@ -8,7 +8,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void ExportGlipData()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             // // can only be done once per day
             // var r = await rc.Restapi().Glip().DataExport().Post(new CreateDataExportTaskRequest());
             // Assert.Equal("Accepted", r.status);

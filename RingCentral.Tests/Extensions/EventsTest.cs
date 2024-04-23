@@ -10,7 +10,7 @@ namespace RingCentral.Tests.Extensions
         [Fact]
         public async void RequestSuccess()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             var eventsExtension = new EventsExtension();
             await rc.InstallExtension(eventsExtension);

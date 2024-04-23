@@ -10,7 +10,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void ArrayParams()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             var eventsExtension = new EventsExtension();
             await rc.InstallExtension(eventsExtension);
 

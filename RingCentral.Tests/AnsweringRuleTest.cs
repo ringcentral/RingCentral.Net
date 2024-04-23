@@ -8,7 +8,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void UpdateAnsweringRule()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             var answeringRules = await rc.Restapi().Account().Extension().AnsweringRule().List();
             var answeringRule = answeringRules.records[0];

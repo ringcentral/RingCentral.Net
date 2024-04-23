@@ -10,7 +10,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void GetMessages()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             var messages = await rc.Restapi().Account().Extension().MessageStore().List(new ListMessagesParameters
             {
@@ -47,7 +47,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void GetCallLogs()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             var callLogsResponse = await rc.Restapi().Account().Extension().CallLog()
                 .List(new ReadUserCallLogParameters
@@ -68,7 +68,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void GetCallLogs2()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             var callLogsResponse = await rc.Restapi().Account().Extension().CallLog()
                 .List(new ReadUserCallLogParameters
@@ -85,7 +85,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void OnlyOneId()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             var callLogsResponse = await rc.Restapi().Account().Extension().CallLog()
                 .List(new ReadUserCallLogParameters {perPage = 1});

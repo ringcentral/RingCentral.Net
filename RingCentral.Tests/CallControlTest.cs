@@ -11,7 +11,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void ForwardCall()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             var webSocketExtension = new WebSocketExtension();
             await rc.InstallExtension(webSocketExtension);
             var eventFilters = new[]

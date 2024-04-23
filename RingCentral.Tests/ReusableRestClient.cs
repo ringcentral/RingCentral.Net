@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace RingCentral.Tests
 {
-    public static class SharedRestClient
+    public static class ReusableRestClient
     {
         private static RestClient _restClient;
 

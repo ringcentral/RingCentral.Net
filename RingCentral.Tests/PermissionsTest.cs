@@ -8,7 +8,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void GetPermissions()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
 
             var str = await rc.Get<string>("/restapi/v1.0/dictionary/permission/HUD");
             Assert.Contains("HUD", str);

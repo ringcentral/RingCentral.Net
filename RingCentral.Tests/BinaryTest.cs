@@ -12,7 +12,7 @@ namespace RingCentral.Tests
         public async void ProfileImage()
         {
             var bytes = File.ReadAllBytes("rc.png");
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             var extension = rc.Restapi().Account().Extension();
 
             var bytes2 = await extension.ProfileImage().Post(new CreateUserProfileImageRequest
@@ -50,7 +50,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void MessageContent()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             var extension = rc.Restapi().Account().Extension();
 
             var response = await extension.MessageStore()
@@ -88,7 +88,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void RecordingContent()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             var account = rc.Restapi().Account();
 
             // List call Logs
@@ -118,7 +118,7 @@ namespace RingCentral.Tests
         [Fact]
         public async void UploadIvrAudio()
         {
-            var rc = await SharedRestClient.GetInstance();
+            var rc = await ReusableRestClient.GetInstance();
             await rc.Restapi().Account().IvrPrompts().Post(new CreateIVRPromptRequest
             {
                 name = "Uploaded via API",
