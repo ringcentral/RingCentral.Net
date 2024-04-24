@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     environment: prod
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
