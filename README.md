@@ -1,12 +1,16 @@
 # RingCentral.Net
 
 [![Build Status](https://github.com/ringcentral/RingCentral.Net/workflows/.NET/badge.svg?branch=master)](https://github.com/ringcentral/RingCentral.Net/actions)
-
+[![Code Document](https://img.shields.io/badge/csharpdoc-reference-blue?branch=master&service=github)](https://ringcentral.github.io/RingCentral.Net/html/annotated.html)
 
 ## Getting help and support
 
 If you are having difficulty using this SDK, or working with the RingCentral API, please visit our [developer community forums](https://community.ringcentral.com/spaces/144/) for help and to get quick answers to your questions. If you wish to contact the RingCentral Developer Support team directly, please [submit a help ticket](https://developers.ringcentral.com/support/create-case) from our developer website.
 
+## Additional resources
+
+* [RingCentral API Reference](https://developer.ringcentral.com/api-docs/latest/index.html) - an interactive reference for the RingCentral API that allows developers to make API calls with no code.
+* [Document](https://ringcentral.github.io/RingCentral.Net/html/annotated.html) - an interactive reference for the SDK code documentation.
 
 ## Installation
 
