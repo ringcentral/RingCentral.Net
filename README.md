@@ -147,18 +147,23 @@ cd <ProjectName>
 dotnet pack
 ```
 
-
 ## Todo
 
 - Add batch get to auto-generated sample code
-- Exception error message for binary data? Will it print a LOT?
 - Add icons to NuGet packages
+
+
+## Development Notes
+
+I tried to migrate from Newtonsoft.Json to System.Text.Json, but it's not easy.
+Especially System.Text.Json doesn't automatically convert string to number. It doesn't even automatically convert double to int64.
+Considering the complexity and benefits of the migration, I decided to keep using Newtonsoft.Json for now.
+Ref: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/migrate-from-newtonsoft
 
 
 ## Code coverage
 
 Install the following globally if you haven't done so:
-
 ```
 dotnet tool install -g dotnet-reportgenerator-globaltool
 ```
@@ -168,7 +173,6 @@ dotnet tool install -g dotnet-reportgenerator-globaltool
 ```
 dotnet test -settings RingCentral.Tests/coverlet.runsettings.xml
 ```
-
 The result is located in RingCentral.Tests/TestResults/
 
 
@@ -177,5 +181,4 @@ The result is located in RingCentral.Tests/TestResults/
 ```
 ~/.dotnet/tools/reportgenerator -reports:"RingCentral.Tests/TestResults/239bdb87–151b-42ac-acec-1f604f8c02c5/coverage.cobertura.xml" -targetdir:RingCentral.Tests/CoverageReport -reporttypes:Html
 ```
-
 Open RingCentral.Tests/CoverageReport/index.html in a browser.
