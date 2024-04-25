@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="RingCentral.PagingSchema",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1PagingSchema.html",tooltip=" "];
+  Node0 [label="RingCentral.Parameterized\lErrorResponseModel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1ParameterizedErrorResponseModel.html",tooltip="Standard error response which may include parameterized errors"];
 }

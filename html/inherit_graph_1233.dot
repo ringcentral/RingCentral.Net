@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="RingCentral.PhoneNumberDefinition\lPreferredAreaCode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1PhoneNumberDefinitionPreferredAreaCode.html",tooltip="To use as selection hint when a \"toll\" number to be selected from the number pool."];
+  Node0 [label="RingCentral.PhoneNumberDefinition\lTollType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1PhoneNumberDefinitionTollType.html",tooltip="To use as selection criteria when a number to be selected from the number pool."];
 }

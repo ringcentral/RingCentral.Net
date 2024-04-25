@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="RingCentral.SipRegistration\lDeviceEmergencyInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1SipRegistrationDeviceEmergencyInfo.html",tooltip="Emergency response location settings of a device"];
+  Node0 [label="RingCentral.SipRegistration\lDeviceEmergencyInfoAddress",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1SipRegistrationDeviceEmergencyInfoAddress.html",tooltip=" "];
 }

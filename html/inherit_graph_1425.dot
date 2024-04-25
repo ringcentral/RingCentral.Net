@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="RingCentral.ShippingAddressInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1ShippingAddressInfo.html",tooltip="Shipping address for the order. If it coincides with the Emergency Service Address,..."];
+  Node0 [label="RingCentral.ShippingInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1ShippingInfo.html",tooltip="Shipping information, according to which devices (in case of HardPhone) or e911 stickers (in case of ..."];
 }

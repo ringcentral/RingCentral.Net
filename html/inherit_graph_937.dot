@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="RingCentral.Paths.Rcvideo.\lV1.Account.Recordings.Index",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1Paths_1_1Rcvideo_1_1V1_1_1Account_1_1Recordings_1_1Index.html",tooltip=" "];
+  Node0 [label="RingCentral.Paths.Rcvideo.\lV1.Accounts.Extensions.Delegators.Index",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1Paths_1_1Rcvideo_1_1V1_1_1Accounts_1_1Extensions_1_1Delegators_1_1Index.html",tooltip=" "];
 }
