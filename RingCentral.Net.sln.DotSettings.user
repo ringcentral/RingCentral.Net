@@ -10,11 +10,12 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ed696634_002D6704_002D4a56_002Da5df_002D44d45b80870e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="EnableDebugMode" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;Project Location="/Users/tyler.liu/src/dotnet/RingCentral.Net/RingCentral.Tests" Presentation="&amp;lt;RingCentral.Tests&amp;gt;" /&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=fcbb6d8c_002D8a1a_002D4d34_002Da864_002D100f585c26e0_0023RingCentral_002ENet_002EPubnub/@EntryIndexedValue">True</s:Boolean>
+	
+	
+	
 	
 	
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=glip/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/UserDictionary/Words/=pubnub/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=restapi/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=RINGCENTRAL/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Voicemail/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

@@ -11,7 +11,6 @@
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="dotenv.net" Version="3.1.3" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0-release-24177-07" />
         <PackageReference Include="xunit" Version="2.7.1" />
         <PackageReference Include="xunit.runner.visualstudio" Version="2.5.8">
@@ -34,7 +33,6 @@
         <ProjectReference Include="..\RingCentral.Net.AutoRefresh\RingCentral.Net.AutoRefresh.csproj" />
         <ProjectReference Include="..\RingCentral.Net.Debug\RingCentral.Net.Debug.csproj" />
         <ProjectReference Include="..\RingCentral.Net.Events\RingCentral.Net.Events.csproj" />
-        <ProjectReference Include="..\RingCentral.Net.PubnubPCL\RingCentral.Net.PubnubPCL.csproj" />
         <ProjectReference Include="..\RingCentral.Net.RateLimit\RingCentral.Net.RateLimit.csproj" />
         <ProjectReference Include="..\RingCentral.Net.Retry\RingCentral.Net.Retry.csproj" />
         <ProjectReference Include="..\RingCentral.Net.WebSocket\RingCentral.Net.WebSocket.csproj" />

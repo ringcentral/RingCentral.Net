@@ -2,4 +2,6 @@
 --ignore-dir=bin
 --ignore-dir=.idea
 --ignore-dir=packages
+--ignore-dir=CoverageReport
+--ignore-dir=TestResults
 --ignore-file=match:/yarn\.lock$/

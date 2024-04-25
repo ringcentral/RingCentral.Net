@@ -4,5 +4,5 @@ GENERATE_HTML = YES
 
 # Source files
 
-INPUT = RingCentral.Net.WebSocket RingCentral.Net RingCentral.Net.AuthorizeUri RingCentral.Net.AutoRefresh RingCentral.Net.Events RingCentral.Net.Pubnub RingCentral.Net.PubnubPCL RingCentral.Net.RateLimit RingCentral.Net.Retry
+INPUT = RingCentral.Net.WebSocket RingCentral.Net RingCentral.Net.AuthorizeUri RingCentral.Net.AutoRefresh RingCentral.Net.Events RingCentral.Net.RateLimit RingCentral.Net.Retry
 RECURSIVE = YES
