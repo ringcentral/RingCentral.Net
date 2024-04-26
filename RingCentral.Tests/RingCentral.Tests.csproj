@@ -26,6 +26,8 @@
         <Content Include="*.mp3">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
+        <Content Remove="TestResults\**" />
+        <Content Remove="CoverageReport\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -46,6 +48,18 @@
         <None Update=".env">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
+        <None Remove="TestResults\**" />
+        <None Remove="CoverageReport\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="TestResults\**" />
+      <Compile Remove="CoverageReport\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="TestResults\**" />
+      <EmbeddedResource Remove="CoverageReport\**" />
     </ItemGroup>
 
 </Project>

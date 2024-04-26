@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Xunit;
 
@@ -67,6 +68,8 @@ namespace RingCentral.Tests
             var userSearchResponse = await rc.Scim().Users().DotSearch().Post(searchRequest);
             if (userSearchResponse.Resources.Length == 1)
                 await rc.Scim().Users(userSearchResponse.Resources[0].id).Delete();
+            
+            await Task.Delay(10000); // add some delay, to workaround parallel github CI issues
 
             // create the user
             var user = new ScimUser
