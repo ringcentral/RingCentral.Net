@@ -12,15 +12,13 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Setup .NET
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 3.1.x
+          dotnet-version: 8.0.x
       - name: Restore dependencies
         run: dotnet restore
-      - name: Remove Previous Result
-        run: rm -rf RingCentral.Tests/TestResults
       - name: Code Coverage
         run: dotnet test --collect:"XPlat Code Coverage"
         env:
@@ -33,7 +31,7 @@ jobs:
       - name: Install ReportGenerator
         run: dotnet tool install -g dotnet-reportgenerator-globaltool
       - name: Execute Report Generation
-        run: reportgenerator "-reports:RingCentral.Tests/TestResults/*/coverage.cobertura.xml" "-targetdir:RingCentral.Tests/TestResults/coverage-report" -reporttypes:HtmlSummary
+        run: reportgenerator "-reports:RingCentral.Tests/TestResults/*/coverage.cobertura.xml" "-targetdir:RingCentral.Tests/TestResults/coverage-report" "-filters:-:RingCentral.Net/Definitions/*" "-filters:-:RingCentral.Net/Paths/*" -reporttypes:HtmlSummary
       - name: View Report
         uses: actions/upload-artifact@v4
         with:
