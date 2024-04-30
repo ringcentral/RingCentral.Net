@@ -1,0 +1,39 @@
+name: .NET
+
+on:
+  push:
+    branches: [ master,addTestReport]
+  pull_request:
+    branches: [ master,addTestReport ]
+
+jobs:
+  build:
+    environment: prod
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Restore dependencies
+        run: dotnet restore
+      - name: Code Coverage
+        run: dotnet test --collect:"XPlat Code Coverage"
+        env:
+          RINGCENTRAL_SERVER_URL: ${{ secrets.RINGCENTRAL_SERVER_URL }}
+          RINGCENTRAL_CLIENT_ID: ${{ secrets.RINGCENTRAL_CLIENT_ID }}
+          RINGCENTRAL_CLIENT_SECRET: ${{ secrets.RINGCENTRAL_CLIENT_SECRET }}
+          RINGCENTRAL_JWT_TOKEN: ${{ secrets.RINGCENTRAL_JWT_TOKEN }}
+          RINGCENTRAL_SENDER: ${{ secrets.RINGCENTRAL_SENDER }}
+          RINGCENTRAL_RECEIVER: ${{ secrets.RINGCENTRAL_RECEIVER }}
+      - name: Install ReportGenerator
+        run: dotnet tool install -g dotnet-reportgenerator-globaltool
+      - name: Execute Report Generation
+        run: reportgenerator "-reports:RingCentral.Tests/TestResults/*/coverage.cobertura.xml" "-targetdir:RingCentral.Tests/TestResults/coverage-report" "-filters:-:RingCentral.Net/Definitions/*" "-filters:-:RingCentral.Net/Paths/*" -reporttypes:HtmlSummary
+      - name: View Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: Reoprts
+          path: RingCentral.Tests/TestResults/coverage-report/
