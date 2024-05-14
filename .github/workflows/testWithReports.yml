@@ -1,13 +1,13 @@
-name: .NET
+name: Test
 
 on:
   push:
-    branches: [ master,addTestReport]
+    branches: [ master ]
   pull_request:
-    branches: [ master,addTestReport ]
+    branches: [ master ]
 
 jobs:
-  build:
+  Test:
     environment: prod
     runs-on: macos-latest
 
@@ -19,7 +19,9 @@ jobs:
           dotnet-version: 8.0.x
       - name: Restore dependencies
         run: dotnet restore
-      - name: Code Coverage
+      - name: Build
+        run: dotnet build --no-restore RingCentral.Tests
+      - name: Test With Coverage
         run: dotnet test --collect:"XPlat Code Coverage"
         env:
           RINGCENTRAL_SERVER_URL: ${{ secrets.RINGCENTRAL_SERVER_URL }}
