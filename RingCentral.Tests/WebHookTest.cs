@@ -1,3 +1,4 @@
+using System.Net;
 using Xunit;
 
 namespace RingCentral.Tests
@@ -24,7 +25,8 @@ namespace RingCentral.Tests
             catch (RestException re)
             {
                 // "errorCode":"SUB-523","message":"HTTPS is required"
-                Assert.Contains("{\"errorCode\":\"SUB-523\"", re.Message);
+                // Or: webhook URI response is 404
+                Assert.Equal(HttpStatusCode.BadRequest, re.httpResponseMessage.StatusCode);
             }
         }
 
