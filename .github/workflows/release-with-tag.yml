@@ -1,0 +1,48 @@
+# This Workflow is triggered when a new tag is pushed to the repository. 
+# The test job runs on macOS and restores dependencies, builds the project, and runs the tests.
+# The Publish_Nuget job runs on macOS and depends on the Test job. It restores dependencies, builds the project, packs the project, and publishes the NuGet package to NuGet.org.
+# Publish_Nuget job skip the publish if version already exists in NuGet.org.
+name: Release
+on:
+  push:
+    tags:
+      - '*'
+jobs:
+  Test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Restore dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --no-restore RingCentral.Tests
+      - name: Test
+        run: dotnet test --no-build --verbosity normal
+        env:
+          RINGCENTRAL_SERVER_URL: ${{ secrets.RINGCENTRAL_SERVER_URL }}
+          RINGCENTRAL_CLIENT_ID: ${{ secrets.RINGCENTRAL_CLIENT_ID }}
+          RINGCENTRAL_CLIENT_SECRET: ${{ secrets.RINGCENTRAL_CLIENT_SECRET }}
+          RINGCENTRAL_JWT_TOKEN: ${{ secrets.RINGCENTRAL_JWT_TOKEN }}
+          RINGCENTRAL_SENDER: ${{ secrets.RINGCENTRAL_SENDER }}
+          RINGCENTRAL_RECEIVER: ${{ secrets.RINGCENTRAL_RECEIVER }}
+  Publish_Nuget:
+    runs-on: macos-latest
+    needs: Test
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Restore dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --configuration Release
+      - name: Pack
+        run: dotnet pack --configuration Release --output ./output --no-build
+      - name: Publish to NuGet
+        run: dotnet nuget push ./output/*.nupkg --api-key ${{ secrets.NUGET_APIKEY }} --source https://api.nuget.org/v3/index.json --symbol-source https://api.nuget.org/v3/index.json --skip-duplicate
