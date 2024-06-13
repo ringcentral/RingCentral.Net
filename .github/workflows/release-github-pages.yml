@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - fix-gh-pages
 permissions:
   contents: write
 jobs:
