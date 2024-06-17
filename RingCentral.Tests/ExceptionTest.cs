@@ -22,7 +22,7 @@ namespace RingCentral.Tests
                 );
             });
             Assert.Equal(HttpStatusCode.BadRequest, re.httpResponseMessage.StatusCode);
-            Assert.Contains("Unauthorized", re.Message);
+            Assert.Contains("Unparseable assertion", re.Message);
         }
     }
 }

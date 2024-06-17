@@ -41,9 +41,9 @@ namespace RingCentral
                 {
                     if (t.value.GetType().IsArray)
                         return string.Join("&",
-                            (t.value as object[]).Select(o => $"{t.name}={Uri.EscapeUriString(o.ToString())}")
+                            (t.value as object[]).Select(o => $"{t.name}={Uri.EscapeDataString(o.ToString())}")
                             .ToArray());
-                    return $"{t.name}={Uri.EscapeUriString(t.value.ToString())}";
+                    return $"{t.name}={Uri.EscapeDataString(t.value.ToString())}";
                 });
                 uriBuilder.Query = string.Join("&", fields);
             }

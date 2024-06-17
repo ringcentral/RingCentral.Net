@@ -32,6 +32,7 @@ namespace RingCentral.Tests
                 });
             Assert.Single(callLogResponse.records);
 
+            // it works with or without the prefixing "+" sign
             var fromNumber = callLogResponse.records[0].from.phoneNumber;
             callLogResponse = await rc.Restapi().Account().Extension().CallLog().List(new ReadUserCallLogParameters
             {
@@ -39,8 +40,7 @@ namespace RingCentral.Tests
                 dateFrom = DateTime.UtcNow.AddMonths(-6).ToString("o"),
                 phoneNumber = fromNumber // +123456789
             });
-            Assert.Empty(callLogResponse.records);
-
+            Assert.Single(callLogResponse.records);
             callLogResponse = await rc.Restapi().Account().Extension().CallLog().List(new ReadUserCallLogParameters
             {
                 perPage = 1,

@@ -21,7 +21,7 @@ namespace RingCentral.Tests
 
             void EventHandler1(object sender, HttpRequestMessage httpRequestMessage)
             {
-                Assert.Equal($"?phoneNumber={phoneNumber}", httpRequestMessage.RequestUri.Query);
+                Assert.Equal($"?phoneNumber={phoneNumber.Replace("+", "%2B")}", httpRequestMessage.RequestUri.Query);
                 count += 1;
             }
 
@@ -32,7 +32,7 @@ namespace RingCentral.Tests
 
             void EventHandler2(object sender, HttpRequestMessage httpRequestMessage)
             {
-                Assert.Equal($"?phoneNumber={phoneNumber}&phoneNumber={phoneNumber2}",
+                Assert.Equal($"?phoneNumber={phoneNumber}&phoneNumber={phoneNumber2}".Replace("+", "%2B"),
                     httpRequestMessage.RequestUri.Query);
                 count += 1;
             }
