@@ -68,7 +68,7 @@ namespace RingCentral.Net.WebSocket
             if (recoverSubscription) wsUri = $"{wsUri}&wsc={wsc.token}";
             var factory = new Func<ClientWebSocket>(() => new ClientWebSocket
             {
-                Options = {KeepAliveInterval = TimeSpan.FromSeconds(30)}
+                Options = { KeepAliveInterval = TimeSpan.FromSeconds(30) }
             });
             ws?.Dispose(); // if ws already exist, dispose it
             ws = new WebsocketClient(new Uri(wsUri), factory);
@@ -115,7 +115,7 @@ namespace RingCentral.Net.WebSocket
         {
             var tcs = new TaskCompletionSource<T>();
             var uuid = Guid.NewGuid().ToString();
-            dynamic[] requestBody = {null, null};
+            dynamic[] requestBody = { null, null };
             requestBody[0] = new RestRequestHeaders
             {
                 type = "ClientRequest",

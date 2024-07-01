@@ -13,6 +13,6 @@ namespace RingCentral
         /// <summary>
         ///     Enum: Account, AllExtensions, Federation, NonUserExtensions, RoleBased, Self, UserExtensions
         /// </summary>
-        public string[] scope { get; set; }
+        public string[] scopes { get; set; }
     }
 }

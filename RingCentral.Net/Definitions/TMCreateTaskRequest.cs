@@ -49,7 +49,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public TMCreateTaskRequestRecurrence recurrence { get; set; }
+        public TaskRecurrenceInfo recurrence { get; set; }
 
         /// <summary>
         /// </summary>

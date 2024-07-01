@@ -20,5 +20,14 @@ namespace RingCentral
         ///     Format: date-time
         /// </summary>
         public string expirationTime { get; set; }
+
+        /// <summary>
+        ///     Enum: Success, Fail
+        /// </summary>
+        public string status { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public JobStatusResponseResponse response { get; set; }
     }
 }

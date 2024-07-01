@@ -36,6 +36,12 @@ namespace RingCentral
         public string phoneNumber { get; set; }
 
         /// <summary>
+        ///     Link to a branded support page
+        ///     Example: http://success.ringcentral.com
+        /// </summary>
+        public string supportUri { get; set; }
+
+        /// <summary>
         ///     Short URL leading to the service web page Tap to Join for audio
         ///     conference bridge
         ///     Format: uri

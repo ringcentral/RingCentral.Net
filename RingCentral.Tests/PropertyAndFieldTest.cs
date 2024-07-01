@@ -3,64 +3,63 @@ using Xunit;
 
 // Note: this test file is for API troubleshooting only
 // Please do not reference the code here, it should not be used in production
-namespace RingCentral.Tests
+namespace RingCentral.Tests;
+
+internal class A
 {
-    internal class A
+    public string b = "bb";
+    public string c { get; set; } = "cc";
+}
+
+[Collection("Sequential")]
+public class PropertyAndFieldTest
+{
+    [Fact]
+    public void StaticClass()
     {
-        public string b = "bb";
-        public string c { get; set; } = "cc";
+        var a = new A();
+        var fields = a.GetType().GetFields().Select(f => f.Name);
+        Assert.Equal(new[] { "b" }, fields);
+        var properties = a.GetType().GetProperties().Select(f => f.Name);
+        Assert.Equal(new[] { "c" }, properties);
     }
 
-    [Collection("Sequential")]
-    public class PropertyAndFieldTest
+    [Fact]
+    public void DynamicClass()
     {
-        [Fact]
-        public void StaticClass()
+        var a = new
         {
-            var a = new A();
-            var fields = a.GetType().GetFields().Select(f => f.Name);
-            Assert.Equal(new[] {"b"}, fields);
-            var properties = a.GetType().GetProperties().Select(f => f.Name);
-            Assert.Equal(new[] {"c"}, properties);
-        }
+            b = "b",
+            c = "c"
+        };
+        var fields = a.GetType().GetFields().Select(f => f.Name);
+        Assert.Empty(fields);
+        var properties = a.GetType().GetProperties().Select(f => f.Name);
+        Assert.Equal(new[] { "b", "c" }, properties);
+    }
 
-        [Fact]
-        public void DynamicClass()
+    [Fact]
+    private void GetPairs()
+    {
+        var a = new
         {
-            var a = new
-            {
-                b = "b",
-                c = "c"
-            };
-            var fields = a.GetType().GetFields().Select(f => f.Name);
-            Assert.Empty(fields);
-            var properties = a.GetType().GetProperties().Select(f => f.Name);
-            Assert.Equal(new[] {"b", "c"}, properties);
-        }
+            b = "b",
+            c = "c"
+        };
+        var pairs = Utils.GetPairs(a);
 
-        [Fact]
-        private void GetPairs()
+        Assert.Equal(new[]
         {
-            var a = new
-            {
-                b = "b",
-                c = "c"
-            };
-            var pairs = Utils.GetPairs(a);
+            (name: "b", value: "b"),
+            (name: "c", value: "c" as object)
+        }, pairs.ToArray());
 
-            Assert.Equal(new[]
-            {
-                (name: "b", value: "b"),
-                (name: "c", value: "c" as object)
-            }, pairs.ToArray());
-
-            var a2 = new A();
-            var pairs2 = Utils.GetPairs(a2);
-            Assert.Equal(new[]
-            {
-                (name: "b", value: "bb"),
-                (name: "c", value: "cc" as object)
-            }, pairs2.ToArray());
-        }
+        var a2 = new A();
+        var pairs2 = Utils.GetPairs(a2);
+        Assert.Equal(new[]
+        {
+            (name: "b", value: "bb"),
+            (name: "c", value: "cc" as object)
+        }, pairs2.ToArray());
     }
 }

@@ -44,6 +44,10 @@ namespace RingCentral
         public bool? byocNumber { get; set; }
 
         /// <summary>
+        /// </summary>
+        public ContactCenterProvider contactCenterProvider { get; set; }
+
+        /// <summary>
         ///     Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise, it is an
         ///     external number not yet ported to RingCentral
         ///     Required

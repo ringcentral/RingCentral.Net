@@ -37,5 +37,10 @@ namespace RingCentral
         ///     Example: https://abcde12345.webinar.ringcentral.com/register?jlt=iuyef77fsj473wn10ashjfk34&action=cancel
         /// </summary>
         public string cancellationUri { get; set; }
+
+        /// <summary>
+        ///     Indicates if the registrant was registered to on-demand webinar
+        /// </summary>
+        public bool? registeredPostWebinar { get; set; }
     }
 }

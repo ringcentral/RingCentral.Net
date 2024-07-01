@@ -11,7 +11,7 @@ namespace RingCentral
         /// <summary>
         ///     Target usage type of phone number (only listed values are supported)
         ///     Required
-        ///     Enum: MainCompanyNumber, CompanyNumber, DirectNumber, PhoneLine
+        ///     Enum: MainCompanyNumber, CompanyNumber, DirectNumber, PhoneLine, ContactCenterNumber
         /// </summary>
         public string usageType { get; set; }
 
@@ -22,5 +22,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string costCenterId { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public ContactCenterProvider contactCenterProvider { get; set; }
     }
 }

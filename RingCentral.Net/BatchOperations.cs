@@ -46,7 +46,7 @@ namespace RingCentral
             for (var i = 0; i < batchSummaries.response.Length; i++)
             {
                 var batchSummary = batchSummaries.response[i];
-                var batchResponse = new BatchResponse<T> {summary = batchSummary};
+                var batchResponse = new BatchResponse<T> { summary = batchSummary };
                 result.Add(batchResponse);
                 var responseString = await multipart.Contents[i + 1].ReadAsStringAsync();
                 if (batchSummary.isError)

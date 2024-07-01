@@ -13,12 +13,13 @@ namespace RingCentral
 
         /// <summary>
         ///     Count of messages with this status code
-        ///     Format: int64
+        ///     Format: int32
         ///     Example: 7
         /// </summary>
         public long? count { get; set; }
 
         /// <summary>
+        ///     Message sending/delivery errors. Returned in `deliveryFailed` and `sendingFailed` resources
         /// </summary>
         public object errorCodeCounts { get; set; }
     }

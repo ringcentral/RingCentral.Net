@@ -82,29 +82,8 @@ namespace RingCentral
         public bool? allDay { get; set; }
 
         /// <summary>
-        ///     Event recurrence settings.
-        ///     Enum: None, Day, Weekday, Week, Month, Year
         /// </summary>
-        public string recurrence { get; set; }
-
-        /// <summary>
-        ///     Condition of ending an event
-        ///     Enum: None, Count, Date
-        /// </summary>
-        public string endingCondition { get; set; }
-
-        /// <summary>
-        ///     Count of event iterations. For periodic events only. Value range is 1 - 10.
-        ///     Must be specified if `endingCondition` is `Count`
-        ///     Format: int32
-        /// </summary>
-        public long? endingAfter { get; set; }
-
-        /// <summary>
-        ///     Iterations ending datetime for periodic events in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format
-        ///     Format: date-time
-        /// </summary>
-        public string endingOn { get; set; }
+        public EventRecurrenceInfo recurrence { get; set; }
 
         /// <summary>
         ///     Color of Event title, including its presentation in Calendar; or the color of the side border of an interactive

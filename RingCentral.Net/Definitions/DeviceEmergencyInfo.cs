@@ -7,7 +7,7 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public EmergencyAddressInfo address { get; set; }
+        public CommonEmergencyLocationAddressInfoDefault address { get; set; }
 
         /// <summary>
         /// </summary>

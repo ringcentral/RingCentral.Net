@@ -11,8 +11,8 @@
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0-release-24177-07" />
-        <PackageReference Include="xunit" Version="2.7.1" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0-release-24177-07"/>
+        <PackageReference Include="xunit" Version="2.7.1"/>
         <PackageReference Include="xunit.runner.visualstudio" Version="2.5.8">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -26,19 +26,19 @@
         <Content Include="*.mp3">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
-        <Content Remove="TestResults\**" />
-        <Content Remove="CoverageReport\**" />
+        <Content Remove="TestResults\**"/>
+        <Content Remove="CoverageReport\**"/>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\RingCentral.Net.AuthorizeUri\RingCentral.Net.AuthorizeUri.csproj" />
-        <ProjectReference Include="..\RingCentral.Net.AutoRefresh\RingCentral.Net.AutoRefresh.csproj" />
-        <ProjectReference Include="..\RingCentral.Net.Debug\RingCentral.Net.Debug.csproj" />
-        <ProjectReference Include="..\RingCentral.Net.Events\RingCentral.Net.Events.csproj" />
-        <ProjectReference Include="..\RingCentral.Net.RateLimit\RingCentral.Net.RateLimit.csproj" />
-        <ProjectReference Include="..\RingCentral.Net.Retry\RingCentral.Net.Retry.csproj" />
-        <ProjectReference Include="..\RingCentral.Net.WebSocket\RingCentral.Net.WebSocket.csproj" />
-        <ProjectReference Include="..\RingCentral.Net\RingCentral.Net.csproj" />
+        <ProjectReference Include="..\RingCentral.Net.AuthorizeUri\RingCentral.Net.AuthorizeUri.csproj"/>
+        <ProjectReference Include="..\RingCentral.Net.AutoRefresh\RingCentral.Net.AutoRefresh.csproj"/>
+        <ProjectReference Include="..\RingCentral.Net.Debug\RingCentral.Net.Debug.csproj"/>
+        <ProjectReference Include="..\RingCentral.Net.Events\RingCentral.Net.Events.csproj"/>
+        <ProjectReference Include="..\RingCentral.Net.RateLimit\RingCentral.Net.RateLimit.csproj"/>
+        <ProjectReference Include="..\RingCentral.Net.Retry\RingCentral.Net.Retry.csproj"/>
+        <ProjectReference Include="..\RingCentral.Net.WebSocket\RingCentral.Net.WebSocket.csproj"/>
+        <ProjectReference Include="..\RingCentral.Net\RingCentral.Net.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
@@ -48,18 +48,18 @@
         <None Update=".env">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
-        <None Remove="TestResults\**" />
-        <None Remove="CoverageReport\**" />
+        <None Remove="TestResults\**"/>
+        <None Remove="CoverageReport\**"/>
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Remove="TestResults\**" />
-      <Compile Remove="CoverageReport\**" />
+        <Compile Remove="TestResults\**"/>
+        <Compile Remove="CoverageReport\**"/>
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Remove="TestResults\**" />
-      <EmbeddedResource Remove="CoverageReport\**" />
+        <EmbeddedResource Remove="TestResults\**"/>
+        <EmbeddedResource Remove="CoverageReport\**"/>
     </ItemGroup>
 
 </Project>

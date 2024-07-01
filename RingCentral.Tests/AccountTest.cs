@@ -1,17 +1,16 @@
 using Xunit;
 
-namespace RingCentral.Tests
+namespace RingCentral.Tests;
+
+[Collection("Sequential")]
+public class AccountTest
 {
-    [Collection("Sequential")]
-    public class AccountTest
+    [Fact]
+    public async void GetAccount()
     {
-        [Fact]
-        public async void GetAccount()
-        {
-            var rc = await ReusableRestClient.GetInstance();
-            var account = await rc.Restapi().Account().Get();
-            Assert.NotNull(account);
-            Assert.NotNull(account.serviceInfo);
-        }
+        var rc = await ReusableRestClient.GetInstance();
+        var account = await rc.Restapi().Account().Get();
+        Assert.NotNull(account);
+        Assert.NotNull(account.serviceInfo);
     }
 }

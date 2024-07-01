@@ -17,7 +17,7 @@ namespace RingCentral.Net.RateLimit
             return new RetryOptions
             {
                 shouldRetry = (restException, retriesAttempted) =>
-                    restException.httpResponseMessage.StatusCode == (HttpStatusCode) 429 &&
+                    restException.httpResponseMessage.StatusCode == (HttpStatusCode)429 &&
                     retriesAttempted < options.maxRetries,
                 retryInterval = (restException, retriesAttempted) =>
                 {
@@ -28,8 +28,8 @@ namespace RingCentral.Net.RateLimit
                     var rateLimitWindow = rateLimitWindowHeader == default
                         ? options.rateLimitWindow
                         : int.Parse(rateLimitWindowHeader);
-                    return (int) (rateLimitWindow * 1000 *
-                                  Math.Pow(2, retriesAttempted)); // exponential back off
+                    return (int)(rateLimitWindow * 1000 *
+                                 Math.Pow(2, retriesAttempted)); // exponential back off
                 }
             };
         }

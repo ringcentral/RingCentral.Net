@@ -92,9 +92,8 @@ namespace RingCentral
         public string description { get; set; }
 
         /// <summary>
-        ///     Task details
         /// </summary>
-        public TMTaskInfoRecurrence recurrence { get; set; }
+        public TaskRecurrenceInfo recurrence { get; set; }
 
         /// <summary>
         /// </summary>

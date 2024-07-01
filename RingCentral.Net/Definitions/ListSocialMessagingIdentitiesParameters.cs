@@ -1,27 +1,27 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Query parameters for operation socMsgListIdentities
+    ///     Query parameters for operation listSocialMessagingIdentities
     /// </summary>
-    public class SocMsgListIdentitiesParameters
+    public class ListSocialMessagingIdentitiesParameters
     {
         /// <summary>
-        ///     Filter based on the specified sourceId.
+        ///     Filter based on the specified `sourceId`
         /// </summary>
         public string sourceId { get; set; }
 
         /// <summary>
-        ///     Filter based on the specified identityGroupIds (separated by commas).
+        ///     Filter based on the specified `identityGroupIds` (separated by commas)
         /// </summary>
         public string[] identityGroupIds { get; set; }
 
         /// <summary>
-        ///     Filter based on the specified userId.
+        ///     Filter based on the specified `userId`
         /// </summary>
         public string userId { get; set; }
 
         /// <summary>
-        ///     Filter based on the specified uuid.
+        ///     Filter based on the specified `uuid`
         /// </summary>
         public string uuid { get; set; }
 

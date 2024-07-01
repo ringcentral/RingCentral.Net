@@ -25,7 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.ServiceInfo
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/service-info
         ///     Rate Limit Group: Light
         ///     App Permission: ReadAccounts
-        ///     User Permission: ReadServicePlanInfo
+        ///     User Permission: ReadCompanyInfo
         /// </summary>
         public async Task<AccountServiceInfo> Get(RestRequestConfig restRequestConfig = null)
         {

@@ -23,25 +23,24 @@ namespace RingCentral.Paths.Cx.SocialMessaging.V1.Identities
         }
 
         /// <summary>
-        ///     List identities by creation date. The default order is descending.
-        ///     The account context of this request is determined by the RC Account Id associated with the access token provided
-        ///     in the Authorization header.
-        ///     The query parameters provided shall be considered an AND operation to filter the list.
-        ///     A query parameter not specified or a query parameter provided with no value is treated as not required for
-        ///     filtering the list.
+        ///     Returns a list of identities filtered by creation date. The default order is descending.
+        ///     The account context of this request is determined by the RC Account ID associated with
+        ///     the access token provided in the Authorization header.
+        ///     The query parameters provided will be considered an AND operation to filter the list.
+        ///     A query parameter which is not specified or provided with the null value will be ignored.
         ///     HTTP Method: get
         ///     Endpoint: /cx/social-messaging/v1/identities
         ///     Rate Limit Group: Light
         ///     App Permission: SocialMessaging
         /// </summary>
-        public async Task<string> List(SocMsgListIdentitiesParameters queryParams = null,
+        public async Task<string> List(ListSocialMessagingIdentitiesParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<string>(Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
-        ///     Renders an identity from given id.
+        ///     Returns an identity by ID specified in path.
         ///     HTTP Method: get
         ///     Endpoint: /cx/social-messaging/v1/identities/{identityId}
         ///     Rate Limit Group: Light

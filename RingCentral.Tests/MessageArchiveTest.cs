@@ -1,14 +1,14 @@
 using Xunit;
 
-namespace RingCentral.Tests
+namespace RingCentral.Tests;
+
+[Collection("Sequential")]
+public class MessageArchiveTest
 {
-    [Collection("Sequential")]
-    public class MessageArchiveTest
+    [Fact]
+    public async void DownloadMessageReportArchive()
     {
-        [Fact]
-        public async void DownloadMessageReportArchive()
-        {
-            var rc = await ReusableRestClient.GetInstance();
+        var rc = await ReusableRestClient.GetInstance();
 
 //                var messageStoreReport = await rc.Restapi().Account().MessageStoreReport().Post(
 //                    new CreateMessageStoreReportRequest
@@ -28,6 +28,5 @@ namespace RingCentral.Tests
 //                    File.WriteAllBytes($"{count}.zip", bytes);
 //                    count++;
 //                }
-        }
     }
 }

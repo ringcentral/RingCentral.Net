@@ -4,13 +4,13 @@
 
 Get API Versions
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi`
-Rate Limit Group|`NoThrottling`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value          
+------------------|----------------
+ HTTP Method      | `GET`          
+ Endpoint         | `/restapi`     
+ Rate Limit Group | `NoThrottling` 
+ App Permission   | `N/A`          
+ User Permission  | `N/A`          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -27,13 +27,13 @@ await rc.Revoke();
 
 Get Version Info
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}`
-Rate Limit Group|`NoThrottling`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                   
+------------------|-------------------------
+ HTTP Method      | `GET`                   
+ Endpoint         | `/restapi/{apiVersion}` 
+ Rate Limit Group | `NoThrottling`          
+ App Permission   | `N/A`                   
+ User Permission  | `N/A`                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -51,13 +51,13 @@ await rc.Revoke();
 
 Search/List Users
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/scim/{version}/Users`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`N/A`
+ Name             | Value                   
+------------------|-------------------------
+ HTTP Method      | `GET`                   
+ Endpoint         | `/scim/{version}/Users` 
+ Rate Limit Group | `Light`                 
+ App Permission   | `ReadAccounts`          
+ User Permission  | `N/A`                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -76,13 +76,13 @@ await rc.Revoke();
 
 Create User
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/scim/{version}/Users`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`N/A`
+ Name             | Value                   
+------------------|-------------------------
+ HTTP Method      | `POST`                  
+ Endpoint         | `/scim/{version}/Users` 
+ Rate Limit Group | `Heavy`                 
+ App Permission   | `EditAccounts`          
+ User Permission  | `N/A`                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -101,13 +101,13 @@ await rc.Revoke();
 
 Get User
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/scim/{version}/Users/{scimUserId}`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`N/A`
+ Name             | Value                                
+------------------|--------------------------------------
+ HTTP Method      | `GET`                                
+ Endpoint         | `/scim/{version}/Users/{scimUserId}` 
+ Rate Limit Group | `Light`                              
+ App Permission   | `ReadAccounts`                       
+ User Permission  | `N/A`                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -125,13 +125,13 @@ await rc.Revoke();
 
 Update/Replace User
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/scim/{version}/Users/{scimUserId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`N/A`
+ Name             | Value                                
+------------------|--------------------------------------
+ HTTP Method      | `PUT`                                
+ Endpoint         | `/scim/{version}/Users/{scimUserId}` 
+ Rate Limit Group | `Heavy`                              
+ App Permission   | `EditAccounts`                       
+ User Permission  | `N/A`                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -150,13 +150,13 @@ await rc.Revoke();
 
 Delete User
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/scim/{version}/Users/{scimUserId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`N/A`
+ Name             | Value                                
+------------------|--------------------------------------
+ HTTP Method      | `DELETE`                             
+ Endpoint         | `/scim/{version}/Users/{scimUserId}` 
+ Rate Limit Group | `Heavy`                              
+ App Permission   | `EditAccounts`                       
+ User Permission  | `N/A`                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -174,13 +174,13 @@ await rc.Revoke();
 
 Update/Patch User
 
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/scim/{version}/Users/{scimUserId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`N/A`
+ Name             | Value                                
+------------------|--------------------------------------
+ HTTP Method      | `PATCH`                              
+ Endpoint         | `/scim/{version}/Users/{scimUserId}` 
+ Rate Limit Group | `Heavy`                              
+ App Permission   | `EditAccounts`                       
+ User Permission  | `N/A`                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -199,13 +199,13 @@ await rc.Revoke();
 
 List Schemas
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/scim/{version}/Schemas`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`N/A`
+ Name             | Value                     
+------------------|---------------------------
+ HTTP Method      | `GET`                     
+ Endpoint         | `/scim/{version}/Schemas` 
+ Rate Limit Group | `Light`                   
+ App Permission   | `ReadAccounts`            
+ User Permission  | `N/A`                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -223,13 +223,13 @@ await rc.Revoke();
 
 Get Schema
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/scim/{version}/Schemas/{uri}`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`N/A`
+ Name             | Value                           
+------------------|---------------------------------
+ HTTP Method      | `GET`                           
+ Endpoint         | `/scim/{version}/Schemas/{uri}` 
+ Rate Limit Group | `Light`                         
+ App Permission   | `ReadAccounts`                  
+ User Permission  | `N/A`                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -247,13 +247,13 @@ await rc.Revoke();
 
 Get Account Info
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyInfo`
+ Name             | Value                                       
+------------------|---------------------------------------------
+ HTTP Method      | `GET`                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}` 
+ Rate Limit Group | `Light`                                     
+ App Permission   | `ReadAccounts`                              
+ User Permission  | `ReadCompanyInfo`                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -272,13 +272,13 @@ await rc.Revoke();
 
 Get Async Task Status
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/ai/status/v1/jobs/{jobId}`
-Rate Limit Group|`Heavy`
-App Permission|`AI`
-User Permission|`N/A`
+ Name             | Value                        
+------------------|------------------------------
+ HTTP Method      | `GET`                        
+ Endpoint         | `/ai/status/v1/jobs/{jobId}` 
+ Rate Limit Group | `Heavy`                      
+ App Permission   | `AI`                         
+ User Permission  | `N/A`                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -295,13 +295,13 @@ await rc.Revoke();
 
 Get Bridge
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/rcvideo/v2/bridges/{bridgeId}`
-Rate Limit Group|`Medium`
-App Permission|`Video`
-User Permission|`N/A`
+ Name             | Value                            
+------------------|----------------------------------
+ HTTP Method      | `GET`                            
+ Endpoint         | `/rcvideo/v2/bridges/{bridgeId}` 
+ Rate Limit Group | `Medium`                         
+ App Permission   | `Video`                          
+ User Permission  | `N/A`                            
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -319,13 +319,13 @@ await rc.Revoke();
 
 Delete Bridge
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/rcvideo/v2/bridges/{bridgeId}`
-Rate Limit Group|`Medium`
-App Permission|`Video`
-User Permission|`N/A`
+ Name             | Value                            
+------------------|----------------------------------
+ HTTP Method      | `DELETE`                         
+ Endpoint         | `/rcvideo/v2/bridges/{bridgeId}` 
+ Rate Limit Group | `Medium`                         
+ App Permission   | `Video`                          
+ User Permission  | `N/A`                            
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -342,13 +342,13 @@ await rc.Revoke();
 
 Update Bridge
 
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/rcvideo/v2/bridges/{bridgeId}`
-Rate Limit Group|`Medium`
-App Permission|`Video`
-User Permission|`N/A`
+ Name             | Value                            
+------------------|----------------------------------
+ HTTP Method      | `PATCH`                          
+ Endpoint         | `/rcvideo/v2/bridges/{bridgeId}` 
+ Rate Limit Group | `Medium`                         
+ App Permission   | `Video`                          
+ User Permission  | `N/A`                            
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -364,15 +364,15 @@ await rc.Revoke();
 
 ## getToken
 
-Get OAuth Token
+OAuth 2.0 Token Endpoint
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/oauth/token`
-Rate Limit Group|`Auth`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                  
+------------------|------------------------
+ HTTP Method      | `POST`                 
+ Endpoint         | `/restapi/oauth/token` 
+ Rate Limit Group | `Auth`                 
+ App Permission   | `N/A`                  
+ User Permission  | `N/A`                  
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -384,19 +384,19 @@ await rc.Revoke();
 - `getTokenRequest` is of type [GetTokenRequest](./Definitions/GetTokenRequest.cs)
 - `result` is of type [TokenInfo](./Definitions/TokenInfo.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#OAuth/OIDC-getToken) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#OAuth-2.0-/-OpenID-Connect-getToken) in API Explorer.
 
 ## scimListResourceTypes2
 
 List Resource Types
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/scim/{version}/ResourceTypes`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`N/A`
+ Name             | Value                           
+------------------|---------------------------------
+ HTTP Method      | `GET`                           
+ Endpoint         | `/scim/{version}/ResourceTypes` 
+ Rate Limit Group | `Light`                         
+ App Permission   | `ReadAccounts`                  
+ User Permission  | `N/A`                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -414,13 +414,13 @@ await rc.Revoke();
 
 Get Resource Type
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/scim/{version}/ResourceTypes/{type}`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`N/A`
+ Name             | Value                                  
+------------------|----------------------------------------
+ HTTP Method      | `GET`                                  
+ Endpoint         | `/scim/{version}/ResourceTypes/{type}` 
+ Rate Limit Group | `Light`                                
+ App Permission   | `ReadAccounts`                         
+ User Permission  | `N/A`                                  
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -438,13 +438,13 @@ await rc.Revoke();
 
 List Enrolled Speakers
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/ai/audio/v1/enrollments`
-Rate Limit Group|`Heavy`
-App Permission|`AI`
-User Permission|`N/A`
+ Name             | Value                      
+------------------|----------------------------
+ HTTP Method      | `GET`                      
+ Endpoint         | `/ai/audio/v1/enrollments` 
+ Rate Limit Group | `Heavy`                    
+ App Permission   | `AI`                       
+ User Permission  | `N/A`                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -463,13 +463,13 @@ await rc.Revoke();
 
 Create Speaker Enrollment
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/ai/audio/v1/enrollments`
-Rate Limit Group|`Heavy`
-App Permission|`AI`
-User Permission|`N/A`
+ Name             | Value                      
+------------------|----------------------------
+ HTTP Method      | `POST`                     
+ Endpoint         | `/ai/audio/v1/enrollments` 
+ Rate Limit Group | `Heavy`                    
+ App Permission   | `AI`                       
+ User Permission  | `N/A`                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -487,13 +487,13 @@ await rc.Revoke();
 
 Get Speaker Enrollment Status
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/ai/audio/v1/enrollments/{speakerId}`
-Rate Limit Group|`Heavy`
-App Permission|`AI`
-User Permission|`N/A`
+ Name             | Value                                  
+------------------|----------------------------------------
+ HTTP Method      | `GET`                                  
+ Endpoint         | `/ai/audio/v1/enrollments/{speakerId}` 
+ Rate Limit Group | `Heavy`                                
+ App Permission   | `AI`                                   
+ User Permission  | `N/A`                                  
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -510,13 +510,13 @@ await rc.Revoke();
 
 Delete Speaker Enrollment
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/ai/audio/v1/enrollments/{speakerId}`
-Rate Limit Group|`Heavy`
-App Permission|`AI`
-User Permission|`N/A`
+ Name             | Value                                  
+------------------|----------------------------------------
+ HTTP Method      | `DELETE`                               
+ Endpoint         | `/ai/audio/v1/enrollments/{speakerId}` 
+ Rate Limit Group | `Heavy`                                
+ App Permission   | `AI`                                   
+ User Permission  | `N/A`                                  
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -533,13 +533,13 @@ await rc.Revoke();
 
 Update Speaker Enrollment
 
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/ai/audio/v1/enrollments/{speakerId}`
-Rate Limit Group|`Heavy`
-App Permission|`AI`
-User Permission|`N/A`
+ Name             | Value                                  
+------------------|----------------------------------------
+ HTTP Method      | `PATCH`                                
+ Endpoint         | `/ai/audio/v1/enrollments/{speakerId}` 
+ Rate Limit Group | `Heavy`                                
+ App Permission   | `AI`                                   
+ User Permission  | `N/A`                                  
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -555,15 +555,15 @@ await rc.Revoke();
 
 ## revokeToken
 
-Revoke Token
+OAuth 2.0 Token Revocation Endpoint
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/oauth/revoke`
-Rate Limit Group|`Auth`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                   
+------------------|-------------------------
+ HTTP Method      | `POST`                  
+ Endpoint         | `/restapi/oauth/revoke` 
+ Rate Limit Group | `Auth`                  
+ App Permission   | `N/A`                   
+ User Permission  | `N/A`                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -576,19 +576,19 @@ await rc.Revoke();
 - `revokeTokenParameters` is of type [RevokeTokenParameters](./Definitions/RevokeTokenParameters.cs)
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#OAuth/OIDC-revokeToken) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#OAuth-2.0-/-OpenID-Connect-revokeToken) in API Explorer.
 
 ## readDevice
 
 Get Device
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/device/{deviceId}`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyDevices`
+ Name             | Value                                                         
+------------------|---------------------------------------------------------------
+ HTTP Method      | `GET`                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/device/{deviceId}` 
+ Rate Limit Group | `Light`                                                       
+ App Permission   | `ReadAccounts`                                                
+ User Permission  | `ReadCompanyDevices`                                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -608,13 +608,13 @@ await rc.Revoke();
 
 Update Device
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/device/{deviceId}`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`EditCompanyDevices`
+ Name             | Value                                                         
+------------------|---------------------------------------------------------------
+ HTTP Method      | `PUT`                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/device/{deviceId}` 
+ Rate Limit Group | `Medium`                                                      
+ App Permission   | `EditAccounts`                                                
+ User Permission  | `EditCompanyDevices`                                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -635,13 +635,13 @@ await rc.Revoke();
 
 List Sites
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/sites`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadExtensions`
+ Name             | Value                                             
+------------------|---------------------------------------------------
+ HTTP Method      | `GET`                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/sites` 
+ Rate Limit Group | `Light`                                           
+ App Permission   | `ReadAccounts`                                    
+ User Permission  | `ReadExtensions`                                  
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -660,13 +660,13 @@ await rc.Revoke();
 
 Create Site
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/sites`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`N/A`
+ Name             | Value                                             
+------------------|---------------------------------------------------
+ HTTP Method      | `POST`                                            
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/sites` 
+ Rate Limit Group | `Medium`                                          
+ App Permission   | `EditAccounts`                                    
+ User Permission  | `N/A`                                             
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -686,13 +686,13 @@ await rc.Revoke();
 
 Get Site
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/sites/{siteId}`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadExtensions`
+ Name             | Value                                                      
+------------------|------------------------------------------------------------
+ HTTP Method      | `GET`                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/sites/{siteId}` 
+ Rate Limit Group | `Light`                                                    
+ App Permission   | `ReadAccounts`                                             
+ User Permission  | `ReadExtensions`                                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -711,13 +711,13 @@ await rc.Revoke();
 
 Update Site
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/sites/{siteId}`
-Rate Limit Group|`Light`
-App Permission|`EditExtensions`
-User Permission|`Sites`
+ Name             | Value                                                      
+------------------|------------------------------------------------------------
+ HTTP Method      | `PUT`                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/sites/{siteId}` 
+ Rate Limit Group | `Light`                                                    
+ App Permission   | `EditExtensions`                                           
+ User Permission  | `Sites`                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -737,13 +737,13 @@ await rc.Revoke();
 
 Delete Site
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/sites/{siteId}`
-Rate Limit Group|`Light`
-App Permission|`EditAccounts`
-User Permission|`Sites`
+ Name             | Value                                                      
+------------------|------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                   
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/sites/{siteId}` 
+ Rate Limit Group | `Light`                                                    
+ App Permission   | `EditAccounts`                                             
+ User Permission  | `Sites`                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -762,13 +762,13 @@ await rc.Revoke();
 
 List Subscriptions
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/subscription`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                
+------------------|--------------------------------------
+ HTTP Method      | `GET`                                
+ Endpoint         | `/restapi/{apiVersion}/subscription` 
+ Rate Limit Group | `Light`                              
+ App Permission   | `N/A`                                
+ User Permission  | `N/A`                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -786,13 +786,13 @@ await rc.Revoke();
 
 Create Subscription
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/subscription`
-Rate Limit Group|`Medium`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                
+------------------|--------------------------------------
+ HTTP Method      | `POST`                               
+ Endpoint         | `/restapi/{apiVersion}/subscription` 
+ Rate Limit Group | `Medium`                             
+ App Permission   | `N/A`                                
+ User Permission  | `N/A`                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -811,13 +811,13 @@ await rc.Revoke();
 
 Get Subscription
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/subscription/{subscriptionId}`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                                 
+------------------|-------------------------------------------------------
+ HTTP Method      | `GET`                                                 
+ Endpoint         | `/restapi/{apiVersion}/subscription/{subscriptionId}` 
+ Rate Limit Group | `Light`                                               
+ App Permission   | `N/A`                                                 
+ User Permission  | `N/A`                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -835,13 +835,13 @@ await rc.Revoke();
 
 Update Subscription
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/subscription/{subscriptionId}`
-Rate Limit Group|`Medium`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                                 
+------------------|-------------------------------------------------------
+ HTTP Method      | `PUT`                                                 
+ Endpoint         | `/restapi/{apiVersion}/subscription/{subscriptionId}` 
+ Rate Limit Group | `Medium`                                              
+ App Permission   | `N/A`                                                 
+ User Permission  | `N/A`                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -860,13 +860,13 @@ await rc.Revoke();
 
 Cancel Subscription
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/subscription/{subscriptionId}`
-Rate Limit Group|`Medium`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                                 
+------------------|-------------------------------------------------------
+ HTTP Method      | `DELETE`                                              
+ Endpoint         | `/restapi/{apiVersion}/subscription/{subscriptionId}` 
+ Rate Limit Group | `Medium`                                              
+ App Permission   | `N/A`                                                 
+ User Permission  | `N/A`                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -884,13 +884,13 @@ await rc.Revoke();
 
 Search/List Users
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/scim/{version}/Users/dotSearch`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`N/A`
+ Name             | Value                             
+------------------|-----------------------------------
+ HTTP Method      | `POST`                            
+ Endpoint         | `/scim/{version}/Users/dotSearch` 
+ Rate Limit Group | `Light`                           
+ App Permission   | `ReadAccounts`                    
+ User Permission  | `N/A`                             
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -907,38 +907,39 @@ await rc.Revoke();
 
 ## authorize
 
-OAuth 2.0 Authorization
+OAuth 2.0 Authorization Endpoint
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/oauth/authorize`
-Rate Limit Group|`Auth`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                      
+------------------|----------------------------
+ HTTP Method      | `GET`                      
+ Endpoint         | `/restapi/oauth/authorize` 
+ Rate Limit Group | `Auth`                     
+ App Permission   | `N/A`                      
+ User Permission  | `N/A`                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.Restapi().Oauth().Authorize().Get();
+var result = await rc.Restapi().Oauth().Authorize().Get(authorizeParameters);
 await rc.Revoke();
 ```
 
+- `authorizeParameters` is of type [AuthorizeParameters](./Definitions/AuthorizeParameters.cs)
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#OAuth/OIDC-authorize) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#OAuth-2.0-/-OpenID-Connect-authorize) in API Explorer.
 
 ## authorize2
 
-OAuth 2.0 Authorization (POST)
+OAuth 2.0 Authorization Endpoint (POST)
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/oauth/authorize`
-Rate Limit Group|`Auth`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                      
+------------------|----------------------------
+ HTTP Method      | `POST`                     
+ Endpoint         | `/restapi/oauth/authorize` 
+ Rate Limit Group | `Auth`                     
+ App Permission   | `N/A`                      
+ User Permission  | `N/A`                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -950,43 +951,19 @@ await rc.Revoke();
 - `authorizeRequest` is of type [AuthorizeRequest](./Definitions/AuthorizeRequest.cs)
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#OAuth/OIDC-authorize2) in API Explorer.
-
-## introspectToken
-
-Token Introspection
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/oauth/introspect`
-Rate Limit Group|`Auth`
-App Permission|`Interoperability`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi().Oauth().Introspect().Post(introspectTokenRequest);
-await rc.Revoke();
-```
-
-- `introspectTokenRequest` is of type [IntrospectTokenRequest](./Definitions/IntrospectTokenRequest.cs)
-- `result` is of type [TokenIntrospectionResponse](./Definitions/TokenIntrospectionResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#OAuth/OIDC-introspectToken) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#OAuth-2.0-/-OpenID-Connect-authorize2) in API Explorer.
 
 ## getAccountInfoV2
 
 Get Account Info
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/v2/accounts/{accountId}`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyInfo`
+ Name             | Value                              
+------------------|------------------------------------
+ HTTP Method      | `GET`                              
+ Endpoint         | `/restapi/v2/accounts/{accountId}` 
+ Rate Limit Group | `Light`                            
+ App Permission   | `ReadAccounts`                     
+ User Permission  | `ReadCompanyInfo`                  
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1003,13 +980,13 @@ await rc.Revoke();
 
 List Company Call Records
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-log`
-Rate Limit Group|`Heavy`
-App Permission|`ReadCallLog`
-User Permission|`FullCompanyCallLog`
+ Name             | Value                                                
+------------------|------------------------------------------------------
+ HTTP Method      | `GET`                                                
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-log` 
+ Rate Limit Group | `Heavy`                                              
+ App Permission   | `ReadCallLog`                                        
+ User Permission  | `FullCompanyCallLog`                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1030,13 +1007,13 @@ await rc.Revoke();
 
 Get Company Call Record(s)
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-log/{callRecordId}`
-Rate Limit Group|`Heavy`
-App Permission|`ReadCallLog`
-User Permission|`FullCompanyCallLog`
+ Name             | Value                                                               
+------------------|---------------------------------------------------------------------
+ HTTP Method      | `GET`                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-log/{callRecordId}` 
+ Rate Limit Group | `Heavy`                                                             
+ App Permission   | `ReadCallLog`                                                       
+ User Permission  | `FullCompanyCallLog`                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1057,13 +1034,13 @@ await rc.Revoke();
 
 List Extensions
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadExtensions`
+ Name             | Value                                                 
+------------------|-------------------------------------------------------
+ HTTP Method      | `GET`                                                 
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension` 
+ Rate Limit Group | `Medium`                                              
+ App Permission   | `ReadAccounts`                                        
+ User Permission  | `ReadExtensions`                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1083,13 +1060,13 @@ await rc.Revoke();
 
 Create Extension
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`AddRemoveUsers`
+ Name             | Value                                                 
+------------------|-------------------------------------------------------
+ HTTP Method      | `POST`                                                
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension` 
+ Rate Limit Group | `Medium`                                              
+ App Permission   | `EditAccounts`                                        
+ User Permission  | `AddRemoveUsers`                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1109,13 +1086,13 @@ await rc.Revoke();
 
 Get Extension
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadExtensions`
+ Name             | Value                                                               
+------------------|---------------------------------------------------------------------
+ HTTP Method      | `GET`                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}` 
+ Rate Limit Group | `Light`                                                             
+ App Permission   | `ReadAccounts`                                                      
+ User Permission  | `ReadExtensions`                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1135,13 +1112,13 @@ await rc.Revoke();
 
 Update Extension
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`EditUserInfo OR EditUserCredentials`
+ Name             | Value                                                               
+------------------|---------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}` 
+ Rate Limit Group | `Medium`                                                            
+ App Permission   | `EditExtensions`                                                    
+ User Permission  | `EditUserInfo OR EditUserCredentials`                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1162,13 +1139,13 @@ await rc.Revoke();
 
 Create Company Greeting
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/greeting`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`ReadUserInfo`
+ Name             | Value                                                
+------------------|------------------------------------------------------
+ HTTP Method      | `POST`                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/greeting` 
+ Rate Limit Group | `Medium`                                             
+ App Permission   | `EditAccounts`                                       
+ User Permission  | `ReadUserInfo`                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1189,13 +1166,13 @@ await rc.Revoke();
 
 Get IVR Menu list
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/ivr-menus`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`N/A`
+ Name             | Value                                                 
+------------------|-------------------------------------------------------
+ HTTP Method      | `GET`                                                 
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/ivr-menus` 
+ Rate Limit Group | `Medium`                                              
+ App Permission   | `ReadAccounts`                                        
+ User Permission  | `N/A`                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1214,13 +1191,13 @@ await rc.Revoke();
 
 Create IVR Menu
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/ivr-menus`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`AutoReceptionist`
+ Name             | Value                                                 
+------------------|-------------------------------------------------------
+ HTTP Method      | `POST`                                                
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/ivr-menus` 
+ Rate Limit Group | `Heavy`                                               
+ App Permission   | `EditAccounts`                                        
+ User Permission  | `AutoReceptionist`                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1240,13 +1217,13 @@ await rc.Revoke();
 
 Get IVR Menu
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/ivr-menus/{ivrMenuId}`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`AutoReceptionist`
+ Name             | Value                                                             
+------------------|-------------------------------------------------------------------
+ HTTP Method      | `GET`                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/ivr-menus/{ivrMenuId}` 
+ Rate Limit Group | `Medium`                                                          
+ App Permission   | `ReadAccounts`                                                    
+ User Permission  | `AutoReceptionist`                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1265,13 +1242,13 @@ await rc.Revoke();
 
 Update IVR Menu
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/ivr-menus/{ivrMenuId}`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`AutoReceptionist`
+ Name             | Value                                                             
+------------------|-------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/ivr-menus/{ivrMenuId}` 
+ Rate Limit Group | `Medium`                                                          
+ App Permission   | `ReadAccounts`                                                    
+ User Permission  | `AutoReceptionist`                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1291,13 +1268,13 @@ await rc.Revoke();
 
 Get User Presence Status List
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/presence`
-Rate Limit Group|`Heavy`
-App Permission|`ReadPresence`
-User Permission|`ReadPresenceStatus`
+ Name             | Value                                                
+------------------|------------------------------------------------------
+ HTTP Method      | `GET`                                                
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/presence` 
+ Rate Limit Group | `Heavy`                                              
+ App Permission   | `ReadPresence`                                       
+ User Permission  | `ReadPresenceStatus`                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1318,13 +1295,13 @@ await rc.Revoke();
 
 Get Call Recording
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/recording/{recordingId}`
-Rate Limit Group|`Heavy`
-App Permission|`ReadCallRecording`
-User Permission|`ReadCallRecording`
+ Name             | Value                                                               
+------------------|---------------------------------------------------------------------
+ HTTP Method      | `GET`                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/recording/{recordingId}` 
+ Rate Limit Group | `Heavy`                                                             
+ App Permission   | `ReadCallRecording`                                                 
+ User Permission  | `ReadCallRecording`                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1343,13 +1320,13 @@ await rc.Revoke();
 
 Get Site IVR Settings
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/sites/{siteId}/ivr`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadExtensions`
+ Name             | Value                                                          
+------------------|----------------------------------------------------------------
+ HTTP Method      | `GET`                                                          
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/sites/{siteId}/ivr` 
+ Rate Limit Group | `Medium`                                                       
+ App Permission   | `ReadAccounts`                                                 
+ User Permission  | `ReadExtensions`                                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1368,13 +1345,13 @@ await rc.Revoke();
 
 Update Site IVR Settings
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/sites/{siteId}/ivr`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`Sites`
+ Name             | Value                                                          
+------------------|----------------------------------------------------------------
+ HTTP Method      | `PUT`                                                          
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/sites/{siteId}/ivr` 
+ Rate Limit Group | `Medium`                                                       
+ App Permission   | `EditAccounts`                                                 
+ User Permission  | `Sites`                                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1394,13 +1371,13 @@ await rc.Revoke();
 
 List User Templates
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/templates`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyInfo`
+ Name             | Value                                                 
+------------------|-------------------------------------------------------
+ HTTP Method      | `GET`                                                 
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/templates` 
+ Rate Limit Group | `Medium`                                              
+ App Permission   | `ReadAccounts`                                        
+ User Permission  | `ReadCompanyInfo`                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1420,13 +1397,13 @@ await rc.Revoke();
 
 Get User Template
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/templates/{templateId}`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyInfo`
+ Name             | Value                                                              
+------------------|--------------------------------------------------------------------
+ HTTP Method      | `GET`                                                              
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/templates/{templateId}` 
+ Rate Limit Group | `Light`                                                            
+ App Permission   | `ReadAccounts`                                                     
+ User Permission  | `ReadCompanyInfo`                                                  
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1441,17 +1418,147 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Extensions-readUserTemplate) in API Explorer.
 
+## listUserRoles
+
+List Company User Roles
+
+ Name             | Value                                                 
+------------------|-------------------------------------------------------
+ HTTP Method      | `GET`                                                 
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/user-role` 
+ Rate Limit Group | `Medium`                                              
+ App Permission   | `ReadAccounts`                                        
+ User Permission  | `ReadUserRoles`                                       
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).UserRole().List(listUserRolesParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `listUserRolesParameters` is of type [ListUserRolesParameters](./Definitions/ListUserRolesParameters.cs)
+- `result` is of type [RolesCollectionResource](./Definitions/RolesCollectionResource.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-listUserRoles) in API Explorer.
+
+## createCustomRole
+
+Create Custom Role
+
+ Name             | Value                                                 
+------------------|-------------------------------------------------------
+ HTTP Method      | `POST`                                                
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/user-role` 
+ Rate Limit Group | `Medium`                                              
+ App Permission   | `RoleManagement`                                      
+ User Permission  | `EditUserRoles`                                       
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).UserRole().Post(roleResource);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `roleResource` is of type [RoleResource](./Definitions/RoleResource.cs)
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-createCustomRole) in API Explorer.
+
+## readUserRole
+
+Get User Role
+
+ Name             | Value                                                          
+------------------|----------------------------------------------------------------
+ HTTP Method      | `GET`                                                          
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/user-role/{roleId}` 
+ Rate Limit Group | `Light`                                                        
+ App Permission   | `ReadAccounts`                                                 
+ User Permission  | `ReadUserRoles`                                                
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).UserRole(roleId).Get(readUserRoleParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `readUserRoleParameters` is of type [ReadUserRoleParameters](./Definitions/ReadUserRoleParameters.cs)
+- `result` is of type [RoleResource](./Definitions/RoleResource.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-readUserRole) in API Explorer.
+
+## updateUserRole
+
+Update User Role
+
+ Name             | Value                                                          
+------------------|----------------------------------------------------------------
+ HTTP Method      | `PUT`                                                          
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/user-role/{roleId}` 
+ Rate Limit Group | `Medium`                                                       
+ App Permission   | `RoleManagement`                                               
+ User Permission  | `EditUserRoles`                                                
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).UserRole(roleId).Put(roleResource);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `roleResource` is of type [RoleResource](./Definitions/RoleResource.cs)
+- `result` is of type [RoleResource](./Definitions/RoleResource.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-updateUserRole) in API Explorer.
+
+## deleteCustomRole
+
+Delete Custom Role
+
+ Name             | Value                                                          
+------------------|----------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/user-role/{roleId}` 
+ Rate Limit Group | `Medium`                                                       
+ App Permission   | `RoleManagement`                                               
+ User Permission  | `EditUserRoles`                                                
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).UserRole(roleId).Delete(deleteCustomRoleParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `deleteCustomRoleParameters` is of type [DeleteCustomRoleParameters](./Definitions/DeleteCustomRoleParameters.cs)
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-deleteCustomRole) in API Explorer.
+
 ## listStates
 
 List States
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/state`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                    
+------------------|------------------------------------------
+ HTTP Method      | `GET`                                    
+ Endpoint         | `/restapi/{apiVersion}/dictionary/state` 
+ Rate Limit Group | `Light`                                  
+ App Permission   | `N/A`                                    
+ User Permission  | `N/A`                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1470,13 +1577,13 @@ await rc.Revoke();
 
 Get State
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/state/{stateId}`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                              
+------------------|----------------------------------------------------
+ HTTP Method      | `GET`                                              
+ Endpoint         | `/restapi/{apiVersion}/dictionary/state/{stateId}` 
+ Rate Limit Group | `Light`                                            
+ App Permission   | `N/A`                                              
+ User Permission  | `N/A`                                              
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1494,13 +1601,13 @@ await rc.Revoke();
 
 List Chats
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/chats`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                      
+------------------|----------------------------
+ HTTP Method      | `GET`                      
+ Endpoint         | `/team-messaging/v1/chats` 
+ Rate Limit Group | `Medium`                   
+ App Permission   | `TeamMessaging`            
+ User Permission  | `N/A`                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1518,13 +1625,13 @@ await rc.Revoke();
 
 Get Chat
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/chats/{chatId}`
-Rate Limit Group|`Light`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                               
+------------------|-------------------------------------
+ HTTP Method      | `GET`                               
+ Endpoint         | `/team-messaging/v1/chats/{chatId}` 
+ Rate Limit Group | `Light`                             
+ App Permission   | `TeamMessaging`                     
+ User Permission  | `N/A`                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1541,13 +1648,13 @@ await rc.Revoke();
 
 List User Events
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/events`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                       
+------------------|-----------------------------
+ HTTP Method      | `GET`                       
+ Endpoint         | `/team-messaging/v1/events` 
+ Rate Limit Group | `Medium`                    
+ App Permission   | `TeamMessaging`             
+ User Permission  | `N/A`                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1565,13 +1672,13 @@ await rc.Revoke();
 
 Create Event
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/events`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                       
+------------------|-----------------------------
+ HTTP Method      | `POST`                      
+ Endpoint         | `/team-messaging/v1/events` 
+ Rate Limit Group | `Medium`                    
+ App Permission   | `TeamMessaging`             
+ User Permission  | `N/A`                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1589,13 +1696,13 @@ await rc.Revoke();
 
 Get Event
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/events/{eventId}`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                 
+------------------|---------------------------------------
+ HTTP Method      | `GET`                                 
+ Endpoint         | `/team-messaging/v1/events/{eventId}` 
+ Rate Limit Group | `Medium`                              
+ App Permission   | `TeamMessaging`                       
+ User Permission  | `N/A`                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1612,13 +1719,13 @@ await rc.Revoke();
 
 Update Event
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/team-messaging/v1/events/{eventId}`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                 
+------------------|---------------------------------------
+ HTTP Method      | `PUT`                                 
+ Endpoint         | `/team-messaging/v1/events/{eventId}` 
+ Rate Limit Group | `Medium`                              
+ App Permission   | `TeamMessaging`                       
+ User Permission  | `N/A`                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1636,13 +1743,13 @@ await rc.Revoke();
 
 Delete Event
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/team-messaging/v1/events/{eventId}`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                 
+------------------|---------------------------------------
+ HTTP Method      | `DELETE`                              
+ Endpoint         | `/team-messaging/v1/events/{eventId}` 
+ Rate Limit Group | `Medium`                              
+ App Permission   | `TeamMessaging`                       
+ User Permission  | `N/A`                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1659,13 +1766,13 @@ await rc.Revoke();
 
 Upload File
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/files`
-Rate Limit Group|`Heavy`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                      
+------------------|----------------------------
+ HTTP Method      | `POST`                     
+ Endpoint         | `/team-messaging/v1/files` 
+ Rate Limit Group | `Heavy`                    
+ App Permission   | `TeamMessaging`            
+ User Permission  | `N/A`                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1684,13 +1791,13 @@ await rc.Revoke();
 
 Get Note
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/notes/{noteId}`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                               
+------------------|-------------------------------------
+ HTTP Method      | `GET`                               
+ Endpoint         | `/team-messaging/v1/notes/{noteId}` 
+ Rate Limit Group | `Medium`                            
+ App Permission   | `TeamMessaging`                     
+ User Permission  | `N/A`                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1707,13 +1814,13 @@ await rc.Revoke();
 
 Delete Note
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/team-messaging/v1/notes/{noteId}`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                               
+------------------|-------------------------------------
+ HTTP Method      | `DELETE`                            
+ Endpoint         | `/team-messaging/v1/notes/{noteId}` 
+ Rate Limit Group | `Medium`                            
+ App Permission   | `TeamMessaging`                     
+ User Permission  | `N/A`                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1730,13 +1837,13 @@ await rc.Revoke();
 
 Update Note
 
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/team-messaging/v1/notes/{noteId}`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                               
+------------------|-------------------------------------
+ HTTP Method      | `PATCH`                             
+ Endpoint         | `/team-messaging/v1/notes/{noteId}` 
+ Rate Limit Group | `Medium`                            
+ App Permission   | `TeamMessaging`                     
+ User Permission  | `N/A`                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1755,13 +1862,13 @@ await rc.Revoke();
 
 Get Task
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/tasks/{taskId}`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                               
+------------------|-------------------------------------
+ HTTP Method      | `GET`                               
+ Endpoint         | `/team-messaging/v1/tasks/{taskId}` 
+ Rate Limit Group | `Medium`                            
+ App Permission   | `TeamMessaging`                     
+ User Permission  | `N/A`                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1778,13 +1885,13 @@ await rc.Revoke();
 
 Delete Task
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/team-messaging/v1/tasks/{taskId}`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                               
+------------------|-------------------------------------
+ HTTP Method      | `DELETE`                            
+ Endpoint         | `/team-messaging/v1/tasks/{taskId}` 
+ Rate Limit Group | `Medium`                            
+ App Permission   | `TeamMessaging`                     
+ User Permission  | `N/A`                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1801,13 +1908,13 @@ await rc.Revoke();
 
 Update Task
 
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/team-messaging/v1/tasks/{taskId}`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                               
+------------------|-------------------------------------
+ HTTP Method      | `PATCH`                             
+ Endpoint         | `/team-messaging/v1/tasks/{taskId}` 
+ Rate Limit Group | `Medium`                            
+ App Permission   | `TeamMessaging`                     
+ User Permission  | `N/A`                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1825,13 +1932,13 @@ await rc.Revoke();
 
 List Teams
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/teams`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                      
+------------------|----------------------------
+ HTTP Method      | `GET`                      
+ Endpoint         | `/team-messaging/v1/teams` 
+ Rate Limit Group | `Medium`                   
+ App Permission   | `TeamMessaging`            
+ User Permission  | `N/A`                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1849,13 +1956,13 @@ await rc.Revoke();
 
 Create Team
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/teams`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                      
+------------------|----------------------------
+ HTTP Method      | `POST`                     
+ Endpoint         | `/team-messaging/v1/teams` 
+ Rate Limit Group | `Medium`                   
+ App Permission   | `TeamMessaging`            
+ User Permission  | `N/A`                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1873,13 +1980,13 @@ await rc.Revoke();
 
 Get Team
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/teams/{chatId}`
-Rate Limit Group|`Light`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                               
+------------------|-------------------------------------
+ HTTP Method      | `GET`                               
+ Endpoint         | `/team-messaging/v1/teams/{chatId}` 
+ Rate Limit Group | `Light`                             
+ App Permission   | `TeamMessaging`                     
+ User Permission  | `N/A`                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1896,13 +2003,13 @@ await rc.Revoke();
 
 Delete Team
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/team-messaging/v1/teams/{chatId}`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                               
+------------------|-------------------------------------
+ HTTP Method      | `DELETE`                            
+ Endpoint         | `/team-messaging/v1/teams/{chatId}` 
+ Rate Limit Group | `Medium`                            
+ App Permission   | `TeamMessaging`                     
+ User Permission  | `N/A`                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1919,13 +2026,13 @@ await rc.Revoke();
 
 Update Team
 
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/team-messaging/v1/teams/{chatId}`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                               
+------------------|-------------------------------------
+ HTTP Method      | `PATCH`                             
+ Endpoint         | `/team-messaging/v1/teams/{chatId}` 
+ Rate Limit Group | `Medium`                            
+ App Permission   | `TeamMessaging`                     
+ User Permission  | `N/A`                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1939,17 +2046,40 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-patchGlipTeamNew) in API Explorer.
 
+## readGlipPersonNew
+
+Get Person
+
+ Name             | Value                                   
+------------------|-----------------------------------------
+ HTTP Method      | `GET`                                   
+ Endpoint         | `/team-messaging/v1/persons/{personId}` 
+ Rate Limit Group | `Light`                                 
+ App Permission   | `TeamMessaging`                         
+ User Permission  | `N/A`                                   
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Persons(personId).Get();
+await rc.Revoke();
+```
+
+- `result` is of type [TMPersonInfo](./Definitions/TMPersonInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Profile-readGlipPersonNew) in API Explorer.
+
 ## caiPunctuate
 
 Smart Punctuation
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/ai/text/v1/async/punctuate`
-Rate Limit Group|`Heavy`
-App Permission|`AI`
-User Permission|`N/A`
+ Name             | Value                         
+------------------|-------------------------------
+ HTTP Method      | `POST`                        
+ Endpoint         | `/ai/text/v1/async/punctuate` 
+ Rate Limit Group | `Heavy`                       
+ App Permission   | `AI`                          
+ User Permission  | `N/A`                         
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1964,17 +2094,42 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Text-caiPunctuate) in API Explorer.
 
+## caiSummarize
+
+Conversational Summarization
+
+ Name             | Value                         
+------------------|-------------------------------
+ HTTP Method      | `POST`                        
+ Endpoint         | `/ai/text/v1/async/summarize` 
+ Rate Limit Group | `Heavy`                       
+ App Permission   | `AI`                          
+ User Permission  | `N/A`                         
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Ai().Text().V1().Async().Summarize().Post(summaryInput, caiSummarizeParameters);
+await rc.Revoke();
+```
+
+- `summaryInput` is of type [SummaryInput](./Definitions/SummaryInput.cs)
+- `caiSummarizeParameters` is of type [CaiSummarizeParameters](./Definitions/CaiSummarizeParameters.cs)
+- `result` is of type [CaiAsyncApiResponse](./Definitions/CaiAsyncApiResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Text-caiSummarize) in API Explorer.
+
 ## listVideoMeetings
 
 List Video Meetings
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/rcvideo/v1/history/meetings`
-Rate Limit Group|`Light`
-App Permission|`Video`
-User Permission|`N/A`
+ Name             | Value                          
+------------------|--------------------------------
+ HTTP Method      | `GET`                          
+ Endpoint         | `/rcvideo/v1/history/meetings` 
+ Rate Limit Group | `Light`                        
+ App Permission   | `Video`                        
+ User Permission  | `N/A`                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -1992,13 +2147,13 @@ await rc.Revoke();
 
 Get Video Meeting
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/rcvideo/v1/history/meetings/{meetingId}`
-Rate Limit Group|`Light`
-App Permission|`Video`
-User Permission|`N/A`
+ Name             | Value                                      
+------------------|--------------------------------------------
+ HTTP Method      | `GET`                                      
+ Endpoint         | `/rcvideo/v1/history/meetings/{meetingId}` 
+ Rate Limit Group | `Light`                                    
+ App Permission   | `Video`                                    
+ User Permission  | `N/A`                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2015,13 +2170,13 @@ await rc.Revoke();
 
 Search Bridge by PSTN PIN
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/rcvideo/v2/bridges/pin/pstn/{pin}`
-Rate Limit Group|`Medium`
-App Permission|`Video`
-User Permission|`N/A`
+ Name             | Value                                
+------------------|--------------------------------------
+ HTTP Method      | `GET`                                
+ Endpoint         | `/rcvideo/v2/bridges/pin/pstn/{pin}` 
+ Rate Limit Group | `Medium`                             
+ App Permission   | `Video`                              
+ User Permission  | `N/A`                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2040,13 +2195,13 @@ await rc.Revoke();
 
 Search Bridge by Web PIN
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/rcvideo/v2/bridges/pin/web/{pin}`
-Rate Limit Group|`Medium`
-App Permission|`Video`
-User Permission|`N/A`
+ Name             | Value                               
+------------------|-------------------------------------
+ HTTP Method      | `GET`                               
+ Endpoint         | `/rcvideo/v2/bridges/pin/web/{pin}` 
+ Rate Limit Group | `Medium`                            
+ App Permission   | `Video`                             
+ User Permission  | `N/A`                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2060,40 +2215,17 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Bridge-Management-getBridgeByWebPin) in API Explorer.
 
-## getOAuthSessionInfo
-
-Session info
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/oauth/session-info`
-Rate Limit Group|`Auth`
-App Permission|`N/A`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi().Oauth().SessionInfo().Get();
-await rc.Revoke();
-```
-
-- `result` is of type [SessionInfoResponse](./Definitions/SessionInfoResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#OAuth/OIDC-getOAuthSessionInfo) in API Explorer.
-
 ## removeLineJWSPublic
 
 Remove phone line
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/v2/accounts/{accountId}/devices/{deviceId}`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`EditAccountDevices`
+ Name             | Value                                                 
+------------------|-------------------------------------------------------
+ HTTP Method      | `DELETE`                                              
+ Endpoint         | `/restapi/v2/accounts/{accountId}/devices/{deviceId}` 
+ Rate Limit Group | `Medium`                                              
+ App Permission   | `EditAccounts`                                        
+ User Permission  | `EditAccountDevices`                                  
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2111,13 +2243,13 @@ await rc.Revoke();
 
 List Company Active Calls
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/active-calls`
-Rate Limit Group|`Heavy`
-App Permission|`ReadCallLog`
-User Permission|`ReadCallLog`
+ Name             | Value                                                    
+------------------|----------------------------------------------------------
+ HTTP Method      | `GET`                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/active-calls` 
+ Rate Limit Group | `Heavy`                                                  
+ App Permission   | `ReadCallLog`                                            
+ User Permission  | `ReadCallLog`                                            
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2134,17 +2266,196 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-listCompanyActiveCalls) in API Explorer.
 
+## listCallQueues
+
+List Call Queues
+
+ Name             | Value                                                   
+------------------|---------------------------------------------------------
+ HTTP Method      | `GET`                                                   
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-queues` 
+ Rate Limit Group | `Medium`                                                
+ App Permission   | `ReadAccounts`                                          
+ User Permission  | `ReadExtensions`                                        
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues().List(listCallQueuesParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `listCallQueuesParameters` is of type [ListCallQueuesParameters](./Definitions/ListCallQueuesParameters.cs)
+- `result` is of type [CallQueues](./Definitions/CallQueues.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-listCallQueues) in API Explorer.
+
+## readCallQueueInfo
+
+Get Call Queue
+
+ Name             | Value                                                             
+------------------|-------------------------------------------------------------------
+ HTTP Method      | `GET`                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}` 
+ Rate Limit Group | `Light`                                                           
+ App Permission   | `ReadAccounts`                                                    
+ User Permission  | `ReadExtensions`                                                  
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [CallQueueDetails](./Definitions/CallQueueDetails.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-readCallQueueInfo) in API Explorer.
+
+## updateCallQueueInfo
+
+Update Call Queue
+
+ Name             | Value                                                             
+------------------|-------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}` 
+ Rate Limit Group | `Light`                                                           
+ App Permission   | `EditExtensions`                                                  
+ User Permission  | `EditUserInfo`                                                    
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Put(callQueueDetails);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `callQueueDetails` is of type [CallQueueDetails](./Definitions/CallQueueDetails.cs)
+- `result` is of type [CallQueueDetails](./Definitions/CallQueueDetails.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-updateCallQueueInfo) in API Explorer.
+
+## listCustomFields
+
+Get Custom Field List
+
+ Name             | Value                                                     
+------------------|-----------------------------------------------------------
+ HTTP Method      | `GET`                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/custom-fields` 
+ Rate Limit Group | `Light`                                                   
+ App Permission   | `ReadAccounts`                                            
+ User Permission  | `ReadUserInfo`                                            
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [CustomFieldList](./Definitions/CustomFieldList.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-listCustomFields) in API Explorer.
+
+## createCustomField
+
+Create Custom Field
+
+ Name             | Value                                                     
+------------------|-----------------------------------------------------------
+ HTTP Method      | `POST`                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/custom-fields` 
+ Rate Limit Group | `Medium`                                                  
+ App Permission   | `EditAccounts`                                            
+ User Permission  | `Users`                                                   
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Post(customFieldCreateRequest);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `customFieldCreateRequest` is of type [CustomFieldCreateRequest](./Definitions/CustomFieldCreateRequest.cs)
+- `result` is of type [CustomFieldModel](./Definitions/CustomFieldModel.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-createCustomField) in API Explorer.
+
+## updateCustomField
+
+Update Custom Field
+
+ Name             | Value                                                               
+------------------|---------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/custom-fields/{fieldId}` 
+ Rate Limit Group | `Medium`                                                            
+ App Permission   | `EditAccounts`                                                      
+ User Permission  | `Users`                                                             
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Put(customFieldUpdateRequest);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `customFieldUpdateRequest` is of type [CustomFieldUpdateRequest](./Definitions/CustomFieldUpdateRequest.cs)
+- `result` is of type [CustomFieldModel](./Definitions/CustomFieldModel.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-updateCustomField) in API Explorer.
+
+## deleteCustomField
+
+Delete Custom Field
+
+ Name             | Value                                                               
+------------------|---------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                            
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/custom-fields/{fieldId}` 
+ Rate Limit Group | `Medium`                                                            
+ App Permission   | `EditAccounts`                                                      
+ User Permission  | `Users`                                                             
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Delete();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-deleteCustomField) in API Explorer.
+
 ## createFaxMessage
 
 Create Fax Message
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/fax`
-Rate Limit Group|`Heavy`
-App Permission|`Faxes`
-User Permission|`OutboundFaxes`
+ Name             | Value                                                                   
+------------------|-------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                  
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/fax` 
+ Rate Limit Group | `Heavy`                                                                 
+ App Permission   | `Faxes`                                                                 
+ User Permission  | `OutboundFaxes`                                                         
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2165,13 +2476,13 @@ await rc.Revoke();
 
 Send MMS
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/mms`
-Rate Limit Group|`Medium`
-App Permission|`SMS`
-User Permission|`OutboundSMS`
+ Name             | Value                                                                   
+------------------|-------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                  
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/mms` 
+ Rate Limit Group | `Medium`                                                                
+ App Permission   | `SMS`                                                                   
+ User Permission  | `OutboundSMS`                                                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2192,13 +2503,13 @@ await rc.Revoke();
 
 Send SMS
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/sms`
-Rate Limit Group|`Medium`
-App Permission|`SMS`
-User Permission|`OutboundSMS`
+ Name             | Value                                                                   
+------------------|-------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                  
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/sms` 
+ Rate Limit Group | `Medium`                                                                
+ App Permission   | `SMS`                                                                   
+ User Permission  | `OutboundSMS`                                                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2219,13 +2530,13 @@ await rc.Revoke();
 
 List IVR Prompts
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/ivr-prompts`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyGreetings`
+ Name             | Value                                                   
+------------------|---------------------------------------------------------
+ HTTP Method      | `GET`                                                   
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/ivr-prompts` 
+ Rate Limit Group | `Medium`                                                
+ App Permission   | `ReadAccounts`                                          
+ User Permission  | `ReadCompanyGreetings`                                  
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2244,13 +2555,13 @@ await rc.Revoke();
 
 Create IVR Prompts
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/ivr-prompts`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`EditCompanyGreetings`
+ Name             | Value                                                   
+------------------|---------------------------------------------------------
+ HTTP Method      | `POST`                                                  
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/ivr-prompts` 
+ Rate Limit Group | `Heavy`                                                 
+ App Permission   | `EditAccounts`                                          
+ User Permission  | `EditCompanyGreetings`                                  
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2270,13 +2581,13 @@ await rc.Revoke();
 
 Get IVR Prompt
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/ivr-prompts/{promptId}`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyGreetings`
+ Name             | Value                                                              
+------------------|--------------------------------------------------------------------
+ HTTP Method      | `GET`                                                              
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/ivr-prompts/{promptId}` 
+ Rate Limit Group | `Medium`                                                           
+ App Permission   | `ReadAccounts`                                                     
+ User Permission  | `ReadCompanyGreetings`                                             
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2295,13 +2606,13 @@ await rc.Revoke();
 
 Update IVR Prompt
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/ivr-prompts/{promptId}`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`EditCompanyGreetings`
+ Name             | Value                                                              
+------------------|--------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                              
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/ivr-prompts/{promptId}` 
+ Rate Limit Group | `Medium`                                                           
+ App Permission   | `EditAccounts`                                                     
+ User Permission  | `EditCompanyGreetings`                                             
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2321,13 +2632,13 @@ await rc.Revoke();
 
 Delete IVR Prompt
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/ivr-prompts/{promptId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`EditCompanyGreetings`
+ Name             | Value                                                              
+------------------|--------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                           
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/ivr-prompts/{promptId}` 
+ Rate Limit Group | `Heavy`                                                            
+ App Permission   | `EditAccounts`                                                     
+ User Permission  | `EditCompanyGreetings`                                             
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2346,13 +2657,13 @@ await rc.Revoke();
 
 List Company Phone Numbers
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/phone-number`
-Rate Limit Group|`Heavy`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyPhoneNumbers`
+ Name             | Value                                                    
+------------------|----------------------------------------------------------
+ HTTP Method      | `GET`                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/phone-number` 
+ Rate Limit Group | `Heavy`                                                  
+ App Permission   | `ReadAccounts`                                           
+ User Permission  | `ReadCompanyPhoneNumbers`                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2373,13 +2684,13 @@ await rc.Revoke();
 
 Get Phone Number
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/phone-number/{phoneNumberId}`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyPhoneNumbers`
+ Name             | Value                                                                    
+------------------|--------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/phone-number/{phoneNumberId}` 
+ Rate Limit Group | `Light`                                                                  
+ App Permission   | `ReadAccounts`                                                           
+ User Permission  | `ReadCompanyPhoneNumbers`                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2398,13 +2709,13 @@ await rc.Revoke();
 
 Get Account Service Info
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/service-info`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadServicePlanInfo`
+ Name             | Value                                                    
+------------------|----------------------------------------------------------
+ HTTP Method      | `GET`                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/service-info` 
+ Rate Limit Group | `Light`                                                  
+ App Permission   | `ReadAccounts`                                           
+ User Permission  | `ReadCompanyInfo`                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2419,272 +2730,42 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Company-readAccountServiceInfo) in API Explorer.
 
-## listUserRoles
+## listSiteMembers
 
-List Company User Roles
+List Site Members
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/user-role`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadUserRoles`
+ Name             | Value                                                              
+------------------|--------------------------------------------------------------------
+ HTTP Method      | `GET`                                                              
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/sites/{siteId}/members` 
+ Rate Limit Group | `Medium`                                                           
+ App Permission   | `ReadAccounts`                                                     
+ User Permission  | `ReadExtensions`                                                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).UserRole().List(listUserRolesParameters);
+var result = await rc.Restapi(apiVersion).Account(accountId).Sites(siteId).Members().Get();
 await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listUserRolesParameters` is of type [ListUserRolesParameters](./Definitions/ListUserRolesParameters.cs)
-- `result` is of type [RolesCollectionResource](./Definitions/RolesCollectionResource.cs)
+- `result` is of type [SiteMembersList](./Definitions/SiteMembersList.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-listUserRoles) in API Explorer.
-
-## createCustomRole
-
-Create Custom Role
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/user-role`
-Rate Limit Group|`Medium`
-App Permission|`RoleManagement`
-User Permission|`EditUserRoles`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).UserRole().Post(roleResource);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `roleResource` is of type [RoleResource](./Definitions/RoleResource.cs)
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-createCustomRole) in API Explorer.
-
-## readUserRole
-
-Get User Role
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/user-role/{roleId}`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadUserRoles`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).UserRole(roleId).Get(readUserRoleParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `readUserRoleParameters` is of type [ReadUserRoleParameters](./Definitions/ReadUserRoleParameters.cs)
-- `result` is of type [RoleResource](./Definitions/RoleResource.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-readUserRole) in API Explorer.
-
-## updateUserRole
-
-Update User Role
-
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/user-role/{roleId}`
-Rate Limit Group|`Medium`
-App Permission|`RoleManagement`
-User Permission|`EditUserRoles`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).UserRole(roleId).Put(roleResource);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `roleResource` is of type [RoleResource](./Definitions/RoleResource.cs)
-- `result` is of type [RoleResource](./Definitions/RoleResource.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-updateUserRole) in API Explorer.
-
-## deleteCustomRole
-
-Delete Custom Role
-
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/user-role/{roleId}`
-Rate Limit Group|`Medium`
-App Permission|`RoleManagement`
-User Permission|`EditUserRoles`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).UserRole(roleId).Delete(deleteCustomRoleParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `deleteCustomRoleParameters` is of type [DeleteCustomRoleParameters](./Definitions/DeleteCustomRoleParameters.cs)
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-deleteCustomRole) in API Explorer.
-
-## readGlipPersonNew
-
-Get Person
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/persons/{personId}`
-Rate Limit Group|`Light`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Persons(personId).Get();
-await rc.Revoke();
-```
-
-- `result` is of type [TMPersonInfo](./Definitions/TMPersonInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Profile-readGlipPersonNew) in API Explorer.
-
-## caiSummarize
-
-Conversational Summarization
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/ai/text/v1/async/summarize`
-Rate Limit Group|`Heavy`
-App Permission|`AI`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Ai().Text().V1().Async().Summarize().Post(summaryInput, caiSummarizeParameters);
-await rc.Revoke();
-```
-
-- `summaryInput` is of type [SummaryInput](./Definitions/SummaryInput.cs)
-- `caiSummarizeParameters` is of type [CaiSummarizeParameters](./Definitions/CaiSummarizeParameters.cs)
-- `result` is of type [CaiAsyncApiResponse](./Definitions/CaiAsyncApiResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Text-caiSummarize) in API Explorer.
-
-## listCallQueues
-
-List Call Queues
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-queues`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadExtensions`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues().List(listCallQueuesParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `listCallQueuesParameters` is of type [ListCallQueuesParameters](./Definitions/ListCallQueuesParameters.cs)
-- `result` is of type [CallQueues](./Definitions/CallQueues.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-listCallQueues) in API Explorer.
-
-## readCallQueueInfo
-
-Get Call Queue
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadExtensions`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Get();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [CallQueueDetails](./Definitions/CallQueueDetails.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-readCallQueueInfo) in API Explorer.
-
-## updateCallQueueInfo
-
-Update Call Queue
-
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}`
-Rate Limit Group|`Light`
-App Permission|`EditExtensions`
-User Permission|`EditUserInfo`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Put(callQueueDetails);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `callQueueDetails` is of type [CallQueueDetails](./Definitions/CallQueueDetails.cs)
-- `result` is of type [CallQueueDetails](./Definitions/CallQueueDetails.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-updateCallQueueInfo) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Multi-Site-listSiteMembers) in API Explorer.
 
 ## listCountries
 
 List Countries
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/country`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                      
+------------------|--------------------------------------------
+ HTTP Method      | `GET`                                      
+ Endpoint         | `/restapi/{apiVersion}/dictionary/country` 
+ Rate Limit Group | `Light`                                    
+ App Permission   | `N/A`                                      
+ User Permission  | `N/A`                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2703,13 +2784,13 @@ await rc.Revoke();
 
 Get Country
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/country/{countryId}`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                                  
+------------------|--------------------------------------------------------
+ HTTP Method      | `GET`                                                  
+ Endpoint         | `/restapi/{apiVersion}/dictionary/country/{countryId}` 
+ Rate Limit Group | `Light`                                                
+ App Permission   | `N/A`                                                  
+ User Permission  | `N/A`                                                  
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2727,13 +2808,13 @@ await rc.Revoke();
 
 List Standard Greetings
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/greeting`
-Rate Limit Group|`Medium`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                       
+------------------|---------------------------------------------
+ HTTP Method      | `GET`                                       
+ Endpoint         | `/restapi/{apiVersion}/dictionary/greeting` 
+ Rate Limit Group | `Medium`                                    
+ App Permission   | `N/A`                                       
+ User Permission  | `N/A`                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2753,13 +2834,13 @@ await rc.Revoke();
 
 Get Standard Greeting
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/greeting/{greetingId}`
-Rate Limit Group|`Medium`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                                    
+------------------|----------------------------------------------------------
+ HTTP Method      | `GET`                                                    
+ Endpoint         | `/restapi/{apiVersion}/dictionary/greeting/{greetingId}` 
+ Rate Limit Group | `Medium`                                                 
+ App Permission   | `N/A`                                                    
+ User Permission  | `N/A`                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2777,13 +2858,13 @@ await rc.Revoke();
 
 List Languages
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/language`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                       
+------------------|---------------------------------------------
+ HTTP Method      | `GET`                                       
+ Endpoint         | `/restapi/{apiVersion}/dictionary/language` 
+ Rate Limit Group | `Light`                                     
+ App Permission   | `N/A`                                       
+ User Permission  | `N/A`                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2801,13 +2882,13 @@ await rc.Revoke();
 
 Get Language
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/language/{languageId}`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                                    
+------------------|----------------------------------------------------------
+ HTTP Method      | `GET`                                                    
+ Endpoint         | `/restapi/{apiVersion}/dictionary/language/{languageId}` 
+ Rate Limit Group | `Light`                                                  
+ App Permission   | `N/A`                                                    
+ User Permission  | `N/A`                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2825,13 +2906,13 @@ await rc.Revoke();
 
 List Locations
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/location`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                       
+------------------|---------------------------------------------
+ HTTP Method      | `GET`                                       
+ Endpoint         | `/restapi/{apiVersion}/dictionary/location` 
+ Rate Limit Group | `Light`                                     
+ App Permission   | `N/A`                                       
+ User Permission  | `N/A`                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2850,13 +2931,13 @@ await rc.Revoke();
 
 List Timezones
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/timezone`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                       
+------------------|---------------------------------------------
+ HTTP Method      | `GET`                                       
+ Endpoint         | `/restapi/{apiVersion}/dictionary/timezone` 
+ Rate Limit Group | `Light`                                     
+ App Permission   | `N/A`                                       
+ User Permission  | `N/A`                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2875,13 +2956,13 @@ await rc.Revoke();
 
 Get Timezone
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/timezone/{timezoneId}`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                                    
+------------------|----------------------------------------------------------
+ HTTP Method      | `GET`                                                    
+ Endpoint         | `/restapi/{apiVersion}/dictionary/timezone/{timezoneId}` 
+ Rate Limit Group | `Light`                                                  
+ App Permission   | `N/A`                                                    
+ User Permission  | `N/A`                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -2895,230 +2976,17 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readTimezone) in API Explorer.
 
-## parsePhoneNumber
-
-Parse Phone Number(s)
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/number-parser/parse`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).NumberParser().Parse().Post(parsePhoneNumberRequest, parsePhoneNumberParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `parsePhoneNumberRequest` is of type [ParsePhoneNumberRequest](./Definitions/ParsePhoneNumberRequest.cs)
-- `parsePhoneNumberParameters` is of type [ParsePhoneNumberParameters](./Definitions/ParsePhoneNumberParameters.cs)
-- `result` is of type [ParsePhoneNumberResponse](./Definitions/ParsePhoneNumberResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-parsePhoneNumber) in API Explorer.
-
-## renewSubscription
-
-Renew Subscription
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/subscription/{subscriptionId}/renew`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Renew().Post();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [SubscriptionInfo](./Definitions/SubscriptionInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-renewSubscription) in API Explorer.
-
-## scimGetProviderConfig2
-
-Get Provider Config
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/scim/{version}/ServiceProviderConfig`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Scim(version).ServiceProviderConfig().Get();
-await rc.Revoke();
-```
-
-- Parameter `version` is optional with default value `v2`
-- `result` is of type [ScimProviderConfig](./Definitions/ScimProviderConfig.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#SCIM-scimGetProviderConfig2) in API Explorer.
-
-## readTMCompanyInfoNew
-
-Get Company Info
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/companies/{companyId}`
-Rate Limit Group|`Light`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Companies(companyId).Get();
-await rc.Revoke();
-```
-
-- `result` is of type [TMCompanyInfo](./Definitions/TMCompanyInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Profile-readTMCompanyInfoNew) in API Explorer.
-
-## readGlipEveryoneNew
-
-Get Everyone Chat
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/everyone`
-Rate Limit Group|`Light`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Everyone().Get();
-await rc.Revoke();
-```
-
-- `result` is of type [EveryoneTeamInfo](./Definitions/EveryoneTeamInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-readGlipEveryoneNew) in API Explorer.
-
-## patchGlipEveryoneNew
-
-Update Everyone Chat
-
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/team-messaging/v1/everyone`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Everyone().Patch(updateEveryoneTeamRequest);
-await rc.Revoke();
-```
-
-- `updateEveryoneTeamRequest` is of type [UpdateEveryoneTeamRequest](./Definitions/UpdateEveryoneTeamRequest.cs)
-- `result` is of type [EveryoneTeamInfo](./Definitions/EveryoneTeamInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-patchGlipEveryoneNew) in API Explorer.
-
-## listGlipWebhooksNew
-
-List Webhooks
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/webhooks`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Webhooks().List();
-await rc.Revoke();
-```
-
-- `result` is of type [TMWebhookList](./Definitions/TMWebhookList.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-listGlipWebhooksNew) in API Explorer.
-
-## readGlipWebhookNew
-
-Get Webhook
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/webhooks/{webhookId}`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Webhooks(webhookId).Get();
-await rc.Revoke();
-```
-
-- `result` is of type [TMWebhookList](./Definitions/TMWebhookList.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-readGlipWebhookNew) in API Explorer.
-
-## deleteGlipWebhookNew
-
-Delete Webhook
-
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/team-messaging/v1/webhooks/{webhookId}`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Webhooks(webhookId).Delete();
-await rc.Revoke();
-```
-
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-deleteGlipWebhookNew) in API Explorer.
-
 ## listStandardUserRole
 
 List Standard User Roles
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/user-role`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                        
+------------------|----------------------------------------------
+ HTTP Method      | `GET`                                        
+ Endpoint         | `/restapi/{apiVersion}/dictionary/user-role` 
+ Rate Limit Group | `Light`                                      
+ App Permission   | `N/A`                                        
+ User Permission  | `N/A`                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3138,13 +3006,13 @@ await rc.Revoke();
 
 Get Standard User Role
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/user-role/{roleId}`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                                 
+------------------|-------------------------------------------------------
+ HTTP Method      | `GET`                                                 
+ Endpoint         | `/restapi/{apiVersion}/dictionary/user-role/{roleId}` 
+ Rate Limit Group | `Light`                                               
+ App Permission   | `N/A`                                                 
+ User Permission  | `N/A`                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3158,17 +3026,161 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Role-Management-readStandardUserRole) in API Explorer.
 
+## parsePhoneNumber
+
+Parse Phone Number(s)
+
+ Name             | Value                                       
+------------------|---------------------------------------------
+ HTTP Method      | `POST`                                      
+ Endpoint         | `/restapi/{apiVersion}/number-parser/parse` 
+ Rate Limit Group | `Light`                                     
+ App Permission   | `N/A`                                       
+ User Permission  | `N/A`                                       
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).NumberParser().Parse().Post(parsePhoneNumberRequest, parsePhoneNumberParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `parsePhoneNumberRequest` is of type [ParsePhoneNumberRequest](./Definitions/ParsePhoneNumberRequest.cs)
+- `parsePhoneNumberParameters` is of type [ParsePhoneNumberParameters](./Definitions/ParsePhoneNumberParameters.cs)
+- `result` is of type [ParsePhoneNumberResponse](./Definitions/ParsePhoneNumberResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-parsePhoneNumber) in API Explorer.
+
+## renewSubscription
+
+Renew Subscription
+
+ Name             | Value                                                       
+------------------|-------------------------------------------------------------
+ HTTP Method      | `POST`                                                      
+ Endpoint         | `/restapi/{apiVersion}/subscription/{subscriptionId}/renew` 
+ Rate Limit Group | `Light`                                                     
+ App Permission   | `N/A`                                                       
+ User Permission  | `N/A`                                                       
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Renew().Post();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [SubscriptionInfo](./Definitions/SubscriptionInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-renewSubscription) in API Explorer.
+
+## scimGetProviderConfig2
+
+Get Provider Config
+
+ Name             | Value                                   
+------------------|-----------------------------------------
+ HTTP Method      | `GET`                                   
+ Endpoint         | `/scim/{version}/ServiceProviderConfig` 
+ Rate Limit Group | `Light`                                 
+ App Permission   | `ReadAccounts`                          
+ User Permission  | `N/A`                                   
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Scim(version).ServiceProviderConfig().Get();
+await rc.Revoke();
+```
+
+- Parameter `version` is optional with default value `v2`
+- `result` is of type [ScimProviderConfig](./Definitions/ScimProviderConfig.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#SCIM-scimGetProviderConfig2) in API Explorer.
+
+## readTMCompanyInfoNew
+
+Get Company Info
+
+ Name             | Value                                      
+------------------|--------------------------------------------
+ HTTP Method      | `GET`                                      
+ Endpoint         | `/team-messaging/v1/companies/{companyId}` 
+ Rate Limit Group | `Light`                                    
+ App Permission   | `TeamMessaging`                            
+ User Permission  | `N/A`                                      
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Companies(companyId).Get();
+await rc.Revoke();
+```
+
+- `result` is of type [TMCompanyInfo](./Definitions/TMCompanyInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Profile-readTMCompanyInfoNew) in API Explorer.
+
+## readGlipEveryoneNew
+
+Get Everyone Chat
+
+ Name             | Value                         
+------------------|-------------------------------
+ HTTP Method      | `GET`                         
+ Endpoint         | `/team-messaging/v1/everyone` 
+ Rate Limit Group | `Light`                       
+ App Permission   | `TeamMessaging`               
+ User Permission  | `N/A`                         
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Everyone().Get();
+await rc.Revoke();
+```
+
+- `result` is of type [EveryoneTeamInfo](./Definitions/EveryoneTeamInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-readGlipEveryoneNew) in API Explorer.
+
+## patchGlipEveryoneNew
+
+Update Everyone Chat
+
+ Name             | Value                         
+------------------|-------------------------------
+ HTTP Method      | `PATCH`                       
+ Endpoint         | `/team-messaging/v1/everyone` 
+ Rate Limit Group | `Medium`                      
+ App Permission   | `TeamMessaging`               
+ User Permission  | `N/A`                         
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Everyone().Patch(updateEveryoneTeamRequest);
+await rc.Revoke();
+```
+
+- `updateEveryoneTeamRequest` is of type [UpdateEveryoneTeamRequest](./Definitions/UpdateEveryoneTeamRequest.cs)
+- `result` is of type [EveryoneTeamInfo](./Definitions/EveryoneTeamInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-patchGlipEveryoneNew) in API Explorer.
+
 ## listFavoriteChatsNew
 
 List Favorite Chats
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/favorites`
-Rate Limit Group|`Light`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                          
+------------------|--------------------------------
+ HTTP Method      | `GET`                          
+ Endpoint         | `/team-messaging/v1/favorites` 
+ Rate Limit Group | `Light`                        
+ App Permission   | `TeamMessaging`                
+ User Permission  | `N/A`                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3187,13 +3199,13 @@ await rc.Revoke();
 
 Lock Note
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/notes/{noteId}/lock`
-Rate Limit Group|`Light`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                    
+------------------|------------------------------------------
+ HTTP Method      | `POST`                                   
+ Endpoint         | `/team-messaging/v1/notes/{noteId}/lock` 
+ Rate Limit Group | `Light`                                  
+ App Permission   | `TeamMessaging`                          
+ User Permission  | `N/A`                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3206,17 +3218,109 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Notes-lockNoteNew) in API Explorer.
 
+## joinGlipTeamNew
+
+Join Team
+
+ Name             | Value                                    
+------------------|------------------------------------------
+ HTTP Method      | `POST`                                   
+ Endpoint         | `/team-messaging/v1/teams/{chatId}/join` 
+ Rate Limit Group | `Medium`                                 
+ App Permission   | `TeamMessaging`                          
+ User Permission  | `N/A`                                    
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Teams(chatId).Join().Post();
+await rc.Revoke();
+```
+
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-joinGlipTeamNew) in API Explorer.
+
+## listGlipWebhooksNew
+
+List Webhooks
+
+ Name             | Value                         
+------------------|-------------------------------
+ HTTP Method      | `GET`                         
+ Endpoint         | `/team-messaging/v1/webhooks` 
+ Rate Limit Group | `Medium`                      
+ App Permission   | `TeamMessaging`               
+ User Permission  | `N/A`                         
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Webhooks().List();
+await rc.Revoke();
+```
+
+- `result` is of type [TMWebhookList](./Definitions/TMWebhookList.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-listGlipWebhooksNew) in API Explorer.
+
+## readGlipWebhookNew
+
+Get Webhook
+
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `GET`                                     
+ Endpoint         | `/team-messaging/v1/webhooks/{webhookId}` 
+ Rate Limit Group | `Medium`                                  
+ App Permission   | `TeamMessaging`                           
+ User Permission  | `N/A`                                     
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Webhooks(webhookId).Get();
+await rc.Revoke();
+```
+
+- `result` is of type [TMWebhookList](./Definitions/TMWebhookList.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-readGlipWebhookNew) in API Explorer.
+
+## deleteGlipWebhookNew
+
+Delete Webhook
+
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `DELETE`                                  
+ Endpoint         | `/team-messaging/v1/webhooks/{webhookId}` 
+ Rate Limit Group | `Medium`                                  
+ App Permission   | `TeamMessaging`                           
+ User Permission  | `N/A`                                     
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Webhooks(webhookId).Delete();
+await rc.Revoke();
+```
+
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-deleteGlipWebhookNew) in API Explorer.
+
 ## addGlipTeamMembersNew
 
 Add Team Members
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/teams/{chatId}/add`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                   
+------------------|-----------------------------------------
+ HTTP Method      | `POST`                                  
+ Endpoint         | `/team-messaging/v1/teams/{chatId}/add` 
+ Rate Limit Group | `Medium`                                
+ App Permission   | `TeamMessaging`                         
+ User Permission  | `N/A`                                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3230,40 +3334,17 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-addGlipTeamMembersNew) in API Explorer.
 
-## joinGlipTeamNew
-
-Join Team
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/teams/{chatId}/join`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Teams(chatId).Join().Post();
-await rc.Revoke();
-```
-
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-joinGlipTeamNew) in API Explorer.
-
 ## rcwHistoryListAllSessions
 
 List Historical Webinar Sessions across Multiple Webinars
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/history/v1/sessions`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
+ Name             | Value                          
+------------------|--------------------------------
+ HTTP Method      | `GET`                          
+ Endpoint         | `/webinar/history/v1/sessions` 
+ Rate Limit Group | `Heavy`                        
+ App Permission   | `ReadWebinars`                 
+ User Permission  | `N/A`                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3283,13 +3364,13 @@ Explorer.
 
 Get Historical Webinar
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/history/v1/webinars/{webinarId}`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
+ Name             | Value                                      
+------------------|--------------------------------------------
+ HTTP Method      | `GET`                                      
+ Endpoint         | `/webinar/history/v1/webinars/{webinarId}` 
+ Rate Limit Group | `Heavy`                                    
+ App Permission   | `ReadWebinars`                             
+ User Permission  | `N/A`                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3306,13 +3387,13 @@ await rc.Revoke();
 
 Speaker Diarization
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/ai/audio/v1/async/speaker-diarize`
-Rate Limit Group|`Heavy`
-App Permission|`AI`
-User Permission|`N/A`
+ Name             | Value                                
+------------------|--------------------------------------
+ HTTP Method      | `POST`                               
+ Endpoint         | `/ai/audio/v1/async/speaker-diarize` 
+ Rate Limit Group | `Heavy`                              
+ App Permission   | `AI`                                 
+ User Permission  | `N/A`                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3331,13 +3412,13 @@ await rc.Revoke();
 
 Speaker Identification
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/ai/audio/v1/async/speaker-identify`
-Rate Limit Group|`Heavy`
-App Permission|`AI`
-User Permission|`N/A`
+ Name             | Value                                 
+------------------|---------------------------------------
+ HTTP Method      | `POST`                                
+ Endpoint         | `/ai/audio/v1/async/speaker-identify` 
+ Rate Limit Group | `Heavy`                               
+ App Permission   | `AI`                                  
+ User Permission  | `N/A`                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3357,13 +3438,13 @@ await rc.Revoke();
 
 Speech to Text Conversion
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/ai/audio/v1/async/speech-to-text`
-Rate Limit Group|`Heavy`
-App Permission|`AI`
-User Permission|`N/A`
+ Name             | Value                               
+------------------|-------------------------------------
+ HTTP Method      | `POST`                              
+ Endpoint         | `/ai/audio/v1/async/speech-to-text` 
+ Rate Limit Group | `Heavy`                             
+ App Permission   | `AI`                                
+ User Permission  | `N/A`                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3382,13 +3463,13 @@ await rc.Revoke();
 
 Interaction Analytics
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/ai/insights/v1/async/analyze-interaction`
-Rate Limit Group|`Heavy`
-App Permission|`AI`
-User Permission|`N/A`
+ Name             | Value                                       
+------------------|---------------------------------------------
+ HTTP Method      | `POST`                                      
+ Endpoint         | `/ai/insights/v1/async/analyze-interaction` 
+ Rate Limit Group | `Heavy`                                     
+ App Permission   | `AI`                                        
+ User Permission  | `N/A`                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3408,13 +3489,13 @@ await rc.Revoke();
 
 List All Contents
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/cx/social-messaging/v1/contents`
-Rate Limit Group|`Light`
-App Permission|`SocialMessaging`
-User Permission|`N/A`
+ Name             | Value                              
+------------------|------------------------------------
+ HTTP Method      | `GET`                              
+ Endpoint         | `/cx/social-messaging/v1/contents` 
+ Rate Limit Group | `Light`                            
+ App Permission   | `SocialMessaging`                  
+ User Permission  | `N/A`                              
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3433,13 +3514,13 @@ await rc.Revoke();
 
 Create Content
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/cx/social-messaging/v1/contents`
-Rate Limit Group|`Light`
-App Permission|`SocialMessaging`
-User Permission|`N/A`
+ Name             | Value                              
+------------------|------------------------------------
+ HTTP Method      | `POST`                             
+ Endpoint         | `/cx/social-messaging/v1/contents` 
+ Rate Limit Group | `Light`                            
+ App Permission   | `SocialMessaging`                  
+ User Permission  | `N/A`                              
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3457,13 +3538,13 @@ await rc.Revoke();
 
 Get Content
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/cx/social-messaging/v1/contents/{contentId}`
-Rate Limit Group|`Light`
-App Permission|`SocialMessaging`
-User Permission|`N/A`
+ Name             | Value                                          
+------------------|------------------------------------------------
+ HTTP Method      | `GET`                                          
+ Endpoint         | `/cx/social-messaging/v1/contents/{contentId}` 
+ Rate Limit Group | `Light`                                        
+ App Permission   | `SocialMessaging`                              
+ User Permission  | `N/A`                                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3476,42 +3557,42 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Contents-socMsgGetContent) in API Explorer.
 
-## socMsgListIdentities
+## listSocialMessagingIdentities
 
-List All Identities
+List Identities
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/cx/social-messaging/v1/identities`
-Rate Limit Group|`Light`
-App Permission|`SocialMessaging`
-User Permission|`N/A`
+ Name             | Value                                
+------------------|--------------------------------------
+ HTTP Method      | `GET`                                
+ Endpoint         | `/cx/social-messaging/v1/identities` 
+ Rate Limit Group | `Light`                              
+ App Permission   | `SocialMessaging`                    
+ User Permission  | `N/A`                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.Cx().SocialMessaging().V1().Identities().List(socMsgListIdentitiesParameters);
+var result = await rc.Cx().SocialMessaging().V1().Identities().List(listSocialMessagingIdentitiesParameters);
 await rc.Revoke();
 ```
 
-- `socMsgListIdentitiesParameters` is of
-  type [SocMsgListIdentitiesParameters](./Definitions/SocMsgListIdentitiesParameters.cs)
+- `listSocialMessagingIdentitiesParameters` is of
+  type [ListSocialMessagingIdentitiesParameters](./Definitions/ListSocialMessagingIdentitiesParameters.cs)
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Identities-socMsgListIdentities) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Identities-listSocialMessagingIdentities) in API Explorer.
 
-## socMsgGetIdentity
+## readSocialMessagingIdentity
 
 Get Identity
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/cx/social-messaging/v1/identities/{identityId}`
-Rate Limit Group|`Light`
-App Permission|`SocialMessaging`
-User Permission|`N/A`
+ Name             | Value                                             
+------------------|---------------------------------------------------
+ HTTP Method      | `GET`                                             
+ Endpoint         | `/cx/social-messaging/v1/identities/{identityId}` 
+ Rate Limit Group | `Light`                                           
+ App Permission   | `SocialMessaging`                                 
+ User Permission  | `N/A`                                             
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3522,19 +3603,19 @@ await rc.Revoke();
 
 - `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Identities-socMsgGetIdentity) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Identities-readSocialMessagingIdentity) in API Explorer.
 
 ## getExtensionRecordings
 
 List User Recordings
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/rcvideo/v1/account/{accountId}/extension/{extensionId}/recordings`
-Rate Limit Group|`Light`
-App Permission|`Video`
-User Permission|`N/A`
+ Name             | Value                                                                
+------------------|----------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                
+ Endpoint         | `/rcvideo/v1/account/{accountId}/extension/{extensionId}/recordings` 
+ Rate Limit Group | `Light`                                                              
+ App Permission   | `Video`                                                              
+ User Permission  | `N/A`                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3555,13 +3636,13 @@ await rc.Revoke();
 
 List Account Recordings
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/rcvideo/v1/account/{accountId}/recordings`
-Rate Limit Group|`Light`
-App Permission|`Video`
-User Permission|`N/A`
+ Name             | Value                                        
+------------------|----------------------------------------------
+ HTTP Method      | `GET`                                        
+ Endpoint         | `/rcvideo/v1/account/{accountId}/recordings` 
+ Rate Limit Group | `Light`                                      
+ App Permission   | `Video`                                      
+ User Permission  | `N/A`                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3581,13 +3662,13 @@ await rc.Revoke();
 
 Get Delegators
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/rcvideo/v1/accounts/{accountId}/extensions/{extensionId}/delegators`
-Rate Limit Group|`Medium`
-App Permission|`Video`
-User Permission|`N/A`
+ Name             | Value                                                                  
+------------------|------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                  
+ Endpoint         | `/rcvideo/v1/accounts/{accountId}/extensions/{extensionId}/delegators` 
+ Rate Limit Group | `Medium`                                                               
+ App Permission   | `Video`                                                                
+ User Permission  | `N/A`                                                                  
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3604,13 +3685,13 @@ await rc.Revoke();
 
 Create Bridge
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/rcvideo/v2/account/{accountId}/extension/{extensionId}/bridges`
-Rate Limit Group|`Heavy`
-App Permission|`Video`
-User Permission|`N/A`
+ Name             | Value                                                             
+------------------|-------------------------------------------------------------------
+ HTTP Method      | `POST`                                                            
+ Endpoint         | `/rcvideo/v2/account/{accountId}/extension/{extensionId}/bridges` 
+ Rate Limit Group | `Heavy`                                                           
+ App Permission   | `Video`                                                           
+ User Permission  | `N/A`                                                             
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3630,13 +3711,13 @@ await rc.Revoke();
 
 Add Phone to Inventory
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/v2/accounts/{accountId}/device-inventory`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`N/A`
+ Name             | Value                                               
+------------------|-----------------------------------------------------
+ HTTP Method      | `POST`                                              
+ Endpoint         | `/restapi/v2/accounts/{accountId}/device-inventory` 
+ Rate Limit Group | `Heavy`                                             
+ App Permission   | `EditAccounts`                                      
+ User Permission  | `N/A`                                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3654,13 +3735,13 @@ await rc.Revoke();
 
 Delete Device from Inventory
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/v2/accounts/{accountId}/device-inventory`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`N/A`
+ Name             | Value                                               
+------------------|-----------------------------------------------------
+ HTTP Method      | `DELETE`                                            
+ Endpoint         | `/restapi/v2/accounts/{accountId}/device-inventory` 
+ Rate Limit Group | `Heavy`                                             
+ App Permission   | `EditAccounts`                                      
+ User Permission  | `N/A`                                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3679,13 +3760,13 @@ await rc.Revoke();
 
 Add BYOD Devices
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/v2/accounts/{accountId}/devices/bulk-add`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`AddRemoveDevices`
+ Name             | Value                                               
+------------------|-----------------------------------------------------
+ HTTP Method      | `POST`                                              
+ Endpoint         | `/restapi/v2/accounts/{accountId}/devices/bulk-add` 
+ Rate Limit Group | `Heavy`                                             
+ App Permission   | `EditAccounts`                                      
+ User Permission  | `AddRemoveDevices`                                  
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3703,13 +3784,13 @@ await rc.Revoke();
 
 Delete User Extensions
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/v2/accounts/{accountId}/extensions`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`Users`
+ Name             | Value                                         
+------------------|-----------------------------------------------
+ HTTP Method      | `DELETE`                                      
+ Endpoint         | `/restapi/v2/accounts/{accountId}/extensions` 
+ Rate Limit Group | `Heavy`                                       
+ App Permission   | `EditAccounts`                                
+ User Permission  | `Users`                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3727,13 +3808,13 @@ await rc.Revoke();
 
 List Account Phone Numbers
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/v2/accounts/{accountId}/phone-numbers`
-Rate Limit Group|`Heavy`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyPhoneNumbers`
+ Name             | Value                                            
+------------------|--------------------------------------------------
+ HTTP Method      | `GET`                                            
+ Endpoint         | `/restapi/v2/accounts/{accountId}/phone-numbers` 
+ Rate Limit Group | `Heavy`                                          
+ App Permission   | `ReadAccounts`                                   
+ User Permission  | `ReadCompanyPhoneNumbers`                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3752,13 +3833,13 @@ await rc.Revoke();
 
 Delete Numbers from Inventory
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/v2/accounts/{accountId}/phone-numbers`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`EditCompanyPhoneNumbers`
+ Name             | Value                                            
+------------------|--------------------------------------------------
+ HTTP Method      | `DELETE`                                         
+ Endpoint         | `/restapi/v2/accounts/{accountId}/phone-numbers` 
+ Rate Limit Group | `Medium`                                         
+ App Permission   | `EditAccounts`                                   
+ User Permission  | `EditCompanyPhoneNumbers`                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3777,13 +3858,13 @@ Explorer.
 
 Assign Phone Number
 
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/restapi/v2/accounts/{accountId}/phone-numbers/{phoneNumberId}`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`EditCompanyPhoneNumbers`
+ Name             | Value                                                            
+------------------|------------------------------------------------------------------
+ HTTP Method      | `PATCH`                                                          
+ Endpoint         | `/restapi/v2/accounts/{accountId}/phone-numbers/{phoneNumberId}` 
+ Rate Limit Group | `Medium`                                                         
+ App Permission   | `EditAccounts`                                                   
+ User Permission  | `EditCompanyPhoneNumbers`                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3801,13 +3882,13 @@ await rc.Revoke();
 
 Replace Phone Number
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/v2/accounts/{accountId}/phone-numbers/{phoneNumberId}/replace`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`EditCompanyPhoneNumbers`
+ Name             | Value                                                                    
+------------------|--------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                   
+ Endpoint         | `/restapi/v2/accounts/{accountId}/phone-numbers/{phoneNumberId}/replace` 
+ Rate Limit Group | `Medium`                                                                 
+ App Permission   | `EditAccounts`                                                           
+ User Permission  | `EditCompanyPhoneNumbers`                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3821,17 +3902,40 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-replacePhoneNumberV2) in API Explorer.
 
+## sendActivationEmailV2
+
+Send/Resend Activation Email
+
+ Name             | Value                                                    
+------------------|----------------------------------------------------------
+ HTTP Method      | `POST`                                                   
+ Endpoint         | `/restapi/v2/accounts/{accountId}/send-activation-email` 
+ Rate Limit Group | `Medium`                                                 
+ App Permission   | `EditAccounts`                                           
+ User Permission  | `AccountAdministration`                                  
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi().V2().Accounts(accountId).SendActivationEmail().Post();
+await rc.Revoke();
+```
+
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Company-sendActivationEmailV2) in API Explorer.
+
 ## sendWelcomeEmailV2
 
 Send/Resend Welcome Email
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/v2/accounts/{accountId}/send-welcome-email`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`Users`
+ Name             | Value                                                 
+------------------|-------------------------------------------------------
+ HTTP Method      | `POST`                                                
+ Endpoint         | `/restapi/v2/accounts/{accountId}/send-welcome-email` 
+ Rate Limit Group | `Medium`                                              
+ App Permission   | `EditExtensions`                                      
+ User Permission  | `Users`                                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3849,13 +3953,13 @@ await rc.Revoke();
 
 List A2P SMS Batches
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/a2p-sms/batches`
-Rate Limit Group|`Light`
-App Permission|`A2PSMS`
-User Permission|`N/A`
+ Name             | Value                                                       
+------------------|-------------------------------------------------------------
+ HTTP Method      | `GET`                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/a2p-sms/batches` 
+ Rate Limit Group | `Light`                                                     
+ App Permission   | `A2PSMS`                                                    
+ User Permission  | `N/A`                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3875,13 +3979,13 @@ await rc.Revoke();
 
 Send A2P SMS
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/a2p-sms/batches`
-Rate Limit Group|`Light`
-App Permission|`A2PSMS`
-User Permission|`N/A`
+ Name             | Value                                                       
+------------------|-------------------------------------------------------------
+ HTTP Method      | `POST`                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/a2p-sms/batches` 
+ Rate Limit Group | `Light`                                                     
+ App Permission   | `A2PSMS`                                                    
+ User Permission  | `N/A`                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3901,13 +4005,13 @@ await rc.Revoke();
 
 Get A2P SMS Batch
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/a2p-sms/batches/{batchId}`
-Rate Limit Group|`Light`
-App Permission|`A2PSMS`
-User Permission|`N/A`
+ Name             | Value                                                                 
+------------------|-----------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                 
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/a2p-sms/batches/{batchId}` 
+ Rate Limit Group | `Light`                                                               
+ App Permission   | `A2PSMS`                                                              
+ User Permission  | `N/A`                                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3926,13 +4030,13 @@ await rc.Revoke();
 
 List A2P SMS Messages
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/a2p-sms/messages`
-Rate Limit Group|`Light`
-App Permission|`A2PSMS`
-User Permission|`N/A`
+ Name             | Value                                                        
+------------------|--------------------------------------------------------------
+ HTTP Method      | `GET`                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/a2p-sms/messages` 
+ Rate Limit Group | `Light`                                                      
+ App Permission   | `A2PSMS`                                                     
+ User Permission  | `N/A`                                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3952,13 +4056,13 @@ await rc.Revoke();
 
 Get A2P SMS
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/a2p-sms/messages/{messageId}`
-Rate Limit Group|`Light`
-App Permission|`A2PSMS`
-User Permission|`N/A`
+ Name             | Value                                                                    
+------------------|--------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/a2p-sms/messages/{messageId}` 
+ Rate Limit Group | `Light`                                                                  
+ App Permission   | `A2PSMS`                                                                 
+ User Permission  | `N/A`                                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -3977,13 +4081,13 @@ await rc.Revoke();
 
 List Opted Out Numbers
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/a2p-sms/opt-outs`
-Rate Limit Group|`Light`
-App Permission|`A2PSMS`
-User Permission|`N/A`
+ Name             | Value                                                        
+------------------|--------------------------------------------------------------
+ HTTP Method      | `GET`                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/a2p-sms/opt-outs` 
+ Rate Limit Group | `Light`                                                      
+ App Permission   | `A2PSMS`                                                     
+ User Permission  | `N/A`                                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4003,13 +4107,13 @@ await rc.Revoke();
 
 List A2P SMS Statuses
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/a2p-sms/statuses`
-Rate Limit Group|`Light`
-App Permission|`A2PSMS`
-User Permission|`N/A`
+ Name             | Value                                                        
+------------------|--------------------------------------------------------------
+ HTTP Method      | `GET`                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/a2p-sms/statuses` 
+ Rate Limit Group | `Light`                                                      
+ App Permission   | `A2PSMS`                                                     
+ User Permission  | `N/A`                                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4030,13 +4134,13 @@ await rc.Revoke();
 
 Upload Multiple User Contacts
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/address-book-bulk-upload`
-Rate Limit Group|`Heavy`
-App Permission|`Contacts`
-User Permission|`EditPersonalContacts`
+ Name             | Value                                                                
+------------------|----------------------------------------------------------------------
+ HTTP Method      | `POST`                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/address-book-bulk-upload` 
+ Rate Limit Group | `Heavy`                                                              
+ App Permission   | `Contacts`                                                           
+ User Permission  | `EditPersonalContacts`                                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4057,13 +4161,13 @@ await rc.Revoke();
 
 List Company Call Handling Rules
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/answering-rule`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyAnsweringRules`
+ Name             | Value                                                      
+------------------|------------------------------------------------------------
+ HTTP Method      | `GET`                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/answering-rule` 
+ Rate Limit Group | `Medium`                                                   
+ App Permission   | `ReadAccounts`                                             
+ User Permission  | `ReadCompanyAnsweringRules`                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4085,13 +4189,13 @@ Explorer.
 
 Create Company Call Handling Rule
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/answering-rule`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`EditCompanyAnsweringRules`
+ Name             | Value                                                      
+------------------|------------------------------------------------------------
+ HTTP Method      | `POST`                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/answering-rule` 
+ Rate Limit Group | `Medium`                                                   
+ App Permission   | `EditAccounts`                                             
+ User Permission  | `EditCompanyAnsweringRules`                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4112,13 +4216,13 @@ Explorer.
 
 Get Company Call Handling Rule
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/answering-rule/{ruleId}`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyAnsweringRules`
+ Name             | Value                                                               
+------------------|---------------------------------------------------------------------
+ HTTP Method      | `GET`                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/answering-rule/{ruleId}` 
+ Rate Limit Group | `Light`                                                             
+ App Permission   | `ReadAccounts`                                                      
+ User Permission  | `ReadCompanyAnsweringRules`                                         
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4138,13 +4242,13 @@ Explorer.
 
 Update Company Call Handling Rule
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/answering-rule/{ruleId}`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`EditCompanyAnsweringRules`
+ Name             | Value                                                               
+------------------|---------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/answering-rule/{ruleId}` 
+ Rate Limit Group | `Medium`                                                            
+ App Permission   | `EditAccounts`                                                      
+ User Permission  | `EditCompanyAnsweringRules`                                         
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4165,13 +4269,13 @@ Explorer.
 
 Delete Company Call Handling Rule
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/answering-rule/{ruleId}`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`EditCompanyAnsweringRules`
+ Name             | Value                                                               
+------------------|---------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                            
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/answering-rule/{ruleId}` 
+ Rate Limit Group | `Medium`                                                            
+ App Permission   | `EditAccounts`                                                      
+ User Permission  | `EditCompanyAnsweringRules`                                         
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4191,13 +4295,13 @@ Explorer.
 
 List Company Assigned Roles
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/assigned-role`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadAssignedRoles`
+ Name             | Value                                                     
+------------------|-----------------------------------------------------------
+ HTTP Method      | `GET`                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/assigned-role` 
+ Rate Limit Group | `Medium`                                                  
+ App Permission   | `ReadAccounts`                                            
+ User Permission  | `ReadAssignedRoles`                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4217,13 +4321,13 @@ await rc.Revoke();
 
 Search Audit Trail Data
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/audit-trail/search`
-Rate Limit Group|`Heavy`
-App Permission|`ReadAuditTrail`
-User Permission|`N/A`
+ Name             | Value                                                          
+------------------|----------------------------------------------------------------
+ HTTP Method      | `POST`                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/audit-trail/search` 
+ Rate Limit Group | `Heavy`                                                        
+ App Permission   | `ReadAuditTrail`                                               
+ User Permission  | `N/A`                                                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4244,13 +4348,13 @@ await rc.Revoke();
 
 Get Account Business Address
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/business-address`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyInfo`
+ Name             | Value                                                        
+------------------|--------------------------------------------------------------
+ HTTP Method      | `GET`                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/business-address` 
+ Rate Limit Group | `Light`                                                      
+ App Permission   | `ReadAccounts`                                               
+ User Permission  | `ReadCompanyInfo`                                            
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4269,13 +4373,13 @@ await rc.Revoke();
 
 Update Company Business Address
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/business-address`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`EditCompanyInfo`
+ Name             | Value                                                        
+------------------|--------------------------------------------------------------
+ HTTP Method      | `PUT`                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/business-address` 
+ Rate Limit Group | `Medium`                                                     
+ App Permission   | `EditAccounts`                                               
+ User Permission  | `EditCompanyInfo`                                            
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4296,13 +4400,13 @@ await rc.Revoke();
 
 Get Company Business Hours
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/business-hours`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyAnsweringRules`
+ Name             | Value                                                      
+------------------|------------------------------------------------------------
+ HTTP Method      | `GET`                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/business-hours` 
+ Rate Limit Group | `Light`                                                    
+ App Permission   | `ReadAccounts`                                             
+ User Permission  | `ReadCompanyAnsweringRules`                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4321,13 +4425,13 @@ await rc.Revoke();
 
 Update Company Business Hours
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/business-hours`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`EditUserAnsweringRules`
+ Name             | Value                                                      
+------------------|------------------------------------------------------------
+ HTTP Method      | `PUT`                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/business-hours` 
+ Rate Limit Group | `Medium`                                                   
+ App Permission   | `EditExtensions`                                           
+ User Permission  | `EditUserAnsweringRules`                                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4348,13 +4452,13 @@ await rc.Revoke();
 
 Sync Company Call Log
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-log-sync`
-Rate Limit Group|`Heavy`
-App Permission|`ReadCallLog`
-User Permission|`ReadCallLog`
+ Name             | Value                                                     
+------------------|-----------------------------------------------------------
+ HTTP Method      | `GET`                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-log-sync` 
+ Rate Limit Group | `Heavy`                                                   
+ App Permission   | `ReadCallLog`                                             
+ User Permission  | `ReadCallLog`                                             
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4375,13 +4479,13 @@ await rc.Revoke();
 
 List Call Monitoring Groups
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-monitoring-groups`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadExtensions`
+ Name             | Value                                                              
+------------------|--------------------------------------------------------------------
+ HTTP Method      | `GET`                                                              
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-monitoring-groups` 
+ Rate Limit Group | `Medium`                                                           
+ App Permission   | `ReadAccounts`                                                     
+ User Permission  | `ReadExtensions`                                                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4403,13 +4507,13 @@ Explorer.
 
 Create Call Monitoring Group
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-monitoring-groups`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`Groups`
+ Name             | Value                                                              
+------------------|--------------------------------------------------------------------
+ HTTP Method      | `POST`                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-monitoring-groups` 
+ Rate Limit Group | `Medium`                                                           
+ App Permission   | `EditExtensions`                                                   
+ User Permission  | `Groups`                                                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4431,13 +4535,13 @@ Explorer.
 
 Update Call Monitoring Group
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-monitoring-groups/{groupId}`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`Groups`
+ Name             | Value                                                                        
+------------------|------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-monitoring-groups/{groupId}` 
+ Rate Limit Group | `Medium`                                                                     
+ App Permission   | `EditExtensions`                                                             
+ User Permission  | `Groups`                                                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4459,13 +4563,13 @@ Explorer.
 
 Delete Call Monitoring Group
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-monitoring-groups/{groupId}`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`Groups`
+ Name             | Value                                                                        
+------------------|------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-monitoring-groups/{groupId}` 
+ Rate Limit Group | `Medium`                                                                     
+ App Permission   | `EditExtensions`                                                             
+ User Permission  | `Groups`                                                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4485,13 +4589,13 @@ Explorer.
 
 Assign Multiple Call Queue Members
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/bulk-assign`
-Rate Limit Group|`Heavy`
-App Permission|`EditExtensions`
-User Permission|`Groups`
+ Name             | Value                                                                         
+------------------|-------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/bulk-assign` 
+ Rate Limit Group | `Heavy`                                                                       
+ App Permission   | `EditExtensions`                                                              
+ User Permission  | `Groups`                                                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4512,13 +4616,13 @@ Explorer.
 
 List Call Queue Members
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/members`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadExtensions`
+ Name             | Value                                                                     
+------------------|---------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/members` 
+ Rate Limit Group | `Light`                                                                   
+ App Permission   | `ReadAccounts`                                                            
+ User Permission  | `ReadExtensions`                                                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4539,13 +4643,13 @@ await rc.Revoke();
 
 Get Call Queue Presence
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/presence`
-Rate Limit Group|`Light`
-App Permission|`ReadPresence`
-User Permission|`N/A`
+ Name             | Value                                                                      
+------------------|----------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/presence` 
+ Rate Limit Group | `Light`                                                                    
+ App Permission   | `ReadPresence`                                                             
+ User Permission  | `N/A`                                                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4564,13 +4668,13 @@ await rc.Revoke();
 
 Update Call Queue Presence
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/presence`
-Rate Limit Group|`Medium`
-App Permission|`EditPresence`
-User Permission|`N/A`
+ Name             | Value                                                                      
+------------------|----------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/presence` 
+ Rate Limit Group | `Medium`                                                                   
+ App Permission   | `EditPresence`                                                             
+ User Permission  | `N/A`                                                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4590,13 +4694,13 @@ await rc.Revoke();
 
 Get Call Recording Settings
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-recording`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyInfo`
+ Name             | Value                                                      
+------------------|------------------------------------------------------------
+ HTTP Method      | `GET`                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-recording` 
+ Rate Limit Group | `Light`                                                    
+ App Permission   | `ReadAccounts`                                             
+ User Permission  | `ReadCompanyInfo`                                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4616,13 +4720,13 @@ Explorer.
 
 Update Call Recording Settings
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-recording`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`EditCompanyInfo`
+ Name             | Value                                                      
+------------------|------------------------------------------------------------
+ HTTP Method      | `PUT`                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-recording` 
+ Rate Limit Group | `Medium`                                                   
+ App Permission   | `EditAccounts`                                             
+ User Permission  | `EditCompanyInfo`                                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4644,13 +4748,13 @@ Explorer.
 
 Get Call Recording Extension List
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-recording/extensions`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyInfo`
+ Name             | Value                                                                 
+------------------|-----------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                 
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-recording/extensions` 
+ Rate Limit Group | `Medium`                                                              
+ App Permission   | `ReadAccounts`                                                        
+ User Permission  | `ReadCompanyInfo`                                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4670,13 +4774,13 @@ Explorer.
 
 Delete Company Call Recordings
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-recordings`
-Rate Limit Group|`Heavy`
-App Permission|`EditCallLog`
-User Permission|`EditCompanyCallRecordings`
+ Name             | Value                                                       
+------------------|-------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-recordings` 
+ Rate Limit Group | `Heavy`                                                     
+ App Permission   | `EditCallLog`                                               
+ User Permission  | `EditCompanyCallRecordings`                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4693,119 +4797,17 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Recordings-deleteCompanyCallRecordings) in API
 Explorer.
 
-## listCustomFields
-
-Get Custom Field List
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/custom-fields`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadUserInfo`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Get();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [CustomFieldList](./Definitions/CustomFieldList.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-listCustomFields) in API Explorer.
-
-## createCustomField
-
-Create Custom Field
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/custom-fields`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`Users`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields().Post(customFieldCreateRequest);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `customFieldCreateRequest` is of type [CustomFieldCreateRequest](./Definitions/CustomFieldCreateRequest.cs)
-- `result` is of type [CustomFieldModel](./Definitions/CustomFieldModel.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-createCustomField) in API Explorer.
-
-## updateCustomField
-
-Update Custom Field
-
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/custom-fields/{fieldId}`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`Users`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Put(customFieldUpdateRequest);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `customFieldUpdateRequest` is of type [CustomFieldUpdateRequest](./Definitions/CustomFieldUpdateRequest.cs)
-- `result` is of type [CustomFieldModel](./Definitions/CustomFieldModel.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-updateCustomField) in API Explorer.
-
-## deleteCustomField
-
-Delete Custom Field
-
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/custom-fields/{fieldId}`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`Users`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).CustomFields(fieldId).Delete();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-deleteCustomField) in API Explorer.
-
 ## updateDeviceEmergency
 
 Update Device Emergency Info
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/device/{deviceId}/emergency`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`EditCompanyDevices`
+ Name             | Value                                                                   
+------------------|-------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                   
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/device/{deviceId}/emergency` 
+ Rate Limit Group | `Medium`                                                                
+ App Permission   | `EditAccounts`                                                          
+ User Permission  | `EditCompanyDevices`                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4825,13 +4827,13 @@ await rc.Revoke();
 
 Get Device SIP Info
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/device/{deviceId}/sip-info`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyDevices`
+ Name             | Value                                                                  
+------------------|------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                  
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/device/{deviceId}/sip-info` 
+ Rate Limit Group | `Light`                                                                
+ App Permission   | `ReadAccounts`                                                         
+ User Permission  | `ReadCompanyDevices`                                                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4850,13 +4852,13 @@ await rc.Revoke();
 
 Get Company Directory Entries
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/directory/entries`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`N/A`
+ Name             | Value                                                         
+------------------|---------------------------------------------------------------
+ HTTP Method      | `GET`                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/directory/entries` 
+ Rate Limit Group | `Medium`                                                      
+ App Permission   | `ReadAccounts`                                                
+ User Permission  | `N/A`                                                         
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4877,13 +4879,13 @@ await rc.Revoke();
 
 Get Corporate Directory Entry
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/directory/entries/{entryId}`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`N/A`
+ Name             | Value                                                                   
+------------------|-------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                   
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/directory/entries/{entryId}` 
+ Rate Limit Group | `Medium`                                                                
+ App Permission   | `ReadAccounts`                                                          
+ User Permission  | `N/A`                                                                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4902,13 +4904,13 @@ await rc.Revoke();
 
 Search Company Directory Entries
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/directory/entries/search`
-Rate Limit Group|`Heavy`
-App Permission|`ReadAccounts`
-User Permission|`ReadExtensions`
+ Name             | Value                                                                
+------------------|----------------------------------------------------------------------
+ HTTP Method      | `POST`                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/directory/entries/search` 
+ Rate Limit Group | `Heavy`                                                              
+ App Permission   | `ReadAccounts`                                                       
+ User Permission  | `ReadExtensions`                                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4931,13 +4933,13 @@ await rc.Revoke();
 
 Get Account Federation
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/directory/federation`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyInfo`
+ Name             | Value                                                            
+------------------|------------------------------------------------------------------
+ HTTP Method      | `GET`                                                            
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/directory/federation` 
+ Rate Limit Group | `Medium`                                                         
+ App Permission   | `ReadAccounts`                                                   
+ User Permission  | `ReadCompanyInfo`                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4958,13 +4960,13 @@ await rc.Revoke();
 
 List Emergency Locations
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-locations`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                           
+------------------|-----------------------------------------------------------------
+ HTTP Method      | `GET`                                                           
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-locations` 
+ Rate Limit Group | `Light`                                                         
+ App Permission   | `ReadAccounts`                                                  
+ User Permission  | `ConfigureEmergencyMaps`                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -4986,13 +4988,13 @@ Explorer.
 
 Add Emergency Location
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-locations`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                           
+------------------|-----------------------------------------------------------------
+ HTTP Method      | `POST`                                                          
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-locations` 
+ Rate Limit Group | `Medium`                                                        
+ App Permission   | `EditAccounts`                                                  
+ User Permission  | `ConfigureEmergencyMaps`                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5014,13 +5016,13 @@ Explorer.
 
 Get Emergency Location
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-locations/{locationId}`
-Rate Limit Group|`Light`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                        
+------------------|------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-locations/{locationId}` 
+ Rate Limit Group | `Light`                                                                      
+ App Permission   | `EditAccounts`                                                               
+ User Permission  | `ConfigureEmergencyMaps`                                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5042,13 +5044,13 @@ Explorer.
 
 Update Emergency Location
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-locations/{locationId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                        
+------------------|------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-locations/{locationId}` 
+ Rate Limit Group | `Heavy`                                                                      
+ App Permission   | `EditAccounts`                                                               
+ User Permission  | `ConfigureEmergencyMaps`                                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5070,13 +5072,13 @@ Explorer.
 
 Delete Emergency Location
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-locations/{locationId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                        
+------------------|------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-locations/{locationId}` 
+ Rate Limit Group | `Heavy`                                                                      
+ App Permission   | `EditAccounts`                                                               
+ User Permission  | `ConfigureEmergencyMaps`                                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5098,13 +5100,13 @@ Explorer.
 
 Update Multiple Extensions
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension-bulk-update`
-Rate Limit Group|`Heavy`
-App Permission|`EditExtensions`
-User Permission|`EditExtensionInfo`
+ Name             | Value                                                             
+------------------|-------------------------------------------------------------------
+ HTTP Method      | `POST`                                                            
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension-bulk-update` 
+ Rate Limit Group | `Heavy`                                                           
+ App Permission   | `EditExtensions`                                                  
+ User Permission  | `EditExtensionInfo`                                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5124,13 +5126,13 @@ await rc.Revoke();
 
 List User Active Calls
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/active-calls`
-Rate Limit Group|`Heavy`
-App Permission|`ReadCallLog`
-User Permission|`ReadCallLog`
+ Name             | Value                                                                            
+------------------|----------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                            
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/active-calls` 
+ Rate Limit Group | `Heavy`                                                                          
+ App Permission   | `ReadCallLog`                                                                    
+ User Permission  | `ReadCallLog`                                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5152,13 +5154,13 @@ await rc.Revoke();
 
 List Call Handling Rules
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/answering-rule`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadUserAnsweringRules`
+ Name             | Value                                                                              
+------------------|------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                              
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/answering-rule` 
+ Rate Limit Group | `Medium`                                                                           
+ App Permission   | `ReadAccounts`                                                                     
+ User Permission  | `ReadUserAnsweringRules`                                                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5180,13 +5182,13 @@ await rc.Revoke();
 
 Create Call Handling Rule
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/answering-rule`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`EditUserAnsweringRules`
+ Name             | Value                                                                              
+------------------|------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/answering-rule` 
+ Rate Limit Group | `Medium`                                                                           
+ App Permission   | `EditExtensions`                                                                   
+ User Permission  | `EditUserAnsweringRules`                                                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5207,13 +5209,13 @@ await rc.Revoke();
 
 Get Call Handling Rule
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadUserAnsweringRules`
+ Name             | Value                                                                                       
+------------------|---------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}` 
+ Rate Limit Group | `Light`                                                                                     
+ App Permission   | `ReadAccounts`                                                                              
+ User Permission  | `ReadUserAnsweringRules`                                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5234,13 +5236,13 @@ await rc.Revoke();
 
 Update Call Handling Rule
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`EditUserAnsweringRules`
+ Name             | Value                                                                                       
+------------------|---------------------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}` 
+ Rate Limit Group | `Medium`                                                                                    
+ App Permission   | `EditExtensions`                                                                            
+ User Permission  | `EditUserAnsweringRules`                                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5261,13 +5263,13 @@ await rc.Revoke();
 
 Delete Call Handling Rule
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`EditUserAnsweringRules`
+ Name             | Value                                                                                       
+------------------|---------------------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/answering-rule/{ruleId}` 
+ Rate Limit Group | `Medium`                                                                                    
+ App Permission   | `EditExtensions`                                                                            
+ User Permission  | `EditUserAnsweringRules`                                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5287,13 +5289,13 @@ await rc.Revoke();
 
 List User Assigned Roles
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/assigned-role`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadAssignedRoles`
+ Name             | Value                                                                             
+------------------|-----------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/assigned-role` 
+ Rate Limit Group | `Light`                                                                           
+ App Permission   | `ReadAccounts`                                                                    
+ User Permission  | `ReadAssignedRoles`                                                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5315,13 +5317,13 @@ await rc.Revoke();
 
 Update User Assigned Roles
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/assigned-role`
-Rate Limit Group|`Medium`
-App Permission|`RoleManagement`
-User Permission|`EditAssignedRoles`
+ Name             | Value                                                                             
+------------------|-----------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/assigned-role` 
+ Rate Limit Group | `Medium`                                                                          
+ App Permission   | `RoleManagement`                                                                  
+ User Permission  | `EditAssignedRoles`                                                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5342,13 +5344,13 @@ await rc.Revoke();
 
 Get Authorization Profile
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/authz-profile`
-Rate Limit Group|`Medium`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                                                             
+------------------|-----------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/authz-profile` 
+ Rate Limit Group | `Medium`                                                                          
+ App Permission   | `N/A`                                                                             
+ User Permission  | `N/A`                                                                             
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5370,13 +5372,13 @@ await rc.Revoke();
 
 Get User Business Hours
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/business-hours`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadExtensions`
+ Name             | Value                                                                              
+------------------|------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                              
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/business-hours` 
+ Rate Limit Group | `Light`                                                                            
+ App Permission   | `ReadAccounts`                                                                     
+ User Permission  | `ReadExtensions`                                                                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5396,13 +5398,13 @@ await rc.Revoke();
 
 Update User Business Hours
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/business-hours`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`EditUserAnsweringRules`
+ Name             | Value                                                                              
+------------------|------------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                              
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/business-hours` 
+ Rate Limit Group | `Medium`                                                                           
+ App Permission   | `EditExtensions`                                                                   
+ User Permission  | `EditUserAnsweringRules`                                                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5424,13 +5426,13 @@ await rc.Revoke();
 
 List User Call Records
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-log`
-Rate Limit Group|`Heavy`
-App Permission|`ReadCallLog`
-User Permission|`ReadCallLog`
+ Name             | Value                                                                        
+------------------|------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-log` 
+ Rate Limit Group | `Heavy`                                                                      
+ App Permission   | `ReadCallLog`                                                                
+ User Permission  | `ReadCallLog`                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5451,13 +5453,13 @@ await rc.Revoke();
 
 Delete User Call Records
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-log`
-Rate Limit Group|`Heavy`
-App Permission|`EditCallLog`
-User Permission|`EditCallLog`
+ Name             | Value                                                                        
+------------------|------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-log` 
+ Rate Limit Group | `Heavy`                                                                      
+ App Permission   | `EditCallLog`                                                                
+ User Permission  | `EditCallLog`                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5478,13 +5480,13 @@ await rc.Revoke();
 
 Get User Call Record(s)
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}`
-Rate Limit Group|`Heavy`
-App Permission|`ReadCallLog`
-User Permission|`ReadCallLog`
+ Name             | Value                                                                                       
+------------------|---------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}` 
+ Rate Limit Group | `Heavy`                                                                                     
+ App Permission   | `ReadCallLog`                                                                               
+ User Permission  | `ReadCallLog`                                                                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5506,13 +5508,13 @@ await rc.Revoke();
 
 Sync User Call Log
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-log-sync`
-Rate Limit Group|`Heavy`
-App Permission|`ReadCallLog`
-User Permission|`ReadCallLog`
+ Name             | Value                                                                             
+------------------|-----------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-log-sync` 
+ Rate Limit Group | `Heavy`                                                                           
+ App Permission   | `ReadCallLog`                                                                     
+ User Permission  | `ReadCallLog`                                                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5533,13 +5535,13 @@ await rc.Revoke();
 
 Update User Call Queues
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-queues`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`EditCallQueuePresence`
+ Name             | Value                                                                           
+------------------|---------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                           
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-queues` 
+ Rate Limit Group | `Medium`                                                                        
+ App Permission   | `EditAccounts`                                                                  
+ User Permission  | `EditCallQueuePresence`                                                         
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5560,13 +5562,13 @@ await rc.Revoke();
 
 Get Caller Blocking Settings
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadBlockedNumbers`
+ Name             | Value                                                                               
+------------------|-------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking` 
+ Rate Limit Group | `Light`                                                                             
+ App Permission   | `ReadAccounts`                                                                      
+ User Permission  | `ReadBlockedNumbers`                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5586,13 +5588,13 @@ await rc.Revoke();
 
 Update Caller Blocking Settings
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking`
-Rate Limit Group|`Light`
-App Permission|`EditExtensions`
-User Permission|`EditBlockedNumbers`
+ Name             | Value                                                                               
+------------------|-------------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking` 
+ Rate Limit Group | `Light`                                                                             
+ App Permission   | `EditExtensions`                                                                    
+ User Permission  | `EditBlockedNumbers`                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5615,13 +5617,13 @@ Explorer.
 
 Get Extension Caller ID
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-id`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadCallerIDSettings`
+ Name             | Value                                                                         
+------------------|-------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-id` 
+ Rate Limit Group | `Light`                                                                       
+ App Permission   | `ReadAccounts`                                                                
+ User Permission  | `ReadCallerIDSettings`                                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5641,13 +5643,13 @@ await rc.Revoke();
 
 Update Extension Caller ID
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-id`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`EditCallerIDSettings`
+ Name             | Value                                                                         
+------------------|-------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-id` 
+ Rate Limit Group | `Medium`                                                                      
+ App Permission   | `EditExtensions`                                                              
+ User Permission  | `EditCallerIDSettings`                                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5669,13 +5671,13 @@ await rc.Revoke();
 
 Create Internal Text Message
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/company-pager`
-Rate Limit Group|`Medium`
-App Permission|`InternalMessages`
-User Permission|`InternalSMS`
+ Name             | Value                                                                             
+------------------|-----------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                            
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/company-pager` 
+ Rate Limit Group | `Medium`                                                                          
+ App Permission   | `InternalMessages`                                                                
+ User Permission  | `InternalSMS`                                                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5697,13 +5699,13 @@ await rc.Revoke();
 
 Get User Conferencing Settings
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/conferencing`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`OrganizeConference`
+ Name             | Value                                                                            
+------------------|----------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                            
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/conferencing` 
+ Rate Limit Group | `Light`                                                                          
+ App Permission   | `ReadAccounts`                                                                   
+ User Permission  | `OrganizeConference`                                                             
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5725,13 +5727,13 @@ await rc.Revoke();
 
 Update User Conferencing Settings
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/conferencing`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`OrganizeConference`
+ Name             | Value                                                                            
+------------------|----------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                            
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/conferencing` 
+ Rate Limit Group | `Medium`                                                                         
+ App Permission   | `EditExtensions`                                                                 
+ User Permission  | `OrganizeConference`                                                             
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5753,13 +5755,13 @@ await rc.Revoke();
 
 List Extension Devices
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/device`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadUserDevices`
+ Name             | Value                                                                      
+------------------|----------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/device` 
+ Rate Limit Group | `Light`                                                                    
+ App Permission   | `ReadAccounts`                                                             
+ User Permission  | `ReadUserDevices`                                                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5781,13 +5783,13 @@ await rc.Revoke();
 
 List Favorite Contacts
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/favorite`
-Rate Limit Group|`Light`
-App Permission|`ReadContacts`
-User Permission|`ReadPersonalContacts`
+ Name             | Value                                                                        
+------------------|------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/favorite` 
+ Rate Limit Group | `Light`                                                                      
+ App Permission   | `ReadContacts`                                                               
+ User Permission  | `ReadPersonalContacts`                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5807,13 +5809,13 @@ await rc.Revoke();
 
 Update Favorite Contact List
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/favorite`
-Rate Limit Group|`Medium`
-App Permission|`Contacts`
-User Permission|`EditPersonalContacts`
+ Name             | Value                                                                        
+------------------|------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/favorite` 
+ Rate Limit Group | `Medium`                                                                     
+ App Permission   | `Contacts`                                                                   
+ User Permission  | `EditPersonalContacts`                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5835,13 +5837,13 @@ Explorer.
 
 Get User Features
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/features`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadExtensions`
+ Name             | Value                                                                        
+------------------|------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/features` 
+ Rate Limit Group | `Medium`                                                                     
+ App Permission   | `ReadAccounts`                                                               
+ User Permission  | `ReadExtensions`                                                             
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5863,13 +5865,13 @@ await rc.Revoke();
 
 List Extension Grants
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/grant`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadExtensions`
+ Name             | Value                                                                     
+------------------|---------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/grant` 
+ Rate Limit Group | `Light`                                                                   
+ App Permission   | `ReadAccounts`                                                            
+ User Permission  | `ReadExtensions`                                                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5891,13 +5893,13 @@ await rc.Revoke();
 
 Create Custom User Greeting
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/greeting`
-Rate Limit Group|`Heavy`
-App Permission|`EditExtensions`
-User Permission|`EditUserAnsweringRules`
+ Name             | Value                                                                        
+------------------|------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/greeting` 
+ Rate Limit Group | `Heavy`                                                                      
+ App Permission   | `EditExtensions`                                                             
+ User Permission  | `EditUserAnsweringRules`                                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5921,13 +5923,13 @@ await rc.Revoke();
 
 Get Custom Greeting
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/greeting/{greetingId}`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadUserInfo`
+ Name             | Value                                                                                     
+------------------|-------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/greeting/{greetingId}` 
+ Rate Limit Group | `Medium`                                                                                  
+ App Permission   | `ReadAccounts`                                                                            
+ User Permission  | `ReadUserInfo`                                                                            
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5947,13 +5949,13 @@ await rc.Revoke();
 
 List Messages
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store`
-Rate Limit Group|`Light`
-App Permission|`ReadMessages`
-User Permission|`ReadMessages`
+ Name             | Value                                                                             
+------------------|-----------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store` 
+ Rate Limit Group | `Light`                                                                           
+ App Permission   | `ReadMessages`                                                                    
+ User Permission  | `ReadMessages`                                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -5974,13 +5976,13 @@ await rc.Revoke();
 
 Delete Conversation
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store`
-Rate Limit Group|`Medium`
-App Permission|`EditMessages`
-User Permission|`EditMessages`
+ Name             | Value                                                                             
+------------------|-----------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                          
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store` 
+ Rate Limit Group | `Medium`                                                                          
+ App Permission   | `EditMessages`                                                                    
+ User Permission  | `EditMessages`                                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6002,13 +6004,13 @@ await rc.Revoke();
 
 Get Message(s)
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
-Rate Limit Group|`Light`
-App Permission|`ReadMessages`
-User Permission|`ReadMessages`
+ Name             | Value                                                                                         
+------------------|-----------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}` 
+ Rate Limit Group | `Light`                                                                                       
+ App Permission   | `ReadMessages`                                                                                
+ User Permission  | `ReadMessages`                                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6028,13 +6030,13 @@ await rc.Revoke();
 
 Update Message(s)
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
-Rate Limit Group|`Medium`
-App Permission|`EditMessages`
-User Permission|`EditMessages`
+ Name             | Value                                                                                         
+------------------|-----------------------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}` 
+ Rate Limit Group | `Medium`                                                                                      
+ App Permission   | `EditMessages`                                                                                
+ User Permission  | `EditMessages`                                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6055,13 +6057,13 @@ await rc.Revoke();
 
 Delete Message
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
-Rate Limit Group|`Medium`
-App Permission|`EditMessages`
-User Permission|`EditMessages`
+ Name             | Value                                                                                         
+------------------|-----------------------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}` 
+ Rate Limit Group | `Medium`                                                                                      
+ App Permission   | `EditMessages`                                                                                
+ User Permission  | `EditMessages`                                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6083,13 +6085,13 @@ await rc.Revoke();
 
 Patch Message(s)
 
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}`
-Rate Limit Group|`Medium`
-App Permission|`EditMessages`
-User Permission|`EditMessages`
+ Name             | Value                                                                                         
+------------------|-----------------------------------------------------------------------------------------------
+ HTTP Method      | `PATCH`                                                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}` 
+ Rate Limit Group | `Medium`                                                                                      
+ App Permission   | `EditMessages`                                                                                
+ User Permission  | `EditMessages`                                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6110,13 +6112,13 @@ await rc.Revoke();
 
 Sync Messages
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-sync`
-Rate Limit Group|`Light`
-App Permission|`ReadMessages`
-User Permission|`ReadMessages`
+ Name             | Value                                                                            
+------------------|----------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                            
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-sync` 
+ Rate Limit Group | `Light`                                                                          
+ App Permission   | `ReadMessages`                                                                   
+ User Permission  | `ReadMessages`                                                                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6137,13 +6139,13 @@ await rc.Revoke();
 
 Get User Presence Status
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/presence`
-Rate Limit Group|`Light`
-App Permission|`ReadPresence`
-User Permission|`ReadPresenceStatus`
+ Name             | Value                                                                        
+------------------|------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/presence` 
+ Rate Limit Group | `Light`                                                                      
+ App Permission   | `ReadPresence`                                                               
+ User Permission  | `ReadPresenceStatus`                                                         
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6165,13 +6167,13 @@ await rc.Revoke();
 
 Update User Presence Status
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/presence`
-Rate Limit Group|`Medium`
-App Permission|`EditPresence`
-User Permission|`N/A`
+ Name             | Value                                                                        
+------------------|------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/presence` 
+ Rate Limit Group | `Medium`                                                                     
+ App Permission   | `EditPresence`                                                               
+ User Permission  | `N/A`                                                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6192,13 +6194,13 @@ await rc.Revoke();
 
 Get User Profile Image
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadExtensions`
+ Name             | Value                                                                             
+------------------|-----------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image` 
+ Rate Limit Group | `Medium`                                                                          
+ App Permission   | `ReadAccounts`                                                                    
+ User Permission  | `ReadExtensions`                                                                  
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6222,13 +6224,13 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 Upload User Profile Image
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image`
-Rate Limit Group|`Heavy`
-App Permission|`EditExtensions`
-User Permission|`EditUserInfo`
+ Name             | Value                                                                             
+------------------|-----------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                            
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image` 
+ Rate Limit Group | `Heavy`                                                                           
+ App Permission   | `EditExtensions`                                                                  
+ User Permission  | `EditUserInfo`                                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6250,13 +6252,13 @@ await rc.Revoke();
 
 Update User Profile Image
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image`
-Rate Limit Group|`Heavy`
-App Permission|`EditExtensions`
-User Permission|`EditUserInfo`
+ Name             | Value                                                                             
+------------------|-----------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image` 
+ Rate Limit Group | `Heavy`                                                                           
+ App Permission   | `EditExtensions`                                                                  
+ User Permission  | `EditUserInfo`                                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6278,13 +6280,13 @@ await rc.Revoke();
 
 Delete User Profile Image
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`EditUserInfo`
+ Name             | Value                                                                             
+------------------|-----------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                          
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image` 
+ Rate Limit Group | `Medium`                                                                          
+ App Permission   | `EditExtensions`                                                                  
+ User Permission  | `EditUserInfo`                                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6304,13 +6306,13 @@ await rc.Revoke();
 
 Get Scaled Profile Image
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`N/A`
+ Name             | Value                                                                                         
+------------------|-----------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/profile-image/{scaleSize}` 
+ Rate Limit Group | `Medium`                                                                                      
+ App Permission   | `ReadAccounts`                                                                                
+ User Permission  | `N/A`                                                                                         
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6336,13 +6338,13 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 Make RingOut Call
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/ring-out`
-Rate Limit Group|`Heavy`
-App Permission|`RingOut`
-User Permission|`N/A`
+ Name             | Value                                                                        
+------------------|------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/ring-out` 
+ Rate Limit Group | `Heavy`                                                                      
+ App Permission   | `RingOut`                                                                    
+ User Permission  | `N/A`                                                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6363,13 +6365,13 @@ await rc.Revoke();
 
 Get RingOut Call Status
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`
-Rate Limit Group|`Light`
-App Permission|`RingOut`
-User Permission|`N/A`
+ Name             | Value                                                                                    
+------------------|------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}` 
+ Rate Limit Group | `Light`                                                                                  
+ App Permission   | `RingOut`                                                                                
+ User Permission  | `N/A`                                                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6389,13 +6391,13 @@ await rc.Revoke();
 
 Cancel RingOut Call
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}`
-Rate Limit Group|`Heavy`
-App Permission|`RingOut`
-User Permission|`N/A`
+ Name             | Value                                                                                    
+------------------|------------------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                                 
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/ring-out/{ringoutId}` 
+ Rate Limit Group | `Heavy`                                                                                  
+ App Permission   | `RingOut`                                                                                
+ User Permission  | `N/A`                                                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6415,13 +6417,13 @@ await rc.Revoke();
 
 Get Forward All Company Calls
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/forward-all-calls`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyAnsweringRules`
+ Name             | Value                                                         
+------------------|---------------------------------------------------------------
+ HTTP Method      | `GET`                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/forward-all-calls` 
+ Rate Limit Group | `Light`                                                       
+ App Permission   | `ReadAccounts`                                                
+ User Permission  | `ReadCompanyAnsweringRules`                                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6441,13 +6443,13 @@ Explorer.
 
 Update Forward All Company Calls
 
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/forward-all-calls`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`EditCompanyAnsweringRules`
+ Name             | Value                                                         
+------------------|---------------------------------------------------------------
+ HTTP Method      | `PATCH`                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/forward-all-calls` 
+ Rate Limit Group | `Medium`                                                      
+ App Permission   | `EditAccounts`                                                
+ User Permission  | `EditCompanyAnsweringRules`                                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6469,13 +6471,13 @@ Explorer.
 
 Get Account Greeting Media Content
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/greeting/{greetingId}/content`
-Rate Limit Group|`Heavy`
-App Permission|`ReadAccounts`
-User Permission|`N/A`
+ Name             | Value                                                                     
+------------------|---------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/greeting/{greetingId}/content` 
+ Rate Limit Group | `Heavy`                                                                   
+ App Permission   | `ReadAccounts`                                                            
+ User Permission  | `N/A`                                                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6500,13 +6502,13 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 Get IVR Prompt Content
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/ivr-prompts/{promptId}/content`
-Rate Limit Group|`Heavy`
-App Permission|`ReadAccounts`
-User Permission|`N/A`
+ Name             | Value                                                                      
+------------------|----------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/ivr-prompts/{promptId}/content` 
+ Rate Limit Group | `Heavy`                                                                    
+ App Permission   | `ReadAccounts`                                                             
+ User Permission  | `N/A`                                                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6531,13 +6533,13 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 Create Message Store Report
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/message-store-report`
-Rate Limit Group|`Heavy`
-App Permission|`ReadMessages`
-User Permission|`Users`
+ Name             | Value                                                            
+------------------|------------------------------------------------------------------
+ HTTP Method      | `POST`                                                           
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/message-store-report` 
+ Rate Limit Group | `Heavy`                                                          
+ App Permission   | `ReadMessages`                                                   
+ User Permission  | `Users`                                                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6558,13 +6560,13 @@ await rc.Revoke();
 
 Get Message Store Report Task
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/message-store-report/{taskId}`
-Rate Limit Group|`Heavy`
-App Permission|`ReadMessages`
-User Permission|`Users`
+ Name             | Value                                                                     
+------------------|---------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/message-store-report/{taskId}` 
+ Rate Limit Group | `Heavy`                                                                   
+ App Permission   | `ReadMessages`                                                            
+ User Permission  | `Users`                                                                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6584,13 +6586,13 @@ Explorer.
 
 Get Call Recording Content
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/recording/{recordingId}/content`
-Rate Limit Group|`Heavy`
-App Permission|`ReadCallRecording`
-User Permission|`N/A`
+ Name             | Value                                                                       
+------------------|-----------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/recording/{recordingId}/content` 
+ Rate Limit Group | `Heavy`                                                                     
+ App Permission   | `ReadCallRecording`                                                         
+ User Permission  | `N/A`                                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6615,13 +6617,13 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 Edit Sites
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/sites/{siteId}/bulk-assign`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`Sites`
+ Name             | Value                                                                  
+------------------|------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                 
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/sites/{siteId}/bulk-assign` 
+ Rate Limit Group | `Medium`                                                               
+ App Permission   | `EditExtensions`                                                       
+ User Permission  | `Sites`                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6637,42 +6639,17 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Multi-Site-assignMultipleSites) in API Explorer.
 
-## listSiteMembers
-
-List Site Members
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/sites/{siteId}/members`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadExtensions`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).Sites(siteId).Members().Get();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [SiteMembersList](./Definitions/SiteMembersList.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Multi-Site-listSiteMembers) in API Explorer.
-
 ## createCallOutCallSession
 
 Make CallOut
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/call-out`
-Rate Limit Group|`Heavy`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                          
+------------------|----------------------------------------------------------------
+ HTTP Method      | `POST`                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/call-out` 
+ Rate Limit Group | `Heavy`                                                        
+ App Permission   | `CallControl`                                                  
+ User Permission  | `N/A`                                                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6692,13 +6669,13 @@ await rc.Revoke();
 
 Start Conference Call Session
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/conference`
-Rate Limit Group|`Heavy`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                            
+------------------|------------------------------------------------------------------
+ HTTP Method      | `POST`                                                           
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/conference` 
+ Rate Limit Group | `Heavy`                                                          
+ App Permission   | `CallControl`                                                    
+ User Permission  | `N/A`                                                            
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6717,13 +6694,13 @@ await rc.Revoke();
 
 Get Call Session Status
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                               
+------------------|-------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}` 
+ Rate Limit Group | `Light`                                                                             
+ App Permission   | `CallControl`                                                                       
+ User Permission  | `N/A`                                                                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6744,13 +6721,13 @@ await rc.Revoke();
 
 Drop Call Session
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                               
+------------------|-------------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                            
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}` 
+ Rate Limit Group | `Light`                                                                             
+ App Permission   | `CallControl`                                                                       
+ User Permission  | `N/A`                                                                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6769,13 +6746,13 @@ await rc.Revoke();
 
 Get Default User Role
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/user-role/default`
-Rate Limit Group|`Light`
-App Permission|`RoleManagement`
-User Permission|`Roles`
+ Name             | Value                                                         
+------------------|---------------------------------------------------------------
+ HTTP Method      | `GET`                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/user-role/default` 
+ Rate Limit Group | `Light`                                                       
+ App Permission   | `RoleManagement`                                              
+ User Permission  | `Roles`                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6794,13 +6771,13 @@ await rc.Revoke();
 
 Set Default User Role
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/user-role/default`
-Rate Limit Group|`Medium`
-App Permission|`RoleManagement`
-User Permission|`Roles`
+ Name             | Value                                                         
+------------------|---------------------------------------------------------------
+ HTTP Method      | `PUT`                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/user-role/default` 
+ Rate Limit Group | `Medium`                                                      
+ App Permission   | `RoleManagement`                                              
+ User Permission  | `Roles`                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6820,13 +6797,13 @@ await rc.Revoke();
 
 Assign Multiple User Roles
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/user-role/{roleId}/bulk-assign`
-Rate Limit Group|`Heavy`
-App Permission|`RoleManagement`
-User Permission|`EditUserRoles`
+ Name             | Value                                                                      
+------------------|----------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/user-role/{roleId}/bulk-assign` 
+ Rate Limit Group | `Heavy`                                                                    
+ App Permission   | `RoleManagement`                                                           
+ User Permission  | `EditUserRoles`                                                            
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6846,13 +6823,13 @@ await rc.Revoke();
 
 Register Device
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/client-info/sip-provision`
-Rate Limit Group|`Heavy`
-App Permission|`VoipCalling`
-User Permission|`N/A`
+ Name             | Value                                             
+------------------|---------------------------------------------------
+ HTTP Method      | `POST`                                            
+ Endpoint         | `/restapi/{apiVersion}/client-info/sip-provision` 
+ Rate Limit Group | `Heavy`                                           
+ App Permission   | `VoipCalling`                                     
+ User Permission  | `N/A`                                             
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6873,13 +6850,13 @@ Explorer.
 
 List Fax Cover Pages
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/fax-cover-page`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                             
+------------------|---------------------------------------------------
+ HTTP Method      | `GET`                                             
+ Endpoint         | `/restapi/{apiVersion}/dictionary/fax-cover-page` 
+ Rate Limit Group | `Light`                                           
+ App Permission   | `N/A`                                             
+ User Permission  | `N/A`                                             
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6898,13 +6875,13 @@ await rc.Revoke();
 
 List Permissions
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/permission`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                         
+------------------|-----------------------------------------------
+ HTTP Method      | `GET`                                         
+ Endpoint         | `/restapi/{apiVersion}/dictionary/permission` 
+ Rate Limit Group | `Light`                                       
+ App Permission   | `N/A`                                         
+ User Permission  | `N/A`                                         
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6923,13 +6900,13 @@ await rc.Revoke();
 
 Get Permission
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/permission/{permissionId}`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                                        
+------------------|--------------------------------------------------------------
+ HTTP Method      | `GET`                                                        
+ Endpoint         | `/restapi/{apiVersion}/dictionary/permission/{permissionId}` 
+ Rate Limit Group | `Light`                                                      
+ App Permission   | `N/A`                                                        
+ User Permission  | `N/A`                                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6947,13 +6924,13 @@ await rc.Revoke();
 
 Get Adaptive Card
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/adaptive-cards/{cardId}`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                        
+------------------|----------------------------------------------
+ HTTP Method      | `GET`                                        
+ Endpoint         | `/team-messaging/v1/adaptive-cards/{cardId}` 
+ Rate Limit Group | `Medium`                                     
+ App Permission   | `TeamMessaging`                              
+ User Permission  | `N/A`                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6970,13 +6947,13 @@ await rc.Revoke();
 
 Update Adaptive Card
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/team-messaging/v1/adaptive-cards/{cardId}`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                        
+------------------|----------------------------------------------
+ HTTP Method      | `PUT`                                        
+ Endpoint         | `/team-messaging/v1/adaptive-cards/{cardId}` 
+ Rate Limit Group | `Medium`                                     
+ App Permission   | `TeamMessaging`                              
+ User Permission  | `N/A`                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -6994,13 +6971,13 @@ await rc.Revoke();
 
 Delete Adaptive Card
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/team-messaging/v1/adaptive-cards/{cardId}`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                        
+------------------|----------------------------------------------
+ HTTP Method      | `DELETE`                                     
+ Endpoint         | `/team-messaging/v1/adaptive-cards/{cardId}` 
+ Rate Limit Group | `Medium`                                     
+ App Permission   | `TeamMessaging`                              
+ User Permission  | `N/A`                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7017,13 +6994,13 @@ await rc.Revoke();
 
 Add Chat to Favorites
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/chats/{chatId}/favorite`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                        
+------------------|----------------------------------------------
+ HTTP Method      | `POST`                                       
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/favorite` 
+ Rate Limit Group | `Medium`                                     
+ App Permission   | `TeamMessaging`                              
+ User Permission  | `N/A`                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7040,13 +7017,13 @@ await rc.Revoke();
 
 List Notes
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/chats/{chatId}/notes`
-Rate Limit Group|`Heavy`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `GET`                                     
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/notes` 
+ Rate Limit Group | `Heavy`                                   
+ App Permission   | `TeamMessaging`                           
+ User Permission  | `N/A`                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7064,13 +7041,13 @@ await rc.Revoke();
 
 Create Note
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/chats/{chatId}/notes`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `POST`                                    
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/notes` 
+ Rate Limit Group | `Medium`                                  
+ App Permission   | `TeamMessaging`                           
+ User Permission  | `N/A`                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7088,13 +7065,13 @@ await rc.Revoke();
 
 List Posts
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/chats/{chatId}/posts`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `GET`                                     
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/posts` 
+ Rate Limit Group | `Medium`                                  
+ App Permission   | `TeamMessaging`                           
+ User Permission  | `N/A`                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7112,13 +7089,13 @@ await rc.Revoke();
 
 Create Post
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/chats/{chatId}/posts`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `POST`                                    
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/posts` 
+ Rate Limit Group | `Medium`                                  
+ App Permission   | `TeamMessaging`                           
+ User Permission  | `N/A`                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7136,13 +7113,13 @@ await rc.Revoke();
 
 Get Post
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/chats/{chatId}/posts/{postId}`
-Rate Limit Group|`Light`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                              
+------------------|----------------------------------------------------
+ HTTP Method      | `GET`                                              
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/posts/{postId}` 
+ Rate Limit Group | `Light`                                            
+ App Permission   | `TeamMessaging`                                    
+ User Permission  | `N/A`                                              
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7159,13 +7136,13 @@ await rc.Revoke();
 
 Delete Post
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/team-messaging/v1/chats/{chatId}/posts/{postId}`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                              
+------------------|----------------------------------------------------
+ HTTP Method      | `DELETE`                                           
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/posts/{postId}` 
+ Rate Limit Group | `Medium`                                           
+ App Permission   | `TeamMessaging`                                    
+ User Permission  | `N/A`                                              
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7182,13 +7159,13 @@ await rc.Revoke();
 
 Update Post
 
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/team-messaging/v1/chats/{chatId}/posts/{postId}`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                              
+------------------|----------------------------------------------------
+ HTTP Method      | `PATCH`                                            
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/posts/{postId}` 
+ Rate Limit Group | `Medium`                                           
+ App Permission   | `TeamMessaging`                                    
+ User Permission  | `N/A`                                              
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7206,13 +7183,13 @@ await rc.Revoke();
 
 List Chat Tasks
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/chats/{chatId}/tasks`
-Rate Limit Group|`Heavy`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `GET`                                     
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/tasks` 
+ Rate Limit Group | `Heavy`                                   
+ App Permission   | `TeamMessaging`                           
+ User Permission  | `N/A`                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7230,13 +7207,13 @@ await rc.Revoke();
 
 Create Task
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/chats/{chatId}/tasks`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `POST`                                    
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/tasks` 
+ Rate Limit Group | `Medium`                                  
+ App Permission   | `TeamMessaging`                           
+ User Permission  | `N/A`                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7254,13 +7231,13 @@ await rc.Revoke();
 
 Remove Chat from Favorites
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/chats/{chatId}/unfavorite`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                          
+------------------|------------------------------------------------
+ HTTP Method      | `POST`                                         
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/unfavorite` 
+ Rate Limit Group | `Medium`                                       
+ App Permission   | `TeamMessaging`                                
+ User Permission  | `N/A`                                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7277,13 +7254,13 @@ await rc.Revoke();
 
 List Conversations
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/conversations`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                              
+------------------|------------------------------------
+ HTTP Method      | `GET`                              
+ Endpoint         | `/team-messaging/v1/conversations` 
+ Rate Limit Group | `Medium`                           
+ App Permission   | `TeamMessaging`                    
+ User Permission  | `N/A`                              
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7302,13 +7279,13 @@ await rc.Revoke();
 
 Create/Open Conversation
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/conversations`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                              
+------------------|------------------------------------
+ HTTP Method      | `POST`                             
+ Endpoint         | `/team-messaging/v1/conversations` 
+ Rate Limit Group | `Medium`                           
+ App Permission   | `TeamMessaging`                    
+ User Permission  | `N/A`                              
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7326,13 +7303,13 @@ await rc.Revoke();
 
 Get Conversation
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/conversations/{chatId}`
-Rate Limit Group|`Light`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                       
+------------------|---------------------------------------------
+ HTTP Method      | `GET`                                       
+ Endpoint         | `/team-messaging/v1/conversations/{chatId}` 
+ Rate Limit Group | `Light`                                     
+ App Permission   | `TeamMessaging`                             
+ User Permission  | `N/A`                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7349,13 +7326,13 @@ await rc.Revoke();
 
 List Data Export Tasks
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/data-export`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`Glip`
+ Name             | Value                            
+------------------|----------------------------------
+ HTTP Method      | `GET`                            
+ Endpoint         | `/team-messaging/v1/data-export` 
+ Rate Limit Group | `Medium`                         
+ App Permission   | `TeamMessaging`                  
+ User Permission  | `Glip`                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7374,13 +7351,13 @@ await rc.Revoke();
 
 Create Data Export Task
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/data-export`
-Rate Limit Group|`Heavy`
-App Permission|`TeamMessaging`
-User Permission|`Glip`
+ Name             | Value                            
+------------------|----------------------------------
+ HTTP Method      | `POST`                           
+ Endpoint         | `/team-messaging/v1/data-export` 
+ Rate Limit Group | `Heavy`                          
+ App Permission   | `TeamMessaging`                  
+ User Permission  | `Glip`                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7399,13 +7376,13 @@ Explorer.
 
 Get Data Export Task
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/data-export/{taskId}`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`Glip`
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `GET`                                     
+ Endpoint         | `/team-messaging/v1/data-export/{taskId}` 
+ Rate Limit Group | `Medium`                                  
+ App Permission   | `TeamMessaging`                           
+ User Permission  | `Glip`                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7422,13 +7399,13 @@ await rc.Revoke();
 
 List Group Events
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/groups/{groupId}/events`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                        
+------------------|----------------------------------------------
+ HTTP Method      | `GET`                                        
+ Endpoint         | `/team-messaging/v1/groups/{groupId}/events` 
+ Rate Limit Group | `Medium`                                     
+ App Permission   | `TeamMessaging`                              
+ User Permission  | `N/A`                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7445,13 +7422,13 @@ await rc.Revoke();
 
 Create Event by Group ID
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/groups/{groupId}/events`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                        
+------------------|----------------------------------------------
+ HTTP Method      | `POST`                                       
+ Endpoint         | `/team-messaging/v1/groups/{groupId}/events` 
+ Rate Limit Group | `Medium`                                     
+ App Permission   | `TeamMessaging`                              
+ User Permission  | `N/A`                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7469,13 +7446,13 @@ await rc.Revoke();
 
 List Webhooks in Group
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/groups/{groupId}/webhooks`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                          
+------------------|------------------------------------------------
+ HTTP Method      | `GET`                                          
+ Endpoint         | `/team-messaging/v1/groups/{groupId}/webhooks` 
+ Rate Limit Group | `Medium`                                       
+ App Permission   | `TeamMessaging`                                
+ User Permission  | `N/A`                                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7493,13 +7470,13 @@ Explorer.
 
 Create Webhook in Group
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/groups/{groupId}/webhooks`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                          
+------------------|------------------------------------------------
+ HTTP Method      | `POST`                                         
+ Endpoint         | `/team-messaging/v1/groups/{groupId}/webhooks` 
+ Rate Limit Group | `Medium`                                       
+ App Permission   | `TeamMessaging`                                
+ User Permission  | `N/A`                                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7517,13 +7494,13 @@ Explorer.
 
 Publish Note
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/notes/{noteId}/publish`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                       
+------------------|---------------------------------------------
+ HTTP Method      | `POST`                                      
+ Endpoint         | `/team-messaging/v1/notes/{noteId}/publish` 
+ Rate Limit Group | `Medium`                                    
+ App Permission   | `TeamMessaging`                             
+ User Permission  | `N/A`                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7540,13 +7517,13 @@ await rc.Revoke();
 
 Unlock Note
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/notes/{noteId}/unlock`
-Rate Limit Group|`Light`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                      
+------------------|--------------------------------------------
+ HTTP Method      | `POST`                                     
+ Endpoint         | `/team-messaging/v1/notes/{noteId}/unlock` 
+ Rate Limit Group | `Light`                                    
+ App Permission   | `TeamMessaging`                            
+ User Permission  | `N/A`                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7563,13 +7540,13 @@ await rc.Revoke();
 
 List Recent Chats
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/team-messaging/v1/recent/chats`
-Rate Limit Group|`Light`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                             
+------------------|-----------------------------------
+ HTTP Method      | `GET`                             
+ Endpoint         | `/team-messaging/v1/recent/chats` 
+ Rate Limit Group | `Light`                           
+ App Permission   | `TeamMessaging`                   
+ User Permission  | `N/A`                             
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7588,13 +7565,13 @@ await rc.Revoke();
 
 Complete Task
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/tasks/{taskId}/complete`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                        
+------------------|----------------------------------------------
+ HTTP Method      | `POST`                                       
+ Endpoint         | `/team-messaging/v1/tasks/{taskId}/complete` 
+ Rate Limit Group | `Medium`                                     
+ App Permission   | `TeamMessaging`                              
+ User Permission  | `N/A`                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7612,13 +7589,13 @@ await rc.Revoke();
 
 Archive Team
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/teams/{chatId}/archive`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                       
+------------------|---------------------------------------------
+ HTTP Method      | `POST`                                      
+ Endpoint         | `/team-messaging/v1/teams/{chatId}/archive` 
+ Rate Limit Group | `Medium`                                    
+ App Permission   | `TeamMessaging`                             
+ User Permission  | `N/A`                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7635,13 +7612,13 @@ await rc.Revoke();
 
 Leave Team
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/teams/{chatId}/leave`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `POST`                                    
+ Endpoint         | `/team-messaging/v1/teams/{chatId}/leave` 
+ Rate Limit Group | `Medium`                                  
+ App Permission   | `TeamMessaging`                           
+ User Permission  | `N/A`                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7658,13 +7635,13 @@ await rc.Revoke();
 
 Remove Team Members
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/teams/{chatId}/remove`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                      
+------------------|--------------------------------------------
+ HTTP Method      | `POST`                                     
+ Endpoint         | `/team-messaging/v1/teams/{chatId}/remove` 
+ Rate Limit Group | `Medium`                                   
+ App Permission   | `TeamMessaging`                            
+ User Permission  | `N/A`                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7682,13 +7659,13 @@ await rc.Revoke();
 
 Unarchive Team
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/teams/{chatId}/unarchive`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                         
+------------------|-----------------------------------------------
+ HTTP Method      | `POST`                                        
+ Endpoint         | `/team-messaging/v1/teams/{chatId}/unarchive` 
+ Rate Limit Group | `Medium`                                      
+ App Permission   | `TeamMessaging`                               
+ User Permission  | `N/A`                                         
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7705,13 +7682,13 @@ await rc.Revoke();
 
 Activate Webhook
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/webhooks/{webhookId}/activate`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                              
+------------------|----------------------------------------------------
+ HTTP Method      | `POST`                                             
+ Endpoint         | `/team-messaging/v1/webhooks/{webhookId}/activate` 
+ Rate Limit Group | `Medium`                                           
+ App Permission   | `TeamMessaging`                                    
+ User Permission  | `N/A`                                              
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7728,13 +7705,13 @@ await rc.Revoke();
 
 Suspend Webhook
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/webhooks/{webhookId}/suspend`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                             
+------------------|---------------------------------------------------
+ HTTP Method      | `POST`                                            
+ Endpoint         | `/team-messaging/v1/webhooks/{webhookId}/suspend` 
+ Rate Limit Group | `Medium`                                          
+ App Permission   | `TeamMessaging`                                   
+ User Permission  | `N/A`                                             
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7751,13 +7728,13 @@ await rc.Revoke();
 
 List Sessions across Multiple Webinars
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/configuration/v1/sessions`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
+ Name             | Value                                
+------------------|--------------------------------------
+ HTTP Method      | `GET`                                
+ Endpoint         | `/webinar/configuration/v1/sessions` 
+ Rate Limit Group | `Heavy`                              
+ App Permission   | `ReadWebinars`                       
+ User Permission  | `N/A`                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7777,13 +7754,13 @@ Explorer.
 
 List User's Webinars
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/configuration/v1/webinars`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
+ Name             | Value                                
+------------------|--------------------------------------
+ HTTP Method      | `GET`                                
+ Endpoint         | `/webinar/configuration/v1/webinars` 
+ Rate Limit Group | `Heavy`                              
+ App Permission   | `ReadWebinars`                       
+ User Permission  | `N/A`                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7803,13 +7780,13 @@ Explorer.
 
 Create Webinar
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/webinar/configuration/v1/webinars`
-Rate Limit Group|`Heavy`
-App Permission|`EditWebinars`
-User Permission|`N/A`
+ Name             | Value                                
+------------------|--------------------------------------
+ HTTP Method      | `POST`                               
+ Endpoint         | `/webinar/configuration/v1/webinars` 
+ Rate Limit Group | `Heavy`                              
+ App Permission   | `EditWebinars`                       
+ User Permission  | `N/A`                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7828,13 +7805,13 @@ Explorer.
 
 Get Webinar
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/configuration/v1/webinars/{webinarId}`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
+ Name             | Value                                            
+------------------|--------------------------------------------------
+ HTTP Method      | `GET`                                            
+ Endpoint         | `/webinar/configuration/v1/webinars/{webinarId}` 
+ Rate Limit Group | `Heavy`                                          
+ App Permission   | `ReadWebinars`                                   
+ User Permission  | `N/A`                                            
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7851,13 +7828,13 @@ await rc.Revoke();
 
 Delete Webinar
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/webinar/configuration/v1/webinars/{webinarId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditWebinars`
-User Permission|`N/A`
+ Name             | Value                                            
+------------------|--------------------------------------------------
+ HTTP Method      | `DELETE`                                         
+ Endpoint         | `/webinar/configuration/v1/webinars/{webinarId}` 
+ Rate Limit Group | `Heavy`                                          
+ App Permission   | `EditWebinars`                                   
+ User Permission  | `N/A`                                            
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7875,13 +7852,13 @@ Explorer.
 
 Update Webinar
 
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/webinar/configuration/v1/webinars/{webinarId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditWebinars`
-User Permission|`N/A`
+ Name             | Value                                            
+------------------|--------------------------------------------------
+ HTTP Method      | `PATCH`                                          
+ Endpoint         | `/webinar/configuration/v1/webinars/{webinarId}` 
+ Rate Limit Group | `Heavy`                                          
+ App Permission   | `EditWebinars`                                   
+ User Permission  | `N/A`                                            
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -7896,93 +7873,17 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Webinars-and-Sessions-rcwConfigUpdateWebinar) in API
 Explorer.
 
-## rcwHistoryListAllCompanySessions
-
-List Historical Webinar Sessions across Multiple Webinars / Hosts
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/history/v1/company/sessions`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Webinar().History().V1().Company().Sessions().Get(rcwHistoryListAllCompanySessionsParameters);
-await rc.Revoke();
-```
-
-- `rcwHistoryListAllCompanySessionsParameters` is of
-  type [RcwHistoryListAllCompanySessionsParameters](./Definitions/RcwHistoryListAllCompanySessionsParameters.cs)
-- `result` is of type [SessionGlobalListResource](./Definitions/SessionGlobalListResource.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Historical-Webinars-rcwHistoryListAllCompanySessions) in
-API Explorer.
-
-## rcwHistoryListRecordings
-
-List Webinar Recordings
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/history/v1/recordings`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Webinar().History().V1().Recordings().List(rcwHistoryListRecordingsParameters);
-await rc.Revoke();
-```
-
-- `rcwHistoryListRecordingsParameters` is of
-  type [RcwHistoryListRecordingsParameters](./Definitions/RcwHistoryListRecordingsParameters.cs)
-- `result` is of type [RecordingListResource](./Definitions/RecordingListResource.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Historical-Recordings-rcwHistoryListRecordings) in API
-Explorer.
-
-## rcwHistoryGetRecording
-
-Get Webinar Recording
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/history/v1/recordings/{recordingId}`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Webinar().History().V1().Recordings(recordingId).Get();
-await rc.Revoke();
-```
-
-- `result` is of type [RecordingItemExtendedModel](./Definitions/RecordingItemExtendedModel.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Historical-Recordings-rcwHistoryGetRecording) in API
-Explorer.
-
 ## rcwHistoryAdminListRecordings
 
 List Webinar Recordings (Admin)
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/history/v1/company/recordings`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
+ Name             | Value                                    
+------------------|------------------------------------------
+ HTTP Method      | `GET`                                    
+ Endpoint         | `/webinar/history/v1/company/recordings` 
+ Rate Limit Group | `Heavy`                                  
+ App Permission   | `ReadWebinars`                           
+ User Permission  | `N/A`                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8002,13 +7903,13 @@ Explorer.
 
 Get Webinar Recording (Admin)
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/history/v1/company/recordings/{recordingId}`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
+ Name             | Value                                                  
+------------------|--------------------------------------------------------
+ HTTP Method      | `GET`                                                  
+ Endpoint         | `/webinar/history/v1/company/recordings/{recordingId}` 
+ Rate Limit Group | `Heavy`                                                
+ App Permission   | `ReadWebinars`                                         
+ User Permission  | `N/A`                                                  
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8022,17 +7923,93 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Historical-Recordings-rcwHistoryAdminGetRecording) in API
 Explorer.
 
+## rcwHistoryListRecordings
+
+List Webinar Recordings
+
+ Name             | Value                            
+------------------|----------------------------------
+ HTTP Method      | `GET`                            
+ Endpoint         | `/webinar/history/v1/recordings` 
+ Rate Limit Group | `Heavy`                          
+ App Permission   | `ReadWebinars`                   
+ User Permission  | `N/A`                            
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Webinar().History().V1().Recordings().List(rcwHistoryListRecordingsParameters);
+await rc.Revoke();
+```
+
+- `rcwHistoryListRecordingsParameters` is of
+  type [RcwHistoryListRecordingsParameters](./Definitions/RcwHistoryListRecordingsParameters.cs)
+- `result` is of type [RecordingListResource](./Definitions/RecordingListResource.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Historical-Recordings-rcwHistoryListRecordings) in API
+Explorer.
+
+## rcwHistoryGetRecording
+
+Get Webinar Recording
+
+ Name             | Value                                          
+------------------|------------------------------------------------
+ HTTP Method      | `GET`                                          
+ Endpoint         | `/webinar/history/v1/recordings/{recordingId}` 
+ Rate Limit Group | `Heavy`                                        
+ App Permission   | `ReadWebinars`                                 
+ User Permission  | `N/A`                                          
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Webinar().History().V1().Recordings(recordingId).Get();
+await rc.Revoke();
+```
+
+- `result` is of type [RecordingItemExtendedModel](./Definitions/RecordingItemExtendedModel.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Historical-Recordings-rcwHistoryGetRecording) in API
+Explorer.
+
+## rcwHistoryListAllCompanySessions
+
+List Historical Webinar Sessions across Multiple Webinars / Hosts
+
+ Name             | Value                                  
+------------------|----------------------------------------
+ HTTP Method      | `GET`                                  
+ Endpoint         | `/webinar/history/v1/company/sessions` 
+ Rate Limit Group | `Heavy`                                
+ App Permission   | `ReadWebinars`                         
+ User Permission  | `N/A`                                  
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Webinar().History().V1().Company().Sessions().Get(rcwHistoryListAllCompanySessionsParameters);
+await rc.Revoke();
+```
+
+- `rcwHistoryListAllCompanySessionsParameters` is of
+  type [RcwHistoryListAllCompanySessionsParameters](./Definitions/RcwHistoryListAllCompanySessionsParameters.cs)
+- `result` is of type [SessionGlobalListResource](./Definitions/SessionGlobalListResource.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Historical-Webinars-rcwHistoryListAllCompanySessions) in
+API Explorer.
+
 ## rcwHistoryGetSession
 
 Get Historical Webinar Session
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/history/v1/webinars/{webinarId}/sessions/{sessionId}`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
+ Name             | Value                                                           
+------------------|-----------------------------------------------------------------
+ HTTP Method      | `GET`                                                           
+ Endpoint         | `/webinar/history/v1/webinars/{webinarId}/sessions/{sessionId}` 
+ Rate Limit Group | `Heavy`                                                         
+ App Permission   | `ReadWebinars`                                                  
+ User Permission  | `N/A`                                                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8045,17 +8022,65 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Historical-Webinars-rcwHistoryGetSession) in API Explorer.
 
+## rcwRegGetSession
+
+Get Registration Session Info
+
+ Name             | Value                                           
+------------------|-------------------------------------------------
+ HTTP Method      | `GET`                                           
+ Endpoint         | `/webinar/registration/v1/sessions/{sessionId}` 
+ Rate Limit Group | `Heavy`                                         
+ App Permission   | `ReadWebinars`                                  
+ User Permission  | `N/A`                                           
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Webinar().Registration().V1().Sessions(sessionId).Get();
+await rc.Revoke();
+```
+
+- `result` is of type [RegSessionModel](./Definitions/RegSessionModel.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Registration-Management-rcwRegGetSession) in API Explorer.
+
+## rcwRegUpdateSession
+
+Update Registration Session
+
+ Name             | Value                                           
+------------------|-------------------------------------------------
+ HTTP Method      | `PATCH`                                         
+ Endpoint         | `/webinar/registration/v1/sessions/{sessionId}` 
+ Rate Limit Group | `Heavy`                                         
+ App Permission   | `EditWebinars`                                  
+ User Permission  | `N/A`                                           
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Webinar().Registration().V1().Sessions(sessionId).Patch(regSessionModel);
+await rc.Revoke();
+```
+
+- `regSessionModel` is of type [RegSessionModel](./Definitions/RegSessionModel.cs)
+- `result` is of type [RegSessionModel](./Definitions/RegSessionModel.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Registration-Management-rcwRegUpdateSession) in API
+Explorer.
+
 ## listExtensionPhoneNumbers
 
 Get Extension Phone Number List
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/phone-number`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadUserPhoneNumbers`
+ Name             | Value                                                                            
+------------------|----------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                            
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/phone-number` 
+ Rate Limit Group | `Light`                                                                          
+ App Permission   | `ReadAccounts`                                                                   
+ User Permission  | `ReadUserPhoneNumbers`                                                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8073,17 +8098,150 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-listExtensionPhoneNumbers) in API Explorer.
 
+## listCompanyMessageTemplates
+
+List Company Message Templates
+
+ Name             | Value                                                               
+------------------|---------------------------------------------------------------------
+ HTTP Method      | `GET`                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/message-store-templates` 
+ Rate Limit Group | `Light`                                                             
+ App Permission   | `ReadAccounts`                                                      
+ User Permission  | `N/A`                                                               
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreTemplates().List(listCompanyMessageTemplatesParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `listCompanyMessageTemplatesParameters` is of
+  type [ListCompanyMessageTemplatesParameters](./Definitions/ListCompanyMessageTemplatesParameters.cs)
+- `result` is of type [MessageTemplatesListResponse](./Definitions/MessageTemplatesListResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#SMS-Templates-listCompanyMessageTemplates) in API Explorer.
+
+## createCompanyMessageTemplate
+
+Create Company Message Template
+
+ Name             | Value                                                               
+------------------|---------------------------------------------------------------------
+ HTTP Method      | `POST`                                                              
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/message-store-templates` 
+ Rate Limit Group | `Medium`                                                            
+ App Permission   | `EditAccounts`                                                      
+ User Permission  | `N/A`                                                               
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreTemplates().Post(messageTemplateRequest);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `messageTemplateRequest` is of type [MessageTemplateRequest](./Definitions/MessageTemplateRequest.cs)
+- `result` is of type [MessageTemplateResponse](./Definitions/MessageTemplateResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#SMS-Templates-createCompanyMessageTemplate) in API
+Explorer.
+
+## readCompanyMessageTemplate
+
+Get Company Message Template
+
+ Name             | Value                                                                            
+------------------|----------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                            
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/message-store-templates/{templateId}` 
+ Rate Limit Group | `Light`                                                                          
+ App Permission   | `ReadAccounts`                                                                   
+ User Permission  | `N/A`                                                                            
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreTemplates(templateId).Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [MessageTemplateResponse](./Definitions/MessageTemplateResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#SMS-Templates-readCompanyMessageTemplate) in API Explorer.
+
+## updateCompanyMessageTemplate
+
+Update Company Message Template
+
+ Name             | Value                                                                            
+------------------|----------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                            
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/message-store-templates/{templateId}` 
+ Rate Limit Group | `Medium`                                                                         
+ App Permission   | `EditAccounts`                                                                   
+ User Permission  | `N/A`                                                                            
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreTemplates(templateId).Put(messageTemplateUpdateRequest);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `messageTemplateUpdateRequest` is of
+  type [MessageTemplateUpdateRequest](./Definitions/MessageTemplateUpdateRequest.cs)
+- `result` is of type [MessageTemplateResponse](./Definitions/MessageTemplateResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#SMS-Templates-updateCompanyMessageTemplate) in API
+Explorer.
+
+## deleteCompanyMessageTemplate
+
+Delete Company Message Template
+
+ Name             | Value                                                                            
+------------------|----------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/message-store-templates/{templateId}` 
+ Rate Limit Group | `Medium`                                                                         
+ App Permission   | `EditAccounts`                                                                   
+ User Permission  | `N/A`                                                                            
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreTemplates(templateId).Delete();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#SMS-Templates-deleteCompanyMessageTemplate) in API
+Explorer.
+
 ## listPagingGroupUsers
 
 Get Paging Group Users
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadUserInfo`
+ Name             | Value                                                                                    
+------------------|------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/users` 
+ Rate Limit Group | `Light`                                                                                  
+ App Permission   | `ReadAccounts`                                                                           
+ User Permission  | `ReadUserInfo`                                                                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8104,13 +8262,13 @@ await rc.Revoke();
 
 List Permission Categories
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/permission-category`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                                  
+------------------|--------------------------------------------------------
+ HTTP Method      | `GET`                                                  
+ Endpoint         | `/restapi/{apiVersion}/dictionary/permission-category` 
+ Rate Limit Group | `Light`                                                
+ App Permission   | `N/A`                                                  
+ User Permission  | `N/A`                                                  
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8130,13 +8288,13 @@ await rc.Revoke();
 
 Get Permission Category
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/permission-category/{permissionCategoryId}`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                                                         
+------------------|-------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                         
+ Endpoint         | `/restapi/{apiVersion}/dictionary/permission-category/{permissionCategoryId}` 
+ Rate Limit Group | `Light`                                                                       
+ App Permission   | `N/A`                                                                         
+ User Permission  | `N/A`                                                                         
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8154,13 +8312,13 @@ await rc.Revoke();
 
 Create Adaptive Card
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/team-messaging/v1/chats/{chatId}/adaptive-cards`
-Rate Limit Group|`Medium`
-App Permission|`TeamMessaging`
-User Permission|`N/A`
+ Name             | Value                                              
+------------------|----------------------------------------------------
+ HTTP Method      | `POST`                                             
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/adaptive-cards` 
+ Rate Limit Group | `Medium`                                           
+ App Permission   | `TeamMessaging`                                    
+ User Permission  | `N/A`                                              
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8178,13 +8336,13 @@ await rc.Revoke();
 
 Get Webinar Recording Download Resource
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/history/v1/recordings/{recordingId}/download`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
+ Name             | Value                                                   
+------------------|---------------------------------------------------------
+ HTTP Method      | `GET`                                                   
+ Endpoint         | `/webinar/history/v1/recordings/{recordingId}/download` 
+ Rate Limit Group | `Heavy`                                                 
+ App Permission   | `ReadWebinars`                                          
+ User Permission  | `N/A`                                                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8204,13 +8362,13 @@ API Explorer.
 
 List Webinar Subscriptions
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/notifications/v1/subscriptions`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `GET`                                     
+ Endpoint         | `/webinar/notifications/v1/subscriptions` 
+ Rate Limit Group | `Light`                                   
+ App Permission   | `N/A`                                     
+ User Permission  | `N/A`                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8228,13 +8386,13 @@ Explorer.
 
 Create Webinar Subscription
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/webinar/notifications/v1/subscriptions`
-Rate Limit Group|`Medium`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `POST`                                    
+ Endpoint         | `/webinar/notifications/v1/subscriptions` 
+ Rate Limit Group | `Medium`                                  
+ App Permission   | `N/A`                                     
+ User Permission  | `N/A`                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8254,13 +8412,13 @@ Explorer.
 
 Get Webinar Subscription
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/notifications/v1/subscriptions/{subscriptionId}`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                                      
+------------------|------------------------------------------------------------
+ HTTP Method      | `GET`                                                      
+ Endpoint         | `/webinar/notifications/v1/subscriptions/{subscriptionId}` 
+ Rate Limit Group | `Light`                                                    
+ App Permission   | `N/A`                                                      
+ User Permission  | `N/A`                                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8278,13 +8436,13 @@ Explorer.
 
 Update Webinar Subscription
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/webinar/notifications/v1/subscriptions/{subscriptionId}`
-Rate Limit Group|`Medium`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                                      
+------------------|------------------------------------------------------------
+ HTTP Method      | `PUT`                                                      
+ Endpoint         | `/webinar/notifications/v1/subscriptions/{subscriptionId}` 
+ Rate Limit Group | `Medium`                                                   
+ App Permission   | `N/A`                                                      
+ User Permission  | `N/A`                                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8303,13 +8461,13 @@ Explorer.
 
 Cancel Webinar Subscription
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/webinar/notifications/v1/subscriptions/{subscriptionId}`
-Rate Limit Group|`Medium`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                                      
+------------------|------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                   
+ Endpoint         | `/webinar/notifications/v1/subscriptions/{subscriptionId}` 
+ Rate Limit Group | `Medium`                                                   
+ App Permission   | `N/A`                                                      
+ User Permission  | `N/A`                                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8327,13 +8485,13 @@ Explorer.
 
 Calls Aggregation Data
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/analytics/calls/v1/accounts/{accountId}/aggregation/fetch`
-Rate Limit Group|`Light`
-App Permission|`Analytics`
-User Permission|`N/A`
+ Name             | Value                                                        
+------------------|--------------------------------------------------------------
+ HTTP Method      | `POST`                                                       
+ Endpoint         | `/analytics/calls/v1/accounts/{accountId}/aggregation/fetch` 
+ Rate Limit Group | `Light`                                                      
+ App Permission   | `Analytics`                                                  
+ User Permission  | `N/A`                                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8354,13 +8512,13 @@ Explorer.
 
 Calls Timeline Data
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/analytics/calls/v1/accounts/{accountId}/timeline/fetch`
-Rate Limit Group|`Light`
-App Permission|`Analytics`
-User Permission|`N/A`
+ Name             | Value                                                     
+------------------|-----------------------------------------------------------
+ HTTP Method      | `POST`                                                    
+ Endpoint         | `/analytics/calls/v1/accounts/{accountId}/timeline/fetch` 
+ Rate Limit Group | `Light`                                                   
+ App Permission   | `Analytics`                                               
+ User Permission  | `N/A`                                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8381,13 +8539,13 @@ Explorer.
 
 Get User's Default Bridge
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/rcvideo/v2/account/{accountId}/extension/{extensionId}/bridges/default`
-Rate Limit Group|`Medium`
-App Permission|`Video`
-User Permission|`N/A`
+ Name             | Value                                                                     
+------------------|---------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                     
+ Endpoint         | `/rcvideo/v2/account/{accountId}/extension/{extensionId}/bridges/default` 
+ Rate Limit Group | `Medium`                                                                  
+ App Permission   | `Video`                                                                   
+ User Permission  | `N/A`                                                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8406,13 +8564,13 @@ await rc.Revoke();
 
 Create Multiple User Extensions
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/v2/accounts/{accountId}/batch-provisioning/users`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`N/A`
+ Name             | Value                                                       
+------------------|-------------------------------------------------------------
+ HTTP Method      | `POST`                                                      
+ Endpoint         | `/restapi/v2/accounts/{accountId}/batch-provisioning/users` 
+ Rate Limit Group | `Heavy`                                                     
+ App Permission   | `EditAccounts`                                              
+ User Permission  | `N/A`                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8430,13 +8588,13 @@ await rc.Revoke();
 
 Swap Devices
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/v2/accounts/{accountId}/extensions/{extensionId}/devices/{deviceId}/replace`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`EditUserDevices`
+ Name             | Value                                                                                  
+------------------|----------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                 
+ Endpoint         | `/restapi/v2/accounts/{accountId}/extensions/{extensionId}/devices/{deviceId}/replace` 
+ Rate Limit Group | `Medium`                                                                               
+ App Permission   | `EditAccounts`                                                                         
+ User Permission  | `EditUserDevices`                                                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8454,13 +8612,13 @@ await rc.Revoke();
 
 Add Numbers to Inventory
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/v2/accounts/{accountId}/phone-numbers/bulk-add`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`EditCompanyPhoneNumbers`
+ Name             | Value                                                     
+------------------|-----------------------------------------------------------
+ HTTP Method      | `POST`                                                    
+ Endpoint         | `/restapi/v2/accounts/{accountId}/phone-numbers/bulk-add` 
+ Rate Limit Group | `Heavy`                                                   
+ App Permission   | `EditAccounts`                                            
+ User Permission  | `EditCompanyPhoneNumbers`                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8478,13 +8636,13 @@ await rc.Revoke();
 
 Get Add Numbers Task Results
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/v2/accounts/{accountId}/phone-numbers/bulk-add/{taskId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`EditCompanyPhoneNumbers`
+ Name             | Value                                                              
+------------------|--------------------------------------------------------------------
+ HTTP Method      | `GET`                                                              
+ Endpoint         | `/restapi/v2/accounts/{accountId}/phone-numbers/bulk-add/{taskId}` 
+ Rate Limit Group | `Heavy`                                                            
+ App Permission   | `EditAccounts`                                                     
+ User Permission  | `EditCompanyPhoneNumbers`                                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8497,40 +8655,17 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-getBulkAddTaskResultsV2) in API Explorer.
 
-## sendActivationEmailV2
-
-Send/Resend Activation Email
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/v2/accounts/{accountId}/send-activation-email`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`AccountAdministration`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi().V2().Accounts(accountId).SendActivationEmail().Post();
-await rc.Revoke();
-```
-
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Company-sendActivationEmailV2) in API Explorer.
-
 ## addA2PSMSOptOuts
 
 Add Opt-In/Out Numbers
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/a2p-sms/opt-outs/bulk-assign`
-Rate Limit Group|`Light`
-App Permission|`A2PSMS`
-User Permission|`N/A`
+ Name             | Value                                                                    
+------------------|--------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                   
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/a2p-sms/opt-outs/bulk-assign` 
+ Rate Limit Group | `Light`                                                                  
+ App Permission   | `A2PSMS`                                                                 
+ User Permission  | `N/A`                                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8550,13 +8685,13 @@ await rc.Revoke();
 
 Get Contacts Upload Task
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/address-book-bulk-upload/tasks/{taskId}`
-Rate Limit Group|`Light`
-App Permission|`Contacts`
-User Permission|`EditPersonalContacts`
+ Name             | Value                                                                               
+------------------|-------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/address-book-bulk-upload/tasks/{taskId}` 
+ Rate Limit Group | `Light`                                                                             
+ App Permission   | `Contacts`                                                                          
+ User Permission  | `EditPersonalContacts`                                                              
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8576,13 +8711,13 @@ Explorer.
 
 List Call Monitoring Group Members
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-monitoring-groups/{groupId}/members`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadExtensions`
+ Name             | Value                                                                                
+------------------|--------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-monitoring-groups/{groupId}/members` 
+ Rate Limit Group | `Medium`                                                                             
+ App Permission   | `ReadAccounts`                                                                       
+ User Permission  | `ReadExtensions`                                                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8604,13 +8739,13 @@ API Explorer.
 
 Update Call Recording Extension List
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-recording/bulk-assign`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyInfo`
+ Name             | Value                                                                  
+------------------|------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                 
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-recording/bulk-assign` 
+ Rate Limit Group | `Medium`                                                               
+ App Permission   | `ReadAccounts`                                                         
+ User Permission  | `ReadCompanyInfo`                                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8632,13 +8767,13 @@ in API Explorer.
 
 Get Extension Update Task Status
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension-bulk-update/tasks/{taskId}`
-Rate Limit Group|`Light`
-App Permission|`EditExtensions`
-User Permission|`EditExtensionInfo`
+ Name             | Value                                                                            
+------------------|----------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                            
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension-bulk-update/tasks/{taskId}` 
+ Rate Limit Group | `Light`                                                                          
+ App Permission   | `EditExtensions`                                                                 
+ User Permission  | `EditExtensionInfo`                                                              
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8657,13 +8792,13 @@ await rc.Revoke();
 
 Get Call Queue Overflow Settings
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{callQueueId}/overflow-settings`
-Rate Limit Group|`Heavy`
-App Permission|`ReadAccounts`
-User Permission|`CallQueueToCallQueue`
+ Name             | Value                                                                                 
+------------------|---------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                 
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{callQueueId}/overflow-settings` 
+ Rate Limit Group | `Heavy`                                                                               
+ App Permission   | `ReadAccounts`                                                                        
+ User Permission  | `CallQueueToCallQueue`                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8682,13 +8817,13 @@ await rc.Revoke();
 
 Update Call Queue Overflow Settings
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{callQueueId}/overflow-settings`
-Rate Limit Group|`Heavy`
-App Permission|`EditExtensions`
-User Permission|`CallQueueToCallQueue`
+ Name             | Value                                                                                 
+------------------|---------------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                                 
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{callQueueId}/overflow-settings` 
+ Rate Limit Group | `Heavy`                                                                               
+ App Permission   | `EditExtensions`                                                                      
+ User Permission  | `CallQueueToCallQueue`                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8710,13 +8845,13 @@ Explorer.
 
 Address Book Synchronization
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book-sync`
-Rate Limit Group|`Heavy`
-App Permission|`ReadContacts`
-User Permission|`ReadPersonalContacts`
+ Name             | Value                                                                                 
+------------------|---------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                 
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book-sync` 
+ Rate Limit Group | `Heavy`                                                                               
+ App Permission   | `ReadContacts`                                                                        
+ User Permission  | `ReadPersonalContacts`                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8737,13 +8872,13 @@ await rc.Revoke();
 
 List Contacts
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact`
-Rate Limit Group|`Heavy`
-App Permission|`ReadContacts`
-User Permission|`ReadPersonalContacts`
+ Name             | Value                                                                                    
+------------------|------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact` 
+ Rate Limit Group | `Heavy`                                                                                  
+ App Permission   | `ReadContacts`                                                                           
+ User Permission  | `ReadPersonalContacts`                                                                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8764,13 +8899,13 @@ await rc.Revoke();
 
 Create User Contact
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact`
-Rate Limit Group|`Heavy`
-App Permission|`Contacts`
-User Permission|`EditPersonalContacts`
+ Name             | Value                                                                                    
+------------------|------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                   
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact` 
+ Rate Limit Group | `Heavy`                                                                                  
+ App Permission   | `Contacts`                                                                               
+ User Permission  | `EditPersonalContacts`                                                                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8792,13 +8927,13 @@ await rc.Revoke();
 
 Get User Contact(s)
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
-Rate Limit Group|`Heavy`
-App Permission|`ReadContacts`
-User Permission|`ReadPersonalContacts`
+ Name             | Value                                                                                                
+------------------|------------------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                                
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}` 
+ Rate Limit Group | `Heavy`                                                                                              
+ App Permission   | `ReadContacts`                                                                                       
+ User Permission  | `ReadPersonalContacts`                                                                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8818,13 +8953,13 @@ await rc.Revoke();
 
 Update User Contact(s)
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
-Rate Limit Group|`Heavy`
-App Permission|`Contacts`
-User Permission|`EditPersonalContacts`
+ Name             | Value                                                                                                
+------------------|------------------------------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                                                
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}` 
+ Rate Limit Group | `Heavy`                                                                                              
+ App Permission   | `Contacts`                                                                                           
+ User Permission  | `EditPersonalContacts`                                                                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8846,13 +8981,13 @@ await rc.Revoke();
 
 Delete User Contact(s)
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
-Rate Limit Group|`Heavy`
-App Permission|`Contacts`
-User Permission|`EditPersonalContacts`
+ Name             | Value                                                                                                
+------------------|------------------------------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}` 
+ Rate Limit Group | `Heavy`                                                                                              
+ App Permission   | `Contacts`                                                                                           
+ User Permission  | `EditPersonalContacts`                                                                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8872,13 +9007,13 @@ await rc.Revoke();
 
 Update Contact Attributes
 
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}`
-Rate Limit Group|`Heavy`
-App Permission|`Contacts`
-User Permission|`EditPersonalContacts`
+ Name             | Value                                                                                                
+------------------|------------------------------------------------------------------------------------------------------
+ HTTP Method      | `PATCH`                                                                                              
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/address-book/contact/{contactId}` 
+ Rate Limit Group | `Heavy`                                                                                              
+ App Permission   | `Contacts`                                                                                           
+ User Permission  | `EditPersonalContacts`                                                                               
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8900,13 +9035,13 @@ await rc.Revoke();
 
 List User Administered Sites
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/administered-sites`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadExtensions`
+ Name             | Value                                                                                  
+------------------|----------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                  
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/administered-sites` 
+ Rate Limit Group | `Medium`                                                                               
+ App Permission   | `ReadAccounts`                                                                         
+ User Permission  | `ReadExtensions`                                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8926,13 +9061,13 @@ await rc.Revoke();
 
 Update User Administered Sites
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/administered-sites`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`EditAssignedRoles`
+ Name             | Value                                                                                  
+------------------|----------------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                                  
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/administered-sites` 
+ Rate Limit Group | `Medium`                                                                               
+ App Permission   | `EditAccounts`                                                                         
+ User Permission  | `EditAssignedRoles`                                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8955,13 +9090,13 @@ Explorer.
 
 List Assignable Roles
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/assignable-roles`
-Rate Limit Group|`Medium`
-App Permission|`RoleManagement`
-User Permission|`N/A`
+ Name             | Value                                                                                
+------------------|--------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/assignable-roles` 
+ Rate Limit Group | `Medium`                                                                             
+ App Permission   | `RoleManagement`                                                                     
+ User Permission  | `N/A`                                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -8984,13 +9119,13 @@ Explorer.
 
 Check User Permission
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/authz-profile/check`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                                                                   
+------------------|-----------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                   
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/authz-profile/check` 
+ Rate Limit Group | `Light`                                                                                 
+ App Permission   | `N/A`                                                                                   
+ User Permission  | `N/A`                                                                                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9012,13 +9147,13 @@ await rc.Revoke();
 
 Get Agent’s Call Queue Presence
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-queue-presence`
-Rate Limit Group|`Light`
-App Permission|`ReadPresence`
-User Permission|`N/A`
+ Name             | Value                                                                                   
+------------------|-----------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                   
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-queue-presence` 
+ Rate Limit Group | `Light`                                                                                 
+ App Permission   | `ReadPresence`                                                                          
+ User Permission  | `N/A`                                                                                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9040,13 +9175,13 @@ await rc.Revoke();
 
 Update Call Queue Presence
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-queue-presence`
-Rate Limit Group|`Medium`
-App Permission|`EditPresence`
-User Permission|`N/A`
+ Name             | Value                                                                                   
+------------------|-----------------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                                   
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-queue-presence` 
+ Rate Limit Group | `Medium`                                                                                
+ App Permission   | `EditPresence`                                                                          
+ User Permission  | `N/A`                                                                                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9068,13 +9203,13 @@ await rc.Revoke();
 
 List User Emergency Locations
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`N/A`
+ Name             | Value                                                                                   
+------------------|-----------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                   
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations` 
+ Rate Limit Group | `Light`                                                                                 
+ App Permission   | `ReadAccounts`                                                                          
+ User Permission  | `N/A`                                                                                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9097,13 +9232,13 @@ in API Explorer.
 
 Create User Emergency Location
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`EmergencyFramework`
+ Name             | Value                                                                                   
+------------------|-----------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                  
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations` 
+ Rate Limit Group | `Heavy`                                                                                 
+ App Permission   | `EditAccounts`                                                                          
+ User Permission  | `EmergencyFramework`                                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9126,13 +9261,13 @@ in API Explorer.
 
 Get User Emergency Location
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations/{locationId}`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`N/A`
+ Name             | Value                                                                                                
+------------------|------------------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                                
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations/{locationId}` 
+ Rate Limit Group | `Light`                                                                                              
+ App Permission   | `ReadAccounts`                                                                                       
+ User Permission  | `N/A`                                                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9153,13 +9288,13 @@ in API Explorer.
 
 Update User Emergency Location
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations/{locationId}`
-Rate Limit Group|`Light`
-App Permission|`EditAccounts`
-User Permission|`EmergencyFramework`
+ Name             | Value                                                                                                
+------------------|------------------------------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                                                
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations/{locationId}` 
+ Rate Limit Group | `Light`                                                                                              
+ App Permission   | `EditAccounts`                                                                                       
+ User Permission  | `EmergencyFramework`                                                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9182,13 +9317,13 @@ in API Explorer.
 
 Delete User Emergency Location
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations/{locationId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`EmergencyFramework`
+ Name             | Value                                                                                                
+------------------|------------------------------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/emergency-locations/{locationId}` 
+ Rate Limit Group | `Heavy`                                                                                              
+ App Permission   | `EditAccounts`                                                                                       
+ User Permission  | `EmergencyFramework`                                                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9211,13 +9346,13 @@ in API Explorer.
 
 List Forwarding Numbers
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadUserForwardingFlipNumbers`
+ Name             | Value                                                                                 
+------------------|---------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                 
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number` 
+ Rate Limit Group | `Light`                                                                               
+ App Permission   | `ReadAccounts`                                                                        
+ User Permission  | `ReadUserForwardingFlipNumbers`                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9240,13 +9375,13 @@ await rc.Revoke();
 
 Create Forwarding Number
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`EditUserForwardingFlipNumbers`
+ Name             | Value                                                                                 
+------------------|---------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number` 
+ Rate Limit Group | `Medium`                                                                              
+ App Permission   | `EditExtensions`                                                                      
+ User Permission  | `EditUserForwardingFlipNumbers`                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9268,13 +9403,13 @@ await rc.Revoke();
 
 Delete Forwarding Numbers
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`EditUserForwardingFlipNumbers`
+ Name             | Value                                                                                 
+------------------|---------------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                              
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number` 
+ Rate Limit Group | `Medium`                                                                              
+ App Permission   | `EditExtensions`                                                                      
+ User Permission  | `EditUserForwardingFlipNumbers`                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9296,13 +9431,13 @@ await rc.Revoke();
 
 Get Forwarding Number
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadUserForwardingFlipNumbers`
+ Name             | Value                                                                                                      
+------------------|------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}` 
+ Rate Limit Group | `Light`                                                                                                    
+ App Permission   | `ReadAccounts`                                                                                             
+ User Permission  | `ReadUserForwardingFlipNumbers`                                                                            
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9322,13 +9457,13 @@ await rc.Revoke();
 
 Update Forwarding Number
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`EditUserForwardingFlipNumbers`
+ Name             | Value                                                                                                      
+------------------|------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}` 
+ Rate Limit Group | `Medium`                                                                                                   
+ App Permission   | `EditExtensions`                                                                                           
+ User Permission  | `EditUserForwardingFlipNumbers`                                                                            
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9350,13 +9485,13 @@ await rc.Revoke();
 
 Delete Forwarding Number
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`EditUserForwardingFlipNumbers`
+ Name             | Value                                                                                                      
+------------------|------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                                                   
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number/{forwardingNumberId}` 
+ Rate Limit Group | `Medium`                                                                                                   
+ App Permission   | `EditExtensions`                                                                                           
+ User Permission  | `EditUserForwardingFlipNumbers`                                                                            
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9376,13 +9511,13 @@ await rc.Revoke();
 
 Get Extension Greeting Media Content
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/greeting/{greetingId}/content`
-Rate Limit Group|`Heavy`
-App Permission|`ReadAccounts`
-User Permission|`N/A`
+ Name             | Value                                                                                             
+------------------|---------------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/greeting/{greetingId}/content` 
+ Rate Limit Group | `Heavy`                                                                                           
+ App Permission   | `ReadAccounts`                                                                                    
+ User Permission  | `N/A`                                                                                             
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9408,13 +9543,13 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 Get Message Attachment Content
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}`
-Rate Limit Group|`Medium`
-App Permission|`ReadMessages`
-User Permission|`N/A`
+ Name             | Value                                                                                                                
+------------------|----------------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                                                
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}` 
+ Rate Limit Group | `Medium`                                                                                                             
+ App Permission   | `ReadMessages`                                                                                                       
+ User Permission  | `N/A`                                                                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9440,13 +9575,13 @@ Please refer to [Binary content downloading](/README.md#Binary-content-downloadi
 
 Get Unified Presence
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/unified-presence`
-Rate Limit Group|`Medium`
-App Permission|`ReadPresence`
-User Permission|`ReadPresenceStatus`
+ Name             | Value                                                                                
+------------------|--------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/unified-presence` 
+ Rate Limit Group | `Medium`                                                                             
+ App Permission   | `ReadPresence`                                                                       
+ User Permission  | `ReadPresenceStatus`                                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9466,13 +9601,13 @@ await rc.Revoke();
 
 Update Unified Presence
 
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/unified-presence`
-Rate Limit Group|`Medium`
-App Permission|`EditPresence`
-User Permission|`EditPresenceStatus`
+ Name             | Value                                                                                
+------------------|--------------------------------------------------------------------------------------
+ HTTP Method      | `PATCH`                                                                              
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/unified-presence` 
+ Rate Limit Group | `Medium`                                                                             
+ App Permission   | `EditPresence`                                                                       
+ User Permission  | `EditPresenceStatus`                                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9493,13 +9628,13 @@ await rc.Revoke();
 
 Get User Video Configuration
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/video-configuration`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`Meetings`
+ Name             | Value                                                                                   
+------------------|-----------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                   
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/video-configuration` 
+ Rate Limit Group | `Light`                                                                                 
+ App Permission   | `ReadAccounts`                                                                          
+ User Permission  | `Meetings`                                                                              
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9520,13 +9655,13 @@ Explorer.
 
 Get Message Store Configuration
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/message-store-configuration`
-Rate Limit Group|`Light`
-App Permission|`EditAccounts`
-User Permission|`AccountAdministration`
+ Name             | Value                                                                   
+------------------|-------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                   
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/message-store-configuration` 
+ Rate Limit Group | `Light`                                                                 
+ App Permission   | `EditAccounts`                                                          
+ User Permission  | `AccountAdministration`                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9546,13 +9681,13 @@ Explorer.
 
 Update Message Store Configuration
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/message-store-configuration`
-Rate Limit Group|`Light`
-App Permission|`EditAccounts`
-User Permission|`AccountAdministration`
+ Name             | Value                                                                   
+------------------|-------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                   
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/message-store-configuration` 
+ Rate Limit Group | `Light`                                                                 
+ App Permission   | `EditAccounts`                                                          
+ User Permission  | `AccountAdministration`                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9573,13 +9708,13 @@ Explorer.
 
 Get Message Store Report Archive
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/message-store-report/{taskId}/archive`
-Rate Limit Group|`Heavy`
-App Permission|`ReadMessages`
-User Permission|`Users`
+ Name             | Value                                                                             
+------------------|-----------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/message-store-report/{taskId}/archive` 
+ Rate Limit Group | `Heavy`                                                                           
+ App Permission   | `ReadMessages`                                                                    
+ User Permission  | `Users`                                                                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9599,13 +9734,13 @@ Explorer.
 
 Assign Paging Group Users and Devices
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`Groups`
+ Name             | Value                                                                                          
+------------------|------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/bulk-assign` 
+ Rate Limit Group | `Heavy`                                                                                        
+ App Permission   | `EditAccounts`                                                                                 
+ User Permission  | `Groups`                                                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9626,13 +9761,13 @@ in API Explorer.
 
 Get Paging Group Devices
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyDevices`
+ Name             | Value                                                                                      
+------------------|--------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/paging-only-groups/{pagingOnlyGroupId}/devices` 
+ Rate Limit Group | `Light`                                                                                    
+ App Permission   | `ReadAccounts`                                                                             
+ User Permission  | `ReadCompanyDevices`                                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9653,13 +9788,13 @@ await rc.Revoke();
 
 Get Call Party Status
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                                                 
+------------------|-------------------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                                 
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}` 
+ Rate Limit Group | `Light`                                                                                               
+ App Permission   | `CallControl`                                                                                         
+ User Permission  | `N/A`                                                                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9678,13 +9813,13 @@ await rc.Revoke();
 
 Delete Call Party
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                                                 
+------------------|-------------------------------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                                              
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}` 
+ Rate Limit Group | `Light`                                                                                               
+ App Permission   | `CallControl`                                                                                         
+ User Permission  | `N/A`                                                                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9703,13 +9838,13 @@ await rc.Revoke();
 
 Update Call Party
 
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                                                 
+------------------|-------------------------------------------------------------------------------------------------------
+ HTTP Method      | `PATCH`                                                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}` 
+ Rate Limit Group | `Light`                                                                                               
+ App Permission   | `CallControl`                                                                                         
+ User Permission  | `N/A`                                                                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9729,13 +9864,13 @@ await rc.Revoke();
 
 Call Flip on Party
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                                                      
+------------------|------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/flip` 
+ Rate Limit Group | `Light`                                                                                                    
+ App Permission   | `CallControl`                                                                                              
+ User Permission  | `N/A`                                                                                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9751,17 +9886,43 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-callFlipParty) in API Explorer.
 
+## holdCallParty
+
+Hold Call Party
+
+ Name             | Value                                                                                                      
+------------------|------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/hold` 
+ Rate Limit Group | `Light`                                                                                                    
+ App Permission   | `CallControl`                                                                                              
+ User Permission  | `N/A`                                                                                                      
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Hold().Post(holdCallPartyRequest);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `holdCallPartyRequest` is of type [HoldCallPartyRequest](./Definitions/HoldCallPartyRequest.cs)
+- `result` is of type [CallParty](./Definitions/CallParty.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-holdCallParty) in API Explorer.
+
 ## callParkParty
 
 Call Park
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                                                      
+------------------|------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/park` 
+ Rate Limit Group | `Light`                                                                                                    
+ App Permission   | `CallControl`                                                                                              
+ User Permission  | `N/A`                                                                                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9780,13 +9941,13 @@ await rc.Revoke();
 
 Supervise Call Session
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/supervise`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                                         
+------------------|-----------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/supervise` 
+ Rate Limit Group | `Light`                                                                                       
+ App Permission   | `CallControl`                                                                                 
+ User Permission  | `N/A`                                                                                         
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9806,13 +9967,13 @@ await rc.Revoke();
 
 List Contracted Countries
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/brand/{brandId}/contracted-country`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                                                 
+------------------|-----------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                 
+ Endpoint         | `/restapi/{apiVersion}/dictionary/brand/{brandId}/contracted-country` 
+ Rate Limit Group | `Light`                                                               
+ App Permission   | `N/A`                                                                 
+ User Permission  | `N/A`                                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9830,13 +9991,13 @@ await rc.Revoke();
 
 List Domestic Countries
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/dictionary/brand/{brandId}/contracted-country/{contractedCountryId}`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                                                                       
+------------------|---------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                       
+ Endpoint         | `/restapi/{apiVersion}/dictionary/brand/{brandId}/contracted-country/{contractedCountryId}` 
+ Rate Limit Group | `Light`                                                                                     
+ App Permission   | `N/A`                                                                                       
+ User Permission  | `N/A`                                                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9856,13 +10017,13 @@ await rc.Revoke();
 
 List Sessions across Multiple Webinars/Hosts
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/configuration/v1/company/sessions`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
+ Name             | Value                                        
+------------------|----------------------------------------------
+ HTTP Method      | `GET`                                        
+ Endpoint         | `/webinar/configuration/v1/company/sessions` 
+ Rate Limit Group | `Heavy`                                      
+ App Permission   | `ReadWebinars`                               
+ User Permission  | `N/A`                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9882,13 +10043,13 @@ API Explorer.
 
 Create Webinar Session
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/webinar/configuration/v1/webinars/{webinarId}/sessions`
-Rate Limit Group|`Heavy`
-App Permission|`EditWebinars`
-User Permission|`N/A`
+ Name             | Value                                                     
+------------------|-----------------------------------------------------------
+ HTTP Method      | `POST`                                                    
+ Endpoint         | `/webinar/configuration/v1/webinars/{webinarId}/sessions` 
+ Rate Limit Group | `Heavy`                                                   
+ App Permission   | `EditWebinars`                                            
+ User Permission  | `N/A`                                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9908,13 +10069,13 @@ Explorer.
 
 Get Webinar Session
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/configuration/v1/webinars/{webinarId}/sessions/{sessionId}`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
+ Name             | Value                                                                 
+------------------|-----------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                 
+ Endpoint         | `/webinar/configuration/v1/webinars/{webinarId}/sessions/{sessionId}` 
+ Rate Limit Group | `Heavy`                                                               
+ App Permission   | `ReadWebinars`                                                        
+ User Permission  | `N/A`                                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9931,13 +10092,13 @@ await rc.Revoke();
 
 Delete Webinar Session
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/webinar/configuration/v1/webinars/{webinarId}/sessions/{sessionId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditWebinars`
-User Permission|`N/A`
+ Name             | Value                                                                 
+------------------|-----------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                              
+ Endpoint         | `/webinar/configuration/v1/webinars/{webinarId}/sessions/{sessionId}` 
+ Rate Limit Group | `Heavy`                                                               
+ App Permission   | `EditWebinars`                                                        
+ User Permission  | `N/A`                                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9955,13 +10116,13 @@ Explorer.
 
 Update Webinar Session
 
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/webinar/configuration/v1/webinars/{webinarId}/sessions/{sessionId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditWebinars`
-User Permission|`N/A`
+ Name             | Value                                                                 
+------------------|-----------------------------------------------------------------------
+ HTTP Method      | `PATCH`                                                               
+ Endpoint         | `/webinar/configuration/v1/webinars/{webinarId}/sessions/{sessionId}` 
+ Rate Limit Group | `Heavy`                                                               
+ App Permission   | `EditWebinars`                                                        
+ User Permission  | `N/A`                                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -9981,13 +10142,13 @@ Explorer.
 
 List Session Invitees
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/history/v1/webinars/{webinarId}/sessions/{sessionId}/invitees`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
+ Name             | Value                                                                    
+------------------|--------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                    
+ Endpoint         | `/webinar/history/v1/webinars/{webinarId}/sessions/{sessionId}/invitees` 
+ Rate Limit Group | `Heavy`                                                                  
+ App Permission   | `ReadWebinars`                                                           
+ User Permission  | `N/A`                                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10007,13 +10168,13 @@ Explorer.
 
 Get Session Invitee
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/history/v1/webinars/{webinarId}/sessions/{sessionId}/invitees/{inviteeId}`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
+ Name             | Value                                                                                
+------------------|--------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                
+ Endpoint         | `/webinar/history/v1/webinars/{webinarId}/sessions/{sessionId}/invitees/{inviteeId}` 
+ Rate Limit Group | `Heavy`                                                                              
+ App Permission   | `ReadWebinars`                                                                       
+ User Permission  | `N/A`                                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10030,13 +10191,13 @@ await rc.Revoke();
 
 Renew Webinar Subscription
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/webinar/notifications/v1/subscriptions/{subscriptionId}/renew`
-Rate Limit Group|`Light`
-App Permission|`N/A`
-User Permission|`N/A`
+ Name             | Value                                                            
+------------------|------------------------------------------------------------------
+ HTTP Method      | `POST`                                                           
+ Endpoint         | `/webinar/notifications/v1/subscriptions/{subscriptionId}/renew` 
+ Rate Limit Group | `Light`                                                          
+ App Permission   | `N/A`                                                            
+ User Permission  | `N/A`                                                            
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10050,65 +10211,17 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Webinar-Subscriptions-rcwN11sRenewSubscription) in API
 Explorer.
 
-## rcwRegGetSession
-
-Get Registration Session Info
-
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/registration/v1/sessions/{sessionId}`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Webinar().Registration().V1().Sessions(sessionId).Get();
-await rc.Revoke();
-```
-
-- `result` is of type [RegSessionModel](./Definitions/RegSessionModel.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Registration-Management-rcwRegGetSession) in API Explorer.
-
-## rcwRegUpdateSession
-
-Update Registration Session
-
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/webinar/registration/v1/sessions/{sessionId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditWebinars`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Webinar().Registration().V1().Sessions(sessionId).Patch(regSessionModel);
-await rc.Revoke();
-```
-
-- `regSessionModel` is of type [RegSessionModel](./Definitions/RegSessionModel.cs)
-- `result` is of type [RegSessionModel](./Definitions/RegSessionModel.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Registration-Management-rcwRegUpdateSession) in API
-Explorer.
-
 ## rcwRegListRegistrants
 
 List Session Registrants
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/registration/v1/sessions/{sessionId}/registrants`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
+ Name             | Value                                                       
+------------------|-------------------------------------------------------------
+ HTTP Method      | `GET`                                                       
+ Endpoint         | `/webinar/registration/v1/sessions/{sessionId}/registrants` 
+ Rate Limit Group | `Heavy`                                                     
+ App Permission   | `ReadWebinars`                                              
+ User Permission  | `N/A`                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10127,13 +10240,13 @@ await rc.Revoke();
 
 Create Registrant
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/webinar/registration/v1/sessions/{sessionId}/registrants`
-Rate Limit Group|`Heavy`
-App Permission|`EditWebinars`
-User Permission|`N/A`
+ Name             | Value                                                       
+------------------|-------------------------------------------------------------
+ HTTP Method      | `POST`                                                      
+ Endpoint         | `/webinar/registration/v1/sessions/{sessionId}/registrants` 
+ Rate Limit Group | `Heavy`                                                     
+ App Permission   | `EditWebinars`                                              
+ User Permission  | `N/A`                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10153,13 +10266,13 @@ await rc.Revoke();
 
 Get Registrant
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/registration/v1/sessions/{sessionId}/registrants/{registrantId}`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
+ Name             | Value                                                                      
+------------------|----------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                      
+ Endpoint         | `/webinar/registration/v1/sessions/{sessionId}/registrants/{registrantId}` 
+ Rate Limit Group | `Heavy`                                                                    
+ App Permission   | `ReadWebinars`                                                             
+ User Permission  | `N/A`                                                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10178,13 +10291,13 @@ await rc.Revoke();
 
 Delete Registrant
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/webinar/registration/v1/sessions/{sessionId}/registrants/{registrantId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditWebinars`
-User Permission|`N/A`
+ Name             | Value                                                                      
+------------------|----------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                   
+ Endpoint         | `/webinar/registration/v1/sessions/{sessionId}/registrants/{registrantId}` 
+ Rate Limit Group | `Heavy`                                                                    
+ App Permission   | `EditWebinars`                                                             
+ User Permission  | `N/A`                                                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10201,13 +10314,13 @@ await rc.Revoke();
 
 Update Call Monitoring Group List
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign`
-Rate Limit Group|`Heavy`
-App Permission|`EditExtensions`
-User Permission|`Groups`
+ Name             | Value                                                                                    
+------------------|------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                   
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-monitoring-groups/{groupId}/bulk-assign` 
+ Rate Limit Group | `Heavy`                                                                                  
+ App Permission   | `EditExtensions`                                                                         
+ User Permission  | `Groups`                                                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10228,13 +10341,13 @@ API Explorer.
 
 Get Call Recording Custom Greeting List
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-recording/custom-greetings`
-Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
-User Permission|`ReadCompanyInfo`
+ Name             | Value                                                                       
+------------------|-----------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-recording/custom-greetings` 
+ Rate Limit Group | `Medium`                                                                    
+ App Permission   | `ReadAccounts`                                                              
+ User Permission  | `ReadCompanyInfo`                                                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10256,13 +10369,13 @@ in API Explorer.
 
 Delete Call Recording Custom Greeting List
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-recording/custom-greetings`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`EditCompanyInfo`
+ Name             | Value                                                                       
+------------------|-----------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-recording/custom-greetings` 
+ Rate Limit Group | `Medium`                                                                    
+ App Permission   | `EditAccounts`                                                              
+ User Permission  | `EditCompanyInfo`                                                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10282,13 +10395,13 @@ in API Explorer.
 
 Delete Call Recording Custom Greeting
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/call-recording/custom-greetings/{greetingId}`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`EditCompanyInfo`
+ Name             | Value                                                                                    
+------------------|------------------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                                 
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-recording/custom-greetings/{greetingId}` 
+ Rate Limit Group | `Medium`                                                                                 
+ App Permission   | `EditAccounts`                                                                           
+ User Permission  | `EditCompanyInfo`                                                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10308,13 +10421,13 @@ in API Explorer.
 
 List Devices
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/devices`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                             
+------------------|-----------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/devices` 
+ Rate Limit Group | `Medium`                                                                          
+ App Permission   | `EditAccounts`                                                                    
+ User Permission  | `ConfigureEmergencyMaps`                                                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10336,13 +10449,13 @@ in API Explorer.
 
 Enable Automatic Location Updates Feature
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/devices/bulk-assign`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                                         
+------------------|-----------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/devices/bulk-assign` 
+ Rate Limit Group | `Heavy`                                                                                       
+ App Permission   | `EditAccounts`                                                                                
+ User Permission  | `ConfigureEmergencyMaps`                                                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10364,13 +10477,13 @@ in API Explorer.
 
 Get Network Map
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                              
+------------------|------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                              
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks` 
+ Rate Limit Group | `Heavy`                                                                            
+ App Permission   | `EditAccounts`                                                                     
+ User Permission  | `ConfigureEmergencyMaps`                                                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10390,13 +10503,13 @@ await rc.Revoke();
 
 Create Network
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                              
+------------------|------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks` 
+ Rate Limit Group | `Heavy`                                                                            
+ App Permission   | `EditAccounts`                                                                     
+ User Permission  | `ConfigureEmergencyMaps`                                                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10416,13 +10529,13 @@ await rc.Revoke();
 
 Get Network
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks/{networkId}`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                                          
+------------------|------------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                          
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks/{networkId}` 
+ Rate Limit Group | `Medium`                                                                                       
+ App Permission   | `EditAccounts`                                                                                 
+ User Permission  | `ConfigureEmergencyMaps`                                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10441,13 +10554,13 @@ await rc.Revoke();
 
 Update Network
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks/{networkId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                                          
+------------------|------------------------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                                          
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks/{networkId}` 
+ Rate Limit Group | `Heavy`                                                                                        
+ App Permission   | `EditAccounts`                                                                                 
+ User Permission  | `ConfigureEmergencyMaps`                                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10467,13 +10580,13 @@ await rc.Revoke();
 
 Delete Network
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks/{networkId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                                          
+------------------|------------------------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/networks/{networkId}` 
+ Rate Limit Group | `Heavy`                                                                                        
+ App Permission   | `EditAccounts`                                                                                 
+ User Permission  | `ConfigureEmergencyMaps`                                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10492,13 +10605,13 @@ await rc.Revoke();
 
 List Account Switches
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                              
+------------------|------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                              
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches` 
+ Rate Limit Group | `Heavy`                                                                            
+ App Permission   | `EditAccounts`                                                                     
+ User Permission  | `ConfigureEmergencyMaps`                                                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10520,13 +10633,13 @@ Explorer.
 
 Create Switch
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                              
+------------------|------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches` 
+ Rate Limit Group | `Heavy`                                                                            
+ App Permission   | `EditAccounts`                                                                     
+ User Permission  | `ConfigureEmergencyMaps`                                                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10546,13 +10659,13 @@ await rc.Revoke();
 
 Get Switch
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches/{switchId}`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                                         
+------------------|-----------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches/{switchId}` 
+ Rate Limit Group | `Medium`                                                                                      
+ App Permission   | `EditAccounts`                                                                                
+ User Permission  | `ConfigureEmergencyMaps`                                                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10571,13 +10684,13 @@ await rc.Revoke();
 
 Update Switch
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches/{switchId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                                         
+------------------|-----------------------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches/{switchId}` 
+ Rate Limit Group | `Heavy`                                                                                       
+ App Permission   | `EditAccounts`                                                                                
+ User Permission  | `ConfigureEmergencyMaps`                                                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10597,13 +10710,13 @@ await rc.Revoke();
 
 Delete Switch
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches/{switchId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                                         
+------------------|-----------------------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches/{switchId}` 
+ Rate Limit Group | `Heavy`                                                                                       
+ App Permission   | `EditAccounts`                                                                                
+ User Permission  | `ConfigureEmergencyMaps`                                                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10622,13 +10735,13 @@ await rc.Revoke();
 
 Create Multiple Switches
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches-bulk-create`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                                          
+------------------|------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches-bulk-create` 
+ Rate Limit Group | `Heavy`                                                                                        
+ App Permission   | `EditAccounts`                                                                                 
+ User Permission  | `ConfigureEmergencyMaps`                                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10650,13 +10763,13 @@ Explorer.
 
 Update Multiple Switches
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches-bulk-update`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                                          
+------------------|------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches-bulk-update` 
+ Rate Limit Group | `Heavy`                                                                                        
+ App Permission   | `EditAccounts`                                                                                 
+ User Permission  | `ConfigureEmergencyMaps`                                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10678,13 +10791,13 @@ Explorer.
 
 Validate Multiple Switches
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches-bulk-validate`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                                            
+------------------|--------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                           
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/switches-bulk-validate` 
+ Rate Limit Group | `Heavy`                                                                                          
+ App Permission   | `EditAccounts`                                                                                   
+ User Permission  | `ConfigureEmergencyMaps`                                                                         
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10706,13 +10819,13 @@ Explorer.
 
 Get Emergency Map Configuration Task
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/tasks/{taskId}`
-Rate Limit Group|`Light`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                                    
+------------------|------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/tasks/{taskId}` 
+ Rate Limit Group | `Light`                                                                                  
+ App Permission   | `EditAccounts`                                                                           
+ User Permission  | `ConfigureEmergencyMaps`                                                                 
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10732,13 +10845,13 @@ in API Explorer.
 
 List Users
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/users`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                           
+------------------|---------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                           
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/users` 
+ Rate Limit Group | `Medium`                                                                        
+ App Permission   | `EditAccounts`                                                                  
+ User Permission  | `ConfigureEmergencyMaps`                                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10760,13 +10873,13 @@ in API Explorer.
 
 Enable Automatic Location Updates for Users
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/users/bulk-assign`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                                       
+------------------|---------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/users/bulk-assign` 
+ Rate Limit Group | `Heavy`                                                                                     
+ App Permission   | `EditAccounts`                                                                              
+ User Permission  | `ConfigureEmergencyMaps`                                                                    
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10788,13 +10901,13 @@ in API Explorer.
 
 List Wireless Points
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                                     
+------------------|-------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points` 
+ Rate Limit Group | `Medium`                                                                                  
+ App Permission   | `EditAccounts`                                                                            
+ User Permission  | `ConfigureEmergencyMaps`                                                                  
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10816,13 +10929,13 @@ Explorer.
 
 Create Wireless Point
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                                     
+------------------|-------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points` 
+ Rate Limit Group | `Heavy`                                                                                   
+ App Permission   | `EditAccounts`                                                                            
+ User Permission  | `ConfigureEmergencyMaps`                                                                  
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10843,13 +10956,13 @@ Explorer.
 
 Get Wireless Point
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}`
-Rate Limit Group|`Medium`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                                               
+------------------|-----------------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}` 
+ Rate Limit Group | `Medium`                                                                                            
+ App Permission   | `EditAccounts`                                                                                      
+ User Permission  | `ConfigureEmergencyMaps`                                                                            
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10869,13 +10982,13 @@ Explorer.
 
 Update Wireless Point
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                                               
+------------------|-----------------------------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}` 
+ Rate Limit Group | `Heavy`                                                                                             
+ App Permission   | `EditAccounts`                                                                                      
+ User Permission  | `ConfigureEmergencyMaps`                                                                            
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10896,13 +11009,13 @@ Explorer.
 
 Delete Wireless Point
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                                               
+------------------|-----------------------------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                                            
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points/{pointId}` 
+ Rate Limit Group | `Heavy`                                                                                             
+ App Permission   | `EditAccounts`                                                                                      
+ User Permission  | `ConfigureEmergencyMaps`                                                                            
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10922,13 +11035,13 @@ Explorer.
 
 Create Multiple Wireless Points
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-create`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                                                 
+------------------|-------------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                                
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-create` 
+ Rate Limit Group | `Heavy`                                                                                               
+ App Permission   | `EditAccounts`                                                                                        
+ User Permission  | `ConfigureEmergencyMaps`                                                                              
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10950,13 +11063,13 @@ API Explorer.
 
 Update Multiple Wireless Points
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-update`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                                                 
+------------------|-------------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                                
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-update` 
+ Rate Limit Group | `Heavy`                                                                                               
+ App Permission   | `EditAccounts`                                                                                        
+ User Permission  | `ConfigureEmergencyMaps`                                                                              
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -10978,13 +11091,13 @@ API Explorer.
 
 Validate Multiple Wireless Points
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-validate`
-Rate Limit Group|`Heavy`
-App Permission|`EditAccounts`
-User Permission|`ConfigureEmergencyMaps`
+ Name             | Value                                                                                                   
+------------------|---------------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                                  
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/wireless-points-bulk-validate` 
+ Rate Limit Group | `Heavy`                                                                                                 
+ App Permission   | `EditAccounts`                                                                                          
+ User Permission  | `ConfigureEmergencyMaps`                                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11006,13 +11119,13 @@ in API Explorer.
 
 Assign Default Role
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/assigned-role/default`
-Rate Limit Group|`Medium`
-App Permission|`RoleManagement`
-User Permission|`Users`
+ Name             | Value                                                                                     
+------------------|-------------------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/assigned-role/default` 
+ Rate Limit Group | `Medium`                                                                                  
+ App Permission   | `RoleManagement`                                                                          
+ User Permission  | `Users`                                                                                   
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11032,13 +11145,13 @@ await rc.Revoke();
 
 List Blocked/Allowed Phone Numbers
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadBlockedNumbers`
+ Name             | Value                                                                                             
+------------------|---------------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers` 
+ Rate Limit Group | `Light`                                                                                           
+ App Permission   | `ReadAccounts`                                                                                    
+ User Permission  | `ReadBlockedNumbers`                                                                              
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11060,13 +11173,13 @@ await rc.Revoke();
 
 Add Blocked/Allowed Number
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`EditBlockedNumbers`
+ Name             | Value                                                                                             
+------------------|---------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                            
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers` 
+ Rate Limit Group | `Medium`                                                                                          
+ App Permission   | `EditExtensions`                                                                                  
+ User Permission  | `EditBlockedNumbers`                                                                              
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11088,13 +11201,13 @@ await rc.Revoke();
 
 Get Blocked/Allowed Number
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadBlockedNumbers`
+ Name             | Value                                                                                                               
+------------------|---------------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}` 
+ Rate Limit Group | `Light`                                                                                                             
+ App Permission   | `ReadAccounts`                                                                                                      
+ User Permission  | `ReadBlockedNumbers`                                                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11114,13 +11227,13 @@ await rc.Revoke();
 
 Update Blocked/Allowed Number
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`EditBlockedNumbers`
+ Name             | Value                                                                                                               
+------------------|---------------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}` 
+ Rate Limit Group | `Medium`                                                                                                            
+ App Permission   | `EditExtensions`                                                                                                    
+ User Permission  | `EditBlockedNumbers`                                                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11142,13 +11255,13 @@ await rc.Revoke();
 
 Delete Blocked/Allowed Number
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`EditBlockedNumbers`
+ Name             | Value                                                                                                               
+------------------|---------------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                                                            
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}` 
+ Rate Limit Group | `Medium`                                                                                                            
+ App Permission   | `EditExtensions`                                                                                                    
+ User Permission  | `EditBlockedNumbers`                                                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11164,17 +11277,152 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Blocking-deleteBlockedAllowedNumber) in API Explorer.
 
+## listUserMessageTemplates
+
+List User Message Templates
+
+ Name             | Value                                                                                       
+------------------|---------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store-templates` 
+ Rate Limit Group | `Light`                                                                                     
+ App Permission   | `ReadAccounts`                                                                              
+ User Permission  | `N/A`                                                                                       
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStoreTemplates().List(listUserMessageTemplatesParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `listUserMessageTemplatesParameters` is of
+  type [ListUserMessageTemplatesParameters](./Definitions/ListUserMessageTemplatesParameters.cs)
+- `result` is of type [MessageTemplatesListResponse](./Definitions/MessageTemplatesListResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#SMS-Templates-listUserMessageTemplates) in API Explorer.
+
+## createUserMessageTemplate
+
+Create User Message Template
+
+ Name             | Value                                                                                       
+------------------|---------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store-templates` 
+ Rate Limit Group | `Medium`                                                                                    
+ App Permission   | `EditExtensions`                                                                            
+ User Permission  | `N/A`                                                                                       
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStoreTemplates().Post(messageTemplateRequest);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `messageTemplateRequest` is of type [MessageTemplateRequest](./Definitions/MessageTemplateRequest.cs)
+- `result` is of type [MessageTemplateResponse](./Definitions/MessageTemplateResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#SMS-Templates-createUserMessageTemplate) in API Explorer.
+
+## readUserMessageTemplate
+
+Get User Message Template
+
+ Name             | Value                                                                                                    
+------------------|----------------------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store-templates/{templateId}` 
+ Rate Limit Group | `Light`                                                                                                  
+ App Permission   | `ReadAccounts`                                                                                           
+ User Permission  | `N/A`                                                                                                    
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStoreTemplates(templateId).Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `result` is of type [MessageTemplateResponse](./Definitions/MessageTemplateResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#SMS-Templates-readUserMessageTemplate) in API Explorer.
+
+## updateUserMessageTemplate
+
+Update User Message Template
+
+ Name             | Value                                                                                                    
+------------------|----------------------------------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store-templates/{templateId}` 
+ Rate Limit Group | `Medium`                                                                                                 
+ App Permission   | `EditExtensions`                                                                                         
+ User Permission  | `N/A`                                                                                                    
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStoreTemplates(templateId).Put(messageTemplateUpdateRequest);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `messageTemplateUpdateRequest` is of
+  type [MessageTemplateUpdateRequest](./Definitions/MessageTemplateUpdateRequest.cs)
+- `result` is of type [MessageTemplateResponse](./Definitions/MessageTemplateResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#SMS-Templates-updateUserMessageTemplate) in API Explorer.
+
+## deleteUserMessageTemplate
+
+Delete User Message Template
+
+ Name             | Value                                                                                                    
+------------------|----------------------------------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                                                 
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store-templates/{templateId}` 
+ Rate Limit Group | `Medium`                                                                                                 
+ App Permission   | `EditExtensions`                                                                                         
+ User Permission  | `N/A`                                                                                                    
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStoreTemplates(templateId).Delete();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#SMS-Templates-deleteUserMessageTemplate) in API Explorer.
+
 ## readNotificationSettings
 
 Get Notification Settings
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/notification-settings`
-Rate Limit Group|`Light`
-App Permission|`ReadAccounts`
-User Permission|`ReadMessagesNotificationsSettings`
+ Name             | Value                                                                                     
+------------------|-------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/notification-settings` 
+ Rate Limit Group | `Light`                                                                                   
+ App Permission   | `ReadAccounts`                                                                            
+ User Permission  | `ReadMessagesNotificationsSettings`                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11194,13 +11442,13 @@ await rc.Revoke();
 
 Update Notification Settings
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/notification-settings`
-Rate Limit Group|`Medium`
-App Permission|`EditExtensions`
-User Permission|`EditMessagesNotificationsSettings`
+ Name             | Value                                                                                     
+------------------|-------------------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/notification-settings` 
+ Rate Limit Group | `Medium`                                                                                  
+ App Permission   | `EditExtensions`                                                                          
+ User Permission  | `EditMessagesNotificationsSettings`                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11222,13 +11470,13 @@ await rc.Revoke();
 
 Bring-In Call Party
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/bring-in`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                                                
+------------------|------------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/bring-in` 
+ Rate Limit Group | `Light`                                                                                              
+ App Permission   | `CallControl`                                                                                        
+ User Permission  | `N/A`                                                                                                
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11248,13 +11496,13 @@ await rc.Revoke();
 
 Answer Call Party
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/answer`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                                                        
+------------------|--------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/answer` 
+ Rate Limit Group | `Light`                                                                                                      
+ App Permission   | `CallControl`                                                                                                
+ User Permission  | `N/A`                                                                                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11274,13 +11522,13 @@ await rc.Revoke();
 
 Bridge Call Party
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/bridge`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                                                        
+------------------|--------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/bridge` 
+ Rate Limit Group | `Light`                                                                                                      
+ App Permission   | `CallControl`                                                                                                
+ User Permission  | `N/A`                                                                                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11300,13 +11548,13 @@ await rc.Revoke();
 
 Forward Call Party
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/forward`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                                                         
+------------------|---------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/forward` 
+ Rate Limit Group | `Light`                                                                                                       
+ App Permission   | `CallControl`                                                                                                 
+ User Permission  | `N/A`                                                                                                         
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11322,43 +11570,17 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-forwardCallParty) in API Explorer.
 
-## holdCallParty
-
-Hold Call Party
-
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/hold`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Hold().Post(holdCallPartyRequest);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `holdCallPartyRequest` is of type [HoldCallPartyRequest](./Definitions/HoldCallPartyRequest.cs)
-- `result` is of type [CallParty](./Definitions/CallParty.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Control-holdCallParty) in API Explorer.
-
 ## ignoreCallInQueue
 
 Ignore Call in Queue
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                                                        
+------------------|--------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/ignore` 
+ Rate Limit Group | `Light`                                                                                                      
+ App Permission   | `CallControl`                                                                                                
+ User Permission  | `N/A`                                                                                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11378,13 +11600,13 @@ await rc.Revoke();
 
 Pickup Call
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/pickup`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                                                        
+------------------|--------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/pickup` 
+ Rate Limit Group | `Light`                                                                                                      
+ App Permission   | `CallControl`                                                                                                
+ User Permission  | `N/A`                                                                                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11404,13 +11626,13 @@ await rc.Revoke();
 
 Create Recording
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                                                            
+------------------|------------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                                           
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings` 
+ Rate Limit Group | `Light`                                                                                                          
+ App Permission   | `CallControl`                                                                                                    
+ User Permission  | `N/A`                                                                                                            
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11429,13 +11651,13 @@ await rc.Revoke();
 
 Pause/Resume Recording
 
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                                                                          
+------------------|--------------------------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `PATCH`                                                                                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings/{recordingId}` 
+ Rate Limit Group | `Light`                                                                                                                        
+ App Permission   | `CallControl`                                                                                                                  
+ User Permission  | `N/A`                                                                                                                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11457,13 +11679,13 @@ await rc.Revoke();
 
 Reject Call Party
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reject`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                                                        
+------------------|--------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reject` 
+ Rate Limit Group | `Light`                                                                                                      
+ App Permission   | `CallControl`                                                                                                
+ User Permission  | `N/A`                                                                                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11482,13 +11704,13 @@ await rc.Revoke();
 
 Reply with Text
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reply`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                                                       
+------------------|-------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/reply` 
+ Rate Limit Group | `Light`                                                                                                     
+ App Permission   | `CallControl`                                                                                               
+ User Permission  | `N/A`                                                                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11508,13 +11730,13 @@ await rc.Revoke();
 
 Supervise Call Party
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/supervise`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                                                           
+------------------|-----------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                                          
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/supervise` 
+ Rate Limit Group | `Light`                                                                                                         
+ App Permission   | `CallControl`                                                                                                   
+ User Permission  | `N/A`                                                                                                           
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11534,13 +11756,13 @@ await rc.Revoke();
 
 Transfer Call Party
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                                                          
+------------------|----------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer` 
+ Rate Limit Group | `Light`                                                                                                        
+ App Permission   | `CallControl`                                                                                                  
+ User Permission  | `N/A`                                                                                                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11560,13 +11782,13 @@ await rc.Revoke();
 
 Un-hold Call Party
 
-Name|Value
--|-
-HTTP Method|`POST`
-Endpoint|`/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/unhold`
-Rate Limit Group|`Light`
-App Permission|`CallControl`
-User Permission|`N/A`
+ Name             | Value                                                                                                        
+------------------|--------------------------------------------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/unhold` 
+ Rate Limit Group | `Light`                                                                                                      
+ App Permission   | `CallControl`                                                                                                
+ User Permission  | `N/A`                                                                                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11585,13 +11807,13 @@ await rc.Revoke();
 
 List Session Invitees
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/configuration/v1/webinars/{webinarId}/sessions/{sessionId}/invitees`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
+ Name             | Value                                                                          
+------------------|--------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                          
+ Endpoint         | `/webinar/configuration/v1/webinars/{webinarId}/sessions/{sessionId}/invitees` 
+ Rate Limit Group | `Heavy`                                                                        
+ App Permission   | `ReadWebinars`                                                                 
+ User Permission  | `N/A`                                                                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11610,13 +11832,13 @@ await rc.Revoke();
 
 Bulk Add/Delete Session Invitees
 
-Name|Value
--|-
-HTTP Method|`PATCH`
-Endpoint|`/webinar/configuration/v1/webinars/{webinarId}/sessions/{sessionId}/invitees`
-Rate Limit Group|`Heavy`
-App Permission|`EditWebinars`
-User Permission|`N/A`
+ Name             | Value                                                                          
+------------------|--------------------------------------------------------------------------------
+ HTTP Method      | `PATCH`                                                                        
+ Endpoint         | `/webinar/configuration/v1/webinars/{webinarId}/sessions/{sessionId}/invitees` 
+ Rate Limit Group | `Heavy`                                                                        
+ App Permission   | `EditWebinars`                                                                 
+ User Permission  | `N/A`                                                                          
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11634,13 +11856,13 @@ await rc.Revoke();
 
 Get Session Invitee
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/configuration/v1/webinars/{webinarId}/sessions/{sessionId}/invitees/{inviteeId}`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
+ Name             | Value                                                                                      
+------------------|--------------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                      
+ Endpoint         | `/webinar/configuration/v1/webinars/{webinarId}/sessions/{sessionId}/invitees/{inviteeId}` 
+ Rate Limit Group | `Heavy`                                                                                    
+ App Permission   | `ReadWebinars`                                                                             
+ User Permission  | `N/A`                                                                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11657,13 +11879,13 @@ await rc.Revoke();
 
 Update Session Invitee
 
-Name|Value
--|-
-HTTP Method|`PUT`
-Endpoint|`/webinar/configuration/v1/webinars/{webinarId}/sessions/{sessionId}/invitees/{inviteeId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditWebinars`
-User Permission|`N/A`
+ Name             | Value                                                                                      
+------------------|--------------------------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                                      
+ Endpoint         | `/webinar/configuration/v1/webinars/{webinarId}/sessions/{sessionId}/invitees/{inviteeId}` 
+ Rate Limit Group | `Heavy`                                                                                    
+ App Permission   | `EditWebinars`                                                                             
+ User Permission  | `N/A`                                                                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11681,13 +11903,13 @@ await rc.Revoke();
 
 Delete Session Invitee
 
-Name|Value
--|-
-HTTP Method|`DELETE`
-Endpoint|`/webinar/configuration/v1/webinars/{webinarId}/sessions/{sessionId}/invitees/{inviteeId}`
-Rate Limit Group|`Heavy`
-App Permission|`EditWebinars`
-User Permission|`N/A`
+ Name             | Value                                                                                      
+------------------|--------------------------------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                                                   
+ Endpoint         | `/webinar/configuration/v1/webinars/{webinarId}/sessions/{sessionId}/invitees/{inviteeId}` 
+ Rate Limit Group | `Heavy`                                                                                    
+ App Permission   | `EditWebinars`                                                                             
+ User Permission  | `N/A`                                                                                      
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11704,13 +11926,13 @@ await rc.Revoke();
 
 List Session Participants
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/history/v1/webinars/{webinarId}/sessions/{sessionId}/participants`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
+ Name             | Value                                                                        
+------------------|------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                        
+ Endpoint         | `/webinar/history/v1/webinars/{webinarId}/sessions/{sessionId}/participants` 
+ Rate Limit Group | `Heavy`                                                                      
+ App Permission   | `ReadWebinars`                                                               
+ User Permission  | `N/A`                                                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
@@ -11730,13 +11952,13 @@ Explorer.
 
 Get Participant Information
 
-Name|Value
--|-
-HTTP Method|`GET`
-Endpoint|`/webinar/history/v1/webinars/{webinarId}/sessions/{sessionId}/participants/self`
-Rate Limit Group|`Heavy`
-App Permission|`ReadWebinars`
-User Permission|`N/A`
+ Name             | Value                                                                             
+------------------|-----------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                             
+ Endpoint         | `/webinar/history/v1/webinars/{webinarId}/sessions/{sessionId}/participants/self` 
+ Rate Limit Group | `Heavy`                                                                           
+ App Permission   | `ReadWebinars`                                                                    
+ User Permission  | `N/A`                                                                             
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");

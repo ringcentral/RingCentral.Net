@@ -45,7 +45,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public TMUpdateTaskRequestRecurrence recurrence { get; set; }
+        public TaskRecurrenceInfo recurrence { get; set; }
 
         /// <summary>
         /// </summary>

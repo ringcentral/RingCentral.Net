@@ -1,16 +1,20 @@
 namespace RingCentral
 {
-    public class TMUpdateTaskRequestRecurrence
+    /// <summary>
+    ///     Task information
+    /// </summary>
+    public class TaskRecurrenceInfo
     {
         /// <summary>
-        ///     Task recurrence settings.
+        ///     Recurrence settings of a task. None for non-periodic tasks
         ///     Default: None
         ///     Enum: None, Daily, Weekdays, Weekly, Monthly, Yearly
         /// </summary>
         public string schedule { get; set; }
 
         /// <summary>
-        ///     Task ending condition
+        ///     Ending condition of a task
+        ///     Default: None
         ///     Enum: None, Count, Date
         /// </summary>
         public string endingCondition { get; set; }
@@ -24,7 +28,8 @@ namespace RingCentral
         public long? endingAfter { get; set; }
 
         /// <summary>
-        ///     End date of a periodic task in UTC time zone
+        ///     End date of a periodic task in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+        ///     format, UTC time zone
         ///     Format: date-time
         /// </summary>
         public string endingOn { get; set; }

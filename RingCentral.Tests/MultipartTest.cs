@@ -1,19 +1,19 @@
 using System.Linq;
 using Xunit;
 
-namespace RingCentral.Tests
+namespace RingCentral.Tests;
+
+[Collection("Sequential")]
+public class MultipartTest
 {
-    [Collection("Sequential")]
-    public class MultipartTest
+    [Fact]
+    public async void UpdateCompanyGreeting()
     {
-        [Fact]
-        public async void UpdateCompanyGreeting()
-        {
-            var rc = await ReusableRestClient.GetInstance();
-            var account = rc.Restapi().Account();
-            var companyAnsweringRuleList = await account.AnsweringRule().List();
-            var answeringRule = companyAnsweringRuleList.records.Last();
-            // comment out because we don't want to update company greetings
+        var rc = await ReusableRestClient.GetInstance();
+        var account = rc.Restapi().Account();
+        var companyAnsweringRuleList = await account.AnsweringRule().List();
+        var answeringRule = companyAnsweringRuleList.records.Last();
+        // comment out because we don't want to update company greetings
 //                var customCompanyGreetingInfo = await account.Greeting().Post(new CreateCompanyGreetingRequest
 //                {
 //                    type = "Company",
@@ -41,16 +41,16 @@ namespace RingCentral.Tests
 //                    },
 //                });
 //                Assert.Equal("Company", customCompanyGreetingInfo.type);
-        }
+    }
 
-        [Fact]
-        public async void UpdateUserGreeting()
-        {
-            var rc = await ReusableRestClient.GetInstance();
-            var extension = rc.Restapi().Account().Extension();
-            var userAnsweringRuleList = await extension.AnsweringRule().List();
-            var answeringRule = userAnsweringRuleList.records.Last();
-            // comment out because we don't want to update user greetings
+    [Fact]
+    public async void UpdateUserGreeting()
+    {
+        var rc = await ReusableRestClient.GetInstance();
+        var extension = rc.Restapi().Account().Extension();
+        var userAnsweringRuleList = await extension.AnsweringRule().List();
+        var answeringRule = userAnsweringRuleList.records.Last();
+        // comment out because we don't want to update user greetings
 //                var customGreetingInfo = await extension.Greeting().Post(new CreateCustomUserGreetingRequest
 //                {
 //                    type = "Voicemail",
@@ -77,6 +77,5 @@ namespace RingCentral.Tests
 //                    },
 //                });
 //                Assert.Equal("Voicemail", customGreetingInfo.type);
-        }
     }
 }

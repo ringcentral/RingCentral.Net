@@ -39,6 +39,11 @@ namespace RingCentral
         public string cancellationUri { get; set; }
 
         /// <summary>
+        ///     Indicates if the registrant was registered to on-demand webinar
+        /// </summary>
+        public bool? registeredPostWebinar { get; set; }
+
+        /// <summary>
         ///     Visitor ID passed from registration page
         /// </summary>
         public string visitorId { get; set; }

@@ -3,6 +3,11 @@ namespace RingCentral
     public class FaxResponseTo
     {
         /// <summary>
+        ///     Internal identifier of a fax recipient
+        /// </summary>
+        public string recipientId { get; set; }
+
+        /// <summary>
         ///     Phone number in E.164 (with '+' sign) format
         ///     Example: +18661234567
         /// </summary>
@@ -23,5 +28,13 @@ namespace RingCentral
         ///     Enum: Queued, Sent, Delivered, DeliveryFailed, SendingFailed, Received
         /// </summary>
         public string messageStatus { get; set; }
+
+        /// <summary>
+        ///     Contains party location (city, state) if one can be determined
+        ///     from phoneNumber. This property is filled only when phoneNumber is not
+        ///     empty and server can calculate location information from it (for example,
+        ///     this information is unavailable for US toll-free numbers)
+        /// </summary>
+        public string location { get; set; }
     }
 }

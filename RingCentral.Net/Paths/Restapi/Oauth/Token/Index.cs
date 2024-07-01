@@ -23,9 +23,11 @@ namespace RingCentral.Paths.Restapi.Oauth.Token
 
         /// <summary>
         ///     Returns access (and potentially refresh) tokens for making API requests.
-        ///     Depending on client application type
-        ///     requests to this endpoint may require authentication with HTTP Basic scheme
-        ///     using registered client ID and client secret as login and password, correspondingly.
+        ///     For confidential client application types
+        ///     this endpoint requires client authentication using one of the supported
+        ///     methods (`client_secret_basic`, `client_secret_jwt` or `private_key_jwt`)
+        ///     For non-confidential client application types
+        ///     the client identifier must be provided via `client_id` request attribute.
         ///     HTTP Method: post
         ///     Endpoint: /restapi/oauth/token
         ///     Rate Limit Group: Auth

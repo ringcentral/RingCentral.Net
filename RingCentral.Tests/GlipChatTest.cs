@@ -1,17 +1,16 @@
 using Xunit;
 
-namespace RingCentral.Tests
+namespace RingCentral.Tests;
+
+[Collection("Sequential")]
+public class GlipChatTest
 {
-    [Collection("Sequential")]
-    public class GlipChatTest
+    [Fact]
+    public async void GetEveryOneTeam()
     {
-        [Fact]
-        public async void GetEveryOneTeam()
-        {
-            var rc = await ReusableRestClient.GetInstance();
-            var result = await rc.TeamMessaging().V1().Chats()
-                .List(new ListGlipChatsNewParameters {type = new[] {"Everyone"}});
-            Assert.Single(result.records);
-        }
+        var rc = await ReusableRestClient.GetInstance();
+        var result = await rc.TeamMessaging().V1().Chats()
+            .List(new ListGlipChatsNewParameters { type = new[] { "Everyone" } });
+        Assert.Single(result.records);
     }
 }

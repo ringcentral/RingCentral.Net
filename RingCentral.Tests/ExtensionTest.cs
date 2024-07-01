@@ -1,24 +1,24 @@
 using Newtonsoft.Json;
 using Xunit;
 
-namespace RingCentral.Tests
-{
-    [Collection("Sequential")]
-    public class ExtensionTest
-    {
-        [Fact]
-        public async void TestGet()
-        {
-            var rc = await ReusableRestClient.GetInstance();
-            var extension = await rc.Restapi().Account().Extension().Get();
-            Assert.NotNull(extension);
-            Assert.True(extension.contact.firstName.Length > 0);
-        }
+namespace RingCentral.Tests;
 
-        [Fact]
-        public void Deserialize()
-        {
-            var s = @"{
+[Collection("Sequential")]
+public class ExtensionTest
+{
+    [Fact]
+    public async void TestGet()
+    {
+        var rc = await ReusableRestClient.GetInstance();
+        var extension = await rc.Restapi().Account().Extension().Get();
+        Assert.NotNull(extension);
+        Assert.True(extension.contact.firstName.Length > 0);
+    }
+
+    [Fact]
+    public void Deserialize()
+    {
+        var s = @"{
   ""uri"" : ""https://api.ringcentral.com/restapi/v1.0/account/1420683014/extension/1420683014"",
   ""id"" : 1420683014,
   ""extensionNumber"" : ""101"",
@@ -229,10 +229,9 @@ namespace RingCentral.Tests
     } ]
   }
 }";
-            var ext = JsonConvert.DeserializeObject<GetExtensionInfoResponse>(s);
-            Assert.NotNull(ext);
-            Assert.Equal("101", ext.extensionNumber);
-            Assert.Equal(3, ext.departments.Length);
-        }
+        var ext = JsonConvert.DeserializeObject<GetExtensionInfoResponse>(s);
+        Assert.NotNull(ext);
+        Assert.Equal("101", ext.extensionNumber);
+        Assert.Equal(3, ext.departments.Length);
     }
 }

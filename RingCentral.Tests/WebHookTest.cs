@@ -1,34 +1,34 @@
 using System.Net;
 using Xunit;
 
-namespace RingCentral.Tests
+namespace RingCentral.Tests;
+
+[Collection("Sequential")]
+public class WebHookTest
 {
-    [Collection("Sequential")]
-    public class WebHookTest
+    [Fact]
+    public async void SetupWebHook()
     {
-        [Fact]
-        public async void SetupWebHook()
+        var rc = await ReusableRestClient.GetInstance();
+        try
         {
-            var rc = await ReusableRestClient.GetInstance();
-            try
+            await rc.Restapi().Subscription().Post(new CreateSubscriptionRequest
             {
-                await rc.Restapi().Subscription().Post(new CreateSubscriptionRequest
+                eventFilters = new[] { "/restapi/v1.0/account/~/extension/~/message-store" },
+                deliveryMode = new NotificationDeliveryModeRequest
                 {
-                    eventFilters = new[] {"/restapi/v1.0/account/~/extension/~/message-store"},
-                    deliveryMode = new NotificationDeliveryModeRequest
-                    {
-                        transportType = "WebHook",
-                        address = "http://www.example.com/webhook"
-                    }
-                });
-            }
-            catch (RestException re)
-            {
-                // "errorCode":"SUB-523","message":"HTTPS is required"
-                // Or: webhook URI response is 404
-                Assert.Equal(HttpStatusCode.BadRequest, re.httpResponseMessage.StatusCode);
-            }
+                    transportType = "WebHook",
+                    address = "http://www.example.com/webhook"
+                }
+            });
         }
+        catch (RestException re)
+        {
+            // "errorCode":"SUB-523","message":"HTTPS is required"
+            // Or: webhook URI response is 404
+            Assert.Equal(HttpStatusCode.BadRequest, re.httpResponseMessage.StatusCode);
+        }
+    }
 
 //        [Fact]
 //        public async void VerificationToken()
@@ -56,5 +56,4 @@ namespace RingCentral.Tests
 //                Assert.Equal(630720000, subscriptionInfo.expiresIn);
 //            }
 //        }
-    }
 }

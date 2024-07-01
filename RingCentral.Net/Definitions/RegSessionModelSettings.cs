@@ -31,8 +31,19 @@ namespace RingCentral
 
         /// <summary>
         ///     Indicates that recording will be shown after the webinar and in emails.
-        ///     Default: true
         /// </summary>
         public bool? viewRecording { get; set; }
+
+        /// <summary>
+        ///     Duration of on-demand webinar. The default value can only be used if the session is on demand.
+        ///     Default: SixMonths
+        ///     Enum: OneMonth, TwoMonths, ThreeMonths, SixMonths, OneYear
+        /// </summary>
+        public string onDemandDuration { get; set; }
+
+        /// <summary>
+        ///     Indicates that recording exists for the session.
+        /// </summary>
+        public bool? recordingExist { get; set; }
     }
 }

@@ -66,5 +66,10 @@ namespace RingCentral
         ///     sending/receiving SMS
         /// </summary>
         public string phoneNumber { get; set; }
+
+        /// <summary>
+        ///     Internal identifier of a message recipient
+        /// </summary>
+        public string recipientId { get; set; }
     }
 }

@@ -20,7 +20,7 @@ namespace RingCentral
         {
             HttpContent httpContent = null;
             if (content is HttpContent)
-                httpContent = (HttpContent) content;
+                httpContent = (HttpContent)content;
             else if (content is string s)
                 httpContent = new StringContent(s);
             else if (content != null)
@@ -33,7 +33,7 @@ namespace RingCentral
             if (endpoint.StartsWith("https://"))
                 uriBuilder = new UriBuilder(endpoint);
             else
-                uriBuilder = new UriBuilder(server) {Path = endpoint};
+                uriBuilder = new UriBuilder(server) { Path = endpoint };
 
             if (queryParams != null)
             {
@@ -59,14 +59,14 @@ namespace RingCentral
                 var r = await extensibleRequest(httpRequestMessage,
                     restRequestConfig ?? RestRequestConfig.DefaultInstance);
                 Trace.WriteLine(
-                    $"[{DateTime.Now.ToString("yyyyMMdd-HHmmss")} HTTP {httpMethod.Method} {(int) r.StatusCode} {r.ReasonPhrase}] {server} {endpoint}");
+                    $"[{DateTime.Now.ToString("yyyyMMdd-HHmmss")} HTTP {httpMethod.Method} {(int)r.StatusCode} {r.ReasonPhrase}] {server} {endpoint}");
                 return r;
             }
             catch (RestException re)
             {
                 var r = re.httpResponseMessage;
                 Trace.WriteLine(
-                    $"[{DateTime.Now.ToString("yyyyMMdd-HHmmss")} HTTP {httpMethod.Method} {(int) r.StatusCode} {r.ReasonPhrase}] {server} {endpoint}");
+                    $"[{DateTime.Now.ToString("yyyyMMdd-HHmmss")} HTTP {httpMethod.Method} {(int)r.StatusCode} {r.ReasonPhrase}] {server} {endpoint}");
                 throw;
             }
         }
@@ -75,16 +75,16 @@ namespace RingCentral
             object content = null, object queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             var httpResponseMessage = await Request(httpMethod, endpoint, content, queryParams, restRequestConfig);
-            if (typeof(T) == typeof(HttpResponseMessage)) return (T) (object) httpResponseMessage;
+            if (typeof(T) == typeof(HttpResponseMessage)) return (T)(object)httpResponseMessage;
 
             if (typeof(T) == typeof(byte[]))
             {
                 var bytes = await httpResponseMessage.Content.ReadAsByteArrayAsync();
-                return (T) (object) bytes;
+                return (T)(object)bytes;
             }
 
             var httpContent = await httpResponseMessage.Content.ReadAsStringAsync();
-            if (typeof(T) == typeof(string)) return (T) (object) httpContent;
+            if (typeof(T) == typeof(string)) return (T)(object)httpContent;
 
             try
             {

@@ -44,7 +44,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public CompanyAnsweringRuleCallersInfoRequest extension { get; set; }
+        public CompanyAnsweringRuleExtensionInfoRequest extension { get; set; }
 
         /// <summary>
         ///     Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List
