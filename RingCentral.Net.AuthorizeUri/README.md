@@ -24,6 +24,9 @@ In short, when you invoke the `BuildUri` method, if you can pass in a `code_chal
 value `"S256"`, the method will auto generate `codeVerifer` and `code_challenge` for you. codeVerifier is accessible
 via `authorizeUriExtension.codeVerifier` after the method is called. `code_challenge` is included in the URI.
 
+Please note that, if you are using PKCE, you should not specify `clientId`, leave it as `null`. 
+It will not break your app if you specify a `clientSecret`, but it defeats the purpose of PKCE.
+
 ## More documentation
 
 This extension is inspired
