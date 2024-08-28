@@ -3,17 +3,22 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <PackageId>RingCentral.Net</PackageId>
-        <PackageVersion>6.2.0</PackageVersion>
+        <PackageVersion>6.2.1</PackageVersion>
         <Authors>Tyler Liu (tyler.liu@ringcentral.com)</Authors>
         <Description>RingCentral SDK for .NET</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
         <PackageTags>RingCentral</PackageTags>
         <RootNamespace>RingCentral</RootNamespace>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="6.0.0"/>
+        <None Include="../README.md">
+          <Pack>True</Pack>
+          <PackagePath>README.md</PackagePath>
+        </None>
     </ItemGroup>
 
 </Project>

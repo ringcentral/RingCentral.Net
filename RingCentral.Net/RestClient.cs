@@ -69,13 +69,21 @@ namespace RingCentral
         {
             restRequestConfig = restRequestConfig ?? RestRequestConfig.DefaultInstance;
 
-            httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/6.2.0");
-            httpRequestMessage.Headers.Authorization =
-                BasicAuthPaths.Contains(httpRequestMessage.RequestUri.AbsolutePath)
-                    ? new AuthenticationHeaderValue("Basic",
+            httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/6.2.1");
+            if (BasicAuthPaths.Contains(httpRequestMessage.RequestUri.AbsolutePath))
+            {
+                if (clientSecret != default(string))
+                {
+                    httpRequestMessage.Headers.Authorization = new AuthenticationHeaderValue("Basic",
                         Convert.ToBase64String(
-                            Encoding.UTF8.GetBytes($"{clientId}:{clientSecret}")))
-                    : new AuthenticationHeaderValue("Bearer", token.access_token);
+                            Encoding.UTF8.GetBytes($"{clientId}:{clientSecret}")));
+                }
+                // else: PKCE doesn't require a clientSecret
+            }
+            else
+            {
+                httpRequestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token.access_token);
+            }
 
             var httpResponseMessage =
                 await httpClient.SendAsync(httpRequestMessage, restRequestConfig.cancellationToken);
