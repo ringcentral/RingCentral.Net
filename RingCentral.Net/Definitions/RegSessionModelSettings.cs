@@ -45,5 +45,16 @@ namespace RingCentral
         ///     Indicates that recording exists for the session.
         /// </summary>
         public bool? recordingExist { get; set; }
+
+        /// <summary>
+        ///     Indicates that post webinar registration will be opened automatically when webinar ends.
+        /// </summary>
+        public bool? autoOpenPostWebinarRegistration { get; set; }
+
+        /// <summary>
+        ///     The time after which the post webinar will be closed automatically.
+        ///     Format: date-time
+        /// </summary>
+        public string postWebinarRegistrationClosingTime { get; set; }
     }
 }

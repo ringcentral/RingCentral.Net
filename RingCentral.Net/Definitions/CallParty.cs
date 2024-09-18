@@ -74,5 +74,10 @@ namespace RingCentral
         ///     Active recordings list
         /// </summary>
         public RecordingInfo[] recordings { get; set; }
+
+        /// <summary>
+        ///     Call metadata.
+        /// </summary>
+        public MetaData[] metadata { get; set; }
     }
 }

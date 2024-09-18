@@ -51,7 +51,8 @@ namespace RingCentral
         public string countryId { get; set; }
 
         /// <summary>
-        ///     ISO code of a country
+        ///     Two-letter country code in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format
+        ///     Example: US
         /// </summary>
         public string countryIsoCode { get; set; }
 

@@ -8,7 +8,8 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        ///     Enum: Disabled, Enabled, NotActivated, Frozen
+        ///     Extension status
+        ///     Enum: Enabled, Disabled, Frozen, NotActivated
         /// </summary>
         public string status { get; set; }
 

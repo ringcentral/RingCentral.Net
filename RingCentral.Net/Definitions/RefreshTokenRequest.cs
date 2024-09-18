@@ -8,6 +8,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Grant type
+        ///     Required
         ///     Enum: refresh_token
         /// </summary>
         public string grant_type { get; set; }

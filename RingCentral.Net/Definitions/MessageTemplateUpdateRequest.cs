@@ -10,7 +10,7 @@ namespace RingCentral
         /// <summary>
         ///     Required
         /// </summary>
-        public TemplateInfo body { get; set; }
+        public MessageTemplateInfo body { get; set; }
 
         /// <summary>
         /// </summary>

@@ -72,12 +72,10 @@ namespace RingCentral
             httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/6.2.1");
             if (BasicAuthPaths.Contains(httpRequestMessage.RequestUri.AbsolutePath))
             {
-                if (clientSecret != default(string))
-                {
+                if (clientSecret != default)
                     httpRequestMessage.Headers.Authorization = new AuthenticationHeaderValue("Basic",
                         Convert.ToBase64String(
                             Encoding.UTF8.GetBytes($"{clientId}:{clientSecret}")));
-                }
                 // else: PKCE doesn't require a clientSecret
             }
             else

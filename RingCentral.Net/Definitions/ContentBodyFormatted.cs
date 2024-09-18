@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Text and HTML formatted versions of the content body.
+    ///     Text and HTML formatted versions of the content body
     /// </summary>
     public class ContentBodyFormatted
     {

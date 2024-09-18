@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class AnsweringRuleInfo
+    public class CallHandlingRuleInfo
     {
         /// <summary>
         ///     Canonical URI to an answering rule resource

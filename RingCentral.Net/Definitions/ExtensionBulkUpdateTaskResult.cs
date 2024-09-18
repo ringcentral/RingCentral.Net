@@ -1,13 +1,13 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Result record on multiple extension update task
+    ///     Resulting record of a task on multiple extensions update
     /// </summary>
     public class ExtensionBulkUpdateTaskResult
     {
         /// <summary>
         /// </summary>
-        public ExtensionUpdateShortResult[] affectedItems { get; set; }
+        public ExtensionBulkUpdateTaskResultAffectedItems affectedItems { get; set; }
 
         /// <summary>
         /// </summary>

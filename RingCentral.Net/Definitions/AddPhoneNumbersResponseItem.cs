@@ -28,5 +28,11 @@ namespace RingCentral
         ///     Example: +16501234567
         /// </summary>
         public string phoneNumber { get; set; }
+
+        /// <summary>
+        ///     Phone number activation status. Determine whether phone number migration is completed on the partner side.
+        ///     Enum: Active, Inactive
+        /// </summary>
+        public string activationStatus { get; set; }
     }
 }

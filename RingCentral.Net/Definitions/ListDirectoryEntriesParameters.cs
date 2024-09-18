@@ -6,6 +6,12 @@ namespace RingCentral
     public class ListDirectoryEntriesParameters
     {
         /// <summary>
+        ///     Flag to enable cross-site limitation checking
+        ///     Example: true
+        /// </summary>
+        public bool? accessibleSitesOnly { get; set; }
+
+        /// <summary>
         ///     If `true` then contacts of all accounts in federation are returned. If `false` then only contacts of the current
         ///     account are returned, and account section is eliminated in this case
         ///     Default: true

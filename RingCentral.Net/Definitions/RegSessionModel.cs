@@ -40,6 +40,13 @@ namespace RingCentral
         public long? registrantCount { get; set; }
 
         /// <summary>
+        ///     The current number of post webinar registrants
+        ///     Format: int32
+        ///     Example: 10
+        /// </summary>
+        public long? postWebinarRegistrantCount { get; set; }
+
+        /// <summary>
         ///     Indicates that there are non-test registrants
         ///     Required
         ///     Example: true

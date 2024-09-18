@@ -16,8 +16,8 @@
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="6.0.0"/>
         <None Include="../README.md">
-          <Pack>True</Pack>
-          <PackagePath>README.md</PackagePath>
+            <Pack>True</Pack>
+            <PackagePath>README.md</PackagePath>
         </None>
     </ItemGroup>
 

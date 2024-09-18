@@ -39,7 +39,7 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.BulkAdd
         }
 
         /// <summary>
-        ///     Returns the result of asynchronous operation which adds phone numbers to the account Inventory.
+        ///     Returns the result of asynchronous operation which adds phone numbers to the account inventory.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/v2/accounts/{accountId}/phone-numbers/bulk-add/{taskId}
         ///     Rate Limit Group: Heavy

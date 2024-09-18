@@ -20,6 +20,7 @@ namespace RingCentral
         public string searchString { get; set; }
 
         /// <summary>
+        ///     Emergency address status
         ///     Enum: Valid, Invalid, Provisioning
         /// </summary>
         public string addressStatus { get; set; }

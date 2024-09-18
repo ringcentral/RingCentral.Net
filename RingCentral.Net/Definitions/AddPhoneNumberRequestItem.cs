@@ -19,5 +19,11 @@ namespace RingCentral
         ///     Enum: Inventory, InventoryPartnerBusinessMobileNumber, PartnerBusinessMobileNumber
         /// </summary>
         public string usageType { get; set; }
+
+        /// <summary>
+        ///     Phone number activation status. Determine whether phone number migration is completed on the partner side.
+        ///     Enum: Active, Inactive
+        /// </summary>
+        public string activationStatus { get; set; }
     }
 }

@@ -44,10 +44,11 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries
         ///     Rate Limit Group: Medium
         ///     App Permission: ReadAccounts
         /// </summary>
-        public async Task<ContactResource> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<ContactResource> Get(ReadDirectoryEntryParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             if (entryId == null) throw new ArgumentException("Parameter cannot be null", nameof(entryId));
-            return await rc.Get<ContactResource>(Path(), null, restRequestConfig);
+            return await rc.Get<ContactResource>(Path(), queryParams, restRequestConfig);
         }
     }
 }

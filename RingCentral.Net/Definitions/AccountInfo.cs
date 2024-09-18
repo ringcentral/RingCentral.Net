@@ -23,16 +23,11 @@ namespace RingCentral
         public string mainNumber { get; set; }
 
         /// <summary>
-        ///     Account status
+        ///     Status of an account
         ///     Required
-        ///     Example: Confirmed
         ///     Enum: Initial, Unconfirmed, Confirmed, Disabled
         /// </summary>
         public string status { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public AccountStatusInfo statusInfo { get; set; }
 
         /// <summary>
         ///     Company name

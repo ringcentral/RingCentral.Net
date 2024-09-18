@@ -24,7 +24,7 @@ namespace RingCentral
         public string name { get; set; }
 
         /// <summary>
-        ///     Call queue status
+        ///     Group extension status
         ///     Enum: Enabled, Disabled, NotActivated
         /// </summary>
         public string status { get; set; }
@@ -34,6 +34,10 @@ namespace RingCentral
         ///     Enum: Emergency
         /// </summary>
         public string subType { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public SiteBasicInfo site { get; set; }
 
         /// <summary>
         /// </summary>

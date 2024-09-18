@@ -30,10 +30,10 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadExtensions
         /// </summary>
-        public async Task<RingCentral.CallQueues> List(ListCallQueuesParameters queryParams = null,
+        public async Task<CallQueueList> List(ListCallQueuesParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RingCentral.CallQueues>(Path(false), queryParams, restRequestConfig);
+            return await rc.Get<CallQueueList>(Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -58,11 +58,11 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
         ///     App Permission: EditExtensions
         ///     User Permission: EditUserInfo
         /// </summary>
-        public async Task<CallQueueDetails> Put(CallQueueDetails callQueueDetails,
+        public async Task<CallQueueDetails> Put(CallQueueDetailsForUpdate callQueueDetailsForUpdate,
             RestRequestConfig restRequestConfig = null)
         {
             if (groupId == null) throw new ArgumentException("Parameter cannot be null", nameof(groupId));
-            return await rc.Put<CallQueueDetails>(Path(), callQueueDetails, null, restRequestConfig);
+            return await rc.Put<CallQueueDetails>(Path(), callQueueDetailsForUpdate, null, restRequestConfig);
         }
     }
 }

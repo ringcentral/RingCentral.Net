@@ -55,16 +55,16 @@ namespace RingCentral
         public bool? primary { get; set; }
 
         /// <summary>
-        ///     Status of a phone number. If the value is 'Normal', the phone
+        ///     Status of a phone number. If the value is `Normal`, the phone
         ///     number is ready to be used. Otherwise, it is an external number not yet
         ///     ported to RingCentral
-        ///     Enum: Normal, Pending, PortedIn, Temporary
+        ///     Enum: Normal, Pending, PortedIn, Temporary, Unknown
         /// </summary>
         public string status { get; set; }
 
         /// <summary>
-        ///     Phone number type
-        ///     Enum: VoiceFax, FaxOnly, VoiceOnly
+        ///     Type of a phone number
+        ///     Enum: VoiceFax, VoiceOnly, FaxOnly
         /// </summary>
         public string type { get; set; }
 

@@ -32,10 +32,10 @@ namespace RingCentral
         public long? perPage { get; set; }
 
         /// <summary>
-        ///     Extension current state. Multiple values are supported. If 'Unassigned'
+        ///     Extension status. Multiple values are supported. If `Unassigned`
         ///     is specified, then extensions without `extensionNumber` attribute are returned.
         ///     If not specified, then all extensions are returned
-        ///     Enum: Enabled, Disabled, NotActivated, Unassigned
+        ///     Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
         /// </summary>
         public string[] status { get; set; }
 

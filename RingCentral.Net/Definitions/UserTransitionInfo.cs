@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     For NotActivated extensions only. Welcome email settings
+    ///     For `NotActivated` extensions only. Welcome email settings
     /// </summary>
     public class UserTransitionInfo
     {
@@ -13,7 +13,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Specifies if a welcome/activation email is sent to the new users (within extension status changing from
-        ///     'Unassigned' to 'NotActivated/Disabled')
+        ///     `Unassigned` to `NotActivated/Disabled`)
         /// </summary>
         public bool? sendWelcomeEmail { get; set; }
     }

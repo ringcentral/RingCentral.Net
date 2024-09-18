@@ -13,6 +13,6 @@ namespace RingCentral
         /// <summary>
         ///     Collection of Greeting Info
         /// </summary>
-        public GreetingResource[] greetings { get; set; }
+        public CallRecordingGreetingResource[] greetings { get; set; }
     }
 }

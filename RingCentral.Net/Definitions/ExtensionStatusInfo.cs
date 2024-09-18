@@ -1,8 +1,7 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Status information (reason, comment). Returned for 'Disabled'
-    ///     status only
+    ///     Status information (reason, comment). Returned for `Disabled` extensions only
     /// </summary>
     public class ExtensionStatusInfo
     {
@@ -13,15 +12,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Type of suspension
-        ///     Enum: SuspendedVoluntarily, SuspendedInvoluntarily, CancelledVoluntarily, CancelledInvoluntarily
+        ///     Enum: Voluntarily, Involuntarily
         /// </summary>
         public string reason { get; set; }
-
-        /// <summary>
-        ///     Date until which an account will get deleted. The default
-        ///     value is 30 days since the current date
-        ///     Format: date-time
-        /// </summary>
-        public string till { get; set; }
     }
 }

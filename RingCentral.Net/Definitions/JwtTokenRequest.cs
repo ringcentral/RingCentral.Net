@@ -8,6 +8,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Grant type
+        ///     Required
         ///     Enum: urn:ietf:params:oauth:grant-type:jwt-bearer, partner_jwt
         /// </summary>
         public string grant_type { get; set; }

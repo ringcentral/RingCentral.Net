@@ -56,8 +56,8 @@ namespace RingCentral
         public SiteInfo site { get; set; }
 
         /// <summary>
-        ///     Extension current state
-        ///     Enum: Enabled, Disabled, NotActivated, Unassigned, Frozen
+        ///     Extension status
+        ///     Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
         /// </summary>
         public string status { get; set; }
 

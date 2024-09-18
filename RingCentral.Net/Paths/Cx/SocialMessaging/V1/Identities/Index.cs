@@ -23,7 +23,7 @@ namespace RingCentral.Paths.Cx.SocialMessaging.V1.Identities
         }
 
         /// <summary>
-        ///     Returns a list of identities filtered by creation date. The default order is descending.
+        ///     Returns a list of identities ordered by creation date. The default order is descending.
         ///     The account context of this request is determined by the RC Account ID associated with
         ///     the access token provided in the Authorization header.
         ///     The query parameters provided will be considered an AND operation to filter the list.

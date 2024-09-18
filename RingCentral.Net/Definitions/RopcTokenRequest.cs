@@ -9,6 +9,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Grant type
+        ///     Required
         ///     Enum: password
         /// </summary>
         public string grant_type { get; set; }

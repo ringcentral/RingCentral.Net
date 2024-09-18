@@ -6,14 +6,20 @@ namespace RingCentral
     public class ListSocialMessagingIdentitiesParameters
     {
         /// <summary>
-        ///     Filter based on the specified `sourceId`
+        ///     Filter based on the specified channelId.
         /// </summary>
-        public string sourceId { get; set; }
+        public string channelId { get; set; }
 
         /// <summary>
         ///     Filter based on the specified `identityGroupIds` (separated by commas)
         /// </summary>
         public string[] identityGroupIds { get; set; }
+
+        /// <summary>
+        ///     Either Agent or Customer
+        ///     Enum: Agent, Customer
+        /// </summary>
+        public string identityType { get; set; }
 
         /// <summary>
         ///     Filter based on the specified `userId`
@@ -26,10 +32,10 @@ namespace RingCentral
         public string uuid { get; set; }
 
         /// <summary>
-        ///     Ordering by creationTime is descending by default.
+        ///     Ordering by creationTime and lastModifiedTime is descending by default.
         ///     Example: +creationTime
         ///     Default: -creationTime
-        ///     Enum: -creationTime, +creationTime, creationTime
+        ///     Enum: -creationTime, +creationTime, creationTime, -lastModifiedTime, +lastModifiedTime, lastModifiedTime
         /// </summary>
         public string orderBy { get; set; }
 

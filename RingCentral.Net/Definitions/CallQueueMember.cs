@@ -22,6 +22,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public SiteResource site { get; set; }
+        public SiteBasicInfo site { get; set; }
     }
 }

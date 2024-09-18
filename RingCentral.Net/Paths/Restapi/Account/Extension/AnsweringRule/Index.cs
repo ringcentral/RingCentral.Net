@@ -59,11 +59,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadUserAnsweringRules
         /// </summary>
-        public async Task<AnsweringRuleInfo> Get(ReadAnsweringRuleParameters queryParams = null,
+        public async Task<CallHandlingRuleInfo> Get(ReadAnsweringRuleParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             if (ruleId == null) throw new ArgumentException("Parameter cannot be null", nameof(ruleId));
-            return await rc.Get<AnsweringRuleInfo>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<CallHandlingRuleInfo>(Path(), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -74,11 +74,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         ///     App Permission: EditExtensions
         ///     User Permission: EditUserAnsweringRules
         /// </summary>
-        public async Task<AnsweringRuleInfo> Put(UpdateAnsweringRuleRequest updateAnsweringRuleRequest,
+        public async Task<CallHandlingRuleInfo> Put(UpdateAnsweringRuleRequest updateAnsweringRuleRequest,
             RestRequestConfig restRequestConfig = null)
         {
             if (ruleId == null) throw new ArgumentException("Parameter cannot be null", nameof(ruleId));
-            return await rc.Put<AnsweringRuleInfo>(Path(), updateAnsweringRuleRequest, null, restRequestConfig);
+            return await rc.Put<CallHandlingRuleInfo>(Path(), updateAnsweringRuleRequest, null, restRequestConfig);
         }
 
         /// <summary>

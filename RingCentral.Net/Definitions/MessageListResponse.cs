@@ -13,6 +13,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public PagingResource paging { get; set; }
+        public NonEnumeratedPagingModel paging { get; set; }
     }
 }

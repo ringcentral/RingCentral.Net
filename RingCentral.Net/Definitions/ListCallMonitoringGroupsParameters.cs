@@ -25,5 +25,10 @@ namespace RingCentral
         ///     group within the result
         /// </summary>
         public string memberExtensionId { get; set; }
+
+        /// <summary>
+        ///     Internal identifier of a site
+        /// </summary>
+        public string siteId { get; set; }
     }
 }

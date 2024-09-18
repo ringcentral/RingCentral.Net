@@ -8,10 +8,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public MeetingRecordingsPagingInfo paging { get; set; }
+        public EnumeratedPagingModel paging { get; set; }
 
         /// <summary>
         /// </summary>
-        public MeetingRecordingsNavigationInfo navigation { get; set; }
+        public PageNavigationModel navigation { get; set; }
     }
 }

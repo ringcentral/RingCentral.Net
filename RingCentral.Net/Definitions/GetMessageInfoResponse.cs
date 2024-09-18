@@ -53,11 +53,6 @@ namespace RingCentral
         public string creationTime { get; set; }
 
         /// <summary>
-        ///     SMS only. Delivery error code returned by gateway
-        /// </summary>
-        public string deliveryErrorCode { get; set; }
-
-        /// <summary>
         ///     Text message direction. Note that for some message types not all
         ///     directions are allowed. For example voicemail messages can
         ///     be only inbound

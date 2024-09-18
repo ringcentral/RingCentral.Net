@@ -47,7 +47,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public PackageInfo package { get; set; }
+        public BillingPackageInfo package { get; set; }
 
         /// <summary>
         /// </summary>

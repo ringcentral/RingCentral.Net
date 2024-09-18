@@ -49,8 +49,8 @@ namespace RingCentral
         public string status { get; set; }
 
         /// <summary>
-        ///     Phone number type
-        ///     Enum: VoiceFax, FaxOnly, VoiceOnly
+        ///     Type of a phone number
+        ///     Enum: VoiceFax, VoiceOnly, FaxOnly
         /// </summary>
         public string type { get; set; }
 

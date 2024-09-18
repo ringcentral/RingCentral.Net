@@ -36,5 +36,15 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public OperatorInfo @operator { get; set; }
+
+        /// <summary>
+        ///     Site access status for cross-site limitation
+        ///     Enum: Limited, Unlimited
+        /// </summary>
+        public string siteAccess { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public string[] accessibleSiteIds { get; set; }
     }
 }

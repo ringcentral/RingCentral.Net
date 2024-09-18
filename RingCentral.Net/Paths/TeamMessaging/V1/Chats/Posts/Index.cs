@@ -36,10 +36,10 @@ namespace RingCentral.Paths.TeamMessaging.V1.Chats.Posts
         }
 
         /// <summary>
-        ///     Creates a post in the chat specified in path. Any mention can be added within the `text` attribute of the request
-        ///     body in .md format - `![:Type](id)`, where `type` is one of (Person, Team, File, Note, Task, Event, Link, Card) and
-        ///     `id` is a unique identifier of the mentioned object of the specified type. Attachments of the following types
-        ///     (File, Card, Event, Note) can also be added to a post by passing type and ID of attachment(s) in request body.
+        ///     Creates a post in the chat specified in path. Any mention can be added within the `text` attribute of
+        ///     the request body in .md format - `![:Type](id)`, where `type` is one of (Person, Team, File, Note,
+        ///     Task, Event, Link, Card) and `id` is a unique identifier of the mentioned object of the specified type.
+        ///     Attachments can also be added to a post by passing the type and ID of attachment(s) in request body.
         ///     HTTP Method: post
         ///     Endpoint: /team-messaging/v1/chats/{chatId}/posts
         ///     Rate Limit Group: Medium

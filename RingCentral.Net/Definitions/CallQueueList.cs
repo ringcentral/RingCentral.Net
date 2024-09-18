@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class CallQueues
+    public class CallQueueList
     {
         /// <summary>
         ///     Link to a call queues resource

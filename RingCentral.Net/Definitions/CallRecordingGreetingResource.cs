@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class GreetingResource
+    public class CallRecordingGreetingResource
     {
         /// <summary>
         ///     Enum: StartRecording, StopRecording, AutomaticRecording

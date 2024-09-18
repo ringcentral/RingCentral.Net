@@ -53,6 +53,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public TMAttachmentInfo[] attachments { get; set; }
+        public TaskAttachment[] attachments { get; set; }
     }
 }

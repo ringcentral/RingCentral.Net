@@ -8,6 +8,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Grant type
+        ///     Required
         ///     Enum: urn:ietf:params:oauth:grant-type:device_code
         /// </summary>
         public string grant_type { get; set; }

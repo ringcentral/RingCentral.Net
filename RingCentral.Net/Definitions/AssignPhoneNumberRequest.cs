@@ -3,7 +3,7 @@ namespace RingCentral
     public class AssignPhoneNumberRequest
     {
         /// <summary>
-        ///     Type of phone number
+        ///     Type of a phone number
         ///     Enum: VoiceFax, VoiceOnly, FaxOnly
         /// </summary>
         public string type { get; set; }
@@ -11,7 +11,7 @@ namespace RingCentral
         /// <summary>
         ///     Target usage type of phone number (only listed values are supported)
         ///     Required
-        ///     Enum: MainCompanyNumber, CompanyNumber, DirectNumber, PhoneLine, ContactCenterNumber
+        ///     Enum: MainCompanyNumber, CompanyNumber, DirectNumber, ContactCenterNumber
         /// </summary>
         public string usageType { get; set; }
 

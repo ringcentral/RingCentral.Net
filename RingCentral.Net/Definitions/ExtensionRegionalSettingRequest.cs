@@ -27,7 +27,7 @@ namespace RingCentral
         public ExtensionCurrencyInfoRequest currency { get; set; }
 
         /// <summary>
-        ///     Time format setting
+        ///     Time format (12-hours or 24-hours).
         ///     Default: 12h
         ///     Enum: 12h, 24h
         /// </summary>

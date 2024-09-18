@@ -1,14 +1,38 @@
 namespace RingCentral
 {
-    /// <summary>
-    ///     Text message template information
-    /// </summary>
     public class TemplateInfo
     {
         /// <summary>
-        ///     Text of a message template. Maximum length is 1000 symbols (2-byte UTF-16 encoded)
-        ///     Required
+        ///     Link to a template
+        ///     Format: uri
         /// </summary>
-        public string text { get; set; }
+        public string uri { get; set; }
+
+        /// <summary>
+        ///     Internal identifier of a template
+        /// </summary>
+        public string id { get; set; }
+
+        /// <summary>
+        ///     Enum: UserSettings, CallHandling
+        /// </summary>
+        public string type { get; set; }
+
+        /// <summary>
+        ///     Name of a template
+        /// </summary>
+        public string name { get; set; }
+
+        /// <summary>
+        ///     Time of a template creation
+        ///     Format: date-time
+        /// </summary>
+        public string creationTime { get; set; }
+
+        /// <summary>
+        ///     Time of the last template modification
+        ///     Format: date-time
+        /// </summary>
+        public string lastModifiedTime { get; set; }
     }
 }

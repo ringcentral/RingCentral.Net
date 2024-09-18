@@ -49,8 +49,8 @@ namespace RingCentral
         public SignupInfoResource signupInfo { get; set; }
 
         /// <summary>
-        ///     Status of the current account
-        ///     Enum: Initial, Confirmed, Unconfirmed, Disabled
+        ///     Status of an account
+        ///     Enum: Initial, Unconfirmed, Confirmed, Disabled
         /// </summary>
         public string status { get; set; }
 

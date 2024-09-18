@@ -38,15 +38,13 @@ namespace RingCentral
         public ProfileImageInfo profileImage { get; set; }
 
         /// <summary>
-        ///     Extension current state. If 'Unassigned' is specified, then
-        ///     extensions without `extensionNumber` are returned. If not specified,
-        ///     then all extensions are returned
+        ///     Extension status
         ///     Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
         /// </summary>
         public string status { get; set; }
 
         /// <summary>
-        ///     Extension type. Please note that legacy 'Department' extension type
+        ///     Extension type. Please note that legacy `Department` extension type
         ///     corresponds to 'Call Queue' extensions in modern RingCentral product
         ///     terminology
         ///     Enum: User, FaxUser, FlexibleUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup,
@@ -83,5 +81,12 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CostCenterInfo costCenter { get; set; }
+
+        /// <summary>
+        ///     Extension creation date/time, in ISO 8601 format
+        ///     Format: date-time
+        ///     Example: 2024-06-06T07:01:14.123Z
+        /// </summary>
+        public string creationTime { get; set; }
     }
 }

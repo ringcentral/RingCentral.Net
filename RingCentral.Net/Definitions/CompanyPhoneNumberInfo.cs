@@ -46,16 +46,16 @@ namespace RingCentral
         public string phoneNumber { get; set; }
 
         /// <summary>
-        ///     Status of a phone number. If the value is 'Normal', the phone
-        ///     number is ready to be used. If the value is 'Pending' it is an
-        ///     external number not yet ported to RingCentral.
-        ///     Enum: Normal, Pending, PortedIn, Temporary
+        ///     Status of a phone number. If the value is `Normal`, the phone
+        ///     number is ready to be used. Otherwise, it is an external number not yet
+        ///     ported to RingCentral
+        ///     Enum: Normal, Pending, PortedIn, Temporary, Unknown
         /// </summary>
         public string status { get; set; }
 
         /// <summary>
-        ///     Phone number type
-        ///     Enum: VoiceFax, FaxOnly, VoiceOnly
+        ///     Type of a phone number
+        ///     Enum: VoiceFax, VoiceOnly, FaxOnly
         /// </summary>
         public string type { get; set; }
 
@@ -87,5 +87,11 @@ namespace RingCentral
         ///     Specifies if a phone number is primary, i.e. displayed as 'main number' and called by default
         /// </summary>
         public bool? primary { get; set; }
+
+        /// <summary>
+        ///     Phone number activation status. Determine whether phone number migration is completed on the partner side.
+        ///     Enum: Active, Inactive
+        /// </summary>
+        public string activationStatus { get; set; }
     }
 }

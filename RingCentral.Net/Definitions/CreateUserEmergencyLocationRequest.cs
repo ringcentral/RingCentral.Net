@@ -13,7 +13,8 @@ namespace RingCentral
         public string addressFormatId { get; set; }
 
         /// <summary>
-        ///     If 'true' address validation for non-us addresses is skipped
+        ///     Specifies emergency address validation during the ERL creation/update.
+        ///     If set to 'true', then address validation for non-US addresses is skipped
         /// </summary>
         public bool? trusted { get; set; }
 

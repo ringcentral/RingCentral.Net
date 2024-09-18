@@ -12,11 +12,15 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
+        public ServiceInfoPackage partnerPackage { get; set; }
+
+        /// <summary>
+        /// </summary>
         public ServiceInfoBrand brand { get; set; }
 
         /// <summary>
         /// </summary>
-        public ServiceInfoCountryShortModel contractedCountry { get; set; }
+        public ServiceInfoContractedCountryId contractedCountry { get; set; }
 
         /// <summary>
         /// </summary>

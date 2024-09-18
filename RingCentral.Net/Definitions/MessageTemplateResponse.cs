@@ -14,7 +14,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public TemplateInfo body { get; set; }
+        public MessageTemplateInfo body { get; set; }
 
         /// <summary>
         ///     Specifies if a template is available on a user (Personal) or a company (Company) level

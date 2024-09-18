@@ -1,7 +1,8 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Token endpoint request parameters used in the "Guest" authorization flow with the `guest` grant type
+    ///     Token endpoint request parameters used in the "Guest" authorization flow
+    ///     with the `guest` grant type
     /// </summary>
     public class GetTokenRequest
     {
@@ -164,11 +165,13 @@ namespace RingCentral
 
         /// <summary>
         ///     Resource type for the guest access.
+        ///     Required
         /// </summary>
         public string resource_type { get; set; }
 
         /// <summary>
         ///     Resource URL for the guest access.
+        ///     Required
         /// </summary>
         public string resource { get; set; }
     }

@@ -77,6 +77,12 @@ namespace RingCentral
         public string identityGroupId { get; set; }
 
         /// <summary>
+        ///     Either Agent or Customer
+        ///     Enum: Agent, Customer
+        /// </summary>
+        public string identityType { get; set; }
+
+        /// <summary>
         ///     LastName.
         ///     Example: Doe
         /// </summary>
@@ -97,8 +103,8 @@ namespace RingCentral
         /// <summary>
         ///     Type of identity
         ///     Required
-        ///     Enum: AppleMessagesForBusiness, Email, EngageMessaging, Facebook, GoogleBusinessMessages, GoogleMyBusiness,
-        ///     Instagram, Linkedin, Twitter, Viber, WhatsApp, Youtube
+        ///     Enum: AppleMessagesForBusiness, Email, EngageMessaging, Facebook, GoogleMyBusiness, Instagram, Linkedin, Twitter,
+        ///     Viber, WhatsApp, Youtube
         /// </summary>
         public string type { get; set; }
 

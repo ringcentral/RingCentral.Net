@@ -44,6 +44,12 @@ namespace RingCentral
         public RegionalSettings regionalSettings { get; set; }
 
         /// <summary>
+        ///     Site access status for cross-site limitation
+        ///     Enum: Limited, Unlimited
+        /// </summary>
+        public string siteAccess { get; set; }
+
+        /// <summary>
         /// </summary>
         public OperatorInfo @operator { get; set; }
 

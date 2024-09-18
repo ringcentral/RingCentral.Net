@@ -12,11 +12,13 @@ namespace RingCentral
 
         /// <summary>
         ///     Canonical URI of an assigned country resource
+        ///     Format: uri
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
-        ///     Country code according to the ISO standard, see [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)
+        ///     Two-letter country code in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format
+        ///     Example: US
         /// </summary>
         public string isoCode { get; set; }
 

@@ -23,6 +23,8 @@ namespace RingCentral
         public RolesLanguageResource formattingLocale { get; set; }
 
         /// <summary>
+        ///     Time format (12-hours or 24-hours).
+        ///     Default: 12h
         ///     Enum: 12h, 24h
         /// </summary>
         public string timeFormat { get; set; }

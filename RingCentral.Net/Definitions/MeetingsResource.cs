@@ -13,10 +13,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public MeetingsPagingInfo paging { get; set; }
+        public EnumeratedPagingModel paging { get; set; }
 
         /// <summary>
         /// </summary>
-        public MeetingsNavigationInfo navigation { get; set; }
+        public PageNavigationModel navigation { get; set; }
     }
 }

@@ -18,8 +18,8 @@ namespace RingCentral
         public string extensionNumber { get; set; }
 
         /// <summary>
-        ///     Current state of an extension
-        ///     Enum: Enabled, Disable, NotActivated, Unassigned
+        ///     Extension status
+        ///     Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
         /// </summary>
         public string status { get; set; }
 

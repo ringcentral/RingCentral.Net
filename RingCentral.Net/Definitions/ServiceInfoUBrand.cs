@@ -10,11 +10,5 @@ namespace RingCentral
         ///     Example: 111.222
         /// </summary>
         public string id { get; set; }
-
-        /// <summary>
-        ///     Sub-brand name
-        ///     Example: Sub-brand name
-        /// </summary>
-        public string name { get; set; }
     }
 }

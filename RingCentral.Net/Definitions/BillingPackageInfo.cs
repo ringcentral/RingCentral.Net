@@ -1,6 +1,6 @@
 namespace RingCentral
 {
-    public class PackageInfo
+    public class BillingPackageInfo
     {
         /// <summary>
         ///     Billing package version

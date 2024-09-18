@@ -93,7 +93,8 @@ namespace RingCentral
         public bool? useAsCommonPhone { get; set; }
 
         /// <summary>
-        ///     This flag indicates whether this device is used for hot desking or not
+        ///     Indicates whether this device is used for hot desking or not.
+        ///     Returned if `useAsCommonPhone` is set to false
         /// </summary>
         public bool? hotDeskDevice { get; set; }
 

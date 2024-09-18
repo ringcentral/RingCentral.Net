@@ -7,6 +7,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Grant type
+        ///     Required
         ///     Enum: ivr_pin
         /// </summary>
         public string grant_type { get; set; }

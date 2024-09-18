@@ -6,6 +6,12 @@ namespace RingCentral
     public class SearchDirectoryEntriesParameters
     {
         /// <summary>
+        ///     Flag to enable cross-site limitation checking
+        ///     Example: true
+        /// </summary>
+        public bool? accessibleSitesOnly { get; set; }
+
+        /// <summary>
         ///     A list of Account IDs
         ///     Example: 400131426008
         /// </summary>

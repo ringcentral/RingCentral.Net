@@ -85,9 +85,7 @@ namespace RingCentral
         public ProvisioningSiteInfo site { get; set; }
 
         /// <summary>
-        ///     Extension current state. If 'Unassigned' is specified, then
-        ///     extensions without `extensionNumber` are returned. If not specified, then
-        ///     all extensions are returned
+        ///     Extension status
         ///     Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
         /// </summary>
         public string status { get; set; }
