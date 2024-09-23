@@ -1,11 +1,20 @@
 name: Test
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master,removeDocFolder ]
+# on:
+#   push:
+#     branches: [ master ]
+#   pull_request:
+#     branches: [ master,removeDocFolder ]
 
+on:
+  pull_request:
+    branches:
+      - master
+      - removeDocFolder
+  push:
+    branches:
+      - master
+      - removeDocFolder
 jobs:
   Test:
     environment: prod
