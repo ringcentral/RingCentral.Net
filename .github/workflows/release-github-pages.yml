@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - removeDocFolder
 permissions:
   contents: write
 jobs:
