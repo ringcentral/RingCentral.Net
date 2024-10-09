@@ -69,7 +69,7 @@ namespace RingCentral
         {
             restRequestConfig = restRequestConfig ?? RestRequestConfig.DefaultInstance;
 
-            httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/6.2.2");
+            httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/6.2.3");
             if (BasicAuthPaths.Contains(httpRequestMessage.RequestUri.AbsolutePath))
             {
                 if (clientSecret != default)
@@ -93,6 +93,7 @@ namespace RingCentral
 
         public async Task<TokenInfo> Authorize(GetTokenRequest getTokenRequest)
         {
+            getTokenRequest.client_id = clientId;
             token = await Restapi(null).Oauth().Token().Post(getTokenRequest);
             return token;
         }
