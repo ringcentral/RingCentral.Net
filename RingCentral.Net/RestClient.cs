@@ -69,7 +69,7 @@ namespace RingCentral
         {
             restRequestConfig = restRequestConfig ?? RestRequestConfig.DefaultInstance;
 
-            httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/6.2.3");
+            httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/6.2.4");
             if (BasicAuthPaths.Contains(httpRequestMessage.RequestUri.AbsolutePath))
             {
                 if (clientSecret != default)
@@ -77,6 +77,7 @@ namespace RingCentral
                         Convert.ToBase64String(
                             Encoding.UTF8.GetBytes($"{clientId}:{clientSecret}")));
                 // else: PKCE doesn't require a clientSecret
+                // BUT: you need to provide clientId in the request body
             }
             else
             {
@@ -149,12 +150,11 @@ namespace RingCentral
         {
             if (tokenToRevoke == null && token == null) // nothing  to revoke
                 return;
-
             tokenToRevoke = tokenToRevoke ?? token.access_token ?? token.refresh_token;
-            await Restapi(null).Oauth().Revoke().Post(new RevokeTokenRequest
-            {
-                token = tokenToRevoke
-            });
+            var dict = new Dictionary<string, string>();
+            dict.Add("token", tokenToRevoke);
+            dict.Add("client_id", clientId); // todo: because spec doesn't allow clientId
+            await Post<string>(Restapi(null).Oauth().Revoke().Path(), new FormUrlEncodedContent(dict));
             token = null;
         }
 
