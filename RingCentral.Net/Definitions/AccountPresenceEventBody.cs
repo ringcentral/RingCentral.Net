@@ -12,7 +12,7 @@ namespace RingCentral
         public string extensionId { get; set; }
 
         /// <summary>
-        ///     Telephony presence status. Returned if telephony status is changed.
+        ///     Telephony presence status. Returned if telephony status is changed
         ///     Enum: NoCall, CallConnected, Ringing, OnHold, ParkedCall
         /// </summary>
         public string telephonyStatus { get; set; }
@@ -40,6 +40,12 @@ namespace RingCentral
         ///     Enum: TakeAllCalls, DoNotAcceptAnyCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly
         /// </summary>
         public string dndStatus { get; set; }
+
+        /// <summary>
+        ///     Meetings presence status. Specifies if a user is on a meeting
+        ///     Enum: Connected, Disconnected
+        /// </summary>
+        public string meetingStatus { get; set; }
 
         /// <summary>
         ///     If `true` enables other extensions to see the extension presence status

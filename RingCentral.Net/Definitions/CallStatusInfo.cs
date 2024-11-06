@@ -12,15 +12,11 @@ namespace RingCentral
         public string code { get; set; }
 
         /// <summary>
-        /// </summary>
-        public PeerInfo peerId { get; set; }
-
-        /// <summary>
-        ///     Reason for call termination. For 'Disconnected' code only
+        ///     Reason for a call status, might be specified for some codes
         ///     Enum: Pickup, Supervising, TakeOver, Timeout, BlindTransfer, RccTransfer, AttendedTransfer, CallerInputRedirect,
         ///     CallFlip, ParkLocation, DtmfTransfer, AgentAnswered, AgentDropped, Rejected, Cancelled, InternalError, NoAnswer,
         ///     TargetBusy, InvalidNumber, InternationalDisabled, DestinationBlocked, NotEnoughFunds, NoSuchUser, CallPark,
-        ///     CallRedirected, CallReplied, CallSwitch, CallFinished, CallDropped
+        ///     CallRedirected, CallReplied, CallSwitch, CallFinished, CallDropped, Voicemail
         /// </summary>
         public string reason { get; set; }
 
@@ -28,5 +24,23 @@ namespace RingCentral
         ///     Optional message
         /// </summary>
         public string description { get; set; }
+
+        /// <summary>
+        ///     Call park data. Returned for calls in 'Parked' state
+        /// </summary>
+        public string parkData { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public PeerInfo peerId { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public MobilePickupData mobilePickupData { get; set; }
+
+        /// <summary>
+        ///     Specifies if it's a conference call
+        /// </summary>
+        public bool? rcc { get; set; }
     }
 }
