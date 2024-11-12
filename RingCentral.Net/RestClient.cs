@@ -69,7 +69,7 @@ namespace RingCentral
         {
             restRequestConfig = restRequestConfig ?? RestRequestConfig.DefaultInstance;
 
-            httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/6.2.5");
+            httpRequestMessage.Headers.Add("X-User-Agent", $"{appName}/{appVersion} RingCentral.Net/6.2.6");
             if (BasicAuthPaths.Contains(httpRequestMessage.RequestUri.AbsolutePath))
             {
                 if (clientSecret != default)
