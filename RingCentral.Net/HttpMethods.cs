@@ -149,13 +149,13 @@ namespace RingCentral
             return await Request<T>(HttpMethod.Get, endpoint, null, queryParams, restRequestConfig);
         }
 
-        public async Task<HttpResponseMessage> Delete(string endpoint, object queryParams = null, object content = null,
+        public async Task<HttpResponseMessage> Delete(string endpoint, object content = null, object queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             return await Request(HttpMethod.Delete, endpoint, content, queryParams, restRequestConfig);
         }
 
-        public async Task<T> Delete<T>(string endpoint, object queryParams = null, object content = null,
+        public async Task<T> Delete<T>(string endpoint, object content = null, object queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             return await Request<T>(HttpMethod.Delete, endpoint, content, queryParams, restRequestConfig);

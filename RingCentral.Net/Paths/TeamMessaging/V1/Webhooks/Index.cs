@@ -57,7 +57,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Webhooks
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (webhookId == null) throw new ArgumentException("Parameter cannot be null", nameof(webhookId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }
 }

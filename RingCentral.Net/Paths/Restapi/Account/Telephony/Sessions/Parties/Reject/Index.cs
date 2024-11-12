@@ -28,7 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Reject
         /// </summary>
         public async Task<string> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(Path(), null, restRequestConfig);
+            return await rc.Post<string>(Path(), null, null, restRequestConfig);
         }
     }
 }

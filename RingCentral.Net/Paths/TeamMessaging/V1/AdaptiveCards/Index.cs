@@ -59,7 +59,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.AdaptiveCards
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (cardId == null) throw new ArgumentException("Parameter cannot be null", nameof(cardId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }
 }

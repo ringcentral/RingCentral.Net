@@ -27,7 +27,7 @@ namespace RingCentral.Paths.Restapi.Subscription.Renew
         /// </summary>
         public async Task<SubscriptionInfo> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<SubscriptionInfo>(Path(), null, restRequestConfig);
+            return await rc.Post<SubscriptionInfo>(Path(), null, null, restRequestConfig);
         }
     }
 }

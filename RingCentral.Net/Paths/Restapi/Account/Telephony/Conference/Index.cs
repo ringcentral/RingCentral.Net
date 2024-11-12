@@ -27,7 +27,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Conference
         /// </summary>
         public async Task<CallSession> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<CallSession>(Path(), null, restRequestConfig);
+            return await rc.Post<CallSession>(Path(), null, null, restRequestConfig);
         }
     }
 }

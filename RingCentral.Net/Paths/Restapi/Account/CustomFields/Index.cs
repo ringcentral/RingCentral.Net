@@ -75,7 +75,7 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (fieldId == null) throw new ArgumentException("Parameter cannot be null", nameof(fieldId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }
 }

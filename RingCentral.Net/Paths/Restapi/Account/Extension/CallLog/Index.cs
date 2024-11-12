@@ -47,7 +47,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
         public async Task<string> Delete(DeleteUserCallLogParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Delete<string>(Path(false), queryParams, restRequestConfig);
+            return await rc.Delete<string>(Path(false), null, queryParams, restRequestConfig);
         }
 
         /// <summary>

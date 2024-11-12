@@ -90,7 +90,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (promptId == null) throw new ArgumentException("Parameter cannot be null", nameof(promptId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }
 }

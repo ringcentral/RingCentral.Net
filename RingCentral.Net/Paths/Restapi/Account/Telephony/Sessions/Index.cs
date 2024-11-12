@@ -48,7 +48,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
         {
             if (telephonySessionId == null)
                 throw new ArgumentException("Parameter cannot be null", nameof(telephonySessionId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }
 }

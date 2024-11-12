@@ -85,7 +85,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Events
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (eventId == null) throw new ArgumentException("Parameter cannot be null", nameof(eventId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }
 }

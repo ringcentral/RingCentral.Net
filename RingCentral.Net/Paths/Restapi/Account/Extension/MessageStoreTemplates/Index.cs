@@ -87,7 +87,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStoreTemplates
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (templateId == null) throw new ArgumentException("Parameter cannot be null", nameof(templateId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }
 }

@@ -111,7 +111,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         {
             if (forwardingNumberId == null)
                 throw new ArgumentException("Parameter cannot be null", nameof(forwardingNumberId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }
 }

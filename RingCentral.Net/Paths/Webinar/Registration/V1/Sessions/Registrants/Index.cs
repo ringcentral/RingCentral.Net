@@ -84,7 +84,7 @@ namespace RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (registrantId == null) throw new ArgumentException("Parameter cannot be null", nameof(registrantId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }
 }

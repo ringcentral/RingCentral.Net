@@ -75,7 +75,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         /// </summary>
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Delete<string>(Path(false), null, restRequestConfig);
+            return await rc.Delete<string>(Path(false), null, null, restRequestConfig);
         }
 
         /// <summary>

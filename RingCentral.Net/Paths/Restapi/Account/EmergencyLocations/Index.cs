@@ -96,7 +96,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
             RestRequestConfig restRequestConfig = null)
         {
             if (locationId == null) throw new ArgumentException("Parameter cannot be null", nameof(locationId));
-            return await rc.Delete<string>(Path(), queryParams, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, queryParams, restRequestConfig);
         }
     }
 }

@@ -71,7 +71,7 @@ namespace RingCentral.Paths.Ai.Audio.V1.Enrollments
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (speakerId == null) throw new ArgumentException("Parameter cannot be null", nameof(speakerId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
 
         /// <summary>

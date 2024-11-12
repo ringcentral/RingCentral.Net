@@ -87,7 +87,7 @@ namespace RingCentral.Paths.Restapi.Account.Sites
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (siteId == null) throw new ArgumentException("Parameter cannot be null", nameof(siteId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }
 }

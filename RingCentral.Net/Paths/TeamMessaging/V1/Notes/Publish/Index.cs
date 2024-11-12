@@ -27,7 +27,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Notes.Publish
         /// </summary>
         public async Task<TMNoteInfo> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<TMNoteInfo>(Path(), null, restRequestConfig);
+            return await rc.Post<TMNoteInfo>(Path(), null, null, restRequestConfig);
         }
     }
 }

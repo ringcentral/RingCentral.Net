@@ -47,7 +47,7 @@ namespace RingCentral.Paths.Rcvideo.V2.Bridges
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (bridgeId == null) throw new ArgumentException("Parameter cannot be null", nameof(bridgeId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
 
         /// <summary>

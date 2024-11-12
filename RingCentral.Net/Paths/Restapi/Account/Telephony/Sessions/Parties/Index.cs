@@ -46,7 +46,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (partyId == null) throw new ArgumentException("Parameter cannot be null", nameof(partyId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
 
         /// <summary>

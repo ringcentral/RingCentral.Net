@@ -100,7 +100,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         {
             if (blockedNumberId == null)
                 throw new ArgumentException("Parameter cannot be null", nameof(blockedNumberId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }
 }

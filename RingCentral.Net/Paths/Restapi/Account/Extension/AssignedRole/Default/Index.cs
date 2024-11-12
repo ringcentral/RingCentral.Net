@@ -28,7 +28,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AssignedRole.Default
         /// </summary>
         public async Task<AssignedRolesResource> Put(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<AssignedRolesResource>(Path(), null, restRequestConfig);
+            return await rc.Put<AssignedRolesResource>(Path(), null, null, restRequestConfig);
         }
     }
 }

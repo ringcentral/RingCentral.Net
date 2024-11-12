@@ -39,7 +39,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Groups.Webhooks
         /// </summary>
         public async Task<TMWebhookInfo> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<TMWebhookInfo>(Path(), null, restRequestConfig);
+            return await rc.Post<TMWebhookInfo>(Path(), null, null, restRequestConfig);
         }
     }
 }

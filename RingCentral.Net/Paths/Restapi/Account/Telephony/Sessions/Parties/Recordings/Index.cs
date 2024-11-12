@@ -32,7 +32,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
         /// </summary>
         public async Task<string> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(Path(false), null, restRequestConfig);
+            return await rc.Post<string>(Path(false), null, null, restRequestConfig);
         }
 
         /// <summary>

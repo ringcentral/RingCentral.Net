@@ -73,7 +73,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Teams
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (chatId == null) throw new ArgumentException("Parameter cannot be null", nameof(chatId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
 
         /// <summary>

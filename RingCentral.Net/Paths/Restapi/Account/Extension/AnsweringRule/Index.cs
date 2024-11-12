@@ -92,7 +92,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (ruleId == null) throw new ArgumentException("Parameter cannot be null", nameof(ruleId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }
 }

@@ -90,7 +90,7 @@ namespace RingCentral.Paths.Restapi.Account.UserRole
             RestRequestConfig restRequestConfig = null)
         {
             if (roleId == null) throw new ArgumentException("Parameter cannot be null", nameof(roleId));
-            return await rc.Delete<string>(Path(), queryParams, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, queryParams, restRequestConfig);
         }
     }
 }

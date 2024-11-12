@@ -95,7 +95,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AddressBook.Contact
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (contactId == null) throw new ArgumentException("Parameter cannot be null", nameof(contactId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
 
         /// <summary>

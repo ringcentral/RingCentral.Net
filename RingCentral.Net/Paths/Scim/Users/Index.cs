@@ -83,7 +83,7 @@ namespace RingCentral.Paths.Scim.Users
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (scimUserId == null) throw new ArgumentException("Parameter cannot be null", nameof(scimUserId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
 
         /// <summary>

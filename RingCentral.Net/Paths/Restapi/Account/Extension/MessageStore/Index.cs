@@ -52,7 +52,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         public async Task<string> DeleteAll(DeleteMessageByFilterParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Delete<string>(Path(false), queryParams, restRequestConfig);
+            return await rc.Delete<string>(Path(false), null, queryParams, restRequestConfig);
         }
 
         /// <summary>

@@ -27,7 +27,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Teams.Archive
         /// </summary>
         public async Task<string> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(Path(), null, restRequestConfig);
+            return await rc.Post<string>(Path(), null, null, restRequestConfig);
         }
     }
 }

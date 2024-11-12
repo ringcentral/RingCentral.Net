@@ -86,7 +86,7 @@ namespace RingCentral.Paths.Webinar.Notifications.V1.Subscriptions
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (subscriptionId == null) throw new ArgumentException("Parameter cannot be null", nameof(subscriptionId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }
 }

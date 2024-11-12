@@ -46,7 +46,7 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.CustomGreetings
         /// </summary>
         public async Task<string> DeleteAll(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Delete<string>(Path(false), null, restRequestConfig);
+            return await rc.Delete<string>(Path(false), null, null, restRequestConfig);
         }
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.CustomGreetings
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (greetingId == null) throw new ArgumentException("Parameter cannot be null", nameof(greetingId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }
 }

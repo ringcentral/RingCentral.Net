@@ -45,7 +45,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Notes
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (noteId == null) throw new ArgumentException("Parameter cannot be null", nameof(noteId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
 
         /// <summary>

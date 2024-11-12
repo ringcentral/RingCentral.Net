@@ -95,7 +95,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (networkId == null) throw new ArgumentException("Parameter cannot be null", nameof(networkId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }
 }

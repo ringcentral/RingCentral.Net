@@ -58,7 +58,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (ringoutId == null) throw new ArgumentException("Parameter cannot be null", nameof(ringoutId));
-            return await rc.Delete<string>(Path(), null, restRequestConfig);
+            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }
 }

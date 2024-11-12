@@ -31,7 +31,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Unhold
         /// </summary>
         public async Task<CallParty> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<CallParty>(Path(), null, restRequestConfig);
+            return await rc.Post<CallParty>(Path(), null, null, restRequestConfig);
         }
     }
 }
