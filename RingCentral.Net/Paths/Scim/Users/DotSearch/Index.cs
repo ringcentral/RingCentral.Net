@@ -28,7 +28,8 @@ namespace RingCentral.Paths.Scim.Users.DotSearch
         public async Task<ScimUserSearchResponse> Post(ScimSearchRequest scimSearchRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<ScimUserSearchResponse>(Path(), scimSearchRequest, null, restRequestConfig);
+            return await rc.Post<ScimUserSearchResponse>(Path(), scimSearchRequest, null,
+                restRequestConfig);
         }
     }
 }

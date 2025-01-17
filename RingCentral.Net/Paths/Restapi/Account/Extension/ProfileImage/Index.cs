@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
         public string Path(bool withParameter = true)
         {
             if (withParameter && scaleSize != null) return $"{parent.Path()}/profile-image/{scaleSize}";
+
             return $"{parent.Path()}/profile-image";
         }
 
@@ -90,6 +91,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ProfileImage
             RestRequestConfig restRequestConfig = null)
         {
             if (scaleSize == null) throw new ArgumentException("Parameter cannot be null", nameof(scaleSize));
+
             return await rc.Get<byte[]>(Path(), queryParams, restRequestConfig);
         }
     }

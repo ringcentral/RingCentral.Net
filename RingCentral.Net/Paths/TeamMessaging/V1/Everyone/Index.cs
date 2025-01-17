@@ -37,10 +37,11 @@ namespace RingCentral.Paths.TeamMessaging.V1.Everyone
         ///     Rate Limit Group: Medium
         ///     App Permission: TeamMessaging
         /// </summary>
-        public async Task<EveryoneTeamInfo> Patch(UpdateEveryoneTeamRequest updateEveryoneTeamRequest,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<EveryoneTeamInfo> Patch(
+            UpdateEveryoneTeamRequest updateEveryoneTeamRequest, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Patch<EveryoneTeamInfo>(Path(), updateEveryoneTeamRequest, null, restRequestConfig);
+            return await rc.Patch<EveryoneTeamInfo>(Path(), updateEveryoneTeamRequest, null,
+                restRequestConfig);
         }
     }
 }

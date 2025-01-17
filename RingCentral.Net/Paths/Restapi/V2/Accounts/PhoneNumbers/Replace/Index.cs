@@ -27,10 +27,11 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.Replace
         ///     App Permission: EditAccounts
         ///     User Permission: EditCompanyPhoneNumbers
         /// </summary>
-        public async Task<AccountPhoneNumberInfo> Post(ReplacePhoneNumberRequest replacePhoneNumberRequest,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<AccountPhoneNumberInfo> Post(
+            ReplacePhoneNumberRequest replacePhoneNumberRequest, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<AccountPhoneNumberInfo>(Path(), replacePhoneNumberRequest, null, restRequestConfig);
+            return await rc.Post<AccountPhoneNumberInfo>(Path(), replacePhoneNumberRequest, null,
+                restRequestConfig);
         }
     }
 }

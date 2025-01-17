@@ -170,5 +170,9 @@ namespace RingCentral
         ///     cover page. Maximum length is limited to 1024 symbols
         /// </summary>
         public string coverPageText { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public VoicemailOwnerResource owner { get; set; }
     }
 }

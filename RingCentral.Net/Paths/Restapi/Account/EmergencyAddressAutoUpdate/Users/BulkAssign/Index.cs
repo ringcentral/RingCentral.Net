@@ -28,8 +28,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Users.Bul
         ///     User Permission: ConfigureEmergencyMaps
         /// </summary>
         public async Task<string> Post(
-            EmergencyAddressAutoUpdateUsersBulkAssignResource emergencyAddressAutoUpdateUsersBulkAssignResource,
-            RestRequestConfig restRequestConfig = null)
+            EmergencyAddressAutoUpdateUsersBulkAssignResource
+                emergencyAddressAutoUpdateUsersBulkAssignResource, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<string>(Path(), emergencyAddressAutoUpdateUsersBulkAssignResource, null,
                 restRequestConfig);

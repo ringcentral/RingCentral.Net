@@ -5,7 +5,7 @@ namespace RingCentral
         /// <summary>
         ///     User list
         /// </summary>
-        public ScimUserResponse[] Resources { get; set; }
+        public ScimUserShortInfo[] Resources { get; set; }
 
         /// <summary>
         ///     Format: int64

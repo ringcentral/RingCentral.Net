@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Language
         public string Path(bool withParameter = true)
         {
             if (withParameter && languageId != null) return $"{parent.Path()}/language/{languageId}";
+
             return $"{parent.Path()}/language";
         }
 
@@ -42,6 +43,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Language
         public async Task<LanguageInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (languageId == null) throw new ArgumentException("Parameter cannot be null", nameof(languageId));
+
             return await rc.Get<LanguageInfo>(Path(), null, restRequestConfig);
         }
     }

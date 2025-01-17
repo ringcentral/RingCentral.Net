@@ -36,7 +36,8 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.Extensions.Devices.Replace
         ///     App Permission: EditAccounts
         ///     User Permission: EditUserDevices
         /// </summary>
-        public async Task<string> Post(SwapDeviceRequest swapDeviceRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<string> Post(SwapDeviceRequest swapDeviceRequest,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<string>(Path(), swapDeviceRequest, null, restRequestConfig);
         }

@@ -26,10 +26,11 @@ namespace RingCentral.Paths.Restapi.Account.AssignedRole
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadAssignedRoles
         /// </summary>
-        public async Task<ExtensionWithRolesCollectionResource> Get(ListAssignedRolesParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<ExtensionWithRolesCollectionResource> Get(
+            ListAssignedRolesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<ExtensionWithRolesCollectionResource>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<ExtensionWithRolesCollectionResource>(Path(), queryParams,
+                restRequestConfig);
         }
     }
 }

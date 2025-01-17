@@ -26,7 +26,8 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.BatchProvisioning.Users
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditAccounts
         /// </summary>
-        public async Task<BatchProvisionUsersResponse> Post(BatchProvisionUsersRequest batchProvisionUsersRequest,
+        public async Task<BatchProvisionUsersResponse> Post(
+            BatchProvisionUsersRequest batchProvisionUsersRequest,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<BatchProvisionUsersResponse>(Path(), batchProvisionUsersRequest, null,

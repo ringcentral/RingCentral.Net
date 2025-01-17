@@ -7,7 +7,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Type of template
-        ///     Enum: UserSettings, CallHandling
+        ///     Enum: UserSettings, CallHandling, LimitedExtensions
         /// </summary>
         public string type { get; set; }
 

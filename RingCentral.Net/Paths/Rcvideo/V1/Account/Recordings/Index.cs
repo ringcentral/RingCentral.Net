@@ -26,8 +26,8 @@ namespace RingCentral.Paths.Rcvideo.V1.Account.Recordings
         ///     Rate Limit Group: Light
         ///     App Permission: Video
         /// </summary>
-        public async Task<CloudRecordings> Get(GetAccountRecordingsParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<CloudRecordings> Get(
+            GetAccountRecordingsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<CloudRecordings>(Path(), queryParams, restRequestConfig);
         }

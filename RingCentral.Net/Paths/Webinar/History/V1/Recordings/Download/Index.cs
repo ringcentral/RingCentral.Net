@@ -29,7 +29,8 @@ namespace RingCentral.Paths.Webinar.History.V1.Recordings.Download
         ///     Rate Limit Group: Heavy
         ///     App Permission: ReadWebinars
         /// </summary>
-        public async Task<RecordingDownloadModel> Get(RcwHistoryGetRecordingDownloadParameters queryParams = null,
+        public async Task<RecordingDownloadModel> Get(
+            RcwHistoryGetRecordingDownloadParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<RecordingDownloadModel>(Path(), queryParams, restRequestConfig);

@@ -28,7 +28,8 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.BringIn
         ///     Rate Limit Group: Light
         ///     App Permission: CallControl
         /// </summary>
-        public async Task<CallParty> Post(AddPartyRequest addPartyRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<CallParty> Post(AddPartyRequest addPartyRequest,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<CallParty>(Path(), addPartyRequest, null, restRequestConfig);
         }

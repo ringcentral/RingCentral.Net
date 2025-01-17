@@ -1,14 +1,14 @@
 namespace RingCentral
 {
-    public class CallQueueResource
+    public class CallMonitoringGroupSite
     {
         /// <summary>
-        ///     Example: 873014540006
+        ///     Identifier of a site
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
-        ///     Example: Sales CQ
+        ///     Name of a site
         /// </summary>
         public string name { get; set; }
     }

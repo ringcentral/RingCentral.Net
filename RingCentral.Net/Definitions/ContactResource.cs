@@ -86,33 +86,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public DirectoryRoleResource role { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public CallQueueResource[] callQueues { get; set; }
-
-        /// <summary>
-        /// </summary>
         public CustomFieldResource[] customFields { get; set; }
 
         /// <summary>
         /// </summary>
-        public GroupResource[] groups { get; set; }
-
-        /// <summary>
-        /// </summary>
-        public CostCenterResource costCenter { get; set; }
-
-        /// <summary>
-        /// </summary>
         public ExternalIntegrationResource integration { get; set; }
-
-        /// <summary>
-        ///     Extension subtype
-        ///     Example: Unknown
-        ///     Enum: Unknown, VideoPro, VideoProPlus, DigitalSignage, Emergency
-        /// </summary>
-        public string subType { get; set; }
     }
 }

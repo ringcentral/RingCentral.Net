@@ -28,7 +28,8 @@ namespace RingCentral.Paths.Ai.Audio.V1.Async.SpeakerIdentify
         public async Task<CaiAsyncApiResponse> Post(IdentifyInput identifyInput,
             CaiSpeakerIdentifyParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<CaiAsyncApiResponse>(Path(), identifyInput, queryParams, restRequestConfig);
+            return await rc.Post<CaiAsyncApiResponse>(Path(), identifyInput, queryParams,
+                restRequestConfig);
         }
     }
 }

@@ -25,10 +25,11 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.OptOuts.BulkAssign
         ///     Rate Limit Group: Light
         ///     App Permission: A2PSMS
         /// </summary>
-        public async Task<OptOutBulkAssignResponse> Post(OptOutBulkAssignRequest optOutBulkAssignRequest,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<OptOutBulkAssignResponse> Post(
+            OptOutBulkAssignRequest optOutBulkAssignRequest, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<OptOutBulkAssignResponse>(Path(), optOutBulkAssignRequest, null, restRequestConfig);
+            return await rc.Post<OptOutBulkAssignResponse>(Path(), optOutBulkAssignRequest, null,
+                restRequestConfig);
         }
     }
 }

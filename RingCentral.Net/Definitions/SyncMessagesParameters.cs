@@ -69,9 +69,10 @@ namespace RingCentral
         public string syncType { get; set; }
 
         /// <summary>
-        ///     This query parameter will filter voicemail messages based on its owner.
-        ///     This parameter should be controlled by the 'SharedVoicemail' feature.
-        ///     If the feature is disabled this filter shouldn't be applied.
+        ///     Filters voicemail messages based on the owner extension. Supported if the 'SharedVoicemail'
+        ///     feature is enabled.
+        ///     Default: Personal
+        ///     Enum: Any, Personal, Shared
         /// </summary>
         public string[] voicemailOwner { get; set; }
     }

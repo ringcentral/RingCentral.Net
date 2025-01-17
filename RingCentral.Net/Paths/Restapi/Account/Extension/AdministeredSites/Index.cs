@@ -41,10 +41,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AdministeredSites
         ///     User Permission: EditAssignedRoles
         /// </summary>
         public async Task<BusinessSiteCollectionResource> Put(
-            BusinessSiteCollectionRequest businessSiteCollectionRequest, RestRequestConfig restRequestConfig = null)
+            BusinessSiteCollectionRequest businessSiteCollectionRequest,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<BusinessSiteCollectionResource>(Path(), businessSiteCollectionRequest, null,
-                restRequestConfig);
+            return await rc.Put<BusinessSiteCollectionResource>(Path(), businessSiteCollectionRequest,
+                null, restRequestConfig);
         }
     }
 }

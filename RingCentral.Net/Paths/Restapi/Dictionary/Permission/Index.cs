@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Permission
         public string Path(bool withParameter = true)
         {
             if (withParameter && permissionId != null) return $"{parent.Path()}/permission/{permissionId}";
+
             return $"{parent.Path()}/permission";
         }
 
@@ -28,10 +29,11 @@ namespace RingCentral.Paths.Restapi.Dictionary.Permission
         ///     Endpoint: /restapi/{apiVersion}/dictionary/permission
         ///     Rate Limit Group: Light
         /// </summary>
-        public async Task<PermissionCollectionResource> List(ListPermissionsParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<PermissionCollectionResource> List(
+            ListPermissionsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<PermissionCollectionResource>(Path(false), queryParams, restRequestConfig);
+            return await rc.Get<PermissionCollectionResource>(Path(false), queryParams,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -43,6 +45,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.Permission
         public async Task<PermissionResource> Get(RestRequestConfig restRequestConfig = null)
         {
             if (permissionId == null) throw new ArgumentException("Parameter cannot be null", nameof(permissionId));
+
             return await rc.Get<PermissionResource>(Path(), null, restRequestConfig);
         }
     }

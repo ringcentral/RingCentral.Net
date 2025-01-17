@@ -19,16 +19,16 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Device
         }
 
         /// <summary>
-        ///     Returns devices of an extension or multiple extensions by their ID(s). Batch request
-        ///     is supported.
+        ///     Returns devices of an extension or multiple extensions by their ID(s).
+        ///     [Batch request syntax](https://developers.ringcentral.com/guide/basics/batch-requests) is supported.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/device
         ///     Rate Limit Group: Light
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadUserDevices
         /// </summary>
-        public async Task<GetExtensionDevicesResponse> Get(ListExtensionDevicesParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<GetExtensionDevicesResponse> Get(
+            ListExtensionDevicesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<GetExtensionDevicesResponse>(Path(), queryParams, restRequestConfig);
         }

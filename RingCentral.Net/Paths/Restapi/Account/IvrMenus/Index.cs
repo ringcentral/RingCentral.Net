@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         public string Path(bool withParameter = true)
         {
             if (withParameter && ivrMenuId != null) return $"{parent.Path()}/ivr-menus/{ivrMenuId}";
+
             return $"{parent.Path()}/ivr-menus";
         }
 
@@ -42,7 +43,8 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         ///     App Permission: EditAccounts
         ///     User Permission: AutoReceptionist
         /// </summary>
-        public async Task<IVRMenuInfo> Post(IVRMenuInfo iVRMenuInfo, RestRequestConfig restRequestConfig = null)
+        public async Task<IVRMenuInfo> Post(IVRMenuInfo iVRMenuInfo,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<IVRMenuInfo>(Path(false), iVRMenuInfo, null, restRequestConfig);
         }
@@ -58,6 +60,7 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         public async Task<IVRMenuInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (ivrMenuId == null) throw new ArgumentException("Parameter cannot be null", nameof(ivrMenuId));
+
             return await rc.Get<IVRMenuInfo>(Path(), null, restRequestConfig);
         }
 
@@ -69,9 +72,11 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         ///     App Permission: ReadAccounts
         ///     User Permission: AutoReceptionist
         /// </summary>
-        public async Task<IVRMenuInfo> Put(IVRMenuInfo iVRMenuInfo, RestRequestConfig restRequestConfig = null)
+        public async Task<IVRMenuInfo> Put(IVRMenuInfo iVRMenuInfo,
+            RestRequestConfig restRequestConfig = null)
         {
             if (ivrMenuId == null) throw new ArgumentException("Parameter cannot be null", nameof(ivrMenuId));
+
             return await rc.Put<IVRMenuInfo>(Path(), iVRMenuInfo, null, restRequestConfig);
         }
     }

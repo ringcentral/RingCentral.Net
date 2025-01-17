@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Subscription
         public string Path(bool withParameter = true)
         {
             if (withParameter && subscriptionId != null) return $"{parent.Path()}/subscription/{subscriptionId}";
+
             return $"{parent.Path()}/subscription";
         }
 
@@ -68,10 +69,11 @@ namespace RingCentral.Paths.Restapi.Subscription
         ///     Endpoint: /restapi/{apiVersion}/subscription
         ///     Rate Limit Group: Medium
         /// </summary>
-        public async Task<SubscriptionInfo> Post(CreateSubscriptionRequest createSubscriptionRequest,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<SubscriptionInfo> Post(
+            CreateSubscriptionRequest createSubscriptionRequest, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<SubscriptionInfo>(Path(false), createSubscriptionRequest, null, restRequestConfig);
+            return await rc.Post<SubscriptionInfo>(Path(false), createSubscriptionRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -83,6 +85,7 @@ namespace RingCentral.Paths.Restapi.Subscription
         public async Task<SubscriptionInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (subscriptionId == null) throw new ArgumentException("Parameter cannot be null", nameof(subscriptionId));
+
             return await rc.Get<SubscriptionInfo>(Path(), null, restRequestConfig);
         }
 
@@ -102,11 +105,13 @@ namespace RingCentral.Paths.Restapi.Subscription
         ///     Endpoint: /restapi/{apiVersion}/subscription/{subscriptionId}
         ///     Rate Limit Group: Medium
         /// </summary>
-        public async Task<SubscriptionInfo> Put(UpdateSubscriptionRequest updateSubscriptionRequest,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<SubscriptionInfo> Put(
+            UpdateSubscriptionRequest updateSubscriptionRequest, RestRequestConfig restRequestConfig = null)
         {
             if (subscriptionId == null) throw new ArgumentException("Parameter cannot be null", nameof(subscriptionId));
-            return await rc.Put<SubscriptionInfo>(Path(), updateSubscriptionRequest, null, restRequestConfig);
+
+            return await rc.Put<SubscriptionInfo>(Path(), updateSubscriptionRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -118,6 +123,7 @@ namespace RingCentral.Paths.Restapi.Subscription
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (subscriptionId == null) throw new ArgumentException("Parameter cannot be null", nameof(subscriptionId));
+
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }

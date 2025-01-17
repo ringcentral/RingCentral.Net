@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Webinar.Registration.V1.Sessions
         public string Path(bool withParameter = true)
         {
             if (withParameter && sessionId != null) return $"{parent.Path()}/sessions/{sessionId}";
+
             return $"{parent.Path()}/sessions";
         }
 
@@ -34,6 +35,7 @@ namespace RingCentral.Paths.Webinar.Registration.V1.Sessions
         public async Task<RegSessionModel> Get(RestRequestConfig restRequestConfig = null)
         {
             if (sessionId == null) throw new ArgumentException("Parameter cannot be null", nameof(sessionId));
+
             return await rc.Get<RegSessionModel>(Path(), null, restRequestConfig);
         }
 
@@ -52,6 +54,7 @@ namespace RingCentral.Paths.Webinar.Registration.V1.Sessions
             RestRequestConfig restRequestConfig = null)
         {
             if (sessionId == null) throw new ArgumentException("Parameter cannot be null", nameof(sessionId));
+
             return await rc.Patch<RegSessionModel>(Path(), regSessionModel, null, restRequestConfig);
         }
     }

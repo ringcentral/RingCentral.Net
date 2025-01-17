@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Scim.Schemas
         public string Path(bool withParameter = true)
         {
             if (withParameter && uri != null) return $"{parent.Path()}/Schemas/{uri}";
+
             return $"{parent.Path()}/Schemas";
         }
 
@@ -44,6 +45,7 @@ namespace RingCentral.Paths.Scim.Schemas
         public async Task<ScimSchemaResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (uri == null) throw new ArgumentException("Parameter cannot be null", nameof(uri));
+
             return await rc.Get<ScimSchemaResponse>(Path(), null, restRequestConfig);
         }
     }

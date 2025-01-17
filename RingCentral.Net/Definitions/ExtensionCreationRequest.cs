@@ -81,5 +81,11 @@ namespace RingCentral
         ///     to `false` by default
         /// </summary>
         public bool? hidden { get; set; }
+
+        /// <summary>
+        ///     Extension name. For user extension types the value is a combination
+        ///     of the specified first name and last name
+        /// </summary>
+        public string name { get; set; }
     }
 }

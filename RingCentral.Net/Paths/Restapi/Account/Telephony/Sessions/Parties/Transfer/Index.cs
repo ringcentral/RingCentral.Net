@@ -27,7 +27,8 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Transfer
         ///     Rate Limit Group: Light
         ///     App Permission: CallControl
         /// </summary>
-        public async Task<CallParty> Post(TransferTarget transferTarget, RestRequestConfig restRequestConfig = null)
+        public async Task<CallParty> Post(TransferTarget transferTarget,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<CallParty>(Path(), transferTarget, null, restRequestConfig);
         }

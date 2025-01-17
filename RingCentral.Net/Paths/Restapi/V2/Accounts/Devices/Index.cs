@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.Devices
         public string Path(bool withParameter = true)
         {
             if (withParameter && deviceId != null) return $"{parent.Path()}/devices/{deviceId}";
+
             return $"{parent.Path()}/devices";
         }
 
@@ -38,7 +39,9 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.Devices
             RestRequestConfig restRequestConfig = null)
         {
             if (deviceId == null) throw new ArgumentException("Parameter cannot be null", nameof(deviceId));
-            return await rc.Delete<RemoveLineResponse>(Path(), removeLineRequest, null, restRequestConfig);
+
+            return await rc.Delete<RemoveLineResponse>(Path(), removeLineRequest, null,
+                restRequestConfig);
         }
     }
 }

@@ -19,6 +19,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Tasks
         public string Path(bool withParameter = true)
         {
             if (withParameter && taskId != null) return $"{parent.Path()}/tasks/{taskId}";
+
             return $"{parent.Path()}/tasks";
         }
 
@@ -32,6 +33,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Tasks
         public async Task<TMTaskInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (taskId == null) throw new ArgumentException("Parameter cannot be null", nameof(taskId));
+
             return await rc.Get<TMTaskInfo>(Path(), null, restRequestConfig);
         }
 
@@ -45,6 +47,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Tasks
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (taskId == null) throw new ArgumentException("Parameter cannot be null", nameof(taskId));
+
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
 
@@ -59,6 +62,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Tasks
             RestRequestConfig restRequestConfig = null)
         {
             if (taskId == null) throw new ArgumentException("Parameter cannot be null", nameof(taskId));
+
             return await rc.Patch<TMTaskList>(Path(), tMUpdateTaskRequest, null, restRequestConfig);
         }
     }

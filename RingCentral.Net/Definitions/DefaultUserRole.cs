@@ -18,5 +18,10 @@ namespace RingCentral
         ///     Example: My Custom User Role
         /// </summary>
         public string displayName { get; set; }
+
+        /// <summary>
+        ///     Site compatibility of a user role
+        /// </summary>
+        public bool? siteCompatible { get; set; }
     }
 }

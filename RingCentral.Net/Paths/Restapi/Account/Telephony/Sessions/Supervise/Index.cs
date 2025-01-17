@@ -29,11 +29,12 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Supervise
         ///     Rate Limit Group: Light
         ///     App Permission: CallControl
         /// </summary>
-        public async Task<SuperviseCallSessionResponse> Post(SuperviseCallSessionRequest superviseCallSessionRequest,
+        public async Task<SuperviseCallSessionResponse> Post(
+            SuperviseCallSessionRequest superviseCallSessionRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<SuperviseCallSessionResponse>(Path(), superviseCallSessionRequest, null,
-                restRequestConfig);
+            return await rc.Post<SuperviseCallSessionResponse>(Path(), superviseCallSessionRequest,
+                null, restRequestConfig);
         }
     }
 }

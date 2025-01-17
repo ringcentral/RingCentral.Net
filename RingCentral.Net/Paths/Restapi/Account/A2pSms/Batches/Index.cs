@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Batches
         public string Path(bool withParameter = true)
         {
             if (withParameter && batchId != null) return $"{parent.Path()}/batches/{batchId}";
+
             return $"{parent.Path()}/batches";
         }
 
@@ -45,10 +46,11 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Batches
         ///     Rate Limit Group: Light
         ///     App Permission: A2PSMS
         /// </summary>
-        public async Task<MessageBatchResponse> Post(MessageBatchCreateRequest messageBatchCreateRequest,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<MessageBatchResponse> Post(
+            MessageBatchCreateRequest messageBatchCreateRequest, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<MessageBatchResponse>(Path(false), messageBatchCreateRequest, null, restRequestConfig);
+            return await rc.Post<MessageBatchResponse>(Path(false), messageBatchCreateRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -61,6 +63,7 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Batches
         public async Task<MessageBatchResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (batchId == null) throw new ArgumentException("Parameter cannot be null", nameof(batchId));
+
             return await rc.Get<MessageBatchResponse>(Path(), null, restRequestConfig);
         }
     }

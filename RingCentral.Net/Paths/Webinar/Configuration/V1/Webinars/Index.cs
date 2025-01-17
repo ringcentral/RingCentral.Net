@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars
         public string Path(bool withParameter = true)
         {
             if (withParameter && webinarId != null) return $"{parent.Path()}/webinars/{webinarId}";
+
             return $"{parent.Path()}/webinars";
         }
 
@@ -30,8 +31,8 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars
         ///     Rate Limit Group: Heavy
         ///     App Permission: ReadWebinars
         /// </summary>
-        public async Task<WebinarListResource> List(RcwConfigListWebinarsParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<WebinarListResource> List(
+            RcwConfigListWebinarsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<WebinarListResource>(Path(false), queryParams, restRequestConfig);
         }
@@ -49,10 +50,11 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditWebinars
         /// </summary>
-        public async Task<WcsWebinarResource> Post(WebinarCreationRequest webinarCreationRequest,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<WcsWebinarResource> Post(
+            WebinarCreationRequest webinarCreationRequest, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<WcsWebinarResource>(Path(false), webinarCreationRequest, null, restRequestConfig);
+            return await rc.Post<WcsWebinarResource>(Path(false), webinarCreationRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -67,6 +69,7 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars
         public async Task<WcsWebinarResource> Get(RestRequestConfig restRequestConfig = null)
         {
             if (webinarId == null) throw new ArgumentException("Parameter cannot be null", nameof(webinarId));
+
             return await rc.Get<WcsWebinarResource>(Path(), null, restRequestConfig);
         }
 
@@ -81,6 +84,7 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (webinarId == null) throw new ArgumentException("Parameter cannot be null", nameof(webinarId));
+
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
 
@@ -100,7 +104,9 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars
             RestRequestConfig restRequestConfig = null)
         {
             if (webinarId == null) throw new ArgumentException("Parameter cannot be null", nameof(webinarId));
-            return await rc.Patch<WcsWebinarResource>(Path(), webinarBaseModel, null, restRequestConfig);
+
+            return await rc.Patch<WcsWebinarResource>(Path(), webinarBaseModel, null,
+                restRequestConfig);
         }
     }
 }

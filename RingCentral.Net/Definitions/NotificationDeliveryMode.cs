@@ -8,7 +8,7 @@ namespace RingCentral
         /// <summary>
         ///     The transport type for this subscription, or the channel by which an app should be notified of an event
         ///     Required
-        ///     Enum: WebHook, RC/APNS, RC/GCM, PubNub, WebSocket
+        ///     Enum: WebHook, RC/APNS, RC/GCM, PubNub, WebSocket, Internal
         /// </summary>
         public string transportType { get; set; }
 
@@ -66,5 +66,12 @@ namespace RingCentral
         ///     Cryptographic key to decrypt PubNub notification messages
         /// </summary>
         public string encryptionKey { get; set; }
+
+        /// <summary>
+        ///     The name of internal channel (defined in the backend service configuration) to deliver notifications through.
+        ///     Required
+        ///     Example: my-server-channel
+        /// </summary>
+        public string configName { get; set; }
     }
 }

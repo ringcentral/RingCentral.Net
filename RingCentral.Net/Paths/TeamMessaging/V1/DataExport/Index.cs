@@ -19,6 +19,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.DataExport
         public string Path(bool withParameter = true)
         {
             if (withParameter && taskId != null) return $"{parent.Path()}/data-export/{taskId}";
+
             return $"{parent.Path()}/data-export";
         }
 
@@ -30,8 +31,8 @@ namespace RingCentral.Paths.TeamMessaging.V1.DataExport
         ///     App Permission: TeamMessaging
         ///     User Permission: Glip
         /// </summary>
-        public async Task<DataExportTaskList> List(ListDataExportTasksNewParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<DataExportTaskList> List(
+            ListDataExportTasksNewParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<DataExportTaskList>(Path(false), queryParams, restRequestConfig);
         }
@@ -46,10 +47,12 @@ namespace RingCentral.Paths.TeamMessaging.V1.DataExport
         ///     App Permission: TeamMessaging
         ///     User Permission: Glip
         /// </summary>
-        public async Task<DataExportTask> Post(CreateDataExportTaskRequest createDataExportTaskRequest,
+        public async Task<DataExportTask> Post(
+            CreateDataExportTaskRequest createDataExportTaskRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<DataExportTask>(Path(false), createDataExportTaskRequest, null, restRequestConfig);
+            return await rc.Post<DataExportTask>(Path(false), createDataExportTaskRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -65,6 +68,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.DataExport
         public async Task<DataExportTask> Get(RestRequestConfig restRequestConfig = null)
         {
             if (taskId == null) throw new ArgumentException("Parameter cannot be null", nameof(taskId));
+
             return await rc.Get<DataExportTask>(Path(), null, restRequestConfig);
         }
     }

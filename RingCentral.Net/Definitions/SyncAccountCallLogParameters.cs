@@ -18,8 +18,10 @@ namespace RingCentral
         public string syncToken { get; set; }
 
         /// <summary>
-        ///     The start datetime for resulting records in ISO 8601 format including timezone, for example
-        ///     2016-03-10T18:07:52.534Z. The default value is the current moment
+        ///     Starting date for the resulting records in ISO 8601 format, including
+        ///     timezone, for example *2016-03-10T18:07:52.534Z*. The range is limited to the last 30 days from the current moment.
+        ///     If not specified, the default value is a log history date (date of account creation/call log deletion), and
+        ///     no time range limitation applied
         ///     Format: date-time
         /// </summary>
         public string dateFrom { get; set; }

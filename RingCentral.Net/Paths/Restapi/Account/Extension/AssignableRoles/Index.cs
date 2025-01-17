@@ -25,7 +25,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AssignableRoles
         ///     Rate Limit Group: Medium
         ///     App Permission: RoleManagement
         /// </summary>
-        public async Task<RolesCollectionResource> Get(ListOfAvailableForAssigningRolesParameters queryParams = null,
+        public async Task<RolesCollectionResource> Get(
+            ListOfAvailableForAssigningRolesParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<RolesCollectionResource>(Path(), queryParams, restRequestConfig);

@@ -16,6 +16,7 @@ namespace RingCentral.Paths.Rcvideo.V2.Account.Extension
         public string Path(bool withParameter = true)
         {
             if (withParameter && extensionId != null) return $"{parent.Path()}/extension/{extensionId}";
+
             return $"{parent.Path()}/extension";
         }
     }

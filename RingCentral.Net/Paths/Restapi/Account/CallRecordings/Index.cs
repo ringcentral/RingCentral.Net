@@ -27,7 +27,8 @@ namespace RingCentral.Paths.Restapi.Account.CallRecordings
         ///     App Permission: EditCallLog
         ///     User Permission: EditCompanyCallRecordings
         /// </summary>
-        public async Task<string> Delete(CallRecordingIds callRecordingIds, RestRequestConfig restRequestConfig = null)
+        public async Task<string> Delete(CallRecordingIds callRecordingIds,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Delete<string>(Path(), callRecordingIds, null, restRequestConfig);
         }

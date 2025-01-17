@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Scim.Users
         public string Path(bool withParameter = true)
         {
             if (withParameter && scimUserId != null) return $"{parent.Path()}/Users/{scimUserId}";
+
             return $"{parent.Path()}/Users";
         }
 
@@ -29,8 +30,8 @@ namespace RingCentral.Paths.Scim.Users
         ///     Rate Limit Group: Light
         ///     App Permission: ReadAccounts
         /// </summary>
-        public async Task<ScimUserSearchResponse> List(ScimSearchViaGet2Parameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<ScimUserSearchResponse> List(
+            ScimSearchViaGet2Parameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<ScimUserSearchResponse>(Path(false), queryParams, restRequestConfig);
         }
@@ -42,7 +43,8 @@ namespace RingCentral.Paths.Scim.Users
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditAccounts
         /// </summary>
-        public async Task<ScimUserResponse> Post(ScimUser scimUser, RestRequestConfig restRequestConfig = null)
+        public async Task<ScimUserResponse> Post(ScimUser scimUser,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<ScimUserResponse>(Path(false), scimUser, null, restRequestConfig);
         }
@@ -57,6 +59,7 @@ namespace RingCentral.Paths.Scim.Users
         public async Task<ScimUserResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (scimUserId == null) throw new ArgumentException("Parameter cannot be null", nameof(scimUserId));
+
             return await rc.Get<ScimUserResponse>(Path(), null, restRequestConfig);
         }
 
@@ -67,9 +70,11 @@ namespace RingCentral.Paths.Scim.Users
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditAccounts
         /// </summary>
-        public async Task<ScimUserResponse> Put(ScimUser scimUser, RestRequestConfig restRequestConfig = null)
+        public async Task<ScimUserResponse> Put(ScimUser scimUser,
+            RestRequestConfig restRequestConfig = null)
         {
             if (scimUserId == null) throw new ArgumentException("Parameter cannot be null", nameof(scimUserId));
+
             return await rc.Put<ScimUserResponse>(Path(), scimUser, null, restRequestConfig);
         }
 
@@ -83,6 +88,7 @@ namespace RingCentral.Paths.Scim.Users
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (scimUserId == null) throw new ArgumentException("Parameter cannot be null", nameof(scimUserId));
+
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
 
@@ -97,6 +103,7 @@ namespace RingCentral.Paths.Scim.Users
             RestRequestConfig restRequestConfig = null)
         {
             if (scimUserId == null) throw new ArgumentException("Parameter cannot be null", nameof(scimUserId));
+
             return await rc.Patch<ScimUserResponse>(Path(), scimUserPatch, null, restRequestConfig);
         }
     }

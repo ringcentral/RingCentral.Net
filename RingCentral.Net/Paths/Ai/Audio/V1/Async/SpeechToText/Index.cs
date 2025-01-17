@@ -25,10 +25,11 @@ namespace RingCentral.Paths.Ai.Audio.V1.Async.SpeechToText
         ///     Rate Limit Group: Heavy
         ///     App Permission: AI
         /// </summary>
-        public async Task<CaiAsyncApiResponse> Post(AsrInput asrInput, CaiSpeechToTextParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<CaiAsyncApiResponse> Post(AsrInput asrInput,
+            CaiSpeechToTextParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<CaiAsyncApiResponse>(Path(), asrInput, queryParams, restRequestConfig);
+            return await rc.Post<CaiAsyncApiResponse>(Path(), asrInput, queryParams,
+                restRequestConfig);
         }
     }
 }

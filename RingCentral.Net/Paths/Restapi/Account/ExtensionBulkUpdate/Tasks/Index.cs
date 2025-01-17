@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.ExtensionBulkUpdate.Tasks
         public string Path(bool withParameter = true)
         {
             if (withParameter && taskId != null) return $"{parent.Path()}/tasks/{taskId}";
+
             return $"{parent.Path()}/tasks";
         }
 
@@ -33,6 +34,7 @@ namespace RingCentral.Paths.Restapi.Account.ExtensionBulkUpdate.Tasks
         public async Task<ExtensionBulkUpdateTaskResource> Get(RestRequestConfig restRequestConfig = null)
         {
             if (taskId == null) throw new ArgumentException("Parameter cannot be null", nameof(taskId));
+
             return await rc.Get<ExtensionBulkUpdateTaskResource>(Path(), null, restRequestConfig);
         }
     }

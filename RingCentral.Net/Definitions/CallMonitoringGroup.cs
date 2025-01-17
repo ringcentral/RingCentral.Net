@@ -17,5 +17,9 @@ namespace RingCentral
         ///     Name of a group
         /// </summary>
         public string name { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public CallMonitoringGroupSite site { get; set; }
     }
 }

@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         public string Path(bool withParameter = true)
         {
             if (withParameter && blockedNumberId != null) return $"{parent.Path()}/phone-numbers/{blockedNumberId}";
+
             return $"{parent.Path()}/phone-numbers";
         }
 
@@ -30,10 +31,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadBlockedNumbers
         /// </summary>
-        public async Task<BlockedAllowedPhoneNumbersList> List(ListBlockedAllowedNumbersParameters queryParams = null,
+        public async Task<BlockedAllowedPhoneNumbersList> List(
+            ListBlockedAllowedNumbersParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<BlockedAllowedPhoneNumbersList>(Path(false), queryParams, restRequestConfig);
+            return await rc.Get<BlockedAllowedPhoneNumbersList>(Path(false), queryParams,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -44,16 +47,17 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         ///     App Permission: EditExtensions
         ///     User Permission: EditBlockedNumbers
         /// </summary>
-        public async Task<BlockedAllowedPhoneNumberInfo> Post(AddBlockedAllowedPhoneNumber addBlockedAllowedPhoneNumber,
+        public async Task<BlockedAllowedPhoneNumberInfo> Post(
+            AddBlockedAllowedPhoneNumber addBlockedAllowedPhoneNumber,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<BlockedAllowedPhoneNumberInfo>(Path(false), addBlockedAllowedPhoneNumber, null,
-                restRequestConfig);
+            return await rc.Post<BlockedAllowedPhoneNumberInfo>(Path(false),
+                addBlockedAllowedPhoneNumber, null, restRequestConfig);
         }
 
         /// <summary>
         ///     Returns blocked or allowed phone number(s) by their ID(s).
-        ///     [Batch request syntax](https://developers.ringcentral.com/api-reference/Batch-Requests) is supported.
+        ///     [Batch request syntax](https://developers.ringcentral.com/guide/basics/batch-requests) is supported.
         ///     HTTP Method: get
         ///     Endpoint:
         ///     /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
@@ -65,12 +69,13 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         {
             if (blockedNumberId == null)
                 throw new ArgumentException("Parameter cannot be null", nameof(blockedNumberId));
+
             return await rc.Get<BlockedAllowedPhoneNumberInfo>(Path(), null, restRequestConfig);
         }
 
         /// <summary>
         ///     Updates blocked or allowed phone number(s) by their ID(s).
-        ///     [Batch request syntax](https://developers.ringcentral.com/api-reference/Batch-Requests) is supported.
+        ///     [Batch request syntax](https://developers.ringcentral.com/guide/basics/batch-requests) is supported.
         ///     HTTP Method: put
         ///     Endpoint:
         ///     /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
@@ -78,17 +83,20 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         ///     App Permission: EditExtensions
         ///     User Permission: EditBlockedNumbers
         /// </summary>
-        public async Task<BlockedAllowedPhoneNumberInfo> Put(AddBlockedAllowedPhoneNumber addBlockedAllowedPhoneNumber,
+        public async Task<BlockedAllowedPhoneNumberInfo> Put(
+            AddBlockedAllowedPhoneNumber addBlockedAllowedPhoneNumber,
             RestRequestConfig restRequestConfig = null)
         {
             if (blockedNumberId == null)
                 throw new ArgumentException("Parameter cannot be null", nameof(blockedNumberId));
-            return await rc.Put<BlockedAllowedPhoneNumberInfo>(Path(), addBlockedAllowedPhoneNumber, null,
-                restRequestConfig);
+
+            return await rc.Put<BlockedAllowedPhoneNumberInfo>(Path(), addBlockedAllowedPhoneNumber,
+                null, restRequestConfig);
         }
 
         /// <summary>
-        ///     Deletes blocked or allowed phone number(s) by their ID(s). Batch request is supported.
+        ///     Deletes blocked or allowed phone number(s) by their ID(s).
+        ///     [Batch request](https://developers.ringcentral.com/guide/basics/batch-requests) is supported.
         ///     HTTP Method: delete
         ///     Endpoint:
         ///     /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/caller-blocking/phone-numbers/{blockedNumberId}
@@ -100,6 +108,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking.PhoneNumber
         {
             if (blockedNumberId == null)
                 throw new ArgumentException("Parameter cannot be null", nameof(blockedNumberId));
+
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }

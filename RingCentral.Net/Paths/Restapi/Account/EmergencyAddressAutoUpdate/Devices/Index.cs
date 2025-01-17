@@ -31,7 +31,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Devices
             ListDevicesAutomaticLocationUpdatesParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<ListDevicesAutomaticLocationUpdates>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<ListDevicesAutomaticLocationUpdates>(Path(), queryParams,
+                restRequestConfig);
         }
     }
 }

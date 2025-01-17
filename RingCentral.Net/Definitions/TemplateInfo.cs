@@ -14,7 +14,12 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        ///     Enum: UserSettings, CallHandling
+        ///     Description of a template
+        /// </summary>
+        public string description { get; set; }
+
+        /// <summary>
+        ///     Enum: UserSettings, CallHandling, LimitedExtensions
         /// </summary>
         public string type { get; set; }
 

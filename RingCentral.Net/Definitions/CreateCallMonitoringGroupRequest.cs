@@ -7,5 +7,9 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string name { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public CreateCallMonitoringGroupRequestSite site { get; set; }
     }
 }

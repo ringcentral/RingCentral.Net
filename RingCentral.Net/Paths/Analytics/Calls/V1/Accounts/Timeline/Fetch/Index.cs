@@ -26,9 +26,11 @@ namespace RingCentral.Paths.Analytics.Calls.V1.Accounts.Timeline.Fetch
         ///     App Permission: Analytics
         /// </summary>
         public async Task<TimelineResponse> Post(TimelineRequest timelineRequest,
-            AnalyticsCallsTimelineFetchParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+            AnalyticsCallsTimelineFetchParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<TimelineResponse>(Path(), timelineRequest, queryParams, restRequestConfig);
+            return await rc.Post<TimelineResponse>(Path(), timelineRequest, queryParams,
+                restRequestConfig);
         }
     }
 }

@@ -19,6 +19,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Conversations
         public string Path(bool withParameter = true)
         {
             if (withParameter && chatId != null) return $"{parent.Path()}/conversations/{chatId}";
+
             return $"{parent.Path()}/conversations";
         }
 
@@ -30,7 +31,8 @@ namespace RingCentral.Paths.TeamMessaging.V1.Conversations
         ///     Rate Limit Group: Medium
         ///     App Permission: TeamMessaging
         /// </summary>
-        public async Task<TMConversationList> List(ListGlipConversationsNewParameters queryParams = null,
+        public async Task<TMConversationList> List(
+            ListGlipConversationsNewParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<TMConversationList>(Path(false), queryParams, restRequestConfig);
@@ -46,10 +48,11 @@ namespace RingCentral.Paths.TeamMessaging.V1.Conversations
         ///     Rate Limit Group: Medium
         ///     App Permission: TeamMessaging
         /// </summary>
-        public async Task<TMConversationInfo> Post(CreateConversationRequest createConversationRequest,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<TMConversationInfo> Post(
+            CreateConversationRequest createConversationRequest, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<TMConversationInfo>(Path(false), createConversationRequest, null, restRequestConfig);
+            return await rc.Post<TMConversationInfo>(Path(false), createConversationRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -65,6 +68,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Conversations
         public async Task<TMConversationInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (chatId == null) throw new ArgumentException("Parameter cannot be null", nameof(chatId));
+
             return await rc.Get<TMConversationInfo>(Path(), null, restRequestConfig);
         }
     }

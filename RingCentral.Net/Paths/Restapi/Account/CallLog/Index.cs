@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.CallLog
         public string Path(bool withParameter = true)
         {
             if (withParameter && callRecordId != null) return $"{parent.Path()}/call-log/{callRecordId}";
+
             return $"{parent.Path()}/call-log";
         }
 
@@ -37,7 +38,8 @@ namespace RingCentral.Paths.Restapi.Account.CallLog
         }
 
         /// <summary>
-        ///     Returns individual call log record(s) by ID. Batch syntax is supported.
+        ///     Returns individual call log record(s) by ID.
+        ///     [Batch syntax](https://developers.ringcentral.com/guide/basics/batch-requests) is supported.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/call-log/{callRecordId}
         ///     Rate Limit Group: Heavy
@@ -48,6 +50,7 @@ namespace RingCentral.Paths.Restapi.Account.CallLog
             RestRequestConfig restRequestConfig = null)
         {
             if (callRecordId == null) throw new ArgumentException("Parameter cannot be null", nameof(callRecordId));
+
             return await rc.Get<CallLogRecord>(Path(), queryParams, restRequestConfig);
         }
     }

@@ -19,6 +19,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Chats.Posts
         public string Path(bool withParameter = true)
         {
             if (withParameter && postId != null) return $"{parent.Path()}/posts/{postId}";
+
             return $"{parent.Path()}/posts";
         }
 
@@ -48,7 +49,8 @@ namespace RingCentral.Paths.TeamMessaging.V1.Chats.Posts
         public async Task<TMPostInfo> Post(TMCreatePostRequest tMCreatePostRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<TMPostInfo>(Path(false), tMCreatePostRequest, null, restRequestConfig);
+            return await rc.Post<TMPostInfo>(Path(false), tMCreatePostRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -61,6 +63,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Chats.Posts
         public async Task<TMPostInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (postId == null) throw new ArgumentException("Parameter cannot be null", nameof(postId));
+
             return await rc.Get<TMPostInfo>(Path(), null, restRequestConfig);
         }
 
@@ -74,6 +77,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Chats.Posts
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (postId == null) throw new ArgumentException("Parameter cannot be null", nameof(postId));
+
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
 
@@ -88,6 +92,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Chats.Posts
             RestRequestConfig restRequestConfig = null)
         {
             if (postId == null) throw new ArgumentException("Parameter cannot be null", nameof(postId));
+
             return await rc.Patch<TMPostInfo>(Path(), tMUpdatePostRequest, null, restRequestConfig);
         }
     }

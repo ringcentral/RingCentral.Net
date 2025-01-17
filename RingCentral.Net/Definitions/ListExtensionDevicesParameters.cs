@@ -35,10 +35,10 @@ namespace RingCentral
         public string linePooling { get; set; }
 
         /// <summary>
-        ///     Device feature
+        ///     Device feature or multiple features supported
         ///     Enum: BLA, CommonPhone, Intercom, Paging, HELD
         /// </summary>
-        public string feature { get; set; }
+        public string[] feature { get; set; }
 
         /// <summary>
         ///     Device type

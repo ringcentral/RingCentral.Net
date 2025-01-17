@@ -130,5 +130,10 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public BillingStatementInfo billingStatement { get; set; }
+
+        /// <summary>
+        ///     Ability to access the Voicemail without being prompted to enter a PIN from the hard phone
+        /// </summary>
+        public bool? automaticVoicemailLogin { get; set; }
     }
 }

@@ -28,6 +28,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public ServiceInfoPlan servicePlan { get; set; }
+        public ServiceInfoPlanV2 servicePlan { get; set; }
     }
 }

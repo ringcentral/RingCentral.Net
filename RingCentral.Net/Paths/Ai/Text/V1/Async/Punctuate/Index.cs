@@ -28,7 +28,8 @@ namespace RingCentral.Paths.Ai.Text.V1.Async.Punctuate
         public async Task<CaiAsyncApiResponse> Post(PunctuateInput punctuateInput,
             CaiPunctuateParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<CaiAsyncApiResponse>(Path(), punctuateInput, queryParams, restRequestConfig);
+            return await rc.Post<CaiAsyncApiResponse>(Path(), punctuateInput, queryParams,
+                restRequestConfig);
         }
     }
 }

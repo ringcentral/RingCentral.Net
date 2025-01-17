@@ -19,11 +19,13 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
         public string Path(bool withParameter = true)
         {
             if (withParameter && recordingId != null) return $"{parent.Path()}/recordings/{recordingId}";
+
             return $"{parent.Path()}/recordings";
         }
 
         /// <summary>
-        ///     Starts a new call recording for the party
+        ///     Starts a new call recording for a call party.
+        ///     *Please note* this API does not allow conference calls to be recorded.
         ///     HTTP Method: post
         ///     Endpoint:
         ///     /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/recordings
@@ -44,9 +46,11 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
         ///     App Permission: CallControl
         /// </summary>
         public async Task<RingCentral.CallRecording> Patch(CallRecordingUpdate callRecordingUpdate,
-            PauseResumeCallRecordingParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+            PauseResumeCallRecordingParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             if (recordingId == null) throw new ArgumentException("Parameter cannot be null", nameof(recordingId));
+
             return await rc.Patch<RingCentral.CallRecording>(Path(), callRecordingUpdate, queryParams,
                 restRequestConfig);
         }

@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.UserRole
         public string Path(bool withParameter = true)
         {
             if (withParameter && roleId != null) return $"{parent.Path()}/user-role/{roleId}";
+
             return $"{parent.Path()}/user-role";
         }
 
@@ -28,8 +29,8 @@ namespace RingCentral.Paths.Restapi.Dictionary.UserRole
         ///     Endpoint: /restapi/{apiVersion}/dictionary/user-role
         ///     Rate Limit Group: Light
         /// </summary>
-        public async Task<RolesCollectionResource> List(ListStandardUserRoleParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<RolesCollectionResource> List(
+            ListStandardUserRoleParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<RolesCollectionResource>(Path(false), queryParams, restRequestConfig);
         }
@@ -43,6 +44,7 @@ namespace RingCentral.Paths.Restapi.Dictionary.UserRole
         public async Task<RoleResource> Get(RestRequestConfig restRequestConfig = null)
         {
             if (roleId == null) throw new ArgumentException("Parameter cannot be null", nameof(roleId));
+
             return await rc.Get<RoleResource>(Path(), null, restRequestConfig);
         }
     }

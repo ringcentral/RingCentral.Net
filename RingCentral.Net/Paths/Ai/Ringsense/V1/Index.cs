@@ -1,11 +1,11 @@
-namespace RingCentral.Paths.Cx.SocialMessaging.V1
+namespace RingCentral.Paths.Ai.Ringsense.V1
 {
     public partial class Index
     {
-        public SocialMessaging.Index parent;
+        public Ringsense.Index parent;
         public RestClient rc;
 
-        public Index(SocialMessaging.Index parent)
+        public Index(Ringsense.Index parent)
         {
             this.parent = parent;
             rc = parent.rc;
@@ -18,7 +18,7 @@ namespace RingCentral.Paths.Cx.SocialMessaging.V1
     }
 }
 
-namespace RingCentral.Paths.Cx.SocialMessaging
+namespace RingCentral.Paths.Ai.Ringsense
 {
     public partial class Index
     {

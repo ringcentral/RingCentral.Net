@@ -19,11 +19,13 @@ namespace RingCentral.Paths.TeamMessaging.V1.Persons
         public string Path(bool withParameter = true)
         {
             if (withParameter && personId != null) return $"{parent.Path()}/persons/{personId}";
+
             return $"{parent.Path()}/persons";
         }
 
         /// <summary>
-        ///     Returns a user or multiple users by their ID(s). Batch request is supported.
+        ///     Returns a user or multiple users by their ID(s).
+        ///     [Batch requests](https://developers.ringcentral.com/guide/basics/batch-requests) are supported.
         ///     HTTP Method: get
         ///     Endpoint: /team-messaging/v1/persons/{personId}
         ///     Rate Limit Group: Light
@@ -32,6 +34,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Persons
         public async Task<TMPersonInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (personId == null) throw new ArgumentException("Parameter cannot be null", nameof(personId));
+
             return await rc.Get<TMPersonInfo>(Path(), null, restRequestConfig);
         }
     }

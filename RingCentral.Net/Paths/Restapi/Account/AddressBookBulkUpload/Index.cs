@@ -30,11 +30,12 @@ namespace RingCentral.Paths.Restapi.Account.AddressBookBulkUpload
         ///     App Permission: Contacts
         ///     User Permission: EditPersonalContacts
         /// </summary>
-        public async Task<AddressBookBulkUploadResponse> Post(AddressBookBulkUploadRequest addressBookBulkUploadRequest,
+        public async Task<AddressBookBulkUploadResponse> Post(
+            AddressBookBulkUploadRequest addressBookBulkUploadRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<AddressBookBulkUploadResponse>(Path(), addressBookBulkUploadRequest, null,
-                restRequestConfig);
+            return await rc.Post<AddressBookBulkUploadResponse>(Path(), addressBookBulkUploadRequest,
+                null, restRequestConfig);
         }
     }
 }

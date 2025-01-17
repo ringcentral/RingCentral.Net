@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         public string Path(bool withParameter = true)
         {
             if (withParameter && networkId != null) return $"{parent.Path()}/networks/{networkId}";
+
             return $"{parent.Path()}/networks";
         }
 
@@ -49,7 +50,8 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         public async Task<NetworkInfo> Post(CreateNetworkRequest createNetworkRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<NetworkInfo>(Path(false), createNetworkRequest, null, restRequestConfig);
+            return await rc.Post<NetworkInfo>(Path(false), createNetworkRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -64,6 +66,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         public async Task<NetworkInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (networkId == null) throw new ArgumentException("Parameter cannot be null", nameof(networkId));
+
             return await rc.Get<NetworkInfo>(Path(), null, restRequestConfig);
         }
 
@@ -80,6 +83,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
             RestRequestConfig restRequestConfig = null)
         {
             if (networkId == null) throw new ArgumentException("Parameter cannot be null", nameof(networkId));
+
             return await rc.Put<NetworkInfo>(Path(), updateNetworkRequest, null, restRequestConfig);
         }
 
@@ -95,6 +99,7 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Networks
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (networkId == null) throw new ArgumentException("Parameter cannot be null", nameof(networkId));
+
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }

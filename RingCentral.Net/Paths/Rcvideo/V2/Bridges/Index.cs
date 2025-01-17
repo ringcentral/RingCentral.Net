@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Rcvideo.V2.Bridges
         public string Path(bool withParameter = true)
         {
             if (withParameter && bridgeId != null) return $"{parent.Path()}/bridges/{bridgeId}";
+
             return $"{parent.Path()}/bridges";
         }
 
@@ -33,6 +34,7 @@ namespace RingCentral.Paths.Rcvideo.V2.Bridges
             RestRequestConfig restRequestConfig = null)
         {
             if (bridgeId == null) throw new ArgumentException("Parameter cannot be null", nameof(bridgeId));
+
             return await rc.Get<BridgeResponse>(Path(), queryParams, restRequestConfig);
         }
 
@@ -47,6 +49,7 @@ namespace RingCentral.Paths.Rcvideo.V2.Bridges
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (bridgeId == null) throw new ArgumentException("Parameter cannot be null", nameof(bridgeId));
+
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
 
@@ -62,7 +65,9 @@ namespace RingCentral.Paths.Rcvideo.V2.Bridges
             RestRequestConfig restRequestConfig = null)
         {
             if (bridgeId == null) throw new ArgumentException("Parameter cannot be null", nameof(bridgeId));
-            return await rc.Patch<BridgeResponse>(Path(), updateBridgeRequest, null, restRequestConfig);
+
+            return await rc.Patch<BridgeResponse>(Path(), updateBridgeRequest, null,
+                restRequestConfig);
         }
     }
 }

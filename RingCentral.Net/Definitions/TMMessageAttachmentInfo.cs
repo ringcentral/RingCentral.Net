@@ -15,6 +15,17 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
+        ///     Link to a binary content
+        ///     Format: uri
+        /// </summary>
+        public string contentUri { get; set; }
+
+        /// <summary>
+        ///     Name of a file
+        /// </summary>
+        public string name { get; set; }
+
+        /// <summary>
         ///     A string of default text that will be rendered in the case that the client does not support Interactive Messages
         /// </summary>
         public string fallback { get; set; }

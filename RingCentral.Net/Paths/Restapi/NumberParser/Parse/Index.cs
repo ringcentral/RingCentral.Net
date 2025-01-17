@@ -24,11 +24,12 @@ namespace RingCentral.Paths.Restapi.NumberParser.Parse
         ///     Endpoint: /restapi/{apiVersion}/number-parser/parse
         ///     Rate Limit Group: Light
         /// </summary>
-        public async Task<ParsePhoneNumberResponse> Post(ParsePhoneNumberRequest parsePhoneNumberRequest,
+        public async Task<ParsePhoneNumberResponse> Post(
+            ParsePhoneNumberRequest parsePhoneNumberRequest,
             ParsePhoneNumberParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<ParsePhoneNumberResponse>(Path(), parsePhoneNumberRequest, queryParams,
-                restRequestConfig);
+            return await rc.Post<ParsePhoneNumberResponse>(Path(), parsePhoneNumberRequest,
+                queryParams, restRequestConfig);
         }
     }
 }

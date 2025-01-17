@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Webinar.History.V1.Company.Recordings
         public string Path(bool withParameter = true)
         {
             if (withParameter && recordingId != null) return $"{parent.Path()}/recordings/{recordingId}";
+
             return $"{parent.Path()}/recordings";
         }
 
@@ -30,10 +31,12 @@ namespace RingCentral.Paths.Webinar.History.V1.Company.Recordings
         ///     Rate Limit Group: Heavy
         ///     App Permission: ReadWebinars
         /// </summary>
-        public async Task<RecordingAdminListResource> List(RcwHistoryAdminListRecordingsParameters queryParams = null,
+        public async Task<RecordingAdminListResource> List(
+            RcwHistoryAdminListRecordingsParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<RecordingAdminListResource>(Path(false), queryParams, restRequestConfig);
+            return await rc.Get<RecordingAdminListResource>(Path(false), queryParams,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -47,6 +50,7 @@ namespace RingCentral.Paths.Webinar.History.V1.Company.Recordings
         public async Task<RecordingAdminExtendedItemModel> Get(RestRequestConfig restRequestConfig = null)
         {
             if (recordingId == null) throw new ArgumentException("Parameter cannot be null", nameof(recordingId));
+
             return await rc.Get<RecordingAdminExtendedItemModel>(Path(), null, restRequestConfig);
         }
     }

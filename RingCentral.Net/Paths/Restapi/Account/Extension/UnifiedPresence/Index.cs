@@ -43,7 +43,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence
         public async Task<RingCentral.UnifiedPresence> Patch(UpdateUnifiedPresence updateUnifiedPresence,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Patch<RingCentral.UnifiedPresence>(Path(), updateUnifiedPresence, null, restRequestConfig);
+            return await rc.Patch<RingCentral.UnifiedPresence>(Path(), updateUnifiedPresence, null,
+                restRequestConfig);
         }
     }
 }

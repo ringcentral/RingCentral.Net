@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.BulkAdd
         public string Path(bool withParameter = true)
         {
             if (withParameter && taskId != null) return $"{parent.Path()}/bulk-add/{taskId}";
+
             return $"{parent.Path()}/bulk-add";
         }
 
@@ -32,10 +33,11 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.BulkAdd
         ///     App Permission: EditAccounts
         ///     User Permission: EditCompanyPhoneNumbers
         /// </summary>
-        public async Task<AddPhoneNumbersResponse> Post(AddPhoneNumbersRequest addPhoneNumbersRequest,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<AddPhoneNumbersResponse> Post(
+            AddPhoneNumbersRequest addPhoneNumbersRequest, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<AddPhoneNumbersResponse>(Path(false), addPhoneNumbersRequest, null, restRequestConfig);
+            return await rc.Post<AddPhoneNumbersResponse>(Path(false), addPhoneNumbersRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -49,6 +51,7 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers.BulkAdd
         public async Task<GetBulkAddTaskResultsV2Response> Get(RestRequestConfig restRequestConfig = null)
         {
             if (taskId == null) throw new ArgumentException("Parameter cannot be null", nameof(taskId));
+
             return await rc.Get<GetBulkAddTaskResultsV2Response>(Path(), null, restRequestConfig);
         }
     }

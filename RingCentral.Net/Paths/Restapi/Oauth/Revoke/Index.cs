@@ -32,8 +32,8 @@ namespace RingCentral.Paths.Restapi.Oauth.Revoke
         ///     Endpoint: /restapi/oauth/revoke
         ///     Rate Limit Group: Auth
         /// </summary>
-        public async Task<string> Post(RevokeTokenRequest revokeTokenRequest, RevokeTokenParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<string> Post(RevokeTokenRequest revokeTokenRequest,
+            RevokeTokenParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             var dict = new Dictionary<string, string>();
             Utils.GetPairs(revokeTokenRequest).ToList().ForEach(t => dict.Add(t.name, t.value.ToString()));

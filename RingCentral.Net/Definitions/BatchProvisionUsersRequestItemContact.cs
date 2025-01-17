@@ -33,5 +33,9 @@ namespace RingCentral
         ///     Default: true
         /// </summary>
         public bool? emailAsLoginName { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public TransitionInfo transition { get; set; }
     }
 }

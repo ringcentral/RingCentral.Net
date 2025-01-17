@@ -30,8 +30,8 @@ namespace RingCentral.Paths.Restapi.Account.AuditTrail.Search
             AccountHistorySearchPublicRequest accountHistorySearchPublicRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<AccountHistorySearchPublicResponse>(Path(), accountHistorySearchPublicRequest, null,
-                restRequestConfig);
+            return await rc.Post<AccountHistorySearchPublicResponse>(Path(),
+                accountHistorySearchPublicRequest, null, restRequestConfig);
         }
     }
 }

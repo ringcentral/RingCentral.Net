@@ -12,7 +12,7 @@ namespace RingCentral
         ///     Then it is changed to `Accepted` when a distributor starts processing the order.
         ///     Finally, it is changed to `Shipped` which means that the distributor has shipped the device.
         ///     Example: Shipped
-        ///     Enum: Initial, Accepted, Shipped
+        ///     Enum: Initial, Accepted, Shipped, Won't ship
         /// </summary>
         public string status { get; set; }
 

@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         public string Path(bool withParameter = true)
         {
             if (withParameter && messageId != null) return $"{parent.Path()}/message-store/{messageId}";
+
             return $"{parent.Path()}/message-store";
         }
 
@@ -37,12 +38,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         }
 
         /// <summary>
-        ///     Deletes conversation(s) by conversation ID(s). Batch request is
-        ///     supported, max number of IDs passed as query/path parameters is 50. Alternative
-        ///     syntax is supported - user conversations can be deleted by passing multiple
-        ///     IDs in request body as an array of string, max number of conversation IDs
-        ///     passed in request body is 100. In this case asterisk is used in the path instead
-        ///     of IDs
+        ///     Deletes conversation(s) by conversation ID(s).
+        ///     [Batch request syntax](https://developers.ringcentral.com/guide/basics/batch-requests) is supported - maximum
+        ///     number
+        ///     of IDs passed as query/path parameters is 50. Alternative syntax is supported - the user's conversations can be
+        ///     deleted
+        ///     by passing multiple IDs in request body as an array of string. Maximum number of conversation IDs passed in request
+        ///     body
+        ///     is 100. In this case asterisk '*' is used in the path instead of IDs.
         ///     HTTP Method: delete
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store
         ///     Rate Limit Group: Medium
@@ -57,7 +60,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
 
         /// <summary>
         ///     Returns an individual message record or multiple records by the given message ID(s).
-        ///     The length of inbound messages is unlimited. Bulk syntax is supported.
+        ///     The length of inbound messages is unlimited. [Bulk
+        ///     syntax](https://developers.ringcentral.com/guide/basics/batch-requests)
+        ///     is supported.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}
         ///     Rate Limit Group: Light
@@ -67,17 +72,18 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         public async Task<GetMessageInfoResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (messageId == null) throw new ArgumentException("Parameter cannot be null", nameof(messageId));
+
             return await rc.Get<GetMessageInfoResponse>(Path(), null, restRequestConfig);
         }
 
         /// <summary>
         ///     Updates message(s) by their ID(s). Currently, only the `readStatus`
         ///     can be updated using this method.
-        ///     Bulk syntax is supported, max number of IDs passed as query/path
-        ///     parameters is 50. Alternative bulk syntax is also supported - user messages can be updated
-        ///     by passing multiple IDs in request body as an array of string, max number
-        ///     of IDs passed in the body is 1000. In this case asterisk is used in the
-        ///     path instead of IDs.
+        ///     [Bulk syntax](https://developers.ringcentral.com/guide/basics/batch-requests) is supported,
+        ///     maximum number of IDs passed as query/path parameters is 50. Alternative bulk syntax is also
+        ///     supported - the user's messages can be updated by passing multiple IDs in request body as
+        ///     an array of string, maximum number of IDs passed in the body is 1000. In this case asterisk '*'
+        ///     is used in the path instead of IDs.
         ///     HTTP Method: put
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}
         ///     Rate Limit Group: Medium
@@ -88,7 +94,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
             RestRequestConfig restRequestConfig = null)
         {
             if (messageId == null) throw new ArgumentException("Parameter cannot be null", nameof(messageId));
-            return await rc.Put<GetMessageInfoResponse>(Path(), updateMessageRequest, null, restRequestConfig);
+
+            return await rc.Put<GetMessageInfoResponse>(Path(), updateMessageRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -103,10 +111,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
         ///     App Permission: EditMessages
         ///     User Permission: EditMessages
         /// </summary>
-        public async Task<string> Delete(string[] deleteMessageBulkRequest, DeleteMessageParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<string> Delete(string[] deleteMessageBulkRequest,
+            DeleteMessageParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             if (messageId == null) throw new ArgumentException("Parameter cannot be null", nameof(messageId));
+
             return await rc.Delete<string>(Path(), deleteMessageBulkRequest, queryParams, restRequestConfig);
         }
 
@@ -128,7 +137,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore
             RestRequestConfig restRequestConfig = null)
         {
             if (messageId == null) throw new ArgumentException("Parameter cannot be null", nameof(messageId));
-            return await rc.Patch<GetMessageInfoResponse>(Path(), patchMessageRequest, null, restRequestConfig);
+
+            return await rc.Patch<GetMessageInfoResponse>(Path(), patchMessageRequest, null,
+                restRequestConfig);
         }
     }
 }

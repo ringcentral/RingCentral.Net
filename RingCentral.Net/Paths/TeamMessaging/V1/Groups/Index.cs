@@ -16,6 +16,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Groups
         public string Path(bool withParameter = true)
         {
             if (withParameter && groupId != null) return $"{parent.Path()}/groups/{groupId}";
+
             return $"{parent.Path()}/groups";
         }
     }

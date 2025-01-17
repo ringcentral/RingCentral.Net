@@ -27,7 +27,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Presence
         ///     Menu/Application Extension/Park Location.
         ///     If the user requests his/her own presence status, the response contains actual presence status even if the status
         ///     publication is turned off.
-        ///     [Batch request syntax](https://developers.ringcentral.com/api-reference/Batch-Requests) is supported. For batch
+        ///     [Batch request syntax](https://developers.ringcentral.com/guide/basics/batch-requests) is supported. For batch
         ///     requests the number of extensions
         ///     in one request is limited to 30. If more extensions are included in the request, the error code 400 Bad Request is
         ///     returned with the logical error
@@ -39,8 +39,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Presence
         ///     App Permission: ReadPresence
         ///     User Permission: ReadPresenceStatus
         /// </summary>
-        public async Task<GetPresenceInfo> Get(ReadUserPresenceStatusParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<GetPresenceInfo> Get(
+            ReadUserPresenceStatusParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<GetPresenceInfo>(Path(), queryParams, restRequestConfig);
         }
@@ -58,7 +58,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Presence
         public async Task<PresenceInfoResponse> Put(PresenceInfoRequest presenceInfoRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<PresenceInfoResponse>(Path(), presenceInfoRequest, null, restRequestConfig);
+            return await rc.Put<PresenceInfoResponse>(Path(), presenceInfoRequest, null,
+                restRequestConfig);
         }
     }
 }

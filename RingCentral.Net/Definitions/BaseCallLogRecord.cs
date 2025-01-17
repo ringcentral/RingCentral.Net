@@ -167,15 +167,13 @@ namespace RingCentral
 
         /// <summary>
         ///     Call duration in seconds
-        ///     Required
-        ///     Format: int32
+        ///     Format: int64
         /// </summary>
         public long? duration { get; set; }
 
         /// <summary>
         ///     Call duration in milliseconds
-        ///     Required
-        ///     Format: int32
+        ///     Format: int64
         /// </summary>
         public long? durationMs { get; set; }
 
@@ -196,7 +194,7 @@ namespace RingCentral
         /// <summary>
         ///     The internal type of the call
         ///     Enum: Local, LongDistance, International, Sip, RingMe, RingOut, Usual, TollFreeNumber, VerificationNumber, Vma,
-        ///     LocalNumber, ImsOutgoing, ImsIncoming
+        ///     LocalNumber, ImsOutgoing, ImsIncoming, Unknown
         /// </summary>
         public string internalType { get; set; }
     }

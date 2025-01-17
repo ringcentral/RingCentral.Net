@@ -28,10 +28,11 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.Extensions
         ///     App Permission: EditAccounts
         ///     User Permission: Users
         /// </summary>
-        public async Task<BulkDeleteUsersResponse> Delete(BulkDeleteUsersRequest bulkDeleteUsersRequest,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<BulkDeleteUsersResponse> Delete(
+            BulkDeleteUsersRequest bulkDeleteUsersRequest, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Delete<BulkDeleteUsersResponse>(Path(), bulkDeleteUsersRequest, null, restRequestConfig);
+            return await rc.Delete<BulkDeleteUsersResponse>(Path(), bulkDeleteUsersRequest, null,
+                restRequestConfig);
         }
     }
 }

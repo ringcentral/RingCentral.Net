@@ -26,8 +26,8 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups.Users
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadUserInfo
         /// </summary>
-        public async Task<PagingOnlyGroupUsers> Get(ListPagingGroupUsersParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<PagingOnlyGroupUsers> Get(
+            ListPagingGroupUsersParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<PagingOnlyGroupUsers>(Path(), queryParams, restRequestConfig);
         }

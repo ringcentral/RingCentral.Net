@@ -26,9 +26,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallQueuePresence
         ///     App Permission: ReadPresence
         /// </summary>
         public async Task<ExtensionCallQueuePresenceList> Get(
-            ReadExtensionCallQueuePresenceParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+            ReadExtensionCallQueuePresenceParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<ExtensionCallQueuePresenceList>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<ExtensionCallQueuePresenceList>(Path(), queryParams,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -42,8 +44,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallQueuePresence
             ExtensionCallQueueUpdatePresenceList extensionCallQueueUpdatePresenceList,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<ExtensionCallQueuePresenceList>(Path(), extensionCallQueueUpdatePresenceList, null,
-                restRequestConfig);
+            return await rc.Put<ExtensionCallQueuePresenceList>(Path(),
+                extensionCallQueueUpdatePresenceList, null, restRequestConfig);
         }
     }
 }

@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Templates
         public string Path(bool withParameter = true)
         {
             if (withParameter && templateId != null) return $"{parent.Path()}/templates/{templateId}";
+
             return $"{parent.Path()}/templates";
         }
 
@@ -47,6 +48,7 @@ namespace RingCentral.Paths.Restapi.Account.Templates
         public async Task<TemplateInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (templateId == null) throw new ArgumentException("Parameter cannot be null", nameof(templateId));
+
             return await rc.Get<TemplateInfo>(Path(), null, restRequestConfig);
         }
     }

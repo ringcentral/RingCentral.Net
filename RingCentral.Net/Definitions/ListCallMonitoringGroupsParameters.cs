@@ -29,6 +29,6 @@ namespace RingCentral
         /// <summary>
         ///     Internal identifier of a site
         /// </summary>
-        public string siteId { get; set; }
+        public string[] siteId { get; set; }
     }
 }

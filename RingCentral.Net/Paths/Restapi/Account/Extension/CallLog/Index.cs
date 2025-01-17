@@ -19,6 +19,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
         public string Path(bool withParameter = true)
         {
             if (withParameter && callRecordId != null) return $"{parent.Path()}/call-log/{callRecordId}";
+
             return $"{parent.Path()}/call-log";
         }
 
@@ -62,6 +63,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
             RestRequestConfig restRequestConfig = null)
         {
             if (callRecordId == null) throw new ArgumentException("Parameter cannot be null", nameof(callRecordId));
+
             return await rc.Get<CallLogRecord>(Path(), queryParams, restRequestConfig);
         }
     }

@@ -1,5 +1,9 @@
 namespace RingCentral
 {
+    /// <summary>
+    ///     Regional data (timezone, home country, language) of an extension.
+    ///     The default is Company (Auto-Receptionist) settings
+    /// </summary>
     public class ExtensionRegionalSettingRequest
     {
         /// <summary>
