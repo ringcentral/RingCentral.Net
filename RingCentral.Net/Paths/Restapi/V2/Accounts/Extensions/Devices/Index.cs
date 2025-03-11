@@ -16,7 +16,6 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.Extensions.Devices
         public string Path(bool withParameter = true)
         {
             if (withParameter && deviceId != null) return $"{parent.Path()}/devices/{deviceId}";
-
             return $"{parent.Path()}/devices";
         }
     }

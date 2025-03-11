@@ -27,8 +27,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Conferencing
         ///     App Permission: ReadAccounts
         ///     User Permission: OrganizeConference
         /// </summary>
-        public async Task<GetConferencingInfoResponse> Get(
-            ReadConferencingSettingsParameters queryParams = null,
+        public async Task<GetConferencingInfoResponse> Get(ReadConferencingSettingsParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<GetConferencingInfoResponse>(Path(), queryParams, restRequestConfig);
@@ -44,12 +43,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Conferencing
         ///     App Permission: EditExtensions
         ///     User Permission: OrganizeConference
         /// </summary>
-        public async Task<GetConferencingInfoResponse> Put(
-            UpdateConferencingInfoRequest updateConferencingInfoRequest,
+        public async Task<GetConferencingInfoResponse> Put(UpdateConferencingInfoRequest updateConferencingInfoRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<GetConferencingInfoResponse>(Path(), updateConferencingInfoRequest,
-                null, restRequestConfig);
+            return await rc.Put<GetConferencingInfoResponse>(Path(), updateConferencingInfoRequest, null,
+                restRequestConfig);
         }
     }
 }

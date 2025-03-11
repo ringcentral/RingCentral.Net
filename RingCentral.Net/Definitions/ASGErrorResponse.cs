@@ -18,5 +18,9 @@ namespace RingCentral
         ///     Example: AccountId 1234 is invalid
         /// </summary>
         public string message { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public ErrorEntry[] errors { get; set; }
     }
 }

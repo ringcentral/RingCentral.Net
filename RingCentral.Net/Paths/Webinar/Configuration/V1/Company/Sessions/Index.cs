@@ -28,8 +28,7 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Company.Sessions
         ///     App Permission: ReadWebinars
         /// </summary>
         public async Task<WcsSessionGlobalListResource> Get(
-            RcwConfigListAllCompanySessionsParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+            RcwConfigListAllCompanySessionsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<WcsSessionGlobalListResource>(Path(), queryParams, restRequestConfig);
         }

@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions
         public string Path(bool withParameter = true)
         {
             if (withParameter && sessionId != null) return $"{parent.Path()}/sessions/{sessionId}";
-
             return $"{parent.Path()}/sessions";
         }
 
@@ -30,8 +29,7 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditWebinars
         /// </summary>
-        public async Task<WcsSessionResource> Post(
-            WcsSessionWithLocaleCodeModel wcsSessionWithLocaleCodeModel,
+        public async Task<WcsSessionResource> Post(WcsSessionWithLocaleCodeModel wcsSessionWithLocaleCodeModel,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<WcsSessionResource>(Path(false), wcsSessionWithLocaleCodeModel, null,
@@ -48,7 +46,6 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions
         public async Task<WcsSessionResource> Get(RestRequestConfig restRequestConfig = null)
         {
             if (sessionId == null) throw new ArgumentException("Parameter cannot be null", nameof(sessionId));
-
             return await rc.Get<WcsSessionResource>(Path(), null, restRequestConfig);
         }
 
@@ -63,7 +60,6 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (sessionId == null) throw new ArgumentException("Parameter cannot be null", nameof(sessionId));
-
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
 
@@ -77,14 +73,11 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditWebinars
         /// </summary>
-        public async Task<WcsSessionResource> Patch(
-            WcsSessionWithLocaleCodeModel wcsSessionWithLocaleCodeModel,
+        public async Task<WcsSessionResource> Patch(WcsSessionWithLocaleCodeModel wcsSessionWithLocaleCodeModel,
             RestRequestConfig restRequestConfig = null)
         {
             if (sessionId == null) throw new ArgumentException("Parameter cannot be null", nameof(sessionId));
-
-            return await rc.Patch<WcsSessionResource>(Path(), wcsSessionWithLocaleCodeModel, null,
-                restRequestConfig);
+            return await rc.Patch<WcsSessionResource>(Path(), wcsSessionWithLocaleCodeModel, null, restRequestConfig);
         }
     }
 }

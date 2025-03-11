@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Account.PhoneNumber
         public string Path(bool withParameter = true)
         {
             if (withParameter && phoneNumberId != null) return $"{parent.Path()}/phone-number/{phoneNumberId}";
-
             return $"{parent.Path()}/phone-number";
         }
 
@@ -32,8 +31,7 @@ namespace RingCentral.Paths.Restapi.Account.PhoneNumber
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadCompanyPhoneNumbers
         /// </summary>
-        public async Task<AccountPhoneNumbers> List(
-            ListAccountPhoneNumbersParameters queryParams = null,
+        public async Task<AccountPhoneNumbers> List(ListAccountPhoneNumbersParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<AccountPhoneNumbers>(Path(false), queryParams, restRequestConfig);
@@ -51,7 +49,6 @@ namespace RingCentral.Paths.Restapi.Account.PhoneNumber
         public async Task<CompanyPhoneNumberInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (phoneNumberId == null) throw new ArgumentException("Parameter cannot be null", nameof(phoneNumberId));
-
             return await rc.Get<CompanyPhoneNumberInfo>(Path(), null, restRequestConfig);
         }
     }

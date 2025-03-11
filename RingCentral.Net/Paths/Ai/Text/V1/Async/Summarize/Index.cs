@@ -29,8 +29,7 @@ namespace RingCentral.Paths.Ai.Text.V1.Async.Summarize
         public async Task<CaiAsyncApiResponse> Post(SummaryInput summaryInput,
             CaiSummarizeParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<CaiAsyncApiResponse>(Path(), summaryInput, queryParams,
-                restRequestConfig);
+            return await rc.Post<CaiAsyncApiResponse>(Path(), summaryInput, queryParams, restRequestConfig);
         }
     }
 }

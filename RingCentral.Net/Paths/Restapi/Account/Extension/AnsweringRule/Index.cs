@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         public string Path(bool withParameter = true)
         {
             if (withParameter && ruleId != null) return $"{parent.Path()}/answering-rule/{ruleId}";
-
             return $"{parent.Path()}/answering-rule";
         }
 
@@ -31,8 +30,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadUserAnsweringRules
         /// </summary>
-        public async Task<UserAnsweringRuleList> List(
-            ListAnsweringRulesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<UserAnsweringRuleList> List(ListAnsweringRulesParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<UserAnsweringRuleList>(Path(false), queryParams, restRequestConfig);
         }
@@ -45,12 +44,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         ///     App Permission: EditExtensions
         ///     User Permission: EditUserAnsweringRules
         /// </summary>
-        public async Task<CustomAnsweringRuleInfo> Post(
-            CreateAnsweringRuleRequest createAnsweringRuleRequest,
+        public async Task<CustomAnsweringRuleInfo> Post(CreateAnsweringRuleRequest createAnsweringRuleRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<CustomAnsweringRuleInfo>(Path(false), createAnsweringRuleRequest,
-                null, restRequestConfig);
+            return await rc.Post<CustomAnsweringRuleInfo>(Path(false), createAnsweringRuleRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -61,11 +59,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadUserAnsweringRules
         /// </summary>
-        public async Task<CallHandlingRuleInfo> Get(
-            ReadAnsweringRuleParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<CallHandlingRuleInfo> Get(ReadAnsweringRuleParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             if (ruleId == null) throw new ArgumentException("Parameter cannot be null", nameof(ruleId));
-
             return await rc.Get<CallHandlingRuleInfo>(Path(), queryParams, restRequestConfig);
         }
 
@@ -77,14 +74,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         ///     App Permission: EditExtensions
         ///     User Permission: EditUserAnsweringRules
         /// </summary>
-        public async Task<CallHandlingRuleInfo> Put(
-            UpdateAnsweringRuleRequest updateAnsweringRuleRequest,
+        public async Task<CallHandlingRuleInfo> Put(UpdateAnsweringRuleRequest updateAnsweringRuleRequest,
             RestRequestConfig restRequestConfig = null)
         {
             if (ruleId == null) throw new ArgumentException("Parameter cannot be null", nameof(ruleId));
-
-            return await rc.Put<CallHandlingRuleInfo>(Path(), updateAnsweringRuleRequest, null,
-                restRequestConfig);
+            return await rc.Put<CallHandlingRuleInfo>(Path(), updateAnsweringRuleRequest, null, restRequestConfig);
         }
 
         /// <summary>
@@ -98,7 +92,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (ruleId == null) throw new ArgumentException("Parameter cannot be null", nameof(ruleId));
-
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }

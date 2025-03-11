@@ -43,8 +43,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.OverflowSettings
             CallQueueOverflowSettingsRequestResource callQueueOverflowSettingsRequestResource,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<CallQueueOverflowSettings>(Path(),
-                callQueueOverflowSettingsRequestResource, null, restRequestConfig);
+            return await rc.Put<CallQueueOverflowSettings>(Path(), callQueueOverflowSettingsRequestResource, null,
+                restRequestConfig);
         }
     }
 }

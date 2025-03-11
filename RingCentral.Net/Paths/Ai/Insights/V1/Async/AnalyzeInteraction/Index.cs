@@ -29,8 +29,7 @@ namespace RingCentral.Paths.Ai.Insights.V1.Async.AnalyzeInteraction
         public async Task<CaiAsyncApiResponse> Post(InteractionInput interactionInput,
             CaiAnalyzeInteractionParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<CaiAsyncApiResponse>(Path(), interactionInput, queryParams,
-                restRequestConfig);
+            return await rc.Post<CaiAsyncApiResponse>(Path(), interactionInput, queryParams, restRequestConfig);
         }
     }
 }

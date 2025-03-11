@@ -69,11 +69,29 @@ namespace RingCentral
         public string syncType { get; set; }
 
         /// <summary>
-        ///     Filters voicemail messages based on the owner extension. Supported if the 'SharedVoicemail'
+        ///     Deprecated. Filters voicemail messages based on the owner extension. Supported if the 'SharedVoicemail'
         ///     feature is enabled.
         ///     Default: Personal
         ///     Enum: Any, Personal, Shared
         /// </summary>
         public string[] voicemailOwner { get; set; }
+
+        /// <summary>
+        ///     Filters shared messages based on the owner extension. Supported if the 'SharedVoicemail' or 'CallQueueSmsRecipient'
+        ///     feature is enabled.
+        ///     Default: Personal
+        ///     Enum: Any, Personal, Shared
+        /// </summary>
+        public string[] owner { get; set; }
+
+        /// <summary>
+        ///     Filters shared messages based on the owner extension type. Supported if "SharedVoicemail" or
+        ///     "CallQueueSmsRecipient"
+        ///     feature is enabled.
+        ///     Enum: User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup,
+        ///     DelegatedLinesGroup, GroupCallPickup, IvrMenu, ApplicationExtension, ProxyAdmin, RoomConnector, ParkLocation,
+        ///     Limited, Bot, Site, Room, FlexibleUser
+        /// </summary>
+        public string[] ownerExtensionType { get; set; }
     }
 }

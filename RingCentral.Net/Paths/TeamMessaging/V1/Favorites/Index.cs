@@ -25,8 +25,8 @@ namespace RingCentral.Paths.TeamMessaging.V1.Favorites
         ///     Rate Limit Group: Light
         ///     App Permission: TeamMessaging
         /// </summary>
-        public async Task<TMChatListWithoutNavigation> Get(
-            ListFavoriteChatsNewParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<TMChatListWithoutNavigation> Get(ListFavoriteChatsNewParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<TMChatListWithoutNavigation>(Path(), queryParams, restRequestConfig);
         }

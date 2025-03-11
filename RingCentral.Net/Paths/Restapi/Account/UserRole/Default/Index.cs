@@ -42,8 +42,7 @@ namespace RingCentral.Paths.Restapi.Account.UserRole.Default
         public async Task<DefaultUserRole> Put(DefaultUserRoleRequest defaultUserRoleRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<DefaultUserRole>(Path(), defaultUserRoleRequest, null,
-                restRequestConfig);
+            return await rc.Put<DefaultUserRole>(Path(), defaultUserRoleRequest, null, restRequestConfig);
         }
     }
 }

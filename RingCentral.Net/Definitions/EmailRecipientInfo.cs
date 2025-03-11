@@ -31,7 +31,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Call queue manager permission
-        ///     Enum: FullAccess, Messages, MemberManagement
+        ///     Enum: FullAccess, Messages, MemberManagement, None
         /// </summary>
         public string permission { get; set; }
     }

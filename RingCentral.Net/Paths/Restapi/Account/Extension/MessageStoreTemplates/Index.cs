@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStoreTemplates
         public string Path(bool withParameter = true)
         {
             if (withParameter && templateId != null) return $"{parent.Path()}/message-store-templates/{templateId}";
-
             return $"{parent.Path()}/message-store-templates";
         }
 
@@ -30,12 +29,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStoreTemplates
         ///     Rate Limit Group: Light
         ///     App Permission: ReadAccounts
         /// </summary>
-        public async Task<MessageTemplatesListResponse> List(
-            ListUserMessageTemplatesParameters queryParams = null,
+        public async Task<MessageTemplatesListResponse> List(ListUserMessageTemplatesParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<MessageTemplatesListResponse>(Path(false), queryParams,
-                restRequestConfig);
+            return await rc.Get<MessageTemplatesListResponse>(Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -47,11 +44,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStoreTemplates
         ///     Rate Limit Group: Medium
         ///     App Permission: EditExtensions
         /// </summary>
-        public async Task<MessageTemplateResponse> Post(
-            MessageTemplateRequest messageTemplateRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<MessageTemplateResponse> Post(MessageTemplateRequest messageTemplateRequest,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<MessageTemplateResponse>(Path(false), messageTemplateRequest, null,
-                restRequestConfig);
+            return await rc.Post<MessageTemplateResponse>(Path(false), messageTemplateRequest, null, restRequestConfig);
         }
 
         /// <summary>
@@ -64,7 +60,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStoreTemplates
         public async Task<MessageTemplateResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (templateId == null) throw new ArgumentException("Parameter cannot be null", nameof(templateId));
-
             return await rc.Get<MessageTemplateResponse>(Path(), null, restRequestConfig);
         }
 
@@ -75,14 +70,11 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStoreTemplates
         ///     Rate Limit Group: Medium
         ///     App Permission: EditExtensions
         /// </summary>
-        public async Task<MessageTemplateResponse> Put(
-            MessageTemplateUpdateRequest messageTemplateUpdateRequest,
+        public async Task<MessageTemplateResponse> Put(MessageTemplateUpdateRequest messageTemplateUpdateRequest,
             RestRequestConfig restRequestConfig = null)
         {
             if (templateId == null) throw new ArgumentException("Parameter cannot be null", nameof(templateId));
-
-            return await rc.Put<MessageTemplateResponse>(Path(), messageTemplateUpdateRequest, null,
-                restRequestConfig);
+            return await rc.Put<MessageTemplateResponse>(Path(), messageTemplateUpdateRequest, null, restRequestConfig);
         }
 
         /// <summary>
@@ -95,7 +87,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStoreTemplates
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (templateId == null) throw new ArgumentException("Parameter cannot be null", nameof(templateId));
-
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }

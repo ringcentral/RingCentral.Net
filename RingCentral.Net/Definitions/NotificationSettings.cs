@@ -27,6 +27,17 @@ namespace RingCentral
         public bool? includeManagers { get; set; }
 
         /// <summary>
+        ///     Specifies if sms recipients' emails are included in the list of emails to which
+        ///     notifications are sent
+        /// </summary>
+        public bool? includeSmsRecipients { get; set; }
+
+        /// <summary>
+        ///     List of sms recipients specified for call queue. Returned only for call queue extension
+        /// </summary>
+        public EmailRecipientInfo[] smsRecipients { get; set; }
+
+        /// <summary>
         ///     List of notification recipient email addresses
         /// </summary>
         public string[] smsEmailAddresses { get; set; }

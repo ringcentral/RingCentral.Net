@@ -44,7 +44,7 @@ namespace RingCentral
         /// <summary>
         ///     Current status of a message batch
         ///     Example: Processing
-        ///     Enum: Processing, Completed
+        ///     Enum: Processing, Completed, Sent
         /// </summary>
         public string status { get; set; }
 

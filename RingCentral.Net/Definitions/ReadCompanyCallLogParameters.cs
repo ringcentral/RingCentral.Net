@@ -79,6 +79,12 @@ namespace RingCentral
         public string telephonySessionId { get; set; }
 
         /// <summary>
+        ///     Category of metadata to be returned. If omitted, all call records are returned.
+        ///     Multiple values are supported
+        /// </summary>
+        public string[] metadataCategory { get; set; }
+
+        /// <summary>
         ///     Indicates the page number to retrieve. Only positive number values are accepted
         ///     Minimum: 1
         ///     Format: int32

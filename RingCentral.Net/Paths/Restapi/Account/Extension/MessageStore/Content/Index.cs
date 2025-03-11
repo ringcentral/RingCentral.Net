@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore.Content
         public string Path(bool withParameter = true)
         {
             if (withParameter && attachmentId != null) return $"{parent.Path()}/content/{attachmentId}";
-
             return $"{parent.Path()}/content";
         }
 
@@ -38,7 +37,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore.Content
             RestRequestConfig restRequestConfig = null)
         {
             if (attachmentId == null) throw new ArgumentException("Parameter cannot be null", nameof(attachmentId));
-
             return await rc.Get<byte[]>(Path(), queryParams, restRequestConfig);
         }
     }

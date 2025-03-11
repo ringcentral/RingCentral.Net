@@ -16,7 +16,6 @@ namespace RingCentral.Paths.Ai.Ringsense.V1.Public.Accounts.Domains.Records
         public string Path(bool withParameter = true)
         {
             if (withParameter && sourceRecordId != null) return $"{parent.Path()}/records/{sourceRecordId}";
-
             return $"{parent.Path()}/records";
         }
     }

@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Internal identifier of a site extension
+        ///     Example: main-site
         /// </summary>
         public string id { get; set; }
 

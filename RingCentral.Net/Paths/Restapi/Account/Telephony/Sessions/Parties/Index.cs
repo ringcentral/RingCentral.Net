@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
         public string Path(bool withParameter = true)
         {
             if (withParameter && partyId != null) return $"{parent.Path()}/parties/{partyId}";
-
             return $"{parent.Path()}/parties";
         }
 
@@ -33,7 +32,6 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
         public async Task<CallParty> Get(RestRequestConfig restRequestConfig = null)
         {
             if (partyId == null) throw new ArgumentException("Parameter cannot be null", nameof(partyId));
-
             return await rc.Get<CallParty>(Path(), null, restRequestConfig);
         }
 
@@ -48,7 +46,6 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (partyId == null) throw new ArgumentException("Parameter cannot be null", nameof(partyId));
-
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
 
@@ -65,7 +62,6 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
             RestRequestConfig restRequestConfig = null)
         {
             if (partyId == null) throw new ArgumentException("Parameter cannot be null", nameof(partyId));
-
             return await rc.Patch<CallParty>(Path(), partyUpdateRequest, null, restRequestConfig);
         }
     }

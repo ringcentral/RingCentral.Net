@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Webinar.History.V1.Webinars.Sessions.Invitees
         public string Path(bool withParameter = true)
         {
             if (withParameter && inviteeId != null) return $"{parent.Path()}/invitees/{inviteeId}";
-
             return $"{parent.Path()}/invitees";
         }
 
@@ -31,8 +30,8 @@ namespace RingCentral.Paths.Webinar.History.V1.Webinars.Sessions.Invitees
         ///     Rate Limit Group: Heavy
         ///     App Permission: ReadWebinars
         /// </summary>
-        public async Task<InviteeListResource> List(
-            RcwHistoryListInviteesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<InviteeListResource> List(RcwHistoryListInviteesParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<InviteeListResource>(Path(false), queryParams, restRequestConfig);
         }
@@ -47,7 +46,6 @@ namespace RingCentral.Paths.Webinar.History.V1.Webinars.Sessions.Invitees
         public async Task<InviteeModel> Get(RestRequestConfig restRequestConfig = null)
         {
             if (inviteeId == null) throw new ArgumentException("Parameter cannot be null", nameof(inviteeId));
-
             return await rc.Get<InviteeModel>(Path(), null, restRequestConfig);
         }
     }

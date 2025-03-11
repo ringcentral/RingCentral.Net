@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Rcvideo.V2.Bridges.Pin.Pstn
         public string Path(bool withParameter = true)
         {
             if (withParameter && pin != null) return $"{parent.Path()}/pstn/{pin}";
-
             return $"{parent.Path()}/pstn";
         }
 
@@ -34,7 +33,6 @@ namespace RingCentral.Paths.Rcvideo.V2.Bridges.Pin.Pstn
             RestRequestConfig restRequestConfig = null)
         {
             if (pin == null) throw new ArgumentException("Parameter cannot be null", nameof(pin));
-
             return await rc.Get<BridgeResponse>(Path(), queryParams, restRequestConfig);
         }
     }

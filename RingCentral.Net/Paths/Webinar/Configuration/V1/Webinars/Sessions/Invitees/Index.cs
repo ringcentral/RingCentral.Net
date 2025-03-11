@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Invitees
         public string Path(bool withParameter = true)
         {
             if (withParameter && inviteeId != null) return $"{parent.Path()}/invitees/{inviteeId}";
-
             return $"{parent.Path()}/invitees";
         }
 
@@ -32,8 +31,8 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Invitees
         ///     Rate Limit Group: Heavy
         ///     App Permission: ReadWebinars
         /// </summary>
-        public async Task<WcsInviteeListResource> List(
-            RcwConfigListInviteesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<WcsInviteeListResource> List(RcwConfigListInviteesParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<WcsInviteeListResource>(Path(false), queryParams, restRequestConfig);
         }
@@ -53,11 +52,11 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Invitees
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditWebinars
         /// </summary>
-        public async Task<BulkUpdateInviteesResponse> Patch(
-            BulkUpdateInviteesRequest bulkUpdateInviteesRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<BulkUpdateInviteesResponse> Patch(BulkUpdateInviteesRequest bulkUpdateInviteesRequest,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Patch<BulkUpdateInviteesResponse>(Path(false), bulkUpdateInviteesRequest,
-                null, restRequestConfig);
+            return await rc.Patch<BulkUpdateInviteesResponse>(Path(false), bulkUpdateInviteesRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -70,7 +69,6 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Invitees
         public async Task<InviteeResource> Get(RestRequestConfig restRequestConfig = null)
         {
             if (inviteeId == null) throw new ArgumentException("Parameter cannot be null", nameof(inviteeId));
-
             return await rc.Get<InviteeResource>(Path(), null, restRequestConfig);
         }
 
@@ -89,9 +87,7 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Invitees
             RestRequestConfig restRequestConfig = null)
         {
             if (inviteeId == null) throw new ArgumentException("Parameter cannot be null", nameof(inviteeId));
-
-            return await rc.Put<InviteeResource>(Path(), updateInviteeRequest, null,
-                restRequestConfig);
+            return await rc.Put<InviteeResource>(Path(), updateInviteeRequest, null, restRequestConfig);
         }
 
         /// <summary>
@@ -105,7 +101,6 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Webinars.Sessions.Invitees
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (inviteeId == null) throw new ArgumentException("Parameter cannot be null", nameof(inviteeId));
-
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }

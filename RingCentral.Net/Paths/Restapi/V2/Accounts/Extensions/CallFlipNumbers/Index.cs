@@ -49,8 +49,7 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.Extensions.CallFlipNumbers
         ///     Rate Limit Group: Medium
         ///     App Permission: EditExtensions
         /// </summary>
-        public async Task<CallFlipNumberListResource> Put(
-            CallFlipNumberListResource callFlipNumberListResource,
+        public async Task<CallFlipNumberListResource> Put(CallFlipNumberListResource callFlipNumberListResource,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Put<CallFlipNumberListResource>(Path(), callFlipNumberListResource, null,

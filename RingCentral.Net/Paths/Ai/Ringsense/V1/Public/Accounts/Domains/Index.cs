@@ -16,7 +16,6 @@ namespace RingCentral.Paths.Ai.Ringsense.V1.Public.Accounts.Domains
         public string Path(bool withParameter = true)
         {
             if (withParameter && domain != null) return $"{parent.Path()}/domains/{domain}";
-
             return $"{parent.Path()}/domains";
         }
     }

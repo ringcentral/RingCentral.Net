@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Webinar.Notifications.V1.Subscriptions
         public string Path(bool withParameter = true)
         {
             if (withParameter && subscriptionId != null) return $"{parent.Path()}/subscriptions/{subscriptionId}";
-
             return $"{parent.Path()}/subscriptions";
         }
 
@@ -40,8 +39,7 @@ namespace RingCentral.Paths.Webinar.Notifications.V1.Subscriptions
         ///     Endpoint: /webinar/notifications/v1/subscriptions
         ///     Rate Limit Group: Medium
         /// </summary>
-        public async Task<SubscriptionInfo> Post(
-            CreateWebhookSubscriptionRequest createWebhookSubscriptionRequest,
+        public async Task<SubscriptionInfo> Post(CreateWebhookSubscriptionRequest createWebhookSubscriptionRequest,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<SubscriptionInfo>(Path(false), createWebhookSubscriptionRequest, null,
@@ -57,7 +55,6 @@ namespace RingCentral.Paths.Webinar.Notifications.V1.Subscriptions
         public async Task<SubscriptionInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (subscriptionId == null) throw new ArgumentException("Parameter cannot be null", nameof(subscriptionId));
-
             return await rc.Get<SubscriptionInfo>(Path(), null, restRequestConfig);
         }
 
@@ -73,13 +70,11 @@ namespace RingCentral.Paths.Webinar.Notifications.V1.Subscriptions
         ///     Endpoint: /webinar/notifications/v1/subscriptions/{subscriptionId}
         ///     Rate Limit Group: Medium
         /// </summary>
-        public async Task<SubscriptionInfo> Put(
-            UpdateSubscriptionRequest updateSubscriptionRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<SubscriptionInfo> Put(UpdateSubscriptionRequest updateSubscriptionRequest,
+            RestRequestConfig restRequestConfig = null)
         {
             if (subscriptionId == null) throw new ArgumentException("Parameter cannot be null", nameof(subscriptionId));
-
-            return await rc.Put<SubscriptionInfo>(Path(), updateSubscriptionRequest, null,
-                restRequestConfig);
+            return await rc.Put<SubscriptionInfo>(Path(), updateSubscriptionRequest, null, restRequestConfig);
         }
 
         /// <summary>
@@ -91,7 +86,6 @@ namespace RingCentral.Paths.Webinar.Notifications.V1.Subscriptions
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (subscriptionId == null) throw new ArgumentException("Parameter cannot be null", nameof(subscriptionId));
-
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }

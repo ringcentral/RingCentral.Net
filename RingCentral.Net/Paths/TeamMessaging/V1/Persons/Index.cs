@@ -19,7 +19,6 @@ namespace RingCentral.Paths.TeamMessaging.V1.Persons
         public string Path(bool withParameter = true)
         {
             if (withParameter && personId != null) return $"{parent.Path()}/persons/{personId}";
-
             return $"{parent.Path()}/persons";
         }
 
@@ -34,7 +33,6 @@ namespace RingCentral.Paths.TeamMessaging.V1.Persons
         public async Task<TMPersonInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (personId == null) throw new ArgumentException("Parameter cannot be null", nameof(personId));
-
             return await rc.Get<TMPersonInfo>(Path(), null, restRequestConfig);
         }
     }

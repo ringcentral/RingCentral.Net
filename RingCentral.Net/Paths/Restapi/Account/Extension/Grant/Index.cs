@@ -19,9 +19,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Grant
         }
 
         /// <summary>
-        ///     Returns the list of extensions with information on grants
-        ///     given to the current extension regarding them. Currently the list of grants
-        ///     include: picking up a call, monitoring, calling or receiving a call on behalf
+        ///     Returns a list of extensions including information on grants given to the current extension towards them.
+        ///     Currently the list of grants includes: picking up a call, call monitoring, calling or receiving a call on behalf
         ///     of somebody, call delegation and calling paging groups.
         ///     HTTP Method: get
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/grant
@@ -29,8 +28,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Grant
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadExtensions
         /// </summary>
-        public async Task<GetExtensionGrantListResponse> Get(
-            ListExtensionGrantsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<GetExtensionGrantListResponse> Get(ListExtensionGrantsParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<GetExtensionGrantListResponse>(Path(), queryParams, restRequestConfig);
         }

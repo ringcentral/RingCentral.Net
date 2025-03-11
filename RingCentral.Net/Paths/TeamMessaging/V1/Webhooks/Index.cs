@@ -19,7 +19,6 @@ namespace RingCentral.Paths.TeamMessaging.V1.Webhooks
         public string Path(bool withParameter = true)
         {
             if (withParameter && webhookId != null) return $"{parent.Path()}/webhooks/{webhookId}";
-
             return $"{parent.Path()}/webhooks";
         }
 
@@ -45,7 +44,6 @@ namespace RingCentral.Paths.TeamMessaging.V1.Webhooks
         public async Task<TMWebhookList> Get(RestRequestConfig restRequestConfig = null)
         {
             if (webhookId == null) throw new ArgumentException("Parameter cannot be null", nameof(webhookId));
-
             return await rc.Get<TMWebhookList>(Path(), null, restRequestConfig);
         }
 
@@ -59,7 +57,6 @@ namespace RingCentral.Paths.TeamMessaging.V1.Webhooks
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (webhookId == null) throw new ArgumentException("Parameter cannot be null", nameof(webhookId));
-
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }

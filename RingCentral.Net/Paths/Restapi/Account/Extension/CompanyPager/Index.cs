@@ -30,8 +30,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CompanyPager
             CreateInternalTextMessageRequest createInternalTextMessageRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<GetInternalTextMessageInfoResponse>(Path(),
-                createInternalTextMessageRequest, null, restRequestConfig);
+            return await rc.Post<GetInternalTextMessageInfoResponse>(Path(), createInternalTextMessageRequest, null,
+                restRequestConfig);
         }
     }
 }

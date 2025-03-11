@@ -28,8 +28,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Chats.AdaptiveCards
         public async Task<AdaptiveCardShortInfo> Post(AdaptiveCardRequest adaptiveCardRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<AdaptiveCardShortInfo>(Path(), adaptiveCardRequest, null,
-                restRequestConfig);
+            return await rc.Post<AdaptiveCardShortInfo>(Path(), adaptiveCardRequest, null, restRequestConfig);
         }
     }
 }

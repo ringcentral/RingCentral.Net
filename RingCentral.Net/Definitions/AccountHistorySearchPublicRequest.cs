@@ -49,7 +49,6 @@ namespace RingCentral
         /// <summary>
         ///     List of action IDs (exact keys) to search for (alternatively "excludeActionIds" option can be used).
         ///     Example: CHANGE_SECRET_INFO,CHANGE_USER_INFO
-        ///     Enum: CHANGE_SECRET_INFO, CHANGE_USER_INFO
         /// </summary>
         public string[] actionIds { get; set; }
 
@@ -68,7 +67,6 @@ namespace RingCentral
         /// <summary>
         ///     List of action IDs (exact keys) to exclude from your search (alternatively "actionIds" option can be used).
         ///     Example: CHANGE_SECRET_INFO,CHANGE_USER_INFO
-        ///     Enum: CHANGE_SECRET_INFO, CHANGE_USER_INFO
         /// </summary>
         public string[] excludeActionIds { get; set; }
     }

@@ -20,11 +20,12 @@ namespace RingCentral
         public string searchString { get; set; }
 
         /// <summary>
-        ///     Comma-separated list of fields to order results prefixed by '+'
-        ///     sign (ascending order) or '-' sign (descending order).The default sorting
-        ///     is by `name`
+        ///     Comma-separated list of fields to order results prefixed by plus sign '+' (ascending order),
+        ///     or minus sign '-' (descending order).
+        ///     Supported values: 'name', 'modelName', 'siteName', 'featureEnabled'.
+        ///     The default sorting is by `name`
         /// </summary>
-        public string orderBy { get; set; }
+        public string[] orderBy { get; set; }
 
         /// <summary>
         ///     Indicates a page size (number of items). The values supported:

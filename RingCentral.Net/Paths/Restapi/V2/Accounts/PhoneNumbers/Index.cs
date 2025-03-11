@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers
         public string Path(bool withParameter = true)
         {
             if (withParameter && phoneNumberId != null) return $"{parent.Path()}/phone-numbers/{phoneNumberId}";
-
             return $"{parent.Path()}/phone-numbers";
         }
 
@@ -33,8 +32,7 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadCompanyPhoneNumbers
         /// </summary>
-        public async Task<AccountPhoneNumberList> Get(
-            ListAccountPhoneNumbersV2Parameters queryParams = null,
+        public async Task<AccountPhoneNumberList> Get(ListAccountPhoneNumbersV2Parameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<AccountPhoneNumberList>(Path(false), queryParams, restRequestConfig);
@@ -55,11 +53,11 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers
         ///     App Permission: EditAccounts
         ///     User Permission: EditCompanyPhoneNumbers
         /// </summary>
-        public async Task<DeletePhoneNumbersResponse> Delete(
-            DeletePhoneNumbersRequest deletePhoneNumbersRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<DeletePhoneNumbersResponse> Delete(DeletePhoneNumbersRequest deletePhoneNumbersRequest,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Delete<DeletePhoneNumbersResponse>(Path(false), deletePhoneNumbersRequest,
-                null, restRequestConfig);
+            return await rc.Delete<DeletePhoneNumbersResponse>(Path(false), deletePhoneNumbersRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -77,13 +75,11 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.PhoneNumbers
         ///     App Permission: EditAccounts
         ///     User Permission: EditCompanyPhoneNumbers
         /// </summary>
-        public async Task<AccountPhoneNumberInfo> Patch(
-            AssignPhoneNumberRequest assignPhoneNumberRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<AccountPhoneNumberInfo> Patch(AssignPhoneNumberRequest assignPhoneNumberRequest,
+            RestRequestConfig restRequestConfig = null)
         {
             if (phoneNumberId == null) throw new ArgumentException("Parameter cannot be null", nameof(phoneNumberId));
-
-            return await rc.Patch<AccountPhoneNumberInfo>(Path(), assignPhoneNumberRequest, null,
-                restRequestConfig);
+            return await rc.Patch<AccountPhoneNumberInfo>(Path(), assignPhoneNumberRequest, null, restRequestConfig);
         }
     }
 }

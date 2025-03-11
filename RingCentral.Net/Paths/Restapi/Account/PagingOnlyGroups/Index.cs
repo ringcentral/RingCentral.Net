@@ -17,7 +17,6 @@ namespace RingCentral.Paths.Restapi.Account.PagingOnlyGroups
         {
             if (withParameter && pagingOnlyGroupId != null)
                 return $"{parent.Path()}/paging-only-groups/{pagingOnlyGroupId}";
-
             return $"{parent.Path()}/paging-only-groups";
         }
     }

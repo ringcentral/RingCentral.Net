@@ -26,8 +26,8 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues.Members
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadExtensions
         /// </summary>
-        public async Task<CallQueueMembers> Get(
-            ListCallQueueMembersParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<CallQueueMembers> Get(ListCallQueueMembersParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<CallQueueMembers>(Path(), queryParams, restRequestConfig);
         }

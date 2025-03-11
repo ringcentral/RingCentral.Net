@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Account.Sites
         public string Path(bool withParameter = true)
         {
             if (withParameter && siteId != null) return $"{parent.Path()}/sites/{siteId}";
-
             return $"{parent.Path()}/sites";
         }
 
@@ -60,7 +59,6 @@ namespace RingCentral.Paths.Restapi.Account.Sites
         public async Task<SiteInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (siteId == null) throw new ArgumentException("Parameter cannot be null", nameof(siteId));
-
             return await rc.Get<SiteInfo>(Path(), null, restRequestConfig);
         }
 
@@ -72,11 +70,9 @@ namespace RingCentral.Paths.Restapi.Account.Sites
         ///     App Permission: EditExtensions
         ///     User Permission: Sites
         /// </summary>
-        public async Task<SiteInfo> Put(SiteUpdateRequest siteUpdateRequest,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<SiteInfo> Put(SiteUpdateRequest siteUpdateRequest, RestRequestConfig restRequestConfig = null)
         {
             if (siteId == null) throw new ArgumentException("Parameter cannot be null", nameof(siteId));
-
             return await rc.Put<SiteInfo>(Path(), siteUpdateRequest, null, restRequestConfig);
         }
 
@@ -91,7 +87,6 @@ namespace RingCentral.Paths.Restapi.Account.Sites
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (siteId == null) throw new ArgumentException("Parameter cannot be null", nameof(siteId));
-
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }

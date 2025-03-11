@@ -19,7 +19,6 @@ namespace RingCentral.Paths.TeamMessaging.V1.Notes
         public string Path(bool withParameter = true)
         {
             if (withParameter && noteId != null) return $"{parent.Path()}/notes/{noteId}";
-
             return $"{parent.Path()}/notes";
         }
 
@@ -33,7 +32,6 @@ namespace RingCentral.Paths.TeamMessaging.V1.Notes
         public async Task<TMNoteWithBodyInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (noteId == null) throw new ArgumentException("Parameter cannot be null", nameof(noteId));
-
             return await rc.Get<TMNoteWithBodyInfo>(Path(), null, restRequestConfig);
         }
 
@@ -47,7 +45,6 @@ namespace RingCentral.Paths.TeamMessaging.V1.Notes
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (noteId == null) throw new ArgumentException("Parameter cannot be null", nameof(noteId));
-
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
 
@@ -62,9 +59,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Notes
             PatchNoteNewParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             if (noteId == null) throw new ArgumentException("Parameter cannot be null", nameof(noteId));
-
-            return await rc.Patch<TMNoteInfo>(Path(), tMCreateNoteRequest, queryParams,
-                restRequestConfig);
+            return await rc.Patch<TMNoteInfo>(Path(), tMCreateNoteRequest, queryParams, restRequestConfig);
         }
     }
 }

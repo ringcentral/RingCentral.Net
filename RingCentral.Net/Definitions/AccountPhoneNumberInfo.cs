@@ -31,11 +31,12 @@ namespace RingCentral
         public string tollType { get; set; }
 
         /// <summary>
-        ///     Usage type of phone number
+        ///     Usage type of a phone number
         ///     Required
         ///     Enum: MainCompanyNumber, DirectNumber, Inventory, InventoryPartnerBusinessMobileNumber,
         ///     PartnerBusinessMobileNumber, AdditionalCompanyNumber, CompanyNumber, PhoneLine, CompanyFaxNumber, ForwardedNumber,
-        ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, BusinessMobileNumber, ELIN
+        ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberStorage,
+        ///     BusinessMobileNumber, ELIN
         /// </summary>
         public string usageType { get; set; }
 

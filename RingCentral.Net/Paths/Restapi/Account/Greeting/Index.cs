@@ -26,13 +26,11 @@ namespace RingCentral.Paths.Restapi.Account.Greeting
         ///     App Permission: EditAccounts
         ///     User Permission: ReadUserInfo
         /// </summary>
-        public async Task<CustomCompanyGreetingInfo> Post(
-            CreateCompanyGreetingRequest createCompanyGreetingRequest,
+        public async Task<CustomCompanyGreetingInfo> Post(CreateCompanyGreetingRequest createCompanyGreetingRequest,
             RestRequestConfig restRequestConfig = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createCompanyGreetingRequest);
-            return await rc.Post<CustomCompanyGreetingInfo>(Path(), multipartFormDataContent, null,
-                restRequestConfig);
+            return await rc.Post<CustomCompanyGreetingInfo>(Path(), multipartFormDataContent, null, restRequestConfig);
         }
     }
 }

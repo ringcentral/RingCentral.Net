@@ -25,7 +25,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Group extension status
-        ///     Enum: Enabled, Disabled, NotActivated
+        ///     Enum: Enabled, Disabled, NotActivated, Unassigned
         /// </summary>
         public string status { get; set; }
 

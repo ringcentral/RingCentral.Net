@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Messages
         public string Path(bool withParameter = true)
         {
             if (withParameter && messageId != null) return $"{parent.Path()}/messages/{messageId}";
-
             return $"{parent.Path()}/messages";
         }
 
@@ -47,7 +46,6 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Messages
         public async Task<MessageDetailsResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (messageId == null) throw new ArgumentException("Parameter cannot be null", nameof(messageId));
-
             return await rc.Get<MessageDetailsResponse>(Path(), null, restRequestConfig);
         }
     }

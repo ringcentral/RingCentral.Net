@@ -173,6 +173,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public VoicemailOwnerResource owner { get; set; }
+        public OwnerResource owner { get; set; }
     }
 }

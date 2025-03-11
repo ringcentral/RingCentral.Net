@@ -35,6 +35,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Features
         ///     - `InsufficientPermissions` - required permission is not granted to the current user (not the one, who is specified
         ///     in the URL, but the one who is calling this API);
         ///     - `ConfigurationLimitation` - a feature is turned off for extension, e.g., by account administrator.
+        ///     - `PermissionLimitation` - a feature is unavailable due to a specific permission this extension has.
         ///     Also, some features may have additional parameters, e.g. limits, which are returned in `params` attribute as a
         ///     name-value collection:
         ///     {

@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Greeting
         public string Path(bool withParameter = true)
         {
             if (withParameter && greetingId != null) return $"{parent.Path()}/greeting/{greetingId}";
-
             return $"{parent.Path()}/greeting";
         }
 
@@ -31,14 +30,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Greeting
         ///     App Permission: EditExtensions
         ///     User Permission: EditUserAnsweringRules
         /// </summary>
-        public async Task<CustomUserGreetingInfo> Post(
-            CreateCustomUserGreetingRequest createCustomUserGreetingRequest,
-            CreateCustomUserGreetingParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<CustomUserGreetingInfo> Post(CreateCustomUserGreetingRequest createCustomUserGreetingRequest,
+            CreateCustomUserGreetingParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createCustomUserGreetingRequest);
-            return await rc.Post<CustomUserGreetingInfo>(Path(false), multipartFormDataContent,
-                queryParams, restRequestConfig);
+            return await rc.Post<CustomUserGreetingInfo>(Path(false), multipartFormDataContent, queryParams,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -52,7 +49,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Greeting
         public async Task<CustomUserGreetingInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (greetingId == null) throw new ArgumentException("Parameter cannot be null", nameof(greetingId));
-
             return await rc.Get<CustomUserGreetingInfo>(Path(), null, restRequestConfig);
         }
     }

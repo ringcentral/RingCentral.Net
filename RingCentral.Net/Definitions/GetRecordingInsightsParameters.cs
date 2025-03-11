@@ -7,7 +7,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     AI Insight Types
-        ///     Enum: NextSteps, Transcript, Summary, Highlights, BulletedSummary, AIScore
+        ///     Enum: NextSteps, Transcript, Summary, Highlights, BulletedSummary, AIScore, CallNotes
         /// </summary>
         public string[] insightTypes { get; set; }
     }

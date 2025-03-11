@@ -27,8 +27,7 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries.Search
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadExtensions
         /// </summary>
-        public async Task<DirectoryResource> Post(
-            SearchDirectoryEntriesRequest searchDirectoryEntriesRequest,
+        public async Task<DirectoryResource> Post(SearchDirectoryEntriesRequest searchDirectoryEntriesRequest,
             SearchDirectoryEntriesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<DirectoryResource>(Path(), searchDirectoryEntriesRequest, queryParams,

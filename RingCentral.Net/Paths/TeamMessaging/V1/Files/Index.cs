@@ -25,13 +25,11 @@ namespace RingCentral.Paths.TeamMessaging.V1.Files
         ///     Rate Limit Group: Heavy
         ///     App Permission: TeamMessaging
         /// </summary>
-        public async Task<TMAddFileRequest> Post(
-            CreateGlipFileNewRequest createGlipFileNewRequest,
+        public async Task<TMAddFileRequest> Post(CreateGlipFileNewRequest createGlipFileNewRequest,
             CreateGlipFileNewParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createGlipFileNewRequest);
-            return await rc.Post<TMAddFileRequest>(Path(), multipartFormDataContent, queryParams,
-                restRequestConfig);
+            return await rc.Post<TMAddFileRequest>(Path(), multipartFormDataContent, queryParams, restRequestConfig);
         }
     }
 }

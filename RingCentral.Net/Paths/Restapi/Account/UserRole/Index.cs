@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Account.UserRole
         public string Path(bool withParameter = true)
         {
             if (withParameter && roleId != null) return $"{parent.Path()}/user-role/{roleId}";
-
             return $"{parent.Path()}/user-role";
         }
 
@@ -31,8 +30,8 @@ namespace RingCentral.Paths.Restapi.Account.UserRole
         ///     App Permission: ReadAccounts
         ///     User Permission: ReadUserRoles
         /// </summary>
-        public async Task<RolesCollectionResource> List(
-            ListUserRolesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<RolesCollectionResource> List(ListUserRolesParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<RolesCollectionResource>(Path(false), queryParams, restRequestConfig);
         }
@@ -45,8 +44,7 @@ namespace RingCentral.Paths.Restapi.Account.UserRole
         ///     App Permission: RoleManagement
         ///     User Permission: EditUserRoles
         /// </summary>
-        public async Task<string> Post(RoleResource roleResource,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<string> Post(RoleResource roleResource, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<string>(Path(false), roleResource, null, restRequestConfig);
         }
@@ -63,7 +61,6 @@ namespace RingCentral.Paths.Restapi.Account.UserRole
             RestRequestConfig restRequestConfig = null)
         {
             if (roleId == null) throw new ArgumentException("Parameter cannot be null", nameof(roleId));
-
             return await rc.Get<RoleResource>(Path(), queryParams, restRequestConfig);
         }
 
@@ -75,11 +72,9 @@ namespace RingCentral.Paths.Restapi.Account.UserRole
         ///     App Permission: RoleManagement
         ///     User Permission: EditUserRoles
         /// </summary>
-        public async Task<RoleResource> Put(RoleResource roleResource,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<RoleResource> Put(RoleResource roleResource, RestRequestConfig restRequestConfig = null)
         {
             if (roleId == null) throw new ArgumentException("Parameter cannot be null", nameof(roleId));
-
             return await rc.Put<RoleResource>(Path(), roleResource, null, restRequestConfig);
         }
 
@@ -95,7 +90,6 @@ namespace RingCentral.Paths.Restapi.Account.UserRole
             RestRequestConfig restRequestConfig = null)
         {
             if (roleId == null) throw new ArgumentException("Parameter cannot be null", nameof(roleId));
-
             return await rc.Delete<string>(Path(), null, queryParams, restRequestConfig);
         }
     }

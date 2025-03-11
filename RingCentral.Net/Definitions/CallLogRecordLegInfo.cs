@@ -33,6 +33,11 @@ namespace RingCentral
         public string partyId { get; set; }
 
         /// <summary>
+        ///     List of metadata categories applied to the call
+        /// </summary>
+        public string[] metadataCategories { get; set; }
+
+        /// <summary>
         ///     The type of call transport. 'PSTN' indicates that a call leg was initiated
         ///     from the PSTN network provider; 'VoIP' - from an RC phone.
         ///     Enum: PSTN, VoIP

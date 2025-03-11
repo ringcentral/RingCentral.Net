@@ -19,7 +19,6 @@ namespace RingCentral.Paths.TeamMessaging.V1.AdaptiveCards
         public string Path(bool withParameter = true)
         {
             if (withParameter && cardId != null) return $"{parent.Path()}/adaptive-cards/{cardId}";
-
             return $"{parent.Path()}/adaptive-cards";
         }
 
@@ -33,7 +32,6 @@ namespace RingCentral.Paths.TeamMessaging.V1.AdaptiveCards
         public async Task<AdaptiveCardInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (cardId == null) throw new ArgumentException("Parameter cannot be null", nameof(cardId));
-
             return await rc.Get<AdaptiveCardInfo>(Path(), null, restRequestConfig);
         }
 
@@ -48,9 +46,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.AdaptiveCards
             RestRequestConfig restRequestConfig = null)
         {
             if (cardId == null) throw new ArgumentException("Parameter cannot be null", nameof(cardId));
-
-            return await rc.Put<AdaptiveCardShortInfo>(Path(), adaptiveCardRequest, null,
-                restRequestConfig);
+            return await rc.Put<AdaptiveCardShortInfo>(Path(), adaptiveCardRequest, null, restRequestConfig);
         }
 
         /// <summary>
@@ -63,7 +59,6 @@ namespace RingCentral.Paths.TeamMessaging.V1.AdaptiveCards
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (cardId == null) throw new ArgumentException("Parameter cannot be null", nameof(cardId));
-
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }

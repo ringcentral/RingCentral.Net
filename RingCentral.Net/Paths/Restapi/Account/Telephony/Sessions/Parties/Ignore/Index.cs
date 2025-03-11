@@ -26,8 +26,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Ignore
         ///     Rate Limit Group: Light
         ///     App Permission: CallControl
         /// </summary>
-        public async Task<string> Post(IgnoreRequestBody ignoreRequestBody,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<string> Post(IgnoreRequestBody ignoreRequestBody, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<string>(Path(), ignoreRequestBody, null, restRequestConfig);
         }

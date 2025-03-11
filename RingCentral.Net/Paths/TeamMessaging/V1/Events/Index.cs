@@ -19,7 +19,6 @@ namespace RingCentral.Paths.TeamMessaging.V1.Events
         public string Path(bool withParameter = true)
         {
             if (withParameter && eventId != null) return $"{parent.Path()}/events/{eventId}";
-
             return $"{parent.Path()}/events";
         }
 
@@ -46,8 +45,7 @@ namespace RingCentral.Paths.TeamMessaging.V1.Events
         public async Task<TMEventInfo> Post(TMCreateEventRequest tMCreateEventRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<TMEventInfo>(Path(false), tMCreateEventRequest, null,
-                restRequestConfig);
+            return await rc.Post<TMEventInfo>(Path(false), tMCreateEventRequest, null, restRequestConfig);
         }
 
         /// <summary>
@@ -60,7 +58,6 @@ namespace RingCentral.Paths.TeamMessaging.V1.Events
         public async Task<TMEventInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (eventId == null) throw new ArgumentException("Parameter cannot be null", nameof(eventId));
-
             return await rc.Get<TMEventInfo>(Path(), null, restRequestConfig);
         }
 
@@ -75,7 +72,6 @@ namespace RingCentral.Paths.TeamMessaging.V1.Events
             RestRequestConfig restRequestConfig = null)
         {
             if (eventId == null) throw new ArgumentException("Parameter cannot be null", nameof(eventId));
-
             return await rc.Put<TMEventInfo>(Path(), tMCreateEventRequest, null, restRequestConfig);
         }
 
@@ -89,7 +85,6 @@ namespace RingCentral.Paths.TeamMessaging.V1.Events
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (eventId == null) throw new ArgumentException("Parameter cannot be null", nameof(eventId));
-
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }

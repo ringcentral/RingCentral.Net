@@ -12,36 +12,32 @@ namespace RingCentral
         public bool? accessibleSitesOnly { get; set; }
 
         /// <summary>
-        ///     A list of Account IDs
-        ///     Example: 400131426008
+        ///     A list of Account IDs. Deprecated, use the appropriate body field 'accountIds' instead.
         /// </summary>
-        public string accountId { get; set; }
+        public string[] accountId { get; set; }
 
         /// <summary>
-        ///     A list of department names
+        ///     Department name. Deprecated, use the appropriate body field 'department' instead.
         ///     Example: North office
         /// </summary>
         public string department { get; set; }
 
         /// <summary>
-        ///     A list of Site IDs
-        ///     Example: 872781797006
+        ///     A list of Site IDs. Deprecated, use the appropriate body field 'siteIds' instead.
         /// </summary>
-        public string siteId { get; set; }
+        public string[] siteId { get; set; }
 
         /// <summary>
-        ///     Extension current state
-        ///     Example: Enabled
+        ///     List of extension current statuses. Deprecated, use the appropriate body field 'extensionStatuses' instead.
         /// </summary>
-        public string extensionStatus { get; set; }
+        public string[] extensionStatus { get; set; }
 
         /// <summary>
-        ///     Type of extension to filter the contacts
-        ///     Example: User
+        ///     Types of extension to filter the contacts
         ///     Enum: User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup,
         ///     IvrMenu, ApplicationExtension, ParkLocation, Limited, Bot, Site, Room, ProxyAdmin, DelegatedLinesGroup,
         ///     FlexibleUser, GroupCallPickup, RoomConnector
         /// </summary>
-        public string extensionType { get; set; }
+        public string[] extensionType { get; set; }
     }
 }

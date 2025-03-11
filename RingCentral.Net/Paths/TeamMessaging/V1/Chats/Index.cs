@@ -19,7 +19,6 @@ namespace RingCentral.Paths.TeamMessaging.V1.Chats
         public string Path(bool withParameter = true)
         {
             if (withParameter && chatId != null) return $"{parent.Path()}/chats/{chatId}";
-
             return $"{parent.Path()}/chats";
         }
 
@@ -57,7 +56,6 @@ namespace RingCentral.Paths.TeamMessaging.V1.Chats
         public async Task<TMChatInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (chatId == null) throw new ArgumentException("Parameter cannot be null", nameof(chatId));
-
             return await rc.Get<TMChatInfo>(Path(), null, restRequestConfig);
         }
     }

@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Dictionary.State
         public string Path(bool withParameter = true)
         {
             if (withParameter && stateId != null) return $"{parent.Path()}/state/{stateId}";
-
             return $"{parent.Path()}/state";
         }
 
@@ -44,7 +43,6 @@ namespace RingCentral.Paths.Restapi.Dictionary.State
         public async Task<GetStateInfoResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (stateId == null) throw new ArgumentException("Parameter cannot be null", nameof(stateId));
-
             return await rc.Get<GetStateInfoResponse>(Path(), null, restRequestConfig);
         }
     }

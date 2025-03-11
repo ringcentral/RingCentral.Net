@@ -42,8 +42,7 @@ namespace RingCentral.Paths.Restapi.Account.Sites.Ivr
         public async Task<SiteIVRSettings> Put(SiteIVRSettingsUpdate siteIVRSettingsUpdate,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Put<SiteIVRSettings>(Path(), siteIVRSettingsUpdate, null,
-                restRequestConfig);
+            return await rc.Put<SiteIVRSettings>(Path(), siteIVRSettingsUpdate, null, restRequestConfig);
         }
     }
 }

@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations
         public string Path(bool withParameter = true)
         {
             if (withParameter && locationId != null) return $"{parent.Path()}/emergency-locations/{locationId}";
-
             return $"{parent.Path()}/emergency-locations";
         }
 
@@ -30,12 +29,10 @@ namespace RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations
         ///     Rate Limit Group: Light
         ///     App Permission: ReadAccounts
         /// </summary>
-        public async Task<EmergencyLocationsResource> List(
-            GetExtensionEmergencyLocationsParameters queryParams = null,
+        public async Task<EmergencyLocationsResource> List(GetExtensionEmergencyLocationsParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<EmergencyLocationsResource>(Path(false), queryParams,
-                restRequestConfig);
+            return await rc.Get<EmergencyLocationsResource>(Path(false), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -50,8 +47,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations
             CreateUserEmergencyLocationRequest createUserEmergencyLocationRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<EmergencyLocationResponseResource>(Path(false),
-                createUserEmergencyLocationRequest, null, restRequestConfig);
+            return await rc.Post<EmergencyLocationResponseResource>(Path(false), createUserEmergencyLocationRequest,
+                null, restRequestConfig);
         }
 
         /// <summary>
@@ -64,7 +61,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations
         public async Task<CommonEmergencyLocationResource> Get(RestRequestConfig restRequestConfig = null)
         {
             if (locationId == null) throw new ArgumentException("Parameter cannot be null", nameof(locationId));
-
             return await rc.Get<CommonEmergencyLocationResource>(Path(), null, restRequestConfig);
         }
 
@@ -81,9 +77,8 @@ namespace RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations
             RestRequestConfig restRequestConfig = null)
         {
             if (locationId == null) throw new ArgumentException("Parameter cannot be null", nameof(locationId));
-
-            return await rc.Put<EmergencyLocationResponseResource>(Path(),
-                emergencyLocationRequestResource, null, restRequestConfig);
+            return await rc.Put<EmergencyLocationResponseResource>(Path(), emergencyLocationRequestResource, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -100,7 +95,6 @@ namespace RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations
             RestRequestConfig restRequestConfig = null)
         {
             if (locationId == null) throw new ArgumentException("Parameter cannot be null", nameof(locationId));
-
             return await rc.Delete<string>(Path(), null, queryParams, restRequestConfig);
         }
     }

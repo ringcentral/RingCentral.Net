@@ -9,7 +9,7 @@ namespace RingCentral
         /// <summary>
         ///     Reason code
         ///     Enum: ServicePlanLimitation, AccountLimitation, ExtensionTypeLimitation, ExtensionLimitation,
-        ///     InsufficientPermissions, ConfigurationLimitation
+        ///     InsufficientPermissions, ConfigurationLimitation, PermissionLimitation
         /// </summary>
         public string code { get; set; }
 

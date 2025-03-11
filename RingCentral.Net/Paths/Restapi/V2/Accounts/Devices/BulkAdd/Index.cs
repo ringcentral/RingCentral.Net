@@ -26,11 +26,10 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.Devices.BulkAdd
         ///     App Permission: EditAccounts
         ///     User Permission: AddRemoveDevices
         /// </summary>
-        public async Task<BulkAddDevicesResponse> Post(
-            BulkAddDevicesRequest bulkAddDevicesRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<BulkAddDevicesResponse> Post(BulkAddDevicesRequest bulkAddDevicesRequest,
+            RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<BulkAddDevicesResponse>(Path(), bulkAddDevicesRequest, null,
-                restRequestConfig);
+            return await rc.Post<BulkAddDevicesResponse>(Path(), bulkAddDevicesRequest, null, restRequestConfig);
         }
     }
 }

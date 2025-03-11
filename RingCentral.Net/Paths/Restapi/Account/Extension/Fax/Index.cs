@@ -32,8 +32,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Fax
             RestRequestConfig restRequestConfig = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createFaxMessageRequest);
-            return await rc.Post<FaxResponse>(Path(), multipartFormDataContent, null,
-                restRequestConfig);
+            return await rc.Post<FaxResponse>(Path(), multipartFormDataContent, null, restRequestConfig);
         }
     }
 }

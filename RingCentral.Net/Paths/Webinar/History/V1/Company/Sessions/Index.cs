@@ -28,8 +28,7 @@ namespace RingCentral.Paths.Webinar.History.V1.Company.Sessions
         ///     Rate Limit Group: Heavy
         ///     App Permission: ReadWebinars
         /// </summary>
-        public async Task<SessionGlobalListResource> Get(
-            RcwHistoryListAllCompanySessionsParameters queryParams = null,
+        public async Task<SessionGlobalListResource> Get(RcwHistoryListAllCompanySessionsParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<SessionGlobalListResource>(Path(), queryParams, restRequestConfig);

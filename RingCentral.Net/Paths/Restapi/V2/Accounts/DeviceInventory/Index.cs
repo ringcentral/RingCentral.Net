@@ -25,12 +25,11 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.DeviceInventory
         ///     Rate Limit Group: Heavy
         ///     App Permission: EditAccounts
         /// </summary>
-        public async Task<AddDeviceToInventoryResponse> Post(
-            AddDeviceToInventoryRequest addDeviceToInventoryRequest,
+        public async Task<AddDeviceToInventoryResponse> Post(AddDeviceToInventoryRequest addDeviceToInventoryRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<AddDeviceToInventoryResponse>(Path(), addDeviceToInventoryRequest,
-                null, restRequestConfig);
+            return await rc.Post<AddDeviceToInventoryResponse>(Path(), addDeviceToInventoryRequest, null,
+                restRequestConfig);
         }
 
         /// <summary>
@@ -45,8 +44,8 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.DeviceInventory
             DeleteDeviceFromInventoryRequest deleteDeviceFromInventoryRequest,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Delete<DeleteDeviceFromInventoryResponse>(Path(),
-                deleteDeviceFromInventoryRequest, null, restRequestConfig);
+            return await rc.Delete<DeleteDeviceFromInventoryResponse>(Path(), deleteDeviceFromInventoryRequest, null,
+                restRequestConfig);
         }
     }
 }

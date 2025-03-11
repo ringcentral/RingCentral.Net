@@ -36,7 +36,8 @@ namespace RingCentral
         ///     Usage type(s) of phone numbers to be returned
         ///     Enum: MainCompanyNumber, DirectNumber, Inventory, InventoryPartnerBusinessMobileNumber,
         ///     PartnerBusinessMobileNumber, AdditionalCompanyNumber, CompanyNumber, PhoneLine, CompanyFaxNumber, ForwardedNumber,
-        ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, BusinessMobileNumber, ELIN
+        ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberStorage,
+        ///     BusinessMobileNumber, ELIN
         /// </summary>
         public string[] usageType { get; set; }
 

@@ -29,8 +29,7 @@ namespace RingCentral.Paths.Ai.Audio.V1.Async.SpeakerDiarize
         public async Task<CaiAsyncApiResponse> Post(DiarizeInput diarizeInput,
             CaiSpeakerDiarizeParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<CaiAsyncApiResponse>(Path(), diarizeInput, queryParams,
-                restRequestConfig);
+            return await rc.Post<CaiAsyncApiResponse>(Path(), diarizeInput, queryParams, restRequestConfig);
         }
     }
 }

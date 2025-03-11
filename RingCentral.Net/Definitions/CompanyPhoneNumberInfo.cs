@@ -16,10 +16,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public CountryInfoBasicModel country { get; set; }
-
-        /// <summary>
-        /// </summary>
         public ExtensionInfo extension { get; set; }
 
         /// <summary>
@@ -60,12 +56,11 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Usage type of phone number. Usage type of phone number.
-        ///     Numbers of 'NumberPool' type are not returned in phone number list
-        ///     requests
+        ///     Usage type of a phone number. Numbers of 'NumberPool' and 'NumberStorage' type are not returned in
+        ///     phone number list requests
         ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber,
-        ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool, BusinessMobileNumber,
-        ///     PartnerBusinessMobileNumber, IntegrationNumber
+        ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool, NumberStorage,
+        ///     BusinessMobileNumber, PartnerBusinessMobileNumber, IntegrationNumber
         /// </summary>
         public string usageType { get; set; }
 

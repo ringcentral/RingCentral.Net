@@ -7,12 +7,12 @@ namespace RingCentral
     {
         /// <summary>
         ///     Type of extension to be returned. Multiple values are supported.
-        ///     Please note that legacy 'Department' extension type corresponds
-        ///     to 'Call Queue' extensions in modern RingCentral product terminology
+        ///     **Please note that legacy 'Department' extension type corresponds
+        ///     to 'Call Queue' extensions in modern RingCentral product terminology**
         ///     Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly,
         ///     IvrMenu, ApplicationExtension, ParkLocation, Limited, Bot, Room, DelegatedLinesGroup
         /// </summary>
-        public string extensionType { get; set; }
+        public string[] extensionType { get; set; }
 
         /// <summary>
         ///     Indicates a page number to retrieve. Only positive number values

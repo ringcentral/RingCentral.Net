@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Ai.Audio.V1.Enrollments
         public string Path(bool withParameter = true)
         {
             if (withParameter && speakerId != null) return $"{parent.Path()}/enrollments/{speakerId}";
-
             return $"{parent.Path()}/enrollments";
         }
 
@@ -30,8 +29,8 @@ namespace RingCentral.Paths.Ai.Audio.V1.Enrollments
         ///     Rate Limit Group: Heavy
         ///     App Permission: AI
         /// </summary>
-        public async Task<ListEnrolledSpeakers> List(
-            CaiEnrollmentsListParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<ListEnrolledSpeakers> List(CaiEnrollmentsListParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<ListEnrolledSpeakers>(Path(false), queryParams, restRequestConfig);
         }
@@ -46,8 +45,7 @@ namespace RingCentral.Paths.Ai.Audio.V1.Enrollments
         public async Task<EnrollmentStatus> Post(EnrollmentInput enrollmentInput,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<EnrollmentStatus>(Path(false), enrollmentInput, null,
-                restRequestConfig);
+            return await rc.Post<EnrollmentStatus>(Path(false), enrollmentInput, null, restRequestConfig);
         }
 
         /// <summary>
@@ -60,7 +58,6 @@ namespace RingCentral.Paths.Ai.Audio.V1.Enrollments
         public async Task<EnrollmentStatus> Get(RestRequestConfig restRequestConfig = null)
         {
             if (speakerId == null) throw new ArgumentException("Parameter cannot be null", nameof(speakerId));
-
             return await rc.Get<EnrollmentStatus>(Path(), null, restRequestConfig);
         }
 
@@ -74,7 +71,6 @@ namespace RingCentral.Paths.Ai.Audio.V1.Enrollments
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (speakerId == null) throw new ArgumentException("Parameter cannot be null", nameof(speakerId));
-
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
 
@@ -89,9 +85,7 @@ namespace RingCentral.Paths.Ai.Audio.V1.Enrollments
             RestRequestConfig restRequestConfig = null)
         {
             if (speakerId == null) throw new ArgumentException("Parameter cannot be null", nameof(speakerId));
-
-            return await rc.Patch<EnrollmentStatus>(Path(), enrollmentPatchInput, null,
-                restRequestConfig);
+            return await rc.Patch<EnrollmentStatus>(Path(), enrollmentPatchInput, null, restRequestConfig);
         }
     }
 }

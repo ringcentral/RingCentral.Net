@@ -21,5 +21,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CommonEmergencyLocationAddressInfo address { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public ShortSiteInfo site { get; set; }
     }
 }

@@ -25,5 +25,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public AIScoreInsightUnit[] AIScore { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public CallNotesInsightUnit[] CallNotes { get; set; }
     }
 }

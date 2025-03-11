@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Rcvideo.V1.History.Meetings
         public string Path(bool withParameter = true)
         {
             if (withParameter && meetingId != null) return $"{parent.Path()}/meetings/{meetingId}";
-
             return $"{parent.Path()}/meetings";
         }
 
@@ -46,7 +45,6 @@ namespace RingCentral.Paths.Rcvideo.V1.History.Meetings
         public async Task<Meeting> Get(RestRequestConfig restRequestConfig = null)
         {
             if (meetingId == null) throw new ArgumentException("Parameter cannot be null", nameof(meetingId));
-
             return await rc.Get<Meeting>(Path(), null, restRequestConfig);
         }
     }

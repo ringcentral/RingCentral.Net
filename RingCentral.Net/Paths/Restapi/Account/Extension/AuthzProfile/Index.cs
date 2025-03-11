@@ -25,8 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile
         ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/authz-profile
         ///     Rate Limit Group: Medium
         /// </summary>
-        public async Task<AuthProfileResource> Get(
-            ReadAuthorizationProfileParameters queryParams = null,
+        public async Task<AuthProfileResource> Get(ReadAuthorizationProfileParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<AuthProfileResource>(Path(), queryParams, restRequestConfig);

@@ -25,8 +25,8 @@ namespace RingCentral.Paths.Ai.Ringsense.V1.Public.Accounts.Domains.Records.Insi
         ///     Rate Limit Group: Light
         ///     App Permission: RingSense
         /// </summary>
-        public async Task<RecordingInsights> Get(
-            GetRecordingInsightsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<RecordingInsights> Get(GetRecordingInsightsParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<RecordingInsights>(Path(), queryParams, restRequestConfig);
         }

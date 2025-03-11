@@ -16,7 +16,6 @@ namespace RingCentral.Paths.Ai.Ringsense.V1.Public.Accounts
         public string Path(bool withParameter = true)
         {
             if (withParameter && accountId != null) return $"{parent.Path()}/accounts/{accountId}";
-
             return $"{parent.Path()}/accounts";
         }
     }

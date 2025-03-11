@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants
         public string Path(bool withParameter = true)
         {
             if (withParameter && registrantId != null) return $"{parent.Path()}/registrants/{registrantId}";
-
             return $"{parent.Path()}/registrants";
         }
 
@@ -32,8 +31,8 @@ namespace RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants
         ///     Rate Limit Group: Heavy
         ///     App Permission: ReadWebinars
         /// </summary>
-        public async Task<RegistrantListResource> List(
-            RcwRegListRegistrantsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<RegistrantListResource> List(RcwRegListRegistrantsParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<RegistrantListResource>(Path(false), queryParams, restRequestConfig);
         }
@@ -65,13 +64,11 @@ namespace RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants
         ///     Rate Limit Group: Heavy
         ///     App Permission: ReadWebinars
         /// </summary>
-        public async Task<RegistrantModelWithQuestionnaire> Get(
-            RcwRegGetRegistrantParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<RegistrantModelWithQuestionnaire> Get(RcwRegGetRegistrantParameters queryParams = null,
+            RestRequestConfig restRequestConfig = null)
         {
             if (registrantId == null) throw new ArgumentException("Parameter cannot be null", nameof(registrantId));
-
-            return await rc.Get<RegistrantModelWithQuestionnaire>(Path(), queryParams,
-                restRequestConfig);
+            return await rc.Get<RegistrantModelWithQuestionnaire>(Path(), queryParams, restRequestConfig);
         }
 
         /// <summary>
@@ -87,7 +84,6 @@ namespace RingCentral.Paths.Webinar.Registration.V1.Sessions.Registrants
         public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
         {
             if (registrantId == null) throw new ArgumentException("Parameter cannot be null", nameof(registrantId));
-
             return await rc.Delete<string>(Path(), null, null, restRequestConfig);
         }
     }

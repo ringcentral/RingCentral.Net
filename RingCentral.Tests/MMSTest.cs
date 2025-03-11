@@ -23,11 +23,11 @@ public class MmsTest
 
         var debugExtension = new DebugExtension(new DebugOptions
         {
-          // uncomment below to see detailed HTTP request/response
+            // uncomment below to see detailed HTTP request/response
             // loggingAction = s => { _testOutputHelper.WriteLine(s); }
         });
         await rc.InstallExtension(debugExtension);
-        
+
         var extension = rc.Restapi().Account().Extension();
         var attachments = new[]
         {

@@ -30,8 +30,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Forward
         public async Task<ForwardCallPartyResponse> Post(ForwardTarget forwardTarget,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<ForwardCallPartyResponse>(Path(), forwardTarget, null,
-                restRequestConfig);
+            return await rc.Post<ForwardCallPartyResponse>(Path(), forwardTarget, null, restRequestConfig);
         }
     }
 }

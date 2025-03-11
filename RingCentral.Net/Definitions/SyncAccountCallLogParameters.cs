@@ -66,5 +66,11 @@ namespace RingCentral
         ///     Enum: Automatic, OnDemand, All
         /// </summary>
         public string recordingType { get; set; }
+
+        /// <summary>
+        ///     Category of metadata to be returned. If omitted, all call records are returned.
+        ///     Multiple values are supported
+        /// </summary>
+        public string[] metadataCategory { get; set; }
     }
 }

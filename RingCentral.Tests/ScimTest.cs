@@ -54,7 +54,7 @@ public class ScimTest
     }
 
     // Create a SCIM user: HTTP POST /scim/v2/Users
-    [Fact]
+    [Fact(Skip = "License limit has been reached")]
     public async void CreateUser()
     {
         var rc = await ReusableRestClient.GetInstance();

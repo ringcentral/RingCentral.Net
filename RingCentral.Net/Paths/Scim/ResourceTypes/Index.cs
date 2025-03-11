@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Scim.ResourceTypes
         public string Path(bool withParameter = true)
         {
             if (withParameter && type != null) return $"{parent.Path()}/ResourceTypes/{type}";
-
             return $"{parent.Path()}/ResourceTypes";
         }
 
@@ -45,7 +44,6 @@ namespace RingCentral.Paths.Scim.ResourceTypes
         public async Task<ScimResourceTypeResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (type == null) throw new ArgumentException("Parameter cannot be null", nameof(type));
-
             return await rc.Get<ScimResourceTypeResponse>(Path(), null, restRequestConfig);
         }
     }

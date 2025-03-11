@@ -26,8 +26,7 @@ namespace RingCentral.Paths.Webinar.Configuration.V1.Sessions
         ///     Rate Limit Group: Heavy
         ///     App Permission: ReadWebinars
         /// </summary>
-        public async Task<WcsSessionGlobalListResource> Get(
-            RcwConfigListAllSessionsParameters queryParams = null,
+        public async Task<WcsSessionGlobalListResource> Get(RcwConfigListAllSessionsParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
             return await rc.Get<WcsSessionGlobalListResource>(Path(), queryParams, restRequestConfig);

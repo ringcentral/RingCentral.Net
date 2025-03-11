@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Ai.Status.V1.Jobs
         public string Path(bool withParameter = true)
         {
             if (withParameter && jobId != null) return $"{parent.Path()}/jobs/{jobId}";
-
             return $"{parent.Path()}/jobs";
         }
 
@@ -33,7 +32,6 @@ namespace RingCentral.Paths.Ai.Status.V1.Jobs
         public async Task<JobStatusResponse> Get(RestRequestConfig restRequestConfig = null)
         {
             if (jobId == null) throw new ArgumentException("Parameter cannot be null", nameof(jobId));
-
             return await rc.Get<JobStatusResponse>(Path(), null, restRequestConfig);
         }
     }

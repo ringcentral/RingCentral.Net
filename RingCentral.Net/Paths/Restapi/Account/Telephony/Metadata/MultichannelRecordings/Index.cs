@@ -16,7 +16,6 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Metadata.MultichannelRecor
         public string Path(bool withParameter = true)
         {
             if (withParameter && metadataId != null) return $"{parent.Path()}/multichannel-recordings/{metadataId}";
-
             return $"{parent.Path()}/multichannel-recordings";
         }
     }
@@ -26,8 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Metadata
 {
     public partial class Index
     {
-        public MultichannelRecordings.Index MultichannelRecordings(
-            string metadataId = null)
+        public MultichannelRecordings.Index MultichannelRecordings(string metadataId = null)
         {
             return new MultichannelRecordings.Index(this, metadataId);
         }

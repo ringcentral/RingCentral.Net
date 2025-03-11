@@ -25,8 +25,7 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Reply
         ///     Rate Limit Group: Light
         ///     App Permission: CallControl
         /// </summary>
-        public async Task<ReplyParty> Post(CallPartyReply callPartyReply,
-            RestRequestConfig restRequestConfig = null)
+        public async Task<ReplyParty> Post(CallPartyReply callPartyReply, RestRequestConfig restRequestConfig = null)
         {
             return await rc.Post<ReplyParty>(Path(), callPartyReply, null, restRequestConfig);
         }

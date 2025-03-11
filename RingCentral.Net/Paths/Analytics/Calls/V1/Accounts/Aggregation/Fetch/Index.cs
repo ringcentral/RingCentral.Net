@@ -26,11 +26,9 @@ namespace RingCentral.Paths.Analytics.Calls.V1.Accounts.Aggregation.Fetch
         ///     App Permission: Analytics
         /// </summary>
         public async Task<AggregationResponse> Post(AggregationRequest aggregationRequest,
-            AnalyticsCallsAggregationFetchParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
+            AnalyticsCallsAggregationFetchParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<AggregationResponse>(Path(), aggregationRequest, queryParams,
-                restRequestConfig);
+            return await rc.Post<AggregationResponse>(Path(), aggregationRequest, queryParams, restRequestConfig);
         }
     }
 }

@@ -19,7 +19,6 @@ namespace RingCentral.Paths.Webinar.History.V1.Webinars
         public string Path(bool withParameter = true)
         {
             if (withParameter && webinarId != null) return $"{parent.Path()}/webinars/{webinarId}";
-
             return $"{parent.Path()}/webinars";
         }
 
@@ -33,7 +32,6 @@ namespace RingCentral.Paths.Webinar.History.V1.Webinars
         public async Task<WebinarResource> Get(RestRequestConfig restRequestConfig = null)
         {
             if (webinarId == null) throw new ArgumentException("Parameter cannot be null", nameof(webinarId));
-
             return await rc.Get<WebinarResource>(Path(), null, restRequestConfig);
         }
     }

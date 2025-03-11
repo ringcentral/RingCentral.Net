@@ -16,7 +16,6 @@ namespace RingCentral.Paths.Restapi.Dictionary.Brand
         public string Path(bool withParameter = true)
         {
             if (withParameter && brandId != null) return $"{parent.Path()}/brand/{brandId}";
-
             return $"{parent.Path()}/brand";
         }
     }
