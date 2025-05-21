@@ -9,7 +9,7 @@ namespace RingCentral
         public string uri { get; set; }
 
         /// <summary>
-        ///     If set to `true` - enables other extensions to see the extension presence status
+        ///     If set to `true` enables other extensions to see the extension presence status
         /// </summary>
         public bool? allowSeeMyPresence { get; set; }
 
@@ -21,17 +21,25 @@ namespace RingCentral
         public string callerIdVisibility { get; set; }
 
         /// <summary>
-        ///     Extended DnD (Do not Disturb) status. Cannot be set for Department/Announcement/Voicemail
+        ///     Do Not Disturb status. Cannot be set for Department/Announcement/Voicemail
         ///     (Take Messages Only)/Fax User/Shared Lines Group/Paging Only Group/IVR
         ///     Menu/Application Extension/Park Location extensions. The 'DoNotAcceptDepartmentCalls'
         ///     and 'TakeDepartmentCallsOnly' values are applicable only for extensions
         ///     - members of a Department; if these values are set for department outsiders,
         ///     the 400 Bad Request error code is returned. The 'TakeDepartmentCallsOnly'
         ///     status can be set through the old RingCentral user interface and is available
-        ///     for some migrated accounts only.
-        ///     Enum: TakeAllCalls, DoNotAcceptAnyCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly
+        ///     for some migrated accounts only. Not applicable for User extensions
+        ///     if the new communication handling service is activated on account
+        ///     Enum: TakeAllCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly, DoNotAcceptAnyCalls, Unknown
         /// </summary>
         public string dndStatus { get; set; }
+
+        /// <summary>
+        ///     Do Not Disturb status of a User extension. Applicable for User extensions
+        ///     if the new communication handling service is activated on account
+        ///     Enum: TakeAllCalls, DoNotAcceptAnyCalls, Unknown
+        /// </summary>
+        public string dndStatusPersonal { get; set; }
 
         /// <summary>
         /// </summary>
@@ -80,5 +88,12 @@ namespace RingCentral
         ///     Information on active calls
         /// </summary>
         public ActiveCallInfo[] activeCalls { get; set; }
+
+        /// <summary>
+        ///     Specifies if a Call Queue member extension will be able to receive Call Queue calls.
+        ///     Applicable for User extensions if the new communication handling service is activated on account.
+        ///     Used for Agent state type
+        /// </summary>
+        public bool? acceptCallQueueCalls { get; set; }
     }
 }

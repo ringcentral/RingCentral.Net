@@ -3,7 +3,7 @@ namespace RingCentral
     public class PubNubDeliveryMode
     {
         /// <summary>
-        ///     The transport type for this subscription, or the channel by which an app should be notified of an event
+        ///     The transport type for this subscription
         ///     Required
         ///     Enum: PubNub
         /// </summary>
@@ -25,26 +25,28 @@ namespace RingCentral
         public string address { get; set; }
 
         /// <summary>
+        ///     (Only for a `PubNub` transport)
         ///     PubNub credential required to subscribe to the channel
         ///     Required
         /// </summary>
         public string subscriberKey { get; set; }
 
         /// <summary>
+        ///     (Only for a `PubNub` transport)
         ///     PubNub credential required to subscribe to the channel
         ///     Required
         /// </summary>
         public string secretKey { get; set; }
 
         /// <summary>
-        ///     (Only for a "PubNub" transport, returned only if `encryption` is `true`)
+        ///     (Only for a `PubNub` transport, returned only if `encryption` is `true`)
         ///     Encryption algorithm used
         ///     Enum: AES
         /// </summary>
         public string encryptionAlgorithm { get; set; }
 
         /// <summary>
-        ///     (Only for a "PubNub" transport, returned only if `encryption` is `true`)
+        ///     (Only for a `PubNub` transport, returned only if `encryption` is `true`)
         ///     Cryptographic key to decrypt PubNub notification messages
         /// </summary>
         public string encryptionKey { get; set; }

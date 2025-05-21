@@ -6,7 +6,7 @@ namespace RingCentral
     public class CreateGlipFileNewRequest
     {
         /// <summary>
-        ///     The file (binary or multipart/form-data) to upload
+        ///     File(s) - binary or multipart/form-data - to upload
         ///     Required
         /// </summary>
         public Attachment body { get; set; }

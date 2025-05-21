@@ -11,10 +11,12 @@ namespace RingCentral
         public string name { get; set; }
 
         /// <summary>
-        ///     ExtensionType
+        ///     Type of the extension.
+        ///     For unrecognized types the `Unknown` value is returned
+        ///     Example: User
         ///     Enum: User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup,
         ///     DelegatedLinesGroup, GroupCallPickup, IvrMenu, ApplicationExtension, ProxyAdmin, RoomConnector, ParkLocation,
-        ///     Limited, Bot, Site, Room, FlexibleUser
+        ///     Limited, Bot, Site, Room, FlexibleUser, Unknown
         /// </summary>
         public string extensionType { get; set; }
 

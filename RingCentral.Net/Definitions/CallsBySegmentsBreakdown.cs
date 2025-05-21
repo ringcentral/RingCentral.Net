@@ -67,5 +67,12 @@ namespace RingCentral
         ///     Format: double
         /// </summary>
         public decimal? setup { get; set; }
+
+        /// <summary>
+        ///     Value for Forwarding segment
+        ///     Required
+        ///     Format: double
+        /// </summary>
+        public decimal? forwarding { get; set; }
     }
 }

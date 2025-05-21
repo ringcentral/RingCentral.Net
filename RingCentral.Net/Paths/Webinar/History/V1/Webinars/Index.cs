@@ -29,10 +29,10 @@ namespace RingCentral.Paths.Webinar.History.V1.Webinars
         ///     Rate Limit Group: Heavy
         ///     App Permission: ReadWebinars
         /// </summary>
-        public async Task<WebinarResource> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<HistoryWebinarResource> Get(RestRequestConfig restRequestConfig = null)
         {
             if (webinarId == null) throw new ArgumentException("Parameter cannot be null", nameof(webinarId));
-            return await rc.Get<WebinarResource>(Path(), null, restRequestConfig);
+            return await rc.Get<HistoryWebinarResource>(Path(), null, restRequestConfig);
         }
     }
 }

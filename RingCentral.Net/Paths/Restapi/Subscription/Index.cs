@@ -51,19 +51,12 @@ namespace RingCentral.Paths.Restapi.Subscription
         ///     While the protocol for establishing a subscription may vary depending upon
         ///     the delivery channel for that subscription, the schemas used for representing
         ///     a subscription are the same across all delivery modes.
-        ///     Subscriptions are currently limited to 20 subscriptions per user/extension (for particular application).
+        ///     Subscriptions are currently limited to 30 subscriptions per user/extension (for particular application).
         ///     RingCentral currently supports the following delivery modes for event subscriptions:
         ///     * [WebHook](https://developers.ringcentral.com/guide/notifications/webhooks/quick-start) - to receive event
         ///     notifications as an HTTP POST to a given URL
         ///     * [WebSocket](https://developers.ringcentral.com/guide/notifications/websockets/quick-start) - to receive real-time
         ///     events over a persistent WebSocket connection
-        ///     * [PubNub](https://developers.ringcentral.com/guide/notifications/push-notifications/quick-start) (deprecated) - to
-        ///     receive a push notification sent directly to a client application
-        ///     Developers should be aware that the PubNub delivery mode is currently
-        ///     deprecated and will be removed in 2024. Developers are encouraged to
-        ///     [migrate their client applications to use
-        ///     WebSockets](https://developers.ringcentral.com/guide/notifications/websockets/migration/)
-        ///     instead.
         ///     HTTP Method: post
         ///     Endpoint: /restapi/{apiVersion}/subscription
         ///     Rate Limit Group: Medium

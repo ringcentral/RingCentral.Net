@@ -35,7 +35,8 @@ namespace RingCentral
         public AggregationResponseOptionsTimersCallsSegmentsDuration callsSegmentsDuration { get; set; }
 
         /// <summary>
-        ///     Aggregation of calls duration by result (Completed, Abandoned, Voicemail, Unknown, Missed, Accepted)
+        ///     Aggregation of calls duration by result (Completed, Abandoned, Voicemail, Unknown, Missed, Accepted, Transferred,
+        ///     PickedUp, AnsweredElsewhere)
         /// </summary>
         public AggregationResponseOptionsTimersCallsDurationByResult callsDurationByResult { get; set; }
 
@@ -50,8 +51,13 @@ namespace RingCentral
         public AggregationResponseOptionsTimersCallsDurationByQueueSla callsDurationByQueueSla { get; set; }
 
         /// <summary>
-        ///     Aggregation of calls duration by type (Direct, FromQueue, ParkRetrieval, Transferred, Outbound)
+        ///     Aggregation of calls duration by type (Direct, FromQueue, ParkRetrieval, Transferred, Outbound, QueueCallPickup)
         /// </summary>
         public AggregationResponseOptionsTimersCallsDurationByType callsDurationByType { get; set; }
+
+        /// <summary>
+        ///     Aggregation of calls duration by party that ended the call (Callee, Caller, System)
+        /// </summary>
+        public AggregationResponseOptionsTimersCallsDurationByEndingParty callsDurationByEndingParty { get; set; }
     }
 }

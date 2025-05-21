@@ -23,7 +23,7 @@ namespace RingCentral
         ///     Parameter can be used to overwrite default retention period
         ///     (that is 30 days after disabling the account)
         ///     Format: date-time
-        ///     Example: 2023-03-26T11:30:45.940Z
+        ///     Example: Sun Mar 26 2023 04:30:45 GMT-0700 (Pacific Daylight Time)
         /// </summary>
         public string till { get; set; }
     }

@@ -6,7 +6,7 @@ namespace RingCentral
     public class RcwHistoryListParticipantsParameters
     {
         /// <summary>
-        ///     The role of the invitee/participant.
+        ///     The role of the participant.
         ///     Enum: Panelist, CoHost, Host, Attendee
         /// </summary>
         public string[] role { get; set; }

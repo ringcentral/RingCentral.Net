@@ -9,7 +9,6 @@ namespace RingCentral
         public string uri { get; set; }
 
         /// <summary>
-        ///     Required
         /// </summary>
         public GetCountryInfoNumberParser homeCountry { get; set; }
 

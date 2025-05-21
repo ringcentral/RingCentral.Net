@@ -3,6 +3,11 @@ namespace RingCentral
     public class CompanyAnsweringRuleUpdate
     {
         /// <summary>
+        ///     Identifier of an answering rule
+        /// </summary>
+        public string id { get; set; }
+
+        /// <summary>
         ///     Specifies if a rule is active or inactive. The default value is `true`
         ///     Default: true
         /// </summary>

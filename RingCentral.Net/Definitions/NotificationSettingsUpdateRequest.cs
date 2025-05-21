@@ -3,6 +3,12 @@ namespace RingCentral
     public class NotificationSettingsUpdateRequest
     {
         /// <summary>
+        ///     Canonical URI of notifications settings resource
+        ///     Format: uri
+        /// </summary>
+        public string uri { get; set; }
+
+        /// <summary>
         ///     List of notification recipient email addresses. Should not be empty
         ///     if 'includeManagers' parameter is set to false
         /// </summary>

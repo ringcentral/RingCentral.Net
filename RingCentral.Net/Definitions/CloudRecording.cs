@@ -1,12 +1,12 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Recording information
+    ///     Meeting information
     /// </summary>
     public class CloudRecording
     {
         /// <summary>
-        ///     Call id
+        ///     Meeting id
         ///     Required
         /// </summary>
         public string id { get; set; }
@@ -18,18 +18,16 @@ namespace RingCentral
         public string shortId { get; set; }
 
         /// <summary>
+        ///     Bridge id
+        /// </summary>
+        public string bridgeId { get; set; }
+
+        /// <summary>
         ///     Start time ISO 8601
         ///     Required
         ///     Format: date-time
         /// </summary>
         public string startTime { get; set; }
-
-        /// <summary>
-        ///     Meeting duration in seconds
-        ///     Format: int32
-        ///     Example: 36
-        /// </summary>
-        public long? duration { get; set; }
 
         /// <summary>
         ///     Meeting name
@@ -41,6 +39,13 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public Host hostInfo { get; set; }
+
+        /// <summary>
+        ///     Meeting duration in seconds
+        ///     Format: int32
+        ///     Example: 36
+        /// </summary>
+        public long? duration { get; set; }
 
         /// <summary>
         ///     Link to the recording file. Not used anymore by Web team

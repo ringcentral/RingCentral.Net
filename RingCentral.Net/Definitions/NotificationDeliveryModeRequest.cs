@@ -8,7 +8,7 @@ namespace RingCentral
         /// <summary>
         ///     The transport type for this subscription, or the channel by which an app should be notified of an event
         ///     Required
-        ///     Enum: WebHook, RC/APNS, RC/GCM, PubNub
+        ///     Enum: WebHook
         /// </summary>
         public string transportType { get; set; }
 
@@ -26,25 +26,5 @@ namespace RingCentral
         ///     `WebHook` transport type.
         /// </summary>
         public string verificationToken { get; set; }
-
-        /// <summary>
-        ///     Certificate name for mobile notification transports
-        ///     Required
-        /// </summary>
-        public string certificateName { get; set; }
-
-        /// <summary>
-        ///     Device instance ID for mobile notification transports
-        ///     Required
-        ///     Example: 38b062ae-85f8-4dcc-8734-04d3f7393d42
-        /// </summary>
-        public string registrationId { get; set; }
-
-        /// <summary>
-        ///     Optional. Specifies if notification messages will be encrypted
-        ///     or not. Please note that for some event filters (e.g. presence) encryption is mandatory and
-        ///     `false` value provided by caller will be ignored.
-        /// </summary>
-        public bool? encryption { get; set; }
     }
 }

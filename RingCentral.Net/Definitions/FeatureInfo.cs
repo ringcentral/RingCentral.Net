@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Internal identifier of a feature
+        ///     Required
         /// </summary>
         public string id { get; set; }
 
@@ -13,6 +14,7 @@ namespace RingCentral
         ///     permissions of the extension. If the authorized user gets features of
         ///     the other extension, only features that can be delegated are returned
         ///     (such as configuration by administrators).
+        ///     Required
         /// </summary>
         public bool? available { get; set; }
 

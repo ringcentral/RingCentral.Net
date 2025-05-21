@@ -15,7 +15,7 @@ namespace RingCentral
         /// <summary>
         ///     Billing package version
         ///     Required
-        ///     Enum: 1
+        ///     Example: 1
         /// </summary>
         public string version { get; set; }
     }

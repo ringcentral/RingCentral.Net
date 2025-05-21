@@ -15,5 +15,12 @@ namespace RingCentral
         ///     Next page offset token
         /// </summary>
         public string nextPageToken { get; set; }
+
+        /// <summary>
+        ///     Number of records returned
+        ///     Required
+        ///     Format: int32
+        /// </summary>
+        public long? perPage { get; set; }
     }
 }

@@ -21,7 +21,7 @@ namespace RingCentral
         public string edition { get; set; }
 
         /// <summary>
-        ///     Enum: Freyja, Phoenix
+        ///     Enum: Freyja, Phoenix, PbxBasic
         /// </summary>
         public string freemiumProductType { get; set; }
     }

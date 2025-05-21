@@ -38,7 +38,8 @@ namespace RingCentral
         public string zip { get; set; }
 
         /// <summary>
-        ///     ISO-3166-1 2-letter country code (alpha2)
+        ///     ISO-3166-1 2-letter country code (alpha2).
+        ///     For available countries, see GET /dictionary/country
         ///     Required
         ///     Example: US
         /// </summary>

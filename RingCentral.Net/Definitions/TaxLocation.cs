@@ -34,7 +34,7 @@ namespace RingCentral
         /// <summary>
         ///     Effective date in the ISO 8601 (`YYYY-MM-DDThh:mm:ssTZD`) format, including date, time, and timezone
         ///     Format: date-time
-        ///     Example: 2022-06-05T10:11:12Z
+        ///     Example: Sun Jun 05 2022 03:11:12 GMT-0700 (Pacific Daylight Time)
         /// </summary>
         public string effectiveDate { get; set; }
 

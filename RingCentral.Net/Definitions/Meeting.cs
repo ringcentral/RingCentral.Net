@@ -6,22 +6,22 @@ namespace RingCentral
     public class Meeting
     {
         /// <summary>
-        ///     Call id
+        ///     Meeting id
         ///     Required
         /// </summary>
         public string id { get; set; }
-
-        /// <summary>
-        ///     Bridge id
-        ///     Required
-        /// </summary>
-        public string bridgeId { get; set; }
 
         /// <summary>
         ///     Short bridge id
         ///     Required
         /// </summary>
         public string shortId { get; set; }
+
+        /// <summary>
+        ///     Bridge id
+        ///     Required
+        /// </summary>
+        public string bridgeId { get; set; }
 
         /// <summary>
         ///     Start time ISO 8601
@@ -31,17 +31,22 @@ namespace RingCentral
         public string startTime { get; set; }
 
         /// <summary>
-        ///     Duration second
+        ///     Meeting name
+        ///     Required
+        /// </summary>
+        public string displayName { get; set; }
+
+        /// <summary>
+        ///     Required
+        /// </summary>
+        public Host hostInfo { get; set; }
+
+        /// <summary>
+        ///     Meeting duration in seconds
         ///     Format: int32
         ///     Example: 36
         /// </summary>
         public long? duration { get; set; }
-
-        /// <summary>
-        ///     Meetings name
-        ///     Required
-        /// </summary>
-        public string displayName { get; set; }
 
         /// <summary>
         ///     Meeting type
@@ -56,11 +61,6 @@ namespace RingCentral
         ///     Enum: InProgress, Done
         /// </summary>
         public string status { get; set; }
-
-        /// <summary>
-        ///     Required
-        /// </summary>
-        public Host hostInfo { get; set; }
 
         /// <summary>
         ///     Describe access rights which has participants to meeting

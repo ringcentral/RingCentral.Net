@@ -6,7 +6,8 @@ namespace RingCentral
     public class CreateGlipFileNewParameters
     {
         /// <summary>
-        ///     Internal identifier of a group to which the post with attachment will be added to
+        ///     Internal identifier of a group to which the post with attachment
+        ///     will be added to
         ///     Format: int64
         /// </summary>
         public long? groupId { get; set; }

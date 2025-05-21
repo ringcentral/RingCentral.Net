@@ -19,17 +19,17 @@ namespace RingCentral.Paths.TeamMessaging.V1.Files
         }
 
         /// <summary>
-        ///     Posts a file.
+        ///     Posts a file or multiple files.
         ///     HTTP Method: post
         ///     Endpoint: /team-messaging/v1/files
         ///     Rate Limit Group: Heavy
         ///     App Permission: TeamMessaging
         /// </summary>
-        public async Task<TMAddFileRequest> Post(CreateGlipFileNewRequest createGlipFileNewRequest,
+        public async Task<TMAddFile[]> Post(CreateGlipFileNewRequest createGlipFileNewRequest,
             CreateGlipFileNewParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
             var multipartFormDataContent = Utils.GetMultipartFormDataContent(createGlipFileNewRequest);
-            return await rc.Post<TMAddFileRequest>(Path(), multipartFormDataContent, queryParams, restRequestConfig);
+            return await rc.Post<TMAddFile[]>(Path(), multipartFormDataContent, queryParams, restRequestConfig);
         }
     }
 }

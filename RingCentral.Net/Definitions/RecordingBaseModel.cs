@@ -32,7 +32,7 @@ namespace RingCentral
         /// <summary>
         ///     Time after which recording shared link cannot be accessed by recipients.
         ///     Format: date-time
-        ///     Example: 2023-10-01T10:05:00.000Z
+        ///     Example: Sun Oct 01 2023 03:05:00 GMT-0700 (Pacific Daylight Time)
         /// </summary>
         public string sharedUriExpirationTime { get; set; }
     }

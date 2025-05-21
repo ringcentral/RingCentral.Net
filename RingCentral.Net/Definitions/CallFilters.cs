@@ -40,7 +40,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Filtering of calls by the nature of call result (joined via OR)
-        ///     Enum: Completed, Abandoned, Voicemail, Unknown, Missed, Accepted
+        ///     Enum: Completed, Abandoned, Voicemail, Unknown, Missed, Accepted, Transferred, PickedUp, Forwarded,
+        ///     AnsweredElsewhere
         /// </summary>
         public string[] callResults { get; set; }
 
@@ -78,8 +79,14 @@ namespace RingCentral
         /// <summary>
         ///     Filtering of calls based on how the call started from the callee perspective (joined via OR). If the call is
         ///     outbound relative to the grouping scope, CallType is Outbound
-        ///     Enum: Direct, FromQueue, ParkRetrieval, Transferred, Outbound, Overflow
+        ///     Enum: Direct, FromQueue, ParkRetrieval, Transferred, Outbound, Overflow, QueueCallPickup
         /// </summary>
         public string[] callTypes { get; set; }
+
+        /// <summary>
+        ///     Filtering of calls based on the party that ended that call (joined via OR)
+        ///     Enum: Caller, Callee, System
+        /// </summary>
+        public string[] endingParties { get; set; }
     }
 }

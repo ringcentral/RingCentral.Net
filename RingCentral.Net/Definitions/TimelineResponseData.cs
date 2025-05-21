@@ -8,7 +8,7 @@ namespace RingCentral
         /// <summary>
         ///     The selected grouping option
         ///     Required
-        ///     Enum: Company, CompanyNumbers, Users, Queues, IVRs, SharedLines, UserGroups, Sites, Departments
+        ///     Enum: Company, CompanyNumbers, Users, Queues, IVRs, IVAs, SharedLines, UserGroups, Sites, Departments
         /// </summary>
         public string groupedBy { get; set; }
 

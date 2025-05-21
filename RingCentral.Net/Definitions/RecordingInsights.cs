@@ -19,7 +19,7 @@ namespace RingCentral
         ///     Source rc application of the recording
         ///     Required
         ///     Example: pbx
-        ///     Enum: pbx
+        ///     Enum: pbx, rcv, rcx, connect-and-sell, nice-incontact, ms-teams
         /// </summary>
         public string domain { get; set; }
 

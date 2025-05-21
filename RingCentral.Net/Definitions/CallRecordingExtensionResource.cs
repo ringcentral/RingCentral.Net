@@ -21,9 +21,15 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Direction of call
+        ///     Direction of a call
         ///     Enum: Outbound, Inbound, All
         /// </summary>
         public string callDirection { get; set; }
+
+        /// <summary>
+        ///     Alternate call recording setting. Status of the smart ACR for outbound call recordings.
+        ///     Supported for "Outbound" and "All" call directions.
+        /// </summary>
+        public bool? alternateOutboundCallRecordingMode { get; set; }
     }
 }

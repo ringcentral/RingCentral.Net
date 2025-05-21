@@ -113,7 +113,9 @@ namespace RingCentral
 
         /// <summary>
         ///     Session runtime status (for 'Active' Sessions only).
-        ///     It is omitted (or null) if the status is not Active
+        ///     Please note that 'Idle' status shouldn't be returned in the API
+        ///     (but can be delivered in an event)
+        ///     Example: Live
         ///     Enum: Idle, Practice, GoingLive, Live, Break, Debrief
         /// </summary>
         public string runtimeStatus { get; set; }

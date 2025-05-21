@@ -30,7 +30,7 @@ namespace RingCentral
         /// <summary>
         ///     The timestamp of account creation
         ///     Format: date-time
-        ///     Example: 2023-03-10T18:07:52.534Z
+        ///     Example: Fri Mar 10 2023 10:07:52 GMT-0800 (Pacific Standard Time)
         /// </summary>
         public string creationTime { get; set; }
     }

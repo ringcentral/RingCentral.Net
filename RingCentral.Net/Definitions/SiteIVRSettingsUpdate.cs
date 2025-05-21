@@ -8,6 +8,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public SiteIvrActionsUpdate[] actions { get; set; }
+        public SiteIvrActions[] actions { get; set; }
     }
 }

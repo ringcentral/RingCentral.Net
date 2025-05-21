@@ -21,6 +21,12 @@ namespace RingCentral
         public long? perPage { get; set; }
 
         /// <summary>
+        ///     Extension status
+        ///     Enum: Enabled, Disabled, Frozen, NotActivated, Unassigned
+        /// </summary>
+        public string extensionStatus { get; set; }
+
+        /// <summary>
         ///     Usage type of a phone number
         ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber,
         ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool, NumberStorage,
@@ -29,12 +35,11 @@ namespace RingCentral
         public string[] usageType { get; set; }
 
         /// <summary>
-        ///     Payment type. 'External' is returned for forwarded numbers
-        ///     which are not terminated in the RingCentral phone system
+        ///     Payment type of a phone number. Multiple values are supported
         ///     Enum: External, TollFree, Local, BusinessMobileNumberProvider, ExternalNumberProvider,
         ///     ExternalNumberProviderTollFree
         /// </summary>
-        public string paymentType { get; set; }
+        public string[] paymentType { get; set; }
 
         /// <summary>
         ///     Status of a phone number. If the value is `Normal`, the phone

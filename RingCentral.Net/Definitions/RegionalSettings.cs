@@ -8,11 +8,11 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public CountryInfoShortModel homeCountry { get; set; }
+        public CountryInfoShortModelV2 homeCountry { get; set; }
 
         /// <summary>
         /// </summary>
-        public TimezoneInfo timezone { get; set; }
+        public TimezoneInfoBase timezone { get; set; }
 
         /// <summary>
         /// </summary>

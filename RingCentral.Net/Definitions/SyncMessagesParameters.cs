@@ -90,7 +90,7 @@ namespace RingCentral
         ///     feature is enabled.
         ///     Enum: User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup,
         ///     DelegatedLinesGroup, GroupCallPickup, IvrMenu, ApplicationExtension, ProxyAdmin, RoomConnector, ParkLocation,
-        ///     Limited, Bot, Site, Room, FlexibleUser
+        ///     Limited, Bot, Site, Room, FlexibleUser, Unknown
         /// </summary>
         public string[] ownerExtensionType { get; set; }
     }

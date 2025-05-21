@@ -8,7 +8,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Internal identifier of a message this message replies to
-        ///     Format: int32
+        ///     Format: int64
         /// </summary>
         public long? replyOn { get; set; }
 

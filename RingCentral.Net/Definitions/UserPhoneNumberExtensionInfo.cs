@@ -38,8 +38,8 @@ namespace RingCentral
         /// <summary>
         ///     Extension type. Please note that legacy 'Department' extension type
         ///     corresponds to 'Call Queue' extensions in modern RingCentral product terminology
-        ///     Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly,
-        ///     IvrMenu, ApplicationExtension, ParkLocation, Site
+        ///     Enum: Announcement, ApplicationExtension, DigitalUser, DelegatedLinesGroup, Department, FaxUser, IvrMenu,
+        ///     PagingOnly, ParkLocation, SharedLinesGroup, Site, User, VirtualUser, Voicemail
         /// </summary>
         public string type { get; set; }
 

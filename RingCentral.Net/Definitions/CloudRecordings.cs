@@ -14,6 +14,6 @@ namespace RingCentral
         /// <summary>
         ///     Required
         /// </summary>
-        public Paging paging { get; set; }
+        public BasicPaging paging { get; set; }
     }
 }

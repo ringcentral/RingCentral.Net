@@ -19,8 +19,8 @@ namespace RingCentral.Paths.Rcvideo.V2.Account.Extension.Bridges.Default
         }
 
         /// <summary>
-        ///     Returns a default bridge (PMI) for the user specified by **accountId**
-        ///     and **extensionId** identifiers.
+        ///     Returns a default bridge (PMI) for the user specified by `accountId`
+        ///     and `extensionId` identifiers.
         ///     HTTP Method: get
         ///     Endpoint: /rcvideo/v2/account/{accountId}/extension/{extensionId}/bridges/default
         ///     Rate Limit Group: Medium

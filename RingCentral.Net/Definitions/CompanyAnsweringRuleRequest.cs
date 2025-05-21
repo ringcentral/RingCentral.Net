@@ -15,7 +15,8 @@ namespace RingCentral
         public bool? enabled { get; set; }
 
         /// <summary>
-        ///     Type of an answering rule, the default value is 'Custom' = ['BusinessHours', 'AfterHours', 'Custom']
+        ///     Type of an answering rule
+        ///     Default: Custom
         ///     Enum: BusinessHours, AfterHours, Custom
         /// </summary>
         public string type { get; set; }

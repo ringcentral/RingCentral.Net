@@ -112,18 +112,18 @@ namespace RingCentral
         public ExtensionStatusInfo statusInfo { get; set; }
 
         /// <summary>
-        ///     Extension type. Please note that legacy 'Department' extension type
-        ///     corresponds to 'Call Queue' extensions in modern RingCentral product
-        ///     terminology
-        ///     Enum: User, FaxUser, FlexibleUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup,
-        ///     PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Bot, Room, RoomConnector, Limited, Site, ProxyAdmin,
-        ///     DelegatedLinesGroup, GroupCallPickup
+        ///     Type of the extension.
+        ///     For unrecognized types the `Unknown` value is returned
+        ///     Example: User
+        ///     Enum: User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup,
+        ///     DelegatedLinesGroup, GroupCallPickup, IvrMenu, ApplicationExtension, ProxyAdmin, RoomConnector, ParkLocation,
+        ///     Limited, Bot, Site, Room, FlexibleUser, Unknown
         /// </summary>
         public string type { get; set; }
 
         /// <summary>
-        ///     Extension subtype, if applicable. For any unsupported subtypes the
-        ///     `Unknown` value will be returned
+        ///     Extension subtype, if applicable.
+        ///     For unrecognized subtypes the `Unknown` value is returned
         ///     Enum: VideoPro, VideoProPlus, DigitalSignage, Unknown, Emergency
         /// </summary>
         public string subType { get; set; }
@@ -149,7 +149,7 @@ namespace RingCentral
         /// <summary>
         ///     Extension creation date/time, in ISO 8601 format
         ///     Format: date-time
-        ///     Example: 2024-06-06T07:01:14.123Z
+        ///     Example: Thu Jun 06 2024 00:01:14 GMT-0700 (Pacific Daylight Time)
         /// </summary>
         public string creationTime { get; set; }
 

@@ -10,5 +10,12 @@ namespace RingCentral
         ///     with all the attachments
         /// </summary>
         public bool? purge { get; set; }
+
+        /// <summary>
+        ///     Type of messages to be deleted
+        ///     Default: All
+        ///     Enum: Fax, SMS, VoiceMail, Pager, Text, All
+        /// </summary>
+        public string type { get; set; }
     }
 }

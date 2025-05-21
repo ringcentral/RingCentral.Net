@@ -34,7 +34,8 @@ namespace RingCentral
         public AggregationResponseOptionsCountersCallsSegments callsSegments { get; set; }
 
         /// <summary>
-        ///     Aggregation of calls count by result (Completed, Abandoned, Voicemail, Unknown, Missed, Accepted)
+        ///     Aggregation of calls count by result (Completed, Abandoned, Voicemail, Unknown, Missed, Accepted, Transferred,
+        ///     PickedUp, AnsweredElsewhere)
         /// </summary>
         public AggregationResponseOptionsCountersCallsByResult callsByResult { get; set; }
 
@@ -54,9 +55,14 @@ namespace RingCentral
         public AggregationResponseOptionsCountersCallsByActions callsByActions { get; set; }
 
         /// <summary>
-        ///     Aggregation of calls count by type (Direct, FromQueue, ParkRetrieval, Transferred, Outbound)
+        ///     Aggregation of calls count by type (Direct, FromQueue, ParkRetrieval, Transferred, Outbound, QueueCallPickup)
         /// </summary>
         public AggregationResponseOptionsCountersCallsByType callsByType { get; set; }
+
+        /// <summary>
+        ///     Aggregation of calls count by party that ended the call (Caller, Callee, System)
+        /// </summary>
+        public AggregationResponseOptionsCountersCallsByEndingParty callsByEndingParty { get; set; }
 
         /// <summary>
         ///     Aggregation of calls count by the total number of times a Queue call was presented to the user. It is limited to

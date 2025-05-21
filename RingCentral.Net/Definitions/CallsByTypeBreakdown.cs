@@ -46,5 +46,12 @@ namespace RingCentral
         ///     Format: double
         /// </summary>
         public decimal? overflow { get; set; }
+
+        /// <summary>
+        ///     Value for QueueCallPickup type
+        ///     Required
+        ///     Format: double
+        /// </summary>
+        public decimal? queueCallPickup { get; set; }
     }
 }

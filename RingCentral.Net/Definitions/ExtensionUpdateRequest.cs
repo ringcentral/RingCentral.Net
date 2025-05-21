@@ -74,9 +74,9 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Extension subtype, if applicable. For any unsupported subtypes
-        ///     the 'Unknown' value will be returned
-        ///     Enum: VideoPro, VideoProPlus, DigitalSignageOnlyRooms, Unknown, Emergency
+        ///     Extension subtype, if applicable.
+        ///     For unrecognized subtypes the `Unknown` value is returned
+        ///     Enum: VideoPro, VideoProPlus, DigitalSignage, Unknown, Emergency
         /// </summary>
         public string subType { get; set; }
 

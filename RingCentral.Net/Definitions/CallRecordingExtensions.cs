@@ -10,7 +10,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public CallRecordingExtensionInfo[] records { get; set; }
+        public CallRecordingExtensionResource[] records { get; set; }
 
         /// <summary>
         /// </summary>

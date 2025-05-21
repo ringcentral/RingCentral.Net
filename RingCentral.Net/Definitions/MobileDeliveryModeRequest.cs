@@ -3,7 +3,7 @@ namespace RingCentral
     public class MobileDeliveryModeRequest
     {
         /// <summary>
-        ///     The transport type for this subscription, or the channel by which an app should be notified of an event
+        ///     The transport type for this subscription
         ///     Required
         ///     Enum: RC/APNS, RC/GCM
         /// </summary>

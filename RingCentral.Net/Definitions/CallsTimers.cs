@@ -31,6 +31,10 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
+        public CallsByEndingParty callsByEndingParty { get; set; }
+
+        /// <summary>
+        /// </summary>
         public CallsByCompanyHours callsByCompanyHours { get; set; }
 
         /// <summary>

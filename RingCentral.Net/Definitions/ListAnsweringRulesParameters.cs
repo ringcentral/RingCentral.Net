@@ -6,10 +6,10 @@ namespace RingCentral
     public class ListAnsweringRulesParameters
     {
         /// <summary>
-        ///     Filters custom call handling rules of the extension
-        ///     Enum: Custom
+        ///     Type of an answering rule. Multiple values are supported
+        ///     Enum: BusinessHours, AfterHours, Custom
         /// </summary>
-        public string type { get; set; }
+        public string[] type { get; set; }
 
         /// <summary>
         ///     Default: Simple

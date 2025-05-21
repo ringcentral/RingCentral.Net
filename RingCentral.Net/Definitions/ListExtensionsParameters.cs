@@ -12,9 +12,9 @@ namespace RingCentral
 
         /// <summary>
         ///     Extension email address. Multiple values are accepted
-        ///     Example: alice.smith@example.com&email=bob.johnson@example.com
+        ///     Example: alice.smith@example.com,bob.johnson@example.com
         /// </summary>
-        public string email { get; set; }
+        public string[] email { get; set; }
 
         /// <summary>
         ///     Indicates a page number to retrieve. Only positive number values
@@ -40,11 +40,12 @@ namespace RingCentral
         public string[] status { get; set; }
 
         /// <summary>
-        ///     Extension type. Multiple values are supported. Please note
+        ///     Extension type. Please note
         ///     that legacy 'Department' extension type corresponds to 'Call Queue'
         ///     extensions in modern RingCentral product terminology
-        ///     Enum: User, FaxUser, FlexibleUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup,
-        ///     PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, Limited, Bot, ProxyAdmin, DelegatedLinesGroup, Site
+        ///     Enum: User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup,
+        ///     DelegatedLinesGroup, GroupCallPickup, IvrMenu, ApplicationExtension, ProxyAdmin, RoomConnector, ParkLocation,
+        ///     Limited, Bot, Site, Room, FlexibleUser, Unknown
         /// </summary>
         public string[] type { get; set; }
     }

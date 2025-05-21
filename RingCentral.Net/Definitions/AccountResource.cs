@@ -20,6 +20,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public PhoneNumberResource mainNumber { get; set; }
+        public AdgPhoneNumberResource mainNumber { get; set; }
     }
 }

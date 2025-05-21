@@ -37,6 +37,11 @@ namespace RingCentral
         public bool? callsDurationByResult { get; set; }
 
         /// <summary>
+        ///     Include breakdown of calls duration by party that ended the call (Caller, Callee, System)
+        /// </summary>
+        public bool? callsDurationByEndingParty { get; set; }
+
+        /// <summary>
         ///     Include breakdown of calls duration by company hours (BusinessHours, AfterHours)
         /// </summary>
         public bool? callsDurationByCompanyHours { get; set; }

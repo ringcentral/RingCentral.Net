@@ -33,18 +33,20 @@ namespace RingCentral
         public string userStatus { get; set; }
 
         /// <summary>
-        ///     Extended DnD (Do not Disturb) status
-        ///     Enum: TakeAllCalls, DoNotAcceptAnyCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly
+        ///     Do Not Disturb status. Not applicable for User extensions
+        ///     if the new communication handling service is activated on account
+        ///     Enum: TakeAllCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly, DoNotAcceptAnyCalls, Unknown
         /// </summary>
         public string dndStatus { get; set; }
 
         /// <summary>
-        ///     If `true` enables other extensions to see the extension presence status
+        ///     If set to `true` enables other extensions to see the extension presence status
         /// </summary>
         public bool? allowSeeMyPresence { get; set; }
 
         /// <summary>
-        ///     If `true` enables to ring extension phone, if any user monitored by this extension is ringing
+        ///     If `true` enables to ring extension phone, if any user monitored
+        ///     by this extension is ringing
         /// </summary>
         public bool? ringOnMonitoredCall { get; set; }
 

@@ -3,6 +3,12 @@ namespace RingCentral
     public class AccountPhoneNumberInfo
     {
         /// <summary>
+        ///     Phone number activation status. Determine whether phone number migration is completed on the partner side.
+        ///     Enum: Active, Inactive
+        /// </summary>
+        public string activationStatus { get; set; }
+
+        /// <summary>
         ///     Internal unique identifier of a phone number
         ///     Required
         ///     Example: 1162820004

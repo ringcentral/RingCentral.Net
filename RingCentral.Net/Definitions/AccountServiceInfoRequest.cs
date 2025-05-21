@@ -30,7 +30,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public TargetServicePlanInfo targetServicePlan { get; set; }
+        public ServicePlanInfo targetServicePlan { get; set; }
 
         /// <summary>
         /// </summary>

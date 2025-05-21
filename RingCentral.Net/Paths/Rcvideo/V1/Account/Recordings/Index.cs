@@ -19,8 +19,7 @@ namespace RingCentral.Paths.Rcvideo.V1.Account.Recordings
         }
 
         /// <summary>
-        ///     Returns all account recordings.
-        ///     This endpoint is used in Admin recording service, not regular web
+        ///     Returns the list of meeting recordings owned by all users of the account.
         ///     HTTP Method: get
         ///     Endpoint: /rcvideo/v1/account/{accountId}/recordings
         ///     Rate Limit Group: Light

@@ -19,8 +19,9 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.Extensions
         }
 
         /// <summary>
-        ///     Deletes user extension(s) and either keeps or destroys the assets - numbers and devices.
-        ///     Multiple extensions can be deleted with a single API call.
+        ///     Deletes extension(s) of User and Limited types, and depending on device type either keeps or destroys
+        ///     the assets - numbers and devices. If a device is rented or bought in RC, it will be moved to the inventory.
+        ///     A BYOD (Other Phone) device will be deleted. Multiple extensions can be deleted by a single API call.
         ///     HTTP Method: delete
         ///     Endpoint: /restapi/v2/accounts/{accountId}/extensions
         ///     Rate Limit Group: Heavy

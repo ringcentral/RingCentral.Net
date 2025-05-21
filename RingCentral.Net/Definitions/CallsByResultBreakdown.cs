@@ -46,5 +46,33 @@ namespace RingCentral
         ///     Format: double
         /// </summary>
         public decimal? unknown { get; set; }
+
+        /// <summary>
+        ///     Value for Transferred result
+        ///     Required
+        ///     Format: double
+        /// </summary>
+        public decimal? transferred { get; set; }
+
+        /// <summary>
+        ///     Value for PickedUp result
+        ///     Required
+        ///     Format: double
+        /// </summary>
+        public decimal? pickedUp { get; set; }
+
+        /// <summary>
+        ///     Value for AnsweredElsewhere result
+        ///     Required
+        ///     Format: double
+        /// </summary>
+        public decimal? answeredElsewhere { get; set; }
+
+        /// <summary>
+        ///     Value for Forwarded result
+        ///     Required
+        ///     Format: double
+        /// </summary>
+        public decimal? forwarded { get; set; }
     }
 }

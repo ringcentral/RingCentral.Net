@@ -70,7 +70,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public PhoneNumberResource[] phoneNumbers { get; set; }
+        public AdgPhoneNumberResource[] phoneNumbers { get; set; }
 
         /// <summary>
         /// </summary>

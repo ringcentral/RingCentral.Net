@@ -25,10 +25,10 @@ namespace RingCentral.Paths.Ai.Ringsense.V1.Public.Accounts.Domains.Sessions.Ins
         ///     Rate Limit Group: Light
         ///     App Permission: RingSense
         /// </summary>
-        public async Task<GetSessionInsightsResponse> Get(GetSessionInsightsParameters queryParams = null,
+        public async Task<SessionsInsightsResource> Get(GetSessionInsightsParameters queryParams = null,
             RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Get<GetSessionInsightsResponse>(Path(), queryParams, restRequestConfig);
+            return await rc.Get<SessionsInsightsResource>(Path(), queryParams, restRequestConfig);
         }
     }
 }

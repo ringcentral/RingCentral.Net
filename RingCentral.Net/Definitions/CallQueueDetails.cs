@@ -31,7 +31,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Indicates whether it is an emergency call queue extension or not
-        ///     Enum: Emergency
+        ///     Enum: Emergency, Unknown
         /// </summary>
         public string subType { get; set; }
 

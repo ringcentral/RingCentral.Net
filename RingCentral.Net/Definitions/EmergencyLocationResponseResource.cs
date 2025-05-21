@@ -21,7 +21,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public ShortSiteInfo site { get; set; }
+        public SiteBasicInfo site { get; set; }
 
         /// <summary>
         ///     Emergency address status
