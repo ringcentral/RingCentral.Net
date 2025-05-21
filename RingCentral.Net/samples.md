@@ -2054,7 +2054,7 @@ await rc.Revoke();
 
 - `createGlipFileNewRequest` is of type [CreateGlipFileNewRequest](./Definitions/CreateGlipFileNewRequest.cs)
 - `createGlipFileNewParameters` is of type [CreateGlipFileNewParameters](./Definitions/CreateGlipFileNewParameters.cs)
-- `result` is of type [TMAddFile[]](./Definitions/TMAddFile[].cs)
+- `result` is of type [TMAddFile][](./Definitions/TMAddFile.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Posts-createGlipFileNew) in API Explorer.
 
