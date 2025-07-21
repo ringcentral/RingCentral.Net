@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading;
 
 namespace RingCentral
@@ -11,5 +12,7 @@ namespace RingCentral
 
         // for Retry extension
         public int retriesAttempted = 0;
+
+        public Dictionary<string, string> customHeaders = new Dictionary<string, string>();
     }
 }
