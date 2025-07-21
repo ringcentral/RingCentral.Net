@@ -29,7 +29,7 @@ public class BatchApiTest
         {
             var messageIds = string.Join(",", messages.records.Select(r => r.id.ToString()));
             var endpoint = rc.Restapi().Account().Extension().MessageStore(messageIds).Path();
-            var restRequestConfig = RestRequestConfig.DefaultInstance;
+            var restRequestConfig = new RestRequestConfig();
             restRequestConfig.customHeaders.Add("Accept", "application/vnd.ringcentral.multipart+json");
             var result = await rc.Get<string>(endpoint, null, restRequestConfig);
             Assert.NotNull(result);
