@@ -21,7 +21,6 @@ namespace RingCentral
         public CommDeviceResource device { get; set; }
 
         /// <summary>
-        ///     Required
         /// </summary>
         public CommReferencedExtensionResource extension { get; set; }
     }

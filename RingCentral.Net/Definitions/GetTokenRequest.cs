@@ -1,8 +1,8 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     Token endpoint request parameters used in the "Refresh Token" flow
-    ///     with the `refresh_token` grant type
+    ///     Token endpoint request parameters used in the "Guest" authorization flow
+    ///     with the `guest` grant type
     /// </summary>
     public class GetTokenRequest
     {
@@ -64,12 +64,14 @@ namespace RingCentral
         /// <summary>
         ///     Grant type
         ///     Required
-        ///     Enum: authorization_code, urn:ietf:params:oauth:grant-type:jwt-bearer, partner_jwt, refresh_token
+        ///     Enum: authorization_code, urn:ietf:params:oauth:grant-type:jwt-bearer, partner_jwt, refresh_token, password,
+        ///     ivr_pin, urn:ietf:params:oauth:grant-type:device_code, client_credentials, otp, guest
         /// </summary>
         public string grant_type { get; set; }
 
         /// <summary>
-        ///     For `authorization_code` grant type only. User's authorization code
+        ///     For `otp` grant type only.
+        ///     One-time password code
         ///     Required
         /// </summary>
         public string code { get; set; }
@@ -102,5 +104,75 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string refresh_token { get; set; }
+
+        /// <summary>
+        ///     For `password` grant type only. User login name: email or phone number in E.164 format
+        ///     Required
+        /// </summary>
+        public string username { get; set; }
+
+        /// <summary>
+        ///     For `password` grant type only. User's password
+        ///     Required
+        ///     Format: password
+        /// </summary>
+        public string password { get; set; }
+
+        /// <summary>
+        ///     For `password` grant type only. Optional. Extension short number. If a company number
+        ///     is specified as a username, and extension is not specified, the
+        ///     server will attempt to authenticate client as main company administrator
+        ///     DEPRECATED: use extension number embedded into username string like `+16501234567*101`
+        /// </summary>
+        public string extension { get; set; }
+
+        /// <summary>
+        ///     IVR pin for pin-based authentication.
+        ///     DEPRECATED: use a dedicated `ivr_pin` grant type instead
+        /// </summary>
+        public string pin { get; set; }
+
+        /// <summary>
+        ///     For `ivr_pin` grant type only. User's IVR pin.
+        ///     Required
+        /// </summary>
+        public string ivr_pin { get; set; }
+
+        /// <summary>
+        ///     For `urn:ietf:params:oauth:grant-type:device_code` grant type only.
+        ///     The device verification code as defined by [RFC-8628](https://datatracker.ietf.org/doc/html/rfc8628#section-3.4)
+        ///     Required
+        /// </summary>
+        public string device_code { get; set; }
+
+        /// <summary>
+        ///     RingCentral Brand identifier.
+        ///     Required
+        /// </summary>
+        public string brand_id { get; set; }
+
+        /// <summary>
+        ///     RingCentral internal account ID
+        ///     Required
+        /// </summary>
+        public string account_id { get; set; }
+
+        /// <summary>
+        ///     The ID of the account on RingCentral partner's side
+        ///     Required
+        /// </summary>
+        public string partner_account_id { get; set; }
+
+        /// <summary>
+        ///     Resource type for the guest access.
+        ///     Required
+        /// </summary>
+        public string resource_type { get; set; }
+
+        /// <summary>
+        ///     Resource URL for the guest access.
+        ///     Required
+        /// </summary>
+        public string resource { get; set; }
     }
 }

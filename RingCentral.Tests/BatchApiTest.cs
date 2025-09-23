@@ -22,7 +22,7 @@ public class BatchApiTest
 
         var messages = await rc.Restapi().Account().Extension().MessageStore().List(new ListMessagesParameters
         {
-            perPage = 2, dateFrom = "2016-03-10T18:07:52.534Z",
+            perPage = 2, dateFrom = "2016-03-10T18:07:52.534Z"
         });
 
         if (messages.records.Length == 2)
@@ -33,7 +33,7 @@ public class BatchApiTest
             restRequestConfig.customHeaders.Add("Accept", "application/vnd.ringcentral.multipart+json");
             var result = await rc.Get<string>(endpoint, null, restRequestConfig);
             Assert.NotNull(result);
-            
+
             // parsing
             var parsed = JsonConvert.DeserializeObject<MessageStoreBatchResponse[]>(result);
             Assert.NotNull(parsed);

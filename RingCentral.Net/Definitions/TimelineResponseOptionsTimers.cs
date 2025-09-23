@@ -55,5 +55,10 @@ namespace RingCentral
         ///     Include breakdown of calls duration by type (Direct, FromQueue, ParkRetrieval, Transferred, Outbound)
         /// </summary>
         public bool? callsDurationByType { get; set; }
+
+        /// <summary>
+        ///     Include breakdown of calls duration by queue hours (BusinessHours, AfterHours)
+        /// </summary>
+        public bool? callsDurationByQueueHours { get; set; }
     }
 }

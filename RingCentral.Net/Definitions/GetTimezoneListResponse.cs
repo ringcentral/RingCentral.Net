@@ -12,7 +12,7 @@ namespace RingCentral
         ///     List of timezones
         ///     Required
         /// </summary>
-        public GetTimezoneInfoResponse[] records { get; set; }
+        public TimezoneInfoBase[] records { get; set; }
 
         /// <summary>
         ///     Required

@@ -72,5 +72,10 @@ namespace RingCentral
         ///     External)
         /// </summary>
         public AggregationResponseOptionsCountersQueueOpportunities queueOpportunities { get; set; }
+
+        /// <summary>
+        ///     Aggregation of calls count by queue hours (BusinessHours, AfterHours)
+        /// </summary>
+        public AggregationResponseOptionsCountersCallsByQueueHours callsByQueueHours { get; set; }
     }
 }

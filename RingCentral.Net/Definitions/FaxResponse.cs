@@ -54,16 +54,14 @@ namespace RingCentral
         public MessageAttachmentInfoIntId[] attachments { get; set; }
 
         /// <summary>
-        ///     Text message direction. Note that for some message types not all
-        ///     directions are allowed. For example voicemail messages can
-        ///     be only inbound
+        ///     Message direction (inbound or outbound)
         ///     Enum: Inbound, Outbound
         /// </summary>
         public string direction { get; set; }
 
         /// <summary>
-        ///     Message availability status. Message in 'Deleted' state is still
-        ///     preserved with all its attachments and can be restored. 'Purged' means
+        ///     Message availability status. Message in `Deleted` state is still
+        ///     preserved with all its attachments and can be restored. `Purged` means
         ///     that all attachments are already deleted and the message itself is about
         ///     to be physically deleted shortly
         ///     Enum: Alive, Deleted, Purged
@@ -73,10 +71,11 @@ namespace RingCentral
         /// <summary>
         ///     Message status. Different message types may have different
         ///     allowed status values. For outbound faxes the aggregated message status
-        ///     is returned. If, for outbound message, a status for at least one recipient is 'Queued', then
-        ///     the 'Queued' value is returned. If a status for at least one recipient is
-        ///     'SendingFailed', then the 'SendingFailed' value is returned. In other cases
-        ///     the 'Sent' status is returned
+        ///     is returned. If, for multi-recipient outbound message, a status for
+        ///     at least one recipient is `Queued`, then the `Queued` value is returned.
+        ///     If a status for at least one recipient is `SendingFailed`,
+        ///     then the 'SendingFailed' value is returned. In other cases,
+        ///     the `Sent` status is returned
         ///     Enum: Queued, Sent, Delivered, DeliveryFailed, SendingFailed, Received
         /// </summary>
         public string messageStatus { get; set; }

@@ -9,15 +9,10 @@ namespace RingCentral
         public string uri { get; set; }
 
         /// <summary>
-        ///     List of notification recipient email addresses. Should not be empty
-        ///     if 'includeManagers' parameter is set to false
+        ///     The parameter contains the list of phone Numbers which should be used for SMS notifications sending
+        ///     (if advanced mode disabled)
         /// </summary>
-        public string[] emailAddresses { get; set; }
-
-        /// <summary>
-        ///     List of notification recipient email addresses
-        /// </summary>
-        public string[] smsEmailAddresses { get; set; }
+        public string[] smsPhoneNumbers { get; set; }
 
         /// <summary>
         ///     Specifies notifications settings mode. If `true` then advanced
@@ -47,6 +42,17 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public MissedCallsInfo missedCalls { get; set; }
+
+        /// <summary>
+        ///     List of notification recipient email addresses. Should not be empty
+        ///     if 'includeManagers' parameter is set to false
+        /// </summary>
+        public string[] emailAddresses { get; set; }
+
+        /// <summary>
+        ///     List of notification recipient email addresses
+        /// </summary>
+        public string[] smsEmailAddresses { get; set; }
 
         /// <summary>
         ///     Specifies if managers' emails are included in the list of emails to

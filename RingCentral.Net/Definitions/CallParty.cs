@@ -11,6 +11,20 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
+        ///     Internal identifier of an account
+        /// </summary>
+        public string accountId { get; set; }
+
+        /// <summary>
+        ///     Internal identifier of an extension
+        /// </summary>
+        public string extensionId { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public Attributes attributes { get; set; }
+
+        /// <summary>
         /// </summary>
         public CallStatusInfo status { get; set; }
 

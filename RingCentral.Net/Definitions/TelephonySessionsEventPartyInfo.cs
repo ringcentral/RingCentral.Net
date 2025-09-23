@@ -25,11 +25,11 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public CallPartyInfo to { get; set; }
+        public CallPartyShortInfo to { get; set; }
 
         /// <summary>
         /// </summary>
-        public CallPartyInfo from { get; set; }
+        public CallPartyShortInfo from { get; set; }
 
         /// <summary>
         /// </summary>

@@ -6,6 +6,7 @@ namespace RingCentral
     public class DeleteMessageByFilterParameters
     {
         /// <summary>
+        ///     ID(s) of a conversation to delete
         /// </summary>
         public string[] conversationId { get; set; }
 

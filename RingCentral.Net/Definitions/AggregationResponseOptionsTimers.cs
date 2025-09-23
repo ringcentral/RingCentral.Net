@@ -59,5 +59,10 @@ namespace RingCentral
         ///     Aggregation of calls duration by party that ended the call (Callee, Caller, System)
         /// </summary>
         public AggregationResponseOptionsTimersCallsDurationByEndingParty callsDurationByEndingParty { get; set; }
+
+        /// <summary>
+        ///     Aggregation of calls duration by queue hours (BusinessHours, AfterHours)
+        /// </summary>
+        public AggregationResponseOptionsTimersCallsDurationByQueueHours callsDurationByQueueHours { get; set; }
     }
 }

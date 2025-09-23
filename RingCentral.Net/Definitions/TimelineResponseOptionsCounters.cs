@@ -70,5 +70,10 @@ namespace RingCentral
         ///     (Internal, External)
         /// </summary>
         public bool? queueOpportunities { get; set; }
+
+        /// <summary>
+        ///     Include breakdown of calls count by queue hours (BusinessHours, AfterHours)
+        /// </summary>
+        public bool? callsByQueueHours { get; set; }
     }
 }

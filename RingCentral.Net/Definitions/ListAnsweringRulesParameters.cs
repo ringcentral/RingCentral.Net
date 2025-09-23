@@ -12,6 +12,7 @@ namespace RingCentral
         public string[] type { get; set; }
 
         /// <summary>
+        ///     The level of details to be returned about each answering rule
         ///     Default: Simple
         ///     Enum: Detailed, Simple
         /// </summary>

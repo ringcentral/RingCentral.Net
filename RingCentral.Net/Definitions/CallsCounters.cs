@@ -52,5 +52,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public QueueOpportunities queueOpportunities { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public CallsByQueueHours callsByQueueHours { get; set; }
     }
 }

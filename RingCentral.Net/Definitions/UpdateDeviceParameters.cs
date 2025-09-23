@@ -6,6 +6,7 @@ namespace RingCentral
     public class UpdateDeviceParameters
     {
         /// <summary>
+        ///     Specifies if pre-statement should be generated.
         /// </summary>
         public bool? prestatement { get; set; }
     }

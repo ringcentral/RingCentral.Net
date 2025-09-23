@@ -14,7 +14,7 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        ///     Dispayed name of a role
+        ///     Display name of a role
         ///     Example: Super Admin
         /// </summary>
         public string displayName { get; set; }

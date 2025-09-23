@@ -6,6 +6,8 @@ namespace RingCentral
     public class ReadEmergencyLocationParameters
     {
         /// <summary>
+        ///     If true, the emergency addresses will be synchronized with the
+        ///     external provider data
         /// </summary>
         public bool? syncEmergencyAddress { get; set; }
     }

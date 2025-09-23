@@ -14,5 +14,10 @@ namespace RingCentral
         ///     Internal identifier of an extension that monitors a call
         /// </summary>
         public string extensionId { get; set; }
+
+        /// <summary>
+        ///     Internal identifier of an account brandId that monitors a call
+        /// </summary>
+        public string brandId { get; set; }
     }
 }

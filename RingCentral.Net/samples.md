@@ -463,7 +463,8 @@ await rc.Revoke();
 
 - `result` is of type [RegionalSettings](./Definitions/RegionalSettings.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Company-getAccountRegionalSettings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-getAccountRegionalSettings) in API
+Explorer.
 
 ## patchAccountRegionalSettings
 
@@ -488,7 +489,8 @@ await rc.Revoke();
   type [AccountRegionalSettingRequest](./Definitions/AccountRegionalSettingRequest.cs)
 - `result` is of type [RegionalSettings](./Definitions/RegionalSettings.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Company-patchAccountRegionalSettings) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-patchAccountRegionalSettings) in API
+Explorer.
 
 ## readAccountInfo
 
@@ -1245,6 +1247,30 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#OAuth-and-OIDC-authorize) in API Explorer.
 
+## authorize2
+
+OAuth Authorization (POST)
+
+ Name             | Value                      
+------------------|----------------------------
+ HTTP Method      | `POST`                     
+ Endpoint         | `/restapi/oauth/authorize` 
+ Rate Limit Group | `Auth`                     
+ App Permission   | `N/A`                      
+ User Permission  | `N/A`                      
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi().Oauth().Authorize().Post(authorizeRequest);
+await rc.Revoke();
+```
+
+- `authorizeRequest` is of type [AuthorizeRequest](./Definitions/AuthorizeRequest.cs)
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#OAuth-and-OIDC-authorize2) in API Explorer.
+
 ## readCompanyCallLog
 
 List Company Call Records
@@ -1433,7 +1459,7 @@ await rc.Revoke();
 
 ## readIVRMenuList
 
-Get IVR Menu list
+List IVR Menus
 
  Name             | Value                                                 
 ------------------|-------------------------------------------------------
@@ -2537,60 +2563,6 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Log-listCompanyActiveCalls) in API Explorer.
 
-## auditTrailSearch
-
-Search Audit Trail Data
-
- Name             | Value                                                          
-------------------|----------------------------------------------------------------
- HTTP Method      | `POST`                                                         
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/audit-trail/search` 
- Rate Limit Group | `Heavy`                                                        
- App Permission   | `ReadAuditTrail`                                               
- User Permission  | `N/A`                                                          
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).AuditTrail().Search().Post(accountHistorySearchPublicRequest);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `accountHistorySearchPublicRequest` is of
-  type [AccountHistorySearchPublicRequest](./Definitions/AccountHistorySearchPublicRequest.cs)
-- `result` is of type [AccountHistorySearchPublicResponse](./Definitions/AccountHistorySearchPublicResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Audit-Trail-auditTrailSearch) in API Explorer.
-
-## extractSyncAccountCallLog
-
-Extract Sync Company Call Log
-
- Name             | Value                                                             
-------------------|-------------------------------------------------------------------
- HTTP Method      | `GET`                                                             
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-log-extract-sync` 
- Rate Limit Group | `Heavy`                                                           
- App Permission   | `ReadCallLog`                                                     
- User Permission  | `ReadCallLog`                                                     
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).CallLogExtractSync().Get(extractSyncAccountCallLogParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `extractSyncAccountCallLogParameters` is of
-  type [ExtractSyncAccountCallLogParameters](./Definitions/ExtractSyncAccountCallLogParameters.cs)
-- `result` is of type [CallLogExtractSyncResponse](./Definitions/CallLogExtractSyncResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-extractSyncAccountCallLog) in API Explorer.
-
 ## listCallQueues
 
 List Call Queues
@@ -2667,84 +2639,6 @@ await rc.Revoke();
 - `result` is of type [CallQueueDetails](./Definitions/CallQueueDetails.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-updateCallQueueInfo) in API Explorer.
-
-## listCallQueueMembers
-
-List Call Queue Members
-
- Name             | Value                                                                     
-------------------|---------------------------------------------------------------------------
- HTTP Method      | `GET`                                                                     
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/members` 
- Rate Limit Group | `Light`                                                                   
- App Permission   | `ReadAccounts`                                                            
- User Permission  | `ReadExtensions`                                                          
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Members().Get(listCallQueueMembersParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `listCallQueueMembersParameters` is of
-  type [ListCallQueueMembersParameters](./Definitions/ListCallQueueMembersParameters.cs)
-- `result` is of type [CallQueueMembers](./Definitions/CallQueueMembers.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-listCallQueueMembers) in API Explorer.
-
-## readCallQueuePresence
-
-Get Call Queue Presence
-
- Name             | Value                                                                      
-------------------|----------------------------------------------------------------------------
- HTTP Method      | `GET`                                                                      
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/presence` 
- Rate Limit Group | `Light`                                                                    
- App Permission   | `ReadPresence`                                                             
- User Permission  | `N/A`                                                                      
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Presence().Get();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [CallQueuePresence](./Definitions/CallQueuePresence.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Presence-readCallQueuePresence) in API Explorer.
-
-## updateCallQueuePresence
-
-Update Call Queue Presence
-
- Name             | Value                                                                      
-------------------|----------------------------------------------------------------------------
- HTTP Method      | `PUT`                                                                      
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/presence` 
- Rate Limit Group | `Medium`                                                                   
- App Permission   | `EditPresence`                                                             
- User Permission  | `N/A`                                                                      
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Presence().Put(callQueueUpdatePresence);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `callQueueUpdatePresence` is of type [CallQueueUpdatePresence](./Definitions/CallQueueUpdatePresence.cs)
-- `result` is of type [CallQueuePresence](./Definitions/CallQueuePresence.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Presence-updateCallQueuePresence) in API Explorer.
 
 ## listCustomFields
 
@@ -2847,6 +2741,2143 @@ await rc.Revoke();
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Custom-Fields-deleteCustomField) in API Explorer.
+
+## createFaxMessage
+
+Create Fax Message
+
+ Name             | Value                                                                   
+------------------|-------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                  
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/fax` 
+ Rate Limit Group | `Heavy`                                                                 
+ App Permission   | `Faxes`                                                                 
+ User Permission  | `OutboundFaxes`                                                         
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Fax().Post(createFaxMessageRequest);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `createFaxMessageRequest` is of type [CreateFaxMessageRequest](./Definitions/CreateFaxMessageRequest.cs)
+- `result` is of type [FaxResponse](./Definitions/FaxResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Fax-createFaxMessage) in API Explorer.
+
+## createMMS
+
+Send MMS
+
+ Name             | Value                                                                   
+------------------|-------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                  
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/mms` 
+ Rate Limit Group | `Medium`                                                                
+ App Permission   | `SMS`                                                                   
+ User Permission  | `OutboundSMS`                                                           
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Mms().Post(createMMSMessage);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `createMMSMessage` is of type [CreateMMSMessage](./Definitions/CreateMMSMessage.cs)
+- `result` is of type [GetSMSMessageInfoResponse](./Definitions/GetSMSMessageInfoResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#SMS-createMMS) in API Explorer.
+
+## createSMSMessage
+
+Send SMS
+
+ Name             | Value                                                                   
+------------------|-------------------------------------------------------------------------
+ HTTP Method      | `POST`                                                                  
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/sms` 
+ Rate Limit Group | `Medium`                                                                
+ App Permission   | `SMS`                                                                   
+ User Permission  | `OutboundSMS`                                                           
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Sms().Post(createSMSMessage);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `createSMSMessage` is of type [CreateSMSMessage](./Definitions/CreateSMSMessage.cs)
+- `result` is of type [GetSMSMessageInfoResponse](./Definitions/GetSMSMessageInfoResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#SMS-createSMSMessage) in API Explorer.
+
+## listIvrPrompts
+
+List IVR Prompts
+
+ Name             | Value                                                   
+------------------|---------------------------------------------------------
+ HTTP Method      | `GET`                                                   
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/ivr-prompts` 
+ Rate Limit Group | `Medium`                                                
+ App Permission   | `ReadAccounts`                                          
+ User Permission  | `ReadCompanyGreetings`                                  
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().List();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [IvrPrompts](./Definitions/IvrPrompts.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#IVR-listIvrPrompts) in API Explorer.
+
+## createIVRPrompt
+
+Create IVR Prompts
+
+ Name             | Value                                                   
+------------------|---------------------------------------------------------
+ HTTP Method      | `POST`                                                  
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/ivr-prompts` 
+ Rate Limit Group | `Heavy`                                                 
+ App Permission   | `EditAccounts`                                          
+ User Permission  | `EditCompanyGreetings`                                  
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().Post(createIVRPromptRequest);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `createIVRPromptRequest` is of type [CreateIVRPromptRequest](./Definitions/CreateIVRPromptRequest.cs)
+- `result` is of type [PromptInfo](./Definitions/PromptInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#IVR-createIVRPrompt) in API Explorer.
+
+## readIVRPrompt
+
+Get IVR Prompt
+
+ Name             | Value                                                              
+------------------|--------------------------------------------------------------------
+ HTTP Method      | `GET`                                                              
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/ivr-prompts/{promptId}` 
+ Rate Limit Group | `Medium`                                                           
+ App Permission   | `ReadAccounts`                                                     
+ User Permission  | `ReadCompanyGreetings`                                             
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [PromptInfo](./Definitions/PromptInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#IVR-readIVRPrompt) in API Explorer.
+
+## updateIVRPrompt
+
+Update IVR Prompt
+
+ Name             | Value                                                              
+------------------|--------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                              
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/ivr-prompts/{promptId}` 
+ Rate Limit Group | `Medium`                                                           
+ App Permission   | `EditAccounts`                                                     
+ User Permission  | `EditCompanyGreetings`                                             
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Put(updateIVRPromptRequest);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `updateIVRPromptRequest` is of type [UpdateIVRPromptRequest](./Definitions/UpdateIVRPromptRequest.cs)
+- `result` is of type [PromptInfo](./Definitions/PromptInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#IVR-updateIVRPrompt) in API Explorer.
+
+## deleteIVRPrompt
+
+Delete IVR Prompt
+
+ Name             | Value                                                              
+------------------|--------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                           
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/ivr-prompts/{promptId}` 
+ Rate Limit Group | `Heavy`                                                            
+ App Permission   | `EditAccounts`                                                     
+ User Permission  | `EditCompanyGreetings`                                             
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Delete();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#IVR-deleteIVRPrompt) in API Explorer.
+
+## listAccountPhoneNumbers
+
+List Company Phone Numbers
+
+ Name             | Value                                                    
+------------------|----------------------------------------------------------
+ HTTP Method      | `GET`                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/phone-number` 
+ Rate Limit Group | `Heavy`                                                  
+ App Permission   | `ReadAccounts`                                           
+ User Permission  | `ReadCompanyPhoneNumbers`                                
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber().List(listAccountPhoneNumbersParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `listAccountPhoneNumbersParameters` is of
+  type [ListAccountPhoneNumbersParameters](./Definitions/ListAccountPhoneNumbersParameters.cs)
+- `result` is of type [AccountPhoneNumbers](./Definitions/AccountPhoneNumbers.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-listAccountPhoneNumbers) in API Explorer.
+
+## readAccountPhoneNumber
+
+Get Phone Number
+
+ Name             | Value                                                                    
+------------------|--------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/phone-number/{phoneNumberId}` 
+ Rate Limit Group | `Light`                                                                  
+ App Permission   | `ReadAccounts`                                                           
+ User Permission  | `ReadCompanyPhoneNumbers`                                                
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber(phoneNumberId).Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [CompanyPhoneNumberInfo](./Definitions/CompanyPhoneNumberInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-readAccountPhoneNumber) in API Explorer.
+
+## readAccountServiceInfo
+
+Get Account Service Info
+
+ Name             | Value                                                    
+------------------|----------------------------------------------------------
+ HTTP Method      | `GET`                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/service-info` 
+ Rate Limit Group | `Light`                                                  
+ App Permission   | `ReadAccounts`                                           
+ User Permission  | `ReadCompanyInfo`                                        
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).ServiceInfo().Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [AccountServiceInfo](./Definitions/AccountServiceInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Company-readAccountServiceInfo) in API Explorer.
+
+## listSiteMembers
+
+List Site Members
+
+ Name             | Value                                                              
+------------------|--------------------------------------------------------------------
+ HTTP Method      | `GET`                                                              
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/sites/{siteId}/members` 
+ Rate Limit Group | `Medium`                                                           
+ App Permission   | `ReadAccounts`                                                     
+ User Permission  | `ReadExtensions`                                                   
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).Sites(siteId).Members().Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [SiteMembersList](./Definitions/SiteMembersList.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Multi-Site-listSiteMembers) in API Explorer.
+
+## listCountries
+
+List Countries
+
+ Name             | Value                                      
+------------------|--------------------------------------------
+ HTTP Method      | `GET`                                      
+ Endpoint         | `/restapi/{apiVersion}/dictionary/country` 
+ Rate Limit Group | `Light`                                    
+ App Permission   | `N/A`                                      
+ User Permission  | `N/A`                                      
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Dictionary().Country().List(listCountriesParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `listCountriesParameters` is of type [ListCountriesParameters](./Definitions/ListCountriesParameters.cs)
+- `result` is of type [CountryListDictionaryModel](./Definitions/CountryListDictionaryModel.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listCountries) in API Explorer.
+
+## readCountry
+
+Get Country
+
+ Name             | Value                                                  
+------------------|--------------------------------------------------------
+ HTTP Method      | `GET`                                                  
+ Endpoint         | `/restapi/{apiVersion}/dictionary/country/{countryId}` 
+ Rate Limit Group | `Light`                                                
+ App Permission   | `N/A`                                                  
+ User Permission  | `N/A`                                                  
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Dictionary().Country(countryId).Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [CountryInfoDictionaryModel](./Definitions/CountryInfoDictionaryModel.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readCountry) in API Explorer.
+
+## listStandardGreetings
+
+List Standard Greetings
+
+ Name             | Value                                       
+------------------|---------------------------------------------
+ HTTP Method      | `GET`                                       
+ Endpoint         | `/restapi/{apiVersion}/dictionary/greeting` 
+ Rate Limit Group | `Medium`                                    
+ App Permission   | `N/A`                                       
+ User Permission  | `N/A`                                       
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Dictionary().Greeting().List(listStandardGreetingsParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `listStandardGreetingsParameters` is of
+  type [ListStandardGreetingsParameters](./Definitions/ListStandardGreetingsParameters.cs)
+- `result` is of type [DictionaryGreetingList](./Definitions/DictionaryGreetingList.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Greetings-listStandardGreetings) in API Explorer.
+
+## readStandardGreeting
+
+Get Standard Greeting
+
+ Name             | Value                                                    
+------------------|----------------------------------------------------------
+ HTTP Method      | `GET`                                                    
+ Endpoint         | `/restapi/{apiVersion}/dictionary/greeting/{greetingId}` 
+ Rate Limit Group | `Medium`                                                 
+ App Permission   | `N/A`                                                    
+ User Permission  | `N/A`                                                    
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Dictionary().Greeting(greetingId).Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [DictionaryGreetingInfo](./Definitions/DictionaryGreetingInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Greetings-readStandardGreeting) in API Explorer.
+
+## listLanguages
+
+List Languages
+
+ Name             | Value                                       
+------------------|---------------------------------------------
+ HTTP Method      | `GET`                                       
+ Endpoint         | `/restapi/{apiVersion}/dictionary/language` 
+ Rate Limit Group | `Light`                                     
+ App Permission   | `N/A`                                       
+ User Permission  | `N/A`                                       
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Dictionary().Language().List();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [LanguageList](./Definitions/LanguageList.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listLanguages) in API Explorer.
+
+## readLanguage
+
+Get Language
+
+ Name             | Value                                                    
+------------------|----------------------------------------------------------
+ HTTP Method      | `GET`                                                    
+ Endpoint         | `/restapi/{apiVersion}/dictionary/language/{languageId}` 
+ Rate Limit Group | `Light`                                                  
+ App Permission   | `N/A`                                                    
+ User Permission  | `N/A`                                                    
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Dictionary().Language(languageId).Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [LanguageInfo](./Definitions/LanguageInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readLanguage) in API Explorer.
+
+## listLocations
+
+List Locations
+
+ Name             | Value                                       
+------------------|---------------------------------------------
+ HTTP Method      | `GET`                                       
+ Endpoint         | `/restapi/{apiVersion}/dictionary/location` 
+ Rate Limit Group | `Light`                                     
+ App Permission   | `N/A`                                       
+ User Permission  | `N/A`                                       
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Dictionary().Location().Get(listLocationsParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `listLocationsParameters` is of type [ListLocationsParameters](./Definitions/ListLocationsParameters.cs)
+- `result` is of type [GetLocationListResponse](./Definitions/GetLocationListResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listLocations) in API Explorer.
+
+## listPermissions
+
+List Permissions
+
+ Name             | Value                                         
+------------------|-----------------------------------------------
+ HTTP Method      | `GET`                                         
+ Endpoint         | `/restapi/{apiVersion}/dictionary/permission` 
+ Rate Limit Group | `Light`                                       
+ App Permission   | `N/A`                                         
+ User Permission  | `N/A`                                         
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Dictionary().Permission().List(listPermissionsParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `listPermissionsParameters` is of type [ListPermissionsParameters](./Definitions/ListPermissionsParameters.cs)
+- `result` is of type [PermissionCollectionResource](./Definitions/PermissionCollectionResource.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#User-Permissions-listPermissions) in API Explorer.
+
+## readPermission
+
+Get Permission
+
+ Name             | Value                                                        
+------------------|--------------------------------------------------------------
+ HTTP Method      | `GET`                                                        
+ Endpoint         | `/restapi/{apiVersion}/dictionary/permission/{permissionId}` 
+ Rate Limit Group | `Light`                                                      
+ App Permission   | `N/A`                                                        
+ User Permission  | `N/A`                                                        
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Dictionary().Permission(permissionId).Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [PermissionResource](./Definitions/PermissionResource.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#User-Permissions-readPermission) in API Explorer.
+
+## listTimezones
+
+List Timezones
+
+ Name             | Value                                       
+------------------|---------------------------------------------
+ HTTP Method      | `GET`                                       
+ Endpoint         | `/restapi/{apiVersion}/dictionary/timezone` 
+ Rate Limit Group | `Light`                                     
+ App Permission   | `N/A`                                       
+ User Permission  | `N/A`                                       
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Dictionary().Timezone().List(listTimezonesParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `listTimezonesParameters` is of type [ListTimezonesParameters](./Definitions/ListTimezonesParameters.cs)
+- `result` is of type [GetTimezoneListResponse](./Definitions/GetTimezoneListResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listTimezones) in API Explorer.
+
+## readTimezone
+
+Get Timezone
+
+ Name             | Value                                                    
+------------------|----------------------------------------------------------
+ HTTP Method      | `GET`                                                    
+ Endpoint         | `/restapi/{apiVersion}/dictionary/timezone/{timezoneId}` 
+ Rate Limit Group | `Light`                                                  
+ App Permission   | `N/A`                                                    
+ User Permission  | `N/A`                                                    
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Dictionary().Timezone(timezoneId).Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [TimezoneInfoBase](./Definitions/TimezoneInfoBase.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readTimezone) in API Explorer.
+
+## listStandardUserRole
+
+List Standard User Roles
+
+ Name             | Value                                        
+------------------|----------------------------------------------
+ HTTP Method      | `GET`                                        
+ Endpoint         | `/restapi/{apiVersion}/dictionary/user-role` 
+ Rate Limit Group | `Light`                                      
+ App Permission   | `N/A`                                        
+ User Permission  | `N/A`                                        
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Dictionary().UserRole().List(listStandardUserRoleParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `listStandardUserRoleParameters` is of
+  type [ListStandardUserRoleParameters](./Definitions/ListStandardUserRoleParameters.cs)
+- `result` is of type [RolesCollectionResource](./Definitions/RolesCollectionResource.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-listStandardUserRole) in API Explorer.
+
+## readStandardUserRole
+
+Get Standard User Role
+
+ Name             | Value                                                 
+------------------|-------------------------------------------------------
+ HTTP Method      | `GET`                                                 
+ Endpoint         | `/restapi/{apiVersion}/dictionary/user-role/{roleId}` 
+ Rate Limit Group | `Light`                                               
+ App Permission   | `N/A`                                                 
+ User Permission  | `N/A`                                                 
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Dictionary().UserRole(roleId).Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [RoleResource](./Definitions/RoleResource.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-readStandardUserRole) in API Explorer.
+
+## parsePhoneNumber
+
+Parse Phone Number(s)
+
+ Name             | Value                                       
+------------------|---------------------------------------------
+ HTTP Method      | `POST`                                      
+ Endpoint         | `/restapi/{apiVersion}/number-parser/parse` 
+ Rate Limit Group | `Light`                                     
+ App Permission   | `N/A`                                       
+ User Permission  | `N/A`                                       
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).NumberParser().Parse().Post(parsePhoneNumberRequest, parsePhoneNumberParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `parsePhoneNumberRequest` is of type [ParsePhoneNumberRequest](./Definitions/ParsePhoneNumberRequest.cs)
+- `parsePhoneNumberParameters` is of type [ParsePhoneNumberParameters](./Definitions/ParsePhoneNumberParameters.cs)
+- `result` is of type [ParsePhoneNumberResponse](./Definitions/ParsePhoneNumberResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-parsePhoneNumber) in API Explorer.
+
+## renewSubscription
+
+Renew Subscription
+
+ Name             | Value                                                       
+------------------|-------------------------------------------------------------
+ HTTP Method      | `POST`                                                      
+ Endpoint         | `/restapi/{apiVersion}/subscription/{subscriptionId}/renew` 
+ Rate Limit Group | `Light`                                                     
+ App Permission   | `N/A`                                                       
+ User Permission  | `N/A`                                                       
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Renew().Post();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- `result` is of type [SubscriptionInfo](./Definitions/SubscriptionInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-renewSubscription) in API Explorer.
+
+## scimGetProviderConfig2
+
+Get Provider Config
+
+ Name             | Value                                   
+------------------|-----------------------------------------
+ HTTP Method      | `GET`                                   
+ Endpoint         | `/scim/{version}/ServiceProviderConfig` 
+ Rate Limit Group | `Light`                                 
+ App Permission   | `ReadAccounts`                          
+ User Permission  | `N/A`                                   
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Scim(version).ServiceProviderConfig().Get();
+await rc.Revoke();
+```
+
+- Parameter `version` is optional with default value `v2`
+- `result` is of type [ScimProviderConfig](./Definitions/ScimProviderConfig.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#SCIM-scimGetProviderConfig2) in API Explorer.
+
+## readGlipPostsNew
+
+List Posts
+
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `GET`                                     
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/posts` 
+ Rate Limit Group | `Medium`                                  
+ App Permission   | `TeamMessaging`                           
+ User Permission  | `N/A`                                     
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Chats(chatId).Posts().List(readGlipPostsNewParameters);
+await rc.Revoke();
+```
+
+- `readGlipPostsNewParameters` is of type [ReadGlipPostsNewParameters](./Definitions/ReadGlipPostsNewParameters.cs)
+- `result` is of type [TMPostsList](./Definitions/TMPostsList.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Posts-readGlipPostsNew) in API Explorer.
+
+## createGlipPostNew
+
+Create Post
+
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `POST`                                    
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/posts` 
+ Rate Limit Group | `Medium`                                  
+ App Permission   | `TeamMessaging`                           
+ User Permission  | `N/A`                                     
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Chats(chatId).Posts().Post(tMCreatePostRequest);
+await rc.Revoke();
+```
+
+- `tMCreatePostRequest` is of type [TMCreatePostRequest](./Definitions/TMCreatePostRequest.cs)
+- `result` is of type [TMPostInfo](./Definitions/TMPostInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Posts-createGlipPostNew) in API Explorer.
+
+## readGlipPostNew
+
+Get Post
+
+ Name             | Value                                              
+------------------|----------------------------------------------------
+ HTTP Method      | `GET`                                              
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/posts/{postId}` 
+ Rate Limit Group | `Light`                                            
+ App Permission   | `TeamMessaging`                                    
+ User Permission  | `N/A`                                              
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Chats(chatId).Posts(postId).Get();
+await rc.Revoke();
+```
+
+- `result` is of type [TMPostInfo](./Definitions/TMPostInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Posts-readGlipPostNew) in API Explorer.
+
+## deleteGlipPostNew
+
+Delete Post
+
+ Name             | Value                                              
+------------------|----------------------------------------------------
+ HTTP Method      | `DELETE`                                           
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/posts/{postId}` 
+ Rate Limit Group | `Medium`                                           
+ App Permission   | `TeamMessaging`                                    
+ User Permission  | `N/A`                                              
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Chats(chatId).Posts(postId).Delete();
+await rc.Revoke();
+```
+
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Posts-deleteGlipPostNew) in API Explorer.
+
+## patchGlipPostNew
+
+Update Post
+
+ Name             | Value                                              
+------------------|----------------------------------------------------
+ HTTP Method      | `PATCH`                                            
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/posts/{postId}` 
+ Rate Limit Group | `Medium`                                           
+ App Permission   | `TeamMessaging`                                    
+ User Permission  | `N/A`                                              
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Chats(chatId).Posts(postId).Patch(tMUpdatePostRequest);
+await rc.Revoke();
+```
+
+- `tMUpdatePostRequest` is of type [TMUpdatePostRequest](./Definitions/TMUpdatePostRequest.cs)
+- `result` is of type [TMPostInfo](./Definitions/TMPostInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Posts-patchGlipPostNew) in API Explorer.
+
+## readGlipEveryoneNew
+
+Get Everyone Chat
+
+ Name             | Value                         
+------------------|-------------------------------
+ HTTP Method      | `GET`                         
+ Endpoint         | `/team-messaging/v1/everyone` 
+ Rate Limit Group | `Light`                       
+ App Permission   | `TeamMessaging`               
+ User Permission  | `N/A`                         
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Everyone().Get();
+await rc.Revoke();
+```
+
+- `result` is of type [EveryoneTeamInfo](./Definitions/EveryoneTeamInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-readGlipEveryoneNew) in API Explorer.
+
+## patchGlipEveryoneNew
+
+Update Everyone Chat
+
+ Name             | Value                         
+------------------|-------------------------------
+ HTTP Method      | `PATCH`                       
+ Endpoint         | `/team-messaging/v1/everyone` 
+ Rate Limit Group | `Medium`                      
+ App Permission   | `TeamMessaging`               
+ User Permission  | `N/A`                         
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Everyone().Patch(updateEveryoneTeamRequest);
+await rc.Revoke();
+```
+
+- `updateEveryoneTeamRequest` is of type [UpdateEveryoneTeamRequest](./Definitions/UpdateEveryoneTeamRequest.cs)
+- `result` is of type [EveryoneTeamInfo](./Definitions/EveryoneTeamInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-patchGlipEveryoneNew) in API Explorer.
+
+## listFavoriteChatsNew
+
+List Favorite Chats
+
+ Name             | Value                          
+------------------|--------------------------------
+ HTTP Method      | `GET`                          
+ Endpoint         | `/team-messaging/v1/favorites` 
+ Rate Limit Group | `Light`                        
+ App Permission   | `TeamMessaging`                
+ User Permission  | `N/A`                          
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Favorites().Get(listFavoriteChatsNewParameters);
+await rc.Revoke();
+```
+
+- `listFavoriteChatsNewParameters` is of
+  type [ListFavoriteChatsNewParameters](./Definitions/ListFavoriteChatsNewParameters.cs)
+- `result` is of type [TMChatListWithoutNavigation](./Definitions/TMChatListWithoutNavigation.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Chats-listFavoriteChatsNew) in API Explorer.
+
+## lockNoteNew
+
+Lock Note
+
+ Name             | Value                                    
+------------------|------------------------------------------
+ HTTP Method      | `POST`                                   
+ Endpoint         | `/team-messaging/v1/notes/{noteId}/lock` 
+ Rate Limit Group | `Light`                                  
+ App Permission   | `TeamMessaging`                          
+ User Permission  | `N/A`                                    
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Notes(noteId).Lock().Post();
+await rc.Revoke();
+```
+
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Notes-lockNoteNew) in API Explorer.
+
+## addGlipTeamMembersNew
+
+Add Team Members
+
+ Name             | Value                                   
+------------------|-----------------------------------------
+ HTTP Method      | `POST`                                  
+ Endpoint         | `/team-messaging/v1/teams/{chatId}/add` 
+ Rate Limit Group | `Medium`                                
+ App Permission   | `TeamMessaging`                         
+ User Permission  | `N/A`                                   
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Teams(chatId).Add().Post(tMAddTeamMembersRequest);
+await rc.Revoke();
+```
+
+- `tMAddTeamMembersRequest` is of type [TMAddTeamMembersRequest](./Definitions/TMAddTeamMembersRequest.cs)
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-addGlipTeamMembersNew) in API Explorer.
+
+## joinGlipTeamNew
+
+Join Team
+
+ Name             | Value                                    
+------------------|------------------------------------------
+ HTTP Method      | `POST`                                   
+ Endpoint         | `/team-messaging/v1/teams/{chatId}/join` 
+ Rate Limit Group | `Medium`                                 
+ App Permission   | `TeamMessaging`                          
+ User Permission  | `N/A`                                    
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Teams(chatId).Join().Post();
+await rc.Revoke();
+```
+
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-joinGlipTeamNew) in API Explorer.
+
+## listGlipWebhooksNew
+
+List Webhooks
+
+ Name             | Value                         
+------------------|-------------------------------
+ HTTP Method      | `GET`                         
+ Endpoint         | `/team-messaging/v1/webhooks` 
+ Rate Limit Group | `Medium`                      
+ App Permission   | `TeamMessaging`               
+ User Permission  | `N/A`                         
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Webhooks().List();
+await rc.Revoke();
+```
+
+- `result` is of type [TMWebhookList](./Definitions/TMWebhookList.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-listGlipWebhooksNew) in API Explorer.
+
+## readGlipWebhookNew
+
+Get Webhook
+
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `GET`                                     
+ Endpoint         | `/team-messaging/v1/webhooks/{webhookId}` 
+ Rate Limit Group | `Medium`                                  
+ App Permission   | `TeamMessaging`                           
+ User Permission  | `N/A`                                     
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Webhooks(webhookId).Get();
+await rc.Revoke();
+```
+
+- `result` is of type [TMWebhookList](./Definitions/TMWebhookList.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-readGlipWebhookNew) in API Explorer.
+
+## deleteGlipWebhookNew
+
+Delete Webhook
+
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `DELETE`                                  
+ Endpoint         | `/team-messaging/v1/webhooks/{webhookId}` 
+ Rate Limit Group | `Medium`                                  
+ App Permission   | `TeamMessaging`                           
+ User Permission  | `N/A`                                     
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Webhooks(webhookId).Delete();
+await rc.Revoke();
+```
+
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-deleteGlipWebhookNew) in API Explorer.
+
+## readTMCompanyInfoNew
+
+Get Company Info
+
+ Name             | Value                                      
+------------------|--------------------------------------------
+ HTTP Method      | `GET`                                      
+ Endpoint         | `/team-messaging/v1/companies/{companyId}` 
+ Rate Limit Group | `Light`                                    
+ App Permission   | `TeamMessaging`                            
+ User Permission  | `N/A`                                      
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Companies(companyId).Get();
+await rc.Revoke();
+```
+
+- `result` is of type [TMCompanyInfo](./Definitions/TMCompanyInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Profile-readTMCompanyInfoNew) in API Explorer.
+
+## rcwHistoryListAllSessions
+
+List Historical Webinar Sessions across Multiple Webinars
+
+ Name             | Value                          
+------------------|--------------------------------
+ HTTP Method      | `GET`                          
+ Endpoint         | `/webinar/history/v1/sessions` 
+ Rate Limit Group | `Heavy`                        
+ App Permission   | `ReadWebinars`                 
+ User Permission  | `N/A`                          
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Webinar().History().V1().Sessions().Get(rcwHistoryListAllSessionsParameters);
+await rc.Revoke();
+```
+
+- `rcwHistoryListAllSessionsParameters` is of
+  type [RcwHistoryListAllSessionsParameters](./Definitions/RcwHistoryListAllSessionsParameters.cs)
+- `result` is of type [SessionGlobalListResource](./Definitions/SessionGlobalListResource.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Historical-Webinars-rcwHistoryListAllSessions) in API
+Explorer.
+
+## rcwHistoryGetWebinar
+
+Get Historical Webinar
+
+ Name             | Value                                      
+------------------|--------------------------------------------
+ HTTP Method      | `GET`                                      
+ Endpoint         | `/webinar/history/v1/webinars/{webinarId}` 
+ Rate Limit Group | `Heavy`                                    
+ App Permission   | `ReadWebinars`                             
+ User Permission  | `N/A`                                      
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Webinar().History().V1().Webinars(webinarId).Get();
+await rc.Revoke();
+```
+
+- `result` is of type [HistoryWebinarResource](./Definitions/HistoryWebinarResource.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Historical-Webinars-rcwHistoryGetWebinar) in API Explorer.
+
+## readOpenIdConfiguration
+
+OIDC Provider Configuration
+
+ Name             | Value                               
+------------------|-------------------------------------
+ HTTP Method      | `GET`                               
+ Endpoint         | `/.well-known/openid-configuration` 
+ Rate Limit Group | `NoThrottling`                      
+ App Permission   | `N/A`                               
+ User Permission  | `N/A`                               
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.WellKnown().OpenidConfiguration().Get();
+await rc.Revoke();
+```
+
+- `result` is of type [OpenIdDiscovery](./Definitions/OpenIdDiscovery.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#OAuth-and-OIDC-readOpenIdConfiguration) in API Explorer.
+
+## caiSpeechToText
+
+Speech to Text Conversion
+
+ Name             | Value                               
+------------------|-------------------------------------
+ HTTP Method      | `POST`                              
+ Endpoint         | `/ai/audio/v1/async/speech-to-text` 
+ Rate Limit Group | `Heavy`                             
+ App Permission   | `AI`                                
+ User Permission  | `N/A`                               
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Ai().Audio().V1().Async().SpeechToText().Post(asrInput, caiSpeechToTextParameters);
+await rc.Revoke();
+```
+
+- `asrInput` is of type [AsrInput](./Definitions/AsrInput.cs)
+- `caiSpeechToTextParameters` is of type [CaiSpeechToTextParameters](./Definitions/CaiSpeechToTextParameters.cs)
+- `result` is of type [CaiAsyncApiResponse](./Definitions/CaiAsyncApiResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Audio-caiSpeechToText) in API Explorer.
+
+## getAccountRecordings
+
+List Account Recordings
+
+ Name             | Value                                        
+------------------|----------------------------------------------
+ HTTP Method      | `GET`                                        
+ Endpoint         | `/rcvideo/v1/account/{accountId}/recordings` 
+ Rate Limit Group | `Light`                                      
+ App Permission   | `Video`                                      
+ User Permission  | `N/A`                                        
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Rcvideo().V1().Account(accountId).Recordings().Get(getAccountRecordingsParameters);
+await rc.Revoke();
+```
+
+- Parameter `accountId` is optional with default value `~`
+- `getAccountRecordingsParameters` is of
+  type [GetAccountRecordingsParameters](./Definitions/GetAccountRecordingsParameters.cs)
+- `result` is of type [CloudRecordings](./Definitions/CloudRecordings.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Recordings-getAccountRecordings) in API Explorer.
+
+## listCostCenters
+
+List Cost Centers
+
+ Name             | Value                                           
+------------------|-------------------------------------------------
+ HTTP Method      | `GET`                                           
+ Endpoint         | `/restapi/v2/accounts/{accountId}/cost-centers` 
+ Rate Limit Group | `Light`                                         
+ App Permission   | `ReadAccounts`                                  
+ User Permission  | `CostCenterManagement`                          
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi().V2().Accounts(accountId).CostCenters().Get();
+await rc.Revoke();
+```
+
+- `result` is of type [CostCenterList](./Definitions/CostCenterList.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Cost-Centers-listCostCenters) in API Explorer.
+
+## bulkDeleteUsersV2
+
+Delete Multiple Extensions
+
+ Name             | Value                                         
+------------------|-----------------------------------------------
+ HTTP Method      | `DELETE`                                      
+ Endpoint         | `/restapi/v2/accounts/{accountId}/extensions` 
+ Rate Limit Group | `Heavy`                                       
+ App Permission   | `EditAccounts`                                
+ User Permission  | `Users`                                       
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi().V2().Accounts(accountId).Extensions().Delete(bulkDeleteUsersRequest);
+await rc.Revoke();
+```
+
+- `bulkDeleteUsersRequest` is of type [BulkDeleteUsersRequest](./Definitions/BulkDeleteUsersRequest.cs)
+- `result` is of type [BulkDeleteUsersResponse](./Definitions/BulkDeleteUsersResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-bulkDeleteUsersV2) in API Explorer.
+
+## listAccountPhoneNumbersV2
+
+List Account Phone Numbers
+
+ Name             | Value                                            
+------------------|--------------------------------------------------
+ HTTP Method      | `GET`                                            
+ Endpoint         | `/restapi/v2/accounts/{accountId}/phone-numbers` 
+ Rate Limit Group | `Heavy`                                          
+ App Permission   | `ReadAccounts`                                   
+ User Permission  | `ReadCompanyPhoneNumbers`                        
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi().V2().Accounts(accountId).PhoneNumbers().Get(listAccountPhoneNumbersV2Parameters);
+await rc.Revoke();
+```
+
+- `listAccountPhoneNumbersV2Parameters` is of
+  type [ListAccountPhoneNumbersV2Parameters](./Definitions/ListAccountPhoneNumbersV2Parameters.cs)
+- `result` is of type [AccountPhoneNumberList](./Definitions/AccountPhoneNumberList.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-listAccountPhoneNumbersV2) in API Explorer.
+
+## deleteNumbersFromInventoryV2
+
+Delete Numbers from Inventory
+
+ Name             | Value                                            
+------------------|--------------------------------------------------
+ HTTP Method      | `DELETE`                                         
+ Endpoint         | `/restapi/v2/accounts/{accountId}/phone-numbers` 
+ Rate Limit Group | `Medium`                                         
+ App Permission   | `EditAccounts`                                   
+ User Permission  | `EditCompanyPhoneNumbers`                        
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi().V2().Accounts(accountId).PhoneNumbers().Delete(deletePhoneNumbersRequest);
+await rc.Revoke();
+```
+
+- `deletePhoneNumbersRequest` is of type [DeletePhoneNumbersRequest](./Definitions/DeletePhoneNumbersRequest.cs)
+- `result` is of type [DeletePhoneNumbersResponse](./Definitions/DeletePhoneNumbersResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-deleteNumbersFromInventoryV2) in API
+Explorer.
+
+## assignPhoneNumberV2
+
+Assign Phone Number
+
+ Name             | Value                                                            
+------------------|------------------------------------------------------------------
+ HTTP Method      | `PATCH`                                                          
+ Endpoint         | `/restapi/v2/accounts/{accountId}/phone-numbers/{phoneNumberId}` 
+ Rate Limit Group | `Medium`                                                         
+ App Permission   | `EditAccounts`                                                   
+ User Permission  | `EditCompanyPhoneNumbers`                                        
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi().V2().Accounts(accountId).PhoneNumbers(phoneNumberId).Patch(assignPhoneNumberRequest);
+await rc.Revoke();
+```
+
+- `assignPhoneNumberRequest` is of type [AssignPhoneNumberRequest](./Definitions/AssignPhoneNumberRequest.cs)
+- `result` is of type [AccountPhoneNumberInfo](./Definitions/AccountPhoneNumberInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-assignPhoneNumberV2) in API Explorer.
+
+## listSmsConsentRecords
+
+List SMS Consent Records
+
+ Name             | Value                                           
+------------------|-------------------------------------------------
+ HTTP Method      | `GET`                                           
+ Endpoint         | `/restapi/v2/accounts/{accountId}/sms/consents` 
+ Rate Limit Group | `Light`                                         
+ App Permission   | `SMS`                                           
+ User Permission  | `N/A`                                           
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi().V2().Accounts(accountId).Sms().Consents().Get(listSmsConsentRecordsParameters);
+await rc.Revoke();
+```
+
+- `listSmsConsentRecordsParameters` is of
+  type [ListSmsConsentRecordsParameters](./Definitions/ListSmsConsentRecordsParameters.cs)
+- `result` is of type [OptRecordList](./Definitions/OptRecordList.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#SMS-Consents-listSmsConsentRecords) in API Explorer.
+
+## deleteSmsConsentRecords
+
+Delete SMS Consent Records
+
+ Name             | Value                                           
+------------------|-------------------------------------------------
+ HTTP Method      | `DELETE`                                        
+ Endpoint         | `/restapi/v2/accounts/{accountId}/sms/consents` 
+ Rate Limit Group | `Light`                                         
+ App Permission   | `SMS`                                           
+ User Permission  | `N/A`                                           
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi().V2().Accounts(accountId).Sms().Consents().Delete(deleteOptRecordList);
+await rc.Revoke();
+```
+
+- `deleteOptRecordList` is of type [DeleteOptRecordList](./Definitions/DeleteOptRecordList.cs)
+- `result` is of type [OptRecordsModificationSummary](./Definitions/OptRecordsModificationSummary.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#SMS-Consents-deleteSmsConsentRecords) in API Explorer.
+
+## editSmsConsentRecords
+
+Add/Update SMS Consent Records
+
+ Name             | Value                                           
+------------------|-------------------------------------------------
+ HTTP Method      | `PATCH`                                         
+ Endpoint         | `/restapi/v2/accounts/{accountId}/sms/consents` 
+ Rate Limit Group | `Light`                                         
+ App Permission   | `SMS`                                           
+ User Permission  | `N/A`                                           
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi().V2().Accounts(accountId).Sms().Consents().Patch(updateOptRecordList);
+await rc.Revoke();
+```
+
+- `updateOptRecordList` is of type [UpdateOptRecordList](./Definitions/UpdateOptRecordList.cs)
+- `result` is of type [OptRecordsModificationSummary](./Definitions/OptRecordsModificationSummary.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#SMS-Consents-editSmsConsentRecords) in API Explorer.
+
+## listA2PBatches
+
+List A2P SMS Batches
+
+ Name             | Value                                                       
+------------------|-------------------------------------------------------------
+ HTTP Method      | `GET`                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/a2p-sms/batches` 
+ Rate Limit Group | `Light`                                                     
+ App Permission   | `A2PSMS`                                                    
+ User Permission  | `N/A`                                                       
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batches().List(listA2PBatchesParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `listA2PBatchesParameters` is of type [ListA2PBatchesParameters](./Definitions/ListA2PBatchesParameters.cs)
+- `result` is of type [BatchListResponse](./Definitions/BatchListResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-listA2PBatches) in API Explorer.
+
+## createA2PSMS
+
+Send A2P SMS
+
+ Name             | Value                                                       
+------------------|-------------------------------------------------------------
+ HTTP Method      | `POST`                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/a2p-sms/batches` 
+ Rate Limit Group | `Light`                                                     
+ App Permission   | `A2PSMS`                                                    
+ User Permission  | `N/A`                                                       
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batches().Post(messageBatchCreateRequest);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `messageBatchCreateRequest` is of type [MessageBatchCreateRequest](./Definitions/MessageBatchCreateRequest.cs)
+- `result` is of type [MessageBatchResponse](./Definitions/MessageBatchResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-createA2PSMS) in API Explorer.
+
+## readA2PBatch
+
+Get A2P SMS Batch
+
+ Name             | Value                                                                 
+------------------|-----------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                 
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/a2p-sms/batches/{batchId}` 
+ Rate Limit Group | `Light`                                                               
+ App Permission   | `A2PSMS`                                                              
+ User Permission  | `N/A`                                                                 
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batches(batchId).Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [MessageBatchResponse](./Definitions/MessageBatchResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-readA2PBatch) in API Explorer.
+
+## listA2PSMS
+
+List A2P SMS Messages
+
+ Name             | Value                                                        
+------------------|--------------------------------------------------------------
+ HTTP Method      | `GET`                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/a2p-sms/messages` 
+ Rate Limit Group | `Light`                                                      
+ App Permission   | `A2PSMS`                                                     
+ User Permission  | `N/A`                                                        
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Messages().List(listA2PSMSParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `listA2PSMSParameters` is of type [ListA2PSMSParameters](./Definitions/ListA2PSMSParameters.cs)
+- `result` is of type [MessageListResponse](./Definitions/MessageListResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-listA2PSMS) in API Explorer.
+
+## readA2PSMS
+
+Get A2P SMS
+
+ Name             | Value                                                                    
+------------------|--------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/a2p-sms/messages/{messageId}` 
+ Rate Limit Group | `Light`                                                                  
+ App Permission   | `A2PSMS`                                                                 
+ User Permission  | `N/A`                                                                    
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Messages(messageId).Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [MessageDetailsResponse](./Definitions/MessageDetailsResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-readA2PSMS) in API Explorer.
+
+## aggregateA2PSMSStatuses
+
+List A2P SMS Statuses
+
+ Name             | Value                                                        
+------------------|--------------------------------------------------------------
+ HTTP Method      | `GET`                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/a2p-sms/statuses` 
+ Rate Limit Group | `Light`                                                      
+ App Permission   | `A2PSMS`                                                     
+ User Permission  | `N/A`                                                        
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Statuses().Get(aggregateA2PSMSStatusesParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `aggregateA2PSMSStatusesParameters` is of
+  type [AggregateA2PSMSStatusesParameters](./Definitions/AggregateA2PSMSStatusesParameters.cs)
+- `result` is of type [MessageStatusesResponse](./Definitions/MessageStatusesResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-aggregateA2PSMSStatuses) in API Explorer.
+
+## listCompanyAnsweringRules
+
+List Company Call Handling Rules
+
+ Name             | Value                                                      
+------------------|------------------------------------------------------------
+ HTTP Method      | `GET`                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/answering-rule` 
+ Rate Limit Group | `Medium`                                                   
+ App Permission   | `ReadAccounts`                                             
+ User Permission  | `ReadCompanyAnsweringRules`                                
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().List(listCompanyAnsweringRulesParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `listCompanyAnsweringRulesParameters` is of
+  type [ListCompanyAnsweringRulesParameters](./Definitions/ListCompanyAnsweringRulesParameters.cs)
+- `result` is of type [CompanyAnsweringRuleList](./Definitions/CompanyAnsweringRuleList.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-listCompanyAnsweringRules) in API
+Explorer.
+
+## createCompanyAnsweringRule
+
+Create Company Call Handling Rule
+
+ Name             | Value                                                      
+------------------|------------------------------------------------------------
+ HTTP Method      | `POST`                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/answering-rule` 
+ Rate Limit Group | `Medium`                                                   
+ App Permission   | `EditAccounts`                                             
+ User Permission  | `EditCompanyAnsweringRules`                                
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().Post(companyAnsweringRuleRequest);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `companyAnsweringRuleRequest` is of type [CompanyAnsweringRuleRequest](./Definitions/CompanyAnsweringRuleRequest.cs)
+- `result` is of type [CompanyAnsweringRuleInfo](./Definitions/CompanyAnsweringRuleInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-createCompanyAnsweringRule) in API
+Explorer.
+
+## readCompanyAnsweringRule
+
+Get Company Call Handling Rule
+
+ Name             | Value                                                               
+------------------|---------------------------------------------------------------------
+ HTTP Method      | `GET`                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/answering-rule/{ruleId}` 
+ Rate Limit Group | `Light`                                                             
+ App Permission   | `ReadAccounts`                                                      
+ User Permission  | `ReadCompanyAnsweringRules`                                         
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [CompanyAnsweringRuleInfo](./Definitions/CompanyAnsweringRuleInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-readCompanyAnsweringRule) in API
+Explorer.
+
+## updateCompanyAnsweringRule
+
+Update Company Call Handling Rule
+
+ Name             | Value                                                               
+------------------|---------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                               
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/answering-rule/{ruleId}` 
+ Rate Limit Group | `Medium`                                                            
+ App Permission   | `EditAccounts`                                                      
+ User Permission  | `EditCompanyAnsweringRules`                                         
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Put(companyAnsweringRuleUpdate);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `companyAnsweringRuleUpdate` is of type [CompanyAnsweringRuleUpdate](./Definitions/CompanyAnsweringRuleUpdate.cs)
+- `result` is of type [CompanyAnsweringRuleInfo](./Definitions/CompanyAnsweringRuleInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-updateCompanyAnsweringRule) in API
+Explorer.
+
+## deleteCompanyAnsweringRule
+
+Delete Company Call Handling Rule
+
+ Name             | Value                                                               
+------------------|---------------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                            
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/answering-rule/{ruleId}` 
+ Rate Limit Group | `Medium`                                                            
+ App Permission   | `EditAccounts`                                                      
+ User Permission  | `EditCompanyAnsweringRules`                                         
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Delete();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-deleteCompanyAnsweringRule) in API
+Explorer.
+
+## listAssignedRoles
+
+List Company Assigned Roles
+
+ Name             | Value                                                     
+------------------|-----------------------------------------------------------
+ HTTP Method      | `GET`                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/assigned-role` 
+ Rate Limit Group | `Medium`                                                  
+ App Permission   | `ReadAccounts`                                            
+ User Permission  | `ReadAssignedRoles`                                       
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).AssignedRole().Get(listAssignedRolesParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `listAssignedRolesParameters` is of type [ListAssignedRolesParameters](./Definitions/ListAssignedRolesParameters.cs)
+- `result` is of type [ExtensionWithRolesCollectionResource](./Definitions/ExtensionWithRolesCollectionResource.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-listAssignedRoles) in API Explorer.
+
+## auditTrailSearch
+
+Search Audit Trail Data
+
+ Name             | Value                                                          
+------------------|----------------------------------------------------------------
+ HTTP Method      | `POST`                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/audit-trail/search` 
+ Rate Limit Group | `Heavy`                                                        
+ App Permission   | `ReadAuditTrail`                                               
+ User Permission  | `N/A`                                                          
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).AuditTrail().Search().Post(accountHistorySearchPublicRequest);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `accountHistorySearchPublicRequest` is of
+  type [AccountHistorySearchPublicRequest](./Definitions/AccountHistorySearchPublicRequest.cs)
+- `result` is of type [AccountHistorySearchPublicResponse](./Definitions/AccountHistorySearchPublicResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Audit-Trail-auditTrailSearch) in API Explorer.
+
+## readAccountBusinessAddress
+
+Get Account Business Address
+
+ Name             | Value                                                        
+------------------|--------------------------------------------------------------
+ HTTP Method      | `GET`                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/business-address` 
+ Rate Limit Group | `Light`                                                      
+ App Permission   | `ReadAccounts`                                               
+ User Permission  | `ReadCompanyInfo`                                            
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [AccountBusinessAddressResource](./Definitions/AccountBusinessAddressResource.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Company-readAccountBusinessAddress) in API Explorer.
+
+## updateAccountBusinessAddress
+
+Update Company Business Address
+
+ Name             | Value                                                        
+------------------|--------------------------------------------------------------
+ HTTP Method      | `PUT`                                                        
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/business-address` 
+ Rate Limit Group | `Medium`                                                     
+ App Permission   | `EditAccounts`                                               
+ User Permission  | `EditCompanyInfo`                                            
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Put(modifyAccountBusinessAddressRequest);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `modifyAccountBusinessAddressRequest` is of
+  type [ModifyAccountBusinessAddressRequest](./Definitions/ModifyAccountBusinessAddressRequest.cs)
+- `result` is of type [AccountBusinessAddressResource](./Definitions/AccountBusinessAddressResource.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Company-updateAccountBusinessAddress) in API Explorer.
+
+## readCompanyBusinessHours
+
+Get Company Business Hours
+
+ Name             | Value                                                      
+------------------|------------------------------------------------------------
+ HTTP Method      | `GET`                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/business-hours` 
+ Rate Limit Group | `Light`                                                    
+ App Permission   | `ReadAccounts`                                             
+ User Permission  | `ReadCompanyAnsweringRules`                                
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [CompanyBusinessHours](./Definitions/CompanyBusinessHours.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Business-Hours-readCompanyBusinessHours) in API Explorer.
+
+## updateCompanyBusinessHours
+
+Update Company Business Hours
+
+ Name             | Value                                                      
+------------------|------------------------------------------------------------
+ HTTP Method      | `PUT`                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/business-hours` 
+ Rate Limit Group | `Medium`                                                   
+ App Permission   | `EditExtensions`                                           
+ User Permission  | `EditUserAnsweringRules`                                   
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Put(companyBusinessHoursUpdateRequest);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `companyBusinessHoursUpdateRequest` is of
+  type [CompanyBusinessHoursUpdateRequest](./Definitions/CompanyBusinessHoursUpdateRequest.cs)
+- `result` is of type [CompanyBusinessHours](./Definitions/CompanyBusinessHours.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Business-Hours-updateCompanyBusinessHours) in API Explorer.
+
+## extractSyncAccountCallLog
+
+Extract Sync Company Call Log
+
+ Name             | Value                                                             
+------------------|-------------------------------------------------------------------
+ HTTP Method      | `GET`                                                             
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-log-extract-sync` 
+ Rate Limit Group | `Heavy`                                                           
+ App Permission   | `ReadCallLog`                                                     
+ User Permission  | `ReadCallLog`                                                     
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallLogExtractSync().Get(extractSyncAccountCallLogParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `extractSyncAccountCallLogParameters` is of
+  type [ExtractSyncAccountCallLogParameters](./Definitions/ExtractSyncAccountCallLogParameters.cs)
+- `result` is of type [CallLogExtractSyncResponse](./Definitions/CallLogExtractSyncResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-extractSyncAccountCallLog) in API Explorer.
+
+## syncAccountCallLog
+
+Sync Company Call Log
+
+ Name             | Value                                                     
+------------------|-----------------------------------------------------------
+ HTTP Method      | `GET`                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-log-sync` 
+ Rate Limit Group | `Heavy`                                                   
+ App Permission   | `ReadCallLog`                                             
+ User Permission  | `ReadCallLog`                                             
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallLogSync().Get(syncAccountCallLogParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `syncAccountCallLogParameters` is of
+  type [SyncAccountCallLogParameters](./Definitions/SyncAccountCallLogParameters.cs)
+- `result` is of type [CallLogSyncResponse](./Definitions/CallLogSyncResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-syncAccountCallLog) in API Explorer.
+
+## listCallQueueMembers
+
+List Call Queue Members
+
+ Name             | Value                                                                     
+------------------|---------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/members` 
+ Rate Limit Group | `Light`                                                                   
+ App Permission   | `ReadAccounts`                                                            
+ User Permission  | `ReadExtensions`                                                          
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Members().Get(listCallQueueMembersParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `listCallQueueMembersParameters` is of
+  type [ListCallQueueMembersParameters](./Definitions/ListCallQueueMembersParameters.cs)
+- `result` is of type [CallQueueMembers](./Definitions/CallQueueMembers.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Queues-listCallQueueMembers) in API Explorer.
+
+## readCallQueuePresence
+
+Get Call Queue Presence
+
+ Name             | Value                                                                      
+------------------|----------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/presence` 
+ Rate Limit Group | `Light`                                                                    
+ App Permission   | `ReadPresence`                                                             
+ User Permission  | `N/A`                                                                      
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Presence().Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [CallQueuePresence](./Definitions/CallQueuePresence.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Presence-readCallQueuePresence) in API Explorer.
+
+## updateCallQueuePresence
+
+Update Call Queue Presence
+
+ Name             | Value                                                                      
+------------------|----------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/presence` 
+ Rate Limit Group | `Medium`                                                                   
+ App Permission   | `EditPresence`                                                             
+ User Permission  | `N/A`                                                                      
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallQueues(groupId).Presence().Put(callQueueUpdatePresence);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `callQueueUpdatePresence` is of type [CallQueueUpdatePresence](./Definitions/CallQueueUpdatePresence.cs)
+- `result` is of type [CallQueuePresence](./Definitions/CallQueuePresence.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Presence-updateCallQueuePresence) in API Explorer.
+
+## readCallRecordingSettings
+
+Get Call Recording Settings
+
+ Name             | Value                                                      
+------------------|------------------------------------------------------------
+ HTTP Method      | `GET`                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-recording` 
+ Rate Limit Group | `Light`                                                    
+ App Permission   | `ReadAccounts`                                             
+ User Permission  | `ReadCompanyInfo`                                          
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [CallRecordingSettingsResource](./Definitions/CallRecordingSettingsResource.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-readCallRecordingSettings) in API
+Explorer.
+
+## updateCallRecordingSettings
+
+Update Call Recording Settings
+
+ Name             | Value                                                      
+------------------|------------------------------------------------------------
+ HTTP Method      | `PUT`                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-recording` 
+ Rate Limit Group | `Medium`                                                   
+ App Permission   | `EditAccounts`                                             
+ User Permission  | `EditCompanyInfo`                                          
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Put(callRecordingSettingsResource);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `callRecordingSettingsResource` is of
+  type [CallRecordingSettingsResource](./Definitions/CallRecordingSettingsResource.cs)
+- `result` is of type [CallRecordingSettingsResource](./Definitions/CallRecordingSettingsResource.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-updateCallRecordingSettings) in API
+Explorer.
+
+## deleteCompanyCallRecordings
+
+Delete Company Call Recordings
+
+ Name             | Value                                                       
+------------------|-------------------------------------------------------------
+ HTTP Method      | `DELETE`                                                    
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-recordings` 
+ Rate Limit Group | `Heavy`                                                     
+ App Permission   | `EditCallLog`                                               
+ User Permission  | `EditCompanyCallRecordings`                                 
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).CallRecordings().Delete(callRecordingIds);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `callRecordingIds` is of type [CallRecordingIds](./Definitions/CallRecordingIds.cs)
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Recordings-deleteCompanyCallRecordings) in API
+Explorer.
+
+## updateDeviceEmergency
+
+Update Device Emergency Info
+
+ Name             | Value                                                                   
+------------------|-------------------------------------------------------------------------
+ HTTP Method      | `PUT`                                                                   
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/device/{deviceId}/emergency` 
+ Rate Limit Group | `Medium`                                                                
+ App Permission   | `EditAccounts`                                                          
+ User Permission  | `EditCompanyDevices`                                                    
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Emergency().Put(accountDeviceUpdate);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `accountDeviceUpdate` is of type [AccountDeviceUpdate](./Definitions/AccountDeviceUpdate.cs)
+- `result` is of type [DeviceResource](./Definitions/DeviceResource.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Devices-updateDeviceEmergency) in API Explorer.
+
+## readDeviceSipInfo
+
+Get Device SIP Info
+
+ Name             | Value                                                                  
+------------------|------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                  
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/device/{deviceId}/sip-info` 
+ Rate Limit Group | `Light`                                                                
+ App Permission   | `ReadAccounts`                                                         
+ User Permission  | `ReadCompanyDevices`                                                   
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).SipInfo().Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `result` is of type [SipInfoResource](./Definitions/SipInfoResource.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Devices-readDeviceSipInfo) in API Explorer.
+
+## listDirectoryEntries
+
+Get Company Directory Entries
+
+ Name             | Value                                                         
+------------------|---------------------------------------------------------------
+ HTTP Method      | `GET`                                                         
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/directory/entries` 
+ Rate Limit Group | `Medium`                                                      
+ App Permission   | `ReadAccounts`                                                
+ User Permission  | `N/A`                                                         
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().List(listDirectoryEntriesParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `listDirectoryEntriesParameters` is of
+  type [ListDirectoryEntriesParameters](./Definitions/ListDirectoryEntriesParameters.cs)
+- `result` is of type [DirectoryResource](./Definitions/DirectoryResource.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Internal-Contacts-listDirectoryEntries) in API Explorer.
+
+## readDirectoryEntry
+
+Get Corporate Directory Entry
+
+ Name             | Value                                                                   
+------------------|-------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                   
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/directory/entries/{entryId}` 
+ Rate Limit Group | `Medium`                                                                
+ App Permission   | `ReadAccounts`                                                          
+ User Permission  | `N/A`                                                                   
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries(entryId).Get(readDirectoryEntryParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- `readDirectoryEntryParameters` is of
+  type [ReadDirectoryEntryParameters](./Definitions/ReadDirectoryEntryParameters.cs)
+- `result` is of type [ContactResource](./Definitions/ContactResource.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Internal-Contacts-readDirectoryEntry) in API Explorer.
 
 ## readDirectoryFederation
 
@@ -3204,6 +5235,34 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#User-Settings-updateExtensionCallerId) in API Explorer.
 
+## listExtensionDevices
+
+List Extension Devices
+
+ Name             | Value                                                                      
+------------------|----------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                      
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/device` 
+ Rate Limit Group | `Light`                                                                    
+ App Permission   | `ReadAccounts`                                                             
+ User Permission  | `ReadUserDevices`                                                          
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Device().Get(listExtensionDevicesParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `listExtensionDevicesParameters` is of
+  type [ListExtensionDevicesParameters](./Definitions/ListExtensionDevicesParameters.cs)
+- `result` is of type [GetExtensionDevicesResponse](./Definitions/GetExtensionDevicesResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Devices-listExtensionDevices) in API Explorer.
+
 ## listFavoriteContacts
 
 List Favorite Contacts
@@ -3258,33 +5317,6 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#External-Contacts-updateFavoriteContactList) in API
 Explorer.
 
-## createFaxMessage
-
-Create Fax Message
-
- Name             | Value                                                                   
-------------------|-------------------------------------------------------------------------
- HTTP Method      | `POST`                                                                  
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/fax` 
- Rate Limit Group | `Heavy`                                                                 
- App Permission   | `Faxes`                                                                 
- User Permission  | `OutboundFaxes`                                                         
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Fax().Post(createFaxMessageRequest);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
-- `createFaxMessageRequest` is of type [CreateFaxMessageRequest](./Definitions/CreateFaxMessageRequest.cs)
-- `result` is of type [FaxResponse](./Definitions/FaxResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Fax-createFaxMessage) in API Explorer.
-
 ## readExtensionFeatures
 
 Get User Features
@@ -3311,7 +5343,35 @@ await rc.Revoke();
   type [ReadExtensionFeaturesParameters](./Definitions/ReadExtensionFeaturesParameters.cs)
 - `result` is of type [FeatureList](./Definitions/FeatureList.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Features-readExtensionFeatures) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-readExtensionFeatures) in API Explorer.
+
+## listExtensionGrants
+
+List Extension Grants
+
+ Name             | Value                                                                     
+------------------|---------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/grant` 
+ Rate Limit Group | `Light`                                                                   
+ App Permission   | `ReadAccounts`                                                            
+ User Permission  | `ReadExtensions`                                                          
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Grant().Get(listExtensionGrantsParameters);
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `listExtensionGrantsParameters` is of
+  type [ListExtensionGrantsParameters](./Definitions/ListExtensionGrantsParameters.cs)
+- `result` is of type [GetExtensionGrantListResponse](./Definitions/GetExtensionGrantListResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-listExtensionGrants) in API Explorer.
 
 ## createCustomUserGreeting
 
@@ -3368,33 +5428,6 @@ await rc.Revoke();
 - `result` is of type [CustomUserGreetingInfo](./Definitions/CustomUserGreetingInfo.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Greetings-readCustomGreeting) in API Explorer.
-
-## createMMS
-
-Send MMS
-
- Name             | Value                                                                   
-------------------|-------------------------------------------------------------------------
- HTTP Method      | `POST`                                                                  
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/mms` 
- Rate Limit Group | `Medium`                                                                
- App Permission   | `SMS`                                                                   
- User Permission  | `OutboundSMS`                                                           
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Mms().Post(createMMSMessage);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
-- `createMMSMessage` is of type [CreateMMSMessage](./Definitions/CreateMMSMessage.cs)
-- `result` is of type [GetSMSMessageInfoResponse](./Definitions/GetSMSMessageInfoResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#SMS-createMMS) in API Explorer.
 
 ## readUserPresenceStatus
 
@@ -3530,33 +5563,6 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#RingOut-deleteRingOutCall) in API Explorer.
 
-## createSMSMessage
-
-Send SMS
-
- Name             | Value                                                                   
-------------------|-------------------------------------------------------------------------
- HTTP Method      | `POST`                                                                  
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/sms` 
- Rate Limit Group | `Medium`                                                                
- App Permission   | `SMS`                                                                   
- User Permission  | `OutboundSMS`                                                           
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Sms().Post(createSMSMessage);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
-- `createSMSMessage` is of type [CreateSMSMessage](./Definitions/CreateSMSMessage.cs)
-- `result` is of type [GetSMSMessageInfoResponse](./Definitions/GetSMSMessageInfoResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#SMS-createSMSMessage) in API Explorer.
-
 ## getForwardAllCompanyCalls
 
 Get Forward All Company Calls
@@ -3611,132 +5617,36 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-updateForwardAllCompanyCalls) in API
 Explorer.
 
-## listIvrPrompts
+## readAccountGreetingContent
 
-List IVR Prompts
+Get Account Greeting Media Content
 
- Name             | Value                                                   
-------------------|---------------------------------------------------------
- HTTP Method      | `GET`                                                   
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/ivr-prompts` 
- Rate Limit Group | `Medium`                                                
- App Permission   | `ReadAccounts`                                          
- User Permission  | `ReadCompanyGreetings`                                  
+ Name             | Value                                                                     
+------------------|---------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                     
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/greeting/{greetingId}/content` 
+ Rate Limit Group | `Heavy`                                                                   
+ App Permission   | `ReadAccounts`                                                            
+ User Permission  | `N/A`                                                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().List();
+var result = await rc.Restapi(apiVersion).Account(accountId).Greeting(greetingId).Content().Get(readAccountGreetingContentParameters);
 await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is of type [IvrPrompts](./Definitions/IvrPrompts.cs)
+- `readAccountGreetingContentParameters` is of
+  type [ReadAccountGreetingContentParameters](./Definitions/ReadAccountGreetingContentParameters.cs)
+- `result` is of type `byte[]`
 
-[Try it out](https://developer.ringcentral.com/api-reference#IVR-listIvrPrompts) in API Explorer.
+### ❗❗❗ Code sample above may not work
 
-## createIVRPrompt
+Please refer to [Binary content downloading](/README.md#Binary-content-downloading).
 
-Create IVR Prompts
-
- Name             | Value                                                   
-------------------|---------------------------------------------------------
- HTTP Method      | `POST`                                                  
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/ivr-prompts` 
- Rate Limit Group | `Heavy`                                                 
- App Permission   | `EditAccounts`                                          
- User Permission  | `EditCompanyGreetings`                                  
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts().Post(createIVRPromptRequest);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `createIVRPromptRequest` is of type [CreateIVRPromptRequest](./Definitions/CreateIVRPromptRequest.cs)
-- `result` is of type [PromptInfo](./Definitions/PromptInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#IVR-createIVRPrompt) in API Explorer.
-
-## readIVRPrompt
-
-Get IVR Prompt
-
- Name             | Value                                                              
-------------------|--------------------------------------------------------------------
- HTTP Method      | `GET`                                                              
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/ivr-prompts/{promptId}` 
- Rate Limit Group | `Medium`                                                           
- App Permission   | `ReadAccounts`                                                     
- User Permission  | `ReadCompanyGreetings`                                             
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Get();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [PromptInfo](./Definitions/PromptInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#IVR-readIVRPrompt) in API Explorer.
-
-## updateIVRPrompt
-
-Update IVR Prompt
-
- Name             | Value                                                              
-------------------|--------------------------------------------------------------------
- HTTP Method      | `PUT`                                                              
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/ivr-prompts/{promptId}` 
- Rate Limit Group | `Medium`                                                           
- App Permission   | `EditAccounts`                                                     
- User Permission  | `EditCompanyGreetings`                                             
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Put(updateIVRPromptRequest);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `updateIVRPromptRequest` is of type [UpdateIVRPromptRequest](./Definitions/UpdateIVRPromptRequest.cs)
-- `result` is of type [PromptInfo](./Definitions/PromptInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#IVR-updateIVRPrompt) in API Explorer.
-
-## deleteIVRPrompt
-
-Delete IVR Prompt
-
- Name             | Value                                                              
-------------------|--------------------------------------------------------------------
- HTTP Method      | `DELETE`                                                           
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/ivr-prompts/{promptId}` 
- Rate Limit Group | `Heavy`                                                            
- App Permission   | `EditAccounts`                                                     
- User Permission  | `EditCompanyGreetings`                                             
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).IvrPrompts(promptId).Delete();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#IVR-deleteIVRPrompt) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Greetings-readAccountGreetingContent) in API Explorer.
 
 ## readIVRPromptContent
 
@@ -3822,82 +5732,36 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Message-Exports-readMessageStoreReportTask) in API
 Explorer.
 
-## listAccountPhoneNumbers
+## readCallRecordingContent
 
-List Company Phone Numbers
+Get Call Recording Content
 
- Name             | Value                                                    
-------------------|----------------------------------------------------------
- HTTP Method      | `GET`                                                    
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/phone-number` 
- Rate Limit Group | `Heavy`                                                  
- App Permission   | `ReadAccounts`                                           
- User Permission  | `ReadCompanyPhoneNumbers`                                
+ Name             | Value                                                                       
+------------------|-----------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                       
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/recording/{recordingId}/content` 
+ Rate Limit Group | `Heavy`                                                                     
+ App Permission   | `ReadCallRecording`                                                         
+ User Permission  | `N/A`                                                                       
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber().List(listAccountPhoneNumbersParameters);
+var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).Content().Get(readCallRecordingContentParameters);
 await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `listAccountPhoneNumbersParameters` is of
-  type [ListAccountPhoneNumbersParameters](./Definitions/ListAccountPhoneNumbersParameters.cs)
-- `result` is of type [AccountPhoneNumbers](./Definitions/AccountPhoneNumbers.cs)
+- `readCallRecordingContentParameters` is of
+  type [ReadCallRecordingContentParameters](./Definitions/ReadCallRecordingContentParameters.cs)
+- `result` is of type `byte[]`
 
-[Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-listAccountPhoneNumbers) in API Explorer.
+### ❗❗❗ Code sample above may not work
 
-## readAccountPhoneNumber
+Please refer to [Binary content downloading](/README.md#Binary-content-downloading).
 
-Get Phone Number
-
- Name             | Value                                                                    
-------------------|--------------------------------------------------------------------------
- HTTP Method      | `GET`                                                                    
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/phone-number/{phoneNumberId}` 
- Rate Limit Group | `Light`                                                                  
- App Permission   | `ReadAccounts`                                                           
- User Permission  | `ReadCompanyPhoneNumbers`                                                
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).PhoneNumber(phoneNumberId).Get();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [CompanyPhoneNumberInfo](./Definitions/CompanyPhoneNumberInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-readAccountPhoneNumber) in API Explorer.
-
-## readAccountServiceInfo
-
-Get Account Service Info
-
- Name             | Value                                                    
-------------------|----------------------------------------------------------
- HTTP Method      | `GET`                                                    
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/service-info` 
- Rate Limit Group | `Light`                                                  
- App Permission   | `ReadAccounts`                                           
- User Permission  | `ReadCompanyInfo`                                        
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).ServiceInfo().Get();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [AccountServiceInfo](./Definitions/AccountServiceInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Company-readAccountServiceInfo) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Call-Recordings-readCallRecordingContent) in API Explorer.
 
 ## assignMultipleSites
 
@@ -3924,31 +5788,6 @@ await rc.Revoke();
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Multi-Site-assignMultipleSites) in API Explorer.
-
-## listSiteMembers
-
-List Site Members
-
- Name             | Value                                                              
-------------------|--------------------------------------------------------------------
- HTTP Method      | `GET`                                                              
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/sites/{siteId}/members` 
- Rate Limit Group | `Medium`                                                           
- App Permission   | `ReadAccounts`                                                     
- User Permission  | `ReadExtensions`                                                   
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).Sites(siteId).Members().Get();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [SiteMembersList](./Definitions/SiteMembersList.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Multi-Site-listSiteMembers) in API Explorer.
 
 ## createCallOutCallSession
 
@@ -4157,55 +5996,6 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Device-SIP-Registration-createSIPRegistration) in API
 Explorer.
 
-## listCountries
-
-List Countries
-
- Name             | Value                                      
-------------------|--------------------------------------------
- HTTP Method      | `GET`                                      
- Endpoint         | `/restapi/{apiVersion}/dictionary/country` 
- Rate Limit Group | `Light`                                    
- App Permission   | `N/A`                                      
- User Permission  | `N/A`                                      
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Dictionary().Country().List(listCountriesParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `listCountriesParameters` is of type [ListCountriesParameters](./Definitions/ListCountriesParameters.cs)
-- `result` is of type [CountryListDictionaryModel](./Definitions/CountryListDictionaryModel.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listCountries) in API Explorer.
-
-## readCountry
-
-Get Country
-
- Name             | Value                                                  
-------------------|--------------------------------------------------------
- HTTP Method      | `GET`                                                  
- Endpoint         | `/restapi/{apiVersion}/dictionary/country/{countryId}` 
- Rate Limit Group | `Light`                                                
- App Permission   | `N/A`                                                  
- User Permission  | `N/A`                                                  
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Dictionary().Country(countryId).Get();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [CountryInfoDictionaryModel](./Definitions/CountryInfoDictionaryModel.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readCountry) in API Explorer.
-
 ## listFaxCoverPages
 
 List Fax Cover Pages
@@ -4231,251 +6021,194 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Fax-listFaxCoverPages) in API Explorer.
 
-## listStandardGreetings
+## getGlipAdaptiveCardNew
 
-List Standard Greetings
+Get Adaptive Card
 
- Name             | Value                                       
-------------------|---------------------------------------------
- HTTP Method      | `GET`                                       
- Endpoint         | `/restapi/{apiVersion}/dictionary/greeting` 
- Rate Limit Group | `Medium`                                    
- App Permission   | `N/A`                                       
- User Permission  | `N/A`                                       
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Dictionary().Greeting().List(listStandardGreetingsParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `listStandardGreetingsParameters` is of
-  type [ListStandardGreetingsParameters](./Definitions/ListStandardGreetingsParameters.cs)
-- `result` is of type [DictionaryGreetingList](./Definitions/DictionaryGreetingList.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Greetings-listStandardGreetings) in API Explorer.
-
-## readStandardGreeting
-
-Get Standard Greeting
-
- Name             | Value                                                    
-------------------|----------------------------------------------------------
- HTTP Method      | `GET`                                                    
- Endpoint         | `/restapi/{apiVersion}/dictionary/greeting/{greetingId}` 
- Rate Limit Group | `Medium`                                                 
- App Permission   | `N/A`                                                    
- User Permission  | `N/A`                                                    
+ Name             | Value                                        
+------------------|----------------------------------------------
+ HTTP Method      | `GET`                                        
+ Endpoint         | `/team-messaging/v1/adaptive-cards/{cardId}` 
+ Rate Limit Group | `Medium`                                     
+ App Permission   | `TeamMessaging`                              
+ User Permission  | `N/A`                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Dictionary().Greeting(greetingId).Get();
+var result = await rc.TeamMessaging().V1().AdaptiveCards(cardId).Get();
 await rc.Revoke();
 ```
 
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [DictionaryGreetingInfo](./Definitions/DictionaryGreetingInfo.cs)
+- `result` is of type [AdaptiveCardInfo](./Definitions/AdaptiveCardInfo.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Greetings-readStandardGreeting) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Adaptive-Cards-getGlipAdaptiveCardNew) in API Explorer.
 
-## listLanguages
+## updateGlipAdaptiveCardNew
 
-List Languages
+Update Adaptive Card
 
- Name             | Value                                       
-------------------|---------------------------------------------
- HTTP Method      | `GET`                                       
- Endpoint         | `/restapi/{apiVersion}/dictionary/language` 
- Rate Limit Group | `Light`                                     
- App Permission   | `N/A`                                       
- User Permission  | `N/A`                                       
+ Name             | Value                                        
+------------------|----------------------------------------------
+ HTTP Method      | `PUT`                                        
+ Endpoint         | `/team-messaging/v1/adaptive-cards/{cardId}` 
+ Rate Limit Group | `Medium`                                     
+ App Permission   | `TeamMessaging`                              
+ User Permission  | `N/A`                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Dictionary().Language().List();
+var result = await rc.TeamMessaging().V1().AdaptiveCards(cardId).Put(adaptiveCardRequest);
 await rc.Revoke();
 ```
 
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [LanguageList](./Definitions/LanguageList.cs)
+- `adaptiveCardRequest` is of type [AdaptiveCardRequest](./Definitions/AdaptiveCardRequest.cs)
+- `result` is of type [AdaptiveCardShortInfo](./Definitions/AdaptiveCardShortInfo.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listLanguages) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Adaptive-Cards-updateGlipAdaptiveCardNew) in API Explorer.
 
-## readLanguage
+## deleteGlipAdaptiveCardNew
 
-Get Language
+Delete Adaptive Card
 
- Name             | Value                                                    
-------------------|----------------------------------------------------------
- HTTP Method      | `GET`                                                    
- Endpoint         | `/restapi/{apiVersion}/dictionary/language/{languageId}` 
- Rate Limit Group | `Light`                                                  
- App Permission   | `N/A`                                                    
- User Permission  | `N/A`                                                    
+ Name             | Value                                        
+------------------|----------------------------------------------
+ HTTP Method      | `DELETE`                                     
+ Endpoint         | `/team-messaging/v1/adaptive-cards/{cardId}` 
+ Rate Limit Group | `Medium`                                     
+ App Permission   | `TeamMessaging`                              
+ User Permission  | `N/A`                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Dictionary().Language(languageId).Get();
+var result = await rc.TeamMessaging().V1().AdaptiveCards(cardId).Delete();
 await rc.Revoke();
 ```
 
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [LanguageInfo](./Definitions/LanguageInfo.cs)
+- `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readLanguage) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Adaptive-Cards-deleteGlipAdaptiveCardNew) in API Explorer.
 
-## listLocations
+## favoriteGlipChatNew
 
-List Locations
+Add Chat to Favorites
 
- Name             | Value                                       
-------------------|---------------------------------------------
- HTTP Method      | `GET`                                       
- Endpoint         | `/restapi/{apiVersion}/dictionary/location` 
- Rate Limit Group | `Light`                                     
- App Permission   | `N/A`                                       
- User Permission  | `N/A`                                       
+ Name             | Value                                        
+------------------|----------------------------------------------
+ HTTP Method      | `POST`                                       
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/favorite` 
+ Rate Limit Group | `Medium`                                     
+ App Permission   | `TeamMessaging`                              
+ User Permission  | `N/A`                                        
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Dictionary().Location().Get(listLocationsParameters);
+var result = await rc.TeamMessaging().V1().Chats(chatId).Favorite().Post();
 await rc.Revoke();
 ```
 
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `listLocationsParameters` is of type [ListLocationsParameters](./Definitions/ListLocationsParameters.cs)
-- `result` is of type [GetLocationListResponse](./Definitions/GetLocationListResponse.cs)
+- `result` is an empty string
 
-[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listLocations) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Chats-favoriteGlipChatNew) in API Explorer.
 
-## listTimezones
+## listChatNotesNew
 
-List Timezones
+List Notes
 
- Name             | Value                                       
-------------------|---------------------------------------------
- HTTP Method      | `GET`                                       
- Endpoint         | `/restapi/{apiVersion}/dictionary/timezone` 
- Rate Limit Group | `Light`                                     
- App Permission   | `N/A`                                       
- User Permission  | `N/A`                                       
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `GET`                                     
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/notes` 
+ Rate Limit Group | `Heavy`                                   
+ App Permission   | `TeamMessaging`                           
+ User Permission  | `N/A`                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Dictionary().Timezone().List(listTimezonesParameters);
+var result = await rc.TeamMessaging().V1().Chats(chatId).Notes().Get(listChatNotesNewParameters);
 await rc.Revoke();
 ```
 
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `listTimezonesParameters` is of type [ListTimezonesParameters](./Definitions/ListTimezonesParameters.cs)
-- `result` is of type [GetTimezoneListResponse](./Definitions/GetTimezoneListResponse.cs)
+- `listChatNotesNewParameters` is of type [ListChatNotesNewParameters](./Definitions/ListChatNotesNewParameters.cs)
+- `result` is of type [TMNoteList](./Definitions/TMNoteList.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-listTimezones) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Notes-listChatNotesNew) in API Explorer.
 
-## readTimezone
+## createChatNoteNew
 
-Get Timezone
+Create Note
 
- Name             | Value                                                    
-------------------|----------------------------------------------------------
- HTTP Method      | `GET`                                                    
- Endpoint         | `/restapi/{apiVersion}/dictionary/timezone/{timezoneId}` 
- Rate Limit Group | `Light`                                                  
- App Permission   | `N/A`                                                    
- User Permission  | `N/A`                                                    
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `POST`                                    
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/notes` 
+ Rate Limit Group | `Medium`                                  
+ App Permission   | `TeamMessaging`                           
+ User Permission  | `N/A`                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Dictionary().Timezone(timezoneId).Get();
+var result = await rc.TeamMessaging().V1().Chats(chatId).Notes().Post(tMCreateNoteRequest);
 await rc.Revoke();
 ```
 
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [GetTimezoneInfoResponse](./Definitions/GetTimezoneInfoResponse.cs)
+- `tMCreateNoteRequest` is of type [TMCreateNoteRequest](./Definitions/TMCreateNoteRequest.cs)
+- `result` is of type [TMNoteInfo](./Definitions/TMNoteInfo.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Regional-Settings-readTimezone) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Notes-createChatNoteNew) in API Explorer.
 
-## parsePhoneNumber
+## listChatTasksNew
 
-Parse Phone Number(s)
+List Chat Tasks
 
- Name             | Value                                       
-------------------|---------------------------------------------
- HTTP Method      | `POST`                                      
- Endpoint         | `/restapi/{apiVersion}/number-parser/parse` 
- Rate Limit Group | `Light`                                     
- App Permission   | `N/A`                                       
- User Permission  | `N/A`                                       
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `GET`                                     
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/tasks` 
+ Rate Limit Group | `Heavy`                                   
+ App Permission   | `TeamMessaging`                           
+ User Permission  | `N/A`                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).NumberParser().Parse().Post(parsePhoneNumberRequest, parsePhoneNumberParameters);
+var result = await rc.TeamMessaging().V1().Chats(chatId).Tasks().Get(listChatTasksNewParameters);
 await rc.Revoke();
 ```
 
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `parsePhoneNumberRequest` is of type [ParsePhoneNumberRequest](./Definitions/ParsePhoneNumberRequest.cs)
-- `parsePhoneNumberParameters` is of type [ParsePhoneNumberParameters](./Definitions/ParsePhoneNumberParameters.cs)
-- `result` is of type [ParsePhoneNumberResponse](./Definitions/ParsePhoneNumberResponse.cs)
+- `listChatTasksNewParameters` is of type [ListChatTasksNewParameters](./Definitions/ListChatTasksNewParameters.cs)
+- `result` is of type [TMTaskList](./Definitions/TMTaskList.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-parsePhoneNumber) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Tasks-listChatTasksNew) in API Explorer.
 
-## renewSubscription
+## createTaskNew
 
-Renew Subscription
+Create Task
 
- Name             | Value                                                       
-------------------|-------------------------------------------------------------
- HTTP Method      | `POST`                                                      
- Endpoint         | `/restapi/{apiVersion}/subscription/{subscriptionId}/renew` 
- Rate Limit Group | `Light`                                                     
- App Permission   | `N/A`                                                       
- User Permission  | `N/A`                                                       
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `POST`                                    
+ Endpoint         | `/team-messaging/v1/chats/{chatId}/tasks` 
+ Rate Limit Group | `Medium`                                  
+ App Permission   | `TeamMessaging`                           
+ User Permission  | `N/A`                                     
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Subscription(subscriptionId).Renew().Post();
+var result = await rc.TeamMessaging().V1().Chats(chatId).Tasks().Post(tMCreateTaskRequest);
 await rc.Revoke();
 ```
 
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [SubscriptionInfo](./Definitions/SubscriptionInfo.cs)
+- `tMCreateTaskRequest` is of type [TMCreateTaskRequest](./Definitions/TMCreateTaskRequest.cs)
+- `result` is of type [TMTaskInfo](./Definitions/TMTaskInfo.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Subscriptions-renewSubscription) in API Explorer.
-
-## scimGetProviderConfig2
-
-Get Provider Config
-
- Name             | Value                                   
-------------------|-----------------------------------------
- HTTP Method      | `GET`                                   
- Endpoint         | `/scim/{version}/ServiceProviderConfig` 
- Rate Limit Group | `Light`                                 
- App Permission   | `ReadAccounts`                          
- User Permission  | `N/A`                                   
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Scim(version).ServiceProviderConfig().Get();
-await rc.Revoke();
-```
-
-- Parameter `version` is optional with default value `v2`
-- `result` is of type [ScimProviderConfig](./Definitions/ScimProviderConfig.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#SCIM-scimGetProviderConfig2) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Tasks-createTaskNew) in API Explorer.
 
 ## unfavoriteGlipChatNew
 
@@ -4500,75 +6233,197 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Chats-unfavoriteGlipChatNew) in API Explorer.
 
-## readTMCompanyInfoNew
+## listGlipConversationsNew
 
-Get Company Info
+List Conversations
 
- Name             | Value                                      
-------------------|--------------------------------------------
- HTTP Method      | `GET`                                      
- Endpoint         | `/team-messaging/v1/companies/{companyId}` 
- Rate Limit Group | `Light`                                    
- App Permission   | `TeamMessaging`                            
- User Permission  | `N/A`                                      
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Companies(companyId).Get();
-await rc.Revoke();
-```
-
-- `result` is of type [TMCompanyInfo](./Definitions/TMCompanyInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Profile-readTMCompanyInfoNew) in API Explorer.
-
-## readGlipEveryoneNew
-
-Get Everyone Chat
-
- Name             | Value                         
-------------------|-------------------------------
- HTTP Method      | `GET`                         
- Endpoint         | `/team-messaging/v1/everyone` 
- Rate Limit Group | `Light`                       
- App Permission   | `TeamMessaging`               
- User Permission  | `N/A`                         
+ Name             | Value                              
+------------------|------------------------------------
+ HTTP Method      | `GET`                              
+ Endpoint         | `/team-messaging/v1/conversations` 
+ Rate Limit Group | `Medium`                           
+ App Permission   | `TeamMessaging`                    
+ User Permission  | `N/A`                              
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Everyone().Get();
+var result = await rc.TeamMessaging().V1().Conversations().List(listGlipConversationsNewParameters);
 await rc.Revoke();
 ```
 
-- `result` is of type [EveryoneTeamInfo](./Definitions/EveryoneTeamInfo.cs)
+- `listGlipConversationsNewParameters` is of
+  type [ListGlipConversationsNewParameters](./Definitions/ListGlipConversationsNewParameters.cs)
+- `result` is of type [TMConversationList](./Definitions/TMConversationList.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-readGlipEveryoneNew) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Conversations-listGlipConversationsNew) in API Explorer.
 
-## patchGlipEveryoneNew
+## createGlipConversationNew
 
-Update Everyone Chat
+Create/Open Conversation
 
- Name             | Value                         
-------------------|-------------------------------
- HTTP Method      | `PATCH`                       
- Endpoint         | `/team-messaging/v1/everyone` 
- Rate Limit Group | `Medium`                      
- App Permission   | `TeamMessaging`               
- User Permission  | `N/A`                         
+ Name             | Value                              
+------------------|------------------------------------
+ HTTP Method      | `POST`                             
+ Endpoint         | `/team-messaging/v1/conversations` 
+ Rate Limit Group | `Medium`                           
+ App Permission   | `TeamMessaging`                    
+ User Permission  | `N/A`                              
 
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Everyone().Patch(updateEveryoneTeamRequest);
+var result = await rc.TeamMessaging().V1().Conversations().Post(createConversationRequest);
 await rc.Revoke();
 ```
 
-- `updateEveryoneTeamRequest` is of type [UpdateEveryoneTeamRequest](./Definitions/UpdateEveryoneTeamRequest.cs)
-- `result` is of type [EveryoneTeamInfo](./Definitions/EveryoneTeamInfo.cs)
+- `createConversationRequest` is of type [CreateConversationRequest](./Definitions/CreateConversationRequest.cs)
+- `result` is of type [TMConversationInfo](./Definitions/TMConversationInfo.cs)
 
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-patchGlipEveryoneNew) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#Conversations-createGlipConversationNew) in API Explorer.
+
+## readGlipConversationNew
+
+Get Conversation
+
+ Name             | Value                                       
+------------------|---------------------------------------------
+ HTTP Method      | `GET`                                       
+ Endpoint         | `/team-messaging/v1/conversations/{chatId}` 
+ Rate Limit Group | `Light`                                     
+ App Permission   | `TeamMessaging`                             
+ User Permission  | `N/A`                                       
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Conversations(chatId).Get();
+await rc.Revoke();
+```
+
+- `result` is of type [TMConversationInfo](./Definitions/TMConversationInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Conversations-readGlipConversationNew) in API Explorer.
+
+## listDataExportTasksNew
+
+List Data Export Tasks
+
+ Name             | Value                            
+------------------|----------------------------------
+ HTTP Method      | `GET`                            
+ Endpoint         | `/team-messaging/v1/data-export` 
+ Rate Limit Group | `Medium`                         
+ App Permission   | `TeamMessaging`                  
+ User Permission  | `Glip`                           
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().DataExport().List(listDataExportTasksNewParameters);
+await rc.Revoke();
+```
+
+- `listDataExportTasksNewParameters` is of
+  type [ListDataExportTasksNewParameters](./Definitions/ListDataExportTasksNewParameters.cs)
+- `result` is of type [DataExportTaskList](./Definitions/DataExportTaskList.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Compliance-Exports-listDataExportTasksNew) in API Explorer.
+
+## createDataExportTaskNew
+
+Create Data Export Task
+
+ Name             | Value                            
+------------------|----------------------------------
+ HTTP Method      | `POST`                           
+ Endpoint         | `/team-messaging/v1/data-export` 
+ Rate Limit Group | `Heavy`                          
+ App Permission   | `TeamMessaging`                  
+ User Permission  | `Glip`                           
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().DataExport().Post(createDataExportTaskRequest);
+await rc.Revoke();
+```
+
+- `createDataExportTaskRequest` is of type [CreateDataExportTaskRequest](./Definitions/CreateDataExportTaskRequest.cs)
+- `result` is of type [DataExportTask](./Definitions/DataExportTask.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Compliance-Exports-createDataExportTaskNew) in API
+Explorer.
+
+## readDataExportTaskNew
+
+Get Data Export Task
+
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `GET`                                     
+ Endpoint         | `/team-messaging/v1/data-export/{taskId}` 
+ Rate Limit Group | `Medium`                                  
+ App Permission   | `TeamMessaging`                           
+ User Permission  | `Glip`                                    
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().DataExport(taskId).Get();
+await rc.Revoke();
+```
+
+- `result` is of type [DataExportTask](./Definitions/DataExportTask.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Compliance-Exports-readDataExportTaskNew) in API Explorer.
+
+## listGroupEventsNew
+
+List Group Events
+
+ Name             | Value                                        
+------------------|----------------------------------------------
+ HTTP Method      | `GET`                                        
+ Endpoint         | `/team-messaging/v1/groups/{groupId}/events` 
+ Rate Limit Group | `Medium`                                     
+ App Permission   | `TeamMessaging`                              
+ User Permission  | `N/A`                                        
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Groups(groupId).Events().Get();
+await rc.Revoke();
+```
+
+- `result` is of type [TMEventInfo](./Definitions/TMEventInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-listGroupEventsNew) in API Explorer.
+
+## createEventByGroupIdNew
+
+Create Event by Group ID
+
+ Name             | Value                                        
+------------------|----------------------------------------------
+ HTTP Method      | `POST`                                       
+ Endpoint         | `/team-messaging/v1/groups/{groupId}/events` 
+ Rate Limit Group | `Medium`                                     
+ App Permission   | `TeamMessaging`                              
+ User Permission  | `N/A`                                        
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Groups(groupId).Events().Post(tMCreateEventRequest);
+await rc.Revoke();
+```
+
+- `tMCreateEventRequest` is of type [TMCreateEventRequest](./Definitions/TMCreateEventRequest.cs)
+- `result` is of type [TMEventInfo](./Definitions/TMEventInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-createEventByGroupIdNew) in API Explorer.
 
 ## listGlipGroupWebhooksNew
 
@@ -4618,6 +6473,100 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-createGlipGroupWebhookNew) in API
 Explorer.
 
+## publishNoteNew
+
+Publish Note
+
+ Name             | Value                                       
+------------------|---------------------------------------------
+ HTTP Method      | `POST`                                      
+ Endpoint         | `/team-messaging/v1/notes/{noteId}/publish` 
+ Rate Limit Group | `Medium`                                    
+ App Permission   | `TeamMessaging`                             
+ User Permission  | `N/A`                                       
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Notes(noteId).Publish().Post();
+await rc.Revoke();
+```
+
+- `result` is of type [TMNoteInfo](./Definitions/TMNoteInfo.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Notes-publishNoteNew) in API Explorer.
+
+## unlockNoteNew
+
+Unlock Note
+
+ Name             | Value                                      
+------------------|--------------------------------------------
+ HTTP Method      | `POST`                                     
+ Endpoint         | `/team-messaging/v1/notes/{noteId}/unlock` 
+ Rate Limit Group | `Light`                                    
+ App Permission   | `TeamMessaging`                            
+ User Permission  | `N/A`                                      
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Notes(noteId).Unlock().Post();
+await rc.Revoke();
+```
+
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Notes-unlockNoteNew) in API Explorer.
+
+## listRecentChatsNew
+
+List Recent Chats
+
+ Name             | Value                             
+------------------|-----------------------------------
+ HTTP Method      | `GET`                             
+ Endpoint         | `/team-messaging/v1/recent/chats` 
+ Rate Limit Group | `Light`                           
+ App Permission   | `TeamMessaging`                   
+ User Permission  | `N/A`                             
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Recent().Chats().Get(listRecentChatsNewParameters);
+await rc.Revoke();
+```
+
+- `listRecentChatsNewParameters` is of
+  type [ListRecentChatsNewParameters](./Definitions/ListRecentChatsNewParameters.cs)
+- `result` is of type [TMChatListWithoutNavigation](./Definitions/TMChatListWithoutNavigation.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Chats-listRecentChatsNew) in API Explorer.
+
+## leaveGlipTeamNew
+
+Leave Team
+
+ Name             | Value                                     
+------------------|-------------------------------------------
+ HTTP Method      | `POST`                                    
+ Endpoint         | `/team-messaging/v1/teams/{chatId}/leave` 
+ Rate Limit Group | `Medium`                                  
+ App Permission   | `TeamMessaging`                           
+ User Permission  | `N/A`                                     
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.TeamMessaging().V1().Teams(chatId).Leave().Post();
+await rc.Revoke();
+```
+
+- `result` is an empty string
+
+[Try it out](https://developer.ringcentral.com/api-reference#Teams-leaveGlipTeamNew) in API Explorer.
+
 ## unarchiveGlipTeamNew
 
 Unarchive Team
@@ -4640,387 +6589,6 @@ await rc.Revoke();
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Teams-unarchiveGlipTeamNew) in API Explorer.
-
-## listGlipWebhooksNew
-
-List Webhooks
-
- Name             | Value                         
-------------------|-------------------------------
- HTTP Method      | `GET`                         
- Endpoint         | `/team-messaging/v1/webhooks` 
- Rate Limit Group | `Medium`                      
- App Permission   | `TeamMessaging`               
- User Permission  | `N/A`                         
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Webhooks().List();
-await rc.Revoke();
-```
-
-- `result` is of type [TMWebhookList](./Definitions/TMWebhookList.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-listGlipWebhooksNew) in API Explorer.
-
-## readGlipWebhookNew
-
-Get Webhook
-
- Name             | Value                                     
-------------------|-------------------------------------------
- HTTP Method      | `GET`                                     
- Endpoint         | `/team-messaging/v1/webhooks/{webhookId}` 
- Rate Limit Group | `Medium`                                  
- App Permission   | `TeamMessaging`                           
- User Permission  | `N/A`                                     
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Webhooks(webhookId).Get();
-await rc.Revoke();
-```
-
-- `result` is of type [TMWebhookList](./Definitions/TMWebhookList.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-readGlipWebhookNew) in API Explorer.
-
-## deleteGlipWebhookNew
-
-Delete Webhook
-
- Name             | Value                                     
-------------------|-------------------------------------------
- HTTP Method      | `DELETE`                                  
- Endpoint         | `/team-messaging/v1/webhooks/{webhookId}` 
- Rate Limit Group | `Medium`                                  
- App Permission   | `TeamMessaging`                           
- User Permission  | `N/A`                                     
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Webhooks(webhookId).Delete();
-await rc.Revoke();
-```
-
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Incoming-Webhooks-deleteGlipWebhookNew) in API Explorer.
-
-## listPermissions
-
-List Permissions
-
- Name             | Value                                         
-------------------|-----------------------------------------------
- HTTP Method      | `GET`                                         
- Endpoint         | `/restapi/{apiVersion}/dictionary/permission` 
- Rate Limit Group | `Light`                                       
- App Permission   | `N/A`                                         
- User Permission  | `N/A`                                         
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Dictionary().Permission().List(listPermissionsParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `listPermissionsParameters` is of type [ListPermissionsParameters](./Definitions/ListPermissionsParameters.cs)
-- `result` is of type [PermissionCollectionResource](./Definitions/PermissionCollectionResource.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#User-Permissions-listPermissions) in API Explorer.
-
-## readPermission
-
-Get Permission
-
- Name             | Value                                                        
-------------------|--------------------------------------------------------------
- HTTP Method      | `GET`                                                        
- Endpoint         | `/restapi/{apiVersion}/dictionary/permission/{permissionId}` 
- Rate Limit Group | `Light`                                                      
- App Permission   | `N/A`                                                        
- User Permission  | `N/A`                                                        
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Dictionary().Permission(permissionId).Get();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [PermissionResource](./Definitions/PermissionResource.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#User-Permissions-readPermission) in API Explorer.
-
-## listStandardUserRole
-
-List Standard User Roles
-
- Name             | Value                                        
-------------------|----------------------------------------------
- HTTP Method      | `GET`                                        
- Endpoint         | `/restapi/{apiVersion}/dictionary/user-role` 
- Rate Limit Group | `Light`                                      
- App Permission   | `N/A`                                        
- User Permission  | `N/A`                                        
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Dictionary().UserRole().List(listStandardUserRoleParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `listStandardUserRoleParameters` is of
-  type [ListStandardUserRoleParameters](./Definitions/ListStandardUserRoleParameters.cs)
-- `result` is of type [RolesCollectionResource](./Definitions/RolesCollectionResource.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-listStandardUserRole) in API Explorer.
-
-## readStandardUserRole
-
-Get Standard User Role
-
- Name             | Value                                                 
-------------------|-------------------------------------------------------
- HTTP Method      | `GET`                                                 
- Endpoint         | `/restapi/{apiVersion}/dictionary/user-role/{roleId}` 
- Rate Limit Group | `Light`                                               
- App Permission   | `N/A`                                                 
- User Permission  | `N/A`                                                 
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Dictionary().UserRole(roleId).Get();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- `result` is of type [RoleResource](./Definitions/RoleResource.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-readStandardUserRole) in API Explorer.
-
-## readGlipPostsNew
-
-List Posts
-
- Name             | Value                                     
-------------------|-------------------------------------------
- HTTP Method      | `GET`                                     
- Endpoint         | `/team-messaging/v1/chats/{chatId}/posts` 
- Rate Limit Group | `Medium`                                  
- App Permission   | `TeamMessaging`                           
- User Permission  | `N/A`                                     
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Chats(chatId).Posts().List(readGlipPostsNewParameters);
-await rc.Revoke();
-```
-
-- `readGlipPostsNewParameters` is of type [ReadGlipPostsNewParameters](./Definitions/ReadGlipPostsNewParameters.cs)
-- `result` is of type [TMPostsList](./Definitions/TMPostsList.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Posts-readGlipPostsNew) in API Explorer.
-
-## createGlipPostNew
-
-Create Post
-
- Name             | Value                                     
-------------------|-------------------------------------------
- HTTP Method      | `POST`                                    
- Endpoint         | `/team-messaging/v1/chats/{chatId}/posts` 
- Rate Limit Group | `Medium`                                  
- App Permission   | `TeamMessaging`                           
- User Permission  | `N/A`                                     
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Chats(chatId).Posts().Post(tMCreatePostRequest);
-await rc.Revoke();
-```
-
-- `tMCreatePostRequest` is of type [TMCreatePostRequest](./Definitions/TMCreatePostRequest.cs)
-- `result` is of type [TMPostInfo](./Definitions/TMPostInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Posts-createGlipPostNew) in API Explorer.
-
-## readGlipPostNew
-
-Get Post
-
- Name             | Value                                              
-------------------|----------------------------------------------------
- HTTP Method      | `GET`                                              
- Endpoint         | `/team-messaging/v1/chats/{chatId}/posts/{postId}` 
- Rate Limit Group | `Light`                                            
- App Permission   | `TeamMessaging`                                    
- User Permission  | `N/A`                                              
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Chats(chatId).Posts(postId).Get();
-await rc.Revoke();
-```
-
-- `result` is of type [TMPostInfo](./Definitions/TMPostInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Posts-readGlipPostNew) in API Explorer.
-
-## deleteGlipPostNew
-
-Delete Post
-
- Name             | Value                                              
-------------------|----------------------------------------------------
- HTTP Method      | `DELETE`                                           
- Endpoint         | `/team-messaging/v1/chats/{chatId}/posts/{postId}` 
- Rate Limit Group | `Medium`                                           
- App Permission   | `TeamMessaging`                                    
- User Permission  | `N/A`                                              
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Chats(chatId).Posts(postId).Delete();
-await rc.Revoke();
-```
-
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Posts-deleteGlipPostNew) in API Explorer.
-
-## patchGlipPostNew
-
-Update Post
-
- Name             | Value                                              
-------------------|----------------------------------------------------
- HTTP Method      | `PATCH`                                            
- Endpoint         | `/team-messaging/v1/chats/{chatId}/posts/{postId}` 
- Rate Limit Group | `Medium`                                           
- App Permission   | `TeamMessaging`                                    
- User Permission  | `N/A`                                              
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Chats(chatId).Posts(postId).Patch(tMUpdatePostRequest);
-await rc.Revoke();
-```
-
-- `tMUpdatePostRequest` is of type [TMUpdatePostRequest](./Definitions/TMUpdatePostRequest.cs)
-- `result` is of type [TMPostInfo](./Definitions/TMPostInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Posts-patchGlipPostNew) in API Explorer.
-
-## listFavoriteChatsNew
-
-List Favorite Chats
-
- Name             | Value                          
-------------------|--------------------------------
- HTTP Method      | `GET`                          
- Endpoint         | `/team-messaging/v1/favorites` 
- Rate Limit Group | `Light`                        
- App Permission   | `TeamMessaging`                
- User Permission  | `N/A`                          
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Favorites().Get(listFavoriteChatsNewParameters);
-await rc.Revoke();
-```
-
-- `listFavoriteChatsNewParameters` is of
-  type [ListFavoriteChatsNewParameters](./Definitions/ListFavoriteChatsNewParameters.cs)
-- `result` is of type [TMChatListWithoutNavigation](./Definitions/TMChatListWithoutNavigation.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-listFavoriteChatsNew) in API Explorer.
-
-## lockNoteNew
-
-Lock Note
-
- Name             | Value                                    
-------------------|------------------------------------------
- HTTP Method      | `POST`                                   
- Endpoint         | `/team-messaging/v1/notes/{noteId}/lock` 
- Rate Limit Group | `Light`                                  
- App Permission   | `TeamMessaging`                          
- User Permission  | `N/A`                                    
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Notes(noteId).Lock().Post();
-await rc.Revoke();
-```
-
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-lockNoteNew) in API Explorer.
-
-## addGlipTeamMembersNew
-
-Add Team Members
-
- Name             | Value                                   
-------------------|-----------------------------------------
- HTTP Method      | `POST`                                  
- Endpoint         | `/team-messaging/v1/teams/{chatId}/add` 
- Rate Limit Group | `Medium`                                
- App Permission   | `TeamMessaging`                         
- User Permission  | `N/A`                                   
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Teams(chatId).Add().Post(tMAddTeamMembersRequest);
-await rc.Revoke();
-```
-
-- `tMAddTeamMembersRequest` is of type [TMAddTeamMembersRequest](./Definitions/TMAddTeamMembersRequest.cs)
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-addGlipTeamMembersNew) in API Explorer.
-
-## joinGlipTeamNew
-
-Join Team
-
- Name             | Value                                    
-------------------|------------------------------------------
- HTTP Method      | `POST`                                   
- Endpoint         | `/team-messaging/v1/teams/{chatId}/join` 
- Rate Limit Group | `Medium`                                 
- App Permission   | `TeamMessaging`                          
- User Permission  | `N/A`                                    
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Teams(chatId).Join().Post();
-await rc.Revoke();
-```
-
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-joinGlipTeamNew) in API Explorer.
 
 ## activateGlipWebhookNew
 
@@ -5217,1547 +6785,6 @@ await rc.Revoke();
 [Try it out](https://developer.ringcentral.com/api-reference#Webinars-and-Sessions-rcwConfigUpdateWebinar) in API
 Explorer.
 
-## rcwHistoryListAllSessions
-
-List Historical Webinar Sessions across Multiple Webinars
-
- Name             | Value                          
-------------------|--------------------------------
- HTTP Method      | `GET`                          
- Endpoint         | `/webinar/history/v1/sessions` 
- Rate Limit Group | `Heavy`                        
- App Permission   | `ReadWebinars`                 
- User Permission  | `N/A`                          
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Webinar().History().V1().Sessions().Get(rcwHistoryListAllSessionsParameters);
-await rc.Revoke();
-```
-
-- `rcwHistoryListAllSessionsParameters` is of
-  type [RcwHistoryListAllSessionsParameters](./Definitions/RcwHistoryListAllSessionsParameters.cs)
-- `result` is of type [SessionGlobalListResource](./Definitions/SessionGlobalListResource.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Historical-Webinars-rcwHistoryListAllSessions) in API
-Explorer.
-
-## rcwHistoryGetWebinar
-
-Get Historical Webinar
-
- Name             | Value                                      
-------------------|--------------------------------------------
- HTTP Method      | `GET`                                      
- Endpoint         | `/webinar/history/v1/webinars/{webinarId}` 
- Rate Limit Group | `Heavy`                                    
- App Permission   | `ReadWebinars`                             
- User Permission  | `N/A`                                      
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Webinar().History().V1().Webinars(webinarId).Get();
-await rc.Revoke();
-```
-
-- `result` is of type [HistoryWebinarResource](./Definitions/HistoryWebinarResource.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Historical-Webinars-rcwHistoryGetWebinar) in API Explorer.
-
-## readOpenIdConfiguration
-
-OIDC Provider Configuration
-
- Name             | Value                               
-------------------|-------------------------------------
- HTTP Method      | `GET`                               
- Endpoint         | `/.well-known/openid-configuration` 
- Rate Limit Group | `NoThrottling`                      
- App Permission   | `N/A`                               
- User Permission  | `N/A`                               
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.WellKnown().OpenidConfiguration().Get();
-await rc.Revoke();
-```
-
-- `result` is of type [OpenIdDiscovery](./Definitions/OpenIdDiscovery.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#OAuth-and-OIDC-readOpenIdConfiguration) in API Explorer.
-
-## caiSpeechToText
-
-Speech to Text Conversion
-
- Name             | Value                               
-------------------|-------------------------------------
- HTTP Method      | `POST`                              
- Endpoint         | `/ai/audio/v1/async/speech-to-text` 
- Rate Limit Group | `Heavy`                             
- App Permission   | `AI`                                
- User Permission  | `N/A`                               
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Ai().Audio().V1().Async().SpeechToText().Post(asrInput, caiSpeechToTextParameters);
-await rc.Revoke();
-```
-
-- `asrInput` is of type [AsrInput](./Definitions/AsrInput.cs)
-- `caiSpeechToTextParameters` is of type [CaiSpeechToTextParameters](./Definitions/CaiSpeechToTextParameters.cs)
-- `result` is of type [CaiAsyncApiResponse](./Definitions/CaiAsyncApiResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Audio-caiSpeechToText) in API Explorer.
-
-## getAccountRecordings
-
-List Account Recordings
-
- Name             | Value                                        
-------------------|----------------------------------------------
- HTTP Method      | `GET`                                        
- Endpoint         | `/rcvideo/v1/account/{accountId}/recordings` 
- Rate Limit Group | `Light`                                      
- App Permission   | `Video`                                      
- User Permission  | `N/A`                                        
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Rcvideo().V1().Account(accountId).Recordings().Get(getAccountRecordingsParameters);
-await rc.Revoke();
-```
-
-- Parameter `accountId` is optional with default value `~`
-- `getAccountRecordingsParameters` is of
-  type [GetAccountRecordingsParameters](./Definitions/GetAccountRecordingsParameters.cs)
-- `result` is of type [CloudRecordings](./Definitions/CloudRecordings.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Meeting-Recordings-getAccountRecordings) in API Explorer.
-
-## listCostCenters
-
-List Cost Centers
-
- Name             | Value                                           
-------------------|-------------------------------------------------
- HTTP Method      | `GET`                                           
- Endpoint         | `/restapi/v2/accounts/{accountId}/cost-centers` 
- Rate Limit Group | `Light`                                         
- App Permission   | `ReadAccounts`                                  
- User Permission  | `CostCenterManagement`                          
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi().V2().Accounts(accountId).CostCenters().Get();
-await rc.Revoke();
-```
-
-- `result` is of type [CostCenterList](./Definitions/CostCenterList.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Cost-Centers-listCostCenters) in API Explorer.
-
-## bulkDeleteUsersV2
-
-Delete Multiple Extensions
-
- Name             | Value                                         
-------------------|-----------------------------------------------
- HTTP Method      | `DELETE`                                      
- Endpoint         | `/restapi/v2/accounts/{accountId}/extensions` 
- Rate Limit Group | `Heavy`                                       
- App Permission   | `EditAccounts`                                
- User Permission  | `Users`                                       
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi().V2().Accounts(accountId).Extensions().Delete(bulkDeleteUsersRequest);
-await rc.Revoke();
-```
-
-- `bulkDeleteUsersRequest` is of type [BulkDeleteUsersRequest](./Definitions/BulkDeleteUsersRequest.cs)
-- `result` is of type [BulkDeleteUsersResponse](./Definitions/BulkDeleteUsersResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-bulkDeleteUsersV2) in API Explorer.
-
-## listAccountPhoneNumbersV2
-
-List Account Phone Numbers
-
- Name             | Value                                            
-------------------|--------------------------------------------------
- HTTP Method      | `GET`                                            
- Endpoint         | `/restapi/v2/accounts/{accountId}/phone-numbers` 
- Rate Limit Group | `Heavy`                                          
- App Permission   | `ReadAccounts`                                   
- User Permission  | `ReadCompanyPhoneNumbers`                        
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi().V2().Accounts(accountId).PhoneNumbers().Get(listAccountPhoneNumbersV2Parameters);
-await rc.Revoke();
-```
-
-- `listAccountPhoneNumbersV2Parameters` is of
-  type [ListAccountPhoneNumbersV2Parameters](./Definitions/ListAccountPhoneNumbersV2Parameters.cs)
-- `result` is of type [AccountPhoneNumberList](./Definitions/AccountPhoneNumberList.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-listAccountPhoneNumbersV2) in API Explorer.
-
-## deleteNumbersFromInventoryV2
-
-Delete Numbers from Inventory
-
- Name             | Value                                            
-------------------|--------------------------------------------------
- HTTP Method      | `DELETE`                                         
- Endpoint         | `/restapi/v2/accounts/{accountId}/phone-numbers` 
- Rate Limit Group | `Medium`                                         
- App Permission   | `EditAccounts`                                   
- User Permission  | `EditCompanyPhoneNumbers`                        
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi().V2().Accounts(accountId).PhoneNumbers().Delete(deletePhoneNumbersRequest);
-await rc.Revoke();
-```
-
-- `deletePhoneNumbersRequest` is of type [DeletePhoneNumbersRequest](./Definitions/DeletePhoneNumbersRequest.cs)
-- `result` is of type [DeletePhoneNumbersResponse](./Definitions/DeletePhoneNumbersResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-deleteNumbersFromInventoryV2) in API
-Explorer.
-
-## assignPhoneNumberV2
-
-Assign Phone Number
-
- Name             | Value                                                            
-------------------|------------------------------------------------------------------
- HTTP Method      | `PATCH`                                                          
- Endpoint         | `/restapi/v2/accounts/{accountId}/phone-numbers/{phoneNumberId}` 
- Rate Limit Group | `Medium`                                                         
- App Permission   | `EditAccounts`                                                   
- User Permission  | `EditCompanyPhoneNumbers`                                        
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi().V2().Accounts(accountId).PhoneNumbers(phoneNumberId).Patch(assignPhoneNumberRequest);
-await rc.Revoke();
-```
-
-- `assignPhoneNumberRequest` is of type [AssignPhoneNumberRequest](./Definitions/AssignPhoneNumberRequest.cs)
-- `result` is of type [AccountPhoneNumberInfo](./Definitions/AccountPhoneNumberInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Phone-Numbers-assignPhoneNumberV2) in API Explorer.
-
-## listSmsOptRecords
-
-List SMS Opt Records
-
- Name             | Value                                           
-------------------|-------------------------------------------------
- HTTP Method      | `GET`                                           
- Endpoint         | `/restapi/v2/accounts/{accountId}/sms/opt-outs` 
- Rate Limit Group | `Light`                                         
- App Permission   | `SMS`                                           
- User Permission  | `N/A`                                           
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi().V2().Accounts(accountId).Sms().OptOuts().Get(listSmsOptRecordsParameters);
-await rc.Revoke();
-```
-
-- `listSmsOptRecordsParameters` is of type [ListSmsOptRecordsParameters](./Definitions/ListSmsOptRecordsParameters.cs)
-- `result` is of type [OptRecordList](./Definitions/OptRecordList.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#SMS-Opt-outs-listSmsOptRecords) in API Explorer.
-
-## deleteSmsOptRecords
-
-Delete SMS Opt Records
-
- Name             | Value                                           
-------------------|-------------------------------------------------
- HTTP Method      | `DELETE`                                        
- Endpoint         | `/restapi/v2/accounts/{accountId}/sms/opt-outs` 
- Rate Limit Group | `Light`                                         
- App Permission   | `SMS`                                           
- User Permission  | `N/A`                                           
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi().V2().Accounts(accountId).Sms().OptOuts().Delete(deleteOptRecordList);
-await rc.Revoke();
-```
-
-- `deleteOptRecordList` is of type [DeleteOptRecordList](./Definitions/DeleteOptRecordList.cs)
-- `result` is of type [OptRecordsModificationSummary](./Definitions/OptRecordsModificationSummary.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#SMS-Opt-outs-deleteSmsOptRecords) in API Explorer.
-
-## editSmsOptRecords
-
-Add/Update SMS Opt Records
-
- Name             | Value                                           
-------------------|-------------------------------------------------
- HTTP Method      | `PATCH`                                         
- Endpoint         | `/restapi/v2/accounts/{accountId}/sms/opt-outs` 
- Rate Limit Group | `Light`                                         
- App Permission   | `SMS`                                           
- User Permission  | `N/A`                                           
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi().V2().Accounts(accountId).Sms().OptOuts().Patch(updateOptRecordList);
-await rc.Revoke();
-```
-
-- `updateOptRecordList` is of type [UpdateOptRecordList](./Definitions/UpdateOptRecordList.cs)
-- `result` is of type [OptRecordsModificationSummary](./Definitions/OptRecordsModificationSummary.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#SMS-Opt-outs-editSmsOptRecords) in API Explorer.
-
-## listA2PBatches
-
-List A2P SMS Batches
-
- Name             | Value                                                       
-------------------|-------------------------------------------------------------
- HTTP Method      | `GET`                                                       
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/a2p-sms/batches` 
- Rate Limit Group | `Light`                                                     
- App Permission   | `A2PSMS`                                                    
- User Permission  | `N/A`                                                       
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batches().List(listA2PBatchesParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `listA2PBatchesParameters` is of type [ListA2PBatchesParameters](./Definitions/ListA2PBatchesParameters.cs)
-- `result` is of type [BatchListResponse](./Definitions/BatchListResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-listA2PBatches) in API Explorer.
-
-## createA2PSMS
-
-Send A2P SMS
-
- Name             | Value                                                       
-------------------|-------------------------------------------------------------
- HTTP Method      | `POST`                                                      
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/a2p-sms/batches` 
- Rate Limit Group | `Light`                                                     
- App Permission   | `A2PSMS`                                                    
- User Permission  | `N/A`                                                       
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batches().Post(messageBatchCreateRequest);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `messageBatchCreateRequest` is of type [MessageBatchCreateRequest](./Definitions/MessageBatchCreateRequest.cs)
-- `result` is of type [MessageBatchResponse](./Definitions/MessageBatchResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-createA2PSMS) in API Explorer.
-
-## readA2PBatch
-
-Get A2P SMS Batch
-
- Name             | Value                                                                 
-------------------|-----------------------------------------------------------------------
- HTTP Method      | `GET`                                                                 
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/a2p-sms/batches/{batchId}` 
- Rate Limit Group | `Light`                                                               
- App Permission   | `A2PSMS`                                                              
- User Permission  | `N/A`                                                                 
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Batches(batchId).Get();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [MessageBatchResponse](./Definitions/MessageBatchResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-readA2PBatch) in API Explorer.
-
-## listA2PSMS
-
-List A2P SMS Messages
-
- Name             | Value                                                        
-------------------|--------------------------------------------------------------
- HTTP Method      | `GET`                                                        
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/a2p-sms/messages` 
- Rate Limit Group | `Light`                                                      
- App Permission   | `A2PSMS`                                                     
- User Permission  | `N/A`                                                        
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Messages().List(listA2PSMSParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `listA2PSMSParameters` is of type [ListA2PSMSParameters](./Definitions/ListA2PSMSParameters.cs)
-- `result` is of type [MessageListResponse](./Definitions/MessageListResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-listA2PSMS) in API Explorer.
-
-## readA2PSMS
-
-Get A2P SMS
-
- Name             | Value                                                                    
-------------------|--------------------------------------------------------------------------
- HTTP Method      | `GET`                                                                    
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/a2p-sms/messages/{messageId}` 
- Rate Limit Group | `Light`                                                                  
- App Permission   | `A2PSMS`                                                                 
- User Permission  | `N/A`                                                                    
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Messages(messageId).Get();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [MessageDetailsResponse](./Definitions/MessageDetailsResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-readA2PSMS) in API Explorer.
-
-## aggregateA2PSMSStatuses
-
-List A2P SMS Statuses
-
- Name             | Value                                                        
-------------------|--------------------------------------------------------------
- HTTP Method      | `GET`                                                        
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/a2p-sms/statuses` 
- Rate Limit Group | `Light`                                                      
- App Permission   | `A2PSMS`                                                     
- User Permission  | `N/A`                                                        
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).A2pSms().Statuses().Get(aggregateA2PSMSStatusesParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `aggregateA2PSMSStatusesParameters` is of
-  type [AggregateA2PSMSStatusesParameters](./Definitions/AggregateA2PSMSStatusesParameters.cs)
-- `result` is of type [MessageStatusesResponse](./Definitions/MessageStatusesResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#High-Volume-SMS-aggregateA2PSMSStatuses) in API Explorer.
-
-## listCompanyAnsweringRules
-
-List Company Call Handling Rules
-
- Name             | Value                                                      
-------------------|------------------------------------------------------------
- HTTP Method      | `GET`                                                      
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/answering-rule` 
- Rate Limit Group | `Medium`                                                   
- App Permission   | `ReadAccounts`                                             
- User Permission  | `ReadCompanyAnsweringRules`                                
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().List(listCompanyAnsweringRulesParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `listCompanyAnsweringRulesParameters` is of
-  type [ListCompanyAnsweringRulesParameters](./Definitions/ListCompanyAnsweringRulesParameters.cs)
-- `result` is of type [CompanyAnsweringRuleList](./Definitions/CompanyAnsweringRuleList.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-listCompanyAnsweringRules) in API
-Explorer.
-
-## createCompanyAnsweringRule
-
-Create Company Call Handling Rule
-
- Name             | Value                                                      
-------------------|------------------------------------------------------------
- HTTP Method      | `POST`                                                     
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/answering-rule` 
- Rate Limit Group | `Medium`                                                   
- App Permission   | `EditAccounts`                                             
- User Permission  | `EditCompanyAnsweringRules`                                
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule().Post(companyAnsweringRuleRequest);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `companyAnsweringRuleRequest` is of type [CompanyAnsweringRuleRequest](./Definitions/CompanyAnsweringRuleRequest.cs)
-- `result` is of type [CompanyAnsweringRuleInfo](./Definitions/CompanyAnsweringRuleInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-createCompanyAnsweringRule) in API
-Explorer.
-
-## readCompanyAnsweringRule
-
-Get Company Call Handling Rule
-
- Name             | Value                                                               
-------------------|---------------------------------------------------------------------
- HTTP Method      | `GET`                                                               
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/answering-rule/{ruleId}` 
- Rate Limit Group | `Light`                                                             
- App Permission   | `ReadAccounts`                                                      
- User Permission  | `ReadCompanyAnsweringRules`                                         
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Get();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [CompanyAnsweringRuleInfo](./Definitions/CompanyAnsweringRuleInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-readCompanyAnsweringRule) in API
-Explorer.
-
-## updateCompanyAnsweringRule
-
-Update Company Call Handling Rule
-
- Name             | Value                                                               
-------------------|---------------------------------------------------------------------
- HTTP Method      | `PUT`                                                               
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/answering-rule/{ruleId}` 
- Rate Limit Group | `Medium`                                                            
- App Permission   | `EditAccounts`                                                      
- User Permission  | `EditCompanyAnsweringRules`                                         
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Put(companyAnsweringRuleUpdate);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `companyAnsweringRuleUpdate` is of type [CompanyAnsweringRuleUpdate](./Definitions/CompanyAnsweringRuleUpdate.cs)
-- `result` is of type [CompanyAnsweringRuleInfo](./Definitions/CompanyAnsweringRuleInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-updateCompanyAnsweringRule) in API
-Explorer.
-
-## deleteCompanyAnsweringRule
-
-Delete Company Call Handling Rule
-
- Name             | Value                                                               
-------------------|---------------------------------------------------------------------
- HTTP Method      | `DELETE`                                                            
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/answering-rule/{ruleId}` 
- Rate Limit Group | `Medium`                                                            
- App Permission   | `EditAccounts`                                                      
- User Permission  | `EditCompanyAnsweringRules`                                         
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).AnsweringRule(ruleId).Delete();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Handling-Rules-deleteCompanyAnsweringRule) in API
-Explorer.
-
-## listAssignedRoles
-
-List Company Assigned Roles
-
- Name             | Value                                                     
-------------------|-----------------------------------------------------------
- HTTP Method      | `GET`                                                     
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/assigned-role` 
- Rate Limit Group | `Medium`                                                  
- App Permission   | `ReadAccounts`                                            
- User Permission  | `ReadAssignedRoles`                                       
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).AssignedRole().Get(listAssignedRolesParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `listAssignedRolesParameters` is of type [ListAssignedRolesParameters](./Definitions/ListAssignedRolesParameters.cs)
-- `result` is of type [ExtensionWithRolesCollectionResource](./Definitions/ExtensionWithRolesCollectionResource.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Role-Management-listAssignedRoles) in API Explorer.
-
-## readAccountBusinessAddress
-
-Get Account Business Address
-
- Name             | Value                                                        
-------------------|--------------------------------------------------------------
- HTTP Method      | `GET`                                                        
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/business-address` 
- Rate Limit Group | `Light`                                                      
- App Permission   | `ReadAccounts`                                               
- User Permission  | `ReadCompanyInfo`                                            
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Get();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [AccountBusinessAddressResource](./Definitions/AccountBusinessAddressResource.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Company-readAccountBusinessAddress) in API Explorer.
-
-## updateAccountBusinessAddress
-
-Update Company Business Address
-
- Name             | Value                                                        
-------------------|--------------------------------------------------------------
- HTTP Method      | `PUT`                                                        
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/business-address` 
- Rate Limit Group | `Medium`                                                     
- App Permission   | `EditAccounts`                                               
- User Permission  | `EditCompanyInfo`                                            
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).BusinessAddress().Put(modifyAccountBusinessAddressRequest);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `modifyAccountBusinessAddressRequest` is of
-  type [ModifyAccountBusinessAddressRequest](./Definitions/ModifyAccountBusinessAddressRequest.cs)
-- `result` is of type [AccountBusinessAddressResource](./Definitions/AccountBusinessAddressResource.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Company-updateAccountBusinessAddress) in API Explorer.
-
-## readCompanyBusinessHours
-
-Get Company Business Hours
-
- Name             | Value                                                      
-------------------|------------------------------------------------------------
- HTTP Method      | `GET`                                                      
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/business-hours` 
- Rate Limit Group | `Light`                                                    
- App Permission   | `ReadAccounts`                                             
- User Permission  | `ReadCompanyAnsweringRules`                                
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Get();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [CompanyBusinessHours](./Definitions/CompanyBusinessHours.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Business-Hours-readCompanyBusinessHours) in API Explorer.
-
-## updateCompanyBusinessHours
-
-Update Company Business Hours
-
- Name             | Value                                                      
-------------------|------------------------------------------------------------
- HTTP Method      | `PUT`                                                      
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/business-hours` 
- Rate Limit Group | `Medium`                                                   
- App Permission   | `EditExtensions`                                           
- User Permission  | `EditUserAnsweringRules`                                   
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).BusinessHours().Put(companyBusinessHoursUpdateRequest);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `companyBusinessHoursUpdateRequest` is of
-  type [CompanyBusinessHoursUpdateRequest](./Definitions/CompanyBusinessHoursUpdateRequest.cs)
-- `result` is of type [CompanyBusinessHours](./Definitions/CompanyBusinessHours.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Business-Hours-updateCompanyBusinessHours) in API Explorer.
-
-## syncAccountCallLog
-
-Sync Company Call Log
-
- Name             | Value                                                     
-------------------|-----------------------------------------------------------
- HTTP Method      | `GET`                                                     
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-log-sync` 
- Rate Limit Group | `Heavy`                                                   
- App Permission   | `ReadCallLog`                                             
- User Permission  | `ReadCallLog`                                             
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).CallLogSync().Get(syncAccountCallLogParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `syncAccountCallLogParameters` is of
-  type [SyncAccountCallLogParameters](./Definitions/SyncAccountCallLogParameters.cs)
-- `result` is of type [CallLogSyncResponse](./Definitions/CallLogSyncResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Log-syncAccountCallLog) in API Explorer.
-
-## readCallRecordingSettings
-
-Get Call Recording Settings
-
- Name             | Value                                                      
-------------------|------------------------------------------------------------
- HTTP Method      | `GET`                                                      
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-recording` 
- Rate Limit Group | `Light`                                                    
- App Permission   | `ReadAccounts`                                             
- User Permission  | `ReadCompanyInfo`                                          
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Get();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [CallRecordingSettingsResource](./Definitions/CallRecordingSettingsResource.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-readCallRecordingSettings) in API
-Explorer.
-
-## updateCallRecordingSettings
-
-Update Call Recording Settings
-
- Name             | Value                                                      
-------------------|------------------------------------------------------------
- HTTP Method      | `PUT`                                                      
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-recording` 
- Rate Limit Group | `Medium`                                                   
- App Permission   | `EditAccounts`                                             
- User Permission  | `EditCompanyInfo`                                          
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).CallRecording().Put(callRecordingSettingsResource);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `callRecordingSettingsResource` is of
-  type [CallRecordingSettingsResource](./Definitions/CallRecordingSettingsResource.cs)
-- `result` is of type [CallRecordingSettingsResource](./Definitions/CallRecordingSettingsResource.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Recording-Settings-updateCallRecordingSettings) in API
-Explorer.
-
-## deleteCompanyCallRecordings
-
-Delete Company Call Recordings
-
- Name             | Value                                                       
-------------------|-------------------------------------------------------------
- HTTP Method      | `DELETE`                                                    
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/call-recordings` 
- Rate Limit Group | `Heavy`                                                     
- App Permission   | `EditCallLog`                                               
- User Permission  | `EditCompanyCallRecordings`                                 
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).CallRecordings().Delete(callRecordingIds);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `callRecordingIds` is of type [CallRecordingIds](./Definitions/CallRecordingIds.cs)
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Recordings-deleteCompanyCallRecordings) in API
-Explorer.
-
-## updateDeviceEmergency
-
-Update Device Emergency Info
-
- Name             | Value                                                                   
-------------------|-------------------------------------------------------------------------
- HTTP Method      | `PUT`                                                                   
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/device/{deviceId}/emergency` 
- Rate Limit Group | `Medium`                                                                
- App Permission   | `EditAccounts`                                                          
- User Permission  | `EditCompanyDevices`                                                    
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).Emergency().Put(accountDeviceUpdate);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `accountDeviceUpdate` is of type [AccountDeviceUpdate](./Definitions/AccountDeviceUpdate.cs)
-- `result` is of type [DeviceResource](./Definitions/DeviceResource.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Devices-updateDeviceEmergency) in API Explorer.
-
-## readDeviceSipInfo
-
-Get Device SIP Info
-
- Name             | Value                                                                  
-------------------|------------------------------------------------------------------------
- HTTP Method      | `GET`                                                                  
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/device/{deviceId}/sip-info` 
- Rate Limit Group | `Light`                                                                
- App Permission   | `ReadAccounts`                                                         
- User Permission  | `ReadCompanyDevices`                                                   
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).Device(deviceId).SipInfo().Get();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `result` is of type [SipInfoResource](./Definitions/SipInfoResource.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Devices-readDeviceSipInfo) in API Explorer.
-
-## listDirectoryEntries
-
-Get Company Directory Entries
-
- Name             | Value                                                         
-------------------|---------------------------------------------------------------
- HTTP Method      | `GET`                                                         
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/directory/entries` 
- Rate Limit Group | `Medium`                                                      
- App Permission   | `ReadAccounts`                                                
- User Permission  | `N/A`                                                         
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries().List(listDirectoryEntriesParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `listDirectoryEntriesParameters` is of
-  type [ListDirectoryEntriesParameters](./Definitions/ListDirectoryEntriesParameters.cs)
-- `result` is of type [DirectoryResource](./Definitions/DirectoryResource.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Internal-Contacts-listDirectoryEntries) in API Explorer.
-
-## readDirectoryEntry
-
-Get Corporate Directory Entry
-
- Name             | Value                                                                   
-------------------|-------------------------------------------------------------------------
- HTTP Method      | `GET`                                                                   
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/directory/entries/{entryId}` 
- Rate Limit Group | `Medium`                                                                
- App Permission   | `ReadAccounts`                                                          
- User Permission  | `N/A`                                                                   
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).Directory().Entries(entryId).Get(readDirectoryEntryParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `readDirectoryEntryParameters` is of
-  type [ReadDirectoryEntryParameters](./Definitions/ReadDirectoryEntryParameters.cs)
-- `result` is of type [ContactResource](./Definitions/ContactResource.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Internal-Contacts-readDirectoryEntry) in API Explorer.
-
-## listExtensionDevices
-
-List Extension Devices
-
- Name             | Value                                                                      
-------------------|----------------------------------------------------------------------------
- HTTP Method      | `GET`                                                                      
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/device` 
- Rate Limit Group | `Light`                                                                    
- App Permission   | `ReadAccounts`                                                             
- User Permission  | `ReadUserDevices`                                                          
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Device().Get(listExtensionDevicesParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
-- `listExtensionDevicesParameters` is of
-  type [ListExtensionDevicesParameters](./Definitions/ListExtensionDevicesParameters.cs)
-- `result` is of type [GetExtensionDevicesResponse](./Definitions/GetExtensionDevicesResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Devices-listExtensionDevices) in API Explorer.
-
-## listExtensionGrants
-
-List Extension Grants
-
- Name             | Value                                                                     
-------------------|---------------------------------------------------------------------------
- HTTP Method      | `GET`                                                                     
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/grant` 
- Rate Limit Group | `Light`                                                                   
- App Permission   | `ReadAccounts`                                                            
- User Permission  | `ReadExtensions`                                                          
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).Grant().Get(listExtensionGrantsParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
-- `listExtensionGrantsParameters` is of
-  type [ListExtensionGrantsParameters](./Definitions/ListExtensionGrantsParameters.cs)
-- `result` is of type [GetExtensionGrantListResponse](./Definitions/GetExtensionGrantListResponse.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#User-Settings-listExtensionGrants) in API Explorer.
-
-## readAccountGreetingContent
-
-Get Account Greeting Media Content
-
- Name             | Value                                                                     
-------------------|---------------------------------------------------------------------------
- HTTP Method      | `GET`                                                                     
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/greeting/{greetingId}/content` 
- Rate Limit Group | `Heavy`                                                                   
- App Permission   | `ReadAccounts`                                                            
- User Permission  | `N/A`                                                                     
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).Greeting(greetingId).Content().Get(readAccountGreetingContentParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `readAccountGreetingContentParameters` is of
-  type [ReadAccountGreetingContentParameters](./Definitions/ReadAccountGreetingContentParameters.cs)
-- `result` is of type `byte[]`
-
-### ❗❗❗ Code sample above may not work
-
-Please refer to [Binary content downloading](/README.md#Binary-content-downloading).
-
-[Try it out](https://developer.ringcentral.com/api-reference#Greetings-readAccountGreetingContent) in API Explorer.
-
-## readCallRecordingContent
-
-Get Call Recording Content
-
- Name             | Value                                                                       
-------------------|-----------------------------------------------------------------------------
- HTTP Method      | `GET`                                                                       
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/recording/{recordingId}/content` 
- Rate Limit Group | `Heavy`                                                                     
- App Permission   | `ReadCallRecording`                                                         
- User Permission  | `N/A`                                                                       
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).Recording(recordingId).Content().Get(readCallRecordingContentParameters);
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- `readCallRecordingContentParameters` is of
-  type [ReadCallRecordingContentParameters](./Definitions/ReadCallRecordingContentParameters.cs)
-- `result` is of type `byte[]`
-
-### ❗❗❗ Code sample above may not work
-
-Please refer to [Binary content downloading](/README.md#Binary-content-downloading).
-
-[Try it out](https://developer.ringcentral.com/api-reference#Call-Recordings-readCallRecordingContent) in API Explorer.
-
-## getGlipAdaptiveCardNew
-
-Get Adaptive Card
-
- Name             | Value                                        
-------------------|----------------------------------------------
- HTTP Method      | `GET`                                        
- Endpoint         | `/team-messaging/v1/adaptive-cards/{cardId}` 
- Rate Limit Group | `Medium`                                     
- App Permission   | `TeamMessaging`                              
- User Permission  | `N/A`                                        
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().AdaptiveCards(cardId).Get();
-await rc.Revoke();
-```
-
-- `result` is of type [AdaptiveCardInfo](./Definitions/AdaptiveCardInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Adaptive-Cards-getGlipAdaptiveCardNew) in API Explorer.
-
-## updateGlipAdaptiveCardNew
-
-Update Adaptive Card
-
- Name             | Value                                        
-------------------|----------------------------------------------
- HTTP Method      | `PUT`                                        
- Endpoint         | `/team-messaging/v1/adaptive-cards/{cardId}` 
- Rate Limit Group | `Medium`                                     
- App Permission   | `TeamMessaging`                              
- User Permission  | `N/A`                                        
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().AdaptiveCards(cardId).Put(adaptiveCardRequest);
-await rc.Revoke();
-```
-
-- `adaptiveCardRequest` is of type [AdaptiveCardRequest](./Definitions/AdaptiveCardRequest.cs)
-- `result` is of type [AdaptiveCardShortInfo](./Definitions/AdaptiveCardShortInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Adaptive-Cards-updateGlipAdaptiveCardNew) in API Explorer.
-
-## deleteGlipAdaptiveCardNew
-
-Delete Adaptive Card
-
- Name             | Value                                        
-------------------|----------------------------------------------
- HTTP Method      | `DELETE`                                     
- Endpoint         | `/team-messaging/v1/adaptive-cards/{cardId}` 
- Rate Limit Group | `Medium`                                     
- App Permission   | `TeamMessaging`                              
- User Permission  | `N/A`                                        
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().AdaptiveCards(cardId).Delete();
-await rc.Revoke();
-```
-
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Adaptive-Cards-deleteGlipAdaptiveCardNew) in API Explorer.
-
-## favoriteGlipChatNew
-
-Add Chat to Favorites
-
- Name             | Value                                        
-------------------|----------------------------------------------
- HTTP Method      | `POST`                                       
- Endpoint         | `/team-messaging/v1/chats/{chatId}/favorite` 
- Rate Limit Group | `Medium`                                     
- App Permission   | `TeamMessaging`                              
- User Permission  | `N/A`                                        
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Chats(chatId).Favorite().Post();
-await rc.Revoke();
-```
-
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-favoriteGlipChatNew) in API Explorer.
-
-## listChatNotesNew
-
-List Notes
-
- Name             | Value                                     
-------------------|-------------------------------------------
- HTTP Method      | `GET`                                     
- Endpoint         | `/team-messaging/v1/chats/{chatId}/notes` 
- Rate Limit Group | `Heavy`                                   
- App Permission   | `TeamMessaging`                           
- User Permission  | `N/A`                                     
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Chats(chatId).Notes().Get(listChatNotesNewParameters);
-await rc.Revoke();
-```
-
-- `listChatNotesNewParameters` is of type [ListChatNotesNewParameters](./Definitions/ListChatNotesNewParameters.cs)
-- `result` is of type [TMNoteList](./Definitions/TMNoteList.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-listChatNotesNew) in API Explorer.
-
-## createChatNoteNew
-
-Create Note
-
- Name             | Value                                     
-------------------|-------------------------------------------
- HTTP Method      | `POST`                                    
- Endpoint         | `/team-messaging/v1/chats/{chatId}/notes` 
- Rate Limit Group | `Medium`                                  
- App Permission   | `TeamMessaging`                           
- User Permission  | `N/A`                                     
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Chats(chatId).Notes().Post(tMCreateNoteRequest);
-await rc.Revoke();
-```
-
-- `tMCreateNoteRequest` is of type [TMCreateNoteRequest](./Definitions/TMCreateNoteRequest.cs)
-- `result` is of type [TMNoteInfo](./Definitions/TMNoteInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-createChatNoteNew) in API Explorer.
-
-## listChatTasksNew
-
-List Chat Tasks
-
- Name             | Value                                     
-------------------|-------------------------------------------
- HTTP Method      | `GET`                                     
- Endpoint         | `/team-messaging/v1/chats/{chatId}/tasks` 
- Rate Limit Group | `Heavy`                                   
- App Permission   | `TeamMessaging`                           
- User Permission  | `N/A`                                     
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Chats(chatId).Tasks().Get(listChatTasksNewParameters);
-await rc.Revoke();
-```
-
-- `listChatTasksNewParameters` is of type [ListChatTasksNewParameters](./Definitions/ListChatTasksNewParameters.cs)
-- `result` is of type [TMTaskList](./Definitions/TMTaskList.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Tasks-listChatTasksNew) in API Explorer.
-
-## createTaskNew
-
-Create Task
-
- Name             | Value                                     
-------------------|-------------------------------------------
- HTTP Method      | `POST`                                    
- Endpoint         | `/team-messaging/v1/chats/{chatId}/tasks` 
- Rate Limit Group | `Medium`                                  
- App Permission   | `TeamMessaging`                           
- User Permission  | `N/A`                                     
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Chats(chatId).Tasks().Post(tMCreateTaskRequest);
-await rc.Revoke();
-```
-
-- `tMCreateTaskRequest` is of type [TMCreateTaskRequest](./Definitions/TMCreateTaskRequest.cs)
-- `result` is of type [TMTaskInfo](./Definitions/TMTaskInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Tasks-createTaskNew) in API Explorer.
-
-## listGlipConversationsNew
-
-List Conversations
-
- Name             | Value                              
-------------------|------------------------------------
- HTTP Method      | `GET`                              
- Endpoint         | `/team-messaging/v1/conversations` 
- Rate Limit Group | `Medium`                           
- App Permission   | `TeamMessaging`                    
- User Permission  | `N/A`                              
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Conversations().List(listGlipConversationsNewParameters);
-await rc.Revoke();
-```
-
-- `listGlipConversationsNewParameters` is of
-  type [ListGlipConversationsNewParameters](./Definitions/ListGlipConversationsNewParameters.cs)
-- `result` is of type [TMConversationList](./Definitions/TMConversationList.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Conversations-listGlipConversationsNew) in API Explorer.
-
-## createGlipConversationNew
-
-Create/Open Conversation
-
- Name             | Value                              
-------------------|------------------------------------
- HTTP Method      | `POST`                             
- Endpoint         | `/team-messaging/v1/conversations` 
- Rate Limit Group | `Medium`                           
- App Permission   | `TeamMessaging`                    
- User Permission  | `N/A`                              
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Conversations().Post(createConversationRequest);
-await rc.Revoke();
-```
-
-- `createConversationRequest` is of type [CreateConversationRequest](./Definitions/CreateConversationRequest.cs)
-- `result` is of type [TMConversationInfo](./Definitions/TMConversationInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Conversations-createGlipConversationNew) in API Explorer.
-
-## readGlipConversationNew
-
-Get Conversation
-
- Name             | Value                                       
-------------------|---------------------------------------------
- HTTP Method      | `GET`                                       
- Endpoint         | `/team-messaging/v1/conversations/{chatId}` 
- Rate Limit Group | `Light`                                     
- App Permission   | `TeamMessaging`                             
- User Permission  | `N/A`                                       
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Conversations(chatId).Get();
-await rc.Revoke();
-```
-
-- `result` is of type [TMConversationInfo](./Definitions/TMConversationInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Conversations-readGlipConversationNew) in API Explorer.
-
-## listDataExportTasksNew
-
-List Data Export Tasks
-
- Name             | Value                            
-------------------|----------------------------------
- HTTP Method      | `GET`                            
- Endpoint         | `/team-messaging/v1/data-export` 
- Rate Limit Group | `Medium`                         
- App Permission   | `TeamMessaging`                  
- User Permission  | `Glip`                           
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().DataExport().List(listDataExportTasksNewParameters);
-await rc.Revoke();
-```
-
-- `listDataExportTasksNewParameters` is of
-  type [ListDataExportTasksNewParameters](./Definitions/ListDataExportTasksNewParameters.cs)
-- `result` is of type [DataExportTaskList](./Definitions/DataExportTaskList.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Compliance-Exports-listDataExportTasksNew) in API Explorer.
-
-## createDataExportTaskNew
-
-Create Data Export Task
-
- Name             | Value                            
-------------------|----------------------------------
- HTTP Method      | `POST`                           
- Endpoint         | `/team-messaging/v1/data-export` 
- Rate Limit Group | `Heavy`                          
- App Permission   | `TeamMessaging`                  
- User Permission  | `Glip`                           
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().DataExport().Post(createDataExportTaskRequest);
-await rc.Revoke();
-```
-
-- `createDataExportTaskRequest` is of type [CreateDataExportTaskRequest](./Definitions/CreateDataExportTaskRequest.cs)
-- `result` is of type [DataExportTask](./Definitions/DataExportTask.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Compliance-Exports-createDataExportTaskNew) in API
-Explorer.
-
-## readDataExportTaskNew
-
-Get Data Export Task
-
- Name             | Value                                     
-------------------|-------------------------------------------
- HTTP Method      | `GET`                                     
- Endpoint         | `/team-messaging/v1/data-export/{taskId}` 
- Rate Limit Group | `Medium`                                  
- App Permission   | `TeamMessaging`                           
- User Permission  | `Glip`                                    
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().DataExport(taskId).Get();
-await rc.Revoke();
-```
-
-- `result` is of type [DataExportTask](./Definitions/DataExportTask.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Compliance-Exports-readDataExportTaskNew) in API Explorer.
-
-## listGroupEventsNew
-
-List Group Events
-
- Name             | Value                                        
-------------------|----------------------------------------------
- HTTP Method      | `GET`                                        
- Endpoint         | `/team-messaging/v1/groups/{groupId}/events` 
- Rate Limit Group | `Medium`                                     
- App Permission   | `TeamMessaging`                              
- User Permission  | `N/A`                                        
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Groups(groupId).Events().Get();
-await rc.Revoke();
-```
-
-- `result` is of type [TMEventInfo](./Definitions/TMEventInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-listGroupEventsNew) in API Explorer.
-
-## createEventByGroupIdNew
-
-Create Event by Group ID
-
- Name             | Value                                        
-------------------|----------------------------------------------
- HTTP Method      | `POST`                                       
- Endpoint         | `/team-messaging/v1/groups/{groupId}/events` 
- Rate Limit Group | `Medium`                                     
- App Permission   | `TeamMessaging`                              
- User Permission  | `N/A`                                        
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Groups(groupId).Events().Post(tMCreateEventRequest);
-await rc.Revoke();
-```
-
-- `tMCreateEventRequest` is of type [TMCreateEventRequest](./Definitions/TMCreateEventRequest.cs)
-- `result` is of type [TMEventInfo](./Definitions/TMEventInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Calendar-Events-createEventByGroupIdNew) in API Explorer.
-
-## publishNoteNew
-
-Publish Note
-
- Name             | Value                                       
-------------------|---------------------------------------------
- HTTP Method      | `POST`                                      
- Endpoint         | `/team-messaging/v1/notes/{noteId}/publish` 
- Rate Limit Group | `Medium`                                    
- App Permission   | `TeamMessaging`                             
- User Permission  | `N/A`                                       
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Notes(noteId).Publish().Post();
-await rc.Revoke();
-```
-
-- `result` is of type [TMNoteInfo](./Definitions/TMNoteInfo.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-publishNoteNew) in API Explorer.
-
-## unlockNoteNew
-
-Unlock Note
-
- Name             | Value                                      
-------------------|--------------------------------------------
- HTTP Method      | `POST`                                     
- Endpoint         | `/team-messaging/v1/notes/{noteId}/unlock` 
- Rate Limit Group | `Light`                                    
- App Permission   | `TeamMessaging`                            
- User Permission  | `N/A`                                      
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Notes(noteId).Unlock().Post();
-await rc.Revoke();
-```
-
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Notes-unlockNoteNew) in API Explorer.
-
-## listRecentChatsNew
-
-List Recent Chats
-
- Name             | Value                             
-------------------|-----------------------------------
- HTTP Method      | `GET`                             
- Endpoint         | `/team-messaging/v1/recent/chats` 
- Rate Limit Group | `Light`                           
- App Permission   | `TeamMessaging`                   
- User Permission  | `N/A`                             
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Recent().Chats().Get(listRecentChatsNewParameters);
-await rc.Revoke();
-```
-
-- `listRecentChatsNewParameters` is of
-  type [ListRecentChatsNewParameters](./Definitions/ListRecentChatsNewParameters.cs)
-- `result` is of type [TMChatListWithoutNavigation](./Definitions/TMChatListWithoutNavigation.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Chats-listRecentChatsNew) in API Explorer.
-
-## leaveGlipTeamNew
-
-Leave Team
-
- Name             | Value                                     
-------------------|-------------------------------------------
- HTTP Method      | `POST`                                    
- Endpoint         | `/team-messaging/v1/teams/{chatId}/leave` 
- Rate Limit Group | `Medium`                                  
- App Permission   | `TeamMessaging`                           
- User Permission  | `N/A`                                     
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.TeamMessaging().V1().Teams(chatId).Leave().Post();
-await rc.Revoke();
-```
-
-- `result` is an empty string
-
-[Try it out](https://developer.ringcentral.com/api-reference#Teams-leaveGlipTeamNew) in API Explorer.
-
 ## rcwHistoryListRecordings
 
 List Webinar Recordings
@@ -6878,54 +6905,6 @@ await rc.Revoke();
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Tasks-completeTaskNew) in API Explorer.
-
-## rcwRegGetSession
-
-Get Registration Session Info
-
- Name             | Value                                           
-------------------|-------------------------------------------------
- HTTP Method      | `GET`                                           
- Endpoint         | `/webinar/registration/v1/sessions/{sessionId}` 
- Rate Limit Group | `Heavy`                                         
- App Permission   | `ReadWebinars`                                  
- User Permission  | `N/A`                                           
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Webinar().Registration().V1().Sessions(sessionId).Get();
-await rc.Revoke();
-```
-
-- `result` is of type [RegSessionModel](./Definitions/RegSessionModel.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Registration-Management-rcwRegGetSession) in API Explorer.
-
-## rcwRegUpdateSession
-
-Update Registration Session
-
- Name             | Value                                           
-------------------|-------------------------------------------------
- HTTP Method      | `PATCH`                                         
- Endpoint         | `/webinar/registration/v1/sessions/{sessionId}` 
- Rate Limit Group | `Heavy`                                         
- App Permission   | `EditWebinars`                                  
- User Permission  | `N/A`                                           
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Webinar().Registration().V1().Sessions(sessionId).Patch(regSessionModel);
-await rc.Revoke();
-```
-
-- `regSessionModel` is of type [RegSessionModel](./Definitions/RegSessionModel.cs)
-- `result` is of type [RegSessionModel](./Definitions/RegSessionModel.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Registration-Management-rcwRegUpdateSession) in API
-Explorer.
 
 ## rcwHistoryAdminListRecordings
 
@@ -7151,7 +7130,7 @@ await rc.Revoke();
 
 ## sendWelcomeEmailV2
 
-Send/Resend Welcome Email
+Send Welcome Email
 
  Name             | Value                                                 
 ------------------|-------------------------------------------------------
@@ -7173,14 +7152,14 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Company-sendWelcomeEmailV2) in API Explorer.
 
-## exportSmsOptRecords
+## exportSmsConsentRecords
 
-Export SMS Opt Records in CSV
+Export SMS Consent Records
 
  Name             | Value                                                  
 ------------------|--------------------------------------------------------
  HTTP Method      | `GET`                                                  
- Endpoint         | `/restapi/v2/accounts/{accountId}/sms/opt-outs/export` 
+ Endpoint         | `/restapi/v2/accounts/{accountId}/sms/consents/export` 
  Rate Limit Group | `Light`                                                
  App Permission   | `SMS`                                                  
  User Permission  | `N/A`                                                  
@@ -7188,13 +7167,13 @@ Export SMS Opt Records in CSV
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.Restapi().V2().Accounts(accountId).Sms().OptOuts().Export().Get();
+var result = await rc.Restapi().V2().Accounts(accountId).Sms().Consents().Export().Get();
 await rc.Revoke();
 ```
 
 - `result` is a string
 
-[Try it out](https://developer.ringcentral.com/api-reference#SMS-Opt-outs-exportSmsOptRecords) in API Explorer.
+[Try it out](https://developer.ringcentral.com/api-reference#SMS-Consents-exportSmsConsentRecords) in API Explorer.
 
 ## addressBookBulkUpload
 
@@ -10079,6 +10058,33 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Presence-updateUnifiedPresence) in API Explorer.
 
+## readUserVideoConfiguration
+
+Get User Video Configuration
+
+ Name             | Value                                                                                   
+------------------|-----------------------------------------------------------------------------------------
+ HTTP Method      | `GET`                                                                                   
+ Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/video-configuration` 
+ Rate Limit Group | `Light`                                                                                 
+ App Permission   | `ReadAccounts`                                                                          
+ User Permission  | `Meetings`                                                                              
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).VideoConfiguration().Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `result` is of type [UserVideoConfiguration](./Definitions/UserVideoConfiguration.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Video-Configuration-readUserVideoConfiguration) in API
+Explorer.
+
 ## readMessageStoreConfiguration
 
 Get Message Store Configuration
@@ -10486,33 +10492,6 @@ await rc.Revoke();
 - `result` is of type [WcsSessionResource](./Definitions/WcsSessionResource.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Webinars-and-Sessions-rcwConfigUpdateSession) in API
-Explorer.
-
-## readUserVideoConfiguration
-
-Get User Video Configuration
-
- Name             | Value                                                                                   
-------------------|-----------------------------------------------------------------------------------------
- HTTP Method      | `GET`                                                                                   
- Endpoint         | `/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/video-configuration` 
- Rate Limit Group | `Light`                                                                                 
- App Permission   | `ReadAccounts`                                                                          
- User Permission  | `Meetings`                                                                              
-
-```cs
-var rc = new RestClient("clientID", "clientSecret", "serverURL");
-await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).VideoConfiguration().Get();
-await rc.Revoke();
-```
-
-- Parameter `apiVersion` is optional with default value `v1.0`
-- Parameter `accountId` is optional with default value `~`
-- Parameter `extensionId` is optional with default value `~`
-- `result` is of type [UserVideoConfiguration](./Definitions/UserVideoConfiguration.cs)
-
-[Try it out](https://developer.ringcentral.com/api-reference#Video-Configuration-readUserVideoConfiguration) in API
 Explorer.
 
 ## rcwHistoryListInvitees
@@ -12559,4 +12538,52 @@ await rc.Revoke();
 - `result` is of type [ParticipantReducedModel](./Definitions/ParticipantReducedModel.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Historical-Webinars-rcwHistoryGetParticipantInfo) in API
+Explorer.
+
+## rcwRegGetSession
+
+Get Registration Session Info
+
+ Name             | Value                                           
+------------------|-------------------------------------------------
+ HTTP Method      | `GET`                                           
+ Endpoint         | `/webinar/registration/v1/sessions/{sessionId}` 
+ Rate Limit Group | `Heavy`                                         
+ App Permission   | `ReadWebinars`                                  
+ User Permission  | `N/A`                                           
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Webinar().Registration().V1().Sessions(sessionId).Get();
+await rc.Revoke();
+```
+
+- `result` is of type [RegSessionModel](./Definitions/RegSessionModel.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Registration-Management-rcwRegGetSession) in API Explorer.
+
+## rcwRegUpdateSession
+
+Update Registration Session
+
+ Name             | Value                                           
+------------------|-------------------------------------------------
+ HTTP Method      | `PATCH`                                         
+ Endpoint         | `/webinar/registration/v1/sessions/{sessionId}` 
+ Rate Limit Group | `Heavy`                                         
+ App Permission   | `EditWebinars`                                  
+ User Permission  | `N/A`                                           
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Webinar().Registration().V1().Sessions(sessionId).Patch(regSessionModel);
+await rc.Revoke();
+```
+
+- `regSessionModel` is of type [RegSessionModel](./Definitions/RegSessionModel.cs)
+- `result` is of type [RegSessionModel](./Definitions/RegSessionModel.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Registration-Management-rcwRegUpdateSession) in API
 Explorer.

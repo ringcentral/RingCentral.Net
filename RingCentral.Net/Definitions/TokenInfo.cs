@@ -91,5 +91,12 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? session_idle_timeout { get; set; }
+
+        /// <summary>
+        ///     The websocket access token to be used when connecting to the Websocket Gateway.
+        ///     Returned only if the client application is granted with the "WebSocket" scope
+        ///     Example: QU1TMDJQMDFQQVMwMHxBQURBVTZWZHZfWmRvVWxLREQtSzh
+        /// </summary>
+        public string ws_access_token { get; set; }
     }
 }

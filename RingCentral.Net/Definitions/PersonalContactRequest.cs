@@ -166,5 +166,10 @@ namespace RingCentral
         ///     Contact ringtone. Max number of symbols is 64
         /// </summary>
         public string ringtoneIndex { get; set; }
+
+        /// <summary>
+        ///     Source of the contact. Up to 64 symbols
+        /// </summary>
+        public string appInfo { get; set; }
     }
 }

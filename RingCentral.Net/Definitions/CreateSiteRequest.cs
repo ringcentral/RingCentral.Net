@@ -55,5 +55,9 @@ namespace RingCentral
         ///     Site code value
         /// </summary>
         public string code { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public CostCenterInfo costCenter { get; set; }
     }
 }

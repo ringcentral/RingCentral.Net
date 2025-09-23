@@ -4,9 +4,9 @@ namespace RingCentral
     {
         /// <summary>
         ///     Terminating target type
-        ///     Example: ImsVoiceMailTerminatingTarget
+        ///     Example: ExtensionTerminatingTarget
         ///     Enum: ExtensionTerminatingTarget, PhoneNumberTerminatingTarget, PlayAnnouncementTerminatingTarget,
-        ///     VoiceMailTerminatingTarget, ImsVoiceMailTerminatingTarget
+        ///     VoiceMailTerminatingTarget
         /// </summary>
         public string type { get; set; }
 

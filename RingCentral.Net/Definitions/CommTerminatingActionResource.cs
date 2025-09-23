@@ -23,14 +23,14 @@ namespace RingCentral
         /// <summary>
         ///     Terminating target type
         ///     Enum: ExtensionTerminatingTarget, PhoneNumberTerminatingTarget, PlayAnnouncementTerminatingTarget,
-        ///     VoiceMailTerminatingTarget, ImsVoiceMailTerminatingTarget
+        ///     VoiceMailTerminatingTarget
         /// </summary>
         public string ringingTargetType { get; set; }
 
         /// <summary>
         ///     Terminating target type
         ///     Enum: ExtensionTerminatingTarget, PhoneNumberTerminatingTarget, PlayAnnouncementTerminatingTarget,
-        ///     VoiceMailTerminatingTarget, ImsVoiceMailTerminatingTarget
+        ///     VoiceMailTerminatingTarget
         /// </summary>
         public string terminatingTargetType { get; set; }
     }

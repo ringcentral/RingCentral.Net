@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     The list of records with opt statuses
+    ///     A list of SMS consent records
     /// </summary>
     public class OptRecordList
     {

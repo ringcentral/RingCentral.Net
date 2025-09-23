@@ -54,9 +54,24 @@ namespace RingCentral
         public string dndStatus { get; set; }
 
         /// <summary>
+        ///     Do Not Disturb status of a User extension. Connected to the DND State type.
+        ///     Applicable for User extensions if the new communication handling service is
+        ///     activated on account.
+        ///     Enum: TakeAllCalls, DoNotAcceptAnyCalls, Unknown
+        /// </summary>
+        public string dndStatusPersonal { get; set; }
+
+        /// <summary>
         ///     If `true` enables other extensions to see the extension presence status
         /// </summary>
         public bool? allowSeeMyPresence { get; set; }
+
+        /// <summary>
+        ///     Specifies if a Call Queue member extension will be able to receive Call Queue calls.
+        ///     Used for the Agent state type. Applicable for User extensions if the new communication
+        ///     handling service is activated on account
+        /// </summary>
+        public bool? acceptCallQueueCalls { get; set; }
 
         /// <summary>
         ///     If `true` enables to ring extension phone, if any user monitored

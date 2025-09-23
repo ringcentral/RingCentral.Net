@@ -27,7 +27,7 @@ namespace RingCentral
         public long? perPage { get; set; }
 
         /// <summary>
-        ///     Status of a phone number
+        ///     Status of a phone number blocking
         ///     Default: Blocked
         ///     Enum: Blocked, Allowed
         /// </summary>

@@ -6,6 +6,12 @@ namespace RingCentral
     public class TimezoneInfoBase
     {
         /// <summary>
+        ///     Canonical URI of a timezone
+        ///     Format: uri
+        /// </summary>
+        public string uri { get; set; }
+
+        /// <summary>
         ///     Internal identifier of a timezone
         /// </summary>
         public string id { get; set; }
@@ -21,7 +27,8 @@ namespace RingCentral
         public string description { get; set; }
 
         /// <summary>
-        ///     Time difference (offset) in minutes from Coordinated Universal Time (UTC) that a specific locale follows
+        ///     Time difference (offset) in minutes from Coordinated Universal Time (UTC)
+        ///     that a specific locale follows
         /// </summary>
         public string bias { get; set; }
     }

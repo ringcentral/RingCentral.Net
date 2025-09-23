@@ -44,5 +44,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CallsByType callsByType { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public CallsByQueueHours callsByQueueHours { get; set; }
     }
 }

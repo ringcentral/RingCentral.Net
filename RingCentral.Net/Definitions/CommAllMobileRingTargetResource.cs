@@ -20,7 +20,6 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Required
         /// </summary>
         public CommReferencedExtensionResource extension { get; set; }
     }

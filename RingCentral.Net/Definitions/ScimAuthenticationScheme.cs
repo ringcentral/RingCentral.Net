@@ -7,6 +7,7 @@ namespace RingCentral
         public string description { get; set; }
 
         /// <summary>
+        ///     Format: uri
         /// </summary>
         public string documentationUri { get; set; }
 
@@ -15,6 +16,7 @@ namespace RingCentral
         public string name { get; set; }
 
         /// <summary>
+        ///     Format: uri
         /// </summary>
         public string specUri { get; set; }
 

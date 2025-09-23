@@ -88,5 +88,11 @@ namespace RingCentral
         ///     Enum: Caller, Callee, System
         /// </summary>
         public string[] endingParties { get; set; }
+
+        /// <summary>
+        ///     Filtering of calls by queue's business hours or after hours (joined via OR). Only applicable to Queues grouping
+        ///     Enum: BusinessHours, AfterHours
+        /// </summary>
+        public string[] queueHours { get; set; }
     }
 }

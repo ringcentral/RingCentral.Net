@@ -8,7 +8,7 @@ namespace RingCentral
     {
         /// <summary>
         /// </summary>
-        public CountryInfoShortModelV2 homeCountry { get; set; }
+        public CountryInfoShortModel homeCountry { get; set; }
 
         /// <summary>
         /// </summary>

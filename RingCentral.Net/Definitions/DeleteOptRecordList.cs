@@ -1,7 +1,7 @@
 namespace RingCentral
 {
     /// <summary>
-    ///     The list of records to delete opt statuses of phone numbers
+    ///     A list of records for deleting SMS consents
     /// </summary>
     public class DeleteOptRecordList
     {

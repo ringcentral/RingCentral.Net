@@ -3,7 +3,7 @@ namespace RingCentral
     public class SmsOptRecord
     {
         /// <summary>
-        ///     The wildcard meaning that all account numbers should be opted out/in
+        ///     The wildcard ('*') indicating that all account numbers should be opted out or opted in
         ///     Required
         ///     Example: +16501234567
         ///     Enum: *
@@ -18,9 +18,9 @@ namespace RingCentral
         public string to { get; set; }
 
         /// <summary>
-        ///     Opt status of a recipient's phone number:
-        ///     - `OptOut` - the number is opted out for SMS;
-        ///     - `OptIn` - the number is opted in for SMS (if it was previously opted-out).
+        ///     Consent status of a recipient's phone number:
+        ///     - `OptOut` - The number is opted out of receiving SMS.
+        ///     - `OptIn` - The number is opted in to receiving SMS (if it was previously opted out).
         ///     Required
         ///     Example: OptOut
         ///     Enum: OptOut, OptIn
@@ -28,7 +28,7 @@ namespace RingCentral
         public string optStatus { get; set; }
 
         /// <summary>
-        ///     The source of opt record
+        ///     The source of the consent record
         ///     Required
         ///     Enum: Recipient, Api, Upstream, Carrier
         /// </summary>

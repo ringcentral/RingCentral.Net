@@ -15,8 +15,8 @@ namespace RingCentral
         public string id { get; set; }
 
         /// <summary>
-        ///     Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format from which the messages are going to
-        ///     be sent
+        ///     Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+        ///     format from which the messages are going to be sent
         ///     Example: +15551234567
         /// </summary>
         public string from { get; set; }
@@ -60,7 +60,8 @@ namespace RingCentral
         public RejectedRecipientResponseResource[] rejected { get; set; }
 
         /// <summary>
-        ///     The estimated batch cost for completed batch. Calculated after batch processing is completed.
+        ///     The estimated batch cost for completed batch.
+        ///     Calculated after batch processing is completed.
         ///     Format: double
         ///     Example: 0.007
         /// </summary>

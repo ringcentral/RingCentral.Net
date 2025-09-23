@@ -26,11 +26,13 @@ namespace RingCentral
         public string addressStatus { get; set; }
 
         /// <summary>
+        ///     Status of emergency location to filter results by
         ///     Enum: Active, Inactive
         /// </summary>
         public string usageStatus { get; set; }
 
         /// <summary>
+        ///     Domestic country ID to filter results by
         /// </summary>
         public string domesticCountryId { get; set; }
 

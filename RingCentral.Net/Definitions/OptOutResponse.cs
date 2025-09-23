@@ -24,6 +24,7 @@ namespace RingCentral
         public string status { get; set; }
 
         /// <summary>
+        ///     The source of the opt-out record
         ///     Enum: Recipient, Account, Upstream, Carrier
         /// </summary>
         public string source { get; set; }

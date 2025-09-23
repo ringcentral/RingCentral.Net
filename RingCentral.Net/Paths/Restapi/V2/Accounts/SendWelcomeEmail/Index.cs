@@ -19,7 +19,7 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.SendWelcomeEmail
         }
 
         /// <summary>
-        ///     Sends/resends welcome email to the system user of confirmed account
+        ///     Sends or re-sends welcome email to the system user of confirmed account
         ///     HTTP Method: post
         ///     Endpoint: /restapi/v2/accounts/{accountId}/send-welcome-email
         ///     Rate Limit Group: Medium

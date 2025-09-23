@@ -6,9 +6,13 @@ namespace RingCentral
     public class CommAllDesktopTargetResource
     {
         /// <summary>
-        ///     Required
         /// </summary>
         public CommReferencedExtensionResource extension { get; set; }
+
+        /// <summary>
+        ///     Required
+        /// </summary>
+        public string name { get; set; }
 
         /// <summary>
         ///     Example: AllDesktopRingTarget

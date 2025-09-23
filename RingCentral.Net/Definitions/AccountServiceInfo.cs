@@ -43,7 +43,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public AccountLimits limits { get; set; }
+        public AccountLimitsInfo limits { get; set; }
 
         /// <summary>
         /// </summary>

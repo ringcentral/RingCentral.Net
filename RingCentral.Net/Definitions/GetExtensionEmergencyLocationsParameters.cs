@@ -20,6 +20,7 @@ namespace RingCentral
         public string searchString { get; set; }
 
         /// <summary>
+        ///     Domestic country ID to filter results by
         /// </summary>
         public string domesticCountryId { get; set; }
 
@@ -50,6 +51,9 @@ namespace RingCentral
         public long? page { get; set; }
 
         /// <summary>
+        ///     Visibility of emergency location to filter results by
+        ///     Default: Public
+        ///     Enum: Public
         /// </summary>
         public string visibility { get; set; }
     }

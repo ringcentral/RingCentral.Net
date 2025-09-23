@@ -37,13 +37,13 @@ namespace RingCentral
         public string creationTime { get; set; }
 
         /// <summary>
-        ///     The time at which the messages was last updated
+        ///     The time at which the message was last updated
         ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
 
         /// <summary>
-        ///     Current status of a message
+        ///     Status of the message
         ///     Example: Queued
         ///     Enum: Queued, Delivered, Sent, SendingFailed, DeliveryFailed
         /// </summary>
@@ -57,7 +57,7 @@ namespace RingCentral
         public long? segmentCount { get; set; }
 
         /// <summary>
-        ///     Text of a message. Returned if the `view` parameter is set to 'Detailed'
+        ///     Text of a message. Returned if the `view` parameter is set to `Detailed`
         /// </summary>
         public string text { get; set; }
 
@@ -69,7 +69,7 @@ namespace RingCentral
         public decimal? cost { get; set; }
 
         /// <summary>
-        ///     Direction of the SMS message
+        ///     Message direction (inbound or outbound)
         ///     Enum: Inbound, Outbound
         /// </summary>
         public string direction { get; set; }
