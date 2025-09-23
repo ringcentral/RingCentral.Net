@@ -16,12 +16,10 @@ public class V2Test
         var path = rc.Restapi().V2().Accounts().Path();
         Assert.Equal("/restapi/v2/accounts/~", path);
 
-        // var accountInfo2 = await rc.Restapi().Account().Get();
-        // Assert.NotNull(accountInfo2);
+        var accountInfo2 = await rc.Restapi().Account().Get();
+        Assert.NotNull(accountInfo2);
 
-        // todo: I believe it is a server side issue, sandbox only, prod cannot reproduce
-        // ref: https://jira.ringcentral.com/browse/PLA-76290
-        // var accountInfo = await rc.Restapi().V2().Accounts().Get();
-        // Assert.NotNull(accountInfo);
+        var accountInfo = await rc.Restapi().V2().Accounts().Get();
+        Assert.NotNull(accountInfo);
     }
 }
