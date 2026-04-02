@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation listA2PSMS
-    /// </summary>
-    public class ListA2PSMSParameters
-    {
-        /// <summary>
+/// Query parameters for operation listA2PSMS
+/// </summary>
+      public class ListA2PSMSParameters
+      {
+          /// <summary>
         ///     Internal identifier of a message batch to filter the response
         ///     Example: 55577
         /// </summary>
@@ -13,7 +13,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Direction of a message to filter the message list result.
-        ///     By default, there is no filter applied - both Inbound and Outbound messages are returned
+            ///     By default, there is no filter applied - both Inbound and Outbound messages are returned
         ///     Example: Inbound
         ///     Enum: Inbound, Outbound
         /// </summary>
@@ -21,7 +21,7 @@ namespace RingCentral
 
         /// <summary>
         ///     The beginning of the time range to filter the results in ISO 8601 format including timezone.
-        ///     Default is the `dateTo` minus 24 hours
+            ///     Default is the `dateTo` minus 24 hours
         ///     Format: date-time
         ///     Example: Mon Nov 09 2020 08:07:52 GMT-0800 (Pacific Standard Time)
         /// </summary>
@@ -29,7 +29,7 @@ namespace RingCentral
 
         /// <summary>
         ///     The end of the time range to filter the results in ISO 8601 format including timezone.
-        ///     Default is the current time
+            ///     Default is the current time
         ///     Format: date-time
         ///     Example: Wed Nov 25 2020 08:07:52 GMT-0800 (Pacific Standard Time)
         /// </summary>
@@ -43,8 +43,7 @@ namespace RingCentral
         public string view { get; set; }
 
         /// <summary>
-        ///     List of phone numbers (specified in 'to' or 'from' fields of a message) to filter the results. Maximum number of
-        ///     phone numbers allowed to be specified as filters is 15
+        ///     List of phone numbers (specified in 'to' or 'from' fields of a message) to filter the results. Maximum number of phone numbers allowed to be specified as filters is 15
         ///     Example: 15551234455,15551235577
         /// </summary>
         public string[] phoneNumber { get; set; }
@@ -62,5 +61,5 @@ namespace RingCentral
         ///     Default: 1000
         /// </summary>
         public long? perPage { get; set; }
-    }
-}
+      }
+  }

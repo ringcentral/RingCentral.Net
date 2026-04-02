@@ -1,36 +1,34 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.AssignedRole
 {
-    public class Index
+    public partial class Index
     {
-        public Account.Index parent;
         public RestClient rc;
-
-        public Index(Account.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public Restapi.Account.Index parent;
+public Index(Restapi.Account.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/assigned-role";
         }
-
         /// <summary>
-        ///     Returns a list of roles assigned to the current account.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/assigned-role
-        ///     Rate Limit Group: Medium
-        ///     App Permission: ReadAccounts
-        ///     User Permission: ReadAssignedRoles
+        /// Returns a list of roles assigned to the current account.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/assigned-role
+        /// Rate Limit Group: Medium
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadAssignedRoles
         /// </summary>
-        public async Task<ExtensionWithRolesCollectionResource> Get(ListAssignedRolesParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Get<ExtensionWithRolesCollectionResource>(Path(), queryParams, restRequestConfig);
-        }
+  public async Task<RingCentral.ExtensionWithRolesCollectionResource> Get(RingCentral.ListAssignedRolesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Get<RingCentral.ExtensionWithRolesCollectionResource>(this.Path(), queryParams, restRequestConfig);
+  }
     }
 }
 
@@ -38,9 +36,9 @@ namespace RingCentral.Paths.Restapi.Account
 {
     public partial class Index
     {
-        public AssignedRole.Index AssignedRole()
+        public Restapi.Account.AssignedRole.Index AssignedRole()
         {
-            return new AssignedRole.Index(this);
+            return new Restapi.Account.AssignedRole.Index(this);
         }
     }
 }

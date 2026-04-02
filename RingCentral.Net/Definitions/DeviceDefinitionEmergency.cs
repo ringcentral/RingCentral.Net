@@ -1,13 +1,13 @@
 namespace RingCentral
-{
-    public class DeviceDefinitionEmergency
-    {
-        /// <summary>
+  {
+      public class DeviceDefinitionEmergency
+      {
+          /// <summary>
         /// </summary>
-        public PostalAddress address { get; set; }
+        public DeviceDefinitionEmergencyLocation location { get; set; }
 
         /// <summary>
         /// </summary>
-        public DeviceDefinitionEmergencyLocation location { get; set; }
-    }
-}
+        public PostalAddress address { get; set; }
+      }
+  }

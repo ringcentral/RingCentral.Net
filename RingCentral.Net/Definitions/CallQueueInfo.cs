@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CallQueueInfo
-    {
-        /// <summary>
+  {
+      public class CallQueueInfo
+      {
+          /// <summary>
         ///     Link to a call queue
         ///     Format: uri
         /// </summary>
@@ -38,5 +38,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public SiteBasicInfo site { get; set; }
-    }
-}
+      }
+  }

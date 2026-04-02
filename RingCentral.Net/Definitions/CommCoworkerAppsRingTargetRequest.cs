@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Coworker apps target
-    /// </summary>
-    public class CommCoworkerAppsRingTargetRequest
-    {
-        /// <summary>
+/// Coworker apps target
+/// </summary>
+      public class CommCoworkerAppsRingTargetRequest
+      {
+          /// <summary>
         /// </summary>
         public string name { get; set; }
 
@@ -13,8 +13,7 @@ namespace RingCentral
         ///     Ring target type
         ///     Required
         ///     Example: CoworkerAppsRingTarget
-        ///     Enum: CoworkerAppsRingTarget, CoworkerRingTarget, DeviceRingTarget, ImsPhoneNumberRingTarget,
-        ///     IntegrationRingTarget, PhoneNumberRingTarget
+        ///     Enum: CoworkerAppsRingTarget, CoworkerRingTarget, DeviceRingTarget, ImsPhoneNumberRingTarget, IntegrationRingTarget, PhoneNumberRingTarget
         /// </summary>
         public string type { get; set; }
 
@@ -22,5 +21,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CommReferencedExtensionResource extension { get; set; }
-    }
-}
+      }
+  }

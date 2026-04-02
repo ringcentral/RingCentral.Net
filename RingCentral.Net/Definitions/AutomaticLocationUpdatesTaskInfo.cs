@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AutomaticLocationUpdatesTaskInfo
-    {
-        /// <summary>
+  {
+      public class AutomaticLocationUpdatesTaskInfo
+      {
+          /// <summary>
         ///     Internal identifier of a task
         /// </summary>
         public string id { get; set; }
@@ -34,5 +34,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public TaskResultInfo result { get; set; }
-    }
-}
+      }
+  }

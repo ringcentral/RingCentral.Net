@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class HoursInterval
-    {
-        /// <summary>
+  {
+      public class HoursInterval
+      {
+          /// <summary>
         ///     Time in format hh:mm
         ///     Required
         /// </summary>
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string to { get; set; }
-    }
-}
+      }
+  }

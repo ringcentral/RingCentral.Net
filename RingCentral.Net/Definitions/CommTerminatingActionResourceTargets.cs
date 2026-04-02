@@ -1,16 +1,15 @@
 namespace RingCentral
-{
-    public class CommTerminatingActionResourceTargets
-    {
-        /// <summary>
+  {
+      public class CommTerminatingActionResourceTargets
+      {
+          /// <summary>
         /// </summary>
         public string name { get; set; }
 
         /// <summary>
         ///     Terminating target type
         ///     Example: ExtensionTerminatingTarget
-        ///     Enum: ExtensionTerminatingTarget, PhoneNumberTerminatingTarget, PlayAnnouncementTerminatingTarget,
-        ///     VoiceMailTerminatingTarget
+        ///     Enum: ExtensionTerminatingTarget, PhoneNumberTerminatingTarget, PlayAnnouncementTerminatingTarget, VoiceMailTerminatingTarget
         /// </summary>
         public string type { get; set; }
 
@@ -30,5 +29,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CommPhoneNumberResource destination { get; set; }
-    }
-}
+      }
+  }

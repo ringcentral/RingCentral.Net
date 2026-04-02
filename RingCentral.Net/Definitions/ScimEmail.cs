@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ScimEmail
-    {
-        /// <summary>
+  {
+      public class ScimEmail
+      {
+          /// <summary>
         ///     Required
         ///     Enum: work
         /// </summary>
@@ -12,5 +12,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string value { get; set; }
-    }
-}
+      }
+  }

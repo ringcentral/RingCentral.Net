@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class BatchProvisionUsersResponseResults
-    {
-        /// <summary>
+  {
+      public class BatchProvisionUsersResponseResults
+      {
+          /// <summary>
         ///     Indicates if the provisioning operation was successful for this item, always `false` in this model
         /// </summary>
         public bool? successful { get; set; }
@@ -14,5 +14,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ApiErrorWithParameter[] errors { get; set; }
-    }
-}
+      }
+  }

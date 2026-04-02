@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CreateSipRegistrationResponse
-    {
-        /// <summary>
+  {
+      public class CreateSipRegistrationResponse
+      {
+          /// <summary>
         ///     Required
         /// </summary>
         public SipRegistrationDeviceInfo device { get; set; }
@@ -32,5 +32,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? pollingInterval { get; set; }
-    }
-}
+      }
+  }

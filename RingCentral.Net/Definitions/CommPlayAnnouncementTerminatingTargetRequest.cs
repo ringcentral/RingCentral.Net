@@ -1,13 +1,12 @@
 namespace RingCentral
-{
-    public class CommPlayAnnouncementTerminatingTargetRequest
-    {
-        /// <summary>
+  {
+      public class CommPlayAnnouncementTerminatingTargetRequest
+      {
+          /// <summary>
         ///     Terminating target type
         ///     Required
         ///     Example: PlayAnnouncementTerminatingTarget
-        ///     Enum: ExtensionTerminatingTarget, PhoneNumberTerminatingTarget, PlayAnnouncementTerminatingTarget,
-        ///     VoiceMailTerminatingTarget
+        ///     Enum: ExtensionTerminatingTarget, PhoneNumberTerminatingTarget, PlayAnnouncementTerminatingTarget, VoiceMailTerminatingTarget
         /// </summary>
         public string type { get; set; }
 
@@ -21,5 +20,5 @@ namespace RingCentral
         ///     Enum: Ringing, Terminating
         /// </summary>
         public string dispatchingType { get; set; }
-    }
-}
+      }
+  }

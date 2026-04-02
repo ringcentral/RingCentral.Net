@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Information on a blocked/allowed phone number
-    /// </summary>
-    public class BlockedAllowedPhoneNumberInfo
-    {
-        /// <summary>
+/// Information on a blocked/allowed phone number
+/// </summary>
+      public class BlockedAllowedPhoneNumberInfo
+      {
+          /// <summary>
         ///     Link to a blocked/allowed phone number
         ///     Format: uri
         /// </summary>
@@ -32,5 +32,5 @@ namespace RingCentral
         ///     Enum: Blocked, Allowed
         /// </summary>
         public string status { get; set; }
-    }
-}
+      }
+  }

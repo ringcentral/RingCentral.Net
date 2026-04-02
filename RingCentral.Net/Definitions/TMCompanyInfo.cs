@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class TMCompanyInfo
-    {
-        /// <summary>
+  {
+      public class TMCompanyInfo
+      {
+          /// <summary>
         ///     Internal identifier of a company (RingCentral account ID)
         ///     Required
         /// </summary>
@@ -31,5 +31,5 @@ namespace RingCentral
         ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class IvrPrompts
-    {
-        /// <summary>
+  {
+      public class IvrPrompts
+      {
+          /// <summary>
         ///     Link to prompts library resource
         ///     Format: uri
         /// </summary>
@@ -20,5 +20,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-    }
-}
+      }
+  }

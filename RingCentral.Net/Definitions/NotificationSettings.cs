@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class NotificationSettings
-    {
-        /// <summary>
+  {
+      public class NotificationSettings
+      {
+          /// <summary>
         ///     Canonical URI of notifications settings resource
         ///     Format: uri
         /// </summary>
@@ -10,16 +10,16 @@ namespace RingCentral
 
         /// <summary>
         ///     The parameter contains the list of phone Numbers which should be used for SMS notifications sending
-        ///     (if advanced mode disabled)
+            ///     (if advanced mode disabled)
         /// </summary>
         public string[] smsPhoneNumbers { get; set; }
 
         /// <summary>
         ///     Specifies notifications settings mode. If `true` then advanced
-        ///     mode is on, it allows using different emails and/or phone numbers for
-        ///     each notification type. If `false` then basic mode is on. Advanced mode
-        ///     settings are returned in both modes, if specified once, but if basic mode
-        ///     is switched on, they are not applied
+            ///     mode is on, it allows using different emails and/or phone numbers for
+            ///     each notification type. If `false` then basic mode is on. Advanced mode
+            ///     settings are returned in both modes, if specified once, but if basic mode
+            ///     is switched on, they are not applied
         /// </summary>
         public bool? advancedMode { get; set; }
 
@@ -45,8 +45,8 @@ namespace RingCentral
 
         /// <summary>
         ///     List of extensions specified as email notification recipients.
-        ///     Returned only for call queues where queue managers are assigned as user
-        ///     extensions.
+            ///     Returned only for call queues where queue managers are assigned as user
+            ///     extensions.
         /// </summary>
         public EmailRecipientInfo[] emailRecipients { get; set; }
 
@@ -57,13 +57,13 @@ namespace RingCentral
 
         /// <summary>
         ///     Specifies if managers' emails are included in the list of emails to which
-        ///     notifications are sent
+            ///     notifications are sent
         /// </summary>
         public bool? includeManagers { get; set; }
 
         /// <summary>
         ///     Specifies if sms recipients' emails are included in the list of emails to which
-        ///     notifications are sent
+            ///     notifications are sent
         /// </summary>
         public bool? includeSmsRecipients { get; set; }
 
@@ -76,5 +76,9 @@ namespace RingCentral
         ///     List of notification recipient email addresses
         /// </summary>
         public string[] smsEmailAddresses { get; set; }
-    }
-}
+
+        /// <summary>
+        /// </summary>
+        public CallNotesInfo callNotes { get; set; }
+      }
+  }

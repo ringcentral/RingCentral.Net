@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Company business address
-    /// </summary>
-    public class BusinessAddressInfo
-    {
-        /// <summary>
+/// Company business address
+/// </summary>
+      public class BusinessAddressInfo
+      {
+          /// <summary>
         ///     Name of a country
         /// </summary>
         public string country { get; set; }
@@ -29,5 +29,5 @@ namespace RingCentral
         ///     Zip code
         /// </summary>
         public string zip { get; set; }
-    }
-}
+      }
+  }

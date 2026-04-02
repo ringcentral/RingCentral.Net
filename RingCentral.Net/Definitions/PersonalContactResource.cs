@@ -1,19 +1,18 @@
 namespace RingCentral
-{
-    public class PersonalContactResource
-    {
-        /// <summary>
+  {
+      public class PersonalContactResource
+      {
+          /// <summary>
         ///     Canonical URI of a contact
         ///     Format: uri
-        ///     Example:
-        ///     https://platform.ringcentral.com/restapi/v1.0/account/230919004/extension/230919004/address-book/contact/623045004
+        ///     Example: https://platform.ringcentral.com/restapi/v1.0/account/230919004/extension/230919004/address-book/contact/623045004
         /// </summary>
         public string uri { get; set; }
 
         /// <summary>
         ///     This property has a special meaning only on Address Book Sync
-        ///     (e.g. a contact can be `Deleted`). For simple contact list reading it
-        ///     has always the default value - `Alive`
+            ///     (e.g. a contact can be `Deleted`). For simple contact list reading it
+            ///     has always the default value - `Alive`
         ///     Enum: Alive, Deleted, Purged
         /// </summary>
         public string availability { get; set; }
@@ -194,5 +193,5 @@ namespace RingCentral
         ///     Source of the contact. Up to 64 symbols
         /// </summary>
         public string appInfo { get; set; }
-    }
-}
+      }
+  }

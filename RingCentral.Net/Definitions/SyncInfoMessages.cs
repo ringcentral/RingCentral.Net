@@ -1,14 +1,14 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Sync type, token and time
-    /// </summary>
-    public class SyncInfoMessages
-    {
-        /// <summary>
+/// Sync type, token and time
+/// </summary>
+      public class SyncInfoMessages
+      {
+          /// <summary>
         ///     Type of message synchronization request:
-        ///     - FSync -- full sync
-        ///     - ISync -- incremental sync
+            ///       - FSync -- full sync
+            ///       - ISync -- incremental sync
         ///     Enum: FSync, ISync
         /// </summary>
         public string syncType { get; set; }
@@ -20,7 +20,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Last synchronization date/time in ISO 8601 format including
-        ///     timezone, for example 2016-03-10T18:07:52.534Z
+            ///     timezone, for example 2016-03-10T18:07:52.534Z
         ///     Format: date-time
         /// </summary>
         public string syncTime { get; set; }
@@ -28,5 +28,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public bool? olderRecordsExist { get; set; }
-    }
-}
+      }
+  }

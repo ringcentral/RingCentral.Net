@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class EveryoneTeamInfo
-    {
-        /// <summary>
+  {
+      public class EveryoneTeamInfo
+      {
+          /// <summary>
         ///     Internal identifier of a chat
         /// </summary>
         public string id { get; set; }
@@ -34,5 +34,5 @@ namespace RingCentral
         ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
-    }
-}
+      }
+  }

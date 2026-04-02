@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CustomUserGreetingInfo
-    {
-        /// <summary>
+  {
+      public class CustomUserGreetingInfo
+      {
+          /// <summary>
         ///     Link to a custom user greeting
         ///     Format: uri
         /// </summary>
@@ -15,8 +15,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Type of custom user greeting
-        ///     Enum: Introductory, Announcement, InterruptPrompt, ConnectingAudio, ConnectingMessage, Voicemail, Unavailable,
-        ///     HoldMusic, PronouncedName, TemplateGreeting
+        ///     Enum: Introductory, Announcement, InterruptPrompt, ConnectingAudio, ConnectingMessage, Voicemail, Unavailable, HoldMusic, PronouncedName, TemplateGreeting
         /// </summary>
         public string type { get; set; }
 
@@ -35,5 +34,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CustomGreetingAnsweringRuleInfo answeringRule { get; set; }
-    }
-}
+      }
+  }

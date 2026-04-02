@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class DiarizedObject
-    {
-        /// <summary>
+  {
+      public class DiarizedObject
+      {
+          /// <summary>
         ///     Required
         ///     Format: int32
         ///     Example: 2
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public DiarizeSegment[] utterances { get; set; }
-    }
-}
+      }
+  }

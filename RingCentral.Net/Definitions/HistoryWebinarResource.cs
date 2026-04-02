@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class HistoryWebinarResource
-    {
-        /// <summary>
+  {
+      public class HistoryWebinarResource
+      {
+          /// <summary>
         ///     Internal object ID
         ///     Example: 78654321
         /// </summary>
@@ -43,5 +43,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public HostModel host { get; set; }
-    }
-}
+      }
+  }

@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Optional filters that limit the scope of calls (joined via AND)
-    /// </summary>
-    public class CallFilters
-    {
-        /// <summary>
+/// Optional filters that limit the scope of calls (joined via AND)
+/// </summary>
+      public class CallFilters
+      {
+          /// <summary>
         /// </summary>
         public ExtensionFilters extensionFilters { get; set; }
 
@@ -20,8 +20,7 @@ namespace RingCentral
         public string[] calledNumbers { get; set; }
 
         /// <summary>
-        ///     Specifies the call directions relative to the scope specified in grouping object (joined via OR). Not applicable to
-        ///     internal origin calls with company scope
+        ///     Specifies the call directions relative to the scope specified in grouping object (joined via OR). Not applicable to internal origin calls with company scope
         ///     Enum: Inbound, Outbound
         /// </summary>
         public string[] directions { get; set; }
@@ -40,8 +39,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Filtering of calls by the nature of call result (joined via OR)
-        ///     Enum: Completed, Abandoned, Voicemail, Unknown, Missed, Accepted, Transferred, PickedUp, Forwarded,
-        ///     AnsweredElsewhere
+        ///     Enum: Completed, Abandoned, Voicemail, Unknown, Missed, Accepted, Transferred, PickedUp, Forwarded, AnsweredElsewhere
         /// </summary>
         public string[] callResults { get; set; }
 
@@ -77,8 +75,7 @@ namespace RingCentral
         public string[] queueSla { get; set; }
 
         /// <summary>
-        ///     Filtering of calls based on how the call started from the callee perspective (joined via OR). If the call is
-        ///     outbound relative to the grouping scope, CallType is Outbound
+        ///     Filtering of calls based on how the call started from the callee perspective (joined via OR). If the call is outbound relative to the grouping scope, CallType is Outbound
         ///     Enum: Direct, FromQueue, ParkRetrieval, Transferred, Outbound, Overflow, QueueCallPickup
         /// </summary>
         public string[] callTypes { get; set; }
@@ -94,5 +91,5 @@ namespace RingCentral
         ///     Enum: BusinessHours, AfterHours
         /// </summary>
         public string[] queueHours { get; set; }
-    }
-}
+      }
+  }

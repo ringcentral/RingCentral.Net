@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class TMAttachmentFieldsInfo
-    {
-        /// <summary>
+  {
+      public class TMAttachmentFieldsInfo
+      {
+          /// <summary>
         ///     Title of an individual field
         /// </summary>
         public string title { get; set; }
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Enum: Short, Long
         /// </summary>
         public string style { get; set; }
-    }
-}
+      }
+  }

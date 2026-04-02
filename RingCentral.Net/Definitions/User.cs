@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class User
-    {
-        /// <summary>
+  {
+      public class User
+      {
+          /// <summary>
         ///     User account identifier
         ///     Required
         ///     Example: 664287016
@@ -15,5 +15,5 @@ namespace RingCentral
         ///     Example: 664307016
         /// </summary>
         public string extensionId { get; set; }
-    }
-}
+      }
+  }

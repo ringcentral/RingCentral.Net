@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class DetailedCallInfo
-    {
-        /// <summary>
+  {
+      public class DetailedCallInfo
+      {
+          /// <summary>
         /// </summary>
         public string callId { get; set; }
 
@@ -27,5 +27,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string rcSessionId { get; set; }
-    }
-}
+      }
+  }

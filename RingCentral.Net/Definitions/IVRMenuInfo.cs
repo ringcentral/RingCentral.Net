@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class IVRMenuInfo
-    {
-        /// <summary>
+  {
+      public class IvrMenuInfo
+      {
+          /// <summary>
         ///     Internal identifier of an IVR Menu extension
         /// </summary>
         public string id { get; set; }
@@ -34,6 +34,6 @@ namespace RingCentral
         /// <summary>
         ///     Keys handling settings
         /// </summary>
-        public IVRMenuActionsInfo[] actions { get; set; }
-    }
-}
+        public IvrMenuActionsInfo[] actions { get; set; }
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class TMNoteWithBodyInfo
-    {
-        /// <summary>
+  {
+      public class TMNoteWithBodyInfo
+      {
+          /// <summary>
         ///     Internal identifier of a note
         /// </summary>
         public string id { get; set; }
@@ -61,5 +61,5 @@ namespace RingCentral
         ///     Text of a note
         /// </summary>
         public string body { get; set; }
-    }
-}
+      }
+  }

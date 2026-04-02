@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AccountTimezoneInfoRequest
-    {
-        /// <summary>
+  {
+      public class AccountTimezoneInfoRequest
+      {
+          /// <summary>
         ///     Internal identifier of a timezone
         ///     Required
         /// </summary>
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string name { get; set; }
-    }
-}
+      }
+  }

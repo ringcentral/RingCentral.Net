@@ -1,20 +1,23 @@
+using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
+
 namespace RingCentral.Paths.TeamMessaging.V1.Recent
 {
     public partial class Index
     {
-        public V1.Index parent;
         public RestClient rc;
-
-        public Index(V1.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public TeamMessaging.V1.Index parent;
+public Index(TeamMessaging.V1.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
-            return $"{parent.Path()}/recent";
+            return $"{parent.Path(false)}/recent";
         }
+
     }
 }
 
@@ -22,9 +25,9 @@ namespace RingCentral.Paths.TeamMessaging.V1
 {
     public partial class Index
     {
-        public Recent.Index Recent()
+        public TeamMessaging.V1.Recent.Index Recent()
         {
-            return new Recent.Index(this);
+            return new TeamMessaging.V1.Recent.Index(this);
         }
     }
 }

@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     For 'TextToSpeech' mode only. Prompt language metadata
-    /// </summary>
-    public class PromptLanguageInfo
-    {
-        /// <summary>
+/// For 'TextToSpeech' mode only. Prompt language metadata
+/// </summary>
+      public class PromptLanguageInfo
+      {
+          /// <summary>
         ///     Link to a prompt language
         ///     Format: uri
         /// </summary>
@@ -25,5 +25,5 @@ namespace RingCentral
         ///     Language locale code
         /// </summary>
         public string localeCode { get; set; }
-    }
-}
+      }
+  }

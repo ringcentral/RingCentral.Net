@@ -1,11 +1,11 @@
 namespace RingCentral
-{
-    public class SearchDirectoryEntriesRequest
-    {
-        /// <summary>
+  {
+      public class SearchDirectoryEntriesRequest
+      {
+          /// <summary>
         ///     String value to filter the contacts. The value specified is
-        ///     searched through the following fields: `firstName`, `lastName`, `extensionNumber`, `phoneNumber`, `email`,
-        ///     `jobTitle`, `department`, `customFieldValue`
+            ///     searched through the following fields: `firstName`, `lastName`, `extensionNumber`, `phoneNumber`, `email`,
+            ///     `jobTitle`, `department`, `customFieldValue`
         /// </summary>
         public string searchString { get; set; }
 
@@ -16,9 +16,8 @@ namespace RingCentral
         public string[] searchFields { get; set; }
 
         /// <summary>
-        ///     If `true` then contacts of all accounts in federation are returned, if it is in federation, account section will be
-        ///     returned. If `false` then only contacts of the current account are returned, and account section is eliminated in
-        ///     this case
+        ///     If `true` then contacts of all accounts in federation are returned, if it is in federation, account section will be returned. If `false` then only contacts of the current account are returned, and account section is eliminated in this case
+        ///     Default: true
         /// </summary>
         public bool? showFederated { get; set; }
 
@@ -30,8 +29,7 @@ namespace RingCentral
         /// <summary>
         ///     Type of directory contact to filter
         ///     Example: User
-        ///     Enum: User, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation, IvrMenu, Limited,
-        ///     ApplicationExtension, Site, Bot, Room, DelegatedLinesGroup, GroupCallPickup, External
+        ///     Enum: User, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation, IvrMenu, Limited, ApplicationExtension, Site, Bot, Room, DelegatedLinesGroup, GroupCallPickup, External
         /// </summary>
         public string extensionType { get; set; }
 
@@ -71,11 +69,30 @@ namespace RingCentral
 
         /// <summary>
         ///     Types of extension to filter the contacts
-        ///     Enum: User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup,
-        ///     IvrMenu, ApplicationExtension, ParkLocation, Limited, Bot, Site, Room, ProxyAdmin, DelegatedLinesGroup,
-        ///     FlexibleUser, GroupCallPickup, RoomConnector
+        ///     Enum: User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup, IvrMenu, ApplicationExtension, ParkLocation, Limited, Bot, Site, Room, ProxyAdmin, DelegatedLinesGroup, FlexibleUser, GroupCallPickup, RoomConnector, TieLine, External
         /// </summary>
         public string[] extensionTypes { get; set; }
+
+        /// <summary>
+        ///     The list of internal identifiers of the extension
+        /// </summary>
+        public string[] extensionIds { get; set; }
+
+        /// <summary>
+        ///     Enum: Carrier, Account
+        /// </summary>
+        public string[] integrationRoutingTypes { get; set; }
+
+        /// <summary>
+        ///     The list of SMS availability statuses to filter phone numbers
+        ///     Enum: Active, Inactive, Disabled, Banned, Suspended, Deprovisioning, InboundOnly, Unknown
+        /// </summary>
+        public string[] phoneNumberSmsAvailabilityStatuses { get; set; }
+
+        /// <summary>
+        ///     The list of SMS campaign IDs to filter phone numbers
+        /// </summary>
+        public string[] phoneNumberSmsCampaignIds { get; set; }
 
         /// <summary>
         ///     Sorting settings
@@ -91,5 +108,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? perPage { get; set; }
-    }
-}
+      }
+  }

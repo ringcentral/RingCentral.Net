@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class EmergencyLocationsPaging
-    {
-        /// <summary>
+  {
+      public class EmergencyLocationsPaging
+      {
+          /// <summary>
         ///     Required
         ///     Format: int32
         /// </summary>
@@ -37,5 +37,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? pageEnd { get; set; }
-    }
-}
+      }
+  }

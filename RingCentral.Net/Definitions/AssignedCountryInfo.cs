@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Information on a country assigned to an extension user. Returned for the User extension type only
-    /// </summary>
-    public class AssignedCountryInfo
-    {
-        /// <summary>
+/// Information on a country assigned to an extension user. Returned for the User extension type only
+/// </summary>
+      public class AssignedCountryInfo
+      {
+          /// <summary>
         ///     Internal identifier of an assigned country
         /// </summary>
         public string id { get; set; }
@@ -26,5 +26,5 @@ namespace RingCentral
         ///     Official name of a country
         /// </summary>
         public string name { get; set; }
-    }
-}
+      }
+  }

@@ -1,28 +1,25 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation listDirectoryEntries
-    /// </summary>
-    public class ListDirectoryEntriesParameters
-    {
-        /// <summary>
+/// Query parameters for operation listDirectoryEntries
+/// </summary>
+      public class ListDirectoryEntriesParameters
+      {
+          /// <summary>
         ///     Allows to make lookups across a whole directory skipping a filtering logic of Cross-Site access management feature.
         ///     Default: true
         /// </summary>
         public bool? accessibleSitesOnly { get; set; }
 
         /// <summary>
-        ///     If `true` then contacts of all accounts in federation are returned. If `false` then only contacts of the current
-        ///     account are returned, and account section is eliminated in this case
+        ///     If `true` then contacts of all accounts in federation are returned. If `false` then only contacts of the current account are returned, and account section is eliminated in this case
         ///     Default: true
         /// </summary>
         public bool? showFederated { get; set; }
 
         /// <summary>
-        ///     Type of an extension. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in
-        ///     modern RingCentral product terminology
-        ///     Enum: User, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ParkLocation, Limited,
-        ///     External, DelegatedLinesGroup
+        ///     Type of an extension. Please note that legacy 'Department' extension type corresponds to 'Call Queue' extensions in modern RingCentral product terminology
+        ///     Enum: User, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ParkLocation, Limited, External, DelegatedLinesGroup, TieLine
         /// </summary>
         public string type { get; set; }
 
@@ -41,18 +38,17 @@ namespace RingCentral
 
         /// <summary>
         ///     Records count to be returned per one page. It can be either integer or string with the specific keyword values:
-        ///     - `all` - all records are returned in one page
-        ///     - `max` - maximum count of records that can be returned in one page
+            ///     - `all` - all records are returned in one page
+            ///     - `max` - maximum count of records that can be returned in one page
         ///     Maximum: 2000
         ///     Format: int32
         ///     Default: 1000
-        ///     Enum: max, all
         /// </summary>
-        public string perPage { get; set; }
+        public long? perPage { get; set; }
 
         /// <summary>
         ///     Internal identifier of the business site to which extensions belong
         /// </summary>
         public string siteId { get; set; }
-    }
-}
+      }
+  }

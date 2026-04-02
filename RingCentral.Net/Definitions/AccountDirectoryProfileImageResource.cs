@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AccountDirectoryProfileImageResource
-    {
-        /// <summary>
+  {
+      public class AccountDirectoryProfileImageResource
+      {
+          /// <summary>
         ///     Example: tag
         /// </summary>
         public string etag { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Format: uri
         /// </summary>
         public string uri { get; set; }
-    }
-}
+      }
+  }

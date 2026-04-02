@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AutomaticLocationUpdatesPhoneNumberInfo
-    {
-        /// <summary>
+  {
+      public class AutomaticLocationUpdatesPhoneNumberInfo
+      {
+          /// <summary>
         ///     Internal identifier of a phone number
         ///     Format: int64
         /// </summary>
@@ -12,5 +12,5 @@ namespace RingCentral
         ///     Phone number
         /// </summary>
         public string phoneNumber { get; set; }
-    }
-}
+      }
+  }

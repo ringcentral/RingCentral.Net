@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Phone number information
-    /// </summary>
-    public class PhoneNumberInfoIntId
-    {
-        /// <summary>
+/// Phone number information
+/// </summary>
+      public class PhoneNumberInfoIntId
+      {
+          /// <summary>
         ///     Internal identifier of a phone number
         ///     Format: int64
         /// </summary>
@@ -30,9 +30,9 @@ namespace RingCentral
         public string location { get; set; }
 
         /// <summary>
-        ///     Payment type. 'External' is returned for forwarded numbers
-        ///     which are not terminated in the RingCentral phone system
-        ///     Enum: External, Local
+        ///     Payment type. 'External' is returned for forwarded numbers 
+            ///     which are not terminated in the RingCentral phone system
+        ///     Enum: External, ExternalNumberProvider, Local
         /// </summary>
         public string paymentType { get; set; }
 
@@ -43,8 +43,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Status of a phone number. If the value is 'Normal', the phone
-        ///     number is ready to be used. Otherwise, it is an external number not yet
-        ///     ported to RingCentral
+            ///     number is ready to be used. Otherwise, it is an external number not yet
+            ///     ported to RingCentral
         /// </summary>
         public string status { get; set; }
 
@@ -56,9 +56,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Usage type of the phone number
-        ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber,
-        ///     ForwardedCompanyNumber, ContactCenterNumber
+        ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber, IntegrationNumber
         /// </summary>
         public string usageType { get; set; }
-    }
-}
+      }
+  }

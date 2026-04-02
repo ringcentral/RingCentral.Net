@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class TMCreateTaskRequest
-    {
-        /// <summary>
+  {
+      public class TMCreateTaskRequest
+      {
+          /// <summary>
         ///     Task name/subject. Max allowed length is 250 characters
         ///     Required
         /// </summary>
@@ -54,5 +54,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public TaskAttachment[] attachments { get; set; }
-    }
-}
+      }
+  }

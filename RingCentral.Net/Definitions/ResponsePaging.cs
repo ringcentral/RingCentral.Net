@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Paging information
-    /// </summary>
-    public class ResponsePaging
-    {
-        /// <summary>
+/// Paging information
+/// </summary>
+      public class ResponsePaging
+      {
+          /// <summary>
         ///     The current page number
         ///     Required
         ///     Format: int64
@@ -32,5 +32,5 @@ namespace RingCentral
         ///     Format: int64
         /// </summary>
         public long? totalElements { get; set; }
-    }
-}
+      }
+  }

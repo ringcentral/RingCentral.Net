@@ -1,39 +1,42 @@
-using System;
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Ai.Status.V1.Jobs
 {
-    public class Index
+    public partial class Index
     {
-        public string jobId;
-        public V1.Index parent;
         public RestClient rc;
-
-        public Index(V1.Index parent, string jobId = null)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-            this.jobId = jobId;
-        }
-
+public Ai.Status.V1.Index parent;
+public string jobId;
+public Index(Ai.Status.V1.Index parent, string jobId = null)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+this.jobId = jobId;
+}
         public string Path(bool withParameter = true)
         {
-            if (withParameter && jobId != null) return $"{parent.Path()}/jobs/{jobId}";
+            if (withParameter && jobId != null)
+            {
+                return $"{parent.Path()}/jobs/{jobId}";
+            }
             return $"{parent.Path()}/jobs";
         }
-
         /// <summary>
-        ///     Returns async task status by Job ID
-        ///     HTTP Method: get
-        ///     Endpoint: /ai/status/v1/jobs/{jobId}
-        ///     Rate Limit Group: Heavy
-        ///     App Permission: AI
+        /// Returns async task status by Job ID
+        /// HTTP Method: get
+        /// Endpoint: /ai/status/v1/jobs/{jobId}
+        /// Rate Limit Group: Heavy
+        /// App Permission: AI
         /// </summary>
-        public async Task<JobStatusResponse> Get(RestRequestConfig restRequestConfig = null)
-        {
-            if (jobId == null) throw new ArgumentException("Parameter cannot be null", nameof(jobId));
-            return await rc.Get<JobStatusResponse>(Path(), null, restRequestConfig);
-        }
+  public async Task<RingCentral.JobStatusResponse> Get(RestRequestConfig restRequestConfig = null)
+  {
+if (jobId == null)
+    {
+        throw new System.ArgumentException("Parameter cannot be null", nameof(jobId));
+    }return await rc.Get<RingCentral.JobStatusResponse>(this.Path(), null, restRequestConfig);
+  }
     }
 }
 
@@ -41,9 +44,9 @@ namespace RingCentral.Paths.Ai.Status.V1
 {
     public partial class Index
     {
-        public Jobs.Index Jobs(string jobId = null)
+        public Ai.Status.V1.Jobs.Index Jobs(string jobId = null)
         {
-            return new Jobs.Index(this, jobId);
+            return new Ai.Status.V1.Jobs.Index(this, jobId);
         }
     }
 }

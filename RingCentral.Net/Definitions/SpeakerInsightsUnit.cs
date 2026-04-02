@@ -1,11 +1,11 @@
 namespace RingCentral
-{
-    public class SpeakerInsightsUnit
-    {
-        /// <summary>
+  {
+      public class SpeakerInsightsUnit
+      {
+          /// <summary>
         ///     Required
         ///     Example: TalkToListenRatio
-        ///     Enum: Energy, Pace, TalkToListenRatio, QuestionsAsked
+        ///     Enum: Pace, TalkToListenRatio, QuestionsAsked
         /// </summary>
         public string name { get; set; }
 
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public SpeakerInsightsValuesItems[] values { get; set; }
-    }
-}
+      }
+  }

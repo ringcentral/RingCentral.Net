@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class TMUpdateTaskRequest
-    {
-        /// <summary>
+  {
+      public class TMUpdateTaskRequest
+      {
+          /// <summary>
         ///     Task name/subject. Max allowed length is 250 characters.
         /// </summary>
         public string subject { get; set; }
@@ -50,5 +50,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public TMAttachmentInfo[] attachments { get; set; }
-    }
-}
+      }
+  }

@@ -1,12 +1,12 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Identifier of a call party the call will be forwarded to. Only **one of** these parameters: `phoneNumber`,
-    ///     `voicemail`, `extensionNumber` or `extensionId` must be specified, otherwise an error is returned.
-    /// </summary>
-    public class ForwardTarget
-    {
-        /// <summary>
+/// Identifier of a call party the call will be forwarded to. Only **one of** these parameters: `phoneNumber`, `voicemail`, `extensionNumber` or `extensionId` must be specified, otherwise an error is returned.
+/// 
+/// </summary>
+      public class ForwardTarget
+      {
+          /// <summary>
         ///     Phone number
         ///     Required
         /// </summary>
@@ -29,5 +29,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string extensionId { get; set; }
-    }
-}
+      }
+  }

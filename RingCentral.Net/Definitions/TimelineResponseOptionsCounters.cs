@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Options for selecting breakdown for calls count
-    /// </summary>
-    public class TimelineResponseOptionsCounters
-    {
-        /// <summary>
+/// Options for selecting breakdown for calls count
+/// </summary>
+      public class TimelineResponseOptionsCounters
+      {
+          /// <summary>
         ///     Include data for total calls count
         /// </summary>
         public bool? allCalls { get; set; }
@@ -26,8 +26,7 @@ namespace RingCentral
         public bool? callsByResponse { get; set; }
 
         /// <summary>
-        ///     Include breakdown of calls count by segments (Ringing, LiveTalk, Hold, Park, Transfer, IvrPrompt, Voicemail,
-        ///     VmGreeting, Setup)
+        ///     Include breakdown of calls count by segments (Ringing, LiveTalk, Hold, Park, Transfer, IvrPrompt, Voicemail, VmGreeting, Setup)
         /// </summary>
         public bool? callsSegments { get; set; }
 
@@ -52,8 +51,7 @@ namespace RingCentral
         public bool? callsByQueueSla { get; set; }
 
         /// <summary>
-        ///     Include breakdown of calls count by action (HoldOff, HoldOn, ParkOn, ParkOff, BlindTransfer, WarmTransfer,
-        ///     DTMFTransfer)
+        ///     Include breakdown of calls count by action (HoldOff, HoldOn, ParkOn, ParkOff, BlindTransfer, WarmTransfer, DTMFTransfer)
         /// </summary>
         public bool? callsByActions { get; set; }
 
@@ -63,11 +61,7 @@ namespace RingCentral
         public bool? callsByType { get; set; }
 
         /// <summary>
-        ///     Include breakdown of calls count by the total number of times a Queue call was presented to the user. It is limited
-        ///     to `groupBy` Users and `groupByMembers` (Department, Queue, Site, UserGroup) grouping. Only the listed below
-        ///     options for call filters are applicable to `queueOpportunities` and provide meaningful results: `queues` (selected
-        ///     queue extension ids), `callResults` (Missed, Abandoned), `callResponses` (Answered, NotAnswered), `origins`
-        ///     (Internal, External)
+        ///     Include breakdown of calls count by the total number of times a Queue call was presented to the user. It is limited to `groupBy` Users and `groupByMembers` (Department, Queue, Site, UserGroup) grouping. Only the listed below options for call filters are applicable to `queueOpportunities` and provide meaningful results: `queues` (selected queue extension ids), `callResults` (Missed, Abandoned), `callResponses` (Answered, NotAnswered), `origins` (Internal, External)
         /// </summary>
         public bool? queueOpportunities { get; set; }
 
@@ -75,5 +69,5 @@ namespace RingCentral
         ///     Include breakdown of calls count by queue hours (BusinessHours, AfterHours)
         /// </summary>
         public bool? callsByQueueHours { get; set; }
-    }
-}
+      }
+  }

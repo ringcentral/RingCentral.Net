@@ -1,17 +1,20 @@
+using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
+
 namespace RingCentral.Paths.WellKnown
 {
     public partial class Index
     {
         public RestClient rc;
-
-        public Index(RestClient rc)
-        {
-            this.rc = rc;
-        }
-
+public Index(RestClient rc)
+      {
+this.rc = rc;
+}
         public string Path(bool withParameter = false)
         {
-            return "/.well-known";
+            return $"/.well-known";
         }
+
     }
 }

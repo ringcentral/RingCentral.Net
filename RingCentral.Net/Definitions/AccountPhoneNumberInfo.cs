@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AccountPhoneNumberInfo
-    {
-        /// <summary>
+  {
+      public class AccountPhoneNumberInfo
+      {
+          /// <summary>
         ///     Phone number activation status. Determine whether phone number migration is completed on the partner side.
         ///     Enum: Active, Inactive
         /// </summary>
@@ -39,10 +39,7 @@ namespace RingCentral
         /// <summary>
         ///     Usage type of a phone number
         ///     Required
-        ///     Enum: MainCompanyNumber, DirectNumber, Inventory, InventoryPartnerBusinessMobileNumber,
-        ///     PartnerBusinessMobileNumber, AdditionalCompanyNumber, CompanyNumber, PhoneLine, CompanyFaxNumber, ForwardedNumber,
-        ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberStorage,
-        ///     BusinessMobileNumber, ELIN
+        ///     Enum: MainCompanyNumber, DirectNumber, Inventory, InventoryPartnerBusinessMobileNumber, InventoryFmcBusinessMobileNumber, PartnerBusinessMobileNumber, AdditionalCompanyNumber, CompanyNumber, PhoneLine, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberStorage, BusinessMobileNumber, FmcBusinessMobileNumber, ELIN, InventoryMobileNumber
         /// </summary>
         public string usageType { get; set; }
 
@@ -52,20 +49,39 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
+        public bool? mobileNumber { get; set; }
+
+        /// <summary>
+        ///     Indicates whether the phone number belongs to a Hot Desk device if applicable.
+        /// </summary>
+        public bool? hotDeskNumber { get; set; }
+
+        /// <summary>
+        /// </summary>
         public ContactCenterProvider contactCenterProvider { get; set; }
 
         /// <summary>
         ///     Status of a phone number. If the value is `Normal`, the phone
-        ///     number is ready to be used. Otherwise, it is an external number not yet
-        ///     ported to RingCentral
+            ///     number is ready to be used. Otherwise, it is an external number not yet
+            ///     ported to RingCentral
         ///     Required
         ///     Enum: Normal, Pending, PortedIn, Temporary, Unknown
         /// </summary>
         public string status { get; set; }
 
         /// <summary>
+        ///     Caller ID Name
+        /// </summary>
+        public string callerIdName { get; set; }
+
+        /// <summary>
         ///     Reference to the extension this number is assigned to. Omitted for company numbers
         /// </summary>
         public AccountPhoneNumberInfoExtension extension { get; set; }
-    }
-}
+
+        /// <summary>
+        ///     Internal identifier of a phone provider
+        /// </summary>
+        public string providerId { get; set; }
+      }
+  }

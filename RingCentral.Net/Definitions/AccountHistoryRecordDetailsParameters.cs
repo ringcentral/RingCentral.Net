@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AccountHistoryRecordDetailsParameters
-    {
-        /// <summary>
+  {
+      public class AccountHistoryRecordDetailsParameters
+      {
+          /// <summary>
         ///     Required
         ///     Example: settingName
         /// </summary>
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Example: Password
         /// </summary>
         public string value { get; set; }
-    }
-}
+      }
+  }

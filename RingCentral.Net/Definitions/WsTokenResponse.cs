@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class WsTokenResponse
-    {
-        /// <summary>
+  {
+      public class WsTokenResponse
+      {
+          /// <summary>
         ///     The websocket access token to be used when connecting to the Websocket Gateway.
         ///     Required
         /// </summary>
@@ -20,5 +20,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? expires_in { get; set; }
-    }
-}
+      }
+  }

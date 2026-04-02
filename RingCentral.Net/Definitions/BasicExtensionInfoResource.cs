@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class BasicExtensionInfoResource
-    {
-        /// <summary>
+  {
+      public class BasicExtensionInfoResource
+      {
+          /// <summary>
         /// </summary>
         public string id { get; set; }
 
@@ -13,5 +13,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string extensionNumber { get; set; }
-    }
-}
+      }
+  }

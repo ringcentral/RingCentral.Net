@@ -1,18 +1,13 @@
 using Newtonsoft.Json;
 
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Information on a notification
-    /// </summary>
-    public class NotificationInfo
-    {
-        /// <summary>
-        ///     Content availability
-        /// </summary>
-        [JsonProperty("content-available")] public string contentAvailable;
-
-        /// <summary>
+/// Information on a notification
+/// </summary>
+      public class NotificationInfo
+      {
+          /// <summary>
         /// </summary>
         public AlertInfo alert { get; set; }
 
@@ -27,8 +22,14 @@ namespace RingCentral
         public string sound { get; set; }
 
         /// <summary>
+        ///     Content availability
+        /// </summary>
+        [JsonProperty("content-available")]
+        public string contentAvailable;
+
+        /// <summary>
         ///     Category of a message
         /// </summary>
         public string category { get; set; }
-    }
-}
+      }
+  }

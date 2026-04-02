@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class DiarizeApiResponseResponse
-    {
-        /// <summary>
+  {
+      public class DiarizeApiResponseResponse
+      {
+          /// <summary>
         ///     Format: int32
         ///     Example: 2
         /// </summary>
@@ -11,5 +11,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public DiarizeSegment[] utterances { get; set; }
-    }
-}
+      }
+  }

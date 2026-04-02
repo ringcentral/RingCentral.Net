@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Error response
-    /// </summary>
-    public class ASGErrorResponse
-    {
-        /// <summary>
+/// Error response
+/// </summary>
+      public class ASGErrorResponse
+      {
+          /// <summary>
         ///     Error code
         ///     Required
         ///     Example: CMN-101
@@ -22,5 +22,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ErrorEntry[] errors { get; set; }
-    }
-}
+      }
+  }

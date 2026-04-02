@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Message status parameters
-    /// </summary>
-    public class MessageStatusCounts
-    {
-        /// <summary>
+/// Message status parameters
+/// </summary>
+      public class MessageStatusCounts
+      {
+          /// <summary>
         ///     Total cost of all messages with this status code
         ///     Format: float
         /// </summary>
@@ -22,5 +22,5 @@ namespace RingCentral
         ///     Message sending/delivery errors. Returned in `deliveryFailed` and `sendingFailed` resources
         /// </summary>
         public object errorCodeCounts { get; set; }
-    }
-}
+      }
+  }

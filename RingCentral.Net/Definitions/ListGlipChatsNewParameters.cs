@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation listGlipChatsNew
-    /// </summary>
-    public class ListGlipChatsNewParameters
-    {
-        /// <summary>
+/// Query parameters for operation listGlipChatsNew
+/// </summary>
+      public class ListGlipChatsNewParameters
+      {
+          /// <summary>
         ///     Type of chats to be fetched. By default, all type of chats will be fetched
         ///     Enum: Personal, Direct, Group, Team, Everyone
         /// </summary>
@@ -23,5 +23,5 @@ namespace RingCentral
         ///     Pagination token.
         /// </summary>
         public string pageToken { get; set; }
-    }
-}
+      }
+  }

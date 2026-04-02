@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AddDeviceToInventoryResponse
-    {
-        /// <summary>
+  {
+      public class AddDeviceToInventoryResponse
+      {
+          /// <summary>
         ///     Required
         /// </summary>
         public AddDeviceToInventoryResponseDevices[] devices { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public SiteBasicInfo site { get; set; }
-    }
-}
+      }
+  }

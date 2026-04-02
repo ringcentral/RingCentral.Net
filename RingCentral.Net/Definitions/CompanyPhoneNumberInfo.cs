@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CompanyPhoneNumberInfo
-    {
-        /// <summary>
+  {
+      public class CompanyPhoneNumberInfo
+      {
+          /// <summary>
         ///     Link to a company phone number resource
         ///     Format: uri
         /// </summary>
@@ -30,9 +30,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Payment type. 'External' is returned for forwarded numbers
-        ///     which are not terminated in the RingCentral phone system
-        ///     Enum: External, TollFree, Local, BusinessMobileNumberProvider, ExternalNumberProvider,
-        ///     ExternalNumberProviderTollFree
+            ///     which are not terminated in the RingCentral phone system
+        ///     Enum: External, TollFree, Local, BusinessMobileNumberProvider, ExternalNumberProvider, ExternalNumberProviderTollFree, Mobile
         /// </summary>
         public string paymentType { get; set; }
 
@@ -43,8 +42,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Status of a phone number. If the value is `Normal`, the phone
-        ///     number is ready to be used. Otherwise, it is an external number not yet
-        ///     ported to RingCentral
+            ///     number is ready to be used. Otherwise, it is an external number not yet
+            ///     ported to RingCentral
         ///     Enum: Normal, Pending, PortedIn, Temporary, Unknown
         /// </summary>
         public string status { get; set; }
@@ -57,10 +56,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Usage type of a phone number. Numbers of 'NumberPool' and 'NumberStorage' type are not returned in
-        ///     phone number list requests
-        ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber,
-        ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool, NumberStorage,
-        ///     BusinessMobileNumber, PartnerBusinessMobileNumber, IntegrationNumber
+            ///     phone number list requests
+        ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, FmcBusinessMobileNumber, InventoryFmcBusinessMobileNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool, BusinessMobileNumber, ELIN, PartnerBusinessMobileNumber, NumberPoolPartnerBusinessMobileNumber, NumberStorage, IntegrationNumber, InventoryMobileNumber
         /// </summary>
         public string usageType { get; set; }
 
@@ -73,8 +70,7 @@ namespace RingCentral
         public ContactCenterProvider contactCenterProvider { get; set; }
 
         /// <summary>
-        ///     Vanity pattern for this number. Returned only when vanity search option is requested. Vanity pattern corresponds to
-        ///     request parameters `nxx` plus `line` or `numberPattern`
+        ///     Vanity pattern for this number. Returned only when vanity search option is requested. Vanity pattern corresponds to request parameters `nxx` plus `line` or `numberPattern`
         /// </summary>
         public string vanityPattern { get; set; }
 
@@ -88,5 +84,10 @@ namespace RingCentral
         ///     Enum: Active, Inactive
         /// </summary>
         public string activationStatus { get; set; }
-    }
-}
+
+        /// <summary>
+        ///     Caller ID Name
+        /// </summary>
+        public string callerIdName { get; set; }
+      }
+  }

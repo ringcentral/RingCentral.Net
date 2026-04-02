@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class NotificationSettingsUpdateRequest
-    {
-        /// <summary>
+  {
+      public class NotificationSettingsUpdateRequest
+      {
+          /// <summary>
         ///     Canonical URI of notifications settings resource
         ///     Format: uri
         /// </summary>
@@ -10,16 +10,16 @@ namespace RingCentral
 
         /// <summary>
         ///     The parameter contains the list of phone Numbers which should be used for SMS notifications sending
-        ///     (if advanced mode disabled)
+            ///     (if advanced mode disabled)
         /// </summary>
         public string[] smsPhoneNumbers { get; set; }
 
         /// <summary>
         ///     Specifies notifications settings mode. If `true` then advanced
-        ///     mode is on, it allows using different emails and/or phone numbers for
-        ///     each notification type. If `false` then basic mode is on. Advanced mode
-        ///     settings are returned in both modes, if specified once, but if basic mode
-        ///     is switched on, they are not applied
+            ///     mode is on, it allows using different emails and/or phone numbers for
+            ///     each notification type. If `false` then basic mode is on. Advanced mode
+            ///     settings are returned in both modes, if specified once, but if basic mode
+            ///     is switched on, they are not applied
         /// </summary>
         public bool? advancedMode { get; set; }
 
@@ -45,7 +45,7 @@ namespace RingCentral
 
         /// <summary>
         ///     List of notification recipient email addresses. Should not be empty
-        ///     if 'includeManagers' parameter is set to false
+            ///     if 'includeManagers' parameter is set to false
         /// </summary>
         public string[] emailAddresses { get; set; }
 
@@ -56,9 +56,13 @@ namespace RingCentral
 
         /// <summary>
         ///     Specifies if managers' emails are included in the list of emails to
-        ///     which notifications are sent. If not specified, then the value is `true`
+            ///     which notifications are sent. If not specified, then the value is `true`
         ///     Default: true
         /// </summary>
         public bool? includeManagers { get; set; }
-    }
-}
+
+        /// <summary>
+        /// </summary>
+        public CallNotesInfo callNotes { get; set; }
+      }
+  }

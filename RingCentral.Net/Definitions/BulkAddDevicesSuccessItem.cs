@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class BulkAddDevicesSuccessItem
-    {
-        /// <summary>
+  {
+      public class BulkAddDevicesSuccessItem
+      {
+          /// <summary>
         ///     Indicates if the provisioning operation was successful for this item, always `true` in this model
         ///     Required
         ///     Example: true
@@ -27,5 +27,5 @@ namespace RingCentral
         ///     Example: +16501234567
         /// </summary>
         public string phoneNumber { get; set; }
-    }
-}
+      }
+  }

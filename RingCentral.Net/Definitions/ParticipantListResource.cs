@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ParticipantListResource
-    {
-        /// <summary>
+  {
+      public class ParticipantListResource
+      {
+          /// <summary>
         ///     Required
         /// </summary>
         public ParticipantExtendedModel[] records { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public RcwPagingModel paging { get; set; }
-    }
-}
+      }
+  }

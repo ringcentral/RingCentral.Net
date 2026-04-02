@@ -1,29 +1,27 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation listExtensionPhoneNumbers
-    /// </summary>
-    public class ListExtensionPhoneNumbersParameters
-    {
-        /// <summary>
+/// Query parameters for operation listExtensionPhoneNumbers
+/// </summary>
+      public class ListExtensionPhoneNumbersParameters
+      {
+          /// <summary>
         ///     Status of a phone number. If the value is `Normal`, the phone
-        ///     number is ready to be used. Otherwise, it is an external number not yet
-        ///     ported to RingCentral
+            ///     number is ready to be used. Otherwise, it is an external number not yet
+            ///     ported to RingCentral
         ///     Enum: Normal, Pending, PortedIn, Temporary, Unknown
         /// </summary>
         public string status { get; set; }
 
         /// <summary>
         ///     Usage type of a phone number
-        ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber,
-        ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool, NumberStorage,
-        ///     BusinessMobileNumber, PartnerBusinessMobileNumber, IntegrationNumber
+        ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, FmcBusinessMobileNumber, InventoryFmcBusinessMobileNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool, BusinessMobileNumber, ELIN, PartnerBusinessMobileNumber, NumberPoolPartnerBusinessMobileNumber, NumberStorage, IntegrationNumber, InventoryMobileNumber
         /// </summary>
         public string[] usageType { get; set; }
 
         /// <summary>
         ///     Indicates a page number to retrieve. Only positive number values
-        ///     are allowed. Default value is '1'
+            ///     are allowed. Default value is '1'
         ///     Format: int32
         ///     Default: 1
         /// </summary>
@@ -35,5 +33,5 @@ namespace RingCentral
         ///     Default: 100
         /// </summary>
         public long? perPage { get; set; }
-    }
-}
+      }
+  }

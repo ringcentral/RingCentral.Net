@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Recipient data
-    /// </summary>
-    public class RecipientInfo
-    {
-        /// <summary>
+/// Recipient data
+/// </summary>
+      public class RecipientInfo
+      {
+          /// <summary>
         ///     Link to a voicemail recipient extension resource
         ///     Format: uri
         /// </summary>
@@ -15,5 +15,5 @@ namespace RingCentral
         ///     Internal identifier of a voicemail recipient
         /// </summary>
         public string id { get; set; }
-    }
-}
+      }
+  }

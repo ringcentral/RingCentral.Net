@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Meeting information
-    /// </summary>
-    public class Meeting
-    {
-        /// <summary>
+/// Meeting information
+/// </summary>
+      public class Meeting
+      {
+          /// <summary>
         ///     Meeting id
         ///     Required
         /// </summary>
@@ -97,8 +97,23 @@ namespace RingCentral
         public Recording[] recordings { get; set; }
 
         /// <summary>
+        ///     A list of transcriptions references
+        /// </summary>
+        public Transcriptions[] transcriptions { get; set; }
+
+        /// <summary>
+        ///     A list of meeting notes documents references
+        /// </summary>
+        public MeetingNotes[] notes { get; set; }
+
+        /// <summary>
+        ///     Meeting summary generated from transcriptions if AI processing was enabled for the meeting
+        /// </summary>
+        public string summary { get; set; }
+
+        /// <summary>
         ///     Chat location
         /// </summary>
         public string chatUrl { get; set; }
-    }
-}
+      }
+  }

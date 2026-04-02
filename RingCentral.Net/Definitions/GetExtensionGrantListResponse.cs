@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class GetExtensionGrantListResponse
-    {
-        /// <summary>
+  {
+      public class GetExtensionGrantListResponse
+      {
+          /// <summary>
         ///     Link to the list of extension grants
         ///     Format: uri
         /// </summary>
@@ -23,5 +23,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-    }
-}
+      }
+  }

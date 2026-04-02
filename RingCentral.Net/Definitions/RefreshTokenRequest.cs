@@ -1,12 +1,13 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Token endpoint request parameters used in the "Refresh Token" flow
-    ///     with the `refresh_token` grant type
-    /// </summary>
-    public class RefreshTokenRequest
-    {
-        /// <summary>
+/// Token endpoint request parameters used in the "Refresh Token" flow
+/// with the `refresh_token` grant type
+/// 
+/// </summary>
+      public class RefreshTokenRequest
+      {
+          /// <summary>
         ///     Grant type
         ///     Required
         ///     Enum: refresh_token
@@ -18,5 +19,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string refresh_token { get; set; }
-    }
-}
+      }
+  }

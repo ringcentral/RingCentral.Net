@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class SummaryApiOutput
-    {
-        /// <summary>
+  {
+      public class SummaryApiOutput
+      {
+          /// <summary>
         ///     Enum: Success, Fail
         /// </summary>
         public string status { get; set; }
@@ -10,5 +10,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public SummaryApiResponse response { get; set; }
-    }
-}
+      }
+  }

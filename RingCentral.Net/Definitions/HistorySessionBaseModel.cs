@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class HistorySessionBaseModel
-    {
-        /// <summary>
+  {
+      public class HistorySessionBaseModel
+      {
+          /// <summary>
         ///     Session start time. If a session hasn't been started this fields should be set to "scheduledStartTime"
         ///     Format: date-time
         /// </summary>
@@ -61,7 +61,7 @@ namespace RingCentral
 
         /// <summary>
         ///     The time offset (positive, in seconds) indicating how much in advance
-        ///     (comparing to "scheduledStartTime") panel members should join for the pre-webinar team sync
+            ///     (comparing to "scheduledStartTime") panel members should join for the pre-webinar team sync
         ///     Format: int32
         ///     Example: 900
         /// </summary>
@@ -88,8 +88,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Session runtime status (for 'Active' Sessions only).
-        ///     Please note that 'Idle' status shouldn't be returned in the API
-        ///     (but can be delivered in an event)
+            ///     Please note that 'Idle' status shouldn't be returned in the API
+            ///     (but can be delivered in an event)
         ///     Example: Live
         ///     Enum: Idle, Practice, GoingLive, Live, Break, Debrief
         /// </summary>
@@ -122,5 +122,5 @@ namespace RingCentral
         ///     Example: 135
         /// </summary>
         public long? uniqueAttendeeCount { get; set; }
-    }
-}
+      }
+  }

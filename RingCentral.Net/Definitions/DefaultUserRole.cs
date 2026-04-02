@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class DefaultUserRole
-    {
-        /// <summary>
+  {
+      public class DefaultUserRole
+      {
+          /// <summary>
         ///     Link to a default role resource
         ///     Format: uri
         /// </summary>
@@ -23,5 +23,5 @@ namespace RingCentral
         ///     Site compatibility of a user role
         /// </summary>
         public bool? siteCompatible { get; set; }
-    }
-}
+      }
+  }

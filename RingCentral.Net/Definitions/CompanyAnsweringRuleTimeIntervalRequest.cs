@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CompanyAnsweringRuleTimeIntervalRequest
-    {
-        /// <summary>
+  {
+      public class CompanyAnsweringRuleTimeIntervalRequest
+      {
+          /// <summary>
         ///     Time in format hh:mm
         /// </summary>
         public string from { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Time in format hh:mm
         /// </summary>
         public string to { get; set; }
-    }
-}
+      }
+  }

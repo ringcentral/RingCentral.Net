@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CreateSiteRequest
-    {
-        /// <summary>
+  {
+      public class CreateSiteRequest
+      {
+          /// <summary>
         ///     Internal identifier of a site extension
         /// </summary>
         public string id { get; set; }
@@ -19,7 +19,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Custom name of a caller. Max number of characters is 15 (only
-        ///     alphabetical symbols, numbers and commas are supported)
+            ///     alphabetical symbols, numbers and commas are supported)
         /// </summary>
         public string callerIdName { get; set; }
 
@@ -59,5 +59,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CostCenterInfo costCenter { get; set; }
-    }
-}
+      }
+  }

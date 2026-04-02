@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class WordSegment
-    {
-        /// <summary>
+  {
+      public class WordSegment
+      {
+          /// <summary>
         ///     Example: JohnDoe
         /// </summary>
         public string speakerId { get; set; }
@@ -32,5 +32,5 @@ namespace RingCentral
         ///     Example: hello
         /// </summary>
         public string word { get; set; }
-    }
-}
+      }
+  }

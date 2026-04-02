@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class TMWebhookInfo
-    {
-        /// <summary>
+  {
+      public class TMWebhookInfo
+      {
+          /// <summary>
         ///     Internal identifier of a webhook
         /// </summary>
         public string id { get; set; }
@@ -40,5 +40,5 @@ namespace RingCentral
         ///     Enum: Active, Suspended, Deleted
         /// </summary>
         public string status { get; set; }
-    }
-}
+      }
+  }

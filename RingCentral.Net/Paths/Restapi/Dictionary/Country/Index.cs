@@ -1,50 +1,54 @@
-using System;
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Dictionary.Country
 {
-    public class Index
+    public partial class Index
     {
-        public string countryId;
-        public Dictionary.Index parent;
         public RestClient rc;
-
-        public Index(Dictionary.Index parent, string countryId = null)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-            this.countryId = countryId;
-        }
-
+public Restapi.Dictionary.Index parent;
+public string countryId;
+public Index(Restapi.Dictionary.Index parent, string countryId = null)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+this.countryId = countryId;
+}
         public string Path(bool withParameter = true)
         {
-            if (withParameter && countryId != null) return $"{parent.Path()}/country/{countryId}";
+            if (withParameter && countryId != null)
+            {
+                return $"{parent.Path()}/country/{countryId}";
+            }
             return $"{parent.Path()}/country";
         }
+        /// <summary>
+        /// Returns all countries available for calling.
+/// 
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/dictionary/country
+        /// Rate Limit Group: Light
+        /// </summary>
+  public async Task<RingCentral.CountryListDictionaryModel> List(RingCentral.ListCountriesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Get<RingCentral.CountryListDictionaryModel>(this.Path(false), queryParams, restRequestConfig);
+  }
 
         /// <summary>
-        ///     Returns all countries available for calling.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/dictionary/country
-        ///     Rate Limit Group: Light
+        /// Returns information on a specific country.
+/// 
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/dictionary/country/{countryId}
+        /// Rate Limit Group: Light
         /// </summary>
-        public async Task<CountryListDictionaryModel> List(ListCountriesParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Get<CountryListDictionaryModel>(Path(false), queryParams, restRequestConfig);
-        }
-
-        /// <summary>
-        ///     Returns information on a specific country.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/dictionary/country/{countryId}
-        ///     Rate Limit Group: Light
-        /// </summary>
-        public async Task<CountryInfoDictionaryModel> Get(RestRequestConfig restRequestConfig = null)
-        {
-            if (countryId == null) throw new ArgumentException("Parameter cannot be null", nameof(countryId));
-            return await rc.Get<CountryInfoDictionaryModel>(Path(), null, restRequestConfig);
-        }
+  public async Task<RingCentral.CountryInfoDictionaryModel> Get(RestRequestConfig restRequestConfig = null)
+  {
+if (countryId == null)
+    {
+        throw new System.ArgumentException("Parameter cannot be null", nameof(countryId));
+    }return await rc.Get<RingCentral.CountryInfoDictionaryModel>(this.Path(), null, restRequestConfig);
+  }
     }
 }
 
@@ -52,9 +56,9 @@ namespace RingCentral.Paths.Restapi.Dictionary
 {
     public partial class Index
     {
-        public Country.Index Country(string countryId = null)
+        public Restapi.Dictionary.Country.Index Country(string countryId = null)
         {
-            return new Country.Index(this, countryId);
+            return new Restapi.Dictionary.Country.Index(this, countryId);
         }
     }
 }

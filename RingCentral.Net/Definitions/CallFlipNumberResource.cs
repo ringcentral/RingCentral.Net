@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CallFlipNumberResource
-    {
-        /// <summary>
+  {
+      public class CallFlipNumberResource
+      {
+          /// <summary>
         ///     Internal identifier of a call flip number
         ///     Example: 409926525004
         /// </summary>
@@ -32,5 +32,5 @@ namespace RingCentral
         ///     Example: 5
         /// </summary>
         public string flipNumber { get; set; }
-    }
-}
+      }
+  }

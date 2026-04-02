@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation scimSearchViaGet2
-    /// </summary>
-    public class ScimSearchViaGet2Parameters
-    {
-        /// <summary>
+/// Query parameters for operation scimSearchViaGet2
+/// </summary>
+      public class ScimSearchViaGet2Parameters
+      {
+          /// <summary>
         ///     Only support 'userName' or 'email' filter expressions for now
         /// </summary>
         public string filter { get; set; }
@@ -23,5 +23,5 @@ namespace RingCentral
         ///     Default: 100
         /// </summary>
         public long? count { get; set; }
-    }
-}
+      }
+  }

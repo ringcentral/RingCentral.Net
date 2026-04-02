@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AdaptiveCardAction
-    {
-        /// <summary>
+  {
+      public class AdaptiveCardAction
+      {
+          /// <summary>
         ///     Enum: Action.ShowCard, Action.Submit, Action.OpenUrl, Action.ToggleVisibility
         /// </summary>
         public string type { get; set; }
@@ -19,5 +19,5 @@ namespace RingCentral
         ///     Format: uri
         /// </summary>
         public string url { get; set; }
-    }
-}
+      }
+  }

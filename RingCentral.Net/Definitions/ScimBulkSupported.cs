@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ScimBulkSupported
-    {
-        /// <summary>
+  {
+      public class ScimBulkSupported
+      {
+          /// <summary>
         ///     Format: int32
         /// </summary>
         public long? maxOperations { get; set; }
@@ -15,5 +15,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public bool? supported { get; set; }
-    }
-}
+      }
+  }

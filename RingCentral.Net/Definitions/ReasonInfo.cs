@@ -1,15 +1,15 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Reason for the feature unavailability. Returned only if `available`
-    ///     is set to `false`
-    /// </summary>
-    public class ReasonInfo
-    {
-        /// <summary>
+/// Reason for the feature unavailability. Returned only if `available`
+/// is set to `false`
+/// 
+/// </summary>
+      public class ReasonInfo
+      {
+          /// <summary>
         ///     Reason code
-        ///     Enum: ServicePlanLimitation, AccountLimitation, ExtensionTypeLimitation, ExtensionLimitation,
-        ///     InsufficientPermissions, ConfigurationLimitation, PermissionLimitation
+        ///     Enum: ServicePlanLimitation, AccountLimitation, ExtensionTypeLimitation, ExtensionLimitation, InsufficientPermissions, ConfigurationLimitation, PermissionLimitation
         /// </summary>
         public string code { get; set; }
 
@@ -21,5 +21,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string permission { get; set; }
-    }
-}
+      }
+  }

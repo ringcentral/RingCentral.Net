@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CallRecordingExtensionResource
-    {
-        /// <summary>
+  {
+      public class CallRecordingExtensionResource
+      {
+          /// <summary>
         ///     Internal identifier of an extension
         /// </summary>
         public string id { get; set; }
@@ -28,8 +28,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Alternate call recording setting. Status of the smart ACR for outbound call recordings.
-        ///     Supported for "Outbound" and "All" call directions.
+            ///     Supported for "Outbound" and "All" call directions.
         /// </summary>
         public bool? alternateOutboundCallRecordingMode { get; set; }
-    }
-}
+      }
+  }

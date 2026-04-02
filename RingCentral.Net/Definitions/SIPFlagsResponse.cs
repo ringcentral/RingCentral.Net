@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     SIP flags information
-    /// </summary>
-    public class SipFlagsResponse
-    {
-        /// <summary>
+/// SIP flags information
+/// </summary>
+      public class SipFlagsResponse
+      {
+          /// <summary>
         ///     Indicates that VoIP calling feature is enabled
         /// </summary>
         public bool? voipFeatureEnabled { get; set; }
@@ -38,5 +38,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? dscpVideo { get; set; }
-    }
-}
+      }
+  }

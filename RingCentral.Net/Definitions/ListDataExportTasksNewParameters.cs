@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation listDataExportTasksNew
-    /// </summary>
-    public class ListDataExportTasksNewParameters
-    {
-        /// <summary>
+/// Query parameters for operation listDataExportTasksNew
+/// </summary>
+      public class ListDataExportTasksNewParameters
+      {
+          /// <summary>
         ///     Status of the task(s) to be returned. Multiple values are supported
         ///     Enum: Accepted, InProgress, Completed, Failed, Expired
         /// </summary>
@@ -24,5 +24,5 @@ namespace RingCentral
         ///     Default: 30
         /// </summary>
         public long? perPage { get; set; }
-    }
-}
+      }
+  }

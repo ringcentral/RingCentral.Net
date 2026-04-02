@@ -1,39 +1,42 @@
-using System;
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.TeamMessaging.V1.Companies
 {
-    public class Index
+    public partial class Index
     {
-        public string companyId;
-        public V1.Index parent;
         public RestClient rc;
-
-        public Index(V1.Index parent, string companyId = null)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-            this.companyId = companyId;
-        }
-
+public TeamMessaging.V1.Index parent;
+public string companyId;
+public Index(TeamMessaging.V1.Index parent, string companyId = null)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+this.companyId = companyId;
+}
         public string Path(bool withParameter = true)
         {
-            if (withParameter && companyId != null) return $"{parent.Path()}/companies/{companyId}";
+            if (withParameter && companyId != null)
+            {
+                return $"{parent.Path()}/companies/{companyId}";
+            }
             return $"{parent.Path()}/companies";
         }
-
         /// <summary>
-        ///     Returns information about one or more companies by their IDs.
-        ///     HTTP Method: get
-        ///     Endpoint: /team-messaging/v1/companies/{companyId}
-        ///     Rate Limit Group: Light
-        ///     App Permission: TeamMessaging
+        /// Returns information about one or more companies by their IDs.
+        /// HTTP Method: get
+        /// Endpoint: /team-messaging/v1/companies/{companyId}
+        /// Rate Limit Group: Light
+        /// App Permission: TeamMessaging
         /// </summary>
-        public async Task<TMCompanyInfo> Get(RestRequestConfig restRequestConfig = null)
-        {
-            if (companyId == null) throw new ArgumentException("Parameter cannot be null", nameof(companyId));
-            return await rc.Get<TMCompanyInfo>(Path(), null, restRequestConfig);
-        }
+  public async Task<RingCentral.TMCompanyInfo> Get(RestRequestConfig restRequestConfig = null)
+  {
+if (companyId == null)
+    {
+        throw new System.ArgumentException("Parameter cannot be null", nameof(companyId));
+    }return await rc.Get<RingCentral.TMCompanyInfo>(this.Path(), null, restRequestConfig);
+  }
     }
 }
 
@@ -41,9 +44,9 @@ namespace RingCentral.Paths.TeamMessaging.V1
 {
     public partial class Index
     {
-        public Companies.Index Companies(string companyId = null)
+        public TeamMessaging.V1.Companies.Index Companies(string companyId = null)
         {
-            return new Companies.Index(this, companyId);
+            return new TeamMessaging.V1.Companies.Index(this, companyId);
         }
     }
 }

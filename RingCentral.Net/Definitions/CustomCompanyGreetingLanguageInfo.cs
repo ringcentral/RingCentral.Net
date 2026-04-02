@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Information on a greeting language. Supported for types 'StopRecording', 'StartRecording', 'AutomaticRecording'
-    /// </summary>
-    public class CustomCompanyGreetingLanguageInfo
-    {
-        /// <summary>
+/// Information on a greeting language. Supported for types 'StopRecording', 'StartRecording', 'AutomaticRecording'
+/// </summary>
+      public class CustomCompanyGreetingLanguageInfo
+      {
+          /// <summary>
         ///     Internal identifier of a greeting language
         /// </summary>
         public string id { get; set; }
@@ -25,5 +25,5 @@ namespace RingCentral
         ///     Locale code of a greeting language
         /// </summary>
         public string localeCode { get; set; }
-    }
-}
+      }
+  }

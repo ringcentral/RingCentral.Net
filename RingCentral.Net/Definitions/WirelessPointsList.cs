@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class WirelessPointsList
-    {
-        /// <summary>
+  {
+      public class WirelessPointsList
+      {
+          /// <summary>
         ///     Link to a wireless points resource
         ///     Format: uri
         /// </summary>
@@ -20,5 +20,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-    }
-}
+      }
+  }

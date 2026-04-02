@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation listStandardUserRole
-    /// </summary>
-    public class ListStandardUserRoleParameters
-    {
-        /// <summary>
+/// Query parameters for operation listStandardUserRole
+/// </summary>
+      public class ListStandardUserRoleParameters
+      {
+          /// <summary>
         ///     Internal identifier of a service plan.
         /// </summary>
         public string servicePlanId { get; set; }
@@ -21,8 +21,8 @@ namespace RingCentral
         public long? page { get; set; }
 
         /// <summary>
-        ///     The number of items per page. If provided value in the request
-        ///     is greater than a maximum, the maximum value is applied
+        ///     The number of items per page. If the provided value in the request
+            ///     is greater than a maximum, the maximum value is applied
         ///     Maximum: 1000
         ///     Minimum: 1
         ///     Format: int32
@@ -33,8 +33,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Specifies whether to return advanced permissions capabilities within `permissionsCapabilities` resource.
-        ///     The default value is false
+            ///     The default value is false
         /// </summary>
         public bool? advancedPermissions { get; set; }
-    }
-}
+      }
+  }

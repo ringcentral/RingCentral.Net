@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ScimPhoto
-    {
-        /// <summary>
+  {
+      public class ScimPhoto
+      {
+          /// <summary>
         ///     Required
         ///     Enum: photo
         /// </summary>
@@ -12,5 +12,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string value { get; set; }
-    }
-}
+      }
+  }

@@ -1,12 +1,11 @@
 namespace RingCentral
-{
-    public class ConversationalInsightsUnit
-    {
-        /// <summary>
+  {
+      public class ConversationalInsightsUnit
+      {
+          /// <summary>
         ///     Required
         ///     Example: KeyPhrases
-        ///     Enum: ExtractiveSummary, AbstractiveSummaryLong, AbstractiveSummaryShort, KeyPhrases, QuestionsAsked,
-        ///     OverallSentiment, Topics
+        ///     Enum: ExtractiveSummary, AbstractiveSummaryLong, AbstractiveSummaryShort, KeyPhrases, QuestionsAsked, OverallSentiment, Topics
         /// </summary>
         public string name { get; set; }
 
@@ -14,5 +13,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public ConversationalInsightsUnitValues[] values { get; set; }
-    }
-}
+      }
+  }

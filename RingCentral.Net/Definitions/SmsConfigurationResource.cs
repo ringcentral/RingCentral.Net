@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class SmsConfigurationResource
-    {
-        /// <summary>
+  {
+      public class SmsConfigurationResource
+      {
+          /// <summary>
         ///     Internal identifier of a phone number
         /// </summary>
         public string phoneNumberId { get; set; }
@@ -20,5 +20,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public SmsBrandInfo smsBrandInfo { get; set; }
-    }
-}
+      }
+  }

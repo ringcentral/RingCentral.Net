@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation listLocations
-    /// </summary>
-    public class ListLocationsParameters
-    {
-        /// <summary>
+/// Query parameters for operation listLocations
+/// </summary>
+      public class ListLocationsParameters
+      {
+          /// <summary>
         ///     Sorts results by the property specified
         ///     Default: City
         ///     Enum: Npa, City
@@ -14,7 +14,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Indicates a page number to retrieve. Only positive number values
-        ///     are accepted
+            ///     are accepted
         ///     Format: int32
         ///     Default: 1
         /// </summary>
@@ -36,5 +36,5 @@ namespace RingCentral
         ///     Specifies if `nxx` codes are returned
         /// </summary>
         public bool? withNxx { get; set; }
-    }
-}
+      }
+  }

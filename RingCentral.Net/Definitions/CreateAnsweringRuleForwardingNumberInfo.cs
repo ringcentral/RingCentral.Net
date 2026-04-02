@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CreateAnsweringRuleForwardingNumberInfo
-    {
-        /// <summary>
+  {
+      public class CreateAnsweringRuleForwardingNumberInfo
+      {
+          /// <summary>
         ///     Internal identifier of a forwarding number
         /// </summary>
         public string id { get; set; }
@@ -28,5 +28,5 @@ namespace RingCentral
         ///     Enum: Home, Mobile, Work, PhoneLine, Outage, Other, BusinessMobilePhone, ExternalCarrier, ExtensionApps
         /// </summary>
         public string type { get; set; }
-    }
-}
+      }
+  }

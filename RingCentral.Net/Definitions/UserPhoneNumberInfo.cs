@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class UserPhoneNumberInfo
-    {
-        /// <summary>
+  {
+      public class UserPhoneNumberInfo
+      {
+          /// <summary>
         ///     Link to the user phone number resource
         ///     Format: uri
         /// </summary>
@@ -38,9 +38,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Payment type. 'External' is returned for forwarded numbers
-        ///     which are not terminated in the RingCentral phone system
-        ///     Enum: External, TollFree, Local, BusinessMobileNumberProvider, ExternalNumberProvider,
-        ///     ExternalNumberProviderTollFree
+            ///     which are not terminated in the RingCentral phone system
+        ///     Enum: External, TollFree, Local, BusinessMobileNumberProvider, ExternalNumberProvider, ExternalNumberProviderTollFree, Mobile
         /// </summary>
         public string paymentType { get; set; }
 
@@ -56,8 +55,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Status of a phone number. If the value is `Normal`, the phone
-        ///     number is ready to be used. Otherwise, it is an external number not yet
-        ///     ported to RingCentral
+            ///     number is ready to be used. Otherwise, it is an external number not yet
+            ///     ported to RingCentral
         ///     Enum: Normal, Pending, PortedIn, Temporary, Unknown
         /// </summary>
         public string status { get; set; }
@@ -70,17 +69,15 @@ namespace RingCentral
 
         /// <summary>
         ///     Extension subtype, if applicable.
-        ///     For unrecognized subtypes the `Unknown` value is returned
-        ///     Enum: VideoPro, VideoProPlus, DigitalSignage, Unknown, Emergency
+            ///     For unrecognized subtypes the `Unknown` value is returned
+        ///     Enum: VideoPro, VideoProPlus, DigitalSignageOnlyRooms, Unknown, Emergency
         /// </summary>
         public string subType { get; set; }
 
         /// <summary>
         ///     Usage type of a phone number. Numbers of 'NumberPool' and 'NumberStorage' type are not returned in
-        ///     phone number list requests
-        ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber,
-        ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool, NumberStorage,
-        ///     BusinessMobileNumber, PartnerBusinessMobileNumber, IntegrationNumber
+            ///     phone number list requests
+        ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, FmcBusinessMobileNumber, InventoryFmcBusinessMobileNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool, BusinessMobileNumber, ELIN, PartnerBusinessMobileNumber, NumberPoolPartnerBusinessMobileNumber, NumberStorage, IntegrationNumber, InventoryMobileNumber
         /// </summary>
         public string usageType { get; set; }
 
@@ -89,5 +86,10 @@ namespace RingCentral
         ///     Enum: CallerId, SmsSender, A2PSmsSender, MmsSender, InternationalSmsSender, Delegated
         /// </summary>
         public string[] features { get; set; }
-    }
-}
+
+        /// <summary>
+        ///     Caller ID Name
+        /// </summary>
+        public string callerIdName { get; set; }
+      }
+  }

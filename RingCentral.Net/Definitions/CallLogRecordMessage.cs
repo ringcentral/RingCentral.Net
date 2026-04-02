@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Linked message (Fax/Voicemail)
-    /// </summary>
-    public class CallLogRecordMessage
-    {
-        /// <summary>
+/// Linked message (Fax/Voicemail)
+/// </summary>
+      public class CallLogRecordMessage
+      {
+          /// <summary>
         ///     Internal identifier of a message
         ///     Required
         /// </summary>
@@ -23,5 +23,5 @@ namespace RingCentral
         ///     Format: uri
         /// </summary>
         public string uri { get; set; }
-    }
-}
+      }
+  }

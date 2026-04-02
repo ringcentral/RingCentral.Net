@@ -1,34 +1,33 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Telephony.Conference
 {
-    public class Index
+    public partial class Index
     {
-        public Telephony.Index parent;
         public RestClient rc;
-
-        public Index(Telephony.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public Restapi.Account.Telephony.Index parent;
+public Index(Restapi.Account.Telephony.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/conference";
         }
-
         /// <summary>
-        ///     Initiates a conference call session.
-        ///     HTTP Method: post
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/conference
-        ///     Rate Limit Group: Heavy
-        ///     App Permission: CallControl
+        /// Initiates a conference call session.
+        /// HTTP Method: post
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/conference
+        /// Rate Limit Group: Heavy
+        /// App Permission: CallControl
         /// </summary>
-        public async Task<CallSession> Post(RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Post<CallSession>(Path(), null, null, restRequestConfig);
-        }
+  public async Task<RingCentral.CallSession> Post(RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Post<RingCentral.CallSession>(this.Path(), null, null, restRequestConfig);
+  }
     }
 }
 
@@ -36,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony
 {
     public partial class Index
     {
-        public Conference.Index Conference()
+        public Restapi.Account.Telephony.Conference.Index Conference()
         {
-            return new Conference.Index(this);
+            return new Restapi.Account.Telephony.Conference.Index(this);
         }
     }
 }

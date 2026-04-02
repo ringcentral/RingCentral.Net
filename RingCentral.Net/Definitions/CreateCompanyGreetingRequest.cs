@@ -1,13 +1,13 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Request body for operation createCompanyGreeting
-    /// </summary>
-    public class CreateCompanyGreetingRequest
-    {
-        /// <summary>
+/// Request body for operation createCompanyGreeting
+/// </summary>
+      public class CreateCompanyGreetingRequest
+      {
+          /// <summary>
         ///     Type of greeting, specifying the case when the greeting
-        ///     is played.
+            ///     is played.
         ///     Required
         ///     Enum: Company, StartRecording, StopRecording, AutomaticRecording, TemplateGreeting
         /// </summary>
@@ -15,7 +15,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Internal identifier of a language. See Get Language
-        ///     List
+            ///     List
         /// </summary>
         public string languageId { get; set; }
 
@@ -28,5 +28,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public GreetingAnsweringRuleId answeringRule { get; set; }
-    }
-}
+      }
+  }

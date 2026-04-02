@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class TMAttachmentAuthorInfo
-    {
-        /// <summary>
+  {
+      public class TMAttachmentAuthorInfo
+      {
+          /// <summary>
         ///     Name of a message author
         /// </summary>
         public string name { get; set; }
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Format: uri
         /// </summary>
         public string iconUri { get; set; }
-    }
-}
+      }
+  }

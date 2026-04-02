@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AccountHistoryPublicRecord
-    {
-        /// <summary>
+  {
+      public class AccountHistoryPublicRecord
+      {
+          /// <summary>
         ///     Internal record identifier
         ///     Example: 9835bead-397b-4ba8-b457-73f07ab79997
         /// </summary>
@@ -60,5 +60,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public AccountHistoryRecordPublicDetails details { get; set; }
-    }
-}
+      }
+  }

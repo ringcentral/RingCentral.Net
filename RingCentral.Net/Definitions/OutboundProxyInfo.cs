@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class OutboundProxyInfo
-    {
-        /// <summary>
+  {
+      public class OutboundProxyInfo
+      {
+          /// <summary>
         ///     Geographical region
         ///     Example: APAC
         /// </summary>
@@ -17,5 +17,5 @@ namespace RingCentral
         ///     SIP details for TLS (Transport Layer Security)
         /// </summary>
         public string proxyTLS { get; set; }
-    }
-}
+      }
+  }

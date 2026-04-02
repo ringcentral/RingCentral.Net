@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Resource metadata
-    /// </summary>
-    public class ScimMeta
-    {
-        /// <summary>
+/// Resource metadata
+/// </summary>
+      public class ScimMeta
+      {
+          /// <summary>
         ///     Format: date-time
         /// </summary>
         public string created { get; set; }
@@ -24,5 +24,5 @@ namespace RingCentral
         ///     Enum: User, Group, ResourceType, Schema
         /// </summary>
         public string resourceType { get; set; }
-    }
-}
+      }
+  }

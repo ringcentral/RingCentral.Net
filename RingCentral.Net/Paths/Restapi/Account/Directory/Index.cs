@@ -1,20 +1,23 @@
+using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
+
 namespace RingCentral.Paths.Restapi.Account.Directory
 {
     public partial class Index
     {
-        public Account.Index parent;
         public RestClient rc;
-
-        public Index(Account.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public Restapi.Account.Index parent;
+public Index(Restapi.Account.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/directory";
         }
+
     }
 }
 
@@ -22,9 +25,9 @@ namespace RingCentral.Paths.Restapi.Account
 {
     public partial class Index
     {
-        public Directory.Index Directory()
+        public Restapi.Account.Directory.Index Directory()
         {
-            return new Directory.Index(this);
+            return new Restapi.Account.Directory.Index(this);
         }
     }
 }

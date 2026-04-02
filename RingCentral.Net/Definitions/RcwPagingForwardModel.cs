@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class RcwPagingForwardModel
-    {
-        /// <summary>
+  {
+      public class RcwPagingForwardModel
+      {
+          /// <summary>
         ///     Number of items per page
         ///     Required
         ///     Maximum: 1000
@@ -25,8 +25,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Previous page token (absent for the first page of the result set)
-        ///     May be omitted if the result set does not support backward navigation.
+            ///     May be omitted if the result set does not support backward navigation.
         /// </summary>
         public string previousPageToken { get; set; }
-    }
-}
+      }
+  }

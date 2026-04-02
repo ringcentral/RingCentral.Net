@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class SubscriptionListResource
-    {
-        /// <summary>
+  {
+      public class SubscriptionListResource
+      {
+          /// <summary>
         ///     Canonical URI of a resource
         ///     Required
         ///     Format: uri
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public SubscriptionInfo[] records { get; set; }
-    }
-}
+      }
+  }

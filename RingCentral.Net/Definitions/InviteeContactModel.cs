@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class InviteeContactModel
-    {
-        /// <summary>
+  {
+      public class InviteeContactModel
+      {
+          /// <summary>
         ///     First (given) name
         ///     Example: John
         /// </summary>
@@ -26,5 +26,5 @@ namespace RingCentral
         ///     Example: Product Manager
         /// </summary>
         public string jobTitle { get; set; }
-    }
-}
+      }
+  }

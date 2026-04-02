@@ -1,9 +1,9 @@
 namespace RingCentral
-{
-    public class CreateMultipleWirelessPointsResponse
-    {
-        /// <summary>
+  {
+      public class CreateMultipleWirelessPointsResponse
+      {
+          /// <summary>
         /// </summary>
         public BulkTaskInfo task { get; set; }
-    }
-}
+      }
+  }

@@ -1,12 +1,13 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Emergency address assigned to the switch. Only one of a pair `emergencyAddress`
-    ///     or `emergencyLocationId` should be specified, otherwise the error is returned
-    /// </summary>
-    public class LocationUpdatesEmergencyAddressInfoRequest
-    {
-        /// <summary>
+/// Emergency address assigned to the switch. Only one of a pair `emergencyAddress`
+/// or `emergencyLocationId` can be specified, otherwise the error is returned
+/// 
+/// </summary>
+      public class LocationUpdatesEmergencyAddressInfoRequest
+      {
+          /// <summary>
         ///     Country name
         /// </summary>
         public string country { get; set; }
@@ -64,7 +65,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Second line address (apartment, suite, unit, building, floor,
-        ///     etc.)
+            ///     etc.)
         /// </summary>
         public string street2 { get; set; }
 
@@ -72,5 +73,5 @@ namespace RingCentral
         ///     Postal (Zip) code
         /// </summary>
         public string zip { get; set; }
-    }
-}
+      }
+  }

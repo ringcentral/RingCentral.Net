@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Notification payload body
-    /// </summary>
-    public class CallQueuePresenceEventBody
-    {
-        /// <summary>
+/// Notification payload body
+/// </summary>
+      public class CallQueuePresenceEventBody
+      {
+          /// <summary>
         ///     Agent extension ID
         /// </summary>
         public string extensionId { get; set; }
@@ -19,5 +19,5 @@ namespace RingCentral
         ///     Call queue agent availability for calls of this queue
         /// </summary>
         public bool? acceptCalls { get; set; }
-    }
-}
+      }
+  }

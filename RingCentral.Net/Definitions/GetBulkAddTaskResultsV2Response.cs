@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class GetBulkAddTaskResultsV2Response
-    {
-        /// <summary>
+  {
+      public class GetBulkAddTaskResultsV2Response
+      {
+          /// <summary>
         ///     List of account phone numbers
         ///     Required
         /// </summary>
@@ -24,5 +24,5 @@ namespace RingCentral
         ///     Example: Accepted
         /// </summary>
         public string status { get; set; }
-    }
-}
+      }
+  }

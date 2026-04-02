@@ -1,36 +1,34 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.ClientInfo.SipProvision
 {
-    public class Index
+    public partial class Index
     {
-        public ClientInfo.Index parent;
         public RestClient rc;
-
-        public Index(ClientInfo.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public Restapi.ClientInfo.Index parent;
+public Index(Restapi.ClientInfo.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/sip-provision";
         }
-
         /// <summary>
-        ///     Creates SIP registration of a device/application (WebPhone, Mobile, Softphone).
-        ///     HTTP Method: post
-        ///     Endpoint: /restapi/{apiVersion}/client-info/sip-provision
-        ///     Rate Limit Group: Heavy
-        ///     App Permission: VoipCalling
+        /// Creates SIP registration of a device/application (WebPhone, Mobile, Softphone).
+/// 
+        /// HTTP Method: post
+        /// Endpoint: /restapi/{apiVersion}/client-info/sip-provision
+        /// Rate Limit Group: Heavy
+        /// App Permission: VoipCalling
         /// </summary>
-        public async Task<CreateSipRegistrationResponse> Post(CreateSipRegistrationRequest createSipRegistrationRequest,
-            RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Post<CreateSipRegistrationResponse>(Path(), createSipRegistrationRequest, null,
-                restRequestConfig);
-        }
+  public async Task<RingCentral.CreateSipRegistrationResponse> Post(RingCentral.CreateSipRegistrationRequest createSipRegistrationRequest, RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Post<RingCentral.CreateSipRegistrationResponse>(this.Path(), createSipRegistrationRequest, null, restRequestConfig);
+  }
     }
 }
 
@@ -38,9 +36,9 @@ namespace RingCentral.Paths.Restapi.ClientInfo
 {
     public partial class Index
     {
-        public SipProvision.Index SipProvision()
+        public Restapi.ClientInfo.SipProvision.Index SipProvision()
         {
-            return new SipProvision.Index(this);
+            return new Restapi.ClientInfo.SipProvision.Index(this);
         }
     }
 }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CompanyAnsweringRuleCallersInfoRequest
-    {
-        /// <summary>
+  {
+      public class CompanyAnsweringRuleCallersInfoRequest
+      {
+          /// <summary>
         ///     Phone number of a caller
         /// </summary>
         public string callerId { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Displayed name for a caller ID
         /// </summary>
         public string name { get; set; }
-    }
-}
+      }
+  }

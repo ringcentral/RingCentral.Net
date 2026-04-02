@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Aggregation result
-    /// </summary>
-    public class AggregationResponseData
-    {
-        /// <summary>
+/// Aggregation result
+/// </summary>
+      public class AggregationResponseData
+      {
+          /// <summary>
         ///     The selected grouping option
         ///     Required
         ///     Enum: Company, CompanyNumbers, Users, Queues, IVRs, IVAs, SharedLines, UserGroups, Sites, Departments
@@ -16,5 +16,5 @@ namespace RingCentral
         ///     A list of call aggregations as per the grouping and filtering options specified in the request
         /// </summary>
         public AggregationResponseRecord[] records { get; set; }
-    }
-}
+      }
+  }

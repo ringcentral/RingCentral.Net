@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class PagingDeviceInfo
-    {
-        /// <summary>
+  {
+      public class PagingDeviceInfo
+      {
+          /// <summary>
         ///     Internal identifier of a paging device
         /// </summary>
         public string id { get; set; }
@@ -17,5 +17,5 @@ namespace RingCentral
         ///     Name of a paging device
         /// </summary>
         public string name { get; set; }
-    }
-}
+      }
+  }

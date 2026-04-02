@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     The attribute declaration to indicate webinar session participant/invitee role
-    /// </summary>
-    public class AddInviteeRequest
-    {
-        /// <summary>
+/// The attribute declaration to indicate webinar session participant/invitee role
+/// </summary>
+      public class AddInviteeRequest
+      {
+          /// <summary>
         ///     First (given) name
         ///     Example: John
         /// </summary>
@@ -36,8 +36,7 @@ namespace RingCentral
 
         /// <summary>
         ///     The role of the webinar session participant/invitee.
-        ///     See also: [Understanding Webinar
-        ///     Roles](https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html)
+            ///     See also: [Understanding Webinar Roles](https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html)
         ///     Required
         ///     Example: Panelist
         ///     Enum: Panelist, CoHost, Host, Attendee
@@ -53,10 +52,10 @@ namespace RingCentral
 
         /// <summary>
         ///     Indicates if invite/cancellation emails have to be sent to this invitee.
-        ///     For "Host" it cannot be set to false.
-        ///     If it is true it can't be changed back to false.
+            ///     For "Host" it cannot be set to false.
+            ///     If it is true it can't be changed back to false.
         ///     Default: true
         /// </summary>
         public bool? sendInvite { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class JobStatusResponse
-    {
-        /// <summary>
+  {
+      public class JobStatusResponse
+      {
+          /// <summary>
         /// </summary>
         public string jobId { get; set; }
 
@@ -29,5 +29,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public JobStatusResponseResponse response { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class EmergencyAddressInfo
-    {
-        /// <summary>
+  {
+      public class EmergencyAddressInfo
+      {
+          /// <summary>
         ///     Country name
         /// </summary>
         public string country { get; set; }
@@ -49,13 +49,13 @@ namespace RingCentral
         public string city { get; set; }
 
         /// <summary>
-        ///     The name of the street (The field is utilized as 'streetName' field for FR addresses)
+        ///     First line address
         /// </summary>
         public string street { get; set; }
 
         /// <summary>
         ///     Second line address (apartment, suite, unit, building, floor,
-        ///     etc.)
+            ///     etc.)
         /// </summary>
         public string street2 { get; set; }
 
@@ -70,9 +70,9 @@ namespace RingCentral
         public string customerName { get; set; }
 
         /// <summary>
-        ///     Company name
+        ///     Specifies if the emergency address is out of country
         /// </summary>
-        public string companyName { get; set; }
+        public bool? outOfCountry { get; set; }
 
         /// <summary>
         ///     (Optional) Building name
@@ -91,10 +91,10 @@ namespace RingCentral
 
         /// <summary>
         ///     Resulting status of emergency address synchronization. Returned
-        ///     for 'Get Device Info' request if `syncEmergencyAddress` parameter is set
-        ///     to `true`
+            ///     for 'Get Device Info' request if `syncEmergencyAddress` parameter is set
+            ///     to `true`
         ///     Enum: Verified, Updated, Deleted, NotRequired, Unsupported, Failed
         /// </summary>
         public string syncStatus { get; set; }
-    }
-}
+      }
+  }

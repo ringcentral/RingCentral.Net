@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class PubNubDeliveryModeRequest
-    {
-        /// <summary>
+  {
+      public class PubNubDeliveryModeRequest
+      {
+          /// <summary>
         ///     The transport type for this subscription
         ///     Required
         ///     Enum: PubNub
@@ -11,9 +11,9 @@ namespace RingCentral
 
         /// <summary>
         ///     Optional. Specifies if notification messages will be encrypted
-        ///     or not. Please note that for some event filters (e.g. presence) encryption is mandatory and
-        ///     `false` value provided by caller will be ignored.
+            ///     or not. Please note that for some event filters (e.g. presence) encryption is mandatory and
+            ///     `false` value provided by caller will be ignored.
         /// </summary>
         public bool? encryption { get; set; }
-    }
-}
+      }
+  }

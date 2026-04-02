@@ -1,47 +1,45 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.CallQueues.Presence
 {
-    public class Index
+    public partial class Index
     {
-        public CallQueues.Index parent;
         public RestClient rc;
-
-        public Index(CallQueues.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public Restapi.Account.CallQueues.Index parent;
+public Index(Restapi.Account.CallQueues.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/presence";
         }
+        /// <summary>
+        /// Returns presence status of the call queue members.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/presence
+        /// Rate Limit Group: Light
+        /// App Permission: ReadPresence
+        /// </summary>
+  public async Task<RingCentral.CallQueuePresence> Get(RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Get<RingCentral.CallQueuePresence>(this.Path(), null, restRequestConfig);
+  }
 
         /// <summary>
-        ///     Returns presence status of the call queue members.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/presence
-        ///     Rate Limit Group: Light
-        ///     App Permission: ReadPresence
+        /// Updates presence status of the call queue members in the specified queue.
+        /// HTTP Method: put
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/presence
+        /// Rate Limit Group: Medium
+        /// App Permission: EditPresence
         /// </summary>
-        public async Task<CallQueuePresence> Get(RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Get<CallQueuePresence>(Path(), null, restRequestConfig);
-        }
-
-        /// <summary>
-        ///     Updates presence status of the call queue members in the specified queue.
-        ///     HTTP Method: put
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/presence
-        ///     Rate Limit Group: Medium
-        ///     App Permission: EditPresence
-        /// </summary>
-        public async Task<CallQueuePresence> Put(CallQueueUpdatePresence callQueueUpdatePresence,
-            RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Put<CallQueuePresence>(Path(), callQueueUpdatePresence, null, restRequestConfig);
-        }
+  public async Task<RingCentral.CallQueuePresence> Put(RingCentral.CallQueueUpdatePresence callQueueUpdatePresence, RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Put<RingCentral.CallQueuePresence>(this.Path(), callQueueUpdatePresence, null, restRequestConfig);
+  }
     }
 }
 
@@ -49,9 +47,9 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
 {
     public partial class Index
     {
-        public Presence.Index Presence()
+        public Restapi.Account.CallQueues.Presence.Index Presence()
         {
-            return new Presence.Index(this);
+            return new Restapi.Account.CallQueues.Presence.Index(this);
         }
     }
 }

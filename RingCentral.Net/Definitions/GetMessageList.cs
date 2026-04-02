@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class GetMessageList
-    {
-        /// <summary>
+  {
+      public class GetMessageList
+      {
+          /// <summary>
         ///     Link to a list of user messages
         ///     Format: uri
         /// </summary>
@@ -23,5 +23,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public MessagingPagingInfo paging { get; set; }
-    }
-}
+      }
+  }

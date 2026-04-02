@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Opt-out record
-    /// </summary>
-    public class OptOutResponse
-    {
-        /// <summary>
+/// Opt-out record
+/// </summary>
+      public class OptOutResponse
+      {
+          /// <summary>
         ///     Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format from which the recipient has opted out
         ///     Example: +15551234567
         /// </summary>
@@ -28,5 +28,5 @@ namespace RingCentral
         ///     Enum: Recipient, Account, Upstream, Carrier
         /// </summary>
         public string source { get; set; }
-    }
-}
+      }
+  }

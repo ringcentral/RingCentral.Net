@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AddressBookBulkContactResource
-    {
-        /// <summary>
+  {
+      public class AddressBookBulkContactResource
+      {
+          /// <summary>
         ///     Email of a contact
         ///     Format: email
         ///     Example: charlie.williams@example.com
@@ -160,5 +160,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public AddressBookBulkContactAddressInfo otherAddress { get; set; }
-    }
-}
+      }
+  }

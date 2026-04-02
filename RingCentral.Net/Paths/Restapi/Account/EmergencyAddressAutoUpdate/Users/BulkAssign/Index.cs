@@ -1,39 +1,36 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Users.BulkAssign
 {
-    public class Index
+    public partial class Index
     {
-        public Users.Index parent;
         public RestClient rc;
-
-        public Index(Users.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public Restapi.Account.EmergencyAddressAutoUpdate.Users.Index parent;
+public Index(Restapi.Account.EmergencyAddressAutoUpdate.Users.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/bulk-assign";
         }
-
         /// <summary>
-        ///     Enables or disables Automatic Location Updates feature for multiple
-        ///     account users.
-        ///     HTTP Method: post
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/users/bulk-assign
-        ///     Rate Limit Group: Heavy
-        ///     App Permission: EditAccounts
-        ///     User Permission: ConfigureEmergencyMaps
+        /// Enables or disables Automatic Location Updates feature for multiple
+/// account users.
+/// 
+        /// HTTP Method: post
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/users/bulk-assign
+        /// Rate Limit Group: Heavy
+        /// App Permission: EditAccounts
+        /// User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<string> Post(
-            EmergencyAddressAutoUpdateUsersBulkAssignResource emergencyAddressAutoUpdateUsersBulkAssignResource,
-            RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Post<string>(Path(), emergencyAddressAutoUpdateUsersBulkAssignResource, null,
-                restRequestConfig);
-        }
+  public async Task<string> Post(RingCentral.EmergencyAddressAutoUpdateUsersBulkAssignResource emergencyAddressAutoUpdateUsersBulkAssignResource, RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Post<string>(this.Path(), emergencyAddressAutoUpdateUsersBulkAssignResource, null, restRequestConfig);
+  }
     }
 }
 
@@ -41,9 +38,9 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Users
 {
     public partial class Index
     {
-        public BulkAssign.Index BulkAssign()
+        public Restapi.Account.EmergencyAddressAutoUpdate.Users.BulkAssign.Index BulkAssign()
         {
-            return new BulkAssign.Index(this);
+            return new Restapi.Account.EmergencyAddressAutoUpdate.Users.BulkAssign.Index(this);
         }
     }
 }

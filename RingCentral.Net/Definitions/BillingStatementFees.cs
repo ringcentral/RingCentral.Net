@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class BillingStatementFees
-    {
-        /// <summary>
+  {
+      public class BillingStatementFees
+      {
+          /// <summary>
         /// </summary>
         public string description { get; set; }
 
@@ -15,5 +15,5 @@ namespace RingCentral
         ///     Format: double
         /// </summary>
         public decimal? freeServiceCredit { get; set; }
-    }
-}
+      }
+  }

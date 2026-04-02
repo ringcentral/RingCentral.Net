@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CallQueueList
-    {
-        /// <summary>
+  {
+      public class CallQueueList
+      {
+          /// <summary>
         ///     Link to a call queues resource
         ///     Required
         ///     Format: uri
@@ -24,5 +24,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-    }
-}
+      }
+  }

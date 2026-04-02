@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class BulkAddDevicesErrorItem
-    {
-        /// <summary>
+  {
+      public class BulkAddDevicesErrorItem
+      {
+          /// <summary>
         ///     Indicates if the provisioning operation was successful for this item, always `false` in this model
         ///     Required
         /// </summary>
@@ -12,5 +12,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public ApiErrorWithParameter[] errors { get; set; }
-    }
-}
+      }
+  }

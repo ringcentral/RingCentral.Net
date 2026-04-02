@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ScimSchemaExtension
-    {
-        /// <summary>
+  {
+      public class ScimSchemaExtension
+      {
+          /// <summary>
         ///     Required
         ///     Enum: urn:ietf:params:scim:schemas:extension:enterprise:2.0:User
         /// </summary>
@@ -12,5 +12,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public bool? required { get; set; }
-    }
-}
+      }
+  }

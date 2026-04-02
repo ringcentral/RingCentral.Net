@@ -1,17 +1,19 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Contact Information
-    /// </summary>
-    public class ContactInfoCreationRequest
-    {
-        /// <summary>
+/// Contact Information
+/// </summary>
+      public class ContactInfoCreationRequest
+      {
+          /// <summary>
         ///     For User extension type only. Extension user first name
+        ///     Required
         /// </summary>
         public string firstName { get; set; }
 
         /// <summary>
         ///     For User extension type only. Extension user last name
+        ///     Required
         /// </summary>
         public string lastName { get; set; }
 
@@ -26,21 +28,22 @@ namespace RingCentral
 
         /// <summary>
         ///     Email of extension user
+        ///     Required
         ///     Format: email
         /// </summary>
         public string email { get; set; }
 
         /// <summary>
         ///     Extension user contact phone number in
-        ///     [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
-        ///     format
+            ///     [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+            ///     format
         /// </summary>
         public string businessPhone { get; set; }
 
         /// <summary>
         ///     Extension user mobile (**non** Toll Free) phone number in
-        ///     [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
-        ///     (with '+' sign) format
+            ///     [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+            ///     (with '+' sign) format
         /// </summary>
         public string mobilePhone { get; set; }
 
@@ -50,8 +53,8 @@ namespace RingCentral
 
         /// <summary>
         ///     If `true` then contact email is enabled as login name for
-        ///     this user. Please note that email should be unique in this case.
-        ///     The default value is `false`
+            ///     this user. Please note that email should be unique in this case.
+            ///     The default value is `false`
         /// </summary>
         public bool? emailAsLoginName { get; set; }
 
@@ -63,5 +66,5 @@ namespace RingCentral
         ///     Extension user department, if any
         /// </summary>
         public string department { get; set; }
-    }
-}
+      }
+  }

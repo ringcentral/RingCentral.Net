@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ScimSearchRequest
-    {
-        /// <summary>
+  {
+      public class ScimSearchRequest
+      {
+          /// <summary>
         ///     Page size
         ///     Format: int32
         /// </summary>
@@ -23,5 +23,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? startIndex { get; set; }
-    }
-}
+      }
+  }

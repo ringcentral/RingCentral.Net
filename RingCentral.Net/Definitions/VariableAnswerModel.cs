@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class VariableAnswerModel
-    {
-        /// <summary>
+  {
+      public class VariableAnswerModel
+      {
+          /// <summary>
         ///     ID of the custom question
         ///     Required
         ///     Example: 123456789
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string answerText { get; set; }
-    }
-}
+      }
+  }

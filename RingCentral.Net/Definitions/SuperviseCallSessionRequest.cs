@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class SuperviseCallSessionRequest
-    {
-        /// <summary>
+  {
+      public class SuperviseCallSessionRequest
+      {
+          /// <summary>
         ///     Supervising mode
         ///     Required
         ///     Example: Listen
@@ -18,9 +18,7 @@ namespace RingCentral
         public string supervisorDeviceId { get; set; }
 
         /// <summary>
-        ///     Specifies if auto-answer SIP header should be sent. If auto-answer is set to `true`, the call is automatically
-        ///     answered by the supervising party, if set to `false` - then the supervising party has to accept or decline the
-        ///     monitored call
+        ///     Specifies if auto-answer SIP header should be sent. If auto-answer is set to `true`, the call is automatically answered by the supervising party, if set to `false` - then the supervising party has to accept or decline the monitored call
         ///     Default: true
         /// </summary>
         public bool? autoAnswer { get; set; }
@@ -44,5 +42,5 @@ namespace RingCentral
         ///     Example: 400378008008
         /// </summary>
         public string agentExtensionId { get; set; }
-    }
-}
+      }
+  }

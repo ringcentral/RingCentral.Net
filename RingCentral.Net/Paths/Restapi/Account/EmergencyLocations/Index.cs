@@ -1,103 +1,101 @@
-using System;
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.EmergencyLocations
 {
-    public class Index
+    public partial class Index
     {
-        public string locationId;
-        public Account.Index parent;
         public RestClient rc;
-
-        public Index(Account.Index parent, string locationId = null)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-            this.locationId = locationId;
-        }
-
+public Restapi.Account.Index parent;
+public string locationId;
+public Index(Restapi.Account.Index parent, string locationId = null)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+this.locationId = locationId;
+}
         public string Path(bool withParameter = true)
         {
-            if (withParameter && locationId != null) return $"{parent.Path()}/emergency-locations/{locationId}";
+            if (withParameter && locationId != null)
+            {
+                return $"{parent.Path()}/emergency-locations/{locationId}";
+            }
             return $"{parent.Path()}/emergency-locations";
         }
+        /// <summary>
+        /// Returns emergency response locations for the current account.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-locations
+        /// Rate Limit Group: Light
+        /// App Permission: ReadAccounts
+        /// User Permission: ConfigureEmergencyMaps
+        /// </summary>
+  public async Task<RingCentral.EmergencyLocationsResource> List(RingCentral.ListEmergencyLocationsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Get<RingCentral.EmergencyLocationsResource>(this.Path(false), queryParams, restRequestConfig);
+  }
 
         /// <summary>
-        ///     Returns emergency response locations for the current account.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-locations
-        ///     Rate Limit Group: Light
-        ///     App Permission: ReadAccounts
-        ///     User Permission: ConfigureEmergencyMaps
+        /// Creates a new emergency response location for a company.
+        /// HTTP Method: post
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-locations
+        /// Rate Limit Group: Medium
+        /// App Permission: EditAccounts
+        /// User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<EmergencyLocationsResource> List(ListEmergencyLocationsParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Get<EmergencyLocationsResource>(Path(false), queryParams, restRequestConfig);
-        }
+  public async Task<RingCentral.EmergencyLocationResponseResource> Post(RingCentral.EmergencyLocationRequestResource emergencyLocationRequestResource, RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Post<RingCentral.EmergencyLocationResponseResource>(this.Path(false), emergencyLocationRequestResource, null, restRequestConfig);
+  }
 
         /// <summary>
-        ///     Creates a new emergency response location for a company.
-        ///     HTTP Method: post
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-locations
-        ///     Rate Limit Group: Medium
-        ///     App Permission: EditAccounts
-        ///     User Permission: ConfigureEmergencyMaps
+        /// Returns emergency response location by ID. Available for Admin users only.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-locations/{locationId}
+        /// Rate Limit Group: Light
+        /// App Permission: EditAccounts
+        /// User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<EmergencyLocationResponseResource> Post(
-            EmergencyLocationRequestResource emergencyLocationRequestResource,
-            RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Post<EmergencyLocationResponseResource>(Path(false), emergencyLocationRequestResource, null,
-                restRequestConfig);
-        }
+  public async Task<RingCentral.CommonEmergencyLocationResource> Get(RingCentral.ReadEmergencyLocationParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+  {
+if (locationId == null)
+    {
+        throw new System.ArgumentException("Parameter cannot be null", nameof(locationId));
+    }return await rc.Get<RingCentral.CommonEmergencyLocationResource>(this.Path(), queryParams, restRequestConfig);
+  }
 
         /// <summary>
-        ///     Returns emergency response location by ID. Available for Admin users only.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-locations/{locationId}
-        ///     Rate Limit Group: Light
-        ///     App Permission: EditAccounts
-        ///     User Permission: ConfigureEmergencyMaps
+        /// Updates the specified emergency response location.
+        /// HTTP Method: put
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-locations/{locationId}
+        /// Rate Limit Group: Heavy
+        /// App Permission: EditAccounts
+        /// User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<CommonEmergencyLocationResource> Get(ReadEmergencyLocationParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
-        {
-            if (locationId == null) throw new ArgumentException("Parameter cannot be null", nameof(locationId));
-            return await rc.Get<CommonEmergencyLocationResource>(Path(), queryParams, restRequestConfig);
-        }
+  public async Task<RingCentral.EmergencyLocationResponseResource> Put(RingCentral.EmergencyLocationRequestResource emergencyLocationRequestResource, RestRequestConfig restRequestConfig = null)
+  {
+if (locationId == null)
+    {
+        throw new System.ArgumentException("Parameter cannot be null", nameof(locationId));
+    }return await rc.Put<RingCentral.EmergencyLocationResponseResource>(this.Path(), emergencyLocationRequestResource, null, restRequestConfig);
+  }
 
         /// <summary>
-        ///     Updates the specified emergency response location.
-        ///     HTTP Method: put
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-locations/{locationId}
-        ///     Rate Limit Group: Heavy
-        ///     App Permission: EditAccounts
-        ///     User Permission: ConfigureEmergencyMaps
+        /// Deletes the specified emergency response location.
+        /// HTTP Method: delete
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-locations/{locationId}
+        /// Rate Limit Group: Heavy
+        /// App Permission: EditAccounts
+        /// User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<EmergencyLocationResponseResource> Put(
-            EmergencyLocationRequestResource emergencyLocationRequestResource,
-            RestRequestConfig restRequestConfig = null)
-        {
-            if (locationId == null) throw new ArgumentException("Parameter cannot be null", nameof(locationId));
-            return await rc.Put<EmergencyLocationResponseResource>(Path(), emergencyLocationRequestResource, null,
-                restRequestConfig);
-        }
-
-        /// <summary>
-        ///     Deletes the specified emergency response location.
-        ///     HTTP Method: delete
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-locations/{locationId}
-        ///     Rate Limit Group: Heavy
-        ///     App Permission: EditAccounts
-        ///     User Permission: ConfigureEmergencyMaps
-        /// </summary>
-        public async Task<string> Delete(DeleteEmergencyLocationParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
-        {
-            if (locationId == null) throw new ArgumentException("Parameter cannot be null", nameof(locationId));
-            return await rc.Delete<string>(Path(), null, queryParams, restRequestConfig);
-        }
+  public async Task<string> Delete(RingCentral.DeleteEmergencyLocationParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+  {
+if (locationId == null)
+    {
+        throw new System.ArgumentException("Parameter cannot be null", nameof(locationId));
+    }return await rc.Delete<string>(this.Path(), null, queryParams, restRequestConfig);
+  }
     }
 }
 
@@ -105,9 +103,9 @@ namespace RingCentral.Paths.Restapi.Account
 {
     public partial class Index
     {
-        public EmergencyLocations.Index EmergencyLocations(string locationId = null)
+        public Restapi.Account.EmergencyLocations.Index EmergencyLocations(string locationId = null)
         {
-            return new EmergencyLocations.Index(this, locationId);
+            return new Restapi.Account.EmergencyLocations.Index(this, locationId);
         }
     }
 }

@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Links to other pages of the current result set
-    /// </summary>
-    public class PageNavigationModel
-    {
-        /// <summary>
+/// Links to other pages of the current result set
+/// </summary>
+      public class PageNavigationModel
+      {
+          /// <summary>
         /// </summary>
         public PageNavigationUri firstPage { get; set; }
 
@@ -20,5 +20,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public PageNavigationUri lastPage { get; set; }
-    }
-}
+      }
+  }

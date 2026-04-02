@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class UserInfoResource
-    {
-        /// <summary>
+  {
+      public class UserInfoResource
+      {
+          /// <summary>
         ///     Subject - the End-User internal identifier. Contains RingCentral user (extension) ID
         ///     Required
         ///     Example: 987654321
@@ -35,5 +35,5 @@ namespace RingCentral
         ///     The first name of the End-User
         /// </summary>
         public string given_name { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class LanguageList
-    {
-        /// <summary>
+  {
+      public class LanguageList
+      {
+          /// <summary>
         ///     Canonical URI of the language list resource
         ///     Format: uri
         /// </summary>
@@ -20,5 +20,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-    }
-}
+      }
+  }

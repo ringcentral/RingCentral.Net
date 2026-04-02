@@ -1,15 +1,14 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Action information
-    /// </summary>
-    public class CommRingAlwaysGroupActionRequest
-    {
-        /// <summary>
+/// Action information
+/// </summary>
+      public class CommRingAlwaysGroupActionRequest
+      {
+          /// <summary>
         ///     Required
         ///     Example: RingAlwaysGroupAction
-        ///     Enum: PlayConnectingMessageAction, PlayConnectingPromptAction, PlayWelcomePromptAction, ScreeningAction,
-        ///     RingGroupAction, RingAlwaysGroupAction, TerminatingAction
+        ///     Enum: PlayConnectingMessageAction, PlayConnectingPromptAction, PlayWelcomePromptAction, ScreeningAction, RingGroupAction, RingAlwaysGroupAction, TerminatingAction
         /// </summary>
         public string type { get; set; }
 
@@ -24,5 +23,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CommRingAlwaysGroupActionRequestTargets[] targets { get; set; }
-    }
-}
+      }
+  }

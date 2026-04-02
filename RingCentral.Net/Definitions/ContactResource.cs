@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ContactResource
-    {
-        /// <summary>
+  {
+      public class ContactResource
+      {
+          /// <summary>
         ///     Contact extension identifier
         ///     Required
         ///     Example: 865706371004
@@ -12,9 +12,7 @@ namespace RingCentral
         /// <summary>
         ///     Contact type
         ///     Example: User
-        ///     Enum: User, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation, IvrMenu, Limited,
-        ///     ApplicationExtension, Site, Bot, Room, ProxyAdmin, DelegatedLinesGroup, GroupCallPickup, External, RoomConnector,
-        ///     Unknown
+        ///     Enum: User, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation, IvrMenu, Limited, ApplicationExtension, Site, Bot, Room, ProxyAdmin, DelegatedLinesGroup, GroupCallPickup, External, RoomConnector, Unknown
         /// </summary>
         public string type { get; set; }
 
@@ -91,5 +89,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ExternalIntegrationResource integration { get; set; }
-    }
-}
+      }
+  }

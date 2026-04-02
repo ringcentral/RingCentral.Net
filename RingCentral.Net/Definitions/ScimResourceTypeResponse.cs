@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ScimResourceTypeResponse
-    {
-        /// <summary>
+  {
+      public class ScimResourceTypeResponse
+      {
+          /// <summary>
         ///     Unique resource type ID, same value as the "name" attribute
         /// </summary>
         public string id { get; set; }
@@ -37,5 +37,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ScimMeta meta { get; set; }
-    }
-}
+      }
+  }

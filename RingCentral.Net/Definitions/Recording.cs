@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Recording information
-    /// </summary>
-    public class Recording
-    {
-        /// <summary>
+/// Recording information
+/// </summary>
+      public class Recording
+      {
+          /// <summary>
         ///     Recording id
         ///     Required
         /// </summary>
@@ -53,5 +53,5 @@ namespace RingCentral
         ///     During meeting AI team analyze code and after meeting finished generates key words used in meeting
         /// </summary>
         public string[] keywords { get; set; }
-    }
-}
+      }
+  }

@@ -1,14 +1,14 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation getRecordingInsights
-    /// </summary>
-    public class GetRecordingInsightsParameters
-    {
-        /// <summary>
+/// Query parameters for operation getRecordingInsights
+/// </summary>
+      public class GetRecordingInsightsParameters
+      {
+          /// <summary>
         ///     AI Insight Types
-        ///     Enum: NextSteps, Transcript, Summary, Highlights, BulletedSummary, AIScore, CallNotes
+        ///     Enum: NextSteps, Transcript, Summary, Highlights, BulletedSummary, AIScore, CallNotes, Sentiment
         /// </summary>
         public string[] insightTypes { get; set; }
-    }
-}
+      }
+  }

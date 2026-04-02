@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ScimSchemaAttribute
-    {
-        /// <summary>
+  {
+      public class ScimSchemaAttribute
+      {
+          /// <summary>
         ///     The name of the attribute
         ///     Required
         /// </summary>
@@ -68,5 +68,5 @@ namespace RingCentral
         ///     Indicates the SCIM resource types that be referenced
         /// </summary>
         public string[] referenceTypes { get; set; }
-    }
-}
+      }
+  }

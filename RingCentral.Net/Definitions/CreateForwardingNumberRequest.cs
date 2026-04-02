@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CreateForwardingNumberRequest
-    {
-        /// <summary>
+  {
+      public class CreateForwardingNumberRequest
+      {
+          /// <summary>
         ///     Internal identifier of a forwarding/call flip phone number
         /// </summary>
         public string id { get; set; }
@@ -33,5 +33,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CreateForwardingNumberDeviceInfo device { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class RecordingInsights
-    {
-        /// <summary>
+  {
+      public class RecordingInsights
+      {
+          /// <summary>
         ///     Title of the call
         ///     Required
         ///     Example: Call from 1234567890 to 0987654321
@@ -19,7 +19,7 @@ namespace RingCentral
         ///     Source rc application of the recording
         ///     Required
         ///     Example: pbx
-        ///     Enum: pbx, rcv, rcx, connect-and-sell, nice-incontact, ms-teams
+        ///     Enum: pbx, rcv, rcx, nice-incontact, ms-teams
         /// </summary>
         public string domain { get; set; }
 
@@ -90,5 +90,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public AIInsights insights { get; set; }
-    }
-}
+      }
+  }

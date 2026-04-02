@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation deleteExtension
-    /// </summary>
-    public class DeleteExtensionParameters
-    {
-        /// <summary>
+/// Query parameters for operation deleteExtension
+/// </summary>
+      public class DeleteExtensionParameters
+      {
+          /// <summary>
         ///     If `true`, the digital lines from the deleted extension are saved in inventory.
         /// </summary>
         public bool? savePhoneLines { get; set; }
@@ -15,5 +15,5 @@ namespace RingCentral
         ///     Default: true
         /// </summary>
         public bool? savePhoneNumbers { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class UnifiedPresenceListEntry
-    {
-        /// <summary>
+  {
+      public class UnifiedPresenceListEntry
+      {
+          /// <summary>
         ///     Internal identifier of the resource
         /// </summary>
         public string resourceId { get; set; }
@@ -16,5 +16,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public UnifiedPresence body { get; set; }
-    }
-}
+      }
+  }

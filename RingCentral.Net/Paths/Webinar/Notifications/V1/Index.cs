@@ -1,20 +1,23 @@
+using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
+
 namespace RingCentral.Paths.Webinar.Notifications.V1
 {
     public partial class Index
     {
-        public Notifications.Index parent;
         public RestClient rc;
-
-        public Index(Notifications.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public Webinar.Notifications.Index parent;
+public Index(Webinar.Notifications.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
-            return $"{parent.Path()}/v1";
+            return $"{parent.Path(false)}/v1";
         }
+
     }
 }
 
@@ -22,9 +25,9 @@ namespace RingCentral.Paths.Webinar.Notifications
 {
     public partial class Index
     {
-        public V1.Index V1()
+        public Webinar.Notifications.V1.Index V1()
         {
-            return new V1.Index(this);
+            return new Webinar.Notifications.V1.Index(this);
         }
     }
 }

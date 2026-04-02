@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AccountFormattingLocaleInfoRequest
-    {
-        /// <summary>
+  {
+      public class AccountFormattingLocaleInfoRequest
+      {
+          /// <summary>
         ///     Internal identifier of a formatting language
         ///     Required
         /// </summary>
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string localeCode { get; set; }
-    }
-}
+      }
+  }

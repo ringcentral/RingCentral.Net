@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class TMCreateTeamRequest
-    {
-        /// <summary>
+  {
+      public class TMCreateTeamRequest
+      {
+          /// <summary>
         ///     Team access level.
         /// </summary>
         public bool? @public { get; set; }
@@ -22,5 +22,5 @@ namespace RingCentral
         ///     Identifier(s) of team members.
         /// </summary>
         public TMCreateTeamRequestMembers[] members { get; set; }
-    }
-}
+      }
+  }

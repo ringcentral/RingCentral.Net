@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Detailed contact information
-    /// </summary>
-    public class ContactInfo
-    {
-        /// <summary>
+/// Detailed contact information
+/// </summary>
+      public class ContactInfo
+      {
+          /// <summary>
         ///     User's first name (for extensions of `User` type only)
         /// </summary>
         public string firstName { get; set; }
@@ -38,13 +38,13 @@ namespace RingCentral
 
         /// <summary>
         ///     User's contact phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
-        ///     (with '+' sign) format
+            ///     (with '+' sign) format
         /// </summary>
         public string businessPhone { get; set; }
 
         /// <summary>
         ///     User's mobile (**non** Toll Free) phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
-        ///     (with '+' sign) format
+            ///     (with '+' sign) format
         /// </summary>
         public string mobilePhone { get; set; }
 
@@ -54,7 +54,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Indicates that the contact email is enabled as a login name for this
-        ///     user. Please note that the email must be unique in this case.
+            ///     user. Please note that the email must be unique in this case.
         /// </summary>
         public bool? emailAsLoginName { get; set; }
 
@@ -66,5 +66,5 @@ namespace RingCentral
         ///     User's department name
         /// </summary>
         public string department { get; set; }
-    }
-}
+      }
+  }

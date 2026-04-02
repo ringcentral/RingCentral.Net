@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AccountPresenceInfo
-    {
-        /// <summary>
+  {
+      public class AccountPresenceInfo
+      {
+          /// <summary>
         ///     Canonical URI of account presence resource
         ///     Format: uri
         /// </summary>
@@ -11,7 +11,7 @@ namespace RingCentral
         /// <summary>
         ///     List of Prompts
         /// </summary>
-        public GetPresenceInfo[] records { get; set; }
+        public PresenceInfoResponse[] records { get; set; }
 
         /// <summary>
         /// </summary>
@@ -20,5 +20,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public PresencePagingInfo paging { get; set; }
-    }
-}
+      }
+  }

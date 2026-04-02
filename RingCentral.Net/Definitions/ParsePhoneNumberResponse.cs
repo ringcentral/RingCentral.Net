@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ParsePhoneNumberResponse
-    {
-        /// <summary>
+  {
+      public class ParsePhoneNumberResponse
+      {
+          /// <summary>
         ///     Canonical URI of a resource
         ///     Format: uri
         /// </summary>
@@ -17,5 +17,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public PhoneNumberInfoNumberParser[] phoneNumbers { get; set; }
-    }
-}
+      }
+  }

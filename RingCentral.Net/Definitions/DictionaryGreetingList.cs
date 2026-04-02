@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class DictionaryGreetingList
-    {
-        /// <summary>
+  {
+      public class DictionaryGreetingList
+      {
+          /// <summary>
         ///     Canonical URI of greetings list resource
         ///     Format: uri
         /// </summary>
@@ -20,5 +20,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-    }
-}
+      }
+  }

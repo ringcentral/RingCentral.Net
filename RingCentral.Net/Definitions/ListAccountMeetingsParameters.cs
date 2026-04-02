@@ -1,13 +1,13 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation listAccountMeetings
-    /// </summary>
-    public class ListAccountMeetingsParameters
-    {
-        /// <summary>
+/// Query parameters for operation listAccountMeetings
+/// </summary>
+      public class ListAccountMeetingsParameters
+      {
+          /// <summary>
         ///     The token indicating the particular page of the result set to be retrieved.
-        ///     If omitted the first page will be returned.
+            ///     If omitted the first page will be returned.
         /// </summary>
         public string pageToken { get; set; }
 
@@ -33,10 +33,9 @@ namespace RingCentral
         public string startTimeTo { get; set; }
 
         /// <summary>
-        ///     Comma-separated list of fields with optional sort direction. Use a '+' prefix for ascending order or '-' for
-        ///     descending order. E.g., orderBy=+startTime
+        ///     Comma-separated list of fields with optional sort direction. Use a '+' prefix for ascending order or '-' for descending order. E.g., orderBy=+startTime
         ///     Default: -startTime
         /// </summary>
         public string orderBy { get; set; }
-    }
-}
+      }
+  }

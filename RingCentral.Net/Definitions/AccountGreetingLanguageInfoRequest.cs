@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AccountGreetingLanguageInfoRequest
-    {
-        /// <summary>
+  {
+      public class AccountGreetingLanguageInfoRequest
+      {
+          /// <summary>
         ///     Internal identifier of a greeting language
         ///     Required
         /// </summary>
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string localeCode { get; set; }
-    }
-}
+      }
+  }

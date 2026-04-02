@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AccountResource
-    {
-        /// <summary>
+  {
+      public class AccountResource
+      {
+          /// <summary>
         ///     Example: My lovely company
         /// </summary>
         public string companyName { get; set; }
@@ -21,5 +21,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public AdgPhoneNumberResource mainNumber { get; set; }
-    }
-}
+      }
+  }

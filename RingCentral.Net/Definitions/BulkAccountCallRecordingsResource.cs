@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class BulkAccountCallRecordingsResource
-    {
-        /// <summary>
+  {
+      public class BulkAccountCallRecordingsResource
+      {
+          /// <summary>
         /// </summary>
         public CallRecordingExtensionResource[] addedExtensions { get; set; }
 
@@ -13,5 +13,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CallRecordingExtensionResource[] removedExtensions { get; set; }
-    }
-}
+      }
+  }

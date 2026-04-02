@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Status data of a call session
-    /// </summary>
-    public class CallStatusInfo
-    {
-        /// <summary>
+/// Status data of a call session
+/// </summary>
+      public class CallStatusInfo
+      {
+          /// <summary>
         ///     Status code of a call
         ///     Enum: Setup, Proceeding, Answered, Disconnected, Gone, Parked, Hold, VoiceMail, FaxReceive, Tds, VoiceMailScreening
         /// </summary>
@@ -13,10 +13,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Reason for a call status, might be specified for some codes
-        ///     Enum: Pickup, Supervising, TakeOver, Timeout, BlindTransfer, RccTransfer, AttendedTransfer, CallerInputRedirect,
-        ///     CallFlip, ParkLocation, DtmfTransfer, AgentAnswered, AgentDropped, Rejected, Cancelled, InternalError, NoAnswer,
-        ///     TargetBusy, InvalidNumber, InternationalDisabled, DestinationBlocked, NotEnoughFunds, NoSuchUser, CallPark,
-        ///     CallRedirected, CallReplied, CallSwitch, CallFinished, CallDropped, Voicemail
+        ///     Enum: Pickup, Supervising, TakeOver, Timeout, BlindTransfer, RccTransfer, AttendedTransfer, CallerInputRedirect, CallFlip, ParkLocation, DtmfTransfer, AgentAnswered, AgentDropped, Rejected, Cancelled, InternalError, NoAnswer, TargetBusy, InvalidNumber, InternationalDisabled, DestinationBlocked, NotEnoughFunds, NoSuchUser, CallPark, CallRedirected, CallReplied, CallSwitch, CallFinished, CallDropped, Voicemail
         /// </summary>
         public string reason { get; set; }
 
@@ -42,5 +39,5 @@ namespace RingCentral
         ///     Specifies if it's a conference call
         /// </summary>
         public bool? rcc { get; set; }
-    }
-}
+      }
+  }

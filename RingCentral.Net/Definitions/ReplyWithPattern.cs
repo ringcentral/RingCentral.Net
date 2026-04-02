@@ -1,12 +1,11 @@
 namespace RingCentral
-{
-    public class ReplyWithPattern
-    {
-        /// <summary>
+  {
+      public class ReplyWithPattern
+      {
+          /// <summary>
         ///     Predefined reply pattern name.
         ///     Example: OnMyWay
-        ///     Enum: WillCallYouBack, CallMeBack, OnMyWay, OnTheOtherLine, WillCallYouBackLater, CallMeBackLater, InAMeeting,
-        ///     OnTheOtherLineNoCall
+        ///     Enum: WillCallYouBack, CallMeBack, OnMyWay, OnTheOtherLine, WillCallYouBackLater, CallMeBackLater, InAMeeting, OnTheOtherLineNoCall
         /// </summary>
         public string pattern { get; set; }
 
@@ -23,5 +22,5 @@ namespace RingCentral
         ///     Enum: Minute, Hour, Day
         /// </summary>
         public string timeUnit { get; set; }
-    }
-}
+      }
+  }

@@ -1,10 +1,10 @@
 using Newtonsoft.Json;
 
 namespace RingCentral
-{
-    public class AdaptiveCardInfo
-    {
-        /// <summary>
+  {
+      public class AdaptiveCardInfo
+      {
+          /// <summary>
         ///     Internal identifier of an adaptive card
         /// </summary>
         public string id { get; set; }
@@ -88,10 +88,9 @@ namespace RingCentral
         public string lang { get; set; }
 
         /// <summary>
-        ///     Defines how the content should be aligned vertically within the container. Only relevant for fixed-height cards, or
-        ///     cards with a `minHeight` specified
+        ///     Defines how the content should be aligned vertically within the container. Only relevant for fixed-height cards, or cards with a `minHeight` specified
         ///     Enum: top, center, bottom
         /// </summary>
         public string verticalContentAlignment { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ListFaxCoverPagesResponse
-    {
-        /// <summary>
+  {
+      public class ListFaxCoverPagesResponse
+      {
+          /// <summary>
         ///     Format: uri
         /// </summary>
         public string uri { get; set; }
@@ -18,5 +18,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-    }
-}
+      }
+  }

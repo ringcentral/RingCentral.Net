@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class WcsSessionGeneratedModel
-    {
-        /// <summary>
+  {
+      public class WcsSessionGeneratedModel
+      {
+          /// <summary>
         ///     The RCV bridge id
         ///     Example: 839874770
         /// </summary>
@@ -16,8 +16,7 @@ namespace RingCentral
         public string videoBridgePassword { get; set; }
 
         /// <summary>
-        ///     The RCV bridge PSTN password. Returned only if requested by Host/Co-host/Panelist and a PSTN password for the
-        ///     bridge is set.
+        ///     The RCV bridge PSTN password. Returned only if requested by Host/Co-host/Panelist and a PSTN password for the bridge is set.
         ///     Format: password
         ///     Example: abc123
         /// </summary>
@@ -34,5 +33,5 @@ namespace RingCentral
         ///     Calculated attribute indicating if there are any unsent/deferred invites to session participants
         /// </summary>
         public bool? hasUnsentInvites { get; set; }
-    }
-}
+      }
+  }

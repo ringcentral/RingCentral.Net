@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ExtensionWithRolesResource
-    {
-        /// <summary>
+  {
+      public class ExtensionWithRolesResource
+      {
+          /// <summary>
         ///     Format: uri
         /// </summary>
         public string uri { get; set; }
@@ -14,5 +14,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public AssignedRoleResource[] roles { get; set; }
-    }
-}
+      }
+  }

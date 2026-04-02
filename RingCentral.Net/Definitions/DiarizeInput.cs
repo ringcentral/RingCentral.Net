@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class DiarizeInput
-    {
-        /// <summary>
+  {
+      public class DiarizeInput
+      {
+          /// <summary>
         ///     Publicly facing uri
         ///     Format: uri
         /// </summary>
@@ -49,14 +49,8 @@ namespace RingCentral
         public long? speakerCount { get; set; }
 
         /// <summary>
-        ///     Optional set of speakers to be identified from the call.
-        ///     Example: speakerId1,speakerId2
-        /// </summary>
-        public string[] speakerIds { get; set; }
-
-        /// <summary>
         ///     Apply voice activity detection.
         /// </summary>
         public bool? enableVoiceActivityDetection { get; set; }
-    }
-}
+      }
+  }

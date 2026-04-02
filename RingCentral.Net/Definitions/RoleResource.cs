@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class RoleResource
-    {
-        /// <summary>
+  {
+      public class RoleResource
+      {
+          /// <summary>
         ///     Link to a role resource
         ///     Format: uri
         /// </summary>
@@ -53,5 +53,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public PermissionIdResource[] permissions { get; set; }
-    }
-}
+      }
+  }

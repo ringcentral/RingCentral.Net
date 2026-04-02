@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class DevicePhoneLinesEmergencyAddressInfo
-    {
-        /// <summary>
+  {
+      public class DevicePhoneLinesEmergencyAddressInfo
+      {
+          /// <summary>
         ///     Indicates that emergency address is required
         /// </summary>
         public bool? required { get; set; }
@@ -11,5 +11,11 @@ namespace RingCentral
         ///     Indicates that only local emergency address can be specified
         /// </summary>
         public bool? localOnly { get; set; }
-    }
-}
+
+        /// <summary>
+        ///     Digital line provisioning status
+        ///     Enum: Invalid, Provisioning, Valid
+        /// </summary>
+        public string lineProvisioningStatus { get; set; }
+      }
+  }

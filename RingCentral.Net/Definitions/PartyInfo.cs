@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class PartyInfo
-    {
-        /// <summary>
+  {
+      public class PartyInfo
+      {
+          /// <summary>
         ///     Phone number of a party
         /// </summary>
         public string phoneNumber { get; set; }
@@ -21,5 +21,5 @@ namespace RingCentral
         ///     Internal identifier of an extension
         /// </summary>
         public string extensionId { get; set; }
-    }
-}
+      }
+  }

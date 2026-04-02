@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AggregationResponseRecord
-    {
-        /// <summary>
+  {
+      public class AggregationResponseRecord
+      {
+          /// <summary>
         ///     Grouping key
         ///     Required
         /// </summary>
@@ -19,5 +19,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CallsCounters counters { get; set; }
-    }
-}
+      }
+  }

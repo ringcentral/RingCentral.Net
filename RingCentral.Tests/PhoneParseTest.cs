@@ -10,7 +10,7 @@ public class PhoneParseTest
     {
         var rc = await ReusableRestClient.GetInstance();
 
-        var r = await rc.Restapi().NumberParser().Parse().Post(new ParsePhoneNumberRequest
+        var r = await rc.Restapi().V2().NumberParser().Parse().Post(new ParsePhoneNumbersRequest
         {
             originalStrings = new[] { "+1650-666-8888", "+1650-666-9999" }
         });

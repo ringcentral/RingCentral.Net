@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class WcsSessionBaseModel
-    {
-        /// <summary>
+  {
+      public class WcsSessionBaseModel
+      {
+          /// <summary>
         ///     Session scheduled start time.
         ///     Required
         ///     Format: date-time
@@ -34,7 +34,7 @@ namespace RingCentral
 
         /// <summary>
         ///     The time offset (positive, in seconds) indicating how much in advance
-        ///     (comparing to "scheduledStartTime") panel members should join for the pre-webinar team sync
+            ///     (comparing to "scheduledStartTime") panel members should join for the pre-webinar team sync
         ///     Format: int32
         ///     Example: 900
         /// </summary>
@@ -65,5 +65,5 @@ namespace RingCentral
         ///     Example: https://v.ringcentral.com/w/join/de7yd8ew7yfsdfjh899843rgj
         /// </summary>
         public string hostJoinUri { get; set; }
-    }
-}
+      }
+  }

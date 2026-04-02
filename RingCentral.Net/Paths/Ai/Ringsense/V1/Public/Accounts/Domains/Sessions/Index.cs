@@ -1,23 +1,29 @@
+using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
+
 namespace RingCentral.Paths.Ai.Ringsense.V1.Public.Accounts.Domains.Sessions
 {
     public partial class Index
     {
-        public Domains.Index parent;
         public RestClient rc;
-        public string sourceSessionId;
-
-        public Index(Domains.Index parent, string sourceSessionId = null)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-            this.sourceSessionId = sourceSessionId;
-        }
-
+public Ai.Ringsense.V1.Public.Accounts.Domains.Index parent;
+public string sourceSessionId;
+public Index(Ai.Ringsense.V1.Public.Accounts.Domains.Index parent, string sourceSessionId = null)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+this.sourceSessionId = sourceSessionId;
+}
         public string Path(bool withParameter = true)
         {
-            if (withParameter && sourceSessionId != null) return $"{parent.Path()}/sessions/{sourceSessionId}";
+            if (withParameter && sourceSessionId != null)
+            {
+                return $"{parent.Path()}/sessions/{sourceSessionId}";
+            }
             return $"{parent.Path()}/sessions";
         }
+
     }
 }
 
@@ -25,9 +31,9 @@ namespace RingCentral.Paths.Ai.Ringsense.V1.Public.Accounts.Domains
 {
     public partial class Index
     {
-        public Sessions.Index Sessions(string sourceSessionId = null)
+        public Ai.Ringsense.V1.Public.Accounts.Domains.Sessions.Index Sessions(string sourceSessionId = null)
         {
-            return new Sessions.Index(this, sourceSessionId);
+            return new Ai.Ringsense.V1.Public.Accounts.Domains.Sessions.Index(this, sourceSessionId);
         }
     }
 }

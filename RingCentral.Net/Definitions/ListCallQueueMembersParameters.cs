@@ -1,13 +1,13 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation listCallQueueMembers
-    /// </summary>
-    public class ListCallQueueMembersParameters
-    {
-        /// <summary>
+/// Query parameters for operation listCallQueueMembers
+/// </summary>
+      public class ListCallQueueMembersParameters
+      {
+          /// <summary>
         ///     Indicates a page number to retrieve. Only positive number values
-        ///     are allowed
+            ///     are allowed
         ///     Format: int32
         ///     Default: 1
         /// </summary>
@@ -19,5 +19,5 @@ namespace RingCentral
         ///     Default: 100
         /// </summary>
         public long? perPage { get; set; }
-    }
-}
+      }
+  }

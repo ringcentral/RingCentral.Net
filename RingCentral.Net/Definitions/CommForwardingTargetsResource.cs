@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CommForwardingTargetsResource
-    {
-        /// <summary>
+  {
+      public class CommForwardingTargetsResource
+      {
+          /// <summary>
         ///     Required
         /// </summary>
         public CommForwardingTargetsResourceRecords[] records { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-    }
-}
+      }
+  }

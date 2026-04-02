@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CustomCompanyGreetingInfo
-    {
-        /// <summary>
+  {
+      public class CustomCompanyGreetingInfo
+      {
+          /// <summary>
         ///     Link to an extension custom greeting
         ///     Format: uri
         /// </summary>
@@ -38,5 +38,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CustomCompanyGreetingLanguageInfo language { get; set; }
-    }
-}
+      }
+  }

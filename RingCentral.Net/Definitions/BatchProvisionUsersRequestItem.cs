@@ -1,13 +1,13 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Describes request for user extension provisioning
-    /// </summary>
-    public class BatchProvisionUsersRequestItem
-    {
-        /// <summary>
+/// Describes request for user extension provisioning
+/// </summary>
+      public class BatchProvisionUsersRequestItem
+      {
+          /// <summary>
         ///     Short number of an extension.
-        ///     Actual max length depends on system length limit for extension.
+            ///     Actual max length depends on system length limit for extension.
         ///     Example: 205
         /// </summary>
         public string extensionNumber { get; set; }
@@ -37,5 +37,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public BatchProvisionUsersRequestItemDevices[] devices { get; set; }
-    }
-}
+      }
+  }

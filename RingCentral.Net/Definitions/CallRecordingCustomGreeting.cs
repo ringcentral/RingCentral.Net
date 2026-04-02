@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CallRecordingCustomGreeting
-    {
-        /// <summary>
+  {
+      public class CallRecordingCustomGreeting
+      {
+          /// <summary>
         ///     Enum: StartRecording, StopRecording, AutomaticRecording
         /// </summary>
         public string type { get; set; }
@@ -14,5 +14,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CallRecordingCustomGreetingLanguage language { get; set; }
-    }
-}
+      }
+  }

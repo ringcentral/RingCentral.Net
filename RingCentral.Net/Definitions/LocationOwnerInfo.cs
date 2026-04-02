@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class LocationOwnerInfo
-    {
-        /// <summary>
+  {
+      public class LocationOwnerInfo
+      {
+          /// <summary>
         ///     Internal identifier of a user - private location owner
         /// </summary>
         public string id { get; set; }
@@ -16,5 +16,5 @@ namespace RingCentral
         ///     Name of a location owner
         /// </summary>
         public string name { get; set; }
-    }
-}
+      }
+  }

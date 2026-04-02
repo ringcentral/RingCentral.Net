@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class FixedAnswerModel
-    {
-        /// <summary>
+  {
+      public class FixedAnswerModel
+      {
+          /// <summary>
         ///     ID of the custom question
         ///     Required
         ///     Example: 123456789
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string[] answerIds { get; set; }
-    }
-}
+      }
+  }

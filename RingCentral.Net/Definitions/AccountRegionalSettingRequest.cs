@@ -1,12 +1,13 @@
 namespace RingCentral
-{
-    public class AccountRegionalSettingRequest
-    {
-        /// <summary>
+  {
+      public class AccountRegionalSettingRequest
+      {
+          /// <summary>
         /// </summary>
         public AccountCountryInfoRequest homeCountry { get; set; }
 
         /// <summary>
+        ///     Required
         /// </summary>
         public AccountTimezoneInfoRequest timezone { get; set; }
 
@@ -28,5 +29,5 @@ namespace RingCentral
         ///     Enum: 12h, 24h
         /// </summary>
         public string timeFormat { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class OptOutBulkAssignResponseOptOuts
-    {
-        /// <summary>
+  {
+      public class OptOutBulkAssignResponseOptOuts
+      {
+          /// <summary>
         ///     Recipients' phone numbers which opt-outs were successfully added for.
         ///     Example: +15551237755
         /// </summary>
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Example: [object Object]
         /// </summary>
         public OptOutBulkAssignFailedEntry[] failed { get; set; }
-    }
-}
+      }
+  }

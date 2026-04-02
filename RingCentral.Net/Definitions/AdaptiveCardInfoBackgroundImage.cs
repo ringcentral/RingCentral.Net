@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AdaptiveCardInfoBackgroundImage
-    {
-        /// <summary>
+  {
+      public class AdaptiveCardInfoBackgroundImage
+      {
+          /// <summary>
         ///     Must be `BackgroundImage`
         ///     Enum: BackgroundImage
         /// </summary>
@@ -31,5 +31,5 @@ namespace RingCentral
         ///     Enum: top, center, bottom
         /// </summary>
         public string verticalAlignment { get; set; }
-    }
-}
+      }
+  }

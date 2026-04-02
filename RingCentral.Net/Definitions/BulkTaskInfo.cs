@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class BulkTaskInfo
-    {
-        /// <summary>
+  {
+      public class BulkTaskInfo
+      {
+          /// <summary>
         ///     Internal identifier of a task for multiple switches creation
         /// </summary>
         public string id { get; set; }
@@ -24,5 +24,5 @@ namespace RingCentral
         ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
-    }
-}
+      }
+  }

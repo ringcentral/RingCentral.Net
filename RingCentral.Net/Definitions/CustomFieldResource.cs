@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CustomFieldResource
-    {
-        /// <summary>
+  {
+      public class CustomFieldResource
+      {
+          /// <summary>
         ///     Example: 1032854
         /// </summary>
         public string id { get; set; }
@@ -16,5 +16,5 @@ namespace RingCentral
         ///     Example: 5
         /// </summary>
         public string value { get; set; }
-    }
-}
+      }
+  }

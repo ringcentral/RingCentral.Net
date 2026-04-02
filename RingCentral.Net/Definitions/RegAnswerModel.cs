@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class RegAnswerModel
-    {
-        /// <summary>
+  {
+      public class RegAnswerModel
+      {
+          /// <summary>
         ///     ID of the custom question
         ///     Required
         ///     Example: 123456789
@@ -20,5 +20,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string answerText { get; set; }
-    }
-}
+      }
+  }

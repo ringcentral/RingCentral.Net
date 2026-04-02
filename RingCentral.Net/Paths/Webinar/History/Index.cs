@@ -1,20 +1,23 @@
+using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
+
 namespace RingCentral.Paths.Webinar.History
 {
     public partial class Index
     {
-        public Webinar.Index parent;
         public RestClient rc;
-
-        public Index(Webinar.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public Webinar.Index parent;
+public Index(Webinar.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
-            return $"{parent.Path()}/history";
+            return $"{parent.Path(false)}/history";
         }
+
     }
 }
 
@@ -22,9 +25,9 @@ namespace RingCentral.Paths.Webinar
 {
     public partial class Index
     {
-        public History.Index History()
+        public Webinar.History.Index History()
         {
-            return new History.Index(this);
+            return new Webinar.History.Index(this);
         }
     }
 }

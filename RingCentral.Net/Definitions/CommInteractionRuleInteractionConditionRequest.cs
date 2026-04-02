@@ -1,9 +1,9 @@
 namespace RingCentral
-{
-    public class CommInteractionRuleInteractionConditionRequest
-    {
-        /// <summary>
-        ///     Ring target type
+  {
+      public class CommInteractionRuleInteractionConditionRequest
+      {
+          /// <summary>
+        ///     Interaction condition type resource
         ///     Required
         ///     Example: Interaction
         ///     Enum: Interaction, Schedule, State
@@ -19,5 +19,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string[] to { get; set; }
-    }
-}
+      }
+  }

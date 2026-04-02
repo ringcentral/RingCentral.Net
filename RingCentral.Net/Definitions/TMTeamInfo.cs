@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class TMTeamInfo
-    {
-        /// <summary>
+  {
+      public class TMTeamInfo
+      {
+          /// <summary>
         ///     Internal identifier of a team
         /// </summary>
         public string id { get; set; }
@@ -45,5 +45,5 @@ namespace RingCentral
         ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
-    }
-}
+      }
+  }

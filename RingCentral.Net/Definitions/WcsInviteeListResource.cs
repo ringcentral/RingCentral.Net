@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class WcsInviteeListResource
-    {
-        /// <summary>
+  {
+      public class WcsInviteeListResource
+      {
+          /// <summary>
         ///     Required
         /// </summary>
         public InviteeResource[] records { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public RcwPagingModel paging { get; set; }
-    }
-}
+      }
+  }

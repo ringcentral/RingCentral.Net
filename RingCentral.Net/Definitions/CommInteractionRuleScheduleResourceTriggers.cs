@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CommInteractionRuleScheduleResourceTriggers
-    {
-        /// <summary>
+  {
+      public class CommInteractionRuleScheduleResourceTriggers
+      {
+          /// <summary>
         ///     Trigger type
         ///     Example: Range
         ///     Enum: Daily, Weekly, Range
@@ -24,5 +24,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CommWeeklyItemsResource ranges { get; set; }
-    }
-}
+      }
+  }

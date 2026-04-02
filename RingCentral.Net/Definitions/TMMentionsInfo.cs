@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class TMMentionsInfo
-    {
-        /// <summary>
+  {
+      public class TMMentionsInfo
+      {
+          /// <summary>
         ///     Internal identifier of a user
         /// </summary>
         public string id { get; set; }
@@ -17,5 +17,5 @@ namespace RingCentral
         ///     Name of a user
         /// </summary>
         public string name { get; set; }
-    }
-}
+      }
+  }

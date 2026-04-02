@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Various settings which define behavior of this Webinar's Sessions
-    /// </summary>
-    public class WcsWebinarSettingsModel
-    {
-        /// <summary>
+/// Various settings which define behavior of this Webinar's Sessions
+/// </summary>
+      public class WcsWebinarSettingsModel
+      {
+          /// <summary>
         ///     Indicates if recording is enabled (if false all other recording settings cannot be enabled)
         ///     Default: true
         /// </summary>
@@ -30,13 +30,13 @@ namespace RingCentral
 
         /// <summary>
         ///     DEPRECATED AND REPLACED BY 'pastSessionDeletionEnabled' setting.
-        ///     Indicates if recording can be deleted (this setting is read-only at webinar level)
+            ///     Indicates if recording can be deleted (this setting is read-only at webinar level)
         /// </summary>
         public bool? recordingDeletionEnabled { get; set; }
 
         /// <summary>
         ///     Indicates if deletion of past session along with its artifacts is enabled for Host.
-        ///     This setting is read-only at webinar level
+            ///     This setting is read-only at webinar level
         /// </summary>
         public bool? pastSessionDeletionEnabled { get; set; }
 
@@ -79,7 +79,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Indicates who can access webinar artifacts. Applies to recordings at present.
-        ///     Applicable to other artifacts such as Q&A, Polls in the future.
+            ///     Applicable to other artifacts such as Q&A, Polls in the future.
         ///     Default: AuthenticatedUser
         ///     Enum: Guest, AuthenticatedUser, AuthenticatedCoworker
         /// </summary>
@@ -92,7 +92,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Webinar password. If company-level "passwordEnabled" is true and "password" is null / omitted,
-        ///     the backend generates the password
+            ///     the backend generates the password
         /// </summary>
         public string password { get; set; }
 
@@ -142,5 +142,5 @@ namespace RingCentral
         ///     Indicate if the moderated Q&A enabled for webinar
         /// </summary>
         public bool? moderatedQnaEnabled { get; set; }
-    }
-}
+      }
+  }

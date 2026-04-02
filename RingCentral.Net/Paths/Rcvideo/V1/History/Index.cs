@@ -1,20 +1,23 @@
+using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
+
 namespace RingCentral.Paths.Rcvideo.V1.History
 {
     public partial class Index
     {
-        public V1.Index parent;
         public RestClient rc;
-
-        public Index(V1.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public Rcvideo.V1.Index parent;
+public Index(Rcvideo.V1.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
-            return $"{parent.Path()}/history";
+            return $"{parent.Path(false)}/history";
         }
+
     }
 }
 
@@ -22,9 +25,9 @@ namespace RingCentral.Paths.Rcvideo.V1
 {
     public partial class Index
     {
-        public History.Index History()
+        public Rcvideo.V1.History.Index History()
         {
-            return new History.Index(this);
+            return new Rcvideo.V1.History.Index(this);
         }
     }
 }

@@ -1,34 +1,33 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.TeamMessaging.V1.Notes.Publish
 {
-    public class Index
+    public partial class Index
     {
-        public Notes.Index parent;
         public RestClient rc;
-
-        public Index(Notes.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public TeamMessaging.V1.Notes.Index parent;
+public Index(TeamMessaging.V1.Notes.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/publish";
         }
-
         /// <summary>
-        ///     Publishes a note making it visible to other users.
-        ///     HTTP Method: post
-        ///     Endpoint: /team-messaging/v1/notes/{noteId}/publish
-        ///     Rate Limit Group: Medium
-        ///     App Permission: TeamMessaging
+        /// Publishes a note making it visible to other users.
+        /// HTTP Method: post
+        /// Endpoint: /team-messaging/v1/notes/{noteId}/publish
+        /// Rate Limit Group: Medium
+        /// App Permission: TeamMessaging
         /// </summary>
-        public async Task<TMNoteInfo> Post(RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Post<TMNoteInfo>(Path(), null, null, restRequestConfig);
-        }
+  public async Task<RingCentral.TMNoteInfo> Post(RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Post<RingCentral.TMNoteInfo>(this.Path(), null, null, restRequestConfig);
+  }
     }
 }
 
@@ -36,9 +35,9 @@ namespace RingCentral.Paths.TeamMessaging.V1.Notes
 {
     public partial class Index
     {
-        public Publish.Index Publish()
+        public TeamMessaging.V1.Notes.Publish.Index Publish()
         {
-            return new Publish.Index(this);
+            return new TeamMessaging.V1.Notes.Publish.Index(this);
         }
     }
 }

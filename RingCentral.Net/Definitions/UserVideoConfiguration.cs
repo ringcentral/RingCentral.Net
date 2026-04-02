@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class UserVideoConfiguration
-    {
-        /// <summary>
+  {
+      public class UserVideoConfiguration
+      {
+          /// <summary>
         ///     Video provider of the user
         ///     Enum: RCMeetings, RCVideo, None
         /// </summary>
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Enum: Paid, Free
         /// </summary>
         public string userLicenseType { get; set; }
-    }
-}
+      }
+  }

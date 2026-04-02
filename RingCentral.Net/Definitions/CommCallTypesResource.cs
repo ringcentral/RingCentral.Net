@@ -1,10 +1,10 @@
 namespace RingCentral
-{
-    public class CommCallTypesResource
-    {
-        /// <summary>
+  {
+      public class CommCallTypesResource
+      {
+          /// <summary>
         ///     Required
         /// </summary>
         public bool? queueCallsIncluded { get; set; }
-    }
-}
+      }
+  }

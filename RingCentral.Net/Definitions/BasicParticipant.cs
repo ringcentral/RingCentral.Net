@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Basic participant information
-    /// </summary>
-    public class BasicParticipant
-    {
-        /// <summary>
+/// Basic participant information
+/// </summary>
+      public class BasicParticipant
+      {
+          /// <summary>
         ///     Required
         /// </summary>
         public string id { get; set; }
@@ -26,5 +26,5 @@ namespace RingCentral
         ///     Non empty if user joined by phone
         /// </summary>
         public string callerId { get; set; }
-    }
-}
+      }
+  }

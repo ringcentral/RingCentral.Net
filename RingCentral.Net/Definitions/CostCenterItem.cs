@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CostCenterItem
-    {
-        /// <summary>
+  {
+      public class CostCenterItem
+      {
+          /// <summary>
         ///     Internal identifier of a cost center
         ///     Format: int64
         ///     Example: 981086004
@@ -32,5 +32,5 @@ namespace RingCentral
         ///     Example: 45878
         /// </summary>
         public long? parentId { get; set; }
-    }
-}
+      }
+  }

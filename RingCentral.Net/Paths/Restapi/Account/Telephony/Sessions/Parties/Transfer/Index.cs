@@ -1,36 +1,33 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Transfer
 {
-    public class Index
+    public partial class Index
     {
-        public Parties.Index parent;
         public RestClient rc;
-
-        public Index(Parties.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public Restapi.Account.Telephony.Sessions.Parties.Index parent;
+public Index(Restapi.Account.Telephony.Sessions.Parties.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/transfer";
         }
-
         /// <summary>
-        ///     Transfers an answered call to the specified call party. Applicable for a call session in "Answered" or "Hold"
-        ///     state.
-        ///     HTTP Method: post
-        ///     Endpoint:
-        ///     /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer
-        ///     Rate Limit Group: Light
-        ///     App Permission: CallControl
+        /// Transfers an answered call to the specified call party. Applicable for a call session in "Answered" or "Hold" state.
+        /// HTTP Method: post
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/sessions/{telephonySessionId}/parties/{partyId}/transfer
+        /// Rate Limit Group: Light
+        /// App Permission: CallControl
         /// </summary>
-        public async Task<CallParty> Post(TransferTarget transferTarget, RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Post<CallParty>(Path(), transferTarget, null, restRequestConfig);
-        }
+  public async Task<RingCentral.CallParty> Post(RingCentral.TransferTarget transferTarget, RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Post<RingCentral.CallParty>(this.Path(), transferTarget, null, restRequestConfig);
+  }
     }
 }
 
@@ -38,9 +35,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
 {
     public partial class Index
     {
-        public Transfer.Index Transfer()
+        public Restapi.Account.Telephony.Sessions.Parties.Transfer.Index Transfer()
         {
-            return new Transfer.Index(this);
+            return new Restapi.Account.Telephony.Sessions.Parties.Transfer.Index(this);
         }
     }
 }

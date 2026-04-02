@@ -1,11 +1,12 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Top IVR Menu extension. Mandatory for MultiLevel mode
-    /// </summary>
-    public class SiteIVRTopMenu
-    {
-        /// <summary>
+/// Top IVR Menu extension. Mandatory for MultiLevel mode
+/// 
+/// </summary>
+      public class SiteIVRTopMenu
+      {
+          /// <summary>
         ///     Internal identifier of an IVR menu extension
         /// </summary>
         public string id { get; set; }
@@ -20,5 +21,5 @@ namespace RingCentral
         ///     Full name of an IVR menu extension user
         /// </summary>
         public string name { get; set; }
-    }
-}
+      }
+  }

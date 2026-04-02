@@ -1,13 +1,13 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     The OpenID Connect configuration document as defined by the
-    ///     [OpenID Connect Discovery 1.0](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata)
-    ///     specification
-    /// </summary>
-    public class OpenIdDiscovery
-    {
-        /// <summary>
+/// The OpenID Connect configuration document as defined by the
+/// [OpenID Connect Discovery 1.0](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata) specification
+/// 
+/// </summary>
+      public class OpenIdDiscovery
+      {
+          /// <summary>
         ///     An identifier of the ID token's issuer. This value is identical to the `iss` Claim value in ID Tokens
         ///     Required
         ///     Format: uri
@@ -41,7 +41,7 @@ namespace RingCentral
 
         /// <summary>
         ///     URL of the user info endpoint as defined by
-        ///     [OpenID Connect Core 1.0](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo) specification
+            ///     [OpenID Connect Core 1.0](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo) specification
         ///     Required
         ///     Format: uri
         ///     Example: https://platform.ringcentral.com/restapi/oauth/userinfo
@@ -50,7 +50,7 @@ namespace RingCentral
 
         /// <summary>
         ///     URL of JSON Web Key Set document that contains public key(s) to be used by the Relying Party
-        ///     to validate ID Token signatures
+            ///     to validate ID Token signatures
         ///     Required
         ///     Format: uri
         ///     Example: https://platform.ringcentral.com/restapi/oauth/jwks
@@ -90,8 +90,7 @@ namespace RingCentral
         public string[] subject_types_supported { get; set; }
 
         /// <summary>
-        ///     The list of the JWS signing algorithms (`alg` values) supported by the UserInfo Endpoint  to encode the Claims in a
-        ///     JWT
+        ///     The list of the JWS signing algorithms (`alg` values) supported by the UserInfo Endpoint  to encode the Claims in a JWT
         ///     Required
         ///     Example: none
         ///     Enum: none
@@ -100,7 +99,7 @@ namespace RingCentral
 
         /// <summary>
         ///     The list of the JWS signing algorithms (`alg` values) supported by the provider for the ID Token
-        ///     to encode the Claims in a JWT
+            ///     to encode the Claims in a JWT
         ///     Required
         ///     Example: RS256,HS256
         ///     Enum: RS256, HS256
@@ -122,10 +121,18 @@ namespace RingCentral
 
         /// <summary>
         ///     Language codes supported for the user interface, represented as language tags defined in
-        ///     [RFC-5646](https://datatracker.ietf.org/doc/html/rfc5646)
+            ///     [RFC-5646](https://datatracker.ietf.org/doc/html/rfc5646)
         ///     Example: en,en-US,en-GB,fr-CA
         /// </summary>
         public string[] ui_locales_supported { get; set; }
+
+        /// <summary>
+        ///     The list of the PKCE challenge methods supported by the provider
+        ///     Required
+        ///     Example: plain,S256
+        ///     Enum: plain, S256
+        /// </summary>
+        public string[] code_challenge_methods_supported { get; set; }
 
         /// <summary>
         ///     Boolean value specifying whether the provide supports use of the `claims` parameter
@@ -141,5 +148,5 @@ namespace RingCentral
         ///     Boolean value specifying whether the provide supports use of the `request` parameter
         /// </summary>
         public bool? request_uri_parameter_supported { get; set; }
-    }
-}
+      }
+  }

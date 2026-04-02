@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Meeting host
-    /// </summary>
-    public class Host
-    {
-        /// <summary>
+/// Meeting host
+/// </summary>
+      public class Host
+      {
+          /// <summary>
         ///     Account id
         /// </summary>
         public string accountId { get; set; }
@@ -19,5 +19,5 @@ namespace RingCentral
         ///     Display name
         /// </summary>
         public string displayName { get; set; }
-    }
-}
+      }
+  }

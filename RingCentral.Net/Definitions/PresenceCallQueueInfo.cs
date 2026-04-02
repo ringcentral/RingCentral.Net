@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Call queue information
-    /// </summary>
-    public class PresenceCallQueueInfo
-    {
-        /// <summary>
+/// Call queue information
+/// </summary>
+      public class PresenceCallQueueInfo
+      {
+          /// <summary>
         ///     Internal identifier of a call queue
         /// </summary>
         public string id { get; set; }
@@ -24,5 +24,5 @@ namespace RingCentral
         ///     Flag allow members to change their queue status
         /// </summary>
         public bool? editableMemberStatus { get; set; }
-    }
-}
+      }
+  }

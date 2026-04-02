@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation listOfAvailableForAssigningRoles
-    /// </summary>
-    public class ListOfAvailableForAssigningRolesParameters
-    {
-        /// <summary>
+/// Query parameters for operation listOfAvailableForAssigningRoles
+/// </summary>
+      public class ListOfAvailableForAssigningRolesParameters
+      {
+          /// <summary>
         ///     The result set page number (1-indexed) to return
         ///     Maximum: 1000
         ///     Minimum: 1
@@ -16,8 +16,8 @@ namespace RingCentral
         public long? page { get; set; }
 
         /// <summary>
-        ///     The number of items per page. If provided value in the request
-        ///     is greater than a maximum, the maximum value is applied
+        ///     The number of items per page. If the provided value in the request
+            ///     is greater than a maximum, the maximum value is applied
         ///     Maximum: 1000
         ///     Minimum: 1
         ///     Format: int32
@@ -25,5 +25,5 @@ namespace RingCentral
         ///     Default: 100
         /// </summary>
         public long? perPage { get; set; }
-    }
-}
+      }
+  }

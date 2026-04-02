@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Information on a language set as regional
-    /// </summary>
-    public class RegionalLanguageInfo
-    {
-        /// <summary>
+/// Information on a language set as regional
+/// </summary>
+      public class RegionalLanguageInfo
+      {
+          /// <summary>
         ///     Internal identifier of a language set as regional
         /// </summary>
         public string id { get; set; }
@@ -19,5 +19,5 @@ namespace RingCentral
         ///     Official name of a language set as regional
         /// </summary>
         public string name { get; set; }
-    }
-}
+      }
+  }

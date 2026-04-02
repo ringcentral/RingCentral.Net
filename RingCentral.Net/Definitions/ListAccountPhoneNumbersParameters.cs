@@ -1,13 +1,13 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation listAccountPhoneNumbers
-    /// </summary>
-    public class ListAccountPhoneNumbersParameters
-    {
-        /// <summary>
+/// Query parameters for operation listAccountPhoneNumbers
+/// </summary>
+      public class ListAccountPhoneNumbersParameters
+      {
+          /// <summary>
         ///     Indicates a page number to retrieve. Only positive number values
-        ///     are accepted
+            ///     are accepted
         ///     Format: int32
         ///     Default: 1
         /// </summary>
@@ -28,25 +28,20 @@ namespace RingCentral
 
         /// <summary>
         ///     Usage type of a phone number
-        ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, ForwardedNumber,
-        ///     ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool, NumberStorage,
-        ///     BusinessMobileNumber, PartnerBusinessMobileNumber, IntegrationNumber
+        ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, CompanyNumber, DirectNumber, CompanyFaxNumber, FmcBusinessMobileNumber, InventoryFmcBusinessMobileNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool, BusinessMobileNumber, ELIN, PartnerBusinessMobileNumber, NumberPoolPartnerBusinessMobileNumber, NumberStorage, IntegrationNumber, InventoryMobileNumber
         /// </summary>
         public string[] usageType { get; set; }
 
         /// <summary>
         ///     Payment type of a phone number. Multiple values are supported
-        ///     Enum: External, TollFree, Local, BusinessMobileNumberProvider, ExternalNumberProvider,
-        ///     ExternalNumberProviderTollFree
+        ///     Enum: External, TollFree, Local, BusinessMobileNumberProvider, ExternalNumberProvider, ExternalNumberProviderTollFree, Mobile
         /// </summary>
         public string[] paymentType { get; set; }
 
         /// <summary>
-        ///     Status of a phone number. If the value is `Normal`, the phone
-        ///     number is ready to be used. Otherwise, it is an external number not yet
-        ///     ported to RingCentral
+        ///     Status of a phone number. Multiple values are supported
         ///     Enum: Normal, Pending, PortedIn, Temporary, Unknown
         /// </summary>
-        public string status { get; set; }
-    }
-}
+        public string[] status { get; set; }
+      }
+  }

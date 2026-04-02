@@ -1,22 +1,20 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation parsePhoneNumber
-    /// </summary>
-    public class ParsePhoneNumberParameters
-    {
-        /// <summary>
-        ///     ISO 3166 alpha2 code of the home country to be used if it is impossible to determine country from the number
-        ///     itself.
-        ///     By default, this parameter is preset to the current user's home country or brand country if the user is undefined
+/// Query parameters for operation parsePhoneNumber
+/// </summary>
+      public class ParsePhoneNumberParameters
+      {
+          /// <summary>
+        ///     Two-letter country code in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format
         ///     Example: US
         /// </summary>
         public string homeCountry { get; set; }
 
         /// <summary>
         ///     The default value is `false`. If `true`, the numbers that are
-        ///     closer to the home country are given higher priority
+            ///     closer to the home country are given higher priority
         /// </summary>
         public bool? nationalAsPriority { get; set; }
-    }
-}
+      }
+  }

@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     HardPhone model information
-    /// </summary>
-    public class AutomaticLocationUpdatesModelInfo
-    {
-        /// <summary>
+/// HardPhone model information
+/// </summary>
+      public class AutomaticLocationUpdatesModelInfo
+      {
+          /// <summary>
         ///     Device model identifier
         /// </summary>
         public string id { get; set; }
@@ -20,5 +20,5 @@ namespace RingCentral
         ///     Enum: BLA, Intercom, Paging, HELD
         /// </summary>
         public string[] features { get; set; }
-    }
-}
+      }
+  }

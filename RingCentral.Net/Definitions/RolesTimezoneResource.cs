@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class RolesTimezoneResource
-    {
-        /// <summary>
+  {
+      public class RolesTimezoneResource
+      {
+          /// <summary>
         ///     Format: uri
         /// </summary>
         public string uri { get; set; }
@@ -22,5 +22,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string bias { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AccountCountryInfoRequest
-    {
-        /// <summary>
+  {
+      public class AccountCountryInfoRequest
+      {
+          /// <summary>
         ///     Internal identifier of a country
         ///     Required
         /// </summary>
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string isoCode { get; set; }
-    }
-}
+      }
+  }

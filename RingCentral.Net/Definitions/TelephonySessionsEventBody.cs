@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Notification payload body
-    /// </summary>
-    public class TelephonySessionsEventBody
-    {
-        /// <summary>
+/// Notification payload body
+/// </summary>
+      public class TelephonySessionsEventBody
+      {
+          /// <summary>
         ///     Order number of a notification to state the chronology
         ///     Format: int64
         /// </summary>
@@ -27,8 +27,7 @@ namespace RingCentral
         public string serverId { get; set; }
 
         /// <summary>
-        ///     The call start date/time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for
-        ///     example *2016-03-10T18:07:52.534Z*
+        ///     The call start date/time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example *2016-03-10T18:07:52.534Z*
         ///     Format: date-time
         /// </summary>
         public string eventTime { get; set; }
@@ -41,5 +40,5 @@ namespace RingCentral
         ///     Call participants details
         /// </summary>
         public TelephonySessionsEventPartyInfo[] parties { get; set; }
-    }
-}
+      }
+  }

@@ -1,13 +1,13 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation listDepartmentMembers
-    /// </summary>
-    public class ListDepartmentMembersParameters
-    {
-        /// <summary>
+/// Query parameters for operation listDepartmentMembers
+/// </summary>
+      public class ListDepartmentMembersParameters
+      {
+          /// <summary>
         ///     Indicates a page number to retrieve. Only positive number values
-        ///     are accepted
+            ///     are accepted
         ///     Format: int32
         ///     Default: 1
         /// </summary>
@@ -19,5 +19,5 @@ namespace RingCentral
         ///     Default: 100
         /// </summary>
         public long? perPage { get; set; }
-    }
-}
+      }
+  }

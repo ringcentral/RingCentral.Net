@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class BatchProvisionUsersSuccessItem
-    {
-        /// <summary>
+  {
+      public class BatchProvisionUsersSuccessItem
+      {
+          /// <summary>
         ///     Indicates if the provisioning operation was successful for this item, always `true` in this model
         ///     Required
         ///     Example: true
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public BatchProvisionUsersSuccessItemExtension extension { get; set; }
-    }
-}
+      }
+  }

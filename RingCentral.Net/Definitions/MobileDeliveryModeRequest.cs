@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class MobileDeliveryModeRequest
-    {
-        /// <summary>
+  {
+      public class MobileDeliveryModeRequest
+      {
+          /// <summary>
         ///     The transport type for this subscription
         ///     Required
         ///     Enum: RC/APNS, RC/GCM
@@ -21,5 +21,5 @@ namespace RingCentral
         ///     Example: 38b062ae-85f8-4dcc-8734-04d3f7393d42
         /// </summary>
         public string registrationId { get; set; }
-    }
-}
+      }
+  }

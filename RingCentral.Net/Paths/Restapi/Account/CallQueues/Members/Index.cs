@@ -1,36 +1,35 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.CallQueues.Members
 {
-    public class Index
+    public partial class Index
     {
-        public CallQueues.Index parent;
         public RestClient rc;
-
-        public Index(CallQueues.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public Restapi.Account.CallQueues.Index parent;
+public Index(Restapi.Account.CallQueues.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/members";
         }
-
         /// <summary>
-        ///     Returns a list of call queue group members.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/members
-        ///     Rate Limit Group: Light
-        ///     App Permission: ReadAccounts
-        ///     User Permission: ReadExtensions
+        /// Returns a list of call queue group members.
+/// 
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}/members
+        /// Rate Limit Group: Light
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadExtensions
         /// </summary>
-        public async Task<CallQueueMembers> Get(ListCallQueueMembersParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Get<CallQueueMembers>(Path(), queryParams, restRequestConfig);
-        }
+  public async Task<RingCentral.CallQueueMembers> Get(RingCentral.ListCallQueueMembersParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Get<RingCentral.CallQueueMembers>(this.Path(), queryParams, restRequestConfig);
+  }
     }
 }
 
@@ -38,9 +37,9 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
 {
     public partial class Index
     {
-        public Members.Index Members()
+        public Restapi.Account.CallQueues.Members.Index Members()
         {
-            return new Members.Index(this);
+            return new Restapi.Account.CallQueues.Members.Index(this);
         }
     }
 }

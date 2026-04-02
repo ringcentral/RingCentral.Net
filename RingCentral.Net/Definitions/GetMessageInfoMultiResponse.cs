@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class GetMessageInfoMultiResponse
-    {
-        /// <summary>
+  {
+      public class GetMessageInfoMultiResponse
+      {
+          /// <summary>
         ///     Internal identifier of a resource
         ///     Required
         ///     Example: 1724099032020
@@ -21,5 +21,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public GetMessageInfoResponse body { get; set; }
-    }
-}
+      }
+  }

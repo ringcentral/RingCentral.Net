@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class TaskResultRecordErrorsInfo
-    {
-        /// <summary>
+  {
+      public class TaskResultRecordErrorsInfo
+      {
+          /// <summary>
         /// </summary>
         public string errorCode { get; set; }
 
@@ -17,5 +17,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string description { get; set; }
-    }
-}
+      }
+  }

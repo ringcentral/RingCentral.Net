@@ -1,20 +1,23 @@
+using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
+
 namespace RingCentral.Paths.Ai.Audio.V1
 {
     public partial class Index
     {
-        public Audio.Index parent;
         public RestClient rc;
-
-        public Index(Audio.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public Ai.Audio.Index parent;
+public Index(Ai.Audio.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
-            return $"{parent.Path()}/v1";
+            return $"{parent.Path(false)}/v1";
         }
+
     }
 }
 
@@ -22,9 +25,9 @@ namespace RingCentral.Paths.Ai.Audio
 {
     public partial class Index
     {
-        public V1.Index V1()
+        public Ai.Audio.V1.Index V1()
         {
-            return new V1.Index(this);
+            return new Ai.Audio.V1.Index(this);
         }
     }
 }

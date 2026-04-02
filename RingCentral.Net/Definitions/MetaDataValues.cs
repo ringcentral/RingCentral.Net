@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class MetaDataValues
-    {
-        /// <summary>
+  {
+      public class MetaDataValues
+      {
+          /// <summary>
         ///     Unique identifier
         /// </summary>
         public string id { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Value
         /// </summary>
         public string value { get; set; }
-    }
-}
+      }
+  }

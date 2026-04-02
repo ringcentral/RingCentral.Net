@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class WordTimingsUnit
-    {
-        /// <summary>
+  {
+      public class WordTimingsUnit
+      {
+          /// <summary>
         ///     Format: float
         ///     Example: 0.3
         /// </summary>
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Example: Hello
         /// </summary>
         public string word { get; set; }
-    }
-}
+      }
+  }

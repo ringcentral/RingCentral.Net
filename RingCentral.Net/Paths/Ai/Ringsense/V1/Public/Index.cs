@@ -1,20 +1,23 @@
+using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
+
 namespace RingCentral.Paths.Ai.Ringsense.V1.Public
 {
     public partial class Index
     {
-        public V1.Index parent;
         public RestClient rc;
-
-        public Index(V1.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public Ai.Ringsense.V1.Index parent;
+public Index(Ai.Ringsense.V1.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
-            return $"{parent.Path()}/public";
+            return $"{parent.Path(false)}/public";
         }
+
     }
 }
 
@@ -22,9 +25,9 @@ namespace RingCentral.Paths.Ai.Ringsense.V1
 {
     public partial class Index
     {
-        public Public.Index Public()
+        public Ai.Ringsense.V1.Public.Index Public()
         {
-            return new Public.Index(this);
+            return new Ai.Ringsense.V1.Public.Index(this);
         }
     }
 }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class InteractionInput
-    {
-        /// <summary>
+  {
+      public class InteractionInput
+      {
+          /// <summary>
         ///     Publicly facing uri
         ///     Format: uri
         /// </summary>
@@ -49,26 +49,18 @@ namespace RingCentral
         public long? speakerCount { get; set; }
 
         /// <summary>
-        ///     Optional set of speakers to be identified from the call.
-        ///     Example: speakerId1,speakerId2
-        /// </summary>
-        public string[] speakerIds { get; set; }
-
-        /// <summary>
         ///     Apply voice activity detection.
         /// </summary>
         public bool? enableVoiceActivityDetection { get; set; }
 
         /// <summary>
-        ///     Enum: All, KeyPhrases, Emotion, AbstractiveSummaryLong, AbstractiveSummaryShort, ExtractiveSummary, Topics,
-        ///     TalkToListenRatio, Energy, Pace, QuestionsAsked
+        ///     Enum: All, KeyPhrases, AbstractiveSummaryLong, AbstractiveSummaryShort, ExtractiveSummary, Topics, TalkToListenRatio, Pace, QuestionsAsked
         /// </summary>
         public string[] insights { get; set; }
 
         /// <summary>
-        ///     Indicates the words/phrases that will be used for boosting the transcript. This can help to boost accuracy for
-        ///     cases like Person Names, Company names etc.
+        ///     Indicates the words/phrases that will be used for boosting the transcript. This can help to boost accuracy for cases like Person Names, Company names etc.
         /// </summary>
         public SpeechContextPhrasesInput[] speechContexts { get; set; }
-    }
-}
+      }
+  }

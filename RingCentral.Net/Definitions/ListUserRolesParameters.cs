@@ -1,13 +1,13 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation listUserRoles
-    /// </summary>
-    public class ListUserRolesParameters
-    {
-        /// <summary>
+/// Query parameters for operation listUserRoles
+/// </summary>
+      public class ListUserRolesParameters
+      {
+          /// <summary>
         ///     Specifies whether to return custom roles or predefined roles only.
-        ///     If not specified, all roles are returned
+            ///     If not specified, all roles are returned
         /// </summary>
         public bool? custom { get; set; }
 
@@ -22,8 +22,8 @@ namespace RingCentral
         public long? page { get; set; }
 
         /// <summary>
-        ///     The number of items per page. If provided value in the request
-        ///     is greater than a maximum, the maximum value is applied
+        ///     The number of items per page. If the provided value in the request
+            ///     is greater than a maximum, the maximum value is applied
         ///     Maximum: 1000
         ///     Minimum: 1
         ///     Format: int32
@@ -31,5 +31,5 @@ namespace RingCentral
         ///     Default: 100
         /// </summary>
         public long? perPage { get; set; }
-    }
-}
+      }
+  }

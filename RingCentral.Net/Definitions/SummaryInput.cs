@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class SummaryInput
-    {
-        /// <summary>
+  {
+      public class SummaryInput
+      {
+          /// <summary>
         ///     Type of summary to be computed
         ///     Required
         ///     Example: AbstractiveShort
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public SummaryUnit[] utterances { get; set; }
-    }
-}
+      }
+  }

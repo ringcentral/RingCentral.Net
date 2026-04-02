@@ -1,10 +1,18 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation deleteMessageByFilter
-    /// </summary>
-    public class DeleteMessageByFilterParameters
-    {
+/// Query parameters for operation deleteMessageByFilter
+/// </summary>
+      public class DeleteMessageByFilterParameters
+      {
+          /// <summary>
+        ///     Filters shared messages based on the owner extension. 
+            ///     Supported if the 'SharedVoicemail' or 'CallQueueSmsRecipient' feature is enabled
+        ///     Default: Personal
+        ///     Enum: Any, Personal, Shared
+        /// </summary>
+        public string[] owner { get; set; }
+
         /// <summary>
         ///     ID(s) of a conversation to delete
         /// </summary>
@@ -12,7 +20,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Messages received earlier then the date specified will be deleted.
-        ///     The default value is current date/time
+            ///     The default value is current date/time
         ///     Format: date-time
         /// </summary>
         public string dateTo { get; set; }
@@ -23,5 +31,11 @@ namespace RingCentral
         ///     Enum: Fax, SMS, VoiceMail, Pager, Text, All
         /// </summary>
         public string type { get; set; }
-    }
-}
+
+        /// <summary>
+        ///     If the value is `true`, then the messages are purged immediately
+            ///     with all the attachments
+        /// </summary>
+        public bool? purge { get; set; }
+      }
+  }

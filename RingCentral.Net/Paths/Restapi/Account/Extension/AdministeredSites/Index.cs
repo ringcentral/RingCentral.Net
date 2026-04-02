@@ -1,51 +1,49 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.AdministeredSites
 {
-    public class Index
+    public partial class Index
     {
-        public Extension.Index parent;
         public RestClient rc;
-
-        public Index(Extension.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public Restapi.Account.Extension.Index parent;
+public Index(Restapi.Account.Extension.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/administered-sites";
         }
+        /// <summary>
+        /// Returns a list of sites administered by the current user.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/administered-sites
+        /// Rate Limit Group: Medium
+        /// App Permission: ReadAccounts
+        /// User Permission: ReadExtensions
+        /// </summary>
+  public async Task<RingCentral.BusinessSiteCollectionResource> Get(RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Get<RingCentral.BusinessSiteCollectionResource>(this.Path(), null, restRequestConfig);
+  }
 
         /// <summary>
-        ///     Returns a list of sites administered by the current user.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/administered-sites
-        ///     Rate Limit Group: Medium
-        ///     App Permission: ReadAccounts
-        ///     User Permission: ReadExtensions
+        /// Updates the sites administered by the current user.
+/// Please note: Only IDs of records are used for update.
+/// 
+        /// HTTP Method: put
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/administered-sites
+        /// Rate Limit Group: Medium
+        /// App Permission: EditAccounts
+        /// User Permission: EditAssignedRoles
         /// </summary>
-        public async Task<BusinessSiteCollectionResource> Get(RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Get<BusinessSiteCollectionResource>(Path(), null, restRequestConfig);
-        }
-
-        /// <summary>
-        ///     Updates the sites administered by the current user.
-        ///     Please note: Only IDs of records are used for update.
-        ///     HTTP Method: put
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/administered-sites
-        ///     Rate Limit Group: Medium
-        ///     App Permission: EditAccounts
-        ///     User Permission: EditAssignedRoles
-        /// </summary>
-        public async Task<BusinessSiteCollectionResource> Put(
-            BusinessSiteCollectionRequest businessSiteCollectionRequest, RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Put<BusinessSiteCollectionResource>(Path(), businessSiteCollectionRequest, null,
-                restRequestConfig);
-        }
+  public async Task<RingCentral.BusinessSiteCollectionResource> Put(RingCentral.BusinessSiteCollectionRequest businessSiteCollectionRequest, RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Put<RingCentral.BusinessSiteCollectionResource>(this.Path(), businessSiteCollectionRequest, null, restRequestConfig);
+  }
     }
 }
 
@@ -53,9 +51,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public AdministeredSites.Index AdministeredSites()
+        public Restapi.Account.Extension.AdministeredSites.Index AdministeredSites()
         {
-            return new AdministeredSites.Index(this);
+            return new Restapi.Account.Extension.AdministeredSites.Index(this);
         }
     }
 }

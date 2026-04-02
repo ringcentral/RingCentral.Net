@@ -1,14 +1,14 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     To be used to assign a number by ID
-    /// </summary>
-    public class PhoneNumberDefinitionNumberId
-    {
-        /// <summary>
-        ///     Phone number ID
+/// Assign a number by ID
+/// </summary>
+      public class PhoneNumberDefinitionNumberId
+      {
+          /// <summary>
+        ///     Phone number identifier
         ///     Required
         /// </summary>
         public string phoneNumberId { get; set; }
-    }
-}
+      }
+  }

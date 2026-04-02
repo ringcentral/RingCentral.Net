@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Result breakdown by direction
-    /// </summary>
-    public class CallsByDirectionBreakdown
-    {
-        /// <summary>
+/// Result breakdown by direction
+/// </summary>
+      public class CallsByDirectionBreakdown
+      {
+          /// <summary>
         ///     Value for Inbound direction
         ///     Required
         ///     Format: double
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Format: double
         /// </summary>
         public decimal? outbound { get; set; }
-    }
-}
+      }
+  }

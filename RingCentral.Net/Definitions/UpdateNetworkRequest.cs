@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class UpdateNetworkRequest
-    {
-        /// <summary>
+  {
+      public class UpdateNetworkRequest
+      {
+          /// <summary>
         ///     Internal identifier of a network
         ///     Example: 2874044
         /// </summary>
@@ -26,5 +26,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public PrivateIpRangeInfoRequest[] privateIpRanges { get; set; }
-    }
-}
+      }
+  }

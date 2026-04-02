@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class SwitchesList
-    {
-        /// <summary>
+  {
+      public class SwitchesList
+      {
+          /// <summary>
         ///     Switches map
         /// </summary>
         public SwitchInfo[] records { get; set; }
@@ -14,5 +14,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-    }
-}
+      }
+  }

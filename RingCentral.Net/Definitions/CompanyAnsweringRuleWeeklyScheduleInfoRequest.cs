@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Weekly schedule. If specified, ranges cannot be specified
-    /// </summary>
-    public class CompanyAnsweringRuleWeeklyScheduleInfoRequest
-    {
-        /// <summary>
+/// Weekly schedule. If specified, ranges cannot be specified
+/// </summary>
+      public class CompanyAnsweringRuleWeeklyScheduleInfoRequest
+      {
+          /// <summary>
         ///     Time interval for a particular day
         /// </summary>
         public CompanyAnsweringRuleTimeIntervalRequest[] monday { get; set; }
@@ -39,5 +39,5 @@ namespace RingCentral
         ///     Time interval for a particular day
         /// </summary>
         public CompanyAnsweringRuleTimeIntervalRequest[] sunday { get; set; }
-    }
-}
+      }
+  }

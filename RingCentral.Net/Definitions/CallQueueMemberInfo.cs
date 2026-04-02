@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CallQueueMemberInfo
-    {
-        /// <summary>
+  {
+      public class CallQueueMemberInfo
+      {
+          /// <summary>
         ///     Link to a call queue member
         ///     Format: uri
         /// </summary>
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Extension number of a call queue member
         /// </summary>
         public string extensionNumber { get; set; }
-    }
-}
+      }
+  }

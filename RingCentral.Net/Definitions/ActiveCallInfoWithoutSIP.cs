@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ActiveCallInfoWithoutSIP
-    {
-        /// <summary>
+  {
+      public class ActiveCallInfoWithoutSIP
+      {
+          /// <summary>
         ///     Internal identifier of a call
         /// </summary>
         public string id { get; set; }
@@ -66,8 +66,7 @@ namespace RingCentral
         public string telephonyStatus { get; set; }
 
         /// <summary>
-        ///     Type of call termination. Supported for calls in 'NoCall' status. If the returned termination type is
-        ///     'intermediate' it means the call is not actually ended, the connection is established on one of the devices
+        ///     Type of call termination. Supported for calls in 'NoCall' status. If the returned termination type is 'intermediate' it means the call is not actually ended, the connection is established on one of the devices
         ///     Enum: final, intermediate
         /// </summary>
         public string terminationType { get; set; }
@@ -75,5 +74,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CallInfoCQ callInfo { get; set; }
-    }
-}
+
+        /// <summary>
+        /// </summary>
+        public AppearanceInfo appearanceInfo { get; set; }
+      }
+  }

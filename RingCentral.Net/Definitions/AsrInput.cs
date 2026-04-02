@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AsrInput
-    {
-        /// <summary>
+  {
+      public class AsrInput
+      {
+          /// <summary>
         ///     Publicly facing uri
         ///     Format: uri
         /// </summary>
@@ -49,12 +49,6 @@ namespace RingCentral
         public long? speakerCount { get; set; }
 
         /// <summary>
-        ///     Optional set of speakers to be identified from the call.
-        ///     Example: speakerId1,speakerId2
-        /// </summary>
-        public string[] speakerIds { get; set; }
-
-        /// <summary>
         ///     Apply voice activity detection.
         /// </summary>
         public bool? enableVoiceActivityDetection { get; set; }
@@ -70,9 +64,8 @@ namespace RingCentral
         public bool? enableSpeakerDiarization { get; set; }
 
         /// <summary>
-        ///     Indicates the words/phrases that will be used for boosting the transcript. This can help to boost accuracy for
-        ///     cases like Person Names, Company names etc.
+        ///     Indicates the words/phrases that will be used for boosting the transcript. This can help to boost accuracy for cases like Person Names, Company names etc.
         /// </summary>
         public SpeechContextPhrasesInput[] speechContexts { get; set; }
-    }
-}
+      }
+  }

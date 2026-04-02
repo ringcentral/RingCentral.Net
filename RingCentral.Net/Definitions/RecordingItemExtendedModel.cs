@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class RecordingItemExtendedModel
-    {
-        /// <summary>
+  {
+      public class RecordingItemExtendedModel
+      {
+          /// <summary>
         ///     Internal object ID
         ///     Example: 78654321
         /// </summary>
@@ -44,7 +44,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Indicates if Host or Admin has shared a recording.
-        ///     Can be set to true only then recording status is 'Available'.
+            ///     Can be set to true only then recording status is 'Available'.
         ///     Example: true
         /// </summary>
         public bool? shared { get; set; }
@@ -57,8 +57,7 @@ namespace RingCentral
         public string sharedUriExpirationTime { get; set; }
 
         /// <summary>
-        ///     Shared URI of the recording. If a password was required to join a webinar, the URI should contain the password
-        ///     encoded
+        ///     Shared URI of the recording. If a password was required to join a webinar, the URI should contain the password encoded
         ///     Required
         ///     Format: uri
         ///     Example: https://v.ringcentral.com/w/a/recording/de7yd8ew7yfsdfjh899843rgj?pw=a1b2c3d4
@@ -68,5 +67,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public SessionRefModel session { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ListDevicesAutomaticLocationUpdates
-    {
-        /// <summary>
+  {
+      public class ListDevicesAutomaticLocationUpdates
+      {
+          /// <summary>
         ///     Link to a devices resource
         ///     Format: uri
         /// </summary>
@@ -10,7 +10,7 @@ namespace RingCentral
 
         /// <summary>
         ///     List of the user(s) devices with the current status of Emergency
-        ///     Address Auto Update Feature
+            ///     Address Auto Update Feature
         /// </summary>
         public AutomaticLocationUpdatesDeviceInfo[] records { get; set; }
 
@@ -21,5 +21,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class WebinarRefModel
-    {
-        /// <summary>
+  {
+      public class WebinarRefModel
+      {
+          /// <summary>
         ///     Internal object ID
         ///     Example: 78654321
         /// </summary>
@@ -25,5 +25,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public HostModel host { get; set; }
-    }
-}
+      }
+  }

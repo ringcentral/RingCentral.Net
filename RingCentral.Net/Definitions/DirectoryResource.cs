@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class DirectoryResource
-    {
-        /// <summary>
+  {
+      public class DirectoryResource
+      {
+          /// <summary>
         ///     Required
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public ContactResource[] records { get; set; }
-    }
-}
+      }
+  }

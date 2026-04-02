@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AuthProfileCheckResource
-    {
-        /// <summary>
+  {
+      public class AuthProfileCheckResource
+      {
+          /// <summary>
         ///     Format: uri
         /// </summary>
         public string uri { get; set; }
@@ -14,5 +14,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ActivePermissionResource details { get; set; }
-    }
-}
+      }
+  }

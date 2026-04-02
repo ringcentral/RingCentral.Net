@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AIInsights
-    {
-        /// <summary>
+  {
+      public class AIInsights
+      {
+          /// <summary>
         /// </summary>
         public TranscriptInsightUnit[] Transcript { get; set; }
 
@@ -29,5 +29,9 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CallNotesInsightUnit[] CallNotes { get; set; }
-    }
-}
+
+        /// <summary>
+        /// </summary>
+        public SentimentInsightUnit[] Sentiment { get; set; }
+      }
+  }

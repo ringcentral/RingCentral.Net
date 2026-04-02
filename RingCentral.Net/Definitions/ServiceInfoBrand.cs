@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Internal RC "brand" information
-    /// </summary>
-    public class ServiceInfoBrand
-    {
-        /// <summary>
+/// Internal RC "brand" information
+/// </summary>
+      public class ServiceInfoBrand
+      {
+          /// <summary>
         ///     RingCentral brand ID
         ///     Required
         ///     Example: 6699
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Example: Partner 1
         /// </summary>
         public string name { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ErrorEntity
-    {
-        /// <summary>
+  {
+      public class ErrorEntity
+      {
+          /// <summary>
         ///     Error code
         /// </summary>
         public string errorCode { get; set; }
@@ -21,5 +21,5 @@ namespace RingCentral
         ///     Value of invalid parameter
         /// </summary>
         public string parameterValue { get; set; }
-    }
-}
+      }
+  }

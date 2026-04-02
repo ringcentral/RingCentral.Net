@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     File information
-    /// </summary>
-    public class TMAddFile
-    {
-        /// <summary>
+/// File information
+/// </summary>
+      public class TMAddFile
+      {
+          /// <summary>
         ///     Internal identifier of a file
         ///     Required
         /// </summary>
@@ -22,5 +22,5 @@ namespace RingCentral
         ///     Name of a file
         /// </summary>
         public string name { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class SummaryTimingsUnit
-    {
-        /// <summary>
+  {
+      public class SummaryTimingsUnit
+      {
+          /// <summary>
         ///     Format: float
         ///     Example: 0.97
         /// </summary>
@@ -25,5 +25,5 @@ namespace RingCentral
         ///     Example: 3600.1
         /// </summary>
         public decimal? end { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ScimSchemaResponse
-    {
-        /// <summary>
+  {
+      public class ScimSchemaResponse
+      {
+          /// <summary>
         ///     The unique URI of the schema
         ///     Required
         /// </summary>
@@ -25,5 +25,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ScimMeta meta { get; set; }
-    }
-}
+      }
+  }

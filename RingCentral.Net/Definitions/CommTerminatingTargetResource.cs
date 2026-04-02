@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CommTerminatingTargetResource
-    {
-        /// <summary>
+  {
+      public class CommTerminatingTargetResource
+      {
+          /// <summary>
         ///     Required
         /// </summary>
         public string name { get; set; }
@@ -10,9 +10,8 @@ namespace RingCentral
         /// <summary>
         ///     Terminating target type
         ///     Required
-        ///     Enum: ExtensionTerminatingTarget, PhoneNumberTerminatingTarget, PlayAnnouncementTerminatingTarget,
-        ///     VoiceMailTerminatingTarget
+        ///     Enum: ExtensionTerminatingTarget, PhoneNumberTerminatingTarget, PlayAnnouncementTerminatingTarget, VoiceMailTerminatingTarget
         /// </summary>
         public string type { get; set; }
-    }
-}
+      }
+  }

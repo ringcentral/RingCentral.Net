@@ -1,10 +1,10 @@
 namespace RingCentral
-{
-    public class CreateAnsweringRuleRequest
-    {
-        /// <summary>
+  {
+      public class CreateAnsweringRuleRequest
+      {
+          /// <summary>
         ///     Specifies if the rule is active or inactive. The default value
-        ///     is `true`
+            ///     is `true`
         /// </summary>
         public bool? enabled { get; set; }
 
@@ -36,8 +36,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Specifies how incoming calls are forwarded
-        ///     Enum: ForwardCalls, UnconditionalForwarding, AgentQueue, TransferToExtension, TakeMessagesOnly,
-        ///     PlayAnnouncementOnly, SharedLines
+        ///     Enum: ForwardCalls, UnconditionalForwarding, AgentQueue, TransferToExtension, TakeMessagesOnly, PlayAnnouncementOnly, SharedLines
         /// </summary>
         public string callHandlingAction { get; set; }
 
@@ -67,20 +66,20 @@ namespace RingCentral
 
         /// <summary>
         ///     Greetings applied for an answering rule; only predefined greetings
-        ///     can be applied, see Dictionary Greeting List
+            ///     can be applied, see Dictionary Greeting List
         /// </summary>
         public GreetingInfo[] greetings { get; set; }
 
         /// <summary>
         ///     Call screening status. 'Off' - no call screening; 'NoCallerId'
-        ///     - if caller ID is missing, then callers are asked to say their name before
-        ///     connecting; 'UnknownCallerId' - if caller ID is not in contact list, then
-        ///     callers are asked to say their name before connecting; 'Always' - the
-        ///     callers are always asked to say their name before connecting. The default
-        ///     value is 'Off'
+            ///     - if caller ID is missing, then callers are asked to say their name before
+            ///     connecting; 'UnknownCallerId' - if caller ID is not in contact list, then
+            ///     callers are asked to say their name before connecting; 'Always' - the
+            ///     callers are always asked to say their name before connecting. The default
+            ///     value is 'Off'
         ///     Default: Off
         ///     Enum: Off, NoCallerId, UnknownCallerId, Always
         /// </summary>
         public string screening { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AdaptiveCardInfoRequestItem
-    {
-        /// <summary>
+  {
+      public class AdaptiveCardInfoRequestItem
+      {
+          /// <summary>
         ///     Enum: TextBlock, ColumnSet, Column, FactSet
         /// </summary>
         public string type { get; set; }
@@ -22,5 +22,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public AdaptiveCardColumnInfo[] columns { get; set; }
-    }
-}
+      }
+  }

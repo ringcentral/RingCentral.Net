@@ -1,10 +1,15 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Company emergency response location details
-    /// </summary>
-    public class CommonEmergencyLocationResource
-    {
+/// Company emergency response location details
+/// </summary>
+      public class CommonEmergencyLocationResource
+      {
+          /// <summary>
+        ///     Link to an emergency location resource
+        /// </summary>
+        public string uri { get; set; }
+
         /// <summary>
         ///     Internal identifier of an emergency response location
         /// </summary>
@@ -12,7 +17,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public CommonEmergencyLocationAddressInfo address { get; set; }
+        public EmergencyLocationAddressResource address { get; set; }
 
         /// <summary>
         ///     Emergency response location name
@@ -25,7 +30,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Emergency address status
-        ///     Enum: Valid, Invalid, Provisioning
+        ///     Enum: Valid, Invalid, Provisioning, Deprovisioned
         /// </summary>
         public string addressStatus { get; set; }
 
@@ -37,7 +42,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Resulting status of emergency address synchronization. Returned
-        ///     if `syncEmergencyAddress` parameter is set to `true`
+            ///     if `syncEmergencyAddress` parameter is set to `true`
         ///     Enum: Verified, Updated, Deleted, ActivationProcess, NotRequired, Unsupported, Failed
         /// </summary>
         public string syncStatus { get; set; }
@@ -49,8 +54,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Visibility of an emergency response location. If `Private`
-        ///     is set, then location is visible only for the restricted number of users,
-        ///     specified in `owners` array
+            ///     is set, then location is visible only for the restricted number of users,
+            ///     specified in `owners` array
         ///     Default: Public
         ///     Enum: Private, Public
         /// </summary>
@@ -65,5 +70,11 @@ namespace RingCentral
         ///     Address format ID
         /// </summary>
         public string addressFormatId { get; set; }
-    }
-}
+
+        /// <summary>
+        ///     Address format statuses
+        ///     Enum: Actual, Outdated, Deprecated
+        /// </summary>
+        public string addressFormatStatus { get; set; }
+      }
+  }

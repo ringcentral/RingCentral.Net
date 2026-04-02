@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class Roles
-    {
-        /// <summary>
+  {
+      public class Roles
+      {
+          /// <summary>
         ///     Link to a role
         ///     Format: uri
         /// </summary>
@@ -28,5 +28,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public bool? siteRestricted { get; set; }
-    }
-}
+      }
+  }

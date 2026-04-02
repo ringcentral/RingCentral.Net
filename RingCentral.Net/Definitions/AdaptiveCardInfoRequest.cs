@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AdaptiveCardInfoRequest
-    {
-        /// <summary>
+  {
+      public class AdaptiveCardInfoRequest
+      {
+          /// <summary>
         ///     Enum: Container
         /// </summary>
         public string type { get; set; }
@@ -10,5 +10,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public AdaptiveCardInfoRequestItem[] items { get; set; }
-    }
-}
+      }
+  }

@@ -1,9 +1,9 @@
 namespace RingCentral
-{
-    public class TransferredExtensionInfo
-    {
-        /// <summary>
+  {
+      public class TransferredExtensionInfo
+      {
+          /// <summary>
         /// </summary>
         public TransferredExtension extension { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class GetTimezoneListResponse
-    {
-        /// <summary>
+  {
+      public class GetTimezoneListResponse
+      {
+          /// <summary>
         ///     Link to the timezone list resource
         ///     Format: uri
         /// </summary>
@@ -23,5 +23,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-    }
-}
+      }
+  }

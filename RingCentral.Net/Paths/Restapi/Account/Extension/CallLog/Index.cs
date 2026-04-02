@@ -1,69 +1,69 @@
-using System;
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
 {
-    public class Index
+    public partial class Index
     {
-        public string callRecordId;
-        public Extension.Index parent;
         public RestClient rc;
-
-        public Index(Extension.Index parent, string callRecordId = null)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-            this.callRecordId = callRecordId;
-        }
-
+public Restapi.Account.Extension.Index parent;
+public string callRecordId;
+public Index(Restapi.Account.Extension.Index parent, string callRecordId = null)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+this.callRecordId = callRecordId;
+}
         public string Path(bool withParameter = true)
         {
-            if (withParameter && callRecordId != null) return $"{parent.Path()}/call-log/{callRecordId}";
+            if (withParameter && callRecordId != null)
+            {
+                return $"{parent.Path()}/call-log/{callRecordId}";
+            }
             return $"{parent.Path()}/call-log";
         }
+        /// <summary>
+        /// Returns call log records filtered by parameters specified.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-log
+        /// Rate Limit Group: Heavy
+        /// App Permission: ReadCallLog
+        /// User Permission: ReadCallLog
+        /// </summary>
+  public async Task<RingCentral.CallLogResponse> List(RingCentral.ReadUserCallLogParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Get<RingCentral.CallLogResponse>(this.Path(false), queryParams, restRequestConfig);
+  }
 
         /// <summary>
-        ///     Returns call log records filtered by parameters specified.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-log
-        ///     Rate Limit Group: Heavy
-        ///     App Permission: ReadCallLog
-        ///     User Permission: ReadCallLog
+        /// Deletes filtered call log records.
+        /// HTTP Method: delete
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-log
+        /// Rate Limit Group: Heavy
+        /// App Permission: EditCallLog
+        /// User Permission: EditCallLog
         /// </summary>
-        public async Task<CallLogResponse> List(ReadUserCallLogParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Get<CallLogResponse>(Path(false), queryParams, restRequestConfig);
-        }
+  public async Task<string> Delete(RingCentral.DeleteUserCallLogParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Delete<string>(this.Path(false), null, queryParams, restRequestConfig);
+  }
 
         /// <summary>
-        ///     Deletes filtered call log records.
-        ///     HTTP Method: delete
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-log
-        ///     Rate Limit Group: Heavy
-        ///     App Permission: EditCallLog
-        ///     User Permission: EditCallLog
+        /// Returns call log records by ID.
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
+        /// Rate Limit Group: Heavy
+        /// App Permission: ReadCallLog
+        /// User Permission: ReadCallLog
         /// </summary>
-        public async Task<string> Delete(DeleteUserCallLogParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Delete<string>(Path(false), null, queryParams, restRequestConfig);
-        }
-
-        /// <summary>
-        ///     Returns call log records by ID.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
-        ///     Rate Limit Group: Heavy
-        ///     App Permission: ReadCallLog
-        ///     User Permission: ReadCallLog
-        /// </summary>
-        public async Task<CallLogRecord> Get(ReadUserCallRecordParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
-        {
-            if (callRecordId == null) throw new ArgumentException("Parameter cannot be null", nameof(callRecordId));
-            return await rc.Get<CallLogRecord>(Path(), queryParams, restRequestConfig);
-        }
+  public async Task<RingCentral.CallLogRecord> Get(RingCentral.ReadUserCallRecordParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+  {
+if (callRecordId == null)
+    {
+        throw new System.ArgumentException("Parameter cannot be null", nameof(callRecordId));
+    }return await rc.Get<RingCentral.CallLogRecord>(this.Path(), queryParams, restRequestConfig);
+  }
     }
 }
 
@@ -71,9 +71,9 @@ namespace RingCentral.Paths.Restapi.Account.Extension
 {
     public partial class Index
     {
-        public CallLog.Index CallLog(string callRecordId = null)
+        public Restapi.Account.Extension.CallLog.Index CallLog(string callRecordId = null)
         {
-            return new CallLog.Index(this, callRecordId);
+            return new Restapi.Account.Extension.CallLog.Index(this, callRecordId);
         }
     }
 }

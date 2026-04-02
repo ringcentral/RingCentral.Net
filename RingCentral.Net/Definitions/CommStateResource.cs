@@ -1,11 +1,11 @@
 namespace RingCentral
-{
-    public class CommStateResource
-    {
-        /// <summary>
+  {
+      public class CommStateResource
+      {
+          /// <summary>
         ///     Id/Type of a state the rule is based on
         ///     Required
-        ///     Enum: after-hours, work-hours, dnd, forward-all-calls, agent
+        ///     Enum: after-hours, work-hours, dnd, forward-all-calls, agent, busy
         /// </summary>
         public string id { get; set; }
 
@@ -18,7 +18,7 @@ namespace RingCentral
         /// <summary>
         ///     Predefined name of a state-based rule (similar to the name of a state)
         ///     Required
-        ///     Enum: After Hours, Work Hours, Do not disturb, Forward all calls, Agent
+        ///     Enum: After Hours, Work Hours, Do not disturb, Forward all calls, Agent, Busy
         /// </summary>
         public string displayName { get; set; }
 
@@ -26,5 +26,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public object[] conditions { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class BulkUpdateInviteesRequest
-    {
-        /// <summary>
+  {
+      public class BulkUpdateInviteesRequest
+      {
+          /// <summary>
         /// </summary>
         public AddInviteeRequest[] addedInvitees { get; set; }
 
@@ -13,5 +13,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public RcwResourceIdModel[] deletedInvitees { get; set; }
-    }
-}
+      }
+  }

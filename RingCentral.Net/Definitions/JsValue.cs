@@ -1,6 +1,7 @@
 namespace RingCentral
-{
-    public class JsValue
-    {
-    }
-}
+  {
+      public class JsValue
+      {
+          
+      }
+  }

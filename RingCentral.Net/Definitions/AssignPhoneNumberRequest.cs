@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AssignPhoneNumberRequest
-    {
-        /// <summary>
+  {
+      public class AssignPhoneNumberRequest
+      {
+          /// <summary>
         ///     Type of a phone number
         ///     Enum: VoiceFax, VoiceOnly, FaxOnly
         /// </summary>
@@ -26,5 +26,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ContactCenterProvider contactCenterProvider { get; set; }
-    }
-}
+      }
+  }

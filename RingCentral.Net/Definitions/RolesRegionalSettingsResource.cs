@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class RolesRegionalSettingsResource
-    {
-        /// <summary>
+  {
+      public class RolesRegionalSettingsResource
+      {
+          /// <summary>
         /// </summary>
         public RolesTimezoneResource timezone { get; set; }
 
@@ -32,5 +32,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CurrencyResource currency { get; set; }
-    }
-}
+      }
+  }

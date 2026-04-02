@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class TimelineResponseRecord
-    {
-        /// <summary>
+  {
+      public class TimelineResponseRecord
+      {
+          /// <summary>
         ///     Grouping key
         ///     Required
         /// </summary>
@@ -16,5 +16,5 @@ namespace RingCentral
         ///     List of requested call data time-value points
         /// </summary>
         public TimelineResponsePoint[] points { get; set; }
-    }
-}
+      }
+  }

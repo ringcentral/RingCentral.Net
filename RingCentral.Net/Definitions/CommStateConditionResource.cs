@@ -1,12 +1,12 @@
 namespace RingCentral
-{
-    public class CommStateConditionResource
-    {
-        /// <summary>
-        ///     Ring target type
+  {
+      public class CommStateConditionResource
+      {
+          /// <summary>
+        ///     State condition type
         ///     Required
         ///     Enum: Schedule, State
         /// </summary>
         public string type { get; set; }
-    }
-}
+      }
+  }

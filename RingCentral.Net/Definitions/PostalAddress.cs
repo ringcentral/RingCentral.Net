@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Postal address/location
-    /// </summary>
-    public class PostalAddress
-    {
-        /// <summary>
+/// Postal address/location
+/// </summary>
+      public class PostalAddress
+      {
+          /// <summary>
         ///     Street address
         ///     Required
         ///     Example: 20 Davis Dr
@@ -38,11 +38,11 @@ namespace RingCentral
         public string zip { get; set; }
 
         /// <summary>
-        ///     ISO-3166-1 2-letter country code (alpha2).
-        ///     For available countries, see GET /dictionary/country
+        ///     ISO-3166-1 2-letter country code (alpha2). 
+            ///     For available countries, see GET /dictionary/country
         ///     Required
         ///     Example: US
         /// </summary>
         public string country { get; set; }
-    }
-}
+      }
+  }

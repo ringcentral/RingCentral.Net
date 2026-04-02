@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class DevicePhoneLinesInfo
-    {
-        /// <summary>
+  {
+      public class DevicePhoneLinesInfo
+      {
+          /// <summary>
         ///     Internal identifier of a phone line
         /// </summary>
         public string id { get; set; }
@@ -20,5 +20,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public DevicePhoneNumberInfo phoneInfo { get; set; }
-    }
-}
+      }
+  }

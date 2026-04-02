@@ -1,36 +1,34 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.V2.Accounts.Devices.BulkAdd
 {
-    public class Index
+    public partial class Index
     {
-        public Devices.Index parent;
         public RestClient rc;
-
-        public Index(Devices.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public Restapi.V2.Accounts.Devices.Index parent;
+public Index(Restapi.V2.Accounts.Devices.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/bulk-add";
         }
-
         /// <summary>
-        ///     Adds multiple BYOD (customer provided) devices to an account.
-        ///     HTTP Method: post
-        ///     Endpoint: /restapi/v2/accounts/{accountId}/devices/bulk-add
-        ///     Rate Limit Group: Heavy
-        ///     App Permission: EditAccounts
-        ///     User Permission: AddRemoveDevices
+        /// Adds multiple BYOD (customer provided) devices to an account.
+        /// HTTP Method: post
+        /// Endpoint: /restapi/v2/accounts/{accountId}/devices/bulk-add
+        /// Rate Limit Group: Heavy
+        /// App Permission: EditAccounts
+        /// User Permission: AddRemoveDevices
         /// </summary>
-        public async Task<BulkAddDevicesResponse> Post(BulkAddDevicesRequest bulkAddDevicesRequest,
-            RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Post<BulkAddDevicesResponse>(Path(), bulkAddDevicesRequest, null, restRequestConfig);
-        }
+  public async Task<RingCentral.BulkAddDevicesResponse> Post(RingCentral.BulkAddDevicesRequest bulkAddDevicesRequest, RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Post<RingCentral.BulkAddDevicesResponse>(this.Path(), bulkAddDevicesRequest, null, restRequestConfig);
+  }
     }
 }
 
@@ -38,9 +36,9 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.Devices
 {
     public partial class Index
     {
-        public BulkAdd.Index BulkAdd()
+        public Restapi.V2.Accounts.Devices.BulkAdd.Index BulkAdd()
         {
-            return new BulkAdd.Index(this);
+            return new Restapi.V2.Accounts.Devices.BulkAdd.Index(this);
         }
     }
 }

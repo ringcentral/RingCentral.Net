@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class DataExportTask
-    {
-        /// <summary>
+  {
+      public class DataExportTask
+      {
+          /// <summary>
         ///     Canonical URI of a task
         /// </summary>
         public string uri { get; set; }
@@ -42,5 +42,5 @@ namespace RingCentral
         ///     Data collection archives. Returned by task ID
         /// </summary>
         public ExportTaskResultInfo[] datasets { get; set; }
-    }
-}
+      }
+  }

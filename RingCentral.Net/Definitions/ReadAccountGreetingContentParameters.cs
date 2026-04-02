@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation readAccountGreetingContent
-    /// </summary>
-    public class ReadAccountGreetingContentParameters
-    {
-        /// <summary>
+/// Query parameters for operation readAccountGreetingContent
+/// </summary>
+      public class ReadAccountGreetingContentParameters
+      {
+          /// <summary>
         ///     Whether the content is expected to be displayed in the browser, or downloaded and saved locally
         ///     Enum: Inline, Attachment
         /// </summary>
@@ -15,5 +15,5 @@ namespace RingCentral
         ///     The default filename of the file to be downloaded
         /// </summary>
         public string contentDispositionFilename { get; set; }
-    }
-}
+      }
+  }

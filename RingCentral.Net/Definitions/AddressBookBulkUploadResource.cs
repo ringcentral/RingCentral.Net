@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AddressBookBulkUploadResource
-    {
-        /// <summary>
+  {
+      public class AddressBookBulkUploadResource
+      {
+          /// <summary>
         ///     Required
         /// </summary>
         public string extensionId { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public AddressBookBulkContactResource[] contacts { get; set; }
-    }
-}
+      }
+  }

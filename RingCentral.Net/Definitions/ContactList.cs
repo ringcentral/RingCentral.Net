@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ContactList
-    {
-        /// <summary>
+  {
+      public class ContactList
+      {
+          /// <summary>
         ///     Link to the list of user personal contacts
         ///     Format: uri
         /// </summary>
@@ -24,5 +24,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public UserContactsGroupsInfo groups { get; set; }
-    }
-}
+      }
+  }

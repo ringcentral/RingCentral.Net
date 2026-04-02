@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class RemoveLineResponse
-    {
-        /// <summary>
+  {
+      public class RemoveLineResponse
+      {
+          /// <summary>
         ///     Internal identifier of a source device
         ///     Required
         /// </summary>
@@ -12,8 +12,7 @@ namespace RingCentral
         ///     Device type
         ///     Required
         ///     Default: HardPhone
-        ///     Enum: HardPhone, SoftPhone, OtherPhone, MobileDevice, BLA, Paging, WebPhone, WebRTC, ZoomMobile, ZoomPhone, Room,
-        ///     Unknown
+        ///     Enum: HardPhone, SoftPhone, OtherPhone, MobileDevice, BLA, Paging, WebPhone, WebRTC, ZoomMobile, ZoomPhone, Room, Unknown
         /// </summary>
         public string type { get; set; }
 
@@ -29,5 +28,5 @@ namespace RingCentral
         ///     Example: ff:ff:ff:ff:ff:ff
         /// </summary>
         public string serial { get; set; }
-    }
-}
+      }
+  }

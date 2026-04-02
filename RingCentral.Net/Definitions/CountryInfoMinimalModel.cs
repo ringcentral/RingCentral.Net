@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CountryInfoMinimalModel
-    {
-        /// <summary>
+  {
+      public class CountryInfoMinimalModel
+      {
+          /// <summary>
         ///     Internal identifier of a country
         /// </summary>
         public string id { get; set; }
@@ -12,5 +12,5 @@ namespace RingCentral
         ///     Format: uri
         /// </summary>
         public string uri { get; set; }
-    }
-}
+      }
+  }

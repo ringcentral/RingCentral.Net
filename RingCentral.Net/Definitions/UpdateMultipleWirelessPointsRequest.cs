@@ -1,9 +1,9 @@
 namespace RingCentral
-{
-    public class UpdateMultipleWirelessPointsRequest
-    {
-        /// <summary>
+  {
+      public class UpdateMultipleWirelessPointsRequest
+      {
+          /// <summary>
         /// </summary>
         public UpdateWirelessPoint[] records { get; set; }
-    }
-}
+      }
+  }

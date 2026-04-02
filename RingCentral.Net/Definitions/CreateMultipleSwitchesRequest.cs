@@ -1,9 +1,9 @@
 namespace RingCentral
-{
-    public class CreateMultipleSwitchesRequest
-    {
-        /// <summary>
+  {
+      public class CreateMultipleSwitchesRequest
+      {
+          /// <summary>
         /// </summary>
-        public CreateSwitchInfo[] records { get; set; }
-    }
-}
+        public SwitchInfo[] records { get; set; }
+      }
+  }

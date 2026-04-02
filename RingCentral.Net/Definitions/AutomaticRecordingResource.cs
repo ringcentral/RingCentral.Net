@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AutomaticRecordingResource
-    {
-        /// <summary>
+  {
+      public class AutomaticRecordingResource
+      {
+          /// <summary>
         ///     Flag for controlling Automatic Call Recording settings
         /// </summary>
         public bool? enabled { get; set; }
@@ -39,5 +39,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? maxNumberLimit { get; set; }
-    }
-}
+      }
+  }

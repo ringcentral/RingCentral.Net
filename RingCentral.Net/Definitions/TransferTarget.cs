@@ -1,12 +1,12 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Identifier of a call party the call will be transferred to. Only **one of** these parameters: `phoneNumber`,
-    ///     `voicemail`, `extensionNumber`, `parkOrbit` or `extensionId` must be specified, otherwise an error is returned.
-    /// </summary>
-    public class TransferTarget
-    {
-        /// <summary>
+/// Identifier of a call party the call will be transferred to. Only **one of** these parameters: `phoneNumber`, `voicemail`, `extensionNumber`, `parkOrbit` or `extensionId` must be specified, otherwise an error is returned.
+/// 
+/// </summary>
+      public class TransferTarget
+      {
+          /// <summary>
         ///     Phone number
         ///     Required
         /// </summary>
@@ -35,5 +35,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string extensionId { get; set; }
-    }
-}
+      }
+  }

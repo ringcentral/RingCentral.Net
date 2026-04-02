@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CallLogExtractSyncResponse
-    {
-        /// <summary>
+  {
+      public class CallLogExtractSyncResponse
+      {
+          /// <summary>
         ///     Link to the list of call log records with sync information
         ///     Required
         ///     Format: uri
@@ -19,5 +19,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CallLogExtractSyncInfo syncInfo { get; set; }
-    }
-}
+      }
+  }

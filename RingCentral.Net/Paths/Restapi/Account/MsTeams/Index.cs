@@ -1,0 +1,33 @@
+using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
+
+namespace RingCentral.Paths.Restapi.Account.MsTeams
+{
+    public partial class Index
+    {
+        public RestClient rc;
+public Restapi.Account.Index parent;
+public Index(Restapi.Account.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
+        public string Path(bool withParameter = false)
+        {
+            return $"{parent.Path()}/ms-teams";
+        }
+
+    }
+}
+
+namespace RingCentral.Paths.Restapi.Account
+{
+    public partial class Index
+    {
+        public Restapi.Account.MsTeams.Index MsTeams()
+        {
+            return new Restapi.Account.MsTeams.Index(this);
+        }
+    }
+}

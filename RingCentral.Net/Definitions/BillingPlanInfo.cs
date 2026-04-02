@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Information on account billing plan
-    /// </summary>
-    public class BillingPlanInfo
-    {
-        /// <summary>
+/// Information on account billing plan
+/// </summary>
+      public class BillingPlanInfo
+      {
+          /// <summary>
         ///     Internal identifier of a billing plan
         /// </summary>
         public string id { get; set; }
@@ -38,5 +38,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? includedPhoneLines { get; set; }
-    }
-}
+      }
+  }

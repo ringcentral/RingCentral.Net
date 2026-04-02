@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class RegistrantBaseModel
-    {
-        /// <summary>
+  {
+      public class RegistrantBaseModel
+      {
+          /// <summary>
         ///     First (given) name
         ///     Required
         ///     Example: John
@@ -74,5 +74,5 @@ namespace RingCentral
         ///     ID of session participant (from Runtime Service - if this registrant attended the webinar)
         /// </summary>
         public string participantId { get; set; }
-    }
-}
+      }
+  }

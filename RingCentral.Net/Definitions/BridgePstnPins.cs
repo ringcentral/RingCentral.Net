@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class BridgePstnPins
-    {
-        /// <summary>
+  {
+      public class BridgePstnPins
+      {
+          /// <summary>
         ///     Host PSTN PIN. If it is not specified while creation, then a PIN will be generated.
         ///     Example: 432331057631
         /// </summary>
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Example: 013409241367
         /// </summary>
         public string participant { get; set; }
-    }
-}
+      }
+  }

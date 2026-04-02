@@ -1,13 +1,13 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation listCompanyActiveCalls
-    /// </summary>
-    public class ListCompanyActiveCallsParameters
-    {
-        /// <summary>
+/// Query parameters for operation listCompanyActiveCalls
+/// </summary>
+      public class ListCompanyActiveCallsParameters
+      {
+          /// <summary>
         ///     The direction of call records to be included in the result. If omitted, both
-        ///     inbound and outbound calls are returned. Multiple values are supported
+            ///     inbound and outbound calls are returned. Multiple values are supported
         ///     Enum: Inbound, Outbound
         /// </summary>
         public string[] direction { get; set; }
@@ -21,7 +21,7 @@ namespace RingCentral
 
         /// <summary>
         ///     The type of call records to be included in the result.
-        ///     If omitted, all call types are returned. Multiple values are supported
+            ///     If omitted, all call types are returned. Multiple values are supported
         ///     Enum: Voice, Fax
         /// </summary>
         public string[] type { get; set; }
@@ -39,19 +39,23 @@ namespace RingCentral
         public string[] conferenceType { get; set; }
 
         /// <summary>
+        ///     The number of items per page. Accepts a positive integer (1–1000) or
+            ///     the special value `"max"` which returns up to 1000 records.
+            ///     If the provided integer value exceeds 1000, the maximum value of 1000 is applied.
+        ///     Maximum: 1000
+        ///     Minimum: 1
+        ///     Format: int32
+        ///     Example: 100
+        ///     Default: 100
+        /// </summary>
+        public long? perPage { get; set; }
+
+        /// <summary>
         ///     Indicates the page number to retrieve. Only positive number values are accepted
         ///     Minimum: 1
         ///     Format: int32
         ///     Default: 1
         /// </summary>
         public long? page { get; set; }
-
-        /// <summary>
-        ///     Indicates the page size (number of items)
-        ///     Minimum: 1
-        ///     Format: int32
-        ///     Default: 100
-        /// </summary>
-        public long? perPage { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ExtensionCreationRequest
-    {
-        /// <summary>
+  {
+      public class ExtensionCreationRequest
+      {
+          /// <summary>
         /// </summary>
         public ContactInfoCreationRequest contact { get; set; }
 
@@ -35,7 +35,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Additional extension identifier, created by partner application
-        ///     and applied on client side
+            ///     and applied on client side
         /// </summary>
         public string partnerId { get; set; }
 
@@ -67,25 +67,24 @@ namespace RingCentral
 
         /// <summary>
         ///     Extension type. Please note that legacy 'Department' extension type
-        ///     corresponds to 'Call Queue' extensions in modern RingCentral product
-        ///     terminology
-        ///     Enum: User, VirtualUser, DigitalUser, FlexibleUser, Department, Announcement, Voicemail, SharedLinesGroup,
-        ///     PagingOnly, ParkLocation, Limited
+            ///     corresponds to 'Call Queue' extensions in modern RingCentral product
+            ///     terminology
+        ///     Enum: User, VirtualUser, DigitalUser, FlexibleUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, ParkLocation, Limited
         /// </summary>
         public string type { get; set; }
 
         /// <summary>
         ///     Hides extension from showing in company directory. Supported
-        ///     for extensions of 'User' type only. For unassigned extensions the value
-        ///     is set to `true` by default. For assigned extensions the value is set
-        ///     to `false` by default
+            ///     for extensions of 'User' type only. For unassigned extensions the value
+            ///     is set to `true` by default. For assigned extensions the value is set
+            ///     to `false` by default
         /// </summary>
         public bool? hidden { get; set; }
 
         /// <summary>
         ///     Extension name. For user extension types the value is a combination
-        ///     of the specified first name and last name
+            ///     of the specified first name and last name
         /// </summary>
         public string name { get; set; }
-    }
-}
+      }
+  }

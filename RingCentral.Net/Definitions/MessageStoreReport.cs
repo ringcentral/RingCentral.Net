@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class MessageStoreReport
-    {
-        /// <summary>
+  {
+      public class MessageStoreReport
+      {
+          /// <summary>
         ///     Internal identifier of a message store report task
         ///     Example: 400142200026-400142200026-bd162f24028442489385eb3f44c18354
         /// </summary>
@@ -60,5 +60,5 @@ namespace RingCentral
         ///     Enum: Fax, SMS, VoiceMail, Pager
         /// </summary>
         public string[] messageTypes { get; set; }
-    }
-}
+      }
+  }

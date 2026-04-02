@@ -1,13 +1,13 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Information on profile image
-    /// </summary>
-    public class ProfileImageInfo
-    {
-        /// <summary>
+/// Information on profile image
+/// </summary>
+      public class ProfileImageInfo
+      {
+          /// <summary>
         ///     Link to a profile image. If an image is not uploaded for an
-        ///     extension, only `uri` is returned
+            ///     extension, only `uri` is returned
         ///     Required
         ///     Format: uri
         /// </summary>
@@ -20,7 +20,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Date/time when an image was last updated, in ISO 8601 format,
-        ///     for example 2016-03-10T18:07:52.534Z
+            ///     for example 2016-03-10T18:07:52.534Z
         ///     Format: date-time
         /// </summary>
         public string lastModified { get; set; }
@@ -34,5 +34,5 @@ namespace RingCentral
         ///     List of URIs to profile images in different dimensions
         /// </summary>
         public ProfileImageInfoURI[] scales { get; set; }
-    }
-}
+      }
+  }

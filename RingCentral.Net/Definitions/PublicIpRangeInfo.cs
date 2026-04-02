@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class PublicIpRangeInfo
-    {
-        /// <summary>
+  {
+      public class PublicIpRangeInfo
+      {
+          /// <summary>
         /// </summary>
         public string id { get; set; }
 
@@ -17,5 +17,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public bool? matched { get; set; }
-    }
-}
+      }
+  }

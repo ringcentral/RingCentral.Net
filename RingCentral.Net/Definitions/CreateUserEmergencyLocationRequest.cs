@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CreateUserEmergencyLocationRequest
-    {
-        /// <summary>
+  {
+      public class CreateUserEmergencyLocationRequest
+      {
+          /// <summary>
         ///     Name of a new personal emergency response location
         /// </summary>
         public string name { get; set; }
@@ -14,16 +14,16 @@ namespace RingCentral
 
         /// <summary>
         ///     Specifies emergency address validation during the ERL creation/update.
-        ///     If set to 'true', then address validation for non-US addresses is skipped
+            ///     If set to 'true', then address validation for non-US addresses is skipped
         /// </summary>
         public bool? trusted { get; set; }
 
         /// <summary>
         /// </summary>
-        public CommonEmergencyLocationAddressInfo address { get; set; }
+        public EmergencyAddressResourceRequest address { get; set; }
 
         /// <summary>
         /// </summary>
         public SiteBasicInfo site { get; set; }
-    }
-}
+      }
+  }

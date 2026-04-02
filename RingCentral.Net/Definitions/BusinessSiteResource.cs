@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class BusinessSiteResource
-    {
-        /// <summary>
+  {
+      public class BusinessSiteResource
+      {
+          /// <summary>
         ///     Example: 872781820006
         /// </summary>
         public string id { get; set; }
@@ -16,5 +16,5 @@ namespace RingCentral
         ///     Example: 1007
         /// </summary>
         public string code { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ActionCardBody
-    {
-        /// <summary>
+  {
+      public class ActionCardBody
+      {
+          /// <summary>
         ///     Enum: Input.Text
         /// </summary>
         public string type { get; set; }
@@ -20,5 +20,5 @@ namespace RingCentral
         ///     Description of the input desired. Displayed when no text has been input
         /// </summary>
         public string placeholder { get; set; }
-    }
-}
+      }
+  }

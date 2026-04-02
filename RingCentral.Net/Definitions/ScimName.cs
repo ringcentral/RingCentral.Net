@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ScimName
-    {
-        /// <summary>
+  {
+      public class ScimName
+      {
+          /// <summary>
         ///     Required
         /// </summary>
         public string familyName { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string givenName { get; set; }
-    }
-}
+      }
+  }

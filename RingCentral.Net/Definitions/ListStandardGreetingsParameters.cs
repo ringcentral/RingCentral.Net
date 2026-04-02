@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Query parameters for operation listStandardGreetings
-    /// </summary>
-    public class ListStandardGreetingsParameters
-    {
-        /// <summary>
+/// Query parameters for operation listStandardGreetings
+/// </summary>
+      public class ListStandardGreetingsParameters
+      {
+          /// <summary>
         ///     The result set page number (1-indexed) to return
         ///     Maximum: 1000
         ///     Minimum: 1
@@ -16,8 +16,8 @@ namespace RingCentral
         public long? page { get; set; }
 
         /// <summary>
-        ///     The number of items per page. If provided value in the request
-        ///     is greater than a maximum, the maximum value is applied
+        ///     The number of items per page. If the provided value in the request
+            ///     is greater than a maximum, the maximum value is applied
         ///     Maximum: 1000
         ///     Minimum: 1
         ///     Format: int32
@@ -33,12 +33,9 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Usage type of greeting, specifying if the greeting is applied for user extension or department (call queue)
-        ///     extension
-        ///     Enum: UserExtensionAnsweringRule, ExtensionAnsweringRule, DepartmentExtensionAnsweringRule, CompanyAnsweringRule,
-        ///     CompanyAfterHoursAnsweringRule, VoicemailExtensionAnsweringRule, AnnouncementExtensionAnsweringRule,
-        ///     SharedLinesGroupAnsweringRule
+        ///     Usage type of greeting, specifying if the greeting is applied for user extension or department (call queue) extension
+        ///     Enum: UserExtensionAnsweringRule, ExtensionAnsweringRule, DepartmentExtensionAnsweringRule, CompanyAnsweringRule, CompanyAfterHoursAnsweringRule, VoicemailExtensionAnsweringRule, AnnouncementExtensionAnsweringRule, SharedLinesGroupAnsweringRule
         /// </summary>
         public string usageType { get; set; }
-    }
-}
+      }
+  }

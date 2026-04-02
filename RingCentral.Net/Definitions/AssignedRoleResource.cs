@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AssignedRoleResource
-    {
-        /// <summary>
+  {
+      public class AssignedRoleResource
+      {
+          /// <summary>
         ///     Link to an assigned role resource
         ///     Format: uri
         /// </summary>
@@ -32,5 +32,5 @@ namespace RingCentral
         ///     Site restricted flag
         /// </summary>
         public bool? siteRestricted { get; set; }
-    }
-}
+      }
+  }

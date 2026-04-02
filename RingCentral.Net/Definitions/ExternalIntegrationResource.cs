@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ExternalIntegrationResource
-    {
-        /// <summary>
+  {
+      public class ExternalIntegrationResource
+      {
+          /// <summary>
         ///     Example: 9813
         /// </summary>
         public string id { get; set; }
@@ -31,5 +31,5 @@ namespace RingCentral
         ///     Example: 1726
         /// </summary>
         public string outboundEdgeId { get; set; }
-    }
-}
+      }
+  }

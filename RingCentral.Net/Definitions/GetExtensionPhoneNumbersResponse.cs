@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class GetExtensionPhoneNumbersResponse
-    {
-        /// <summary>
+  {
+      public class GetExtensionPhoneNumbersResponse
+      {
+          /// <summary>
         ///     Link to the user phone number list resource
         ///     Format: uri
         /// </summary>
@@ -23,5 +23,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-    }
-}
+      }
+  }

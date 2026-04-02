@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Recordings page
-    /// </summary>
-    public class CloudRecordings
-    {
-        /// <summary>
+/// Recordings page
+/// </summary>
+      public class CloudRecordings
+      {
+          /// <summary>
         ///     Recordings array
         ///     Required
         /// </summary>
@@ -15,5 +15,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public BasicPaging paging { get; set; }
-    }
-}
+      }
+  }

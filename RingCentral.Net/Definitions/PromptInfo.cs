@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class PromptInfo
-    {
-        /// <summary>
+  {
+      public class PromptInfo
+      {
+          /// <summary>
         ///     Internal identifier of a prompt
         ///     Format: uri
         /// </summary>
@@ -28,5 +28,5 @@ namespace RingCentral
         ///     Name of a prompt
         /// </summary>
         public string filename { get; set; }
-    }
-}
+      }
+  }

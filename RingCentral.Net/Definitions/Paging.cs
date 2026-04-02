@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Paging information
-    /// </summary>
-    public class Paging
-    {
-        /// <summary>
+/// Paging information
+/// </summary>
+      public class Paging
+      {
+          /// <summary>
         ///     Current offset token
         ///     Required
         /// </summary>
@@ -22,5 +22,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? perPage { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AccountBusinessAddressResource
-    {
-        /// <summary>
+  {
+      public class AccountBusinessAddressResource
+      {
+          /// <summary>
         ///     Format: uri
         /// </summary>
         public string uri { get; set; }
@@ -26,5 +26,5 @@ namespace RingCentral
         ///     Custom site name
         /// </summary>
         public string mainSiteName { get; set; }
-    }
-}
+      }
+  }

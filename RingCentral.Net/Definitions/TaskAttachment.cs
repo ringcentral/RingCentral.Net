@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class TaskAttachment
-    {
-        /// <summary>
+  {
+      public class TaskAttachment
+      {
+          /// <summary>
         ///     File ID.
         /// </summary>
         public string id { get; set; }
@@ -23,5 +23,5 @@ namespace RingCentral
         ///     Format: uri
         /// </summary>
         public string contentUri { get; set; }
-    }
-}
+      }
+  }

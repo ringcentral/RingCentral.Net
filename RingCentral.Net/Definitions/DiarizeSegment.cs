@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class DiarizeSegment
-    {
-        /// <summary>
+  {
+      public class DiarizeSegment
+      {
+          /// <summary>
         ///     Required
         ///     Example: JohnDoe
         /// </summary>
@@ -27,5 +27,5 @@ namespace RingCentral
         ///     Example: 0.97
         /// </summary>
         public decimal? confidence { get; set; }
-    }
-}
+      }
+  }

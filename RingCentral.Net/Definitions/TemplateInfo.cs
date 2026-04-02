@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class TemplateInfo
-    {
-        /// <summary>
+  {
+      public class TemplateInfo
+      {
+          /// <summary>
         ///     Link to a template
         ///     Format: uri
         /// </summary>
@@ -19,7 +19,7 @@ namespace RingCentral
         public string description { get; set; }
 
         /// <summary>
-        ///     Enum: UserSettings, CallHandling, LimitedExtensions
+        ///     Enum: CallHandling, CallQueueCallHandling, CallQueueSettings, KeyTemplates, LimitedExtensions, SiteCallHandling, UserSettings
         /// </summary>
         public string type { get; set; }
 
@@ -39,5 +39,5 @@ namespace RingCentral
         ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
-    }
-}
+      }
+  }

@@ -1,36 +1,34 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.TeamMessaging.V1.Files
 {
-    public class Index
+    public partial class Index
     {
-        public V1.Index parent;
         public RestClient rc;
-
-        public Index(V1.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public TeamMessaging.V1.Index parent;
+public Index(TeamMessaging.V1.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/files";
         }
-
         /// <summary>
-        ///     Posts a file or multiple files.
-        ///     HTTP Method: post
-        ///     Endpoint: /team-messaging/v1/files
-        ///     Rate Limit Group: Heavy
-        ///     App Permission: TeamMessaging
+        /// Posts a file or multiple files.
+        /// HTTP Method: post
+        /// Endpoint: /team-messaging/v1/files
+        /// Rate Limit Group: Heavy
+        /// App Permission: TeamMessaging
         /// </summary>
-        public async Task<TMAddFile[]> Post(CreateGlipFileNewRequest createGlipFileNewRequest,
-            CreateGlipFileNewParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-        {
-            var multipartFormDataContent = Utils.GetMultipartFormDataContent(createGlipFileNewRequest);
-            return await rc.Post<TMAddFile[]>(Path(), multipartFormDataContent, queryParams, restRequestConfig);
-        }
+  public async Task<RingCentral.TMAddFile[]> Post(RingCentral.CreateGlipFileNewRequest createGlipFileNewRequest, RingCentral.CreateGlipFileNewParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+  {
+var multipartFormDataContent = Utils.GetMultipartFormDataContent(createGlipFileNewRequest);
+return await rc.Post<RingCentral.TMAddFile[]>(this.Path(), multipartFormDataContent, queryParams, restRequestConfig);
+  }
     }
 }
 
@@ -38,9 +36,9 @@ namespace RingCentral.Paths.TeamMessaging.V1
 {
     public partial class Index
     {
-        public Files.Index Files()
+        public TeamMessaging.V1.Files.Index Files()
         {
-            return new Files.Index(this);
+            return new TeamMessaging.V1.Files.Index(this);
         }
     }
 }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class OrderBy
-    {
-        /// <summary>
+  {
+      public class OrderBy
+      {
+          /// <summary>
         ///     Sorting priority index, starting from '1'. Optional if only one element in `orderBy` array is specified
         ///     Format: int32
         ///     Example: 1
@@ -24,5 +24,5 @@ namespace RingCentral
         ///     Enum: Asc, Desc
         /// </summary>
         public string direction { get; set; }
-    }
-}
+      }
+  }

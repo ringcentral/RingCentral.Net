@@ -1,12 +1,13 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Please note that the `Department` extension type corresponds to
-    ///     'Call Queue' extensions in modern RingCentral product terminology
-    /// </summary>
-    public class DepartmentInfo
-    {
-        /// <summary>
+/// Please note that the `Department` extension type corresponds to
+/// 'Call Queue' extensions in modern RingCentral product terminology
+/// 
+/// </summary>
+      public class DepartmentInfo
+      {
+          /// <summary>
         ///     Internal identifier of a department extension
         ///     Format: uri
         /// </summary>
@@ -22,5 +23,5 @@ namespace RingCentral
         ///     Short number of a department extension
         /// </summary>
         public string extensionNumber { get; set; }
-    }
-}
+      }
+  }

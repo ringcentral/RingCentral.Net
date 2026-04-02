@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class PersonalContactRequest
-    {
-        /// <summary>
+  {
+      public class PersonalContactRequest
+      {
+          /// <summary>
         ///     First name of a contact
         ///     Example: Charlie
         /// </summary>
@@ -171,5 +171,5 @@ namespace RingCentral
         ///     Source of the contact. Up to 64 symbols
         /// </summary>
         public string appInfo { get; set; }
-    }
-}
+      }
+  }

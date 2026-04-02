@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class WebhookDeliveryMode
-    {
-        /// <summary>
+  {
+      public class WebhookDeliveryMode
+      {
+          /// <summary>
         ///     The transport type for this subscription, or the channel by which an app should be notified of an event
         ///     Required
         ///     Enum: WebHook
@@ -10,8 +10,7 @@ namespace RingCentral
         public string transportType { get; set; }
 
         /// <summary>
-        ///     The URL to which notifications should be delivered. This is only applicable for the `WebHook` transport type, for
-        ///     which it is a required field.
+        ///     The URL to which notifications should be delivered. This is only applicable for the `WebHook` transport type, for which it is a required field.
         ///     Required
         ///     Format: uri
         ///     Example: https://acme.com/myservice/webhook
@@ -24,5 +23,5 @@ namespace RingCentral
         ///     Enum: false
         /// </summary>
         public bool? encryption { get; set; }
-    }
-}
+      }
+  }

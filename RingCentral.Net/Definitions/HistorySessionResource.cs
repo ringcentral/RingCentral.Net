@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class HistorySessionResource
-    {
-        /// <summary>
+  {
+      public class HistorySessionResource
+      {
+          /// <summary>
         ///     Internal object ID
         ///     Example: 78654321
         /// </summary>
@@ -81,7 +81,7 @@ namespace RingCentral
 
         /// <summary>
         ///     The time offset (positive, in seconds) indicating how much in advance
-        ///     (comparing to "scheduledStartTime") panel members should join for the pre-webinar team sync
+            ///     (comparing to "scheduledStartTime") panel members should join for the pre-webinar team sync
         ///     Format: int32
         ///     Example: 900
         /// </summary>
@@ -108,8 +108,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Session runtime status (for 'Active' Sessions only).
-        ///     Please note that 'Idle' status shouldn't be returned in the API
-        ///     (but can be delivered in an event)
+            ///     Please note that 'Idle' status shouldn't be returned in the API
+            ///     (but can be delivered in an event)
         ///     Example: Live
         ///     Enum: Idle, Practice, GoingLive, Live, Break, Debrief
         /// </summary>
@@ -157,5 +157,5 @@ namespace RingCentral
         ///     The list of livestreams configured for the session
         /// </summary>
         public SessionLivestreamMinimalModel[] livestreams { get; set; }
-    }
-}
+      }
+  }

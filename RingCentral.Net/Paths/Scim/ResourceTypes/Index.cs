@@ -1,51 +1,54 @@
-using System;
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Scim.ResourceTypes
 {
-    public class Index
+    public partial class Index
     {
-        public Scim.Index parent;
         public RestClient rc;
-        public string type;
-
-        public Index(Scim.Index parent, string type = null)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-            this.type = type;
-        }
-
+public Scim.Index parent;
+public string type;
+public Index(Scim.Index parent, string type = null)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+this.type = type;
+}
         public string Path(bool withParameter = true)
         {
-            if (withParameter && type != null) return $"{parent.Path()}/ResourceTypes/{type}";
+            if (withParameter && type != null)
+            {
+                return $"{parent.Path()}/ResourceTypes/{type}";
+            }
             return $"{parent.Path()}/ResourceTypes";
         }
+        /// <summary>
+        /// Returns the list of supported SCIM resource types
+        /// HTTP Method: get
+        /// Endpoint: /scim/{version}/ResourceTypes
+        /// Rate Limit Group: Light
+        /// App Permission: ReadAccounts
+        /// </summary>
+  public async Task<RingCentral.ScimResourceTypeSearchResponse> List(RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Get<RingCentral.ScimResourceTypeSearchResponse>(this.Path(false), null, restRequestConfig);
+  }
 
         /// <summary>
-        ///     Returns the list of supported SCIM resource types
-        ///     HTTP Method: get
-        ///     Endpoint: /scim/{version}/ResourceTypes
-        ///     Rate Limit Group: Light
-        ///     App Permission: ReadAccounts
+        /// Returns resource type by ID
+        /// HTTP Method: get
+        /// Endpoint: /scim/{version}/ResourceTypes/{type}
+        /// Rate Limit Group: Light
+        /// App Permission: ReadAccounts
         /// </summary>
-        public async Task<ScimResourceTypeSearchResponse> List(RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Get<ScimResourceTypeSearchResponse>(Path(false), null, restRequestConfig);
-        }
-
-        /// <summary>
-        ///     Returns resource type by ID
-        ///     HTTP Method: get
-        ///     Endpoint: /scim/{version}/ResourceTypes/{type}
-        ///     Rate Limit Group: Light
-        ///     App Permission: ReadAccounts
-        /// </summary>
-        public async Task<ScimResourceTypeResponse> Get(RestRequestConfig restRequestConfig = null)
-        {
-            if (type == null) throw new ArgumentException("Parameter cannot be null", nameof(type));
-            return await rc.Get<ScimResourceTypeResponse>(Path(), null, restRequestConfig);
-        }
+  public async Task<RingCentral.ScimResourceTypeResponse> Get(RestRequestConfig restRequestConfig = null)
+  {
+if (type == null)
+    {
+        throw new System.ArgumentException("Parameter cannot be null", nameof(type));
+    }return await rc.Get<RingCentral.ScimResourceTypeResponse>(this.Path(), null, restRequestConfig);
+  }
     }
 }
 
@@ -53,9 +56,9 @@ namespace RingCentral.Paths.Scim
 {
     public partial class Index
     {
-        public ResourceTypes.Index ResourceTypes(string type = null)
+        public Scim.ResourceTypes.Index ResourceTypes(string type = null)
         {
-            return new ResourceTypes.Index(this, type);
+            return new Scim.ResourceTypes.Index(this, type);
         }
     }
 }

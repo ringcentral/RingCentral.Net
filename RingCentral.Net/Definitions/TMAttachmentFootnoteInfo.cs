@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class TMAttachmentFootnoteInfo
-    {
-        /// <summary>
+  {
+      public class TMAttachmentFootnoteInfo
+      {
+          /// <summary>
         ///     Text of a footer
         /// </summary>
         public string text { get; set; }
@@ -19,5 +19,5 @@ namespace RingCentral
         ///     Example: Thu Mar 10 2016 10:07:52 GMT-0800 (Pacific Standard Time)
         /// </summary>
         public string time { get; set; }
-    }
-}
+      }
+  }

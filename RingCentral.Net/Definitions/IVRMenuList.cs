@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class IVRMenuList
-    {
-        /// <summary>
+  {
+      public class IvrMenuList
+      {
+          /// <summary>
         ///     Link to an IVR Menu list
         ///     Format: uri
         /// </summary>
@@ -11,6 +11,6 @@ namespace RingCentral
         /// <summary>
         ///     List of ivr menus
         /// </summary>
-        public IVRMenuListInfo[] records { get; set; }
-    }
-}
+        public IvrMenuListInfo[] records { get; set; }
+      }
+  }

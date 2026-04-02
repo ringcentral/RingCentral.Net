@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class SummaryUnit
-    {
-        /// <summary>
+  {
+      public class SummaryUnit
+      {
+          /// <summary>
         ///     Required
         ///     Example: JohnDoe
         /// </summary>
@@ -27,5 +27,5 @@ namespace RingCentral
         ///     Example: 5.1
         /// </summary>
         public decimal? end { get; set; }
-    }
-}
+      }
+  }

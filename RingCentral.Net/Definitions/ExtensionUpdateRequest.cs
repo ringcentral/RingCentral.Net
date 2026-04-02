@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ExtensionUpdateRequest
-    {
-        /// <summary>
+  {
+      public class ExtensionUpdateRequest
+      {
+          /// <summary>
         ///     Extension status
         ///     Enum: Enabled, Disabled, Frozen, NotActivated
         /// </summary>
@@ -34,7 +34,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Additional extension identifier, created by partner application
-        ///     and applied on client side
+            ///     and applied on client side
         /// </summary>
         public string partnerId { get; set; }
 
@@ -66,17 +66,16 @@ namespace RingCentral
 
         /// <summary>
         ///     Extension type. Please note that legacy 'Department' extension
-        ///     type corresponds to 'Call Queue' extensions in modern RingCentral
-        ///     product terminology
-        ///     Enum: User, FaxUser, FlexibleUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup,
-        ///     PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, DelegatedLinesGroup, GroupCallPickup
+            ///     type corresponds to 'Call Queue' extensions in modern RingCentral
+            ///     product terminology
+        ///     Enum: User, FaxUser, FlexibleUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, DelegatedLinesGroup, GroupCallPickup
         /// </summary>
         public string type { get; set; }
 
         /// <summary>
         ///     Extension subtype, if applicable.
-        ///     For unrecognized subtypes the `Unknown` value is returned
-        ///     Enum: VideoPro, VideoProPlus, DigitalSignage, Unknown, Emergency
+            ///     For unrecognized subtypes the `Unknown` value is returned
+        ///     Enum: VideoPro, VideoProPlus, DigitalSignageOnlyRooms, Unknown, Emergency
         /// </summary>
         public string subType { get; set; }
 
@@ -84,5 +83,5 @@ namespace RingCentral
         ///     List of non-RC internal identifiers assigned to an extension
         /// </summary>
         public ReferenceInfo[] references { get; set; }
-    }
-}
+      }
+  }

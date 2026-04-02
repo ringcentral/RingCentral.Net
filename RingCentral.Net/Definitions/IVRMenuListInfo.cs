@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class IVRMenuListInfo
-    {
-        /// <summary>
+  {
+      public class IvrMenuListInfo
+      {
+          /// <summary>
         ///     Internal identifier of an IVR Menu extension
         ///     Example: 7258440006
         /// </summary>
@@ -26,5 +26,5 @@ namespace RingCentral
         ///     Example: 1001
         /// </summary>
         public string extensionNumber { get; set; }
-    }
-}
+      }
+  }

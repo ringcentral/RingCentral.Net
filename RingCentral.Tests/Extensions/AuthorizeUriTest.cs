@@ -46,22 +46,22 @@ public class AuthorizeUriTest
             client_id = rc.clientId, // optional
             response_type = "code", // optional
             state = "hello",
-            ui_options = "hide_logo"
+            ui_locales = "en-US"
         });
         Assert.NotNull(uri2);
         Assert.Contains("state=hello", uri2);
-        Assert.Contains("ui_options=hide_logo", uri2);
+        Assert.Contains("ui_locales=en-US", uri2);
 
         var uri3 = authorizeUriExtension.BuildUri(new AuthorizeRequest
         {
             redirect_uri = redirectUri,
             state = "hello",
-            ui_options = "hide_logo"
+            ui_locales = "en-US"
         });
         Assert.NotNull(uri3);
         Assert.Contains("response_type=code", uri3);
         Assert.Contains($"client_id={rc.clientId}", uri3);
-
+        Assert.Contains("ui_locales=en-US", uri3);
         authorizeUriExtension.enabled = false;
     }
 }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class PermissionResource
-    {
-        /// <summary>
+  {
+      public class PermissionResource
+      {
+          /// <summary>
         ///     Format: uri
         /// </summary>
         public string uri { get; set; }
@@ -40,5 +40,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public PermissionIdResource[] includedPermissions { get; set; }
-    }
-}
+      }
+  }

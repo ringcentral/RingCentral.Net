@@ -1,66 +1,72 @@
-using System;
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.TeamMessaging.V1.AdaptiveCards
 {
-    public class Index
+    public partial class Index
     {
-        public string cardId;
-        public V1.Index parent;
         public RestClient rc;
-
-        public Index(V1.Index parent, string cardId = null)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-            this.cardId = cardId;
-        }
-
+public TeamMessaging.V1.Index parent;
+public string cardId;
+public Index(TeamMessaging.V1.Index parent, string cardId = null)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+this.cardId = cardId;
+}
         public string Path(bool withParameter = true)
         {
-            if (withParameter && cardId != null) return $"{parent.Path()}/adaptive-cards/{cardId}";
+            if (withParameter && cardId != null)
+            {
+                return $"{parent.Path()}/adaptive-cards/{cardId}";
+            }
             return $"{parent.Path()}/adaptive-cards";
         }
+        /// <summary>
+        /// Returns adaptive card(s) with given id(s).
+        /// HTTP Method: get
+        /// Endpoint: /team-messaging/v1/adaptive-cards/{cardId}
+        /// Rate Limit Group: Medium
+        /// App Permission: TeamMessaging
+        /// </summary>
+  public async Task<RingCentral.AdaptiveCardInfo> Get(RestRequestConfig restRequestConfig = null)
+  {
+if (cardId == null)
+    {
+        throw new System.ArgumentException("Parameter cannot be null", nameof(cardId));
+    }return await rc.Get<RingCentral.AdaptiveCardInfo>(this.Path(), null, restRequestConfig);
+  }
 
         /// <summary>
-        ///     Returns adaptive card(s) with given id(s).
-        ///     HTTP Method: get
-        ///     Endpoint: /team-messaging/v1/adaptive-cards/{cardId}
-        ///     Rate Limit Group: Medium
-        ///     App Permission: TeamMessaging
+        /// Updates an adaptive card.
+        /// HTTP Method: put
+        /// Endpoint: /team-messaging/v1/adaptive-cards/{cardId}
+        /// Rate Limit Group: Medium
+        /// App Permission: TeamMessaging
         /// </summary>
-        public async Task<AdaptiveCardInfo> Get(RestRequestConfig restRequestConfig = null)
-        {
-            if (cardId == null) throw new ArgumentException("Parameter cannot be null", nameof(cardId));
-            return await rc.Get<AdaptiveCardInfo>(Path(), null, restRequestConfig);
-        }
+  public async Task<RingCentral.AdaptiveCardShortInfo> Put(RingCentral.AdaptiveCardRequest adaptiveCardRequest, RestRequestConfig restRequestConfig = null)
+  {
+if (cardId == null)
+    {
+        throw new System.ArgumentException("Parameter cannot be null", nameof(cardId));
+    }return await rc.Put<RingCentral.AdaptiveCardShortInfo>(this.Path(), adaptiveCardRequest, null, restRequestConfig);
+  }
 
         /// <summary>
-        ///     Updates an adaptive card.
-        ///     HTTP Method: put
-        ///     Endpoint: /team-messaging/v1/adaptive-cards/{cardId}
-        ///     Rate Limit Group: Medium
-        ///     App Permission: TeamMessaging
+        /// Deletes an adaptive card by ID.
+        /// HTTP Method: delete
+        /// Endpoint: /team-messaging/v1/adaptive-cards/{cardId}
+        /// Rate Limit Group: Medium
+        /// App Permission: TeamMessaging
         /// </summary>
-        public async Task<AdaptiveCardShortInfo> Put(AdaptiveCardRequest adaptiveCardRequest,
-            RestRequestConfig restRequestConfig = null)
-        {
-            if (cardId == null) throw new ArgumentException("Parameter cannot be null", nameof(cardId));
-            return await rc.Put<AdaptiveCardShortInfo>(Path(), adaptiveCardRequest, null, restRequestConfig);
-        }
-
-        /// <summary>
-        ///     Deletes an adaptive card by ID.
-        ///     HTTP Method: delete
-        ///     Endpoint: /team-messaging/v1/adaptive-cards/{cardId}
-        ///     Rate Limit Group: Medium
-        ///     App Permission: TeamMessaging
-        /// </summary>
-        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
-        {
-            if (cardId == null) throw new ArgumentException("Parameter cannot be null", nameof(cardId));
-            return await rc.Delete<string>(Path(), null, null, restRequestConfig);
-        }
+  public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
+  {
+if (cardId == null)
+    {
+        throw new System.ArgumentException("Parameter cannot be null", nameof(cardId));
+    }return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
+  }
     }
 }
 
@@ -68,9 +74,9 @@ namespace RingCentral.Paths.TeamMessaging.V1
 {
     public partial class Index
     {
-        public AdaptiveCards.Index AdaptiveCards(string cardId = null)
+        public TeamMessaging.V1.AdaptiveCards.Index AdaptiveCards(string cardId = null)
         {
-            return new AdaptiveCards.Index(this, cardId);
+            return new TeamMessaging.V1.AdaptiveCards.Index(this, cardId);
         }
     }
 }

@@ -1,10 +1,10 @@
 namespace RingCentral
-{
-    public class DeletePhoneNumbersResponse
-    {
-        /// <summary>
+  {
+      public class DeletePhoneNumbersResponse
+      {
+          /// <summary>
         ///     Required
         /// </summary>
         public DeletePhoneNumbersResponseItem[] records { get; set; }
-    }
-}
+      }
+  }

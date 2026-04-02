@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ForwardingNumberInfoExtension
-    {
-        /// <summary>
+  {
+      public class ForwardingNumberInfoExtension
+      {
+          /// <summary>
         ///     Internal identifier of an extension
         /// </summary>
         public string id { get; set; }
@@ -16,5 +16,5 @@ namespace RingCentral
         ///     Extension name
         /// </summary>
         public string name { get; set; }
-    }
-}
+      }
+  }

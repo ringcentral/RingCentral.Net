@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class TMAttachmentInfo
-    {
-        /// <summary>
+  {
+      public class TMAttachmentInfo
+      {
+          /// <summary>
         ///     Internal identifier of an attachment
         /// </summary>
         public string id { get; set; }
@@ -12,5 +12,5 @@ namespace RingCentral
         ///     Enum: File, Note, Event, Card
         /// </summary>
         public string type { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class BridgeTargetRequest
-    {
-        /// <summary>
+  {
+      public class BridgeTargetRequest
+      {
+          /// <summary>
         ///     Internal identifier of a call session to be connected to (bridged)
         ///     Required
         /// </summary>
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string partyId { get; set; }
-    }
-}
+      }
+  }

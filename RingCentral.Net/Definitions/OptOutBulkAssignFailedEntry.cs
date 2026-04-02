@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Represents a failure of adding opt-out / opt-in. A pair of a recipient phone number and an error message
-    /// </summary>
-    public class OptOutBulkAssignFailedEntry
-    {
-        /// <summary>
+/// Represents a failure of adding opt-out / opt-in. A pair of a recipient phone number and an error message
+/// </summary>
+      public class OptOutBulkAssignFailedEntry
+      {
+          /// <summary>
         ///     A recipient phone number
         ///     Example: +15551237756
         /// </summary>
@@ -16,5 +16,5 @@ namespace RingCentral
         ///     Example: Unexpected issue on creating an opt-out from bulk-assign request
         /// </summary>
         public string errorMessage { get; set; }
-    }
-}
+      }
+  }

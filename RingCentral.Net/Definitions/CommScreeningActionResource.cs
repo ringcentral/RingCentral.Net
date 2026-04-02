@@ -1,16 +1,15 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Action information
-    /// </summary>
-    public class CommScreeningActionResource
-    {
-        /// <summary>
+/// Action information
+/// </summary>
+      public class CommScreeningActionResource
+      {
+          /// <summary>
         ///     Action type
         ///     Required
         ///     Example: ScreeningAction
-        ///     Enum: PlayConnectingMessageAction, PlayConnectingPromptAction, PlayWelcomePromptAction, ScreeningAction,
-        ///     RingGroupAction, RingAlwaysGroupAction, TerminatingAction
+        ///     Enum: PlayConnectingMessageAction, PlayConnectingPromptAction, PlayWelcomePromptAction, ScreeningAction, RingGroupAction, RingAlwaysGroupAction, TerminatingAction
         /// </summary>
         public string type { get; set; }
 
@@ -31,5 +30,5 @@ namespace RingCentral
         ///     Enum: AskToAnswer, PlayCallerNameOnly
         /// </summary>
         public string screeningResult { get; set; }
-    }
-}
+      }
+  }

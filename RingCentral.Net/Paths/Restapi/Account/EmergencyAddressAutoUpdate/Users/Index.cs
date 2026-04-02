@@ -1,37 +1,36 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Users
 {
     public partial class Index
     {
-        public EmergencyAddressAutoUpdate.Index parent;
         public RestClient rc;
-
-        public Index(EmergencyAddressAutoUpdate.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public Restapi.Account.EmergencyAddressAutoUpdate.Index parent;
+public Index(Restapi.Account.EmergencyAddressAutoUpdate.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/users";
         }
-
         /// <summary>
-        ///     Returns a list of users with their status of Automatic Location
-        ///     Updates feature.
-        ///     HTTP Method: get
-        ///     Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/users
-        ///     Rate Limit Group: Medium
-        ///     App Permission: EditAccounts
-        ///     User Permission: ConfigureEmergencyMaps
+        /// Returns a list of users with their status of Automatic Location
+/// Updates feature.
+/// 
+        /// HTTP Method: get
+        /// Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/users
+        /// Rate Limit Group: Medium
+        /// App Permission: EditAccounts
+        /// User Permission: ConfigureEmergencyMaps
         /// </summary>
-        public async Task<AutomaticLocationUpdatesUserList> Get(
-            ListAutomaticLocationUpdatesUsersParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Get<AutomaticLocationUpdatesUserList>(Path(), queryParams, restRequestConfig);
-        }
+  public async Task<RingCentral.AutomaticLocationUpdatesUserList> Get(RingCentral.ListAutomaticLocationUpdatesUsersParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Get<RingCentral.AutomaticLocationUpdatesUserList>(this.Path(), queryParams, restRequestConfig);
+  }
     }
 }
 
@@ -39,9 +38,9 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate
 {
     public partial class Index
     {
-        public Users.Index Users()
+        public Restapi.Account.EmergencyAddressAutoUpdate.Users.Index Users()
         {
-            return new Users.Index(this);
+            return new Restapi.Account.EmergencyAddressAutoUpdate.Users.Index(this);
         }
     }
 }

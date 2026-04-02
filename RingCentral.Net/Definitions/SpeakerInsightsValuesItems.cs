@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class SpeakerInsightsValuesItems
-    {
-        /// <summary>
+  {
+      public class SpeakerInsightsValuesItems
+      {
+          /// <summary>
         ///     Required
         ///     Example: JohnDoe
         /// </summary>
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Example: 20:80
         /// </summary>
         public string value { get; set; }
-    }
-}
+      }
+  }

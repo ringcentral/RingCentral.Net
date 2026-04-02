@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Specifies whether to take a voicemail and who should do it
-    /// </summary>
-    public class VoicemailInfo
-    {
-        /// <summary>
+/// Specifies whether to take a voicemail and who should do it
+/// </summary>
+      public class VoicemailInfo
+      {
+          /// <summary>
         ///     If `true` then voicemails are allowed to be received
         /// </summary>
         public bool? enabled { get; set; }
@@ -13,5 +13,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public RecipientInfo recipient { get; set; }
-    }
-}
+      }
+  }

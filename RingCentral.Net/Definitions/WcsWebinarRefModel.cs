@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class WcsWebinarRefModel
-    {
-        /// <summary>
+  {
+      public class WcsWebinarRefModel
+      {
+          /// <summary>
         ///     Internal object ID
         ///     Example: 78654321
         /// </summary>
@@ -24,5 +24,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public RcwLinkedUserModel host { get; set; }
-    }
-}
+      }
+  }

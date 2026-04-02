@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class TimelineRequest
-    {
-        /// <summary>
+  {
+      public class TimelineRequest
+      {
+          /// <summary>
         ///     Required
         /// </summary>
         public Grouping grouping { get; set; }
@@ -20,5 +20,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public TimelineResponseOptions responseOptions { get; set; }
-    }
-}
+      }
+  }

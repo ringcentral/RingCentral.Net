@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class RegistrantBaseModelWithQuestionnaire
-    {
-        /// <summary>
+  {
+      public class RegistrantBaseModelWithQuestionnaire
+      {
+          /// <summary>
         ///     First (given) name
         ///     Required
         ///     Example: John
@@ -79,5 +79,5 @@ namespace RingCentral
         ///     Answers on custom registration questions
         /// </summary>
         public RegAnswerModel[] questionnaire { get; set; }
-    }
-}
+      }
+  }

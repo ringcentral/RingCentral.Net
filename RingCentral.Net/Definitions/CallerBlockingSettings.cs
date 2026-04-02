@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Returns the lists of blocked and allowed phone numbers
-    /// </summary>
-    public class CallerBlockingSettings
-    {
-        /// <summary>
+/// Returns the lists of blocked and allowed phone numbers
+/// </summary>
+      public class CallerBlockingSettings
+      {
+          /// <summary>
         ///     Call blocking options: either specific or all calls and faxes
         ///     Enum: Specific, All
         /// </summary>
@@ -27,5 +27,5 @@ namespace RingCentral
         ///     List of greetings played for blocked callers
         /// </summary>
         public BlockedCallerGreetingInfo[] greetings { get; set; }
-    }
-}
+      }
+  }

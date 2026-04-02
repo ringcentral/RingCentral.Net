@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Sender of a pager message.
-    /// </summary>
-    public class PagerCallerInfoRequest
-    {
-        /// <summary>
+/// Sender of a pager message.
+/// </summary>
+      public class PagerCallerInfoRequest
+      {
+          /// <summary>
         ///     Extension identifier
         ///     Example: 123456789
         /// </summary>
@@ -16,5 +16,5 @@ namespace RingCentral
         ///     Example: 105
         /// </summary>
         public string extensionNumber { get; set; }
-    }
-}
+      }
+  }

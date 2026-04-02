@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CallerIdDeviceInfo
-    {
-        /// <summary>
+  {
+      public class CallerIdDeviceInfo
+      {
+          /// <summary>
         ///     Internal identifier of a device
         /// </summary>
         public string id { get; set; }
@@ -17,5 +17,5 @@ namespace RingCentral
         ///     Name of a device
         /// </summary>
         public string name { get; set; }
-    }
-}
+      }
+  }

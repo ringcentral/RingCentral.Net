@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     The rejected recipient details
-    /// </summary>
-    public class RejectedRecipientResponseResource
-    {
-        /// <summary>
+/// The rejected recipient details
+/// </summary>
+      public class RejectedRecipientResponseResource
+      {
+          /// <summary>
         ///     The index of the messages list in the send batch request where the invalid recipient was found
         ///     Format: int64
         ///     Example: 1
@@ -29,5 +29,5 @@ namespace RingCentral
         ///     Example: The recipient is invalid
         /// </summary>
         public string description { get; set; }
-    }
-}
+      }
+  }

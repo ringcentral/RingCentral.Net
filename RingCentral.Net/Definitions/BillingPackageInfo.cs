@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class BillingPackageInfo
-    {
-        /// <summary>
+  {
+      public class BillingPackageInfo
+      {
+          /// <summary>
         ///     Billing package version
         /// </summary>
         public string version { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Billing package identifier
         /// </summary>
         public string id { get; set; }
-    }
-}
+      }
+  }

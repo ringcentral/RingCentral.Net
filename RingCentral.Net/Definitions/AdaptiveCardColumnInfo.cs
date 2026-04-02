@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AdaptiveCardColumnInfo
-    {
-        /// <summary>
+  {
+      public class AdaptiveCardColumnInfo
+      {
+          /// <summary>
         /// </summary>
         public string type { get; set; }
 
@@ -13,5 +13,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public AdaptiveCardColumnItemInfo[] items { get; set; }
-    }
-}
+      }
+  }

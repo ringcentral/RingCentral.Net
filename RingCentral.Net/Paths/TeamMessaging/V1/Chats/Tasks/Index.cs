@@ -1,48 +1,45 @@
 using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
 namespace RingCentral.Paths.TeamMessaging.V1.Chats.Tasks
 {
-    public class Index
+    public partial class Index
     {
-        public Chats.Index parent;
         public RestClient rc;
-
-        public Index(Chats.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public TeamMessaging.V1.Chats.Index parent;
+public Index(TeamMessaging.V1.Chats.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/tasks";
         }
+        /// <summary>
+        /// Returns the list of tasks of the specified chat.
+        /// HTTP Method: get
+        /// Endpoint: /team-messaging/v1/chats/{chatId}/tasks
+        /// Rate Limit Group: Heavy
+        /// App Permission: TeamMessaging
+        /// </summary>
+  public async Task<RingCentral.TMTaskList> Get(RingCentral.ListChatTasksNewParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Get<RingCentral.TMTaskList>(this.Path(), queryParams, restRequestConfig);
+  }
 
         /// <summary>
-        ///     Returns the list of tasks of the specified chat.
-        ///     HTTP Method: get
-        ///     Endpoint: /team-messaging/v1/chats/{chatId}/tasks
-        ///     Rate Limit Group: Heavy
-        ///     App Permission: TeamMessaging
+        /// Creates a task in the specified chat.
+        /// HTTP Method: post
+        /// Endpoint: /team-messaging/v1/chats/{chatId}/tasks
+        /// Rate Limit Group: Medium
+        /// App Permission: TeamMessaging
         /// </summary>
-        public async Task<TMTaskList> Get(ListChatTasksNewParameters queryParams = null,
-            RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Get<TMTaskList>(Path(), queryParams, restRequestConfig);
-        }
-
-        /// <summary>
-        ///     Creates a task in the specified chat.
-        ///     HTTP Method: post
-        ///     Endpoint: /team-messaging/v1/chats/{chatId}/tasks
-        ///     Rate Limit Group: Medium
-        ///     App Permission: TeamMessaging
-        /// </summary>
-        public async Task<TMTaskInfo> Post(TMCreateTaskRequest tMCreateTaskRequest,
-            RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Post<TMTaskInfo>(Path(), tMCreateTaskRequest, null, restRequestConfig);
-        }
+  public async Task<RingCentral.TMTaskInfo> Post(RingCentral.TMCreateTaskRequest tMCreateTaskRequest, RestRequestConfig restRequestConfig = null)
+  {
+return await rc.Post<RingCentral.TMTaskInfo>(this.Path(), tMCreateTaskRequest, null, restRequestConfig);
+  }
     }
 }
 
@@ -50,9 +47,9 @@ namespace RingCentral.Paths.TeamMessaging.V1.Chats
 {
     public partial class Index
     {
-        public Tasks.Index Tasks()
+        public TeamMessaging.V1.Chats.Tasks.Index Tasks()
         {
-            return new Tasks.Index(this);
+            return new TeamMessaging.V1.Chats.Tasks.Index(this);
         }
     }
 }

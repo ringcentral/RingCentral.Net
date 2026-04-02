@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ForwardingNumberInfoRulesCreateRuleRequest
-    {
-        /// <summary>
+  {
+      public class ForwardingNumberInfoRulesCreateRuleRequest
+      {
+          /// <summary>
         ///     Internal identifier of a forwarding number
         /// </summary>
         public string id { get; set; }
@@ -22,5 +22,5 @@ namespace RingCentral
         ///     Forwarding/Call flip number title
         /// </summary>
         public string label { get; set; }
-    }
-}
+      }
+  }

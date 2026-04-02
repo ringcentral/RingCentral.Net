@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ScimUserSearchResponse
-    {
-        /// <summary>
+  {
+      public class ScimUserSearchResponse
+      {
+          /// <summary>
         ///     User list
         /// </summary>
         public ScimUserShortInfo[] Resources { get; set; }
@@ -26,5 +26,5 @@ namespace RingCentral
         ///     Format: int64
         /// </summary>
         public long? totalResults { get; set; }
-    }
-}
+      }
+  }

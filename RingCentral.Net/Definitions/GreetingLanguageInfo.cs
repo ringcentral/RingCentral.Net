@@ -1,11 +1,12 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Information on language used for telephony greetings
-    /// </summary>
-    public class GreetingLanguageInfo
-    {
-        /// <summary>
+/// Information on language used for telephony greetings
+/// 
+/// </summary>
+      public class GreetingLanguageInfo
+      {
+          /// <summary>
         ///     Internal identifier of a greeting language
         /// </summary>
         public string id { get; set; }
@@ -19,5 +20,5 @@ namespace RingCentral
         ///     Official name of a greeting language
         /// </summary>
         public string name { get; set; }
-    }
-}
+      }
+  }

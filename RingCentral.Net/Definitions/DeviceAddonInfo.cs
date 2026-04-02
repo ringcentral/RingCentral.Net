@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class DeviceAddonInfo
-    {
-        /// <summary>
+  {
+      public class DeviceAddonInfo
+      {
+          /// <summary>
         /// </summary>
         public string id { get; set; }
 
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? count { get; set; }
-    }
-}
+      }
+  }

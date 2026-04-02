@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Information on extension, for which this presence data is returned
-    /// </summary>
-    public class GetPresenceExtensionInfo
-    {
-        /// <summary>
+/// Information on extension, for which this presence data is returned
+/// </summary>
+      public class GetPresenceExtensionInfo
+      {
+          /// <summary>
         ///     Internal identifier of an extension
         ///     Format: int64
         /// </summary>
@@ -21,5 +21,5 @@ namespace RingCentral
         ///     Extension number (usually 3 or 4 digits)
         /// </summary>
         public string extensionNumber { get; set; }
-    }
-}
+      }
+  }

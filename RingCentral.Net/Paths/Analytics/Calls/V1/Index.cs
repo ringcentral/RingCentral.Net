@@ -1,20 +1,23 @@
+using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
+
 namespace RingCentral.Paths.Analytics.Calls.V1
 {
     public partial class Index
     {
-        public Calls.Index parent;
         public RestClient rc;
-
-        public Index(Calls.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public Analytics.Calls.Index parent;
+public Index(Analytics.Calls.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
-            return $"{parent.Path()}/v1";
+            return $"{parent.Path(false)}/v1";
         }
+
     }
 }
 
@@ -22,9 +25,9 @@ namespace RingCentral.Paths.Analytics.Calls
 {
     public partial class Index
     {
-        public V1.Index V1()
+        public Analytics.Calls.V1.Index V1()
         {
-            return new V1.Index(this);
+            return new Analytics.Calls.V1.Index(this);
         }
     }
 }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CustomFieldModel
-    {
-        /// <summary>
+  {
+      public class CustomFieldModel
+      {
+          /// <summary>
         ///     Custom field identifier
         /// </summary>
         public string id { get; set; }
@@ -17,5 +17,5 @@ namespace RingCentral
         ///     Custom field display name
         /// </summary>
         public string displayName { get; set; }
-    }
-}
+      }
+  }

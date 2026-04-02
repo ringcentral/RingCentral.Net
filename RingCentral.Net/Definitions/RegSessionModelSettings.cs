@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class RegSessionModelSettings
-    {
-        /// <summary>
+  {
+      public class RegSessionModelSettings
+      {
+          /// <summary>
         ///     The maximum number of registrants which forces closing the registration (0 means "off").
         ///     Format: int32
         /// </summary>
@@ -30,7 +30,7 @@ namespace RingCentral
         public bool? workEmailRequired { get; set; }
 
         /// <summary>
-        ///     Indicates that recording will be shown after the webinar and in emails.
+        ///     Indicates that recording will be included in emails.
         /// </summary>
         public bool? viewRecording { get; set; }
 
@@ -56,5 +56,5 @@ namespace RingCentral
         ///     Format: date-time
         /// </summary>
         public string postWebinarRegistrationClosingTime { get; set; }
-    }
-}
+      }
+  }

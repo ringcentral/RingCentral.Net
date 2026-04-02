@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Weekly schedule
-    /// </summary>
-    public class WeeklyScheduleInfo
-    {
-        /// <summary>
+/// Weekly schedule
+/// </summary>
+      public class WeeklyScheduleInfo
+      {
+          /// <summary>
         ///     Time intervals for a particular day
         /// </summary>
         public TimeInterval[] monday { get; set; }
@@ -39,5 +39,5 @@ namespace RingCentral
         ///     Time intervals for a particular day
         /// </summary>
         public TimeInterval[] sunday { get; set; }
-    }
-}
+      }
+  }

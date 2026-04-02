@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class DetailedExtensionPresenceEvent
-    {
-        /// <summary>
+  {
+      public class DetailedExtensionPresenceEvent
+      {
+          /// <summary>
         ///     Universally unique identifier of a notification
         /// </summary>
         public string uuid { get; set; }
@@ -13,8 +13,7 @@ namespace RingCentral
         public string @event { get; set; }
 
         /// <summary>
-        ///     Timestamp when this notification was sent in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including
-        ///     timezone, for example *2016-03-10T18:07:52.534Z*
+        ///     Timestamp when this notification was sent in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format including timezone, for example *2016-03-10T18:07:52.534Z*
         ///     Format: date-time
         /// </summary>
         public string timestamp { get; set; }
@@ -27,5 +26,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public DetailedExtensionPresenceEventBody body { get; set; }
-    }
-}
+      }
+  }

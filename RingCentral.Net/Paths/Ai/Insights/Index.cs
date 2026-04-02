@@ -1,20 +1,23 @@
+using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
+
 namespace RingCentral.Paths.Ai.Insights
 {
     public partial class Index
     {
-        public Ai.Index parent;
         public RestClient rc;
-
-        public Index(Ai.Index parent)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-        }
-
+public Ai.Index parent;
+public Index(Ai.Index parent)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+}
         public string Path(bool withParameter = false)
         {
-            return $"{parent.Path()}/insights";
+            return $"{parent.Path(false)}/insights";
         }
+
     }
 }
 
@@ -22,9 +25,9 @@ namespace RingCentral.Paths.Ai
 {
     public partial class Index
     {
-        public Insights.Index Insights()
+        public Ai.Insights.Index Insights()
         {
-            return new Insights.Index(this);
+            return new Ai.Insights.Index(this);
         }
     }
 }

@@ -1,16 +1,15 @@
 namespace RingCentral
-{
-    public class SmsCampaignInfo
-    {
-        /// <summary>
+  {
+      public class SmsCampaignInfo
+      {
+          /// <summary>
         ///     Identifier of the associated TCR campaign
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
         ///     Status of the associated TCR campaign
-        ///     Enum: Created, Submitted, Confirmed, SubmitFailed, UpdateRequested, DeleteRequested, CampaignSuspended,
-        ///     CampaignExpired, Draft, PreVetFailed, Unconfirmed
+        ///     Enum: Created, Submitted, Confirmed, SubmitFailed, UpdateRequested, DeleteRequested, CampaignSuspended, CampaignExpired, Draft, PreVetFailed, Unconfirmed
         /// </summary>
         public string status { get; set; }
 
@@ -27,5 +26,15 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ApiError[] errors { get; set; }
-    }
-}
+
+        /// <summary>
+        /// </summary>
+        public ConsentSettings consentSettings { get; set; }
+
+        /// <summary>
+        ///     Coverage type.
+        ///     Enum: PhoneNumber, Account, Conversational, Informational, Promotional
+        /// </summary>
+        public string coverageType { get; set; }
+      }
+  }

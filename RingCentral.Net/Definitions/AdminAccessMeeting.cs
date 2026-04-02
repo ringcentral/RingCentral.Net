@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Meeting information
-    /// </summary>
-    public class AdminAccessMeeting
-    {
-        /// <summary>
+/// Meeting information
+/// </summary>
+      public class AdminAccessMeeting
+      {
+          /// <summary>
         ///     Meeting id
         ///     Required
         /// </summary>
@@ -59,5 +59,5 @@ namespace RingCentral
         ///     Public chat txt file for the meeting
         /// </summary>
         public string chatContentUri { get; set; }
-    }
-}
+      }
+  }

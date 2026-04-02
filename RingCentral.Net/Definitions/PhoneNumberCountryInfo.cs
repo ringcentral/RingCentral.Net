@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Brief information on a phone number country
-    /// </summary>
-    public class PhoneNumberCountryInfo
-    {
-        /// <summary>
+/// Brief information on a phone number country
+/// </summary>
+      public class PhoneNumberCountryInfo
+      {
+          /// <summary>
         ///     Internal identifier of a home country
         /// </summary>
         public string id { get; set; }
@@ -20,5 +20,5 @@ namespace RingCentral
         ///     Official name of a home country
         /// </summary>
         public string name { get; set; }
-    }
-}
+      }
+  }

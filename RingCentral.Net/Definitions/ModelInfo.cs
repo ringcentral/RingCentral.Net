@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     HardPhone model information
-    /// </summary>
-    public class ModelInfo
-    {
-        /// <summary>
+/// HardPhone model information
+/// </summary>
+      public class ModelInfo
+      {
+          /// <summary>
         ///     Internal identifier of a HardPhone device model
         /// </summary>
         public string id { get; set; }
@@ -35,5 +35,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? lineCount { get; set; }
-    }
-}
+      }
+  }

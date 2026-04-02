@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class TMMessageAttachmentInfo
-    {
-        /// <summary>
+  {
+      public class TMMessageAttachmentInfo
+      {
+          /// <summary>
         ///     Internal identifier of an attachment
         /// </summary>
         public string id { get; set; }
@@ -97,8 +97,7 @@ namespace RingCentral
         public EventRecurrenceInfo recurrence { get; set; }
 
         /// <summary>
-        ///     Color of Event title, including its presentation in Calendar; or the color of the side border of an interactive
-        ///     message of a Card
+        ///     Color of Event title, including its presentation in Calendar; or the color of the side border of an interactive message of a Card
         ///     Default: Black
         ///     Enum: Black, Red, Orange, Yellow, Green, Blue, Purple, Magenta
         /// </summary>
@@ -113,5 +112,5 @@ namespace RingCentral
         ///     Event details
         /// </summary>
         public string description { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AsrApiResponseResponse
-    {
-        /// <summary>
+  {
+      public class AsrApiResponseResponse
+      {
+          /// <summary>
         ///     The number of speakers detected. Field is set only when enableSpeakerDiarization is true.
         ///     Format: int32
         ///     Example: 2
@@ -28,5 +28,5 @@ namespace RingCentral
         ///     The entire transcript with/without punctuations according to the input.
         /// </summary>
         public string transcript { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class FixedOrderAgentsExtensionInfo
-    {
-        /// <summary>
+  {
+      public class FixedOrderAgentsExtensionInfo
+      {
+          /// <summary>
         ///     Internal identifier of an extension
         /// </summary>
         public string id { get; set; }
@@ -22,5 +22,5 @@ namespace RingCentral
         ///     Name of agent extension
         /// </summary>
         public string name { get; set; }
-    }
-}
+      }
+  }

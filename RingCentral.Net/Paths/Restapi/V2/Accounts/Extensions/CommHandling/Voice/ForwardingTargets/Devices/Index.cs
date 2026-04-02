@@ -1,23 +1,29 @@
+using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
+
 namespace RingCentral.Paths.Restapi.V2.Accounts.Extensions.CommHandling.Voice.ForwardingTargets.Devices
 {
     public partial class Index
     {
-        public string deviceId;
-        public ForwardingTargets.Index parent;
         public RestClient rc;
-
-        public Index(ForwardingTargets.Index parent, string deviceId = null)
-        {
-            this.parent = parent;
-            rc = parent.rc;
-            this.deviceId = deviceId;
-        }
-
+public Restapi.V2.Accounts.Extensions.CommHandling.Voice.ForwardingTargets.Index parent;
+public string deviceId;
+public Index(Restapi.V2.Accounts.Extensions.CommHandling.Voice.ForwardingTargets.Index parent, string deviceId = null)
+      {
+this.parent = parent;
+this.rc = parent.rc;
+this.deviceId = deviceId;
+}
         public string Path(bool withParameter = true)
         {
-            if (withParameter && deviceId != null) return $"{parent.Path()}/devices/{deviceId}";
+            if (withParameter && deviceId != null)
+            {
+                return $"{parent.Path()}/devices/{deviceId}";
+            }
             return $"{parent.Path()}/devices";
         }
+
     }
 }
 
@@ -25,9 +31,9 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.Extensions.CommHandling.Voice.Fo
 {
     public partial class Index
     {
-        public Devices.Index Devices(string deviceId = null)
+        public Restapi.V2.Accounts.Extensions.CommHandling.Voice.ForwardingTargets.Devices.Index Devices(string deviceId = null)
         {
-            return new Devices.Index(this, deviceId);
+            return new Restapi.V2.Accounts.Extensions.CommHandling.Voice.ForwardingTargets.Devices.Index(this, deviceId);
         }
     }
 }

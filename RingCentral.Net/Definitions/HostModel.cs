@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     The internal IDs of RC-authenticated users.
-    /// </summary>
-    public class HostModel
-    {
-        /// <summary>
+/// The internal IDs of RC-authenticated users.
+/// </summary>
+      public class HostModel
+      {
+          /// <summary>
         ///     First (given) name
         ///     Example: John
         /// </summary>
@@ -20,5 +20,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public RcwDomainUserModel linkedUser { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CallPartyReply
-    {
-        /// <summary>
+  {
+      public class CallPartyReply
+      {
+          /// <summary>
         ///     Text to reply
         /// </summary>
         public string replyWithText { get; set; }
@@ -10,5 +10,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ReplyWithPattern replyWithPattern { get; set; }
-    }
-}
+      }
+  }

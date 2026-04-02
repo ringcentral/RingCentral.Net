@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ExtensionPresenceEventBody
-    {
-        /// <summary>
+  {
+      public class ExtensionPresenceEventBody
+      {
+          /// <summary>
         ///     Internal identifier of an extension. Optional parameter
         ///     Default: ~
         /// </summary>
@@ -13,6 +13,12 @@ namespace RingCentral
         ///     Enum: NoCall, CallConnected, Ringing, OnHold, ParkedCall
         /// </summary>
         public string telephonyStatus { get; set; }
+
+        /// <summary>
+        ///     Telephony status of the extension aggregated across all telephony status sources.
+        ///     Enum: NoCall, CallConnected, Ringing, OnHold, ParkedCall
+        /// </summary>
+        public string aggregatedTelephonyStatus { get; set; }
 
         /// <summary>
         ///     Order number of a notification to state the chronology
@@ -34,15 +40,15 @@ namespace RingCentral
 
         /// <summary>
         ///     Do Not Disturb status. Not applicable for User extensions
-        ///     if the new communication handling service is activated on account
+            ///     if the new communication handling service is activated on account
         ///     Enum: TakeAllCalls, DoNotAcceptDepartmentCalls, TakeDepartmentCallsOnly, DoNotAcceptAnyCalls, Unknown
         /// </summary>
         public string dndStatus { get; set; }
 
         /// <summary>
         ///     Do Not Disturb status of a User extension. Connected to the DND State type.
-        ///     Applicable for User extensions if the new communication handling service is
-        ///     activated on account.
+            ///     Applicable for User extensions if the new communication handling service is
+            ///     activated on account.
         ///     Enum: TakeAllCalls, DoNotAcceptAnyCalls, Unknown
         /// </summary>
         public string dndStatusPersonal { get; set; }
@@ -54,14 +60,14 @@ namespace RingCentral
 
         /// <summary>
         ///     Specifies if a Call Queue member extension will be able to receive Call Queue calls.
-        ///     Used for the Agent state type. Applicable for User extensions if the new communication
-        ///     handling service is activated on account
+            ///     Used for the Agent state type. Applicable for User extensions if the new communication
+            ///     handling service is activated on account
         /// </summary>
         public bool? acceptCallQueueCalls { get; set; }
 
         /// <summary>
         ///     If `true` enables to ring extension phone, if any user monitored
-        ///     by this extension is ringing
+            ///     by this extension is ringing
         /// </summary>
         public bool? ringOnMonitoredCall { get; set; }
 
@@ -74,5 +80,11 @@ namespace RingCentral
         ///     Internal identifier of a subscription owner extension
         /// </summary>
         public string ownerId { get; set; }
-    }
-}
+
+        /// <summary>
+        ///     CX telephony status
+        ///     Enum: NoCall, CallConnected
+        /// </summary>
+        public string cxTelephonyStatus { get; set; }
+      }
+  }

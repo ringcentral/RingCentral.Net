@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AggregationResponse
-    {
-        /// <summary>
+  {
+      public class AggregationResponse
+      {
+          /// <summary>
         ///     Required
         /// </summary>
         public ResponsePaging paging { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public AggregationResponseData data { get; set; }
-    }
-}
+      }
+  }

@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Meetings page
-    /// </summary>
-    public class MeetingPage
-    {
-        /// <summary>
+/// Meetings page
+/// </summary>
+      public class MeetingPage
+      {
+          /// <summary>
         ///     Meetings array
         ///     Required
         /// </summary>
@@ -15,5 +15,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public BasicPaging paging { get; set; }
-    }
-}
+      }
+  }

@@ -1,15 +1,10 @@
 using Newtonsoft.Json;
 
 namespace RingCentral
-{
-    public class ScimUser
-    {
-        /// <summary>
-        /// </summary>
-        [JsonProperty("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User")]
-        public ScimEnterpriseUser urn_ietf_params_scim_schemas_extension_enterprise_2_0_User;
-
-        /// <summary>
+  {
+      public class ScimUser
+      {
+          /// <summary>
         ///     User status
         /// </summary>
         public bool? active { get; set; }
@@ -58,9 +53,14 @@ namespace RingCentral
         public string title { get; set; }
 
         /// <summary>
+        /// </summary>
+        [JsonProperty("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User")]
+        public ScimEnterpriseUser urn_ietf_params_scim_schemas_extension_enterprise_2_0_User;
+
+        /// <summary>
         ///     MUST be same as work type email address
         ///     Required
         /// </summary>
         public string userName { get; set; }
-    }
-}
+      }
+  }

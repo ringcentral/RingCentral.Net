@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class UtteranceObject
-    {
-        /// <summary>
+  {
+      public class UtteranceObject
+      {
+          /// <summary>
         ///     Required
         ///     Format: float
         ///     Example: 0.3
@@ -36,5 +36,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public WordTimingsUnit[] wordTimings { get; set; }
-    }
-}
+      }
+  }

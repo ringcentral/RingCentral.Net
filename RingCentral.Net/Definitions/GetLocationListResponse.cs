@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class GetLocationListResponse
-    {
-        /// <summary>
+  {
+      public class GetLocationListResponse
+      {
+          /// <summary>
         ///     Link to the location list resource
         ///     Format: uri
         /// </summary>
@@ -22,5 +22,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-    }
-}
+      }
+  }

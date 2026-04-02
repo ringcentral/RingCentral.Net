@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class AddDeviceToInventoryRequest
-    {
-        /// <summary>
+  {
+      public class AddDeviceToInventoryRequest
+      {
+          /// <summary>
         ///     Device type. Use `OtherPhone` to indicate BYOD (customer provided) device
         ///     Required
         ///     Enum: OtherPhone
@@ -21,5 +21,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public AddDeviceToInventoryRequestSite site { get; set; }
-    }
-}
+      }
+  }

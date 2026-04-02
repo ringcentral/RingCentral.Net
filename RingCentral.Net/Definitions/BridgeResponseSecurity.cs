@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class BridgeResponseSecurity
-    {
-        /// <summary>
+  {
+      public class BridgeResponseSecurity
+      {
+          /// <summary>
         ///     Specifies if a meeting is password protected.
         /// </summary>
         public bool? passwordProtected { get; set; }
@@ -25,5 +25,5 @@ namespace RingCentral
         ///     If true, end to end encryption will be enabled for a meeting.
         /// </summary>
         public bool? e2ee { get; set; }
-    }
-}
+      }
+  }

@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class WcsSessionResource
-    {
-        /// <summary>
+  {
+      public class WcsSessionResource
+      {
+          /// <summary>
         ///     Internal object ID
         ///     Example: 78654321
         /// </summary>
@@ -54,7 +54,7 @@ namespace RingCentral
 
         /// <summary>
         ///     The time offset (positive, in seconds) indicating how much in advance
-        ///     (comparing to "scheduledStartTime") panel members should join for the pre-webinar team sync
+            ///     (comparing to "scheduledStartTime") panel members should join for the pre-webinar team sync
         ///     Format: int32
         ///     Example: 900
         /// </summary>
@@ -106,8 +106,7 @@ namespace RingCentral
         public string videoBridgePassword { get; set; }
 
         /// <summary>
-        ///     The RCV bridge PSTN password. Returned only if requested by Host/Co-host/Panelist and a PSTN password for the
-        ///     bridge is set.
+        ///     The RCV bridge PSTN password. Returned only if requested by Host/Co-host/Panelist and a PSTN password for the bridge is set.
         ///     Format: password
         ///     Example: abc123
         /// </summary>
@@ -124,5 +123,5 @@ namespace RingCentral
         ///     Calculated attribute indicating if there are any unsent/deferred invites to session participants
         /// </summary>
         public bool? hasUnsentInvites { get; set; }
-    }
-}
+      }
+  }

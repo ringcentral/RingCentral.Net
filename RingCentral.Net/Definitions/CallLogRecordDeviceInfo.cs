@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CallLogRecordDeviceInfo
-    {
-        /// <summary>
+  {
+      public class CallLogRecordDeviceInfo
+      {
+          /// <summary>
         ///     Internal identifier of a device
         ///     Required
         /// </summary>
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Format: uri
         /// </summary>
         public string uri { get; set; }
-    }
-}
+      }
+  }

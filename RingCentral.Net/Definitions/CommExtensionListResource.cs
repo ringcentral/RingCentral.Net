@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CommExtensionListResource
-    {
-        /// <summary>
+  {
+      public class CommExtensionListResource
+      {
+          /// <summary>
         ///     Required
         /// </summary>
         public CommReferencedExtensionResource[] referencedExtensions { get; set; }
@@ -10,5 +10,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-    }
-}
+      }
+  }

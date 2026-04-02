@@ -1,11 +1,11 @@
 namespace RingCentral
-{
+  {
     /// <summary>
-    ///     Transfer extension settings, set/returned if `callHandlingAction` is specified as `TransferToExtension`
-    /// </summary>
-    public class TransferExtensionInfo
-    {
-        /// <summary>
+/// Transfer extension settings, set/returned if `callHandlingAction` is specified as `TransferToExtension`
+/// </summary>
+      public class TransferExtensionInfo
+      {
+          /// <summary>
         ///     Internal identifier of an extension
         /// </summary>
         public string id { get; set; }
@@ -24,5 +24,5 @@ namespace RingCentral
         ///     Extension number
         /// </summary>
         public string extensionNumber { get; set; }
-    }
-}
+      }
+  }

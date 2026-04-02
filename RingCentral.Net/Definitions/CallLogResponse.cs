@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class CallLogResponse
-    {
-        /// <summary>
+  {
+      public class CallLogResponse
+      {
+          /// <summary>
         ///     Link to the list of company/user call log records
         ///     Format: uri
         /// </summary>
@@ -23,5 +23,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-    }
-}
+      }
+  }

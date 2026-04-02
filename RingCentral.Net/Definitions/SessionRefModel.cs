@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class SessionRefModel
-    {
-        /// <summary>
+  {
+      public class SessionRefModel
+      {
+          /// <summary>
         ///     Internal object ID
         ///     Example: 78654321
         /// </summary>
@@ -42,5 +42,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public WebinarRefModel webinar { get; set; }
-    }
-}
+      }
+  }

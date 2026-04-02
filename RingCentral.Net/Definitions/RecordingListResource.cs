@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class RecordingListResource
-    {
-        /// <summary>
+  {
+      public class RecordingListResource
+      {
+          /// <summary>
         ///     Required
         /// </summary>
         public RecordingItemModel[] records { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public RcwPagingModel paging { get; set; }
-    }
-}
+      }
+  }

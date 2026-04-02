@@ -1,8 +1,8 @@
 namespace RingCentral
-{
-    public class ModifyAccountBusinessAddressRequest
-    {
-        /// <summary>
+  {
+      public class ModifyAccountBusinessAddressRequest
+      {
+          /// <summary>
         ///     Company business name
         /// </summary>
         public string company { get; set; }
@@ -21,5 +21,5 @@ namespace RingCentral
         ///     Custom site name
         /// </summary>
         public string mainSiteName { get; set; }
-    }
-}
+      }
+  }
