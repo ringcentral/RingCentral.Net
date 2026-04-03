@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreConfiguration
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Index parent;
-public Index(Restapi.Account.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Index parent;
+        public Index(Restapi.Account.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/message-store-configuration";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: EditAccounts
         /// User Permission: AccountAdministration
         /// </summary>
-  public async Task<RingCentral.MessageStoreConfiguration> Get(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.MessageStoreConfiguration>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.MessageStoreConfiguration> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.MessageStoreConfiguration>(this.Path(), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates message store settings.
@@ -38,10 +38,10 @@ return await rc.Get<RingCentral.MessageStoreConfiguration>(this.Path(), null, re
         /// App Permission: EditAccounts
         /// User Permission: AccountAdministration
         /// </summary>
-  public async Task<RingCentral.MessageStoreConfiguration> Put(RingCentral.MessageStoreConfiguration messageStoreConfiguration, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Put<RingCentral.MessageStoreConfiguration>(this.Path(), messageStoreConfiguration, null, restRequestConfig);
-  }
+        public async Task<RingCentral.MessageStoreConfiguration> Put(RingCentral.MessageStoreConfiguration messageStoreConfiguration, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Put<RingCentral.MessageStoreConfiguration>(this.Path(), messageStoreConfiguration, null, restRequestConfig);
+        }
     }
 }
 

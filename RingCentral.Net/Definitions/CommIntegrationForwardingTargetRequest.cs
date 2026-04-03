@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommIntegrationForwardingTargetRequest
-      {
-          /// <summary>
+{
+    public class CommIntegrationForwardingTargetRequest
+    {
+        /// <summary>
         /// </summary>
         public string name { get; set; }
 
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CommIntegrationRequest integration { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CallMonitoringGroupMemberInfo
-      {
-          /// <summary>
+{
+    public class CallMonitoringGroupMemberInfo
+    {
+        /// <summary>
         ///     Link to a call monitoring group member
         ///     Format: uri
         /// </summary>
@@ -22,5 +22,5 @@ namespace RingCentral
         ///     Enum: Monitoring, Monitored
         /// </summary>
         public string[] permissions { get; set; }
-      }
-  }
+    }
+}

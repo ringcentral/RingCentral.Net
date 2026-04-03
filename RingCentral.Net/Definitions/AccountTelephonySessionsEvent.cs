@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class AccountTelephonySessionsEvent
-      {
-          /// <summary>
+{
+    public class AccountTelephonySessionsEvent
+    {
+        /// <summary>
         ///     Universally unique identifier of a notification
         /// </summary>
         public string uuid { get; set; }
@@ -30,5 +30,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public TelephonySessionsEventBody body { get; set; }
-      }
-  }
+    }
+}

@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.CostCenters
     public partial class Index
     {
         public RestClient rc;
-public Restapi.V2.Accounts.Index parent;
-public Index(Restapi.V2.Accounts.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.V2.Accounts.Index parent;
+        public Index(Restapi.V2.Accounts.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/cost-centers";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: ReadAccounts
         /// User Permission: CostCenterManagement
         /// </summary>
-  public async Task<RingCentral.CostCenterList> Get(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.CostCenterList>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.CostCenterList> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.CostCenterList>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

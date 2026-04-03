@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class SessionLivestreamMinimalModel
-      {
-          /// <summary>
+{
+    public class SessionLivestreamMinimalModel
+    {
+        /// <summary>
         ///     Identifier of the livestream
         ///     Required
         ///     Example: 40740e06-4eec-4458-a86e-8578e192274q
@@ -40,5 +40,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ApiError error { get; set; }
-      }
-  }
+    }
+}

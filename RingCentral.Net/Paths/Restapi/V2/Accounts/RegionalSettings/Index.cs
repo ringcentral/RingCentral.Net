@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.RegionalSettings
     public partial class Index
     {
         public RestClient rc;
-public Restapi.V2.Accounts.Index parent;
-public Index(Restapi.V2.Accounts.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.V2.Accounts.Index parent;
+        public Index(Restapi.V2.Accounts.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/regional-settings";
@@ -24,10 +24,10 @@ this.rc = parent.rc;
         /// Rate Limit Group: Light
         /// App Permission: ReadAccounts
         /// </summary>
-  public async Task<RingCentral.RegionalSettings> Get(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.RegionalSettings>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.RegionalSettings> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.RegionalSettings>(this.Path(), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates the account's regional settings.
@@ -36,10 +36,10 @@ return await rc.Get<RingCentral.RegionalSettings>(this.Path(), null, restRequest
         /// Rate Limit Group: Medium
         /// App Permission: EditAccounts
         /// </summary>
-  public async Task<RingCentral.RegionalSettings> Patch(RingCentral.AccountRegionalSettingRequest accountRegionalSettingRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Patch<RingCentral.RegionalSettings>(this.Path(), accountRegionalSettingRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.RegionalSettings> Patch(RingCentral.AccountRegionalSettingRequest accountRegionalSettingRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Patch<RingCentral.RegionalSettings>(this.Path(), accountRegionalSettingRequest, null, restRequestConfig);
+        }
     }
 }
 

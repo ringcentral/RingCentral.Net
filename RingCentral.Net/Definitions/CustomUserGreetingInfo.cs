@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CustomUserGreetingInfo
-      {
-          /// <summary>
+{
+    public class CustomUserGreetingInfo
+    {
+        /// <summary>
         ///     Link to a custom user greeting
         ///     Format: uri
         /// </summary>
@@ -34,5 +34,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CustomGreetingAnsweringRuleInfo answeringRule { get; set; }
-      }
-  }
+    }
+}

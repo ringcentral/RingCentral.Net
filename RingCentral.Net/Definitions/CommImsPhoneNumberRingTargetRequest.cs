@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommImsPhoneNumberRingTargetRequest
-      {
-          /// <summary>
+{
+    public class CommImsPhoneNumberRingTargetRequest
+    {
+        /// <summary>
         ///     Ring target type
         ///     Required
         ///     Example: ImsPhoneNumberRingTarget
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CommPhoneNumberResource destination { get; set; }
-      }
-  }
+    }
+}

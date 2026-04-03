@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class RegistrantMinimalModel
-      {
-          /// <summary>
+{
+    public class RegistrantMinimalModel
+    {
+        /// <summary>
         ///     First (given) name
         ///     Required
         ///     Example: John
@@ -42,5 +42,5 @@ namespace RingCentral
         ///     Indicates if the registrant was registered to on-demand webinar
         /// </summary>
         public bool? registeredPostWebinar { get; set; }
-      }
-  }
+    }
+}

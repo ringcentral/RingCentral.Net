@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Ai.Insights.V1.Async
     public partial class Index
     {
         public RestClient rc;
-public Ai.Insights.V1.Index parent;
-public Index(Ai.Insights.V1.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Ai.Insights.V1.Index parent;
+        public Index(Ai.Insights.V1.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path(false)}/async";

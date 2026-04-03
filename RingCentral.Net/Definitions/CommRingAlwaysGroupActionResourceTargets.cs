@@ -1,14 +1,14 @@
 namespace RingCentral
-  {
-      public class CommRingAlwaysGroupActionResourceTargets
-      {
-          /// <summary>
+{
+    public class CommRingAlwaysGroupActionResourceTargets
+    {
+        /// <summary>
         /// </summary>
         public string name { get; set; }
 
         /// <summary>
         ///     Ring target type. Applicable for all desktop and mobile applications.
-            ///     Ensures applications ring all the time during a call
+        ///     Ensures applications ring all the time during a call
         ///     Example: AllMobileRingTarget
         ///     Enum: AllDesktopRingTarget, AllMobileRingTarget
         /// </summary>
@@ -17,5 +17,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CommReferencedExtensionResource extension { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class AdgPhoneNumberResource
-      {
-          /// <summary>
+{
+    public class AdgPhoneNumberResource
+    {
+        /// <summary>
         ///     Example: +1 (205) 6812029
         /// </summary>
         public string formattedPhoneNumber { get; set; }
@@ -62,5 +62,5 @@ namespace RingCentral
         ///     SMS campaign identifier
         /// </summary>
         public string smsCampaignId { get; set; }
-      }
-  }
+    }
+}

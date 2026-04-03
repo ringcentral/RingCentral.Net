@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class FavoriteContactResource
-      {
-          /// <summary>
+{
+    public class FavoriteContactResource
+    {
+        /// <summary>
         ///     Format: int64
         /// </summary>
         public long? id { get; set; }
@@ -18,5 +18,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string contactId { get; set; }
-      }
-  }
+    }
+}

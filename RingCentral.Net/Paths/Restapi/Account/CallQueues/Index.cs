@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.CallQueues
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Index parent;
-public string groupId;
-public Index(Restapi.Account.Index parent, string groupId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.groupId = groupId;
-}
+        public Restapi.Account.Index parent;
+        public string groupId;
+        public Index(Restapi.Account.Index parent, string groupId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.groupId = groupId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && groupId != null)
@@ -31,10 +31,10 @@ this.groupId = groupId;
         /// App Permission: ReadAccounts
         /// User Permission: ReadExtensions
         /// </summary>
-  public async Task<RingCentral.CallQueueList> List(RingCentral.ListCallQueuesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.CallQueueList>(this.Path(false), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.CallQueueList> List(RingCentral.ListCallQueuesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.CallQueueList>(this.Path(false), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns basic information on a call queue group extension.
@@ -44,30 +44,32 @@ return await rc.Get<RingCentral.CallQueueList>(this.Path(false), queryParams, re
         /// App Permission: ReadAccounts
         /// User Permission: ReadExtensions
         /// </summary>
-  public async Task<RingCentral.CallQueueDetails> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (groupId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(groupId));
-    }return await rc.Get<RingCentral.CallQueueDetails>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.CallQueueDetails> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (groupId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(groupId));
+            }
+            return await rc.Get<RingCentral.CallQueueDetails>(this.Path(), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates information on a call queue group extension.
-/// 
+        /// 
         /// HTTP Method: put
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/call-queues/{groupId}
         /// Rate Limit Group: Light
         /// App Permission: EditExtensions
         /// User Permission: EditUserInfo
         /// </summary>
-  public async Task<RingCentral.CallQueueDetails> Put(RingCentral.CallQueueDetailsForUpdate callQueueDetailsForUpdate, RestRequestConfig restRequestConfig = null)
-  {
-if (groupId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(groupId));
-    }return await rc.Put<RingCentral.CallQueueDetails>(this.Path(), callQueueDetailsForUpdate, null, restRequestConfig);
-  }
+        public async Task<RingCentral.CallQueueDetails> Put(RingCentral.CallQueueDetailsForUpdate callQueueDetailsForUpdate, RestRequestConfig restRequestConfig = null)
+        {
+            if (groupId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(groupId));
+            }
+            return await rc.Put<RingCentral.CallQueueDetails>(this.Path(), callQueueDetailsForUpdate, null, restRequestConfig);
+        }
     }
 }
 

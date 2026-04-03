@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class DisabledFilterInfo
-      {
-          /// <summary>
+{
+    public class DisabledFilterInfo
+    {
+        /// <summary>
         ///     Event filter that is disabled for the user
         ///     Required
         /// </summary>
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Error message
         /// </summary>
         public string message { get; set; }
-      }
-  }
+    }
+}

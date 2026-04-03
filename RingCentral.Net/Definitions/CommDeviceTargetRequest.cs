@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommDeviceTargetRequest
-      {
-          /// <summary>
+{
+    public class CommDeviceTargetRequest
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public CommDeviceRequest device { get; set; }
@@ -17,5 +17,5 @@ namespace RingCentral
         ///     Enum: DeviceRingTarget
         /// </summary>
         public string type { get; set; }
-      }
-  }
+    }
+}

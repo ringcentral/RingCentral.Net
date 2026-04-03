@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Call recording data. Returned if the call was recorded
-/// </summary>
-      public class CallLogRecordingInfo
-      {
-          /// <summary>
+    /// Call recording data. Returned if the call was recorded
+    /// </summary>
+    public class CallLogRecordingInfo
+    {
+        /// <summary>
         ///     Internal identifier of the call recording
         ///     Required
         /// </summary>
@@ -27,10 +27,10 @@ namespace RingCentral
 
         /// <summary>
         ///     Link to a call recording binary content. Has to be retrieved with proper authorization
-            ///     (access token must be passed via `Authorization` header or query parameter)
+        ///     (access token must be passed via `Authorization` header or query parameter)
         ///     Required
         ///     Format: uri
         /// </summary>
         public string contentUri { get; set; }
-      }
-  }
+    }
+}

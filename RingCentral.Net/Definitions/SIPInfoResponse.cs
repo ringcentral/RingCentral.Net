@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class SipInfoResponse
-      {
-          /// <summary>
+{
+    public class SipInfoResponse
+    {
+        /// <summary>
         ///     User credentials
         /// </summary>
         public string username { get; set; }
@@ -62,9 +62,9 @@ namespace RingCentral
 
         /// <summary>
         ///     The interval in seconds after which the app must try to switch
-            ///     back to primary proxy if it was previously switched to backup. If this
-            ///     parameter is not returned, the app must stay on backup proxy and try to
-            ///     switch to primary proxy after the next SIP-provision call.
+        ///     back to primary proxy if it was previously switched to backup. If this
+        ///     parameter is not returned, the app must stay on backup proxy and try to
+        ///     switch to primary proxy after the next SIP-provision call.
         ///     Format: int32
         /// </summary>
         public long? switchBackInterval { get; set; }
@@ -73,5 +73,5 @@ namespace RingCentral
         ///     List of stun servers in the format <host:port>
         /// </summary>
         public string[] stunServers { get; set; }
-      }
-  }
+    }
+}

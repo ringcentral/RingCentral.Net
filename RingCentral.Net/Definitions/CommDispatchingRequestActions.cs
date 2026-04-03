@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommDispatchingRequestActions
-      {
-          /// <summary>
+{
+    public class CommDispatchingRequestActions
+    {
+        /// <summary>
         ///     Action type
         ///     Example: TerminatingAction
         ///     Enum: PlayConnectingMessageAction, PlayConnectingPromptAction, PlayWelcomePromptAction, ScreeningAction, RingGroupAction, RingAlwaysGroupAction, TerminatingAction
@@ -57,5 +57,5 @@ namespace RingCentral
         ///     Example: VoiceMailTerminatingTarget
         /// </summary>
         public string terminatingTargetType { get; set; }
-      }
-  }
+    }
+}

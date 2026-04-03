@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ClientErrorsResponseErrors
-      {
-          /// <summary>
+{
+    public class ClientErrorsResponseErrors
+    {
+        /// <summary>
         ///     Logical error code.
         /// </summary>
         public string errorCode { get; set; }
@@ -30,5 +30,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string parameterRange { get; set; }
-      }
-  }
+    }
+}

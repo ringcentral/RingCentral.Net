@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class PermissionCollectionResource
-      {
-          /// <summary>
+{
+    public class PermissionCollectionResource
+    {
+        /// <summary>
         ///     Format: uri
         /// </summary>
         public string uri { get; set; }
@@ -18,5 +18,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public PageNavigationModel navigation { get; set; }
-      }
-  }
+    }
+}

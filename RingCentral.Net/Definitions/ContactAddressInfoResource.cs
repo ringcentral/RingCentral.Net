@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ContactAddressInfoResource
-      {
-          /// <summary>
+{
+    public class ContactAddressInfoResource
+    {
+        /// <summary>
         /// </summary>
         public string street { get; set; }
 
@@ -21,5 +21,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string country { get; set; }
-      }
-  }
+    }
+}

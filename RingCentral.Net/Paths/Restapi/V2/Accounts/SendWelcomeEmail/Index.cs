@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.SendWelcomeEmail
     public partial class Index
     {
         public RestClient rc;
-public Restapi.V2.Accounts.Index parent;
-public Index(Restapi.V2.Accounts.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.V2.Accounts.Index parent;
+        public Index(Restapi.V2.Accounts.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/send-welcome-email";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: EditExtensions
         /// User Permission: Users
         /// </summary>
-  public async Task<string> Post(RingCentral.SendWelcomeEmailV2Request sendWelcomeEmailV2Request, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<string>(this.Path(), sendWelcomeEmailV2Request, null, restRequestConfig);
-  }
+        public async Task<string> Post(RingCentral.SendWelcomeEmailV2Request sendWelcomeEmailV2Request, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<string>(this.Path(), sendWelcomeEmailV2Request, null, restRequestConfig);
+        }
     }
 }
 

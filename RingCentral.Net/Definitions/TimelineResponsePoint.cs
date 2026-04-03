@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TimelineResponsePoint
-      {
-          /// <summary>
+{
+    public class TimelineResponsePoint
+    {
+        /// <summary>
         ///     Time point in RFC 3339 format
         ///     Required
         ///     Format: date-time
@@ -16,5 +16,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CallsCounters counters { get; set; }
-      }
-  }
+    }
+}

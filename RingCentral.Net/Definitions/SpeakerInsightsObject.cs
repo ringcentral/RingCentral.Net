@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class SpeakerInsightsObject
-      {
-          /// <summary>
+{
+    public class SpeakerInsightsObject
+    {
+        /// <summary>
         ///     Format: int32
         ///     Example: 2
         /// </summary>
@@ -11,5 +11,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public SpeakerInsightsUnit[] insights { get; set; }
-      }
-  }
+    }
+}

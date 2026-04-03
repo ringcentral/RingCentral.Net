@@ -1,14 +1,14 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Query parameters for operation listStates
-/// </summary>
-      public class ListStatesParameters
-      {
-          /// <summary>
+    /// Query parameters for operation listStates
+    /// </summary>
+    public class ListStatesParameters
+    {
+        /// <summary>
         ///     If set to `true` then states of all countries are returned and
-            ///     `countryId` is ignored, even if specified. If the value is empty
-            ///     then the parameter is ignored
+        ///     `countryId` is ignored, even if specified. If the value is empty
+        ///     then the parameter is ignored
         /// </summary>
         public bool? allCountries { get; set; }
 
@@ -20,7 +20,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Indicates a page number to retrieve. Only positive number values
-            ///     are accepted
+        ///     are accepted
         ///     Format: int32
         ///     Default: 1
         /// </summary>
@@ -35,8 +35,8 @@ namespace RingCentral
 
         /// <summary>
         ///     If `true` the list of states with phone numbers available for
-            ///     buying is returned
+        ///     buying is returned
         /// </summary>
         public bool? withPhoneNumbers { get; set; }
-      }
-  }
+    }
+}

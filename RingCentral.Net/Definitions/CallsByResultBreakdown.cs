@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Result breakdown by call result
-/// </summary>
-      public class CallsByResultBreakdown
-      {
-          /// <summary>
+    /// Result breakdown by call result
+    /// </summary>
+    public class CallsByResultBreakdown
+    {
+        /// <summary>
         ///     Value for Completed result
         ///     Required
         ///     Format: double
@@ -74,5 +74,5 @@ namespace RingCentral
         ///     Format: double
         /// </summary>
         public decimal? forwarded { get; set; }
-      }
-  }
+    }
+}

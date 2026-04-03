@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Ring target
-/// </summary>
-      public class CommCoworkerRingTargetRequest
-      {
-          /// <summary>
+    /// Ring target
+    /// </summary>
+    public class CommCoworkerRingTargetRequest
+    {
+        /// <summary>
         ///     Ring target type
         ///     Required
         ///     Example: CoworkerRingTarget
@@ -17,5 +17,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CommReferencedExtensionResource extension { get; set; }
-      }
-  }
+    }
+}

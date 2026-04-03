@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class SuperviseCallSessionResponse
-      {
-          /// <summary>
+{
+    public class SuperviseCallSessionResponse
+    {
+        /// <summary>
         /// </summary>
         public PartyInfo from { get; set; }
 
@@ -48,5 +48,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CallStatusInfo status { get; set; }
-      }
-  }
+    }
+}

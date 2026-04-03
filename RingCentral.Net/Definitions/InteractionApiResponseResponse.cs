@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class InteractionApiResponseResponse
-      {
-          /// <summary>
+{
+    public class InteractionApiResponseResponse
+    {
+        /// <summary>
         /// </summary>
         public UtteranceInsightsObject[] utteranceInsights { get; set; }
 
@@ -13,5 +13,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ConversationalInsightsUnit[] conversationalInsights { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class SiteBasicInfo
-      {
-          /// <summary>
+{
+    public class SiteBasicInfo
+    {
+        /// <summary>
         ///     Site extension identifier or "main-site" for the main site
         ///     Required
         /// </summary>
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string name { get; set; }
-      }
-  }
+    }
+}

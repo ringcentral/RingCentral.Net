@@ -7,12 +7,12 @@ namespace RingCentral.Paths.TeamMessaging.V1
     public partial class Index
     {
         public RestClient rc;
-public TeamMessaging.Index parent;
-public Index(TeamMessaging.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public TeamMessaging.Index parent;
+        public Index(TeamMessaging.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path(false)}/v1";

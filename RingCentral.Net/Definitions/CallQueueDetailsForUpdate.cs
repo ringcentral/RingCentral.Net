@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CallQueueDetailsForUpdate
-      {
-          /// <summary>
+{
+    public class CallQueueDetailsForUpdate
+    {
+        /// <summary>
         ///     Extension number of a call queue
         /// </summary>
         public string extensionNumber { get; set; }
@@ -43,5 +43,5 @@ namespace RingCentral
         ///     Enum: 5, 10, 15, 20, 30, 45, 60, 120, 180, 240, 300, 360, 420, 480, 540, 600
         /// </summary>
         public long? alertTimer { get; set; }
-      }
-  }
+    }
+}

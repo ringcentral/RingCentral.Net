@@ -1,17 +1,17 @@
 namespace RingCentral
-  {
-      public class BridgePreferences
-      {
-          /// <summary>
+{
+    public class BridgePreferences
+    {
+        /// <summary>
         /// </summary>
         public BridgeJoinPreferences join { get; set; }
 
         /// <summary>
         ///     Specifies enter and exit tones mode.
-            ///     1) `On` - Enter and exit tones switched on.
-            ///     2) `Off` - Enter and exit tones switched off.
-            ///     3) `ExitOnly` - Only exit tones switched on.
-            ///     4) `EnterOnly` - Only enter tones switched on.
+        ///     1) `On` - Enter and exit tones switched on.
+        ///     2) `Off` - Enter and exit tones switched off.
+        ///     3) `ExitOnly` - Only exit tones switched on.
+        ///     4) `EnterOnly` - Only enter tones switched on.
         ///     Default: Off
         ///     Enum: On, Off, ExitOnly, EnterOnly
         /// </summary>
@@ -25,9 +25,9 @@ namespace RingCentral
 
         /// <summary>
         ///     Specifies if participants can join to a meeting before host.
-            ///     Default value depends on the bridge type:
-            ///     - default bridge (PMI) -> false
-            ///     - other types -> true
+        ///     Default value depends on the bridge type:
+        ///     - default bridge (PMI) -> false
+        ///     - other types -> true
         ///     Example: true
         /// </summary>
         public bool? joinBeforeHost { get; set; }
@@ -61,5 +61,5 @@ namespace RingCentral
         ///     Default: true
         /// </summary>
         public bool? allowEveryoneTranscribeMeetings { get; set; }
-      }
-  }
+    }
+}

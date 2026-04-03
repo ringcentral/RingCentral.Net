@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class EmergencyAddressInfo
-      {
-          /// <summary>
+{
+    public class EmergencyAddressInfo
+    {
+        /// <summary>
         ///     Country name
         /// </summary>
         public string country { get; set; }
@@ -55,7 +55,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Second line address (apartment, suite, unit, building, floor,
-            ///     etc.)
+        ///     etc.)
         /// </summary>
         public string street2 { get; set; }
 
@@ -91,10 +91,10 @@ namespace RingCentral
 
         /// <summary>
         ///     Resulting status of emergency address synchronization. Returned
-            ///     for 'Get Device Info' request if `syncEmergencyAddress` parameter is set
-            ///     to `true`
+        ///     for 'Get Device Info' request if `syncEmergencyAddress` parameter is set
+        ///     to `true`
         ///     Enum: Verified, Updated, Deleted, NotRequired, Unsupported, Failed
         /// </summary>
         public string syncStatus { get; set; }
-      }
-  }
+    }
+}

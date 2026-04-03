@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.UserRole.BulkAssign
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.UserRole.Index parent;
-public Index(Restapi.Account.UserRole.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.UserRole.Index parent;
+        public Index(Restapi.Account.UserRole.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/bulk-assign";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: RoleManagement
         /// User Permission: EditUserRoles
         /// </summary>
-  public async Task<string> Post(RingCentral.BulkRoleAssignResource bulkRoleAssignResource, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<string>(this.Path(), bulkRoleAssignResource, null, restRequestConfig);
-  }
+        public async Task<string> Post(RingCentral.BulkRoleAssignResource bulkRoleAssignResource, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<string>(this.Path(), bulkRoleAssignResource, null, restRequestConfig);
+        }
     }
 }
 

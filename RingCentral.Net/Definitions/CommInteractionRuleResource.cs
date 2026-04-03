@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Interaction rule
-/// </summary>
-      public class CommInteractionRuleResource
-      {
-          /// <summary>
+    /// Interaction rule
+    /// </summary>
+    public class CommInteractionRuleResource
+    {
+        /// <summary>
         ///     Internal identifier of a rule
         ///     Required
         ///     Example: 400133463175
@@ -33,5 +33,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string displayName { get; set; }
-      }
-  }
+    }
+}

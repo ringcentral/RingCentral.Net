@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommVoiceMailTerminatingTargetRequest
-      {
-          /// <summary>
+{
+    public class CommVoiceMailTerminatingTargetRequest
+    {
+        /// <summary>
         ///     Terminating target type
         ///     Required
         ///     Example: VoiceMailTerminatingTarget
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CommTerminatingPromptResource prompt { get; set; }
-      }
-  }
+    }
+}

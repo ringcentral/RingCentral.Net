@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Info about consent configuration for the TCR campaign.
-/// </summary>
-      public class ConsentSettings
-      {
-          /// <summary>
+    /// Info about consent configuration for the TCR campaign.
+    /// </summary>
+    public class ConsentSettings
+    {
+        /// <summary>
         ///     Opt-in necessity for outbound communications.
         /// </summary>
         public bool? optInRequired { get; set; }
@@ -17,5 +17,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public AutomaticConsentCollecting automaticConsentCollecting { get; set; }
-      }
-  }
+    }
+}

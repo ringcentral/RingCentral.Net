@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class PronouncedNamePromptInfo
-      {
-          /// <summary>
+{
+    public class PronouncedNamePromptInfo
+    {
+        /// <summary>
         /// </summary>
         public string id { get; set; }
 
@@ -17,5 +17,5 @@ namespace RingCentral
         ///     Enum: audio/mpeg, audio/wav
         /// </summary>
         public string contentType { get; set; }
-      }
-  }
+    }
+}

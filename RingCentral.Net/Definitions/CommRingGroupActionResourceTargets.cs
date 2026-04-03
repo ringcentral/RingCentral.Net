@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommRingGroupActionResourceTargets
-      {
-          /// <summary>
+{
+    public class CommRingGroupActionResourceTargets
+    {
+        /// <summary>
         /// </summary>
         public string name { get; set; }
 
@@ -28,5 +28,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CommIntegrationResource integration { get; set; }
-      }
-  }
+    }
+}

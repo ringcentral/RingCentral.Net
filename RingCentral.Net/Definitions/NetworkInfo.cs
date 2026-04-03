@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class NetworkInfo
-      {
-          /// <summary>
+{
+    public class NetworkInfo
+    {
+        /// <summary>
         ///     Internal identifier of a network
         /// </summary>
         public string id { get; set; }
@@ -28,5 +28,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public PrivateIpRangeInfo[] privateIpRanges { get; set; }
-      }
-  }
+    }
+}

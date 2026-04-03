@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Index parent;
-public Index(Restapi.Account.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Index parent;
+        public Index(Restapi.Account.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/a2p-sms";

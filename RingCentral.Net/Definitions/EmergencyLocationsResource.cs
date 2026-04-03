@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class EmergencyLocationsResource
-      {
-          /// <summary>
+{
+    public class EmergencyLocationsResource
+    {
+        /// <summary>
         ///     Link to an emergency locations resource
         /// </summary>
         public string uri { get; set; }
@@ -18,5 +18,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public PageNavigationModel navigation { get; set; }
-      }
-  }
+    }
+}

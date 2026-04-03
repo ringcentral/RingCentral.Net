@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Action information
-/// </summary>
-      public class CommTerminatingActionRequest
-      {
-          /// <summary>
+    /// Action information
+    /// </summary>
+    public class CommTerminatingActionRequest
+    {
+        /// <summary>
         ///     Action type
         ///     Required
         ///     Example: TerminatingAction
@@ -28,5 +28,5 @@ namespace RingCentral
         ///     Example: VoiceMailTerminatingTarget
         /// </summary>
         public string terminatingTargetType { get; set; }
-      }
-  }
+    }
+}

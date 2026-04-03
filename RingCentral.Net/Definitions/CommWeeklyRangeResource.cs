@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommWeeklyRangeResource
-      {
-          /// <summary>
+{
+    public class CommWeeklyRangeResource
+    {
+        /// <summary>
         ///     Start time in format hh:mm:ss
         ///     Required
         ///     Format: time
@@ -15,5 +15,5 @@ namespace RingCentral
         ///     Format: time
         /// </summary>
         public string endTime { get; set; }
-      }
-  }
+    }
+}

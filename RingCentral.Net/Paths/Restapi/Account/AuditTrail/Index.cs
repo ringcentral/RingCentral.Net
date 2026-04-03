@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.AuditTrail
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Index parent;
-public Index(Restapi.Account.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Index parent;
+        public Index(Restapi.Account.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/audit-trail";

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class PhoneLinesInfo
-      {
-          /// <summary>
+{
+    public class PhoneLinesInfo
+    {
+        /// <summary>
         ///     Internal identifier of a phone line
         /// </summary>
         public string id { get; set; }
@@ -20,5 +20,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EmergencyAddress emergencyAddress { get; set; }
-      }
-  }
+    }
+}

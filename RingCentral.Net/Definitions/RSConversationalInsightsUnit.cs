@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class RSConversationalInsightsUnit
-      {
-          /// <summary>
+{
+    public class RSConversationalInsightsUnit
+    {
+        /// <summary>
         ///     Participant ID
         ///     Required
         ///     Example: p-32423
@@ -31,5 +31,5 @@ namespace RingCentral
         ///     Example: 4.2
         /// </summary>
         public decimal? end { get; set; }
-      }
-  }
+    }
+}

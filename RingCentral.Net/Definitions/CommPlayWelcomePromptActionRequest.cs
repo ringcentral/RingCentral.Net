@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Action information
-/// </summary>
-      public class CommPlayWelcomePromptActionRequest
-      {
-          /// <summary>
+    /// Action information
+    /// </summary>
+    public class CommPlayWelcomePromptActionRequest
+    {
+        /// <summary>
         ///     Prompt action type
         ///     Required
         ///     Example: PlayWelcomePromptAction
@@ -23,5 +23,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public bool? enabled { get; set; }
-      }
-  }
+    }
+}

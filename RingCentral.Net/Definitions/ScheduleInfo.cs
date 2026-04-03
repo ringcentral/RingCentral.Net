@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Schedule when an answering rule should be applied
-/// </summary>
-      public class ScheduleInfo
-      {
-          /// <summary>
+    /// Schedule when an answering rule should be applied
+    /// </summary>
+    public class ScheduleInfo
+    {
+        /// <summary>
         /// </summary>
         public WeeklyScheduleInfo weeklyRanges { get; set; }
 
@@ -19,5 +19,5 @@ namespace RingCentral
         ///     Enum: BusinessHours, AfterHours
         /// </summary>
         public string @ref { get; set; }
-      }
-  }
+    }
+}

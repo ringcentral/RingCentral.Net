@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.SmsRegistrationBrands.Campaigns
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.SmsRegistrationBrands.Index parent;
-public string tcrCampaignId;
-public Index(Restapi.Account.SmsRegistrationBrands.Index parent, string tcrCampaignId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.tcrCampaignId = tcrCampaignId;
-}
+        public Restapi.Account.SmsRegistrationBrands.Index parent;
+        public string tcrCampaignId;
+        public Index(Restapi.Account.SmsRegistrationBrands.Index parent, string tcrCampaignId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.tcrCampaignId = tcrCampaignId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && tcrCampaignId != null)
@@ -31,10 +31,10 @@ this.tcrCampaignId = tcrCampaignId;
         /// App Permission: ReadAccounts
         /// User Permission: ReadSMSRegistration
         /// </summary>
-  public async Task<RingCentral.CampaignListResponse> List(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.CampaignListResponse>(this.Path(false), null, restRequestConfig);
-  }
+        public async Task<RingCentral.CampaignListResponse> List(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.CampaignListResponse>(this.Path(false), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns the TCR campaign by ID.
@@ -44,13 +44,14 @@ return await rc.Get<RingCentral.CampaignListResponse>(this.Path(false), null, re
         /// App Permission: ReadAccounts
         /// User Permission: ReadSMSRegistration
         /// </summary>
-  public async Task<RingCentral.TcrCampaignRecord> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (tcrCampaignId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(tcrCampaignId));
-    }return await rc.Get<RingCentral.TcrCampaignRecord>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.TcrCampaignRecord> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (tcrCampaignId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(tcrCampaignId));
+            }
+            return await rc.Get<RingCentral.TcrCampaignRecord>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

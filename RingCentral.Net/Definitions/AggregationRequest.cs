@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class AggregationRequest
-      {
-          /// <summary>
+{
+    public class AggregationRequest
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public Grouping grouping { get; set; }
@@ -20,5 +20,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public AggregationResponseOptions responseOptions { get; set; }
-      }
-  }
+    }
+}

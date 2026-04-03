@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TemplateInfo
-      {
-          /// <summary>
+{
+    public class TemplateInfo
+    {
+        /// <summary>
         ///     Link to a template
         ///     Format: uri
         /// </summary>
@@ -39,5 +39,5 @@ namespace RingCentral
         ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
-      }
-  }
+    }
+}

@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Webinar.History.V1.Webinars.Sessions.Invitees
     public partial class Index
     {
         public RestClient rc;
-public Webinar.History.V1.Webinars.Sessions.Index parent;
-public string inviteeId;
-public Index(Webinar.History.V1.Webinars.Sessions.Index parent, string inviteeId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.inviteeId = inviteeId;
-}
+        public Webinar.History.V1.Webinars.Sessions.Index parent;
+        public string inviteeId;
+        public Index(Webinar.History.V1.Webinars.Sessions.Index parent, string inviteeId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.inviteeId = inviteeId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && inviteeId != null)
@@ -25,17 +25,17 @@ this.inviteeId = inviteeId;
         }
         /// <summary>
         /// Returns the list of Invitees (co-hosts and panelists) of a given Webinar Session (host interface).
-/// An implicit record created for a Webinar 'Host' is always returned.
-/// 
+        /// An implicit record created for a Webinar 'Host' is always returned.
+        /// 
         /// HTTP Method: get
         /// Endpoint: /webinar/history/v1/webinars/{webinarId}/sessions/{sessionId}/invitees
         /// Rate Limit Group: Heavy
         /// App Permission: ReadWebinars
         /// </summary>
-  public async Task<RingCentral.InviteeListResource> List(RingCentral.RcwHistoryListInviteesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.InviteeListResource>(this.Path(false), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.InviteeListResource> List(RingCentral.RcwHistoryListInviteesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.InviteeListResource>(this.Path(false), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns a historical session invitee information by ID (host interface).
@@ -44,13 +44,14 @@ return await rc.Get<RingCentral.InviteeListResource>(this.Path(false), queryPara
         /// Rate Limit Group: Heavy
         /// App Permission: ReadWebinars
         /// </summary>
-  public async Task<RingCentral.InviteeModel> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (inviteeId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(inviteeId));
-    }return await rc.Get<RingCentral.InviteeModel>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.InviteeModel> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (inviteeId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(inviteeId));
+            }
+            return await rc.Get<RingCentral.InviteeModel>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

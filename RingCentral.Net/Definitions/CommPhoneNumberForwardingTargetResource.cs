@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommPhoneNumberForwardingTargetResource
-      {
-          /// <summary>
+{
+    public class CommPhoneNumberForwardingTargetResource
+    {
+        /// <summary>
         ///     Ring target type
         ///     Required
         ///     Example: PhoneNumberRingTarget
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CommPhoneNumberResource destination { get; set; }
-      }
-  }
+    }
+}

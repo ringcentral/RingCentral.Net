@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CallMonitoringBulkAssign
-      {
-          /// <summary>
+{
+    public class CallMonitoringBulkAssign
+    {
+        /// <summary>
         /// </summary>
         public CallMonitoringExtensionInfo[] addedExtensions { get; set; }
 
@@ -13,5 +13,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CallMonitoringExtensionInfo[] removedExtensions { get; set; }
-      }
-  }
+    }
+}

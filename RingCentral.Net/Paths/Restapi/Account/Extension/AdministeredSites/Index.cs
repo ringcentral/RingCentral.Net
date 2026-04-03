@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AdministeredSites
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Extension.Index parent;
-public Index(Restapi.Account.Extension.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Extension.Index parent;
+        public Index(Restapi.Account.Extension.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/administered-sites";
@@ -25,25 +25,25 @@ this.rc = parent.rc;
         /// App Permission: ReadAccounts
         /// User Permission: ReadExtensions
         /// </summary>
-  public async Task<RingCentral.BusinessSiteCollectionResource> Get(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.BusinessSiteCollectionResource>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.BusinessSiteCollectionResource> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.BusinessSiteCollectionResource>(this.Path(), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates the sites administered by the current user.
-/// Please note: Only IDs of records are used for update.
-/// 
+        /// Please note: Only IDs of records are used for update.
+        /// 
         /// HTTP Method: put
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/administered-sites
         /// Rate Limit Group: Medium
         /// App Permission: EditAccounts
         /// User Permission: EditAssignedRoles
         /// </summary>
-  public async Task<RingCentral.BusinessSiteCollectionResource> Put(RingCentral.BusinessSiteCollectionRequest businessSiteCollectionRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Put<RingCentral.BusinessSiteCollectionResource>(this.Path(), businessSiteCollectionRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.BusinessSiteCollectionResource> Put(RingCentral.BusinessSiteCollectionRequest businessSiteCollectionRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Put<RingCentral.BusinessSiteCollectionResource>(this.Path(), businessSiteCollectionRequest, null, restRequestConfig);
+        }
     }
 }
 

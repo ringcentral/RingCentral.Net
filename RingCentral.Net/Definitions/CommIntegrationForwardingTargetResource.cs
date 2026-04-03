@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommIntegrationForwardingTargetResource
-      {
-          /// <summary>
+{
+    public class CommIntegrationForwardingTargetResource
+    {
+        /// <summary>
         ///     Ring target type
         ///     Required
         ///     Example: IntegrationRingTarget
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CommIntegrationResource integration { get; set; }
-      }
-  }
+    }
+}

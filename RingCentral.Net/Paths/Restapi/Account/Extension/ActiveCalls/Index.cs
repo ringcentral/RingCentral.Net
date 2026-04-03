@@ -7,30 +7,30 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ActiveCalls
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Extension.Index parent;
-public Index(Restapi.Account.Extension.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Extension.Index parent;
+        public Index(Restapi.Account.Extension.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/active-calls";
         }
         /// <summary>
         /// Returns records of all extension calls that are in progress, ordered
-/// by start time in descending order.
-/// 
+        /// by start time in descending order.
+        /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/active-calls
         /// Rate Limit Group: Heavy
         /// App Permission: ReadCallLog
         /// User Permission: ReadCallLog
         /// </summary>
-  public async Task<RingCentral.CallLogResponse> Get(RingCentral.ListExtensionActiveCallsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.CallLogResponse>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.CallLogResponse> Get(RingCentral.ListExtensionActiveCallsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.CallLogResponse>(this.Path(), queryParams, restRequestConfig);
+        }
     }
 }
 

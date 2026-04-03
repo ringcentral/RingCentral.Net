@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommStateDispatchingResourceActionsTargets
-      {
-          /// <summary>
+{
+    public class CommStateDispatchingResourceActionsTargets
+    {
+        /// <summary>
         /// </summary>
         public string name { get; set; }
 
@@ -37,5 +37,5 @@ namespace RingCentral
         ///     Enum: Ringing, Terminating
         /// </summary>
         public string dispatchingType { get; set; }
-      }
-  }
+    }
+}

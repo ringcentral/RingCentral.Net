@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.V2.Accounts
     public partial class Index
     {
         public RestClient rc;
-public Restapi.V2.Index parent;
-public string accountId;
-public Index(Restapi.V2.Index parent, string accountId = "~")
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.accountId = accountId;
-}
+        public Restapi.V2.Index parent;
+        public string accountId;
+        public Index(Restapi.V2.Index parent, string accountId = "~")
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.accountId = accountId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && accountId != null)
@@ -31,13 +31,14 @@ this.accountId = accountId;
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyInfo
         /// </summary>
-  public async Task<RingCentral.AccountInfo> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (accountId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(accountId));
-    }return await rc.Get<RingCentral.AccountInfo>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.AccountInfo> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (accountId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(accountId));
+            }
+            return await rc.Get<RingCentral.AccountInfo>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

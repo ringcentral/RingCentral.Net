@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Ai.Status.V1
     public partial class Index
     {
         public RestClient rc;
-public Ai.Status.Index parent;
-public Index(Ai.Status.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Ai.Status.Index parent;
+        public Index(Ai.Status.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path(false)}/v1";

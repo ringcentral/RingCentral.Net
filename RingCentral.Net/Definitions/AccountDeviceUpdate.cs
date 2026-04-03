@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class AccountDeviceUpdate
-      {
-          /// <summary>
+{
+    public class AccountDeviceUpdate
+    {
+        /// <summary>
         /// </summary>
         public EmergencyServiceAddressResourceRequest emergencyServiceAddress { get; set; }
 
@@ -20,7 +20,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Supported only for devices assigned to Limited extensions.
-            ///     If true, enables users to log in to this phone as a common phone
+        ///     If true, enables users to log in to this phone as a common phone
         /// </summary>
         public bool? useAsCommonPhone { get; set; }
 
@@ -28,5 +28,5 @@ namespace RingCentral
         ///     Device label, maximum number of symbols is 64
         /// </summary>
         public string name { get; set; }
-      }
-  }
+    }
+}

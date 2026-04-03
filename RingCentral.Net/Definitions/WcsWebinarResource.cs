@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class WcsWebinarResource
-      {
-          /// <summary>
+{
+    public class WcsWebinarResource
+    {
+        /// <summary>
         ///     Internal object ID
         ///     Example: 78654321
         /// </summary>
@@ -42,5 +42,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public WcsHostModel host { get; set; }
-      }
-  }
+    }
+}

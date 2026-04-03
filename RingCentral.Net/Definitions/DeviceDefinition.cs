@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class DeviceDefinition
-      {
-          /// <summary>
+{
+    public class DeviceDefinition
+    {
+        /// <summary>
         ///     Device type. Only "OtherPhone" and "WebRTC" device types are supported at the moment
         ///     Required
         ///     Enum: OtherPhone, WebRTC
@@ -24,5 +24,5 @@ namespace RingCentral
         ///     The option that indicates whether Contact Center Phone Line should be created or not
         /// </summary>
         public bool? contactCenterPhoneLine { get; set; }
-      }
-  }
+    }
+}

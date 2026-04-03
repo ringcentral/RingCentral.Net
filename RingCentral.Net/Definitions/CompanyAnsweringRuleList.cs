@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CompanyAnsweringRuleList
-      {
-          /// <summary>
+{
+    public class CompanyAnsweringRuleList
+    {
+        /// <summary>
         ///     Link to an answering rule resource
         ///     Format: uri
         /// </summary>
@@ -20,5 +20,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public PageNavigationModel navigation { get; set; }
-      }
-  }
+    }
+}

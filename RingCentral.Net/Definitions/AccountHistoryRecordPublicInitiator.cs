@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Event initiator info
-/// </summary>
-      public class AccountHistoryRecordPublicInitiator
-      {
-          /// <summary>
+    /// Event initiator info
+    /// </summary>
+    public class AccountHistoryRecordPublicInitiator
+    {
+        /// <summary>
         ///     Current user extension identifier
         ///     Example: 402539300008
         /// </summary>
@@ -28,5 +28,5 @@ namespace RingCentral
         ///     Example: Super Admin
         /// </summary>
         public string role { get; set; }
-      }
-  }
+    }
+}

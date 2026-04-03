@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommDeviceRingTargetRequest
-      {
-          /// <summary>
+{
+    public class CommDeviceRingTargetRequest
+    {
+        /// <summary>
         ///     Ring target type
         ///     Required
         ///     Example: DeviceRingTarget
@@ -18,5 +18,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CommReferencedExtensionResource extension { get; set; }
-      }
-  }
+    }
+}

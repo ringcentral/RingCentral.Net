@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Ai.Ringsense.V1
     public partial class Index
     {
         public RestClient rc;
-public Ai.Ringsense.Index parent;
-public Index(Ai.Ringsense.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Ai.Ringsense.Index parent;
+        public Index(Ai.Ringsense.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path(false)}/v1";

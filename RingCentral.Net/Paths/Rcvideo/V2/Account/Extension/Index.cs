@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Rcvideo.V2.Account.Extension
     public partial class Index
     {
         public RestClient rc;
-public Rcvideo.V2.Account.Index parent;
-public string extensionId;
-public Index(Rcvideo.V2.Account.Index parent, string extensionId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.extensionId = extensionId;
-}
+        public Rcvideo.V2.Account.Index parent;
+        public string extensionId;
+        public Index(Rcvideo.V2.Account.Index parent, string extensionId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.extensionId = extensionId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && extensionId != null)

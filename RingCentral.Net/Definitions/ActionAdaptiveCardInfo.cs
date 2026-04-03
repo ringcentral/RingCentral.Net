@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ActionAdaptiveCardInfo
-      {
-          /// <summary>
+{
+    public class ActionAdaptiveCardInfo
+    {
+        /// <summary>
         ///     Enum: AdaptiveCard
         /// </summary>
         public string type { get; set; }
@@ -10,5 +10,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ActionCardBody[] body { get; set; }
-      }
-  }
+    }
+}

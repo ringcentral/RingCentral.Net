@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ScimResourceTypeSearchResponse
-      {
-          /// <summary>
+{
+    public class ScimResourceTypeSearchResponse
+    {
+        /// <summary>
         ///     Resource type list
         /// </summary>
         public ScimResourceTypeResponse[] Resources { get; set; }
@@ -26,5 +26,5 @@ namespace RingCentral
         ///     Format: int64
         /// </summary>
         public long? totalResults { get; set; }
-      }
-  }
+    }
+}

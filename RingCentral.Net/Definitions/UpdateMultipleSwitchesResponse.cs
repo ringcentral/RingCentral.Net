@@ -1,9 +1,9 @@
 namespace RingCentral
-  {
-      public class UpdateMultipleSwitchesResponse
-      {
-          /// <summary>
+{
+    public class UpdateMultipleSwitchesResponse
+    {
+        /// <summary>
         /// </summary>
         public BulkTaskInfo task { get; set; }
-      }
-  }
+    }
+}

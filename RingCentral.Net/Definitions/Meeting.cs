@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Meeting information
-/// </summary>
-      public class Meeting
-      {
-          /// <summary>
+    /// Meeting information
+    /// </summary>
+    public class Meeting
+    {
+        /// <summary>
         ///     Meeting id
         ///     Required
         /// </summary>
@@ -115,5 +115,5 @@ namespace RingCentral
         ///     Chat location
         /// </summary>
         public string chatUrl { get; set; }
-      }
-  }
+    }
+}

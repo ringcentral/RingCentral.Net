@@ -1,14 +1,14 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// This objects denotes availability of AI generated meeting notes of certain type as post meeting artefact. 
-/// The note's content can be accessed via POST '/rcvideo/v1/history/meetings/{meetingId}/access-materials'
-/// or POST '/rcvideo/v1/history/links' APIs
-/// 
-/// </summary>
-      public class MeetingNotes
-      {
-          /// <summary>
+    /// This objects denotes availability of AI generated meeting notes of certain type as post meeting artefact. 
+    /// The note's content can be accessed via POST '/rcvideo/v1/history/meetings/{meetingId}/access-materials'
+    /// or POST '/rcvideo/v1/history/links' APIs
+    /// 
+    /// </summary>
+    public class MeetingNotes
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public string id { get; set; }
@@ -25,5 +25,5 @@ namespace RingCentral
         ///     Enum: Processing, Processed, Purged, Failed
         /// </summary>
         public string status { get; set; }
-      }
-  }
+    }
+}

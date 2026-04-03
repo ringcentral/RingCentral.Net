@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CallQueueOverflowSettingsRequestResource
-      {
-          /// <summary>
+{
+    public class CallQueueOverflowSettingsRequestResource
+    {
+        /// <summary>
         ///     Call queue overflow status
         /// </summary>
         public bool? enabled { get; set; }
@@ -10,5 +10,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CallQueueIdResource[] items { get; set; }
-      }
-  }
+    }
+}

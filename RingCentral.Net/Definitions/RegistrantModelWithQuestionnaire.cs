@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class RegistrantModelWithQuestionnaire
-      {
-          /// <summary>
+{
+    public class RegistrantModelWithQuestionnaire
+    {
+        /// <summary>
         ///     Internal object ID
         ///     Example: 78654321
         /// </summary>
@@ -99,5 +99,5 @@ namespace RingCentral
         ///     Answers on custom registration questions
         /// </summary>
         public RegAnswerModel[] questionnaire { get; set; }
-      }
-  }
+    }
+}

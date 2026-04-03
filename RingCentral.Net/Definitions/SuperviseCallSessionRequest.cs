@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class SuperviseCallSessionRequest
-      {
-          /// <summary>
+{
+    public class SuperviseCallSessionRequest
+    {
+        /// <summary>
         ///     Supervising mode
         ///     Required
         ///     Example: Listen
@@ -42,5 +42,5 @@ namespace RingCentral
         ///     Example: 400378008008
         /// </summary>
         public string agentExtensionId { get; set; }
-      }
-  }
+    }
+}

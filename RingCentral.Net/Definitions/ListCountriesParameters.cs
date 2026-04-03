@@ -1,20 +1,20 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Query parameters for operation listCountries
-/// </summary>
-      public class ListCountriesParameters
-      {
-          /// <summary>
+    /// Query parameters for operation listCountries
+    /// </summary>
+    public class ListCountriesParameters
+    {
+        /// <summary>
         ///     Specifies whether the logging-in with the phone numbers of this country
-            ///     is enabled or not
+        ///     is enabled or not
         /// </summary>
         public bool? loginAllowed { get; set; }
 
         /// <summary>
         ///     Indicates whether a signup/billing is allowed for a country. If
-            ///     not specified all countries are returned (according to other
-            ///     specified filters if any)
+        ///     not specified all countries are returned (according to other
+        ///     specified filters if any)
         /// </summary>
         public bool? signupAllowed { get; set; }
 
@@ -25,7 +25,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Indicates a page number to retrieve. Only positive number values
-            ///     are accepted
+        ///     are accepted
         ///     Format: int32
         ///     Default: 1
         /// </summary>
@@ -40,8 +40,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Specifies if free phone line for softphone is available for a
-            ///     country or not
+        ///     country or not
         /// </summary>
         public bool? freeSoftphoneLine { get; set; }
-      }
-  }
+    }
+}

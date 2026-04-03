@@ -1,12 +1,12 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Information on a task for adding multiple contacts to multiple extensions
-/// 
-/// </summary>
-      public class AddressBookBulkUploadResponse
-      {
-          /// <summary>
+    /// Information on a task for adding multiple contacts to multiple extensions
+    /// 
+    /// </summary>
+    public class AddressBookBulkUploadResponse
+    {
+        /// <summary>
         ///     Internal identifier of a task
         ///     Required
         /// </summary>
@@ -43,5 +43,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public AddressBookBulkUploadTaskResult results { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class SessionsInsightsResource
-      {
-          /// <summary>
+{
+    public class SessionsInsightsResource
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public RecordingInsights[] records { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public RSPagingModel paging { get; set; }
-      }
-  }
+    }
+}

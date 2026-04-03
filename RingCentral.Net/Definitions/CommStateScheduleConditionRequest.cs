@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommStateScheduleConditionRequest
-      {
-          /// <summary>
+{
+    public class CommStateScheduleConditionRequest
+    {
+        /// <summary>
         ///     State condition type
         ///     Required
         ///     Enum: Schedule, State
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CommStateScheduleRequest schedule { get; set; }
-      }
-  }
+    }
+}

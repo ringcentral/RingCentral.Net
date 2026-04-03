@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class QueueShortInfoResource
-      {
-          /// <summary>
+{
+    public class QueueShortInfoResource
+    {
+        /// <summary>
         ///     Call queue extension identifier
         /// </summary>
         public string id { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Call queue name (read-only)
         /// </summary>
         public string name { get; set; }
-      }
-  }
+    }
+}

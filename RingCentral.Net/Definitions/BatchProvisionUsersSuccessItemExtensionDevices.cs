@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class BatchProvisionUsersSuccessItemExtensionDevices
-      {
-          /// <summary>
+{
+    public class BatchProvisionUsersSuccessItemExtensionDevices
+    {
+        /// <summary>
         ///     The internal identifier of device created
         ///     Example: 12345
         /// </summary>
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Example: +16501234567
         /// </summary>
         public string phoneNumber { get; set; }
-      }
-  }
+    }
+}

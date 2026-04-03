@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AssignedRole.Default
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Extension.AssignedRole.Index parent;
-public Index(Restapi.Account.Extension.AssignedRole.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Extension.AssignedRole.Index parent;
+        public Index(Restapi.Account.Extension.AssignedRole.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/default";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: RoleManagement
         /// User Permission: Users
         /// </summary>
-  public async Task<RingCentral.AssignedRolesResource> Put(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Put<RingCentral.AssignedRolesResource>(this.Path(), null, null, restRequestConfig);
-  }
+        public async Task<RingCentral.AssignedRolesResource> Put(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Put<RingCentral.AssignedRolesResource>(this.Path(), null, null, restRequestConfig);
+        }
     }
 }
 

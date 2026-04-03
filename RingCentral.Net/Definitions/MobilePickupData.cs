@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class MobilePickupData
-      {
-          /// <summary>
+{
+    public class MobilePickupData
+    {
+        /// <summary>
         ///     List of extension IDs, configured to pick up a call from Desktop/Mobile applications
         /// </summary>
         public string[] ccMailboxes { get; set; }
@@ -26,5 +26,5 @@ namespace RingCentral
         ///     User data
         /// </summary>
         public string srvLvlExt { get; set; }
-      }
-  }
+    }
+}

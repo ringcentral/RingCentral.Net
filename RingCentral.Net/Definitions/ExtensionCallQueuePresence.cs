@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ExtensionCallQueuePresence
-      {
-          /// <summary>
+{
+    public class ExtensionCallQueuePresence
+    {
+        /// <summary>
         /// </summary>
         public PresenceCallQueueInfo callQueue { get; set; }
 
@@ -10,5 +10,5 @@ namespace RingCentral
         ///     Call queue agent availability for calls of this queue
         /// </summary>
         public bool? acceptCalls { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ScimErrorResponse
-      {
-          /// <summary>
+{
+    public class ScimErrorResponse
+    {
+        /// <summary>
         ///     Detailed error message
         /// </summary>
         public string detail { get; set; }
@@ -22,5 +22,5 @@ namespace RingCentral
         ///     Same as HTTP status code, e.g. 400, 401, etc.
         /// </summary>
         public string status { get; set; }
-      }
-  }
+    }
+}

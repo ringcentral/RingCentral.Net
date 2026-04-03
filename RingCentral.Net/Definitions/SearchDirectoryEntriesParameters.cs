@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Query parameters for operation searchDirectoryEntries
-/// </summary>
-      public class SearchDirectoryEntriesParameters
-      {
-          /// <summary>
+    /// Query parameters for operation searchDirectoryEntries
+    /// </summary>
+    public class SearchDirectoryEntriesParameters
+    {
+        /// <summary>
         ///     Allows to make lookups across a whole directory skipping a filtering logic of Cross-Site access management feature.
         ///     Default: true
         /// </summary>
@@ -37,5 +37,5 @@ namespace RingCentral
         ///     Enum: User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup, IvrMenu, ApplicationExtension, ParkLocation, Limited, Bot, Site, Room, ProxyAdmin, DelegatedLinesGroup, FlexibleUser, GroupCallPickup, RoomConnector, TieLine, External
         /// </summary>
         public string[] extensionType { get; set; }
-      }
-  }
+    }
+}

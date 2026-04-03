@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Advanced permissions capabilities. Returned if `advancedPermissions` query parameter is set to `true`.
-/// </summary>
-      public class PermissionsCapabilities
-      {
-          /// <summary>
+    /// Advanced permissions capabilities. Returned if `advancedPermissions` query parameter is set to `true`.
+    /// </summary>
+    public class PermissionsCapabilities
+    {
+        /// <summary>
         ///     Specifies whether the user is enabled with the listed permission or not
         /// </summary>
         public bool? enabled { get; set; }
@@ -19,5 +19,5 @@ namespace RingCentral
         ///     Specifies if the users who were enabled with the listed permission can grant it further to other users
         /// </summary>
         public bool? grantEnabled { get; set; }
-      }
-  }
+    }
+}

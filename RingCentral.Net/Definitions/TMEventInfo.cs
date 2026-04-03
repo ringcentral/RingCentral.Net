@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TMEventInfo
-      {
-          /// <summary>
+{
+    public class TMEventInfo
+    {
+        /// <summary>
         ///     Internal identifier of an event
         /// </summary>
         public string id { get; set; }
@@ -54,5 +54,5 @@ namespace RingCentral
         ///     Event details
         /// </summary>
         public string description { get; set; }
-      }
-  }
+    }
+}

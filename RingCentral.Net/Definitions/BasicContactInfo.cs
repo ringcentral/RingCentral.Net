@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Personal contact information
-/// </summary>
-      public class BasicContactInfo
-      {
-          /// <summary>
+    /// Personal contact information
+    /// </summary>
+    public class BasicContactInfo
+    {
+        /// <summary>
         ///     Given name
         ///     Example: John
         /// </summary>
@@ -23,5 +23,5 @@ namespace RingCentral
         ///     Example: john.smith@acme.com
         /// </summary>
         public string email { get; set; }
-      }
-  }
+    }
+}

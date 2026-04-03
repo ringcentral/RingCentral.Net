@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class SubscriptionInfo
-      {
-          /// <summary>
+{
+    public class SubscriptionInfo
+    {
+        /// <summary>
         ///     Canonical URI of a subscription resource
         ///     Required
         ///     Format: uri
@@ -24,13 +24,13 @@ namespace RingCentral
 
         /// <summary>
         ///     The list of event filter names corresponding to events the user is not subscribed to due to
-            ///     certain limitations
+        ///     certain limitations
         /// </summary>
         public DisabledFilterInfo[] disabledFilters { get; set; }
 
         /// <summary>
         ///     Subscription expiration time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
-            ///     format including timezone, for example *2016-03-10T18:07:52.534Z*
+        ///     format including timezone, for example *2016-03-10T18:07:52.534Z*
         ///     Required
         ///     Format: date-time
         /// </summary>
@@ -52,7 +52,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Subscription creation time in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
-            ///     format including timezone, for example *2016-03-10T18:07:52.534*
+        ///     format including timezone, for example *2016-03-10T18:07:52.534*
         ///     Required
         ///     Format: date-time
         /// </summary>
@@ -67,5 +67,5 @@ namespace RingCentral
         ///     Returned if a WebHook subscription is blacklisted
         /// </summary>
         public SubscriptionInfoBlacklistedData blacklistedData { get; set; }
-      }
-  }
+    }
+}

@@ -39,7 +39,7 @@ public class QueryParamsTest
 
         eventsExtension.BeforeRequest += EventHandler2;
         await addressBook.Contact().List(new ListContactsParameters
-            { phoneNumber = new[] { phoneNumber, phoneNumber2 } });
+        { phoneNumber = new[] { phoneNumber, phoneNumber2 } });
         eventsExtension.BeforeRequest -= EventHandler2;
         Assert.Equal(2, count);
 

@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// The internal IDs of RC-authenticated users.
-/// </summary>
-      public class WcsHostModel
-      {
-          /// <summary>
+    /// The internal IDs of RC-authenticated users.
+    /// </summary>
+    public class WcsHostModel
+    {
+        /// <summary>
         ///     Describes host's license, 'true' - license is active
         ///     Required
         /// </summary>
@@ -26,5 +26,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public RcwDomainUserModel linkedUser { get; set; }
-      }
-  }
+    }
+}

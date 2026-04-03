@@ -7,30 +7,30 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Devices.B
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.EmergencyAddressAutoUpdate.Devices.Index parent;
-public Index(Restapi.Account.EmergencyAddressAutoUpdate.Devices.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.EmergencyAddressAutoUpdate.Devices.Index parent;
+        public Index(Restapi.Account.EmergencyAddressAutoUpdate.Devices.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/bulk-assign";
         }
         /// <summary>
         /// Enables or disables Automatic Location Updates feature for the
-/// specified common phones.
-/// 
+        /// specified common phones.
+        /// 
         /// HTTP Method: post
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/devices/bulk-assign
         /// Rate Limit Group: Heavy
         /// App Permission: EditAccounts
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
-  public async Task<string> Post(RingCentral.AssignMultipleDevicesAutomaticLocationUpdates assignMultipleDevicesAutomaticLocationUpdates, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<string>(this.Path(), assignMultipleDevicesAutomaticLocationUpdates, null, restRequestConfig);
-  }
+        public async Task<string> Post(RingCentral.AssignMultipleDevicesAutomaticLocationUpdates assignMultipleDevicesAutomaticLocationUpdates, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<string>(this.Path(), assignMultipleDevicesAutomaticLocationUpdates, null, restRequestConfig);
+        }
     }
 }
 

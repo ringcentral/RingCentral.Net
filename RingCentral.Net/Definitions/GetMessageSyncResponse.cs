@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class GetMessageSyncResponse
-      {
-          /// <summary>
+{
+    public class GetMessageSyncResponse
+    {
+        /// <summary>
         ///     Link to the message sync resource
         ///     Format: uri
         /// </summary>
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public SyncInfoMessages syncInfo { get; set; }
-      }
-  }
+    }
+}

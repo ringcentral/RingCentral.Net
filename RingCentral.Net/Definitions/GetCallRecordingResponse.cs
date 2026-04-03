@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class GetCallRecordingResponse
-      {
-          /// <summary>
+{
+    public class GetCallRecordingResponse
+    {
+        /// <summary>
         ///     Internal identifier of a call recording
         ///     Required
         /// </summary>
@@ -10,7 +10,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Link to a call recording binary content. Has to be retrieved with proper authorization
-            ///     (access token must be passed via `Authorization` header or query parameter)
+        ///     (access token must be passed via `Authorization` header or query parameter)
         ///     Required
         ///     Format: uri
         /// </summary>
@@ -29,5 +29,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? duration { get; set; }
-      }
-  }
+    }
+}

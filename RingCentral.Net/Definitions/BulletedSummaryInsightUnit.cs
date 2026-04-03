@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class BulletedSummaryInsightUnit
-      {
-          /// <summary>
+{
+    public class BulletedSummaryInsightUnit
+    {
+        /// <summary>
         ///     Value of the summary
         ///     Required
         ///     Example: conversational insights text
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Example: section name
         /// </summary>
         public string section { get; set; }
-      }
-  }
+    }
+}

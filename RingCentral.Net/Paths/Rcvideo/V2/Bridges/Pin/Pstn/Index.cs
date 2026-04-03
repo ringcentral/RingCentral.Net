@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Rcvideo.V2.Bridges.Pin.Pstn
     public partial class Index
     {
         public RestClient rc;
-public Rcvideo.V2.Bridges.Pin.Index parent;
-public string pin;
-public Index(Rcvideo.V2.Bridges.Pin.Index parent, string pin = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.pin = pin;
-}
+        public Rcvideo.V2.Bridges.Pin.Index parent;
+        public string pin;
+        public Index(Rcvideo.V2.Bridges.Pin.Index parent, string pin = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.pin = pin;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && pin != null)
@@ -30,13 +30,14 @@ this.pin = pin;
         /// Rate Limit Group: Medium
         /// App Permission: Video
         /// </summary>
-  public async Task<RingCentral.BridgeResponse> Get(RingCentral.GetBridgeByPstnPinParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-if (pin == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(pin));
-    }return await rc.Get<RingCentral.BridgeResponse>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.BridgeResponse> Get(RingCentral.GetBridgeByPstnPinParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            if (pin == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(pin));
+            }
+            return await rc.Get<RingCentral.BridgeResponse>(this.Path(), queryParams, restRequestConfig);
+        }
     }
 }
 

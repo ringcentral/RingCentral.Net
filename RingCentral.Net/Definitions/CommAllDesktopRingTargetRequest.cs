@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// All Desktop Ring target
-/// </summary>
-      public class CommAllDesktopRingTargetRequest
-      {
-          /// <summary>
+    /// All Desktop Ring target
+    /// </summary>
+    public class CommAllDesktopRingTargetRequest
+    {
+        /// <summary>
         ///     Ring target type
         ///     Required
         ///     Example: AllDesktopRingTarget
@@ -16,5 +16,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CommReferencedExtensionResource extension { get; set; }
-      }
-  }
+    }
+}

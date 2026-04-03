@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommPlayAnnouncementTerminatingTargetRequest
-      {
-          /// <summary>
+{
+    public class CommPlayAnnouncementTerminatingTargetRequest
+    {
+        /// <summary>
         ///     Terminating target type
         ///     Required
         ///     Example: PlayAnnouncementTerminatingTarget
@@ -20,5 +20,5 @@ namespace RingCentral
         ///     Enum: Ringing, Terminating
         /// </summary>
         public string dispatchingType { get; set; }
-      }
-  }
+    }
+}

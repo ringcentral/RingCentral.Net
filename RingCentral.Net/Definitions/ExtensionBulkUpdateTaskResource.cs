@@ -1,12 +1,12 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Information on a task for updating multiple extensions
-/// 
-/// </summary>
-      public class ExtensionBulkUpdateTaskResource
-      {
-          /// <summary>
+    /// Information on a task for updating multiple extensions
+    /// 
+    /// </summary>
+    public class ExtensionBulkUpdateTaskResource
+    {
+        /// <summary>
         ///     Link to a task resource
         ///     Required
         ///     Format: uri
@@ -43,5 +43,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ExtensionBulkUpdateTaskResult result { get; set; }
-      }
-  }
+    }
+}

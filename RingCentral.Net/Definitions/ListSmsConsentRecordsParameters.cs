@@ -1,19 +1,19 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Query parameters for operation listSmsConsentRecords
-/// </summary>
-      public class ListSmsConsentRecordsParameters
-      {
-          /// <summary>
+    /// Query parameters for operation listSmsConsentRecords
+    /// </summary>
+    public class ListSmsConsentRecordsParameters
+    {
+        /// <summary>
         ///     The token indicating the particular page of the result set to be retrieved.
-            ///     If omitted the first page will be returned.
+        ///     If omitted the first page will be returned.
         /// </summary>
         public string pageToken { get; set; }
 
         /// <summary>
         ///     The number of items per page. If the provided value in the request
-            ///     is greater than a maximum, the maximum value is applied
+        ///     is greater than a maximum, the maximum value is applied
         ///     Maximum: 1000
         ///     Minimum: 1
         ///     Format: int32
@@ -50,5 +50,5 @@ namespace RingCentral
         ///     Enum: Conversational, Informational, Promotional
         /// </summary>
         public string[] campaignType { get; set; }
-      }
-  }
+    }
+}

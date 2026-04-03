@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.UserRole
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Index parent;
-public string roleId;
-public Index(Restapi.Account.Index parent, string roleId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.roleId = roleId;
-}
+        public Restapi.Account.Index parent;
+        public string roleId;
+        public Index(Restapi.Account.Index parent, string roleId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.roleId = roleId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && roleId != null)
@@ -31,10 +31,10 @@ this.roleId = roleId;
         /// App Permission: ReadAccounts
         /// User Permission: ReadUserRoles
         /// </summary>
-  public async Task<RingCentral.RolesCollectionResource> List(RingCentral.ListUserRolesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.RolesCollectionResource>(this.Path(false), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.RolesCollectionResource> List(RingCentral.ListUserRolesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.RolesCollectionResource>(this.Path(false), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Creates a custom user role.
@@ -44,10 +44,10 @@ return await rc.Get<RingCentral.RolesCollectionResource>(this.Path(false), query
         /// App Permission: RoleManagement
         /// User Permission: EditUserRoles
         /// </summary>
-  public async Task<string> Post(RingCentral.RoleResource roleResource, RingCentral.CreateCustomRoleParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<string>(this.Path(false), roleResource, queryParams, restRequestConfig);
-  }
+        public async Task<string> Post(RingCentral.RoleResource roleResource, RingCentral.CreateCustomRoleParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<string>(this.Path(false), roleResource, queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns a user role assigned to the current account.
@@ -57,13 +57,14 @@ return await rc.Post<string>(this.Path(false), roleResource, queryParams, restRe
         /// App Permission: ReadAccounts
         /// User Permission: ReadUserRoles
         /// </summary>
-  public async Task<RingCentral.RoleResource> Get(RingCentral.ReadUserRoleParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-if (roleId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(roleId));
-    }return await rc.Get<RingCentral.RoleResource>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.RoleResource> Get(RingCentral.ReadUserRoleParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            if (roleId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(roleId));
+            }
+            return await rc.Get<RingCentral.RoleResource>(this.Path(), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates a user role assigned to the current account by ID.
@@ -73,13 +74,14 @@ if (roleId == null)
         /// App Permission: RoleManagement
         /// User Permission: EditUserRoles
         /// </summary>
-  public async Task<RingCentral.RoleResource> Put(RingCentral.RoleResource roleResource, RingCentral.UpdateUserRoleParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-if (roleId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(roleId));
-    }return await rc.Put<RingCentral.RoleResource>(this.Path(), roleResource, queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.RoleResource> Put(RingCentral.RoleResource roleResource, RingCentral.UpdateUserRoleParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            if (roleId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(roleId));
+            }
+            return await rc.Put<RingCentral.RoleResource>(this.Path(), roleResource, queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Deletes a custom user role by ID.
@@ -89,13 +91,14 @@ if (roleId == null)
         /// App Permission: RoleManagement
         /// User Permission: EditUserRoles
         /// </summary>
-  public async Task<string> Delete(RingCentral.DeleteCustomRoleParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-if (roleId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(roleId));
-    }return await rc.Delete<string>(this.Path(), null, queryParams, restRequestConfig);
-  }
+        public async Task<string> Delete(RingCentral.DeleteCustomRoleParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            if (roleId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(roleId));
+            }
+            return await rc.Delete<string>(this.Path(), null, queryParams, restRequestConfig);
+        }
     }
 }
 

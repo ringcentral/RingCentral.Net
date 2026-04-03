@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommHotdeskRingTargetResource
-      {
-          /// <summary>
+{
+    public class CommHotdeskRingTargetResource
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public string name { get; set; }
@@ -19,5 +19,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CommDeviceResource device { get; set; }
-      }
-  }
+    }
+}

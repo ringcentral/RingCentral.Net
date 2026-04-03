@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class AggregationResponseOptionsCountersCallsByCompanyHours
-      {
-          /// <summary>
+{
+    public class AggregationResponseOptionsCountersCallsByCompanyHours
+    {
+        /// <summary>
         ///     Counter aggregation type. Can be `Sum`, `Average`, `Min`, `Max` or `Percent`
         ///     Enum: Sum, Average, Max, Min, Percent
         /// </summary>
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Enum: Hour, Day, Week, Month
         /// </summary>
         public string aggregationInterval { get; set; }
-      }
-  }
+    }
+}

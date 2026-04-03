@@ -1,10 +1,10 @@
 namespace RingCentral
-  {
-      public class CommStateScheduleRequest
-      {
-          /// <summary>
+{
+    public class CommStateScheduleRequest
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public CommStateScheduleRequestTriggers[] triggers { get; set; }
-      }
-  }
+    }
+}

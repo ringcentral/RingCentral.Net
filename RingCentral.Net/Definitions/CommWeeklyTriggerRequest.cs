@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommWeeklyTriggerRequest
-      {
-          /// <summary>
+{
+    public class CommWeeklyTriggerRequest
+    {
+        /// <summary>
         ///     Trigger type
         ///     Required
         ///     Example: Weekly
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CommWeeklyItemsResource ranges { get; set; }
-      }
-  }
+    }
+}

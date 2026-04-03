@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class SyncInfo
-      {
-          /// <summary>
+{
+    public class SyncInfo
+    {
+        /// <summary>
         ///     Enum: FSync, ISync
         /// </summary>
         public string syncType { get; set; }
@@ -19,5 +19,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public bool? olderRecordsExist { get; set; }
-      }
-  }
+    }
+}

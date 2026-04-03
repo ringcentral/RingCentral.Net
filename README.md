@@ -226,3 +226,9 @@ The result is located in RingCentral.Tests/TestResults/
 ```
 
 Open RingCentral.Tests/CoverageReport/index.html in a browser.
+
+## Format code
+
+```
+dotnet format RingCentral.Net.sln
+```

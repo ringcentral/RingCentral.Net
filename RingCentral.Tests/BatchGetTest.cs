@@ -51,7 +51,7 @@ public class BatchGetTest
 
         var callLogsResponse = await rc.Restapi().Account().Extension().CallLog()
             .List(new ReadUserCallLogParameters
-                { perPage = 3, dateFrom = DateTime.UtcNow.AddYears(-1).ToString("O") });
+            { perPage = 3, dateFrom = DateTime.UtcNow.AddYears(-1).ToString("O") });
         var callLogIds = string.Join(",", callLogsResponse.records.Select(r => r.id));
 
         // var batchResponses = await rc.Restapi().Account().Extension().CallLog(callLogIds).BatchGet();
@@ -72,7 +72,7 @@ public class BatchGetTest
 
         var callLogsResponse = await rc.Restapi().Account().Extension().CallLog()
             .List(new ReadUserCallLogParameters
-                { perPage = 3, dateFrom = DateTime.UtcNow.AddYears(-3).ToString("O") });
+            { perPage = 3, dateFrom = DateTime.UtcNow.AddYears(-3).ToString("O") });
         var callLogIds = string.Join(",", callLogsResponse.records.Select(r => r.id));
 
         var batchResponses =

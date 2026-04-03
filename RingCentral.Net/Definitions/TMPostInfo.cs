@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TMPostInfo
-      {
-          /// <summary>
+{
+    public class TMPostInfo
+    {
+        /// <summary>
         ///     Internal identifier of a post
         /// </summary>
         public string id { get; set; }
@@ -74,5 +74,5 @@ namespace RingCentral
         ///     Emoji used as an icon for this message
         /// </summary>
         public string iconEmoji { get; set; }
-      }
-  }
+    }
+}

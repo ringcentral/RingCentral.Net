@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class MsTeamsUserEntry
-      {
-          /// <summary>
+{
+    public class MsTeamsUserEntry
+    {
+        /// <summary>
         ///     RingCentral extension ID of the user to connect
         ///     Required
         /// </summary>
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Example: +16501234567
         /// </summary>
         public string phoneNumber { get; set; }
-      }
-  }
+    }
+}

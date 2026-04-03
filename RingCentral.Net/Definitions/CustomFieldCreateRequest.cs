@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CustomFieldCreateRequest
-      {
-          /// <summary>
+{
+    public class CustomFieldCreateRequest
+    {
+        /// <summary>
         ///     Object category to attach custom fields
         ///     Enum: User
         /// </summary>
@@ -12,5 +12,5 @@ namespace RingCentral
         ///     Custom field display name
         /// </summary>
         public string displayName { get; set; }
-      }
-  }
+    }
+}

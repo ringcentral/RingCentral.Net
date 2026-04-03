@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// The short detail of the message in the get batch response
-/// </summary>
-      public class MessageListMessageResponse
-      {
-          /// <summary>
+    /// The short detail of the message in the get batch response
+    /// </summary>
+    public class MessageListMessageResponse
+    {
+        /// <summary>
         ///     The Id of the message
         ///     Format: int64
         ///     Example: 1234
@@ -79,5 +79,5 @@ namespace RingCentral
         ///     Example: SMS-RC-503
         /// </summary>
         public string errorCode { get; set; }
-      }
-  }
+    }
+}

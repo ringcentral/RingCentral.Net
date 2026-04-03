@@ -1,20 +1,20 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Query parameters for operation readUserCallLog
-/// </summary>
-      public class ReadUserCallLogParameters
-      {
-          /// <summary>
+    /// Query parameters for operation readUserCallLog
+    /// </summary>
+    public class ReadUserCallLogParameters
+    {
+        /// <summary>
         ///     Short extension number of a user. If specified, returns call log for this particular extension only.
-            ///     Cannot be combined with `phoneNumber` filter
+        ///     Cannot be combined with `phoneNumber` filter
         ///     Example: 101
         /// </summary>
         public string extensionNumber { get; set; }
 
         /// <summary>
         ///     Phone number of a caller/callee in e.164 format without a '+' sign. If specified, all incoming/outgoing calls
-            ///     from/to this phone number are returned.
+        ///     from/to this phone number are returned.
         ///     Example: 12053320032
         /// </summary>
         public string phoneNumber { get; set; }
@@ -27,7 +27,7 @@ namespace RingCentral
 
         /// <summary>
         ///     The direction of call records to be included in the result. If omitted, both
-            ///     inbound and outbound calls are returned. Multiple values are supported
+        ///     inbound and outbound calls are returned. Multiple values are supported
         ///     Enum: Inbound, Outbound
         /// </summary>
         public string[] direction { get; set; }
@@ -39,7 +39,7 @@ namespace RingCentral
 
         /// <summary>
         ///     The type of call records to be included in the result.
-            ///     If omitted, all call types are returned. Multiple values are supported
+        ///     If omitted, all call types are returned. Multiple values are supported
         ///     Enum: Voice, Fax
         /// </summary>
         public string[] type { get; set; }
@@ -59,29 +59,29 @@ namespace RingCentral
 
         /// <summary>
         ///     Deprecated, replaced with `recordingType` filter, still supported for compatibility reasons.
-            ///     Indicates if only recorded calls should be returned.
-            ///     
-            ///     If both `withRecording` and `recordingType` parameters are specified, then `withRecording` is ignored
+        ///     Indicates if only recorded calls should be returned.
+        ///     
+        ///     If both `withRecording` and `recordingType` parameters are specified, then `withRecording` is ignored
         /// </summary>
         public bool? withRecording { get; set; }
 
         /// <summary>
         ///     Indicates that call records with recordings of particular type should be returned.
-            ///     If omitted, then calls with and without recordings are returned
+        ///     If omitted, then calls with and without recordings are returned
         ///     Enum: Automatic, OnDemand, All
         /// </summary>
         public string recordingType { get; set; }
 
         /// <summary>
         ///     The end of the time range to return call records in ISO 8601 format including timezone,
-            ///     for example 2016-03-10T18:07:52.534Z. The default value is current time
+        ///     for example 2016-03-10T18:07:52.534Z. The default value is current time
         ///     Format: date-time
         /// </summary>
         public string dateTo { get; set; }
 
         /// <summary>
         ///     The beginning of the time range to return call records in ISO 8601 format including timezone,
-            ///     for example 2016-03-10T18:07:52.534Z. The default value is `dateTo` minus 24 hours
+        ///     for example 2016-03-10T18:07:52.534Z. The default value is `dateTo` minus 24 hours
         ///     Format: date-time
         /// </summary>
         public string dateFrom { get; set; }
@@ -93,14 +93,14 @@ namespace RingCentral
 
         /// <summary>
         ///     Category of metadata to be returned. If omitted, all call records are returned.
-            ///     Multiple values are supported
+        ///     Multiple values are supported
         /// </summary>
         public string[] metadataCategory { get; set; }
 
         /// <summary>
         ///     The number of items per page. Accepts a positive integer (1–1000) or
-            ///     the special value `"max"` which returns up to 1000 records.
-            ///     If the provided integer value exceeds 1000, the maximum value of 1000 is applied.
+        ///     the special value `"max"` which returns up to 1000 records.
+        ///     If the provided integer value exceeds 1000, the maximum value of 1000 is applied.
         ///     Maximum: 1000
         ///     Minimum: 1
         ///     Format: int32
@@ -121,5 +121,5 @@ namespace RingCentral
         ///     Indicates that deleted calls records should be returned
         /// </summary>
         public bool? showDeleted { get; set; }
-      }
-  }
+    }
+}

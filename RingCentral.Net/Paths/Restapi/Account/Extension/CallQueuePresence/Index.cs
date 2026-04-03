@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallQueuePresence
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Extension.Index parent;
-public Index(Restapi.Account.Extension.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Extension.Index parent;
+        public Index(Restapi.Account.Extension.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/call-queue-presence";
@@ -24,10 +24,10 @@ this.rc = parent.rc;
         /// Rate Limit Group: Light
         /// App Permission: ReadPresence
         /// </summary>
-  public async Task<RingCentral.ExtensionCallQueuePresenceList> Get(RingCentral.ReadExtensionCallQueuePresenceParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.ExtensionCallQueuePresenceList>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.ExtensionCallQueuePresenceList> Get(RingCentral.ReadExtensionCallQueuePresenceParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.ExtensionCallQueuePresenceList>(this.Path(), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates availability of the agent for the call queues.
@@ -36,10 +36,10 @@ return await rc.Get<RingCentral.ExtensionCallQueuePresenceList>(this.Path(), que
         /// Rate Limit Group: Medium
         /// App Permission: EditPresence
         /// </summary>
-  public async Task<RingCentral.ExtensionCallQueuePresenceList> Put(RingCentral.ExtensionCallQueueUpdatePresenceList extensionCallQueueUpdatePresenceList, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Put<RingCentral.ExtensionCallQueuePresenceList>(this.Path(), extensionCallQueueUpdatePresenceList, null, restRequestConfig);
-  }
+        public async Task<RingCentral.ExtensionCallQueuePresenceList> Put(RingCentral.ExtensionCallQueueUpdatePresenceList extensionCallQueueUpdatePresenceList, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Put<RingCentral.ExtensionCallQueuePresenceList>(this.Path(), extensionCallQueueUpdatePresenceList, null, restRequestConfig);
+        }
     }
 }
 

@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Account information
-/// </summary>
-      public class GetExtensionAccountInfo
-      {
-          /// <summary>
+    /// Account information
+    /// </summary>
+    public class GetExtensionAccountInfo
+    {
+        /// <summary>
         ///     Internal identifier of an account
         /// </summary>
         public string id { get; set; }
@@ -15,5 +15,5 @@ namespace RingCentral
         ///     Format: uri
         /// </summary>
         public string uri { get; set; }
-      }
-  }
+    }
+}

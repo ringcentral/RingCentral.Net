@@ -7,14 +7,14 @@ namespace RingCentral.Paths.TeamMessaging.V1.Companies
     public partial class Index
     {
         public RestClient rc;
-public TeamMessaging.V1.Index parent;
-public string companyId;
-public Index(TeamMessaging.V1.Index parent, string companyId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.companyId = companyId;
-}
+        public TeamMessaging.V1.Index parent;
+        public string companyId;
+        public Index(TeamMessaging.V1.Index parent, string companyId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.companyId = companyId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && companyId != null)
@@ -30,13 +30,14 @@ this.companyId = companyId;
         /// Rate Limit Group: Light
         /// App Permission: TeamMessaging
         /// </summary>
-  public async Task<RingCentral.TMCompanyInfo> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (companyId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(companyId));
-    }return await rc.Get<RingCentral.TMCompanyInfo>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.TMCompanyInfo> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (companyId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(companyId));
+            }
+            return await rc.Get<RingCentral.TMCompanyInfo>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

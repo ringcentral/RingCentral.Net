@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Scim.ResourceTypes
     public partial class Index
     {
         public RestClient rc;
-public Scim.Index parent;
-public string type;
-public Index(Scim.Index parent, string type = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.type = type;
-}
+        public Scim.Index parent;
+        public string type;
+        public Index(Scim.Index parent, string type = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.type = type;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && type != null)
@@ -30,10 +30,10 @@ this.type = type;
         /// Rate Limit Group: Light
         /// App Permission: ReadAccounts
         /// </summary>
-  public async Task<RingCentral.ScimResourceTypeSearchResponse> List(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.ScimResourceTypeSearchResponse>(this.Path(false), null, restRequestConfig);
-  }
+        public async Task<RingCentral.ScimResourceTypeSearchResponse> List(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.ScimResourceTypeSearchResponse>(this.Path(false), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns resource type by ID
@@ -42,13 +42,14 @@ return await rc.Get<RingCentral.ScimResourceTypeSearchResponse>(this.Path(false)
         /// Rate Limit Group: Light
         /// App Permission: ReadAccounts
         /// </summary>
-  public async Task<RingCentral.ScimResourceTypeResponse> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (type == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(type));
-    }return await rc.Get<RingCentral.ScimResourceTypeResponse>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.ScimResourceTypeResponse> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (type == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(type));
+            }
+            return await rc.Get<RingCentral.ScimResourceTypeResponse>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

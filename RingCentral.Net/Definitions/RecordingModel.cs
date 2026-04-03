@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class RecordingModel
-      {
-          /// <summary>
+{
+    public class RecordingModel
+    {
+        /// <summary>
         ///     Internal object ID
         ///     Example: 78654321
         /// </summary>
@@ -44,7 +44,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Indicates if Host or Admin has shared a recording.
-            ///     Can be set to true only then recording status is 'Available'.
+        ///     Can be set to true only then recording status is 'Available'.
         ///     Example: true
         /// </summary>
         public bool? shared { get; set; }
@@ -55,5 +55,5 @@ namespace RingCentral
         ///     Example: Sun Oct 01 2023 03:05:00 GMT-0700 (Pacific Daylight Time)
         /// </summary>
         public string sharedUriExpirationTime { get; set; }
-      }
-  }
+    }
+}

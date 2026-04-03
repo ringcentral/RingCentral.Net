@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TaxLocation
-      {
-          /// <summary>
+{
+    public class TaxLocation
+    {
+        /// <summary>
         ///     Internal identifier of a tax location
         ///     Required
         ///     Format: int64
@@ -42,5 +42,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public PostalAddress address { get; set; }
-      }
-  }
+    }
+}

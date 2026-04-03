@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TMChatList
-      {
-          /// <summary>
+{
+    public class TMChatList
+    {
+        /// <summary>
         ///     List of chats
         ///     Required
         /// </summary>
@@ -11,5 +11,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public TMNavigationInfo navigation { get; set; }
-      }
-  }
+    }
+}

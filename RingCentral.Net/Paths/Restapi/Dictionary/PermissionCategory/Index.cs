@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Dictionary.PermissionCategory
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Dictionary.Index parent;
-public string permissionCategoryId;
-public Index(Restapi.Dictionary.Index parent, string permissionCategoryId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.permissionCategoryId = permissionCategoryId;
-}
+        public Restapi.Dictionary.Index parent;
+        public string permissionCategoryId;
+        public Index(Restapi.Dictionary.Index parent, string permissionCategoryId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.permissionCategoryId = permissionCategoryId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && permissionCategoryId != null)
@@ -29,10 +29,10 @@ this.permissionCategoryId = permissionCategoryId;
         /// Endpoint: /restapi/{apiVersion}/dictionary/permission-category
         /// Rate Limit Group: Light
         /// </summary>
-  public async Task<RingCentral.PermissionCategoryCollectionResource> List(RingCentral.ListPermissionCategoriesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.PermissionCategoryCollectionResource>(this.Path(false), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.PermissionCategoryCollectionResource> List(RingCentral.ListPermissionCategoriesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.PermissionCategoryCollectionResource>(this.Path(false), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns a permission category by ID.
@@ -40,13 +40,14 @@ return await rc.Get<RingCentral.PermissionCategoryCollectionResource>(this.Path(
         /// Endpoint: /restapi/{apiVersion}/dictionary/permission-category/{permissionCategoryId}
         /// Rate Limit Group: Light
         /// </summary>
-  public async Task<RingCentral.PermissionCategoryResource> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (permissionCategoryId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(permissionCategoryId));
-    }return await rc.Get<RingCentral.PermissionCategoryResource>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.PermissionCategoryResource> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (permissionCategoryId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(permissionCategoryId));
+            }
+            return await rc.Get<RingCentral.PermissionCategoryResource>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

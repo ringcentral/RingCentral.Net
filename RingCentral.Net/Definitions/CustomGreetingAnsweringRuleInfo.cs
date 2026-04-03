@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Information on an answering rule that the greeting is applied to
-/// </summary>
-      public class CustomGreetingAnsweringRuleInfo
-      {
-          /// <summary>
+    /// Information on an answering rule that the greeting is applied to
+    /// </summary>
+    public class CustomGreetingAnsweringRuleInfo
+    {
+        /// <summary>
         ///     Canonical URI of an answering rule
         ///     Format: uri
         /// </summary>
@@ -15,5 +15,5 @@ namespace RingCentral
         ///     Internal identifier of an answering rule
         /// </summary>
         public string id { get; set; }
-      }
-  }
+    }
+}

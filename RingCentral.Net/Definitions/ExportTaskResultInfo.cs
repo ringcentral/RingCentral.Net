@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ExportTaskResultInfo
-      {
-          /// <summary>
+{
+    public class ExportTaskResultInfo
+    {
+        /// <summary>
         ///     Internal identifier of a dataset
         /// </summary>
         public string id { get; set; }
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Format: int64
         /// </summary>
         public long? size { get; set; }
-      }
-  }
+    }
+}

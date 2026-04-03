@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommGreetingResource
-      {
-          /// <summary>
+{
+    public class CommGreetingResource
+    {
+        /// <summary>
         ///     Greeting type
         ///     Required
         ///     Enum: Custom, Preset
@@ -17,5 +17,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CommGreetingIdResource custom { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class RolesBusinessSiteResource
-      {
-          /// <summary>
+{
+    public class RolesBusinessSiteResource
+    {
+        /// <summary>
         ///     Link to a business site resource
         /// </summary>
         public string uri { get; set; }
@@ -44,5 +44,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ContactAddressInfoResource businessAddress { get; set; }
-      }
-  }
+    }
+}

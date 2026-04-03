@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TMCreateTeamRequestMembers
-      {
-          /// <summary>
+{
+    public class TMCreateTeamRequestMembers
+    {
+        /// <summary>
         ///     Internal identifier of a person
         /// </summary>
         public string id { get; set; }
@@ -12,5 +12,5 @@ namespace RingCentral
         ///     Format: email
         /// </summary>
         public string email { get; set; }
-      }
-  }
+    }
+}

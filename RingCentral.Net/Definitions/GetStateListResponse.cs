@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class GetStateListResponse
-      {
-          /// <summary>
+{
+    public class GetStateListResponse
+    {
+        /// <summary>
         ///     Link to a states list resource
         ///     Format: uri
         /// </summary>
@@ -20,5 +20,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-      }
-  }
+    }
+}

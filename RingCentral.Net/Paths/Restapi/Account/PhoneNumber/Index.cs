@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.PhoneNumber
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Index parent;
-public string phoneNumberId;
-public Index(Restapi.Account.Index parent, string phoneNumberId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.phoneNumberId = phoneNumberId;
-}
+        public Restapi.Account.Index parent;
+        public string phoneNumberId;
+        public Index(Restapi.Account.Index parent, string phoneNumberId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.phoneNumberId = phoneNumberId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && phoneNumberId != null)
@@ -25,36 +25,37 @@ this.phoneNumberId = phoneNumberId;
         }
         /// <summary>
         /// Returns the list of phone numbers assigned to RingCentral customer
-/// account. Both company-level and extension-level numbers are returned.
-/// 
+        /// account. Both company-level and extension-level numbers are returned.
+        /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/phone-number
         /// Rate Limit Group: Heavy
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyPhoneNumbers
         /// </summary>
-  public async Task<RingCentral.AccountPhoneNumbers> List(RingCentral.ListAccountPhoneNumbersParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.AccountPhoneNumbers>(this.Path(false), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.AccountPhoneNumbers> List(RingCentral.ListAccountPhoneNumbersParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.AccountPhoneNumbers>(this.Path(false), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns phone number(s) belonging to a certain account or extension by phoneNumberId(s).
-/// [Bulk request syntax](https://developers.ringcentral.com/guide/basics/batch-requests) is supported.
-/// 
+        /// [Bulk request syntax](https://developers.ringcentral.com/guide/basics/batch-requests) is supported.
+        /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/phone-number/{phoneNumberId}
         /// Rate Limit Group: Light
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyPhoneNumbers
         /// </summary>
-  public async Task<RingCentral.CompanyPhoneNumberInfo> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (phoneNumberId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(phoneNumberId));
-    }return await rc.Get<RingCentral.CompanyPhoneNumberInfo>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.CompanyPhoneNumberInfo> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (phoneNumberId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(phoneNumberId));
+            }
+            return await rc.Get<RingCentral.CompanyPhoneNumberInfo>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

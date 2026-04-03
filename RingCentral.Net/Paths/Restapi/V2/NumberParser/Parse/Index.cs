@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.V2.NumberParser.Parse
     public partial class Index
     {
         public RestClient rc;
-public Restapi.V2.NumberParser.Index parent;
-public Index(Restapi.V2.NumberParser.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.V2.NumberParser.Index parent;
+        public Index(Restapi.V2.NumberParser.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/parse";
@@ -23,10 +23,10 @@ this.rc = parent.rc;
         /// Endpoint: /restapi/v2/number-parser/parse
         /// Rate Limit Group: Light
         /// </summary>
-  public async Task<RingCentral.ParsePhoneNumberResponseV2> Post(RingCentral.ParsePhoneNumbersRequest parsePhoneNumbersRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<RingCentral.ParsePhoneNumberResponseV2>(this.Path(), parsePhoneNumbersRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.ParsePhoneNumberResponseV2> Post(RingCentral.ParsePhoneNumbersRequest parsePhoneNumbersRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.ParsePhoneNumberResponseV2>(this.Path(), parsePhoneNumbersRequest, null, restRequestConfig);
+        }
     }
 }
 

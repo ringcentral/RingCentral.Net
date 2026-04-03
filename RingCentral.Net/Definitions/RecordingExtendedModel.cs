@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class RecordingExtendedModel
-      {
-          /// <summary>
+{
+    public class RecordingExtendedModel
+    {
+        /// <summary>
         ///     Internal object ID
         ///     Example: 78654321
         /// </summary>
@@ -44,7 +44,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Indicates if Host or Admin has shared a recording.
-            ///     Can be set to true only then recording status is 'Available'.
+        ///     Can be set to true only then recording status is 'Available'.
         ///     Example: true
         /// </summary>
         public bool? shared { get; set; }
@@ -63,5 +63,5 @@ namespace RingCentral
         ///     Example: https://v.ringcentral.com/w/a/recording/de7yd8ew7yfsdfjh899843rgj?pw=a1b2c3d4
         /// </summary>
         public string recordingSharedUri { get; set; }
-      }
-  }
+    }
+}

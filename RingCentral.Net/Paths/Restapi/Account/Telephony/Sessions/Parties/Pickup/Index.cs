@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Pickup
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Telephony.Sessions.Parties.Index parent;
-public Index(Restapi.Account.Telephony.Sessions.Parties.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Telephony.Sessions.Parties.Index parent;
+        public Index(Restapi.Account.Telephony.Sessions.Parties.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/pickup";
@@ -24,10 +24,10 @@ this.rc = parent.rc;
         /// Rate Limit Group: Light
         /// App Permission: CallControl
         /// </summary>
-  public async Task<RingCentral.CallParty> Post(RingCentral.PickupTarget pickupTarget, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<RingCentral.CallParty>(this.Path(), pickupTarget, null, restRequestConfig);
-  }
+        public async Task<RingCentral.CallParty> Post(RingCentral.PickupTarget pickupTarget, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.CallParty>(this.Path(), pickupTarget, null, restRequestConfig);
+        }
     }
 }
 

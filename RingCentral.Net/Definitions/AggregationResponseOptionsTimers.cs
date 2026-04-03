@@ -1,14 +1,14 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// The formula is defined by `aggregationType` and `aggregationInterval` for every timer individually.
-/// If `aggregationType` is `Sum` or `Percent`, `aggregationInterval` is not supported.
-/// If `aggregationType` is `Min`, `Max` or `Average`, `aggregationInterval` is supported, but not required.
-/// If left empty, aggregation will be performed on per-call basis
-/// </summary>
-      public class AggregationResponseOptionsTimers
-      {
-          /// <summary>
+    /// The formula is defined by `aggregationType` and `aggregationInterval` for every timer individually.
+    /// If `aggregationType` is `Sum` or `Percent`, `aggregationInterval` is not supported.
+    /// If `aggregationType` is `Min`, `Max` or `Average`, `aggregationInterval` is supported, but not required.
+    /// If left empty, aggregation will be performed on per-call basis
+    /// </summary>
+    public class AggregationResponseOptionsTimers
+    {
+        /// <summary>
         ///     Aggregation of all calls duration
         /// </summary>
         public AggregationResponseOptionsTimersAllCallsDuration allCallsDuration { get; set; }
@@ -62,5 +62,5 @@ namespace RingCentral
         ///     Aggregation of calls duration by queue hours (BusinessHours, AfterHours)
         /// </summary>
         public AggregationResponseOptionsTimersCallsDurationByQueueHours callsDurationByQueueHours { get; set; }
-      }
-  }
+    }
+}

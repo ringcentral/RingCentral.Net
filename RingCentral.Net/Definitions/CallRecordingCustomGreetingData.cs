@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Custom greeting data
-/// </summary>
-      public class CallRecordingCustomGreetingData
-      {
-          /// <summary>
+    /// Custom greeting data
+    /// </summary>
+    public class CallRecordingCustomGreetingData
+    {
+        /// <summary>
         ///     Link to a custom company greeting
         ///     Format: uri
         /// </summary>
@@ -15,5 +15,5 @@ namespace RingCentral
         ///     Internal identifier of a custom company greeting
         /// </summary>
         public string id { get; set; }
-      }
-  }
+    }
+}

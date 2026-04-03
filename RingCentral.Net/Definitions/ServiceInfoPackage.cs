@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Billing package information
-/// </summary>
-      public class ServiceInfoPackage
-      {
-          /// <summary>
+    /// Billing package information
+    /// </summary>
+    public class ServiceInfoPackage
+    {
+        /// <summary>
         ///     Billing package ID
         ///     Required
         ///     Example: 555
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Example: 1
         /// </summary>
         public string version { get; set; }
-      }
-  }
+    }
+}

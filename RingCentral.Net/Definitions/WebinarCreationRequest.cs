@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class WebinarCreationRequest
-      {
-          /// <summary>
+{
+    public class WebinarCreationRequest
+    {
+        /// <summary>
         ///     Webinar title
         ///     Required
         ///     Example: All-Hands Webinar
@@ -22,5 +22,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public RcwLinkedUserModel host { get; set; }
-      }
-  }
+    }
+}

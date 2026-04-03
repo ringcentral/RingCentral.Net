@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class GetStateInfoResponse
-      {
-          /// <summary>
+{
+    public class GetStateInfoResponse
+    {
+        /// <summary>
         ///     Internal identifier of a state
         /// </summary>
         public string id { get; set; }
@@ -26,5 +26,5 @@ namespace RingCentral
         ///     Official name of a state
         /// </summary>
         public string name { get; set; }
-      }
-  }
+    }
+}

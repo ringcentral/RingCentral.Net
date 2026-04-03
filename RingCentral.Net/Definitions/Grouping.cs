@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// This grouping allows to specify the `groupByMembers` option. The response data will be grouped by users and will only include users that belong to the scope selected in `groupByMembers` field
-/// </summary>
-      public class Grouping
-      {
-          /// <summary>
+    /// This grouping allows to specify the `groupByMembers` option. The response data will be grouped by users and will only include users that belong to the scope selected in `groupByMembers` field
+    /// </summary>
+    public class Grouping
+    {
+        /// <summary>
         ///     The selected grouping option
         ///     Required
         ///     Enum: Company, CompanyNumbers, Users, Queues, IVRs, IVAs, SharedLines, UserGroups, Sites, Departments
@@ -23,5 +23,5 @@ namespace RingCentral
         ///     Enum: Department, UserGroup, Queue, Site
         /// </summary>
         public string groupByMembers { get; set; }
-      }
-  }
+    }
+}

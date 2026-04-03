@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class UpdateForwardingNumberRequest
-      {
-          /// <summary>
+{
+    public class UpdateForwardingNumberRequest
+    {
+        /// <summary>
         ///     Forwarding/Call flip phone number
         /// </summary>
         public string phoneNumber { get; set; }
@@ -22,5 +22,5 @@ namespace RingCentral
         ///     Enum: Home, Mobile, Work, PhoneLine, Outage, Other, BusinessMobilePhone, ExternalCarrier
         /// </summary>
         public string type { get; set; }
-      }
-  }
+    }
+}

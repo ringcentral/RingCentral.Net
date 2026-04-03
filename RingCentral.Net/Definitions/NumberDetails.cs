@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Absent if the request's parameter `resultContent.includeNumberDetails` value is set to `false`.
-/// </summary>
-      public class NumberDetails
-      {
-          /// <summary>
+    /// Absent if the request's parameter `resultContent.includeNumberDetails` value is set to `false`.
+    /// </summary>
+    public class NumberDetails
+    {
+        /// <summary>
         ///     Absent if the request's parameter `context.siteCode` value is set to `null`.
         ///     Example: 10
         /// </summary>
@@ -19,14 +19,14 @@ namespace RingCentral
 
         /// <summary>
         ///     Absent for the `results.category` response's attribute values:
-            ///     `Unknown`, `ServiceCode`, `SpecialService`, `Regular`, `TollFree` and `ShortCode`.
+        ///     `Unknown`, `ServiceCode`, `SpecialService`, `Regular`, `TollFree` and `ShortCode`.
         ///     Example: 10303
         /// </summary>
         public string extensionNumber { get; set; }
 
         /// <summary>
         ///     Absent for the `results.category` response's attribute values:
-            ///     `Unknown`, `ServiceCode`, `Extension`, `Regular`, `TollFree`, `ShortCode` and `Ambiguous`.
+        ///     `Unknown`, `ServiceCode`, `Extension`, `Regular`, `TollFree`, `ShortCode` and `Ambiguous`.
         /// </summary>
         public NumberDetailsSpecialService specialService { get; set; }
 
@@ -86,10 +86,10 @@ namespace RingCentral
 
         /// <summary>
         ///     Absent for the `results.category` response's attribute values:
-            ///     `Unknown`, `SpecialService`, `Extension`, `TollFree`, `ShortCode` and `Ambiguous`.
+        ///     `Unknown`, `SpecialService`, `Extension`, `TollFree`, `ShortCode` and `Ambiguous`.
         ///     Example: Valid
         ///     Enum: Valid, Possible, Invalid
         /// </summary>
         public string status { get; set; }
-      }
-  }
+    }
+}

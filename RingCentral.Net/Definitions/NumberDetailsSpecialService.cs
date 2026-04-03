@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class NumberDetailsSpecialService
-      {
-          /// <summary>
+{
+    public class NumberDetailsSpecialService
+    {
+        /// <summary>
         ///     The type of special service.
         ///     Example: NonEmergencyMedical
         ///     Enum: Emergency, DirectoryAssistance, UpdateEmergencyAddress, CustomerSupport, NonEmergencyPolice, NonEmergencyMedical, TelecommunicationRelay, Unsupported, Supplementary, Unknown
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Example: 116xxx
         /// </summary>
         public string pattern { get; set; }
-      }
-  }
+    }
+}

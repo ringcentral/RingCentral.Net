@@ -7,12 +7,12 @@ namespace RingCentral.Paths.TeamMessaging.V1.Groups.Webhooks
     public partial class Index
     {
         public RestClient rc;
-public TeamMessaging.V1.Groups.Index parent;
-public Index(TeamMessaging.V1.Groups.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public TeamMessaging.V1.Groups.Index parent;
+        public Index(TeamMessaging.V1.Groups.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/webhooks";
@@ -24,10 +24,10 @@ this.rc = parent.rc;
         /// Rate Limit Group: Medium
         /// App Permission: TeamMessaging
         /// </summary>
-  public async Task<RingCentral.TMWebhookList> Get(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.TMWebhookList>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.TMWebhookList> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.TMWebhookList>(this.Path(), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Creates a new webhook.
@@ -36,10 +36,10 @@ return await rc.Get<RingCentral.TMWebhookList>(this.Path(), null, restRequestCon
         /// Rate Limit Group: Medium
         /// App Permission: TeamMessaging
         /// </summary>
-  public async Task<RingCentral.TMWebhookInfo> Post(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<RingCentral.TMWebhookInfo>(this.Path(), null, null, restRequestConfig);
-  }
+        public async Task<RingCentral.TMWebhookInfo> Post(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.TMWebhookInfo>(this.Path(), null, null, restRequestConfig);
+        }
     }
 }
 

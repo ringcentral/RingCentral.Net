@@ -7,12 +7,12 @@ namespace RingCentral.Paths.TeamMessaging.V1.Groups.Events
     public partial class Index
     {
         public RestClient rc;
-public TeamMessaging.V1.Groups.Index parent;
-public Index(TeamMessaging.V1.Groups.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public TeamMessaging.V1.Groups.Index parent;
+        public Index(TeamMessaging.V1.Groups.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/events";
@@ -24,10 +24,10 @@ this.rc = parent.rc;
         /// Rate Limit Group: Medium
         /// App Permission: TeamMessaging
         /// </summary>
-  public async Task<RingCentral.TMEventInfo> Get(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.TMEventInfo>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.TMEventInfo> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.TMEventInfo>(this.Path(), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Creates a new calendar event within the specified group.
@@ -36,10 +36,10 @@ return await rc.Get<RingCentral.TMEventInfo>(this.Path(), null, restRequestConfi
         /// Rate Limit Group: Medium
         /// App Permission: TeamMessaging
         /// </summary>
-  public async Task<RingCentral.TMEventInfo> Post(RingCentral.TMCreateEventRequest tMCreateEventRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<RingCentral.TMEventInfo>(this.Path(), tMCreateEventRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.TMEventInfo> Post(RingCentral.TMCreateEventRequest tMCreateEventRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.TMEventInfo>(this.Path(), tMCreateEventRequest, null, restRequestConfig);
+        }
     }
 }
 

@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Dictionary.Timezone
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Dictionary.Index parent;
-public string timezoneId;
-public Index(Restapi.Dictionary.Index parent, string timezoneId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.timezoneId = timezoneId;
-}
+        public Restapi.Dictionary.Index parent;
+        public string timezoneId;
+        public Index(Restapi.Dictionary.Index parent, string timezoneId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.timezoneId = timezoneId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && timezoneId != null)
@@ -25,30 +25,31 @@ this.timezoneId = timezoneId;
         }
         /// <summary>
         /// Returns all available timezones.
-/// 
+        /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/dictionary/timezone
         /// Rate Limit Group: Light
         /// </summary>
-  public async Task<RingCentral.GetTimezoneListResponse> List(RingCentral.ListTimezonesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.GetTimezoneListResponse>(this.Path(false), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.GetTimezoneListResponse> List(RingCentral.ListTimezonesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.GetTimezoneListResponse>(this.Path(false), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns information on a certain timezone.
-/// 
+        /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/dictionary/timezone/{timezoneId}
         /// Rate Limit Group: Light
         /// </summary>
-  public async Task<RingCentral.TimezoneInfoBase> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (timezoneId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(timezoneId));
-    }return await rc.Get<RingCentral.TimezoneInfoBase>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.TimezoneInfoBase> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (timezoneId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(timezoneId));
+            }
+            return await rc.Get<RingCentral.TimezoneInfoBase>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class RegistrantListResource
-      {
-          /// <summary>
+{
+    public class RegistrantListResource
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public RegistrantModelWithQuestionnaire[] records { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public RcwPagingForwardModel paging { get; set; }
-      }
-  }
+    }
+}

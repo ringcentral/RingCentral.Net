@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Personal contact information
-/// </summary>
-      public class SystemUserContactInfo
-      {
-          /// <summary>
+    /// Personal contact information
+    /// </summary>
+    public class SystemUserContactInfo
+    {
+        /// <summary>
         ///     Given name
         ///     Required
         ///     Example: John
@@ -42,10 +42,10 @@ namespace RingCentral
 
         /// <summary>
         ///     Short number of an extension.
-            ///     Actual max length depends on system length limit for extension.
+        ///     Actual max length depends on system length limit for extension.
         ///     Required
         ///     Example: 205
         /// </summary>
         public string extensionNumber { get; set; }
-      }
-  }
+    }
+}

@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Ring target
-/// </summary>
-      public class CommCoworkerForwardingTargetRequest
-      {
-          /// <summary>
+    /// Ring target
+    /// </summary>
+    public class CommCoworkerForwardingTargetRequest
+    {
+        /// <summary>
         /// </summary>
         public string name { get; set; }
 
@@ -21,5 +21,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CommReferencedExtensionResource extension { get; set; }
-      }
-  }
+    }
+}

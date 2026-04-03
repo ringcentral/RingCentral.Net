@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class FederatedAccountResource
-      {
-          /// <summary>
+{
+    public class FederatedAccountResource
+    {
+        /// <summary>
         /// </summary>
         public string companyName { get; set; }
 
@@ -28,5 +28,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public AdgPhoneNumberResource mainNumber { get; set; }
-      }
-  }
+    }
+}

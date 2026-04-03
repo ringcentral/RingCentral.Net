@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TMCompleteTaskRequest
-      {
-          /// <summary>
+{
+    public class TMCompleteTaskRequest
+    {
+        /// <summary>
         ///     Completeness status
         ///     Enum: Incomplete, Complete
         /// </summary>
@@ -17,5 +17,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? completenessPercentage { get; set; }
-      }
-  }
+    }
+}

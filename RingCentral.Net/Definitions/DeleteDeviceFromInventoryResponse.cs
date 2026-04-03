@@ -1,10 +1,10 @@
 namespace RingCentral
-  {
-      public class DeleteDeviceFromInventoryResponse
-      {
-          /// <summary>
+{
+    public class DeleteDeviceFromInventoryResponse
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public DeleteDeviceFromInventoryResponseRecords[] records { get; set; }
-      }
-  }
+    }
+}

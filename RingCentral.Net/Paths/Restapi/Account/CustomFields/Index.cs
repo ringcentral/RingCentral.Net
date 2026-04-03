@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.CustomFields
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Index parent;
-public string fieldId;
-public Index(Restapi.Account.Index parent, string fieldId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.fieldId = fieldId;
-}
+        public Restapi.Account.Index parent;
+        public string fieldId;
+        public Index(Restapi.Account.Index parent, string fieldId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.fieldId = fieldId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && fieldId != null)
@@ -31,10 +31,10 @@ this.fieldId = fieldId;
         /// App Permission: ReadAccounts
         /// User Permission: ReadUserInfo
         /// </summary>
-  public async Task<RingCentral.CustomFieldList> Get(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.CustomFieldList>(this.Path(false), null, restRequestConfig);
-  }
+        public async Task<RingCentral.CustomFieldList> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.CustomFieldList>(this.Path(false), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Creates custom field attached to the object.
@@ -44,10 +44,10 @@ return await rc.Get<RingCentral.CustomFieldList>(this.Path(false), null, restReq
         /// App Permission: EditAccounts
         /// User Permission: Users
         /// </summary>
-  public async Task<RingCentral.CustomFieldModel> Post(RingCentral.CustomFieldCreateRequest customFieldCreateRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<RingCentral.CustomFieldModel>(this.Path(false), customFieldCreateRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.CustomFieldModel> Post(RingCentral.CustomFieldCreateRequest customFieldCreateRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.CustomFieldModel>(this.Path(false), customFieldCreateRequest, null, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates custom field by ID specified in path.
@@ -57,13 +57,14 @@ return await rc.Post<RingCentral.CustomFieldModel>(this.Path(false), customField
         /// App Permission: EditAccounts
         /// User Permission: Users
         /// </summary>
-  public async Task<RingCentral.CustomFieldModel> Put(RingCentral.CustomFieldUpdateRequest customFieldUpdateRequest, RestRequestConfig restRequestConfig = null)
-  {
-if (fieldId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(fieldId));
-    }return await rc.Put<RingCentral.CustomFieldModel>(this.Path(), customFieldUpdateRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.CustomFieldModel> Put(RingCentral.CustomFieldUpdateRequest customFieldUpdateRequest, RestRequestConfig restRequestConfig = null)
+        {
+            if (fieldId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(fieldId));
+            }
+            return await rc.Put<RingCentral.CustomFieldModel>(this.Path(), customFieldUpdateRequest, null, restRequestConfig);
+        }
 
         /// <summary>
         /// Deletes custom field(s) by ID(s) with the corresponding values.
@@ -73,13 +74,14 @@ if (fieldId == null)
         /// App Permission: EditAccounts
         /// User Permission: Users
         /// </summary>
-  public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
-  {
-if (fieldId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(fieldId));
-    }return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
-  }
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
+        {
+            if (fieldId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(fieldId));
+            }
+            return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
+        }
     }
 }
 

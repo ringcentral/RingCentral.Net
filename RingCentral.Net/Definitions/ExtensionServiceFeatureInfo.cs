@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ExtensionServiceFeatureInfo
-      {
-          /// <summary>
+{
+    public class ExtensionServiceFeatureInfo
+    {
+        /// <summary>
         ///     Feature status; shows feature availability for an extension
         /// </summary>
         public bool? enabled { get; set; }
@@ -15,10 +15,10 @@ namespace RingCentral
 
         /// <summary>
         ///     Reason for limitation of a particular service feature. Returned
-            ///     only if the enabled parameter value is `false`, see Service Feature
-            ///     Limitations and Reasons. When retrieving service features for an extension,
-            ///     the reasons for limitations, if any, are returned in response
+        ///     only if the enabled parameter value is `false`, see Service Feature
+        ///     Limitations and Reasons. When retrieving service features for an extension,
+        ///     the reasons for limitations, if any, are returned in response
         /// </summary>
         public string reason { get; set; }
-      }
-  }
+    }
+}

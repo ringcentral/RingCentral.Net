@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommDailyTriggerRequest
-      {
-          /// <summary>
+{
+    public class CommDailyTriggerRequest
+    {
+        /// <summary>
         ///     Trigger type
         ///     Required
         ///     Example: Daily
@@ -23,5 +23,5 @@ namespace RingCentral
         ///     Format: time
         /// </summary>
         public string endTime { get; set; }
-      }
-  }
+    }
+}

@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Rcvideo.V1.Accounts.Extensions.Delegators
     public partial class Index
     {
         public RestClient rc;
-public Rcvideo.V1.Accounts.Extensions.Index parent;
-public Index(Rcvideo.V1.Accounts.Extensions.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Rcvideo.V1.Accounts.Extensions.Index parent;
+        public Index(Rcvideo.V1.Accounts.Extensions.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/delegators";
@@ -24,10 +24,10 @@ this.rc = parent.rc;
         /// Rate Limit Group: Medium
         /// App Permission: Video
         /// </summary>
-  public async Task<RingCentral.DelegatorsListResult> Get(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.DelegatorsListResult>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.DelegatorsListResult> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.DelegatorsListResult>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

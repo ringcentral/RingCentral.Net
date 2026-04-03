@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class MessageAttachmentInfo
-      {
-          /// <summary>
+{
+    public class MessageAttachmentInfo
+    {
+        /// <summary>
         ///     Internal identifier of a message attachment
         ///     Format: int64
         /// </summary>
@@ -27,7 +27,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Supported for `Voicemail` only. Duration of a voicemail in
-            ///     seconds
+        ///     seconds
         ///     Format: int32
         /// </summary>
         public long? vmDuration { get; set; }
@@ -54,5 +54,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? width { get; set; }
-      }
-  }
+    }
+}

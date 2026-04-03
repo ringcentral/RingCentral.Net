@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Information on navigation
-/// </summary>
-      public class UserContactsNavigationInfo
-      {
-          /// <summary>
+    /// Information on navigation
+    /// </summary>
+    public class UserContactsNavigationInfo
+    {
+        /// <summary>
         /// </summary>
         public UserContactsNavigationInfoUri firstPage { get; set; }
 
@@ -20,5 +20,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public UserContactsNavigationInfoUri lastPage { get; set; }
-      }
-  }
+    }
+}

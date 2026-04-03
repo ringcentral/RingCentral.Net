@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class IvrMenuActionsInfo
-      {
-          /// <summary>
+{
+    public class IvrMenuActionsInfo
+    {
+        /// <summary>
         ///     Key pressed by the user
         ///     Enum: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, Hash, Star, NoInput
         /// </summary>
@@ -22,5 +22,5 @@ namespace RingCentral
         ///     For 'Transfer' action only. PSTN number in E.164 format
         /// </summary>
         public string phoneNumber { get; set; }
-      }
-  }
+    }
+}

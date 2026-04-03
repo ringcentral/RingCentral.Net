@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.Devices.BulkAdd
     public partial class Index
     {
         public RestClient rc;
-public Restapi.V2.Accounts.Devices.Index parent;
-public Index(Restapi.V2.Accounts.Devices.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.V2.Accounts.Devices.Index parent;
+        public Index(Restapi.V2.Accounts.Devices.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/bulk-add";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: EditAccounts
         /// User Permission: AddRemoveDevices
         /// </summary>
-  public async Task<RingCentral.BulkAddDevicesResponse> Post(RingCentral.BulkAddDevicesRequest bulkAddDevicesRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<RingCentral.BulkAddDevicesResponse>(this.Path(), bulkAddDevicesRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.BulkAddDevicesResponse> Post(RingCentral.BulkAddDevicesRequest bulkAddDevicesRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.BulkAddDevicesResponse>(this.Path(), bulkAddDevicesRequest, null, restRequestConfig);
+        }
     }
 }
 

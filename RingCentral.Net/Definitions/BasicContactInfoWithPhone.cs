@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Personal contact information
-/// </summary>
-      public class BasicContactInfoWithPhone
-      {
-          /// <summary>
+    /// Personal contact information
+    /// </summary>
+    public class BasicContactInfoWithPhone
+    {
+        /// <summary>
         ///     Given name
         ///     Example: John
         /// </summary>
@@ -29,5 +29,5 @@ namespace RingCentral
         ///     Example: +16501234567
         /// </summary>
         public string contactPhone { get; set; }
-      }
-  }
+    }
+}

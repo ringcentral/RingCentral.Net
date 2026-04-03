@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Action information
-/// </summary>
-      public class CommRingGroupActionResource
-      {
-          /// <summary>
+    /// Action information
+    /// </summary>
+    public class CommRingGroupActionResource
+    {
+        /// <summary>
         ///     Action type
         ///     Required
         ///     Example: RingGroupAction
@@ -39,5 +39,5 @@ namespace RingCentral
         ///     Example: 5
         /// </summary>
         public long? duration { get; set; }
-      }
-  }
+    }
+}

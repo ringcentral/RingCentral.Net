@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TMTaskInfo
-      {
-          /// <summary>
+{
+    public class TMTaskInfo
+    {
+        /// <summary>
         ///     Internal identifier of a task
         /// </summary>
         public string id { get; set; }
@@ -98,5 +98,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public TaskAttachment[] attachments { get; set; }
-      }
-  }
+    }
+}

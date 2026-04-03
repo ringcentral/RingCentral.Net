@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ContactResource
-      {
-          /// <summary>
+{
+    public class ContactResource
+    {
+        /// <summary>
         ///     Contact extension identifier
         ///     Required
         ///     Example: 865706371004
@@ -89,5 +89,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ExternalIntegrationResource integration { get; set; }
-      }
-  }
+    }
+}

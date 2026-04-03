@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Dictionary.Country
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Dictionary.Index parent;
-public string countryId;
-public Index(Restapi.Dictionary.Index parent, string countryId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.countryId = countryId;
-}
+        public Restapi.Dictionary.Index parent;
+        public string countryId;
+        public Index(Restapi.Dictionary.Index parent, string countryId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.countryId = countryId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && countryId != null)
@@ -25,30 +25,31 @@ this.countryId = countryId;
         }
         /// <summary>
         /// Returns all countries available for calling.
-/// 
+        /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/dictionary/country
         /// Rate Limit Group: Light
         /// </summary>
-  public async Task<RingCentral.CountryListDictionaryModel> List(RingCentral.ListCountriesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.CountryListDictionaryModel>(this.Path(false), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.CountryListDictionaryModel> List(RingCentral.ListCountriesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.CountryListDictionaryModel>(this.Path(false), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns information on a specific country.
-/// 
+        /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/dictionary/country/{countryId}
         /// Rate Limit Group: Light
         /// </summary>
-  public async Task<RingCentral.CountryInfoDictionaryModel> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (countryId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(countryId));
-    }return await rc.Get<RingCentral.CountryInfoDictionaryModel>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.CountryInfoDictionaryModel> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (countryId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(countryId));
+            }
+            return await rc.Get<RingCentral.CountryInfoDictionaryModel>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

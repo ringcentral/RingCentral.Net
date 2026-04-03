@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Dictionary.Language
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Dictionary.Index parent;
-public string languageId;
-public Index(Restapi.Dictionary.Index parent, string languageId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.languageId = languageId;
-}
+        public Restapi.Dictionary.Index parent;
+        public string languageId;
+        public Index(Restapi.Dictionary.Index parent, string languageId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.languageId = languageId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && languageId != null)
@@ -25,30 +25,31 @@ this.languageId = languageId;
         }
         /// <summary>
         /// Returns information about the supported languages.
-/// 
+        /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/dictionary/language
         /// Rate Limit Group: Light
         /// </summary>
-  public async Task<RingCentral.LanguageList> List(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.LanguageList>(this.Path(false), null, restRequestConfig);
-  }
+        public async Task<RingCentral.LanguageList> List(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.LanguageList>(this.Path(false), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns a language by ID.
-/// 
+        /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/dictionary/language/{languageId}
         /// Rate Limit Group: Light
         /// </summary>
-  public async Task<RingCentral.LanguageInfo> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (languageId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(languageId));
-    }return await rc.Get<RingCentral.LanguageInfo>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.LanguageInfo> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (languageId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(languageId));
+            }
+            return await rc.Get<RingCentral.LanguageInfo>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

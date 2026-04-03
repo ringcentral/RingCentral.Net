@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.BusinessHours
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Extension.Index parent;
-public Index(Restapi.Account.Extension.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Extension.Index parent;
+        public Index(Restapi.Account.Extension.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/business-hours";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: ReadAccounts
         /// User Permission: ReadExtensions
         /// </summary>
-  public async Task<RingCentral.GetUserBusinessHoursResponse> Get(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.GetUserBusinessHoursResponse>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.GetUserBusinessHoursResponse> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.GetUserBusinessHoursResponse>(this.Path(), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates the user business hours schedule.
@@ -38,10 +38,10 @@ return await rc.Get<RingCentral.GetUserBusinessHoursResponse>(this.Path(), null,
         /// App Permission: EditExtensions
         /// User Permission: EditUserAnsweringRules
         /// </summary>
-  public async Task<RingCentral.UserBusinessHoursUpdateResponse> Put(RingCentral.UserBusinessHoursUpdateRequest userBusinessHoursUpdateRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Put<RingCentral.UserBusinessHoursUpdateResponse>(this.Path(), userBusinessHoursUpdateRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.UserBusinessHoursUpdateResponse> Put(RingCentral.UserBusinessHoursUpdateRequest userBusinessHoursUpdateRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Put<RingCentral.UserBusinessHoursUpdateResponse>(this.Path(), userBusinessHoursUpdateRequest, null, restRequestConfig);
+        }
     }
 }
 

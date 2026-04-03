@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.IvrPrompts
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Index parent;
-public string promptId;
-public Index(Restapi.Account.Index parent, string promptId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.promptId = promptId;
-}
+        public Restapi.Account.Index parent;
+        public string promptId;
+        public Index(Restapi.Account.Index parent, string promptId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.promptId = promptId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && promptId != null)
@@ -31,10 +31,10 @@ this.promptId = promptId;
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyGreetings
         /// </summary>
-  public async Task<RingCentral.IvrPrompts> List(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.IvrPrompts>(this.Path(false), null, restRequestConfig);
-  }
+        public async Task<RingCentral.IvrPrompts> List(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.IvrPrompts>(this.Path(false), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Creates an IVR prompt.
@@ -44,11 +44,11 @@ return await rc.Get<RingCentral.IvrPrompts>(this.Path(false), null, restRequestC
         /// App Permission: EditAccounts
         /// User Permission: EditCompanyGreetings
         /// </summary>
-  public async Task<RingCentral.PromptInfo> Post(RingCentral.CreateIVRPromptRequest createIVRPromptRequest, RestRequestConfig restRequestConfig = null)
-  {
-var multipartFormDataContent = Utils.GetMultipartFormDataContent(createIVRPromptRequest);
-return await rc.Post<RingCentral.PromptInfo>(this.Path(false), multipartFormDataContent, null, restRequestConfig);
-  }
+        public async Task<RingCentral.PromptInfo> Post(RingCentral.CreateIVRPromptRequest createIVRPromptRequest, RestRequestConfig restRequestConfig = null)
+        {
+            var multipartFormDataContent = Utils.GetMultipartFormDataContent(createIVRPromptRequest);
+            return await rc.Post<RingCentral.PromptInfo>(this.Path(false), multipartFormDataContent, null, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns an IVR prompt by ID.
@@ -58,13 +58,14 @@ return await rc.Post<RingCentral.PromptInfo>(this.Path(false), multipartFormData
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyGreetings
         /// </summary>
-  public async Task<RingCentral.PromptInfo> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (promptId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(promptId));
-    }return await rc.Get<RingCentral.PromptInfo>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.PromptInfo> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (promptId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(promptId));
+            }
+            return await rc.Get<RingCentral.PromptInfo>(this.Path(), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates an IVR prompt by ID
@@ -74,13 +75,14 @@ if (promptId == null)
         /// App Permission: EditAccounts
         /// User Permission: EditCompanyGreetings
         /// </summary>
-  public async Task<RingCentral.PromptInfo> Put(RingCentral.UpdateIVRPromptRequest updateIVRPromptRequest, RestRequestConfig restRequestConfig = null)
-  {
-if (promptId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(promptId));
-    }return await rc.Put<RingCentral.PromptInfo>(this.Path(), updateIVRPromptRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.PromptInfo> Put(RingCentral.UpdateIVRPromptRequest updateIVRPromptRequest, RestRequestConfig restRequestConfig = null)
+        {
+            if (promptId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(promptId));
+            }
+            return await rc.Put<RingCentral.PromptInfo>(this.Path(), updateIVRPromptRequest, null, restRequestConfig);
+        }
 
         /// <summary>
         /// Deletes an IVR prompt by ID.
@@ -90,13 +92,14 @@ if (promptId == null)
         /// App Permission: EditAccounts
         /// User Permission: EditCompanyGreetings
         /// </summary>
-  public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
-  {
-if (promptId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(promptId));
-    }return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
-  }
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
+        {
+            if (promptId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(promptId));
+            }
+            return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
+        }
     }
 }
 

@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// User interface language data
-/// </summary>
-      public class LanguageInfo
-      {
-          /// <summary>
+    /// User interface language data
+    /// </summary>
+    public class LanguageInfo
+    {
+        /// <summary>
         ///     Internal identifier of a language
         /// </summary>
         public string id { get; set; }
@@ -18,13 +18,13 @@ namespace RingCentral
 
         /// <summary>
         ///     Indicates whether a language is available as
-            ///     greeting language
+        ///     greeting language
         /// </summary>
         public bool? greeting { get; set; }
 
         /// <summary>
         ///     Indicates whether a language is available as
-            ///     formatting locale
+        ///     formatting locale
         /// </summary>
         public bool? formattingLocale { get; set; }
 
@@ -58,5 +58,5 @@ namespace RingCentral
         ///     Date format
         /// </summary>
         public string dateFormat { get; set; }
-      }
-  }
+    }
+}

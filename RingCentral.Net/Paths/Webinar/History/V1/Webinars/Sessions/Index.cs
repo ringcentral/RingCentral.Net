@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Webinar.History.V1.Webinars.Sessions
     public partial class Index
     {
         public RestClient rc;
-public Webinar.History.V1.Webinars.Index parent;
-public string sessionId;
-public Index(Webinar.History.V1.Webinars.Index parent, string sessionId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.sessionId = sessionId;
-}
+        public Webinar.History.V1.Webinars.Index parent;
+        public string sessionId;
+        public Index(Webinar.History.V1.Webinars.Index parent, string sessionId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.sessionId = sessionId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && sessionId != null)
@@ -30,13 +30,14 @@ this.sessionId = sessionId;
         /// Rate Limit Group: Heavy
         /// App Permission: ReadWebinars
         /// </summary>
-  public async Task<RingCentral.HistorySessionResource> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (sessionId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(sessionId));
-    }return await rc.Get<RingCentral.HistorySessionResource>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.HistorySessionResource> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (sessionId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(sessionId));
+            }
+            return await rc.Get<RingCentral.HistorySessionResource>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

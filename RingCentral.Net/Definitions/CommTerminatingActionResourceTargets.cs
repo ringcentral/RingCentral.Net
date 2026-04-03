@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommTerminatingActionResourceTargets
-      {
-          /// <summary>
+{
+    public class CommTerminatingActionResourceTargets
+    {
+        /// <summary>
         /// </summary>
         public string name { get; set; }
 
@@ -29,5 +29,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CommPhoneNumberResource destination { get; set; }
-      }
-  }
+    }
+}

@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Query parameters for operation getBridgeByPstnPin
-/// </summary>
-      public class GetBridgeByPstnPinParameters
-      {
-          /// <summary>
+    /// Query parameters for operation getBridgeByPstnPin
+    /// </summary>
+    public class GetBridgeByPstnPinParameters
+    {
+        /// <summary>
         ///     Bridge hash password
         /// </summary>
         public string pw { get; set; }
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Phone number to find a phone group for PSTN PIN. If it is not specified, then the default phone group will be used.
         /// </summary>
         public string phoneNumber { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class BulkAddDevicesItem
-      {
-          /// <summary>
+{
+    public class BulkAddDevicesItem
+    {
+        /// <summary>
         ///     Internal identifier of a cost center
         ///     Example: 224149
         /// </summary>
@@ -35,5 +35,5 @@ namespace RingCentral
         ///     The option that indicates whether Contact Center Phone Line should be created or not
         /// </summary>
         public bool? contactCenterPhoneLine { get; set; }
-      }
-  }
+    }
+}

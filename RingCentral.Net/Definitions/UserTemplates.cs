@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class UserTemplates
-      {
-          /// <summary>
+{
+    public class UserTemplates
+    {
+        /// <summary>
         ///     Link to user templates resource
         ///     Format: uri
         /// </summary>
@@ -23,5 +23,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class MessageTemplateUpdateRequest
-      {
-          /// <summary>
+{
+    public class MessageTemplateUpdateRequest
+    {
+        /// <summary>
         ///     Name of a template
         /// </summary>
         public string displayName { get; set; }
@@ -15,5 +15,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public Site site { get; set; }
-      }
-  }
+    }
+}

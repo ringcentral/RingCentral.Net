@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.Device
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Index parent;
-public string deviceId;
-public Index(Restapi.Account.Index parent, string deviceId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.deviceId = deviceId;
-}
+        public Restapi.Account.Index parent;
+        public string deviceId;
+        public Index(Restapi.Account.Index parent, string deviceId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.deviceId = deviceId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && deviceId != null)
@@ -31,13 +31,14 @@ this.deviceId = deviceId;
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyDevices
         /// </summary>
-  public async Task<RingCentral.DeviceResource> Get(RingCentral.ReadDeviceParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-if (deviceId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(deviceId));
-    }return await rc.Get<RingCentral.DeviceResource>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.DeviceResource> Get(RingCentral.ReadDeviceParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            if (deviceId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(deviceId));
+            }
+            return await rc.Get<RingCentral.DeviceResource>(this.Path(), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates account device(s) by their ID(s).
@@ -47,13 +48,14 @@ if (deviceId == null)
         /// App Permission: EditAccounts
         /// User Permission: EditCompanyDevices
         /// </summary>
-  public async Task<RingCentral.DeviceResource> Put(RingCentral.AccountDeviceUpdate accountDeviceUpdate, RingCentral.UpdateDeviceParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-if (deviceId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(deviceId));
-    }return await rc.Put<RingCentral.DeviceResource>(this.Path(), accountDeviceUpdate, queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.DeviceResource> Put(RingCentral.AccountDeviceUpdate accountDeviceUpdate, RingCentral.UpdateDeviceParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            if (deviceId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(deviceId));
+            }
+            return await rc.Put<RingCentral.DeviceResource>(this.Path(), accountDeviceUpdate, queryParams, restRequestConfig);
+        }
     }
 }
 

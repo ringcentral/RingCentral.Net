@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class RcwBaseContactModel
-      {
-          /// <summary>
+{
+    public class RcwBaseContactModel
+    {
+        /// <summary>
         ///     First (given) name
         ///     Example: John
         /// </summary>
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Example: Doe
         /// </summary>
         public string lastName { get; set; }
-      }
-  }
+    }
+}

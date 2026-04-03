@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class WebinarInfoModel
-      {
-          /// <summary>
+{
+    public class WebinarInfoModel
+    {
+        /// <summary>
         ///     Webinar title
         ///     Example: All-Hands Webinar
         /// </summary>
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Example: Quarterly All-hands event to present recent news about our company to employees
         /// </summary>
         public string description { get; set; }
-      }
-  }
+    }
+}

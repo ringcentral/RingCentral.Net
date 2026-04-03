@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ScimAuthenticationScheme
-      {
-          /// <summary>
+{
+    public class ScimAuthenticationScheme
+    {
+        /// <summary>
         /// </summary>
         public string description { get; set; }
 
@@ -23,5 +23,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public bool? primary { get; set; }
-      }
-  }
+    }
+}

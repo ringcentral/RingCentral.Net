@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.AnsweringRule
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Index parent;
-public string ruleId;
-public Index(Restapi.Account.Index parent, string ruleId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.ruleId = ruleId;
-}
+        public Restapi.Account.Index parent;
+        public string ruleId;
+        public Index(Restapi.Account.Index parent, string ruleId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.ruleId = ruleId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && ruleId != null)
@@ -31,10 +31,10 @@ this.ruleId = ruleId;
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyAnsweringRules
         /// </summary>
-  public async Task<RingCentral.CompanyAnsweringRuleList> List(RingCentral.ListCompanyAnsweringRulesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.CompanyAnsweringRuleList>(this.Path(false), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.CompanyAnsweringRuleList> List(RingCentral.ListCompanyAnsweringRulesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.CompanyAnsweringRuleList>(this.Path(false), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Creates call handling rule on account level.
@@ -44,10 +44,10 @@ return await rc.Get<RingCentral.CompanyAnsweringRuleList>(this.Path(false), quer
         /// App Permission: EditAccounts
         /// User Permission: EditCompanyAnsweringRules
         /// </summary>
-  public async Task<RingCentral.CompanyAnsweringRuleInfo> Post(RingCentral.CompanyAnsweringRuleRequest companyAnsweringRuleRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<RingCentral.CompanyAnsweringRuleInfo>(this.Path(false), companyAnsweringRuleRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.CompanyAnsweringRuleInfo> Post(RingCentral.CompanyAnsweringRuleRequest companyAnsweringRuleRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.CompanyAnsweringRuleInfo>(this.Path(false), companyAnsweringRuleRequest, null, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns a company call handling rule by ID.
@@ -57,13 +57,14 @@ return await rc.Post<RingCentral.CompanyAnsweringRuleInfo>(this.Path(false), com
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyAnsweringRules
         /// </summary>
-  public async Task<RingCentral.CompanyAnsweringRuleInfo> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (ruleId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(ruleId));
-    }return await rc.Get<RingCentral.CompanyAnsweringRuleInfo>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.CompanyAnsweringRuleInfo> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (ruleId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(ruleId));
+            }
+            return await rc.Get<RingCentral.CompanyAnsweringRuleInfo>(this.Path(), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates a company call handling rule.
@@ -73,13 +74,14 @@ if (ruleId == null)
         /// App Permission: EditAccounts
         /// User Permission: EditCompanyAnsweringRules
         /// </summary>
-  public async Task<RingCentral.CompanyAnsweringRuleInfo> Put(RingCentral.CompanyAnsweringRuleUpdate companyAnsweringRuleUpdate, RestRequestConfig restRequestConfig = null)
-  {
-if (ruleId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(ruleId));
-    }return await rc.Put<RingCentral.CompanyAnsweringRuleInfo>(this.Path(), companyAnsweringRuleUpdate, null, restRequestConfig);
-  }
+        public async Task<RingCentral.CompanyAnsweringRuleInfo> Put(RingCentral.CompanyAnsweringRuleUpdate companyAnsweringRuleUpdate, RestRequestConfig restRequestConfig = null)
+        {
+            if (ruleId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(ruleId));
+            }
+            return await rc.Put<RingCentral.CompanyAnsweringRuleInfo>(this.Path(), companyAnsweringRuleUpdate, null, restRequestConfig);
+        }
 
         /// <summary>
         /// Deletes a company custom call handling rule by a particular ID.
@@ -89,13 +91,14 @@ if (ruleId == null)
         /// App Permission: EditAccounts
         /// User Permission: EditCompanyAnsweringRules
         /// </summary>
-  public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
-  {
-if (ruleId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(ruleId));
-    }return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
-  }
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
+        {
+            if (ruleId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(ruleId));
+            }
+            return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
+        }
     }
 }
 

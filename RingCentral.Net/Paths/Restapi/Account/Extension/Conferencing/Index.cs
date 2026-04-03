@@ -7,46 +7,46 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Conferencing
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Extension.Index parent;
-public Index(Restapi.Account.Extension.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Extension.Index parent;
+        public Index(Restapi.Account.Extension.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/conferencing";
         }
         /// <summary>
         /// Returns information on Free Conference Calling (FCC) feature
-/// for a given extension.
-/// 
+        /// for a given extension.
+        /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/conferencing
         /// Rate Limit Group: Light
         /// App Permission: ReadAccounts
         /// User Permission: OrganizeConference
         /// </summary>
-  public async Task<RingCentral.GetConferencingInfoResponse> Get(RingCentral.ReadConferencingSettingsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.GetConferencingInfoResponse>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.GetConferencingInfoResponse> Get(RingCentral.ReadConferencingSettingsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.GetConferencingInfoResponse>(this.Path(), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates the default conferencing number for the current extension.
-/// The number can be selected from conferencing numbers of the current extension.
-/// Updates the setting, allowing participants join the conference before host.
-/// 
+        /// The number can be selected from conferencing numbers of the current extension.
+        /// Updates the setting, allowing participants join the conference before host.
+        /// 
         /// HTTP Method: put
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/conferencing
         /// Rate Limit Group: Medium
         /// App Permission: EditExtensions
         /// User Permission: OrganizeConference
         /// </summary>
-  public async Task<RingCentral.GetConferencingInfoResponse> Put(RingCentral.UpdateConferencingInfoRequest updateConferencingInfoRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Put<RingCentral.GetConferencingInfoResponse>(this.Path(), updateConferencingInfoRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.GetConferencingInfoResponse> Put(RingCentral.UpdateConferencingInfoRequest updateConferencingInfoRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Put<RingCentral.GetConferencingInfoResponse>(this.Path(), updateConferencingInfoRequest, null, restRequestConfig);
+        }
     }
 }
 

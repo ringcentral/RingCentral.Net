@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class BatchProvisionUsersResponseResultsExtension
-      {
-          /// <summary>
+{
+    public class BatchProvisionUsersResponseResultsExtension
+    {
+        /// <summary>
         ///     The internal identifier of RingCentral extension created
         ///     Example: 12345
         /// </summary>
@@ -11,5 +11,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public BatchProvisionUsersResponseResultsExtensionDevices[] devices { get; set; }
-      }
-  }
+    }
+}

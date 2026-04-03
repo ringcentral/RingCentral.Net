@@ -1,10 +1,10 @@
 namespace RingCentral
-  {
-      public class AccountHistoryPaging
-      {
-          /// <summary>
+{
+    public class AccountHistoryPaging
+    {
+        /// <summary>
         ///     The current page number. 1-indexed, so the first page is 1 by default. May be omitted if result is empty
-            ///     (because non-existent page was specified or perPage=0 was requested)
+        ///     (because non-existent page was specified or perPage=0 was requested)
         ///     Maximum: 1000
         ///     Minimum: 1
         ///     Format: int32
@@ -33,5 +33,5 @@ namespace RingCentral
         ///     Example: 25
         /// </summary>
         public long? totalFound { get; set; }
-      }
-  }
+    }
+}

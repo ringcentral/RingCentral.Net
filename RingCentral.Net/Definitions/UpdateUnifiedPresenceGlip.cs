@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class UpdateUnifiedPresenceGlip
-      {
-          /// <summary>
+{
+    public class UpdateUnifiedPresenceGlip
+    {
+        /// <summary>
         ///     Visibility setting allowing other users to see Glip presence status
         ///     Enum: Visible, Invisible
         /// </summary>
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Enum: Available, DND
         /// </summary>
         public string availability { get; set; }
-      }
-  }
+    }
+}

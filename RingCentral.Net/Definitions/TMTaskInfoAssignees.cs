@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TMTaskInfoAssignees
-      {
-          /// <summary>
+{
+    public class TMTaskInfoAssignees
+    {
+        /// <summary>
         ///     Internal identifier of an assignee
         /// </summary>
         public string id { get; set; }
@@ -12,5 +12,5 @@ namespace RingCentral
         ///     Enum: Pending, Completed
         /// </summary>
         public string status { get; set; }
-      }
-  }
+    }
+}

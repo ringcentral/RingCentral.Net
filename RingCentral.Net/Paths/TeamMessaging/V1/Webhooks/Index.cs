@@ -7,14 +7,14 @@ namespace RingCentral.Paths.TeamMessaging.V1.Webhooks
     public partial class Index
     {
         public RestClient rc;
-public TeamMessaging.V1.Index parent;
-public string webhookId;
-public Index(TeamMessaging.V1.Index parent, string webhookId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.webhookId = webhookId;
-}
+        public TeamMessaging.V1.Index parent;
+        public string webhookId;
+        public Index(TeamMessaging.V1.Index parent, string webhookId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.webhookId = webhookId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && webhookId != null)
@@ -30,10 +30,10 @@ this.webhookId = webhookId;
         /// Rate Limit Group: Medium
         /// App Permission: TeamMessaging
         /// </summary>
-  public async Task<RingCentral.TMWebhookList> List(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.TMWebhookList>(this.Path(false), null, restRequestConfig);
-  }
+        public async Task<RingCentral.TMWebhookList> List(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.TMWebhookList>(this.Path(false), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns webhooks(s) with the specified id(s).
@@ -42,13 +42,14 @@ return await rc.Get<RingCentral.TMWebhookList>(this.Path(false), null, restReque
         /// Rate Limit Group: Medium
         /// App Permission: TeamMessaging
         /// </summary>
-  public async Task<RingCentral.TMWebhookList> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (webhookId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(webhookId));
-    }return await rc.Get<RingCentral.TMWebhookList>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.TMWebhookList> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (webhookId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(webhookId));
+            }
+            return await rc.Get<RingCentral.TMWebhookList>(this.Path(), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Deletes a webhook by ID.
@@ -57,13 +58,14 @@ if (webhookId == null)
         /// Rate Limit Group: Medium
         /// App Permission: TeamMessaging
         /// </summary>
-  public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
-  {
-if (webhookId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(webhookId));
-    }return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
-  }
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
+        {
+            if (webhookId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(webhookId));
+            }
+            return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
+        }
     }
 }
 

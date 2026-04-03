@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CompanyAnsweringRuleInfo
-      {
-          /// <summary>
+{
+    public class CompanyAnsweringRuleInfo
+    {
+        /// <summary>
         ///     Internal identifier of an answering rule
         /// </summary>
         public string id { get; set; }
@@ -59,5 +59,5 @@ namespace RingCentral
         ///     Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List
         /// </summary>
         public GreetingInfo[] greetings { get; set; }
-      }
-  }
+    }
+}

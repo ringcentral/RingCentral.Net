@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class BridgeJoinPstnPreferences
-      {
-          /// <summary>
+{
+    public class BridgeJoinPstnPreferences
+    {
+        /// <summary>
         ///     Specifies whether to play 'Announce yourself' prompt
         ///     Default: true
         /// </summary>
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Default: true
         /// </summary>
         public bool? promptParticipants { get; set; }
-      }
-  }
+    }
+}

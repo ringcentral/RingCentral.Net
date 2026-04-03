@@ -1,15 +1,15 @@
 namespace RingCentral
-  {
-      public class PhoneNumberInfoConferencing
-      {
-          /// <summary>
+{
+    public class PhoneNumberInfoConferencing
+    {
+        /// <summary>
         /// </summary>
         public CountryInfoShortModel country { get; set; }
 
         /// <summary>
         ///     The value should be `true` if the number is default for the conference. Default
-            ///     conference number is a domestic number that can be set by user (otherwise
-            ///     it is set by the system). Only one default number per country is allowed
+        ///     conference number is a domestic number that can be set by user (otherwise
+        ///     it is set by the system). Only one default number per country is allowed
         /// </summary>
         public bool? @default { get; set; }
 
@@ -30,8 +30,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Indicates if the number is 'premium' (account phone number
-            ///     with the `ConferencingNumber` usageType)
+        ///     with the `ConferencingNumber` usageType)
         /// </summary>
         public bool? premium { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class AutomaticLocationUpdatesDeviceInfo
-      {
-          /// <summary>
+{
+    public class AutomaticLocationUpdatesDeviceInfo
+    {
+        /// <summary>
         ///     Internal identifier of a device
         /// </summary>
         public string id { get; set; }
@@ -41,5 +41,5 @@ namespace RingCentral
         ///     Phone lines information
         /// </summary>
         public AutomaticLocationUpdatesPhoneLine[] phoneLines { get; set; }
-      }
-  }
+    }
+}

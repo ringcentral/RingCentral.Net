@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.ForwardAllCalls
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Index parent;
-public Index(Restapi.Account.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Index parent;
+        public Index(Restapi.Account.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/forward-all-calls";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyAnsweringRules
         /// </summary>
-  public async Task<RingCentral.ForwardAllCompanyCallsInfo> Get(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.ForwardAllCompanyCallsInfo>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.ForwardAllCompanyCallsInfo> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.ForwardAllCompanyCallsInfo>(this.Path(), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates *Forward All Company Calls* feature setting.
@@ -38,10 +38,10 @@ return await rc.Get<RingCentral.ForwardAllCompanyCallsInfo>(this.Path(), null, r
         /// App Permission: EditAccounts
         /// User Permission: EditCompanyAnsweringRules
         /// </summary>
-  public async Task<RingCentral.ForwardAllCompanyCallsInfo> Patch(RingCentral.ForwardAllCompanyCallsRequest forwardAllCompanyCallsRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Patch<RingCentral.ForwardAllCompanyCallsInfo>(this.Path(), forwardAllCompanyCallsRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.ForwardAllCompanyCallsInfo> Patch(RingCentral.ForwardAllCompanyCallsRequest forwardAllCompanyCallsRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Patch<RingCentral.ForwardAllCompanyCallsInfo>(this.Path(), forwardAllCompanyCallsRequest, null, restRequestConfig);
+        }
     }
 }
 

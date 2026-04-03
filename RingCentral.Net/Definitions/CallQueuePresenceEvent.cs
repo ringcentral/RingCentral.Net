@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CallQueuePresenceEvent
-      {
-          /// <summary>
+{
+    public class CallQueuePresenceEvent
+    {
+        /// <summary>
         ///     Universally unique identifier of a notification
         /// </summary>
         public string uuid { get; set; }
@@ -26,5 +26,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CallQueuePresenceEventBody body { get; set; }
-      }
-  }
+    }
+}

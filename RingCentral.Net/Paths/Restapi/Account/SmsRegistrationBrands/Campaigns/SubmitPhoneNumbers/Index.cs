@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.SmsRegistrationBrands.Campaigns.Subm
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.SmsRegistrationBrands.Campaigns.Index parent;
-public Index(Restapi.Account.SmsRegistrationBrands.Campaigns.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.SmsRegistrationBrands.Campaigns.Index parent;
+        public Index(Restapi.Account.SmsRegistrationBrands.Campaigns.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/submit-phone-numbers";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: EditAccounts
         /// User Permission: EditCompanyPhoneNumbers
         /// </summary>
-  public async Task<string> Post(RingCentral.AssignNumbersRequest assignNumbersRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<string>(this.Path(), assignNumbersRequest, null, restRequestConfig);
-  }
+        public async Task<string> Post(RingCentral.AssignNumbersRequest assignNumbersRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<string>(this.Path(), assignNumbersRequest, null, restRequestConfig);
+        }
     }
 }
 

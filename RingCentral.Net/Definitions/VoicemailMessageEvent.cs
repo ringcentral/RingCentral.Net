@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class VoicemailMessageEvent
-      {
-          /// <summary>
+{
+    public class VoicemailMessageEvent
+    {
+        /// <summary>
         ///     Universally unique identifier of a notification
         /// </summary>
         public string uuid { get; set; }
@@ -30,5 +30,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public VoicemailMessageEventBody body { get; set; }
-      }
-  }
+    }
+}

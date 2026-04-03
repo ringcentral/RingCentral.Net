@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TransferInfo
-      {
-          /// <summary>
+{
+    public class TransferInfo
+    {
+        /// <summary>
         /// </summary>
         public TransferExtensionInfo extension { get; set; }
 
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Enum: HoldTimeExpiration, MaxCallers, NoAnswer
         /// </summary>
         public string action { get; set; }
-      }
-  }
+    }
+}

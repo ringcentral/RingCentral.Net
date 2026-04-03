@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Information on account service plan
-/// </summary>
-      public class ServicePlanInfo
-      {
-          /// <summary>
+    /// Information on account service plan
+    /// </summary>
+    public class ServicePlanInfo
+    {
+        /// <summary>
         ///     Internal identifier of a service plan
         /// </summary>
         public string id { get; set; }
@@ -24,5 +24,5 @@ namespace RingCentral
         ///     Enum: Freyja, Phoenix, PbxBasic
         /// </summary>
         public string freemiumProductType { get; set; }
-      }
-  }
+    }
+}

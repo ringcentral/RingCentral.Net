@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class InboundFaxesInfo
-      {
-          /// <summary>
+{
+    public class InboundFaxesInfo
+    {
+        /// <summary>
         ///     Email notification flag
         /// </summary>
         public bool? notifyByEmail { get; set; }
@@ -19,15 +19,15 @@ namespace RingCentral
 
         /// <summary>
         ///     List of recipient email addresses for inbound fax notifications.
-            ///     Returned if specified, in both modes (advanced/basic). Applied in advanced
-            ///     mode only
+        ///     Returned if specified, in both modes (advanced/basic). Applied in advanced
+        ///     mode only
         /// </summary>
         public string[] advancedEmailAddresses { get; set; }
 
         /// <summary>
         ///     List of recipient phone numbers for inbound fax notifications.
-            ///     Returned if specified, in both modes (advanced/basic). Applied in advanced
-            ///     mode only
+        ///     Returned if specified, in both modes (advanced/basic). Applied in advanced
+        ///     mode only
         /// </summary>
         public string[] advancedSmsEmailAddresses { get; set; }
 
@@ -40,5 +40,5 @@ namespace RingCentral
         ///     Indicates whether email should be automatically marked as read
         /// </summary>
         public bool? markAsRead { get; set; }
-      }
-  }
+    }
+}

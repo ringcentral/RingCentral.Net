@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Query parameters for operation listAccountPhoneNumbersV2
-/// </summary>
-      public class ListAccountPhoneNumbersV2Parameters
-      {
-          /// <summary>
+    /// Query parameters for operation listAccountPhoneNumbersV2
+    /// </summary>
+    public class ListAccountPhoneNumbersV2Parameters
+    {
+        /// <summary>
         ///     The result set page number (1-indexed) to return
         ///     Maximum: 1000
         ///     Minimum: 1
@@ -17,7 +17,7 @@ namespace RingCentral
 
         /// <summary>
         ///     The number of items per page. If the provided value in the request
-            ///     is greater than a maximum, the maximum value is applied
+        ///     is greater than a maximum, the maximum value is applied
         ///     Maximum: 1000
         ///     Minimum: 1
         ///     Format: int32
@@ -40,8 +40,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Status of a phone number. If the value is `Normal`, the phone
-            ///     number is ready to be used. Otherwise, it is an external number not yet
-            ///     ported to RingCentral
+        ///     number is ready to be used. Otherwise, it is an external number not yet
+        ///     ported to RingCentral
         ///     Enum: Normal, Pending, PortedIn, Temporary, Unknown
         /// </summary>
         public string status { get; set; }
@@ -71,10 +71,10 @@ namespace RingCentral
 
         /// <summary>
         ///     Phone number in e.164 format to be searched for.
-            ///     Parameter value can include wildcards (e.g. "+165012345**")
-            ///     or be an exact number "+16501234500" - single number is searched in that case.
-            ///     Make sure you escape the "+" in the URL as "%2B"
+        ///     Parameter value can include wildcards (e.g. "+165012345**")
+        ///     or be an exact number "+16501234500" - single number is searched in that case.
+        ///     Make sure you escape the "+" in the URL as "%2B"
         /// </summary>
         public string phoneNumber { get; set; }
-      }
-  }
+    }
+}

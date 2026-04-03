@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Basic participant information
-/// </summary>
-      public class Participant
-      {
-          /// <summary>
+    /// Basic participant information
+    /// </summary>
+    public class Participant
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public string id { get; set; }
@@ -37,5 +37,5 @@ namespace RingCentral
         ///     Pass-thru parameter in join url
         /// </summary>
         public string correlationId { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class GetAccountInfoResponse
-      {
-          /// <summary>
+{
+    public class GetAccountInfoResponse
+    {
+        /// <summary>
         ///     Internal identifier of an account
         ///     Format: int64
         /// </summary>
@@ -30,7 +30,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Additional account identifier, created by partner application
-            ///     and applied on client side
+        ///     and applied on client side
         /// </summary>
         public string partnerId { get; set; }
 
@@ -64,27 +64,27 @@ namespace RingCentral
 
         /// <summary>
         ///     Specifies whether an account is included into any federation
-            ///     of accounts or not
+        ///     of accounts or not
         /// </summary>
         public bool? federated { get; set; }
 
         /// <summary>
         ///     If outbound call prefix is not specified, or set to null (0),
-            ///     then the parameter is not returned; the supported value range is 2-9
+        ///     then the parameter is not returned; the supported value range is 2-9
         ///     Format: int32
         /// </summary>
         public long? outboundCallPrefix { get; set; }
 
         /// <summary>
         ///     Customer facing identifier. Returned for accounts with the
-            ///     turned off PBX features. Equals to main company number in
-            ///     [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
-            ///     (without "+" sign)format
+        ///     turned off PBX features. Equals to main company number in
+        ///     [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
+        ///     (without "+" sign)format
         /// </summary>
         public string cfid { get; set; }
 
         /// <summary>
         /// </summary>
         public AccountLimitsInfo limits { get; set; }
-      }
-  }
+    }
+}

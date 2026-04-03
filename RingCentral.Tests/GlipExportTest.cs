@@ -23,19 +23,19 @@ public class GlipExportTest
     }
 
 
-//        // cannot do it because there is no api to list existing tasks
-//        [Fact]
-//        public async void DowloadArchieve()
-//        {
-//            using (var rc = new RestClient(
-//                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
-//                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
-//                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
-//            ))
-//            {
-//                await rc.Authorize(
-//                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
-//                );
-//            }
-//        }
+    //        // cannot do it because there is no api to list existing tasks
+    //        [Fact]
+    //        public async void DowloadArchieve()
+    //        {
+    //            using (var rc = new RestClient(
+    //                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
+    //                Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
+    //                Environment.GetEnvironmentVariable("RINGCENTRAL_SERVER_URL")
+    //            ))
+    //            {
+    //                await rc.Authorize(
+    //                    Environment.GetEnvironmentVariable("RINGCENTRAL_JWT_TOKEN")
+    //                );
+    //            }
+    //        }
 }

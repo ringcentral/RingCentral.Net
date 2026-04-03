@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// The internal IDs of RC-authenticated users.
-/// </summary>
-      public class ParticipantExtendedModel
-      {
-          /// <summary>
+    /// The internal IDs of RC-authenticated users.
+    /// </summary>
+    public class ParticipantExtendedModel
+    {
+        /// <summary>
         ///     Internal object ID
         ///     Example: 78654321
         /// </summary>
@@ -25,7 +25,7 @@ namespace RingCentral
 
         /// <summary>
         ///     The role of the webinar session participant/invitee.
-            ///     See also: [Understanding Webinar Roles](https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html)
+        ///     See also: [Understanding Webinar Roles](https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html)
         ///     Required
         ///     Example: Panelist
         ///     Enum: Panelist, CoHost, Host, Attendee
@@ -34,7 +34,7 @@ namespace RingCentral
 
         /// <summary>
         ///     The role of the webinar session participant/invitee.
-            ///     See also: [Understanding Webinar Roles](https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html)
+        ///     See also: [Understanding Webinar Roles](https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html)
         ///     Required
         ///     Example: Panelist
         ///     Enum: Panelist, CoHost, Host, Attendee
@@ -105,5 +105,5 @@ namespace RingCentral
         ///     Example: qzR4wNbddziRil7i033ELlb3KXrJDsw8mOyj970J+so=
         /// </summary>
         public string uniqueUserHash { get; set; }
-      }
-  }
+    }
+}

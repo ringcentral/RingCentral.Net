@@ -7,29 +7,29 @@ namespace RingCentral.Paths.Restapi.Account.CallMonitoringGroups.Members
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.CallMonitoringGroups.Index parent;
-public Index(Restapi.Account.CallMonitoringGroups.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.CallMonitoringGroups.Index parent;
+        public Index(Restapi.Account.CallMonitoringGroups.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/members";
         }
         /// <summary>
         /// Returns a list of members for a call monitoring group specified in path.
-/// 
+        /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/call-monitoring-groups/{groupId}/members
         /// Rate Limit Group: Medium
         /// App Permission: ReadAccounts
         /// User Permission: ReadExtensions
         /// </summary>
-  public async Task<RingCentral.CallMonitoringGroupMemberList> Get(RingCentral.ListCallMonitoringGroupMembersParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.CallMonitoringGroupMemberList>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.CallMonitoringGroupMemberList> Get(RingCentral.ListCallMonitoringGroupMembersParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.CallMonitoringGroupMemberList>(this.Path(), queryParams, restRequestConfig);
+        }
     }
 }
 

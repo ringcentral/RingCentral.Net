@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Dictionary
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Index parent;
-public Index(Restapi.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Index parent;
+        public Index(Restapi.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/dictionary";

@@ -7,12 +7,12 @@ namespace RingCentral.Paths.TeamMessaging.V1.Chats.AdaptiveCards
     public partial class Index
     {
         public RestClient rc;
-public TeamMessaging.V1.Chats.Index parent;
-public Index(TeamMessaging.V1.Chats.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public TeamMessaging.V1.Chats.Index parent;
+        public Index(TeamMessaging.V1.Chats.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/adaptive-cards";
@@ -24,10 +24,10 @@ this.rc = parent.rc;
         /// Rate Limit Group: Medium
         /// App Permission: TeamMessaging
         /// </summary>
-  public async Task<RingCentral.AdaptiveCardShortInfo> Post(RingCentral.AdaptiveCardRequest adaptiveCardRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<RingCentral.AdaptiveCardShortInfo>(this.Path(), adaptiveCardRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.AdaptiveCardShortInfo> Post(RingCentral.AdaptiveCardRequest adaptiveCardRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.AdaptiveCardShortInfo>(this.Path(), adaptiveCardRequest, null, restRequestConfig);
+        }
     }
 }
 

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CompanyAnsweringRuleRequest
-      {
-          /// <summary>
+{
+    public class CompanyAnsweringRuleRequest
+    {
+        /// <summary>
         ///     Name of an answering rule specified by user. Max number of symbols is 30. The default value is 'My Rule N' where 'N' is the first free number
         /// </summary>
         public string name { get; set; }
@@ -48,5 +48,5 @@ namespace RingCentral
         ///     Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List
         /// </summary>
         public GreetingInfo[] greetings { get; set; }
-      }
-  }
+    }
+}

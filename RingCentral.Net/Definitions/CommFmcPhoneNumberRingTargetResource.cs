@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommFmcPhoneNumberRingTargetResource
-      {
-          /// <summary>
+{
+    public class CommFmcPhoneNumberRingTargetResource
+    {
+        /// <summary>
         /// </summary>
         public string name { get; set; }
 
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CommPhoneNumberResource destination { get; set; }
-      }
-  }
+    }
+}

@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Analytics.Calls.V1.Accounts.Aggregation.Fetch
     public partial class Index
     {
         public RestClient rc;
-public Analytics.Calls.V1.Accounts.Aggregation.Index parent;
-public Index(Analytics.Calls.V1.Accounts.Aggregation.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Analytics.Calls.V1.Accounts.Aggregation.Index parent;
+        public Index(Analytics.Calls.V1.Accounts.Aggregation.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/fetch";
@@ -24,10 +24,10 @@ this.rc = parent.rc;
         /// Rate Limit Group: Light
         /// App Permission: Analytics
         /// </summary>
-  public async Task<RingCentral.AggregationResponse> Post(RingCentral.AggregationRequest aggregationRequest, RingCentral.AnalyticsCallsAggregationFetchParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<RingCentral.AggregationResponse>(this.Path(), aggregationRequest, queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.AggregationResponse> Post(RingCentral.AggregationRequest aggregationRequest, RingCentral.AnalyticsCallsAggregationFetchParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.AggregationResponse>(this.Path(), aggregationRequest, queryParams, restRequestConfig);
+        }
     }
 }
 

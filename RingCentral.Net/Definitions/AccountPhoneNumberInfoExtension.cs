@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class AccountPhoneNumberInfoExtension
-      {
-          /// <summary>
+{
+    public class AccountPhoneNumberInfoExtension
+    {
+        /// <summary>
         ///     Unique identifier of extension
         ///     Example: 1234567
         /// </summary>
@@ -10,9 +10,9 @@ namespace RingCentral
 
         /// <summary>
         ///     Short number of an extension.
-            ///     Actual max length depends on system length limit for extension.
+        ///     Actual max length depends on system length limit for extension.
         ///     Example: 205
         /// </summary>
         public string extensionNumber { get; set; }
-      }
-  }
+    }
+}

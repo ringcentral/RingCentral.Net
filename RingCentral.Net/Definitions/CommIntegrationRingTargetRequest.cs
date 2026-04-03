@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommIntegrationRingTargetRequest
-      {
-          /// <summary>
+{
+    public class CommIntegrationRingTargetRequest
+    {
+        /// <summary>
         ///     Ring target type
         ///     Required
         ///     Example: IntegrationRingTarget
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CommIntegrationRequest integration { get; set; }
-      }
-  }
+    }
+}

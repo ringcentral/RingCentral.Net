@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.RingOut
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Extension.Index parent;
-public string ringoutId;
-public Index(Restapi.Account.Extension.Index parent, string ringoutId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.ringoutId = ringoutId;
-}
+        public Restapi.Account.Extension.Index parent;
+        public string ringoutId;
+        public Index(Restapi.Account.Extension.Index parent, string ringoutId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.ringoutId = ringoutId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && ringoutId != null)
@@ -30,10 +30,10 @@ this.ringoutId = ringoutId;
         /// Rate Limit Group: Heavy
         /// App Permission: RingOut
         /// </summary>
-  public async Task<RingCentral.GetRingOutStatusResponse> Post(RingCentral.MakeRingOutRequest makeRingOutRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<RingCentral.GetRingOutStatusResponse>(this.Path(false), makeRingOutRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.GetRingOutStatusResponse> Post(RingCentral.MakeRingOutRequest makeRingOutRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.GetRingOutStatusResponse>(this.Path(false), makeRingOutRequest, null, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns a status of a 2-legged RingOut call.
@@ -42,13 +42,14 @@ return await rc.Post<RingCentral.GetRingOutStatusResponse>(this.Path(false), mak
         /// Rate Limit Group: Light
         /// App Permission: RingOut
         /// </summary>
-  public async Task<RingCentral.GetRingOutStatusResponse> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (ringoutId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(ringoutId));
-    }return await rc.Get<RingCentral.GetRingOutStatusResponse>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.GetRingOutStatusResponse> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (ringoutId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(ringoutId));
+            }
+            return await rc.Get<RingCentral.GetRingOutStatusResponse>(this.Path(), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Cancels a 2-legged RingOut call.
@@ -57,13 +58,14 @@ if (ringoutId == null)
         /// Rate Limit Group: Heavy
         /// App Permission: RingOut
         /// </summary>
-  public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
-  {
-if (ringoutId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(ringoutId));
-    }return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
-  }
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
+        {
+            if (ringoutId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(ringoutId));
+            }
+            return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
+        }
     }
 }
 

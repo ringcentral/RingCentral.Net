@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class UiCallInfoRecord
-      {
-          /// <summary>
+{
+    public class UiCallInfoRecord
+    {
+        /// <summary>
         ///     UI call info type
         ///     Enum: QueueName, CallerIdName
         /// </summary>
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Example: John Doe
         /// </summary>
         public string value { get; set; }
-      }
-  }
+    }
+}

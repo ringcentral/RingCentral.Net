@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Ai.Ringsense.V1.Public.Accounts.Domains.Sessions
     public partial class Index
     {
         public RestClient rc;
-public Ai.Ringsense.V1.Public.Accounts.Domains.Index parent;
-public string sourceSessionId;
-public Index(Ai.Ringsense.V1.Public.Accounts.Domains.Index parent, string sourceSessionId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.sourceSessionId = sourceSessionId;
-}
+        public Ai.Ringsense.V1.Public.Accounts.Domains.Index parent;
+        public string sourceSessionId;
+        public Index(Ai.Ringsense.V1.Public.Accounts.Domains.Index parent, string sourceSessionId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.sourceSessionId = sourceSessionId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && sourceSessionId != null)

@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Result breakdown by type
-/// </summary>
-      public class CallsByTypeBreakdown
-      {
-          /// <summary>
+    /// Result breakdown by type
+    /// </summary>
+    public class CallsByTypeBreakdown
+    {
+        /// <summary>
         ///     Value for Direct type
         ///     Required
         ///     Format: double
@@ -53,5 +53,5 @@ namespace RingCentral
         ///     Format: double
         /// </summary>
         public decimal? queueCallPickup { get; set; }
-      }
-  }
+    }
+}

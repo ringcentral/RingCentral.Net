@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class BatchProvisionUsersRequestItemContact
-      {
-          /// <summary>
+{
+    public class BatchProvisionUsersRequestItemContact
+    {
+        /// <summary>
         ///     Given name
         ///     Example: John
         /// </summary>
@@ -29,7 +29,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Indicates that contact email is enabled as login name for this user.
-            ///     Please note that email must be unique in this case.
+        ///     Please note that email must be unique in this case.
         ///     Default: true
         /// </summary>
         public bool? emailAsLoginName { get; set; }
@@ -37,5 +37,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public TransitionInfo transition { get; set; }
-      }
-  }
+    }
+}

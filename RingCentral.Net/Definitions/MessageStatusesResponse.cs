@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// The messages status object with details of each status
-/// </summary>
-      public class MessageStatusesResponse
-      {
-          /// <summary>
+    /// The messages status object with details of each status
+    /// </summary>
+    public class MessageStatusesResponse
+    {
+        /// <summary>
         /// </summary>
         public MessageStatusCounts queued { get; set; }
 
@@ -24,5 +24,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public MessageStatusCounts sendingFailed { get; set; }
-      }
-  }
+    }
+}

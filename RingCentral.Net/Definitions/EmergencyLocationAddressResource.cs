@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class EmergencyLocationAddressResource
-      {
-          /// <summary>
+{
+    public class EmergencyLocationAddressResource
+    {
+        /// <summary>
         ///     Country name
         /// </summary>
         public string country { get; set; }
@@ -55,7 +55,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Second line address (apartment, suite, unit, building, floor,
-            ///     etc.)
+        ///     etc.)
         /// </summary>
         public string street2 { get; set; }
 
@@ -88,5 +88,5 @@ namespace RingCentral
         ///     Building/street number
         /// </summary>
         public string buildingNumber { get; set; }
-      }
-  }
+    }
+}

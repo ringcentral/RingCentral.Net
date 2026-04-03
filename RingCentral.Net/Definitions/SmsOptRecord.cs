@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class SmsOptRecord
-      {
-          /// <summary>
+{
+    public class SmsOptRecord
+    {
+        /// <summary>
         ///     Phone number in e.164 format (with '+' prefix)
         ///     Required
         ///     Example: +16501234567
@@ -11,8 +11,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Consent status of a recipient's phone number:
-            ///     - `OptOut` - The number is opted out of receiving SMS.
-            ///     - `OptIn` - The number is opted in to receiving SMS (if it was previously opted out).
+        ///     - `OptOut` - The number is opted out of receiving SMS.
+        ///     - `OptIn` - The number is opted in to receiving SMS (if it was previously opted out).
         ///     Required
         ///     Example: OptOut
         ///     Enum: OptOut, OptIn
@@ -39,5 +39,5 @@ namespace RingCentral
         ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
-      }
-  }
+    }
+}

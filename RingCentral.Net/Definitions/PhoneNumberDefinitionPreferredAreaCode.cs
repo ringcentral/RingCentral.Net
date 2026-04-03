@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Used as selection hint when a "toll" number is selected from the number pool
-/// </summary>
-      public class PhoneNumberDefinitionPreferredAreaCode
-      {
-          /// <summary>
+    /// Used as selection hint when a "toll" number is selected from the number pool
+    /// </summary>
+    public class PhoneNumberDefinitionPreferredAreaCode
+    {
+        /// <summary>
         ///     Preferred area code to use if the numbers are available
         ///     Required
         ///     Example: 650
@@ -24,5 +24,5 @@ namespace RingCentral
         ///     Enum: VoiceFax, VoiceOnly, FaxOnly
         /// </summary>
         public string type { get; set; }
-      }
-  }
+    }
+}

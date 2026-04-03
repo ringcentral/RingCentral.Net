@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Ai.Insights
     public partial class Index
     {
         public RestClient rc;
-public Ai.Index parent;
-public Index(Ai.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Ai.Index parent;
+        public Index(Ai.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path(false)}/insights";

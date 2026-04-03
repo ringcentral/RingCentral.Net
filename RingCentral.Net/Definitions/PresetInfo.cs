@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class PresetInfo
-      {
-          /// <summary>
+{
+    public class PresetInfo
+    {
+        /// <summary>
         ///     Link to a greeting resource
         ///     Format: uri
         /// </summary>
@@ -17,5 +17,5 @@ namespace RingCentral
         ///     Name of a greeting
         /// </summary>
         public string name { get; set; }
-      }
-  }
+    }
+}

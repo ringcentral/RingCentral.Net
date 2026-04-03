@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CountryListDictionaryModel
-      {
-          /// <summary>
+{
+    public class CountryListDictionaryModel
+    {
+        /// <summary>
         ///     Link to the list of countries supported
         ///     Format: uri
         /// </summary>
@@ -23,5 +23,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-      }
-  }
+    }
+}

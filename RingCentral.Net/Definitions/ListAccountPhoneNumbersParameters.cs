@@ -1,13 +1,13 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Query parameters for operation listAccountPhoneNumbers
-/// </summary>
-      public class ListAccountPhoneNumbersParameters
-      {
-          /// <summary>
+    /// Query parameters for operation listAccountPhoneNumbers
+    /// </summary>
+    public class ListAccountPhoneNumbersParameters
+    {
+        /// <summary>
         ///     Indicates a page number to retrieve. Only positive number values
-            ///     are accepted
+        ///     are accepted
         ///     Format: int32
         ///     Default: 1
         /// </summary>
@@ -43,5 +43,5 @@ namespace RingCentral
         ///     Enum: Normal, Pending, PortedIn, Temporary, Unknown
         /// </summary>
         public string[] status { get; set; }
-      }
-  }
+    }
+}

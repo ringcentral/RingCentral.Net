@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ForwardingNumberResource
-      {
-          /// <summary>
+{
+    public class ForwardingNumberResource
+    {
+        /// <summary>
         ///     Format: uri
         /// </summary>
         public string uri { get; set; }
@@ -33,5 +33,5 @@ namespace RingCentral
         ///     Enum: Home, Mobile, Work, PhoneLine, Outage, Other
         /// </summary>
         public string type { get; set; }
-      }
-  }
+    }
+}

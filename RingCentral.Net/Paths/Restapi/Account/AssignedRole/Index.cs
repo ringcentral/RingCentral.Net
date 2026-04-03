@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.AssignedRole
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Index parent;
-public Index(Restapi.Account.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Index parent;
+        public Index(Restapi.Account.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/assigned-role";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: ReadAccounts
         /// User Permission: ReadAssignedRoles
         /// </summary>
-  public async Task<RingCentral.ExtensionWithRolesCollectionResource> Get(RingCentral.ListAssignedRolesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.ExtensionWithRolesCollectionResource>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.ExtensionWithRolesCollectionResource> Get(RingCentral.ListAssignedRolesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.ExtensionWithRolesCollectionResource>(this.Path(), queryParams, restRequestConfig);
+        }
     }
 }
 

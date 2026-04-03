@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class Contact
-      {
-          /// <summary>
+{
+    public class Contact
+    {
+        /// <summary>
         ///     First name
         /// </summary>
         public string firstName { get; set; }
@@ -22,5 +22,5 @@ namespace RingCentral
         ///     Phone number
         /// </summary>
         public string phoneNumber { get; set; }
-      }
-  }
+    }
+}

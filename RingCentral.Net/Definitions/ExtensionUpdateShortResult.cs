@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ExtensionUpdateShortResult
-      {
-          /// <summary>
+{
+    public class ExtensionUpdateShortResult
+    {
+        /// <summary>
         ///     Internal identifier of an extension
         /// </summary>
         public string extensionId { get; set; }
@@ -16,5 +16,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ErrorEntity[] errors { get; set; }
-      }
-  }
+    }
+}

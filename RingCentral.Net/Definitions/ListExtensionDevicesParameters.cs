@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Query parameters for operation listExtensionDevices
-/// </summary>
-      public class ListExtensionDevicesParameters
-      {
-          /// <summary>
+    /// Query parameters for operation listExtensionDevices
+    /// </summary>
+    public class ListExtensionDevicesParameters
+    {
+        /// <summary>
         ///     The result set page number (1-indexed) to return
         ///     Maximum: 1000
         ///     Minimum: 1
@@ -17,7 +17,7 @@ namespace RingCentral
 
         /// <summary>
         ///     The number of items per page. If the provided value in the request
-            ///     is greater than a maximum, the maximum value is applied
+        ///     is greater than a maximum, the maximum value is applied
         ///     Maximum: 1000
         ///     Minimum: 1
         ///     Format: int32
@@ -50,5 +50,5 @@ namespace RingCentral
         ///     Enum: Unknown, Standalone, StandaloneFree, BlaPrimary, BlaSecondary
         /// </summary>
         public string lineType { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class PagingOnlyGroupDevices
-      {
-          /// <summary>
+{
+    public class PagingOnlyGroupDevices
+    {
+        /// <summary>
         ///     Link to a list of devices assigned to the paging only group
         ///     Format: uri
         /// </summary>
@@ -20,5 +20,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class PartySuperviseResponse
-      {
-          /// <summary>
+{
+    public class PartySuperviseResponse
+    {
+        /// <summary>
         /// </summary>
         public PartyInfo from { get; set; }
 
@@ -42,13 +42,13 @@ namespace RingCentral
 
         /// <summary>
         ///     If `true` then the party is not connected to a session voice
-            ///     conference, `false` means the party is connected to other parties in a
-            ///     session
+        ///     conference, `false` means the party is connected to other parties in a
+        ///     session
         /// </summary>
         public bool? standAlone { get; set; }
 
         /// <summary>
         /// </summary>
         public CallStatusInfo status { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommRemoveForwardingTargetsItemResource
-      {
-          /// <summary>
+{
+    public class CommRemoveForwardingTargetsItemResource
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public bool? bulkItemSuccessful { get; set; }
@@ -16,5 +16,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CommRemoveForwardingTargetsItemResourceBulkItem bulkItem { get; set; }
-      }
-  }
+    }
+}

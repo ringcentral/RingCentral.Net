@@ -1,15 +1,15 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Billing information. Returned for device update request if `prestatement`
-/// query parameter is set to 'true'
-/// 
-/// </summary>
-      public class BillingStatementInfo
-      {
-          /// <summary>
+    /// Billing information. Returned for device update request if `prestatement`
+    /// query parameter is set to 'true'
+    /// 
+    /// </summary>
+    public class BillingStatementInfo
+    {
+        /// <summary>
         ///     Currency code complying with [ISO-4217](https://en.wikipedia.org/wiki/ISO_4217)
-            ///     standard
+        ///     standard
         /// </summary>
         public string currency { get; set; }
 
@@ -45,5 +45,5 @@ namespace RingCentral
         ///     Format: double
         /// </summary>
         public decimal? totalFreeServiceCredit { get; set; }
-      }
-  }
+    }
+}

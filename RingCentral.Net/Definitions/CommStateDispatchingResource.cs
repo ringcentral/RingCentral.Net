@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommStateDispatchingResource
-      {
-          /// <summary>
+{
+    public class CommStateDispatchingResource
+    {
+        /// <summary>
         ///     Action information
         ///     Required
         /// </summary>
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Enum: RingAtOnce, RingInOrder, Custom, Terminate
         /// </summary>
         public string type { get; set; }
-      }
-  }
+    }
+}

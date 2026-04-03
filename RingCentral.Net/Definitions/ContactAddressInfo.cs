@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ContactAddressInfo
-      {
-          /// <summary>
+{
+    public class ContactAddressInfo
+    {
+        /// <summary>
         ///     Street address
         ///     Example: 20 Davis Dr.
         /// </summary>
@@ -30,5 +30,5 @@ namespace RingCentral
         ///     Example: 94002
         /// </summary>
         public string zip { get; set; }
-      }
-  }
+    }
+}

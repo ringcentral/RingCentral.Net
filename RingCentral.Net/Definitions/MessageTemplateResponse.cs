@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class MessageTemplateResponse
-      {
-          /// <summary>
+{
+    public class MessageTemplateResponse
+    {
+        /// <summary>
         ///     Internal identifier of a template
         /// </summary>
         public string id { get; set; }
@@ -25,5 +25,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public Site site { get; set; }
-      }
-  }
+    }
+}

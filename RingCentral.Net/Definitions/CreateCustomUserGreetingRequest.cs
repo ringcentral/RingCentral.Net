@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Request body for operation createCustomUserGreeting
-/// </summary>
-      public class CreateCustomUserGreetingRequest
-      {
-          /// <summary>
+    /// Request body for operation createCustomUserGreeting
+    /// </summary>
+    public class CreateCustomUserGreetingRequest
+    {
+        /// <summary>
         ///     Type of greeting, specifying the case when the greeting is played.
         ///     Required
         ///     Enum: Introductory, Announcement, ConnectingMessage, ConnectingAudio, Voicemail, Unavailable, HoldMusic, TemplateGreeting
@@ -21,5 +21,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public GreetingAnsweringRuleId answeringRule { get; set; }
-      }
-  }
+    }
+}

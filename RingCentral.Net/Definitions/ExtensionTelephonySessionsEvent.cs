@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ExtensionTelephonySessionsEvent
-      {
-          /// <summary>
+{
+    public class ExtensionTelephonySessionsEvent
+    {
+        /// <summary>
         ///     Universally unique identifier of a notification
         /// </summary>
         public string uuid { get; set; }
@@ -14,7 +14,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Date/time of sending a notification in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
-            ///     format including timezone, for example *2016-03-10T18:07:52.534Z*
+        ///     format including timezone, for example *2016-03-10T18:07:52.534Z*
         /// </summary>
         public string timestamp { get; set; }
 
@@ -31,5 +31,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public TelephonySessionsEventBody body { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class DialingDetailsServiceCode
-      {
-          /// <summary>
+{
+    public class DialingDetailsServiceCode
+    {
+        /// <summary>
         ///     Example: *811
         /// </summary>
         public string dialing { get; set; }
@@ -12,5 +12,5 @@ namespace RingCentral
         ///     Example: *8xx
         /// </summary>
         public string pattern { get; set; }
-      }
-  }
+    }
+}

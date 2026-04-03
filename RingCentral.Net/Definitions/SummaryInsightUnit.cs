@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class SummaryInsightUnit
-      {
-          /// <summary>
+{
+    public class SummaryInsightUnit
+    {
+        /// <summary>
         ///     Value of the summary
         ///     Required
         ///     Example: conversational insights text
@@ -24,5 +24,5 @@ namespace RingCentral
         ///     Example: 4.2
         /// </summary>
         public decimal? end { get; set; }
-      }
-  }
+    }
+}

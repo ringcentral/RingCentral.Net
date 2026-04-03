@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class GetRingOutStatusResponse
-      {
-          /// <summary>
+{
+    public class GetRingOutStatusResponse
+    {
+        /// <summary>
         ///     Internal identifier of a RingOut call
         /// </summary>
         public string id { get; set; }
@@ -16,5 +16,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public RingOutStatusInfo status { get; set; }
-      }
-  }
+    }
+}

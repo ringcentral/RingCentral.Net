@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Scim.ServiceProviderConfig
     public partial class Index
     {
         public RestClient rc;
-public Scim.Index parent;
-public Index(Scim.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Scim.Index parent;
+        public Index(Scim.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/ServiceProviderConfig";
@@ -24,10 +24,10 @@ this.rc = parent.rc;
         /// Rate Limit Group: Light
         /// App Permission: ReadAccounts
         /// </summary>
-  public async Task<RingCentral.ScimProviderConfig> Get(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.ScimProviderConfig>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.ScimProviderConfig> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.ScimProviderConfig>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

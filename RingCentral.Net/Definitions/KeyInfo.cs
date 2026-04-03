@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Additional info about the key
-/// </summary>
-      public class KeyInfo
-      {
-          /// <summary>
+    /// Additional info about the key
+    /// </summary>
+    public class KeyInfo
+    {
+        /// <summary>
         ///     Extension's number
         /// </summary>
         public string extensionNumber { get; set; }
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Extension's name
         /// </summary>
         public string name { get; set; }
-      }
-  }
+    }
+}

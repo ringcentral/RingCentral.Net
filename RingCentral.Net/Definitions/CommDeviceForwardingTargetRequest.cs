@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommDeviceForwardingTargetRequest
-      {
-          /// <summary>
+{
+    public class CommDeviceForwardingTargetRequest
+    {
+        /// <summary>
         /// </summary>
         public string name { get; set; }
 
@@ -22,5 +22,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CommReferencedExtensionResource extension { get; set; }
-      }
-  }
+    }
+}

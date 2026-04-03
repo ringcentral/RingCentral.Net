@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommRemoveForwardingTargetsItemResourceBulkItem
-      {
-          /// <summary>
+{
+    public class CommRemoveForwardingTargetsItemResourceBulkItem
+    {
+        /// <summary>
         /// </summary>
         public string name { get; set; }
 
@@ -28,5 +28,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CommPhoneNumberResource destination { get; set; }
-      }
-  }
+    }
+}

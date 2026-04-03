@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallerBlocking
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Extension.Index parent;
-public Index(Restapi.Account.Extension.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Extension.Index parent;
+        public Index(Restapi.Account.Extension.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/caller-blocking";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: ReadAccounts
         /// User Permission: ReadBlockedNumbers
         /// </summary>
-  public async Task<RingCentral.CallerBlockingSettings> Get(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.CallerBlockingSettings>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.CallerBlockingSettings> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.CallerBlockingSettings>(this.Path(), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates the current caller blocking settings of a user.
@@ -38,10 +38,10 @@ return await rc.Get<RingCentral.CallerBlockingSettings>(this.Path(), null, restR
         /// App Permission: EditExtensions
         /// User Permission: EditBlockedNumbers
         /// </summary>
-  public async Task<RingCentral.CallerBlockingSettings> Put(RingCentral.CallerBlockingSettingsUpdate callerBlockingSettingsUpdate, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Put<RingCentral.CallerBlockingSettings>(this.Path(), callerBlockingSettingsUpdate, null, restRequestConfig);
-  }
+        public async Task<RingCentral.CallerBlockingSettings> Put(RingCentral.CallerBlockingSettingsUpdate callerBlockingSettingsUpdate, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Put<RingCentral.CallerBlockingSettings>(this.Path(), callerBlockingSettingsUpdate, null, restRequestConfig);
+        }
     }
 }
 

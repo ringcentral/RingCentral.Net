@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class RemoveLineResponse
-      {
-          /// <summary>
+{
+    public class RemoveLineResponse
+    {
+        /// <summary>
         ///     Internal identifier of a source device
         ///     Required
         /// </summary>
@@ -28,5 +28,5 @@ namespace RingCentral
         ///     Example: ff:ff:ff:ff:ff:ff
         /// </summary>
         public string serial { get; set; }
-      }
-  }
+    }
+}

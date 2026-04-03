@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ScimUserAddress
-      {
-          /// <summary>
+{
+    public class ScimUserAddress
+    {
+        /// <summary>
         /// </summary>
         public string country { get; set; }
 
@@ -27,5 +27,5 @@ namespace RingCentral
         ///     Enum: work
         /// </summary>
         public string type { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TMPersonInfo
-      {
-          /// <summary>
+{
+    public class TMPersonInfo
+    {
+        /// <summary>
         ///     Internal identifier of a user
         ///     Required
         /// </summary>
@@ -45,5 +45,5 @@ namespace RingCentral
         ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
-      }
-  }
+    }
+}

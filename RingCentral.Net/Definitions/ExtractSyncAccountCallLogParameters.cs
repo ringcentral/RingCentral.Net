@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Query parameters for operation extractSyncAccountCallLog
-/// </summary>
-      public class ExtractSyncAccountCallLogParameters
-      {
-          /// <summary>
+    /// Query parameters for operation extractSyncAccountCallLog
+    /// </summary>
+    public class ExtractSyncAccountCallLogParameters
+    {
+        /// <summary>
         ///     Type of call log synchronization request - full or incremental sync
         ///     Default: FSync
         ///     Enum: FSync, ISync
@@ -25,10 +25,10 @@ namespace RingCentral
 
         /// <summary>
         ///     Allowed for `FSync` mode only. It limits the number of records to be returned in response
-            ///     (the maximum number of records is 1000, the default value is 250).
-            ///     
-            ///     Actual number of calls could extend the limit in case there are several calls at borderline
-            ///     modification time (millisecond precision).
+        ///     (the maximum number of records is 1000, the default value is 250).
+        ///     
+        ///     Actual number of calls could extend the limit in case there are several calls at borderline
+        ///     modification time (millisecond precision).
         ///     Minimum: 1
         ///     Format: int32
         ///     Default: 250
@@ -44,8 +44,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Category of metadata to be returned. If omitted, all call records are returned.
-            ///     Multiple values are supported
+        ///     Multiple values are supported
         /// </summary>
         public string[] metadataCategory { get; set; }
-      }
-  }
+    }
+}

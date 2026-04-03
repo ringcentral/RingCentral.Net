@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CallRecordingSettingsResource
-      {
-          /// <summary>
+{
+    public class CallRecordingSettingsResource
+    {
+        /// <summary>
         /// </summary>
         public OnDemandResource onDemand { get; set; }
 
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Collection of Greeting Info
         /// </summary>
         public CallRecordingGreetingResource[] greetings { get; set; }
-      }
-  }
+    }
+}

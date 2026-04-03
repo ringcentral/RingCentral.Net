@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class LocationDeletionInfo
-      {
-          /// <summary>
+{
+    public class LocationDeletionInfo
+    {
+        /// <summary>
         /// </summary>
         public string id { get; set; }
 
@@ -12,7 +12,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Identifies the possibility and status of emergency location
-            ///     deletion
+        ///     deletion
         ///     Enum: Failed, Completed, Forbidden, Restricted, Allowed
         /// </summary>
         public string deletion { get; set; }
@@ -20,5 +20,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public LocationDeletionErrorInfo errors { get; set; }
-      }
-  }
+    }
+}

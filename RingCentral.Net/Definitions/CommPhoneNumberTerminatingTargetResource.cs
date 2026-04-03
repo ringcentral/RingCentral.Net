@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommPhoneNumberTerminatingTargetResource
-      {
-          /// <summary>
+{
+    public class CommPhoneNumberTerminatingTargetResource
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public string name { get; set; }
@@ -25,5 +25,5 @@ namespace RingCentral
         ///     Enum: Ringing, Terminating
         /// </summary>
         public string dispatchingType { get; set; }
-      }
-  }
+    }
+}

@@ -1,9 +1,9 @@
 namespace RingCentral
-  {
-      public class ValidateMultipleWirelessPointsRequest
-      {
-          /// <summary>
+{
+    public class ValidateMultipleWirelessPointsRequest
+    {
+        /// <summary>
         /// </summary>
         public WirelessPointInfo[] records { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class MessageChanges
-      {
-          /// <summary>
+{
+    public class MessageChanges
+    {
+        /// <summary>
         ///     Type of the message
         ///     Enum: Fax, SMS, VoiceMail, Pager
         /// </summary>
@@ -24,5 +24,5 @@ namespace RingCentral
         ///     Identifiers of the new messages, applicable for all message types
         /// </summary>
         public long?[] newMessageIds { get; set; }
-      }
-  }
+    }
+}

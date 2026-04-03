@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Information on navigation
-/// </summary>
-      public class PresenceNavigationInfo
-      {
-          /// <summary>
+    /// Information on navigation
+    /// </summary>
+    public class PresenceNavigationInfo
+    {
+        /// <summary>
         /// </summary>
         public PresenceNavigationInfoURI firstPage { get; set; }
 
@@ -20,5 +20,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public PresenceNavigationInfoURI lastPage { get; set; }
-      }
-  }
+    }
+}

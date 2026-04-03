@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ArchiveInfo
-      {
-          /// <summary>
+{
+    public class ArchiveInfo
+    {
+        /// <summary>
         ///     Archive size in bytes
         ///     Format: int64
         ///     Example: 201412
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Format: uri
         /// </summary>
         public string uri { get; set; }
-      }
-  }
+    }
+}

@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Rcvideo.V1.History.Meetings
     public partial class Index
     {
         public RestClient rc;
-public Rcvideo.V1.History.Index parent;
-public string meetingId;
-public Index(Rcvideo.V1.History.Index parent, string meetingId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.meetingId = meetingId;
-}
+        public Rcvideo.V1.History.Index parent;
+        public string meetingId;
+        public Index(Rcvideo.V1.History.Index parent, string meetingId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.meetingId = meetingId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && meetingId != null)
@@ -30,10 +30,10 @@ this.meetingId = meetingId;
         /// Rate Limit Group: Light
         /// App Permission: Video
         /// </summary>
-  public async Task<RingCentral.MeetingPage> List(RingCentral.ListVideoMeetingsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.MeetingPage>(this.Path(false), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.MeetingPage> List(RingCentral.ListVideoMeetingsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.MeetingPage>(this.Path(false), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns a user meeting by ID.
@@ -42,13 +42,14 @@ return await rc.Get<RingCentral.MeetingPage>(this.Path(false), queryParams, rest
         /// Rate Limit Group: Light
         /// App Permission: Video
         /// </summary>
-  public async Task<RingCentral.Meeting> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (meetingId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(meetingId));
-    }return await rc.Get<RingCentral.Meeting>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.Meeting> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (meetingId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(meetingId));
+            }
+            return await rc.Get<RingCentral.Meeting>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class OnDemandResource
-      {
-          /// <summary>
+{
+    public class OnDemandResource
+    {
+        /// <summary>
         ///     Flag for controlling OnDemand Call Recording settings
         /// </summary>
         public bool? enabled { get; set; }
@@ -12,5 +12,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? retentionPeriod { get; set; }
-      }
-  }
+    }
+}

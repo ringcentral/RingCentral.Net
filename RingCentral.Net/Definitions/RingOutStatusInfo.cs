@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// RingOut status information
-/// </summary>
-      public class RingOutStatusInfo
-      {
-          /// <summary>
+    /// RingOut status information
+    /// </summary>
+    public class RingOutStatusInfo
+    {
+        /// <summary>
         ///     Status of a call and calling/called party
         ///     Enum: Invalid, Success, InProgress, Busy, NoAnswer, RingOutFromThisNumberIsNotSupported, Rejected, GenericError, Finished, InternationalDisabled, DestinationBlocked, NotEnoughFunds, NoSuchUser, Error
         /// </summary>
@@ -22,5 +22,5 @@ namespace RingCentral
         ///     Enum: Invalid, Success, InProgress, Busy, NoAnswer, RingOutFromThisNumberIsNotSupported, Rejected, GenericError, Finished, InternationalDisabled, DestinationBlocked, NotEnoughFunds, NoSuchUser, Error
         /// </summary>
         public string calleeStatus { get; set; }
-      }
-  }
+    }
+}

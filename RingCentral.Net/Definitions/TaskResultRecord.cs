@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TaskResultRecord
-      {
-          /// <summary>
+{
+    public class TaskResultRecord
+    {
+        /// <summary>
         ///     Internal identifier of the created/updated element - wireless point or network switch
         /// </summary>
         public string id { get; set; }
@@ -30,5 +30,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public TaskResultRecordErrorsInfo[] errors { get; set; }
-      }
-  }
+    }
+}

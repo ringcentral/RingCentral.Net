@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Phone number information
-/// </summary>
-      public class DevicePhoneNumberInfo
-      {
-          /// <summary>
+    /// Phone number information
+    /// </summary>
+    public class DevicePhoneNumberInfo
+    {
+        /// <summary>
         ///     Internal identifier of a phone number
         ///     Format: int64
         /// </summary>
@@ -36,5 +36,5 @@ namespace RingCentral
         ///     Enum: VoiceFax, FaxOnly, VoiceOnly
         /// </summary>
         public string type { get; set; }
-      }
-  }
+    }
+}

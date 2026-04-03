@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Result breakdown by queue hours
-/// </summary>
-      public class CallsByQueueHoursBreakdown
-      {
-          /// <summary>
+    /// Result breakdown by queue hours
+    /// </summary>
+    public class CallsByQueueHoursBreakdown
+    {
+        /// <summary>
         ///     Value for BusinessHours queue hours
         ///     Required
         ///     Format: double
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Format: double
         /// </summary>
         public decimal? afterHours { get; set; }
-      }
-  }
+    }
+}

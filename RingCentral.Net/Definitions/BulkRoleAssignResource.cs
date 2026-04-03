@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class BulkRoleAssignResource
-      {
-          /// <summary>
+{
+    public class BulkRoleAssignResource
+    {
+        /// <summary>
         ///     Example: true
         /// </summary>
         public bool? siteRestricted { get; set; }
@@ -23,5 +23,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string[] removedExtensionIds { get; set; }
-      }
-  }
+    }
+}

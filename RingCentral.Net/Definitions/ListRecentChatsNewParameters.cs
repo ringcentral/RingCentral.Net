@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Query parameters for operation listRecentChatsNew
-/// </summary>
-      public class ListRecentChatsNewParameters
-      {
-          /// <summary>
+    /// Query parameters for operation listRecentChatsNew
+    /// </summary>
+    public class ListRecentChatsNewParameters
+    {
+        /// <summary>
         ///     Type of chats to be fetched. By default, all chat types are returned
         ///     Enum: Everyone, Group, Personal, Direct, Team
         /// </summary>
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Default: 30
         /// </summary>
         public long? recordCount { get; set; }
-      }
-  }
+    }
+}

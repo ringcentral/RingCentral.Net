@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommPhoneNumberTerminatingTargetRequest
-      {
-          /// <summary>
+{
+    public class CommPhoneNumberTerminatingTargetRequest
+    {
+        /// <summary>
         ///     Terminating target type
         ///     Required
         ///     Example: PhoneNumberTerminatingTarget
@@ -25,5 +25,5 @@ namespace RingCentral
         ///     Enum: Ringing, Terminating
         /// </summary>
         public string dispatchingType { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class DetailedExtensionPresenceEvent
-      {
-          /// <summary>
+{
+    public class DetailedExtensionPresenceEvent
+    {
+        /// <summary>
         ///     Universally unique identifier of a notification
         /// </summary>
         public string uuid { get; set; }
@@ -26,5 +26,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public DetailedExtensionPresenceEventBody body { get; set; }
-      }
-  }
+    }
+}

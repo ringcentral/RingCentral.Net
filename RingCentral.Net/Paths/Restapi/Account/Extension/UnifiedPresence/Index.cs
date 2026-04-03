@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.UnifiedPresence
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Extension.Index parent;
-public Index(Restapi.Account.Extension.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Extension.Index parent;
+        public Index(Restapi.Account.Extension.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/unified-presence";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: ReadPresence
         /// User Permission: ReadPresenceStatus
         /// </summary>
-  public async Task<RingCentral.UnifiedPresence> Get(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.UnifiedPresence>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.UnifiedPresence> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.UnifiedPresence>(this.Path(), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates the unified presence for the current user specified in path.
@@ -38,10 +38,10 @@ return await rc.Get<RingCentral.UnifiedPresence>(this.Path(), null, restRequestC
         /// App Permission: EditPresence
         /// User Permission: EditPresenceStatus
         /// </summary>
-  public async Task<RingCentral.UnifiedPresence> Patch(RingCentral.UpdateUnifiedPresence updateUnifiedPresence, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Patch<RingCentral.UnifiedPresence>(this.Path(), updateUnifiedPresence, null, restRequestConfig);
-  }
+        public async Task<RingCentral.UnifiedPresence> Patch(RingCentral.UpdateUnifiedPresence updateUnifiedPresence, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Patch<RingCentral.UnifiedPresence>(this.Path(), updateUnifiedPresence, null, restRequestConfig);
+        }
     }
 }
 

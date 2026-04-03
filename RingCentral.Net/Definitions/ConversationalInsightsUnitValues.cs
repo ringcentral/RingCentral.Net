@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ConversationalInsightsUnitValues
-      {
-          /// <summary>
+{
+    public class ConversationalInsightsUnitValues
+    {
+        /// <summary>
         ///     Format: float
         ///     Example: 0.97
         /// </summary>
@@ -63,5 +63,5 @@ namespace RingCentral
         ///     Example: Or or you can add another tab and have it resigned.
         /// </summary>
         public string answer { get; set; }
-      }
-  }
+    }
+}

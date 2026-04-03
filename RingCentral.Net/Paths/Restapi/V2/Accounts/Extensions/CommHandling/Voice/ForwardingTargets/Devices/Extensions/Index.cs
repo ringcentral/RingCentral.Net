@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.Extensions.CommHandling.Voice.Fo
     public partial class Index
     {
         public RestClient rc;
-public Restapi.V2.Accounts.Extensions.CommHandling.Voice.ForwardingTargets.Devices.Index parent;
-public Index(Restapi.V2.Accounts.Extensions.CommHandling.Voice.ForwardingTargets.Devices.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.V2.Accounts.Extensions.CommHandling.Voice.ForwardingTargets.Devices.Index parent;
+        public Index(Restapi.V2.Accounts.Extensions.CommHandling.Voice.ForwardingTargets.Devices.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/extensions";
@@ -24,10 +24,10 @@ this.rc = parent.rc;
         /// Rate Limit Group: Medium
         /// App Permission: ReadAccounts
         /// </summary>
-  public async Task<RingCentral.CommExtensionListResource> Get(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.CommExtensionListResource>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.CommExtensionListResource> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.CommExtensionListResource>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

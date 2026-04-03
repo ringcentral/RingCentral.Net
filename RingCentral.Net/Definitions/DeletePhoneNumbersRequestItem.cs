@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// The indication of a number to be deleted - either `id` or `phoneNumber` must be specified.
-/// </summary>
-      public class DeletePhoneNumbersRequestItem
-      {
-          /// <summary>
+    /// The indication of a number to be deleted - either `id` or `phoneNumber` must be specified.
+    /// </summary>
+    public class DeletePhoneNumbersRequestItem
+    {
+        /// <summary>
         ///     Internal unique identifier of a phone number
         ///     Example: 1162820004
         /// </summary>
@@ -16,5 +16,5 @@ namespace RingCentral
         ///     Example: +16501234567
         /// </summary>
         public string phoneNumber { get; set; }
-      }
-  }
+    }
+}

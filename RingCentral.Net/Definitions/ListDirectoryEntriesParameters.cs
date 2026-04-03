@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Query parameters for operation listDirectoryEntries
-/// </summary>
-      public class ListDirectoryEntriesParameters
-      {
-          /// <summary>
+    /// Query parameters for operation listDirectoryEntries
+    /// </summary>
+    public class ListDirectoryEntriesParameters
+    {
+        /// <summary>
         ///     Allows to make lookups across a whole directory skipping a filtering logic of Cross-Site access management feature.
         ///     Default: true
         /// </summary>
@@ -38,8 +38,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Records count to be returned per one page. It can be either integer or string with the specific keyword values:
-            ///     - `all` - all records are returned in one page
-            ///     - `max` - maximum count of records that can be returned in one page
+        ///     - `all` - all records are returned in one page
+        ///     - `max` - maximum count of records that can be returned in one page
         ///     Maximum: 2000
         ///     Format: int32
         ///     Default: 1000
@@ -50,5 +50,5 @@ namespace RingCentral
         ///     Internal identifier of the business site to which extensions belong
         /// </summary>
         public string siteId { get; set; }
-      }
-  }
+    }
+}

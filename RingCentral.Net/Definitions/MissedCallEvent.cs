@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class MissedCallEvent
-      {
-          /// <summary>
+{
+    public class MissedCallEvent
+    {
+        /// <summary>
         ///     Universally unique identifier of a notification
         /// </summary>
         public string uuid { get; set; }
@@ -103,5 +103,5 @@ namespace RingCentral
         ///     Internal identifier of a subscription owner extension
         /// </summary>
         public string ownerId { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class SitesList
-      {
-          /// <summary>
+{
+    public class SitesList
+    {
+        /// <summary>
         ///     Link to a sites resource
         ///     Format: uri
         /// </summary>
@@ -19,5 +19,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-      }
-  }
+    }
+}

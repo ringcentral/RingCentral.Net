@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Prompt metadata
-/// </summary>
-      public class IvrMenuPromptInfo
-      {
-          /// <summary>
+    /// Prompt metadata
+    /// </summary>
+    public class IvrMenuPromptInfo
+    {
+        /// <summary>
         ///     Prompt mode: custom media or text
         ///     Enum: Audio, TextToSpeech
         /// </summary>
@@ -23,5 +23,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public PromptLanguageInfo language { get; set; }
-      }
-  }
+    }
+}

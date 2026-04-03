@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommDeviceForwardingTargetResource
-      {
-          /// <summary>
+{
+    public class CommDeviceForwardingTargetResource
+    {
+        /// <summary>
         ///     Ring target type
         ///     Required
         ///     Example: DeviceRingTarget
@@ -24,5 +24,5 @@ namespace RingCentral
         ///     Example: HP2
         /// </summary>
         public string name { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ApiVersionsList
-      {
-          /// <summary>
+{
+    public class ApiVersionsList
+    {
+        /// <summary>
         ///     Canonical URI of the API version
         ///     Format: uri
         /// </summary>
@@ -22,5 +22,5 @@ namespace RingCentral
         ///     Server revision
         /// </summary>
         public string serverRevision { get; set; }
-      }
-  }
+    }
+}

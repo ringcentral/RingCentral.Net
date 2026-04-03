@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TcrCampaignRecord
-      {
-          /// <summary>
+{
+    public class TcrCampaignRecord
+    {
+        /// <summary>
         ///     Identifier of a TCR campaign
         ///     Format: int64
         /// </summary>
@@ -47,5 +47,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ApiErrorWithParameter[] errors { get; set; }
-      }
-  }
+    }
+}

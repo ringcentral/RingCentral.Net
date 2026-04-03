@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.CustomGreetings
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.CallRecording.Index parent;
-public string greetingId;
-public Index(Restapi.Account.CallRecording.Index parent, string greetingId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.greetingId = greetingId;
-}
+        public Restapi.Account.CallRecording.Index parent;
+        public string greetingId;
+        public Index(Restapi.Account.CallRecording.Index parent, string greetingId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.greetingId = greetingId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && greetingId != null)
@@ -31,10 +31,10 @@ this.greetingId = greetingId;
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyInfo
         /// </summary>
-  public async Task<RingCentral.CallRecordingCustomGreetings> Get(RingCentral.ListCallRecordingCustomGreetingsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.CallRecordingCustomGreetings>(this.Path(false), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.CallRecordingCustomGreetings> Get(RingCentral.ListCallRecordingCustomGreetingsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.CallRecordingCustomGreetings>(this.Path(false), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Deletes call recording custom greetings.
@@ -44,10 +44,10 @@ return await rc.Get<RingCentral.CallRecordingCustomGreetings>(this.Path(false), 
         /// App Permission: EditAccounts
         /// User Permission: EditCompanyInfo
         /// </summary>
-  public async Task<string> DeleteAll(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Delete<string>(this.Path(false), null, null, restRequestConfig);
-  }
+        public async Task<string> DeleteAll(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Delete<string>(this.Path(false), null, null, restRequestConfig);
+        }
 
         /// <summary>
         /// Deletes call recording custom greeting(s).
@@ -57,13 +57,14 @@ return await rc.Delete<string>(this.Path(false), null, null, restRequestConfig);
         /// App Permission: EditAccounts
         /// User Permission: EditCompanyInfo
         /// </summary>
-  public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
-  {
-if (greetingId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(greetingId));
-    }return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
-  }
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
+        {
+            if (greetingId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(greetingId));
+            }
+            return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
+        }
     }
 }
 

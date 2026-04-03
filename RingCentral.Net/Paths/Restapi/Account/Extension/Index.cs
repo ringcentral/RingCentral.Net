@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Index parent;
-public string extensionId;
-public Index(Restapi.Account.Index parent, string extensionId = "~")
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.extensionId = extensionId;
-}
+        public Restapi.Account.Index parent;
+        public string extensionId;
+        public Index(Restapi.Account.Index parent, string extensionId = "~")
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.extensionId = extensionId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && extensionId != null)
@@ -25,49 +25,50 @@ this.extensionId = extensionId;
         }
         /// <summary>
         /// Returns the list of extensions created for a particular account.
-/// All types of extensions are included in this list.
-/// 
+        /// All types of extensions are included in this list.
+        /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension
         /// Rate Limit Group: Medium
         /// App Permission: ReadAccounts
         /// User Permission: ReadExtensions
         /// </summary>
-  public async Task<RingCentral.GetExtensionListResponse> List(RingCentral.ListExtensionsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.GetExtensionListResponse>(this.Path(false), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.GetExtensionListResponse> List(RingCentral.ListExtensionsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.GetExtensionListResponse>(this.Path(false), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Creates an extension.
-/// 
+        /// 
         /// HTTP Method: post
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension
         /// Rate Limit Group: Medium
         /// App Permission: EditAccounts
         /// User Permission: AddRemoveUsers
         /// </summary>
-  public async Task<RingCentral.GetExtensionInfoResponse> Post(RingCentral.ExtensionCreationRequest extensionCreationRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<RingCentral.GetExtensionInfoResponse>(this.Path(false), extensionCreationRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.GetExtensionInfoResponse> Post(RingCentral.ExtensionCreationRequest extensionCreationRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.GetExtensionInfoResponse>(this.Path(false), extensionCreationRequest, null, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns basic information about a particular extension of an account.
-/// 
+        /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}
         /// Rate Limit Group: Light
         /// App Permission: ReadAccounts
         /// User Permission: ReadExtensions
         /// </summary>
-  public async Task<RingCentral.GetExtensionInfoResponse> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (extensionId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(extensionId));
-    }return await rc.Get<RingCentral.GetExtensionInfoResponse>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.GetExtensionInfoResponse> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (extensionId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(extensionId));
+            }
+            return await rc.Get<RingCentral.GetExtensionInfoResponse>(this.Path(), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates the user settings.
@@ -77,13 +78,14 @@ if (extensionId == null)
         /// App Permission: EditExtensions
         /// User Permission: EditUserInfo OR EditUserCredentials
         /// </summary>
-  public async Task<RingCentral.GetExtensionInfoResponse> Put(RingCentral.ExtensionUpdateRequest extensionUpdateRequest, RestRequestConfig restRequestConfig = null)
-  {
-if (extensionId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(extensionId));
-    }return await rc.Put<RingCentral.GetExtensionInfoResponse>(this.Path(), extensionUpdateRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.GetExtensionInfoResponse> Put(RingCentral.ExtensionUpdateRequest extensionUpdateRequest, RestRequestConfig restRequestConfig = null)
+        {
+            if (extensionId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(extensionId));
+            }
+            return await rc.Put<RingCentral.GetExtensionInfoResponse>(this.Path(), extensionUpdateRequest, null, restRequestConfig);
+        }
     }
 }
 

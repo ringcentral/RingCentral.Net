@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class DictionaryGreetingInfo
-      {
-          /// <summary>
+{
+    public class DictionaryGreetingInfo
+    {
+        /// <summary>
         ///     Internal identifier of a greeting
         /// </summary>
         public string id { get; set; }
@@ -54,5 +54,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-      }
-  }
+    }
+}

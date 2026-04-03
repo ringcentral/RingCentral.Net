@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Company emergency response location details
-/// </summary>
-      public class DeviceEmergencyLocationInfo
-      {
-          /// <summary>
+    /// Company emergency response location details
+    /// </summary>
+    public class DeviceEmergencyLocationInfo
+    {
+        /// <summary>
         ///     Internal identifier of the emergency response location
         /// </summary>
         public string id { get; set; }
@@ -25,5 +25,5 @@ namespace RingCentral
         ///     Enum: Actual, Outdated, Deprecated
         /// </summary>
         public string addressFormatStatus { get; set; }
-      }
-  }
+    }
+}

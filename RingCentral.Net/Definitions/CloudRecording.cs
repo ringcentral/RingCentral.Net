@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Meeting information
-/// </summary>
-      public class CloudRecording
-      {
-          /// <summary>
+    /// Meeting information
+    /// </summary>
+    public class CloudRecording
+    {
+        /// <summary>
         ///     Meeting id
         ///     Required
         /// </summary>
@@ -63,5 +63,5 @@ namespace RingCentral
         ///     Date after which recording will be deleted
         /// </summary>
         public string expiresIn { get; set; }
-      }
-  }
+    }
+}

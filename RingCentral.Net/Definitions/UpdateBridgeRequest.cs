@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class UpdateBridgeRequest
-      {
-          /// <summary>
+{
+    public class UpdateBridgeRequest
+    {
+        /// <summary>
         ///     Custom name of a bridge
         ///     Example: Weekly Meeting with Joseph
         /// </summary>
@@ -19,5 +19,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public BridgePreferences preferences { get; set; }
-      }
-  }
+    }
+}

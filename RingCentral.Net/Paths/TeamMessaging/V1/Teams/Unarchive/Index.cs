@@ -7,12 +7,12 @@ namespace RingCentral.Paths.TeamMessaging.V1.Teams.Unarchive
     public partial class Index
     {
         public RestClient rc;
-public TeamMessaging.V1.Teams.Index parent;
-public Index(TeamMessaging.V1.Teams.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public TeamMessaging.V1.Teams.Index parent;
+        public Index(TeamMessaging.V1.Teams.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/unarchive";
@@ -24,10 +24,10 @@ this.rc = parent.rc;
         /// Rate Limit Group: Medium
         /// App Permission: TeamMessaging
         /// </summary>
-  public async Task<string> Post(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<string>(this.Path(), null, null, restRequestConfig);
-  }
+        public async Task<string> Post(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<string>(this.Path(), null, null, restRequestConfig);
+        }
     }
 }
 

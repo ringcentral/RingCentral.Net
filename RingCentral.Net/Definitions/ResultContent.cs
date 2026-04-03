@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Flags controlling parsing result content.
-/// </summary>
-      public class ResultContent
-      {
-          /// <summary>
+    /// Flags controlling parsing result content.
+    /// </summary>
+    public class ResultContent
+    {
+        /// <summary>
         ///     Indicates that `results.dialingDetails` section should be returned for particular result items in the response.
         ///     Default: true
         /// </summary>
@@ -24,5 +24,5 @@ namespace RingCentral
         ///     Default: true
         /// </summary>
         public bool? includeFormats { get; set; }
-      }
-  }
+    }
+}

@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Query parameters for operation readAccountPresence
-/// </summary>
-      public class ReadAccountPresenceParameters
-      {
-          /// <summary>
+    /// Query parameters for operation readAccountPresence
+    /// </summary>
+    public class ReadAccountPresenceParameters
+    {
+        /// <summary>
         ///     Whether to return detailed telephony state
         /// </summary>
         public bool? detailedTelephonyState { get; set; }
@@ -26,5 +26,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? perPage { get; set; }
-      }
-  }
+    }
+}

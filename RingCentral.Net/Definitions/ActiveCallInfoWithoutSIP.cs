@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ActiveCallInfoWithoutSIP
-      {
-          /// <summary>
+{
+    public class ActiveCallInfoWithoutSIP
+    {
+        /// <summary>
         ///     Internal identifier of a call
         /// </summary>
         public string id { get; set; }
@@ -78,5 +78,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public AppearanceInfo appearanceInfo { get; set; }
-      }
-  }
+    }
+}

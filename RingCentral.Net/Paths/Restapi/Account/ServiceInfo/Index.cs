@@ -7,30 +7,30 @@ namespace RingCentral.Paths.Restapi.Account.ServiceInfo
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Index parent;
-public Index(Restapi.Account.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Index parent;
+        public Index(Restapi.Account.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/service-info";
         }
         /// <summary>
         /// Returns the information about service plan, available features
-/// and limitations for a particular RingCentral customer account.
-/// 
+        /// and limitations for a particular RingCentral customer account.
+        /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/service-info
         /// Rate Limit Group: Light
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyInfo
         /// </summary>
-  public async Task<RingCentral.AccountServiceInfo> Get(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.AccountServiceInfo>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.AccountServiceInfo> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.AccountServiceInfo>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

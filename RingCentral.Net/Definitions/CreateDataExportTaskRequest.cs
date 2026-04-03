@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CreateDataExportTaskRequest
-      {
-          /// <summary>
+{
+    public class CreateDataExportTaskRequest
+    {
+        /// <summary>
         ///     Starting time for data collection. The default value is `timeTo` minus 24 hours. Max allowed time frame between `timeFrom` and `timeTo` is 6 months
         ///     Format: date-time
         /// </summary>
@@ -23,5 +23,5 @@ namespace RingCentral
         ///     List of chats from which the data (posts, files, tasks, events, notes, etc.) will be collected. Maximum number of chats supported is 10
         /// </summary>
         public string[] chatIds { get; set; }
-      }
-  }
+    }
+}

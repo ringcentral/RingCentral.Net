@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ValidationError
-      {
-          /// <summary>
+{
+    public class ValidationError
+    {
+        /// <summary>
         ///     Error code
         /// </summary>
         public string errorCode { get; set; }
@@ -16,5 +16,5 @@ namespace RingCentral
         ///     Name of invalid parameter
         /// </summary>
         public string parameterName { get; set; }
-      }
-  }
+    }
+}

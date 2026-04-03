@@ -7,14 +7,14 @@ namespace RingCentral.Paths.TeamMessaging.V1.Conversations
     public partial class Index
     {
         public RestClient rc;
-public TeamMessaging.V1.Index parent;
-public string chatId;
-public Index(TeamMessaging.V1.Index parent, string chatId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.chatId = chatId;
-}
+        public TeamMessaging.V1.Index parent;
+        public string chatId;
+        public Index(TeamMessaging.V1.Index parent, string chatId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.chatId = chatId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && chatId != null)
@@ -30,10 +30,10 @@ this.chatId = chatId;
         /// Rate Limit Group: Medium
         /// App Permission: TeamMessaging
         /// </summary>
-  public async Task<RingCentral.TMConversationList> List(RingCentral.ListGlipConversationsNewParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.TMConversationList>(this.Path(false), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.TMConversationList> List(RingCentral.ListGlipConversationsNewParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.TMConversationList>(this.Path(false), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Creates a new conversation or opens the existing one. If the conversation already exists, then its ID will be returned in response. A conversation is an adhoc discussion between a particular set of users, not featuring any specific name or description; it is a chat of 'Group' type. If you add a person to the existing conversation (group), it creates a whole new conversation.
@@ -42,10 +42,10 @@ return await rc.Get<RingCentral.TMConversationList>(this.Path(false), queryParam
         /// Rate Limit Group: Medium
         /// App Permission: TeamMessaging
         /// </summary>
-  public async Task<RingCentral.TMConversationInfo> Post(RingCentral.CreateConversationRequest createConversationRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<RingCentral.TMConversationInfo>(this.Path(false), createConversationRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.TMConversationInfo> Post(RingCentral.CreateConversationRequest createConversationRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.TMConversationInfo>(this.Path(false), createConversationRequest, null, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns information about the specified conversation, including the list of conversation participants. A conversation is an adhoc discussion between a particular set of users, not featuring any specific name or description; it is a chat of 'Group' type. If you add a person to the existing conversation, it creates a whole new conversation.
@@ -54,13 +54,14 @@ return await rc.Post<RingCentral.TMConversationInfo>(this.Path(false), createCon
         /// Rate Limit Group: Light
         /// App Permission: TeamMessaging
         /// </summary>
-  public async Task<RingCentral.TMConversationInfo> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (chatId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(chatId));
-    }return await rc.Get<RingCentral.TMConversationInfo>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.TMConversationInfo> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (chatId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(chatId));
+            }
+            return await rc.Get<RingCentral.TMConversationInfo>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

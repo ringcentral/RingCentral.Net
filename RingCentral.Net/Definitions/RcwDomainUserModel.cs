@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class RcwDomainUserModel
-      {
-          /// <summary>
+{
+    public class RcwDomainUserModel
+    {
+        /// <summary>
         ///     User ID
         ///     Required
         /// </summary>
@@ -21,5 +21,5 @@ namespace RingCentral
         ///     Enum: pbx, ilm
         /// </summary>
         public string domain { get; set; }
-      }
-  }
+    }
+}

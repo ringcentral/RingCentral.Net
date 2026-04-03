@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class GetConferencingInfoResponse
-      {
-          /// <summary>
+{
+    public class GetConferencingInfoResponse
+    {
+        /// <summary>
         ///     Canonical URI of a conferencing
         ///     Format: uri
         /// </summary>
@@ -10,7 +10,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Determines if host user allows conference participants to join
-            ///     before the host
+        ///     before the host
         /// </summary>
         public bool? allowJoinBeforeHost { get; set; }
 
@@ -31,7 +31,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Primary conference phone number for user's home country returned
-            ///     in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format
+        ///     in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format
         /// </summary>
         public string phoneNumber { get; set; }
 
@@ -44,18 +44,18 @@ namespace RingCentral
 
         /// <summary>
         ///     Short URL leading to the service web page Tap to Join for audio
-            ///     conference bridge
+        ///     conference bridge
         ///     Format: uri
         /// </summary>
         public string tapToJoinUri { get; set; }
 
         /// <summary>
         ///     List of multiple dial-in phone numbers to connect to audio
-            ///     conference service, relevant for the user's brand. Each number is given with
-            ///     the country and location information, in order to let the user choose
-            ///     less expensive way to connect to a conference. The first number in
-            ///     the list is a primary conference number, that is default and domestic
+        ///     conference service, relevant for the user's brand. Each number is given with
+        ///     the country and location information, in order to let the user choose
+        ///     less expensive way to connect to a conference. The first number in
+        ///     the list is a primary conference number, that is default and domestic
         /// </summary>
         public PhoneNumberInfoConferencing[] phoneNumbers { get; set; }
-      }
-  }
+    }
+}

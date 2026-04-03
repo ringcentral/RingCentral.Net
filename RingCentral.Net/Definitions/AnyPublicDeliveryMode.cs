@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Notification delivery transport information
-/// </summary>
-      public class AnyPublicDeliveryMode
-      {
-          /// <summary>
+    /// Notification delivery transport information
+    /// </summary>
+    public class AnyPublicDeliveryMode
+    {
+        /// <summary>
         ///     The transport type for this subscription
         ///     Required
         ///     Enum: WebHook, WebSocket
@@ -26,5 +26,5 @@ namespace RingCentral
         ///     Enum: false
         /// </summary>
         public bool? encryption { get; set; }
-      }
-  }
+    }
+}

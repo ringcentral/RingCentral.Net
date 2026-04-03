@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Options for selecting breakdown for calls duration
-/// </summary>
-      public class TimelineResponseOptionsTimers
-      {
-          /// <summary>
+    /// Options for selecting breakdown for calls duration
+    /// </summary>
+    public class TimelineResponseOptionsTimers
+    {
+        /// <summary>
         ///     Include data for all calls duration
         /// </summary>
         public bool? allCallsDuration { get; set; }
@@ -59,5 +59,5 @@ namespace RingCentral
         ///     Include breakdown of calls duration by queue hours (BusinessHours, AfterHours)
         /// </summary>
         public bool? callsDurationByQueueHours { get; set; }
-      }
-  }
+    }
+}

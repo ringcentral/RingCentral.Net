@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Dictionary.Permission
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Dictionary.Index parent;
-public string permissionId;
-public Index(Restapi.Dictionary.Index parent, string permissionId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.permissionId = permissionId;
-}
+        public Restapi.Dictionary.Index parent;
+        public string permissionId;
+        public Index(Restapi.Dictionary.Index parent, string permissionId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.permissionId = permissionId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && permissionId != null)
@@ -29,10 +29,10 @@ this.permissionId = permissionId;
         /// Endpoint: /restapi/{apiVersion}/dictionary/permission
         /// Rate Limit Group: Light
         /// </summary>
-  public async Task<RingCentral.PermissionCollectionResource> List(RingCentral.ListPermissionsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.PermissionCollectionResource>(this.Path(false), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.PermissionCollectionResource> List(RingCentral.ListPermissionsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.PermissionCollectionResource>(this.Path(false), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns a user permission by ID.
@@ -40,13 +40,14 @@ return await rc.Get<RingCentral.PermissionCollectionResource>(this.Path(false), 
         /// Endpoint: /restapi/{apiVersion}/dictionary/permission/{permissionId}
         /// Rate Limit Group: Light
         /// </summary>
-  public async Task<RingCentral.PermissionResource> Get(RingCentral.ReadPermissionParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-if (permissionId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(permissionId));
-    }return await rc.Get<RingCentral.PermissionResource>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.PermissionResource> Get(RingCentral.ReadPermissionParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            if (permissionId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(permissionId));
+            }
+            return await rc.Get<RingCentral.PermissionResource>(this.Path(), queryParams, restRequestConfig);
+        }
     }
 }
 

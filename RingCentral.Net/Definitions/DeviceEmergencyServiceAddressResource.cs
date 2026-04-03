@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Address for emergency cases. The same emergency address is assigned to all numbers of a single device
-/// </summary>
-      public class DeviceEmergencyServiceAddressResource
-      {
-          /// <summary>
+    /// Address for emergency cases. The same emergency address is assigned to all numbers of a single device
+    /// </summary>
+    public class DeviceEmergencyServiceAddressResource
+    {
+        /// <summary>
         ///     Country name
         /// </summary>
         public string country { get; set; }
@@ -38,33 +38,33 @@ namespace RingCentral
 
         /// <summary>
         ///     Email of a primary contact person (receiver). Should be specified
-            ///     for countries except the US, Canada, the UK and Australia
+        ///     for countries except the US, Canada, the UK and Australia
         ///     Format: email
         /// </summary>
         public string customerEmail { get; set; }
 
         /// <summary>
         ///     Email of an additional contact person. Should be specified
-            ///     for countries except the US, Canada, the UK and Australia
+        ///     for countries except the US, Canada, the UK and Australia
         ///     Format: email
         /// </summary>
         public string additionalCustomerEmail { get; set; }
 
         /// <summary>
         ///     Name of an additional contact person. Should be specified for
-            ///     countries except the US, Canada, the UK and Australia
+        ///     countries except the US, Canada, the UK and Australia
         /// </summary>
         public string additionalCustomerName { get; set; }
 
         /// <summary>
         ///     Phone number of a primary contact person (receiver). Should
-            ///     be specified for countries except the US, Canada, the UK and Australia
+        ///     be specified for countries except the US, Canada, the UK and Australia
         /// </summary>
         public string customerPhone { get; set; }
 
         /// <summary>
         ///     Phone number of an additional contact person. Should be specified
-            ///     for countries except the US, Canada, the UK & Australia
+        ///     for countries except the US, Canada, the UK & Australia
         /// </summary>
         public string additionalCustomerPhone { get; set; }
 
@@ -95,7 +95,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Second line address (apartment, suite, unit, building, floor,
-            ///     etc.)
+        ///     etc.)
         /// </summary>
         public string street2 { get; set; }
 
@@ -132,7 +132,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Resulting status of emergency address synchronization. Returned
-            ///     if `syncEmergencyAddress` parameter is set to `true`
+        ///     if `syncEmergencyAddress` parameter is set to `true`
         ///     Enum: Verified, Updated, Deleted, NotRequired, Unsupported, Failed
         /// </summary>
         public string syncStatus { get; set; }
@@ -141,5 +141,5 @@ namespace RingCentral
         ///     Internal identifier of a tax
         /// </summary>
         public string taxId { get; set; }
-      }
-  }
+    }
+}

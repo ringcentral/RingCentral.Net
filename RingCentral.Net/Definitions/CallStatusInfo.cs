@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Status data of a call session
-/// </summary>
-      public class CallStatusInfo
-      {
-          /// <summary>
+    /// Status data of a call session
+    /// </summary>
+    public class CallStatusInfo
+    {
+        /// <summary>
         ///     Status code of a call
         ///     Enum: Setup, Proceeding, Answered, Disconnected, Gone, Parked, Hold, VoiceMail, FaxReceive, Tds, VoiceMailScreening
         /// </summary>
@@ -39,5 +39,5 @@ namespace RingCentral
         ///     Specifies if it's a conference call
         /// </summary>
         public bool? rcc { get; set; }
-      }
-  }
+    }
+}

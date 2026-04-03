@@ -1,10 +1,10 @@
 namespace RingCentral
-  {
-      public class AddressBookBulkContactAddressInfo
-      {
-          /// <summary>
+{
+    public class AddressBookBulkContactAddressInfo
+    {
+        /// <summary>
         ///     Country name of the extension user company. Not returned for Address
-            ///     Book
+        ///     Book
         /// </summary>
         public string country { get; set; }
 
@@ -27,5 +27,5 @@ namespace RingCentral
         ///     Zip code of the extension user company
         /// </summary>
         public string zip { get; set; }
-      }
-  }
+    }
+}

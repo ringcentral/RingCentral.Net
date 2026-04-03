@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Action information
-/// </summary>
-      public class CommRingAlwaysGroupActionResource
-      {
-          /// <summary>
+    /// Action information
+    /// </summary>
+    public class CommRingAlwaysGroupActionResource
+    {
+        /// <summary>
         ///     Required
         ///     Example: RingAlwaysGroupAction
         ///     Enum: PlayConnectingMessageAction, PlayConnectingPromptAction, PlayWelcomePromptAction, ScreeningAction, RingGroupAction, RingAlwaysGroupAction, TerminatingAction
@@ -22,5 +22,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CommRingAlwaysGroupActionResourceTargets[] targets { get; set; }
-      }
-  }
+    }
+}

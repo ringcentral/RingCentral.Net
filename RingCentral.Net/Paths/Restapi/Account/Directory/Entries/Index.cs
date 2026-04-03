@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Directory.Index parent;
-public string entryId;
-public Index(Restapi.Account.Directory.Index parent, string entryId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.entryId = entryId;
-}
+        public Restapi.Account.Directory.Index parent;
+        public string entryId;
+        public Index(Restapi.Account.Directory.Index parent, string entryId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.entryId = entryId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && entryId != null)
@@ -30,10 +30,10 @@ this.entryId = entryId;
         /// Rate Limit Group: Medium
         /// App Permission: ReadAccounts
         /// </summary>
-  public async Task<RingCentral.DirectoryResource> List(RingCentral.ListDirectoryEntriesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.DirectoryResource>(this.Path(false), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.DirectoryResource> List(RingCentral.ListDirectoryEntriesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.DirectoryResource>(this.Path(false), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns contact information on a particular corporate user of a federated account.
@@ -42,13 +42,14 @@ return await rc.Get<RingCentral.DirectoryResource>(this.Path(false), queryParams
         /// Rate Limit Group: Medium
         /// App Permission: ReadAccounts
         /// </summary>
-  public async Task<RingCentral.ContactResource> Get(RingCentral.ReadDirectoryEntryParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-if (entryId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(entryId));
-    }return await rc.Get<RingCentral.ContactResource>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.ContactResource> Get(RingCentral.ReadDirectoryEntryParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            if (entryId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(entryId));
+            }
+            return await rc.Get<RingCentral.ContactResource>(this.Path(), queryParams, restRequestConfig);
+        }
     }
 }
 

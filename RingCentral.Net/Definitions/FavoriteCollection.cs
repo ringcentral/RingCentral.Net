@@ -1,9 +1,9 @@
 namespace RingCentral
-  {
-      public class FavoriteCollection
-      {
-          /// <summary>
+{
+    public class FavoriteCollection
+    {
+        /// <summary>
         /// </summary>
         public FavoriteContactResource[] records { get; set; }
-      }
-  }
+    }
+}

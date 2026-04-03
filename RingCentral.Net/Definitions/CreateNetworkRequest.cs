@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CreateNetworkRequest
-      {
-          /// <summary>
+{
+    public class CreateNetworkRequest
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public string name { get; set; }
@@ -20,5 +20,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public PrivateIpRangeInfoRequest[] privateIpRanges { get; set; }
-      }
-  }
+    }
+}

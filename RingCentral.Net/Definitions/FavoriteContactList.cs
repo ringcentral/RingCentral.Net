@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class FavoriteContactList
-      {
-          /// <summary>
+{
+    public class FavoriteContactList
+    {
+        /// <summary>
         ///     Format: uri
         /// </summary>
         public string uri { get; set; }
@@ -10,5 +10,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public FavoriteContactResource[] records { get; set; }
-      }
-  }
+    }
+}

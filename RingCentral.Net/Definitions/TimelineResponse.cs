@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TimelineResponse
-      {
-          /// <summary>
+{
+    public class TimelineResponse
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public ResponsePaging paging { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public TimelineResponseData data { get; set; }
-      }
-  }
+    }
+}

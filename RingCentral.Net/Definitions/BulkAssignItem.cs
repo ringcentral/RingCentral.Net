@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class BulkAssignItem
-      {
-          /// <summary>
+{
+    public class BulkAssignItem
+    {
+        /// <summary>
         /// </summary>
         public string departmentId { get; set; }
 
@@ -13,5 +13,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string[] removedExtensionIds { get; set; }
-      }
-  }
+    }
+}

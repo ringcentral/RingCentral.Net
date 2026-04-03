@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class MessageAttachmentInfoIntId
-      {
-          /// <summary>
+{
+    public class MessageAttachmentInfoIntId
+    {
+        /// <summary>
         ///     Internal identifier of a message attachment
         ///     Format: int64
         /// </summary>
@@ -35,5 +35,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? size { get; set; }
-      }
-  }
+    }
+}

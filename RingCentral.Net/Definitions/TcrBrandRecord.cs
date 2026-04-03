@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TcrBrandRecord
-      {
-          /// <summary>
+{
+    public class TcrBrandRecord
+    {
+        /// <summary>
         ///     Identifier of a TCR brand
         ///     Format: int64
         /// </summary>
@@ -41,5 +41,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ApiErrorWithParameter[] errors { get; set; }
-      }
-  }
+    }
+}

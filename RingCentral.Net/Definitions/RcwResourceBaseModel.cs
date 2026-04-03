@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class RcwResourceBaseModel
-      {
-          /// <summary>
+{
+    public class RcwResourceBaseModel
+    {
+        /// <summary>
         ///     Internal object ID
         ///     Example: 78654321
         /// </summary>
@@ -21,5 +21,5 @@ namespace RingCentral
         ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
-      }
-  }
+    }
+}

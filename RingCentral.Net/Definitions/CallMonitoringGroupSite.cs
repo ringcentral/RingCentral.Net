@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CallMonitoringGroupSite
-      {
-          /// <summary>
+{
+    public class CallMonitoringGroupSite
+    {
+        /// <summary>
         ///     Identifier of a site
         /// </summary>
         public string id { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Name of a site
         /// </summary>
         public string name { get; set; }
-      }
-  }
+    }
+}

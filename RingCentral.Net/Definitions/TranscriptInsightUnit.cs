@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// One utterance of a call. Each utterance is a speakerId, text, start and end time
-/// </summary>
-      public class TranscriptInsightUnit
-      {
-          /// <summary>
+    /// One utterance of a call. Each utterance is a speakerId, text, start and end time
+    /// </summary>
+    public class TranscriptInsightUnit
+    {
+        /// <summary>
         ///     Participant ID
         ///     Required
         ///     Example: p-32423
@@ -34,5 +34,5 @@ namespace RingCentral
         ///     Example: 4.2
         /// </summary>
         public decimal? end { get; set; }
-      }
-  }
+    }
+}

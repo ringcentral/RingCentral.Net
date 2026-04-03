@@ -1,13 +1,13 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Account service information, including brand, sub-brand, service plan and
-/// billing plan
-/// 
-/// </summary>
-      public class ServiceInfo
-      {
-          /// <summary>
+    /// Account service information, including brand, sub-brand, service plan and
+    /// billing plan
+    /// 
+    /// </summary>
+    public class ServiceInfo
+    {
+        /// <summary>
         ///     Canonical URI of a service info resource
         ///     Format: uri
         /// </summary>
@@ -36,5 +36,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public UBrandInfo uBrand { get; set; }
-      }
-  }
+    }
+}

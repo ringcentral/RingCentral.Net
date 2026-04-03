@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommIntegrationTargetRequest
-      {
-          /// <summary>
+{
+    public class CommIntegrationTargetRequest
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public CommIntegrationRequest integration { get; set; }
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Enum: IntegrationRingTarget
         /// </summary>
         public string type { get; set; }
-      }
-  }
+    }
+}

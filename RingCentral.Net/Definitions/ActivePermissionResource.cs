@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ActivePermissionResource
-      {
-          /// <summary>
+{
+    public class ActivePermissionResource
+    {
+        /// <summary>
         /// </summary>
         public PermissionIdResource permission { get; set; }
 
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Enum: Account, AllExtensions, Federation, NonUserExtensions, RoleBased, Self, UserExtensions
         /// </summary>
         public string[] scopes { get; set; }
-      }
-  }
+    }
+}

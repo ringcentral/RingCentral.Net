@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Extension information
-/// </summary>
-      public class SiteIVRActionsExtensionInfo
-      {
-          /// <summary>
+    /// Extension information
+    /// </summary>
+    public class SiteIVRActionsExtensionInfo
+    {
+        /// <summary>
         ///     Internal identifier of an extension
         /// </summary>
         public string id { get; set; }
@@ -20,5 +20,5 @@ namespace RingCentral
         ///     Name of an extension user
         /// </summary>
         public string name { get; set; }
-      }
-  }
+    }
+}

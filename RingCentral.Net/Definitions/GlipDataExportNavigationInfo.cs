@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class GlipDataExportNavigationInfo
-      {
-          /// <summary>
+{
+    public class GlipDataExportNavigationInfo
+    {
+        /// <summary>
         /// </summary>
         public GlipDataExportNavigationInfoUri firstPage { get; set; }
 
@@ -17,5 +17,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public GlipDataExportNavigationInfoUri lastPage { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class AsrInput
-      {
-          /// <summary>
+{
+    public class AsrInput
+    {
+        /// <summary>
         ///     Publicly facing uri
         ///     Format: uri
         /// </summary>
@@ -67,5 +67,5 @@ namespace RingCentral
         ///     Indicates the words/phrases that will be used for boosting the transcript. This can help to boost accuracy for cases like Person Names, Company names etc.
         /// </summary>
         public SpeechContextPhrasesInput[] speechContexts { get; set; }
-      }
-  }
+    }
+}

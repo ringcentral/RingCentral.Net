@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.SendActivationEmail
     public partial class Index
     {
         public RestClient rc;
-public Restapi.V2.Accounts.Index parent;
-public Index(Restapi.V2.Accounts.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.V2.Accounts.Index parent;
+        public Index(Restapi.V2.Accounts.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/send-activation-email";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: EditAccounts
         /// User Permission: AccountAdministration
         /// </summary>
-  public async Task<string> Post(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<string>(this.Path(), null, null, restRequestConfig);
-  }
+        public async Task<string> Post(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<string>(this.Path(), null, null, restRequestConfig);
+        }
     }
 }
 

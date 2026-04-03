@@ -1,15 +1,15 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Batch of A2P SMS messages. This object provides a specification
-/// to send message(s) to many recipients. It contains top-level attributes which apply to all messages. In addition
-/// to that, it is possible to override this attribute for each message. This
-/// way a single API call may be used to send individual messages to many recipients
-/// 
-/// </summary>
-      public class MessageBatchResponse
-      {
-          /// <summary>
+    /// Batch of A2P SMS messages. This object provides a specification
+    /// to send message(s) to many recipients. It contains top-level attributes which apply to all messages. In addition
+    /// to that, it is possible to override this attribute for each message. This
+    /// way a single API call may be used to send individual messages to many recipients
+    /// 
+    /// </summary>
+    public class MessageBatchResponse
+    {
+        /// <summary>
         ///     Unique identifier of the message batch
         ///     Example: 12345
         /// </summary>
@@ -17,7 +17,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I)
-            ///     format from which the messages are going to be sent
+        ///     format from which the messages are going to be sent
         ///     Example: +15551234567
         /// </summary>
         public string from { get; set; }
@@ -62,10 +62,10 @@ namespace RingCentral
 
         /// <summary>
         ///     The estimated batch cost for completed batch.
-            ///     Calculated after batch processing is completed.
+        ///     Calculated after batch processing is completed.
         ///     Format: double
         ///     Example: 0.007
         /// </summary>
         public decimal? cost { get; set; }
-      }
-  }
+    }
+}

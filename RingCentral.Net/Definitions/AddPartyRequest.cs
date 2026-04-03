@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class AddPartyRequest
-      {
-          /// <summary>
+{
+    public class AddPartyRequest
+    {
+        /// <summary>
         ///     Internal identifier of a call session
         ///     Required
         /// </summary>
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string partyId { get; set; }
-      }
-  }
+    }
+}

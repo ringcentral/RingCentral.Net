@@ -7,30 +7,30 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Device
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Extension.Index parent;
-public Index(Restapi.Account.Extension.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Extension.Index parent;
+        public Index(Restapi.Account.Extension.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/device";
         }
         /// <summary>
         /// Returns devices of an extension or multiple extensions by their ID(s).
-/// [Bulk request syntax](https://developers.ringcentral.com/guide/basics/batch-requests) is supported.
-/// 
+        /// [Bulk request syntax](https://developers.ringcentral.com/guide/basics/batch-requests) is supported.
+        /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/device
         /// Rate Limit Group: Light
         /// App Permission: ReadAccounts
         /// User Permission: ReadUserDevices
         /// </summary>
-  public async Task<RingCentral.GetExtensionDevicesResponse> Get(RingCentral.ListExtensionDevicesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.GetExtensionDevicesResponse>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.GetExtensionDevicesResponse> Get(RingCentral.ListExtensionDevicesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.GetExtensionDevicesResponse>(this.Path(), queryParams, restRequestConfig);
+        }
     }
 }
 

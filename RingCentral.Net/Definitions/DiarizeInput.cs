@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class DiarizeInput
-      {
-          /// <summary>
+{
+    public class DiarizeInput
+    {
+        /// <summary>
         ///     Publicly facing uri
         ///     Format: uri
         /// </summary>
@@ -52,5 +52,5 @@ namespace RingCentral
         ///     Apply voice activity detection.
         /// </summary>
         public bool? enableVoiceActivityDetection { get; set; }
-      }
-  }
+    }
+}

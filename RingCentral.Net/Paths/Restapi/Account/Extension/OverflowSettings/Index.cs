@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.OverflowSettings
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Extension.Index parent;
-public Index(Restapi.Account.Extension.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Extension.Index parent;
+        public Index(Restapi.Account.Extension.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/overflow-settings";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: ReadAccounts
         /// User Permission: CallQueueToCallQueue
         /// </summary>
-  public async Task<RingCentral.CallQueueOverflowSettings> Get(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.CallQueueOverflowSettings>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.CallQueueOverflowSettings> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.CallQueueOverflowSettings>(this.Path(), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates overflow settings for a call queue specified in path.
@@ -38,10 +38,10 @@ return await rc.Get<RingCentral.CallQueueOverflowSettings>(this.Path(), null, re
         /// App Permission: EditExtensions
         /// User Permission: CallQueueToCallQueue
         /// </summary>
-  public async Task<RingCentral.CallQueueOverflowSettings> Put(RingCentral.CallQueueOverflowSettingsRequestResource callQueueOverflowSettingsRequestResource, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Put<RingCentral.CallQueueOverflowSettings>(this.Path(), callQueueOverflowSettingsRequestResource, null, restRequestConfig);
-  }
+        public async Task<RingCentral.CallQueueOverflowSettings> Put(RingCentral.CallQueueOverflowSettingsRequestResource callQueueOverflowSettingsRequestResource, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Put<RingCentral.CallQueueOverflowSettings>(this.Path(), callQueueOverflowSettingsRequestResource, null, restRequestConfig);
+        }
     }
 }
 

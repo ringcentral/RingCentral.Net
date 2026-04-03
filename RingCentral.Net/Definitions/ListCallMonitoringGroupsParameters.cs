@@ -1,13 +1,13 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Query parameters for operation listCallMonitoringGroups
-/// </summary>
-      public class ListCallMonitoringGroupsParameters
-      {
-          /// <summary>
+    /// Query parameters for operation listCallMonitoringGroups
+    /// </summary>
+    public class ListCallMonitoringGroupsParameters
+    {
+        /// <summary>
         ///     Indicates a page number to retrieve. Only positive number values
-            ///     are allowed
+        ///     are allowed
         ///     Format: int32
         ///     Default: 1
         /// </summary>
@@ -22,7 +22,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Internal identifier of an extension that is a member of every
-            ///     group within the result
+        ///     group within the result
         /// </summary>
         public string memberExtensionId { get; set; }
 
@@ -30,5 +30,5 @@ namespace RingCentral
         ///     Internal identifier of a site
         /// </summary>
         public string[] siteId { get; set; }
-      }
-  }
+    }
+}

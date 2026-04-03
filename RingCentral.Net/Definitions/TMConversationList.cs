@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TMConversationList
-      {
-          /// <summary>
+{
+    public class TMConversationList
+    {
+        /// <summary>
         ///     List of conversations
         ///     Required
         /// </summary>
@@ -11,5 +11,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public TMNavigationInfo navigation { get; set; }
-      }
-  }
+    }
+}

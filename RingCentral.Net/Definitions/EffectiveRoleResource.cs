@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class EffectiveRoleResource
-      {
-          /// <summary>
+{
+    public class EffectiveRoleResource
+    {
+        /// <summary>
         ///     Format: uri
         /// </summary>
         public string uri { get; set; }
@@ -14,5 +14,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string domain { get; set; }
-      }
-  }
+    }
+}

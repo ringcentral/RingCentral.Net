@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Ai.Ringsense.V1.Public.Accounts
     public partial class Index
     {
         public RestClient rc;
-public Ai.Ringsense.V1.Public.Index parent;
-public string accountId;
-public Index(Ai.Ringsense.V1.Public.Index parent, string accountId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.accountId = accountId;
-}
+        public Ai.Ringsense.V1.Public.Index parent;
+        public string accountId;
+        public Index(Ai.Ringsense.V1.Public.Index parent, string accountId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.accountId = accountId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && accountId != null)

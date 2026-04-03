@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Messages
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.A2pSms.Index parent;
-public string messageId;
-public Index(Restapi.Account.A2pSms.Index parent, string messageId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.messageId = messageId;
-}
+        public Restapi.Account.A2pSms.Index parent;
+        public string messageId;
+        public Index(Restapi.Account.A2pSms.Index parent, string messageId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.messageId = messageId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && messageId != null)
@@ -30,10 +30,10 @@ this.messageId = messageId;
         /// Rate Limit Group: Light
         /// App Permission: A2PSMS
         /// </summary>
-  public async Task<RingCentral.MessageListResponse> List(RingCentral.ListA2PSMSParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.MessageListResponse>(this.Path(false), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.MessageListResponse> List(RingCentral.ListA2PSMSParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.MessageListResponse>(this.Path(false), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns the details of an A2P SMS message by ID.
@@ -42,13 +42,14 @@ return await rc.Get<RingCentral.MessageListResponse>(this.Path(false), queryPara
         /// Rate Limit Group: Light
         /// App Permission: A2PSMS
         /// </summary>
-  public async Task<RingCentral.MessageDetailsResponse> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (messageId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(messageId));
-    }return await rc.Get<RingCentral.MessageDetailsResponse>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.MessageDetailsResponse> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (messageId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(messageId));
+            }
+            return await rc.Get<RingCentral.MessageDetailsResponse>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

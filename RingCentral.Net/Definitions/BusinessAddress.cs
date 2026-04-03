@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class BusinessAddress
-      {
-          /// <summary>
+{
+    public class BusinessAddress
+    {
+        /// <summary>
         ///     Street
         /// </summary>
         public string street { get; set; }
@@ -26,5 +26,5 @@ namespace RingCentral
         ///     Country code
         /// </summary>
         public string countryCode { get; set; }
-      }
-  }
+    }
+}

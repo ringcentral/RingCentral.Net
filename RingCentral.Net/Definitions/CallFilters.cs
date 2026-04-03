@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Optional filters that limit the scope of calls (joined via AND)
-/// </summary>
-      public class CallFilters
-      {
-          /// <summary>
+    /// Optional filters that limit the scope of calls (joined via AND)
+    /// </summary>
+    public class CallFilters
+    {
+        /// <summary>
         /// </summary>
         public ExtensionFilters extensionFilters { get; set; }
 
@@ -91,5 +91,5 @@ namespace RingCentral
         ///     Enum: BusinessHours, AfterHours
         /// </summary>
         public string[] queueHours { get; set; }
-      }
-  }
+    }
+}

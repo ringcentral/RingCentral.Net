@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AuthzProfile.Check
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Extension.AuthzProfile.Index parent;
-public Index(Restapi.Account.Extension.AuthzProfile.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Extension.AuthzProfile.Index parent;
+        public Index(Restapi.Account.Extension.AuthzProfile.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/check";
@@ -23,10 +23,10 @@ this.rc = parent.rc;
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/authz-profile/check
         /// Rate Limit Group: Light
         /// </summary>
-  public async Task<RingCentral.AuthProfileCheckResource> Get(RingCentral.CheckUserPermissionParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.AuthProfileCheckResource>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.AuthProfileCheckResource> Get(RingCentral.CheckUserPermissionParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.AuthProfileCheckResource>(this.Path(), queryParams, restRequestConfig);
+        }
     }
 }
 

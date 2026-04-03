@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ExtensionFavoritesEvent
-      {
-          /// <summary>
+{
+    public class ExtensionFavoritesEvent
+    {
+        /// <summary>
         ///     Universally unique identifier of a notification
         /// </summary>
         public string uuid { get; set; }
@@ -14,8 +14,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Date/time of sending a notification in
-            ///     [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
-            ///     format including timezone, for example *2016-03-10T18:07:52.534Z*
+        ///     [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+        ///     format including timezone, for example *2016-03-10T18:07:52.534Z*
         ///     Format: date-time
         /// </summary>
         public string timestamp { get; set; }
@@ -28,5 +28,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ExtensionFavoritesEventBody body { get; set; }
-      }
-  }
+    }
+}

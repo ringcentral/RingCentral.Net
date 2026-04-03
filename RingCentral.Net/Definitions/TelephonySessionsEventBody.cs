@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Notification payload body
-/// </summary>
-      public class TelephonySessionsEventBody
-      {
-          /// <summary>
+    /// Notification payload body
+    /// </summary>
+    public class TelephonySessionsEventBody
+    {
+        /// <summary>
         ///     Order number of a notification to state the chronology
         ///     Format: int64
         /// </summary>
@@ -40,5 +40,5 @@ namespace RingCentral
         ///     Call participants details
         /// </summary>
         public TelephonySessionsEventPartyInfo[] parties { get; set; }
-      }
-  }
+    }
+}

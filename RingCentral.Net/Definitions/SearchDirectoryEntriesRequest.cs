@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
-      public class SearchDirectoryEntriesRequest
-      {
-          /// <summary>
+{
+    public class SearchDirectoryEntriesRequest
+    {
+        /// <summary>
         ///     String value to filter the contacts. The value specified is
-            ///     searched through the following fields: `firstName`, `lastName`, `extensionNumber`, `phoneNumber`, `email`,
-            ///     `jobTitle`, `department`, `customFieldValue`
+        ///     searched through the following fields: `firstName`, `lastName`, `extensionNumber`, `phoneNumber`, `email`,
+        ///     `jobTitle`, `department`, `customFieldValue`
         /// </summary>
         public string searchString { get; set; }
 
@@ -108,5 +108,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? perPage { get; set; }
-      }
-  }
+    }
+}

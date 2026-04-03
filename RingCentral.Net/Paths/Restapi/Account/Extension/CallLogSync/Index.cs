@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLogSync
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Extension.Index parent;
-public Index(Restapi.Account.Extension.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Extension.Index parent;
+        public Index(Restapi.Account.Extension.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/call-log-sync";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: ReadCallLog
         /// User Permission: ReadCallLog
         /// </summary>
-  public async Task<RingCentral.CallLogSyncResponse> Get(RingCentral.SyncUserCallLogParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.CallLogSyncResponse>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.CallLogSyncResponse> Get(RingCentral.SyncUserCallLogParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.CallLogSyncResponse>(this.Path(), queryParams, restRequestConfig);
+        }
     }
 }
 

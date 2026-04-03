@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ForwardingRuleInfo
-      {
-          /// <summary>
+{
+    public class ForwardingRuleInfo
+    {
+        /// <summary>
         ///     Forwarding number (or group) ordinal
         ///     Format: int32
         /// </summary>
@@ -23,5 +23,5 @@ namespace RingCentral
         ///     Forwarding number (or group) data
         /// </summary>
         public CreateAnsweringRuleForwardingNumberInfo[] forwardingNumbers { get; set; }
-      }
-  }
+    }
+}

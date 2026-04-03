@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Returned if *BLF* feature is switched on
-/// </summary>
-      public class UnifiedPresenceTelephony
-      {
-          /// <summary>
+    /// Returned if *BLF* feature is switched on
+    /// </summary>
+    public class UnifiedPresenceTelephony
+    {
+        /// <summary>
         ///     Telephony status calculated from all user's phone numbers. Returned always for the requester's extension; returned for another users if their telephony visibility is set to 'Visible'
         ///     Enum: NoCall, Ringing, CallConnected, OnHold, ParkedCall
         /// </summary>
@@ -22,5 +22,5 @@ namespace RingCentral
         ///     Enum: TakeAllCalls, DoNotAcceptAnyCalls, DoNotAcceptQueueCalls
         /// </summary>
         public string availability { get; set; }
-      }
-  }
+    }
+}

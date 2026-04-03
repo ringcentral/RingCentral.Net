@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AnsweringRule
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Extension.Index parent;
-public string ruleId;
-public Index(Restapi.Account.Extension.Index parent, string ruleId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.ruleId = ruleId;
-}
+        public Restapi.Account.Extension.Index parent;
+        public string ruleId;
+        public Index(Restapi.Account.Extension.Index parent, string ruleId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.ruleId = ruleId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && ruleId != null)
@@ -31,10 +31,10 @@ this.ruleId = ruleId;
         /// App Permission: ReadAccounts
         /// User Permission: ReadUserAnsweringRules
         /// </summary>
-  public async Task<RingCentral.UserAnsweringRuleList> List(RingCentral.ListAnsweringRulesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.UserAnsweringRuleList>(this.Path(false), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.UserAnsweringRuleList> List(RingCentral.ListAnsweringRulesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.UserAnsweringRuleList>(this.Path(false), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Creates a custom call handling rule for a particular caller ID.
@@ -44,10 +44,10 @@ return await rc.Get<RingCentral.UserAnsweringRuleList>(this.Path(false), queryPa
         /// App Permission: EditExtensions
         /// User Permission: EditUserAnsweringRules
         /// </summary>
-  public async Task<RingCentral.CustomAnsweringRuleInfo> Post(RingCentral.CreateAnsweringRuleRequest createAnsweringRuleRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<RingCentral.CustomAnsweringRuleInfo>(this.Path(false), createAnsweringRuleRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.CustomAnsweringRuleInfo> Post(RingCentral.CreateAnsweringRuleRequest createAnsweringRuleRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.CustomAnsweringRuleInfo>(this.Path(false), createAnsweringRuleRequest, null, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns a call handling rule by ID.
@@ -57,13 +57,14 @@ return await rc.Post<RingCentral.CustomAnsweringRuleInfo>(this.Path(false), crea
         /// App Permission: ReadAccounts
         /// User Permission: ReadUserAnsweringRules
         /// </summary>
-  public async Task<RingCentral.CallHandlingRuleInfo> Get(RingCentral.ReadAnsweringRuleParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-if (ruleId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(ruleId));
-    }return await rc.Get<RingCentral.CallHandlingRuleInfo>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.CallHandlingRuleInfo> Get(RingCentral.ReadAnsweringRuleParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            if (ruleId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(ruleId));
+            }
+            return await rc.Get<RingCentral.CallHandlingRuleInfo>(this.Path(), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates a custom call handling rule for a particular caller ID.
@@ -73,13 +74,14 @@ if (ruleId == null)
         /// App Permission: EditExtensions
         /// User Permission: EditUserAnsweringRules
         /// </summary>
-  public async Task<RingCentral.CallHandlingRuleInfo> Put(RingCentral.UpdateAnsweringRuleRequest updateAnsweringRuleRequest, RestRequestConfig restRequestConfig = null)
-  {
-if (ruleId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(ruleId));
-    }return await rc.Put<RingCentral.CallHandlingRuleInfo>(this.Path(), updateAnsweringRuleRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.CallHandlingRuleInfo> Put(RingCentral.UpdateAnsweringRuleRequest updateAnsweringRuleRequest, RestRequestConfig restRequestConfig = null)
+        {
+            if (ruleId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(ruleId));
+            }
+            return await rc.Put<RingCentral.CallHandlingRuleInfo>(this.Path(), updateAnsweringRuleRequest, null, restRequestConfig);
+        }
 
         /// <summary>
         /// Deletes a custom call handling rule by a particular ID.
@@ -89,13 +91,14 @@ if (ruleId == null)
         /// App Permission: EditExtensions
         /// User Permission: EditUserAnsweringRules
         /// </summary>
-  public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
-  {
-if (ruleId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(ruleId));
-    }return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
-  }
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
+        {
+            if (ruleId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(ruleId));
+            }
+            return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
+        }
     }
 }
 

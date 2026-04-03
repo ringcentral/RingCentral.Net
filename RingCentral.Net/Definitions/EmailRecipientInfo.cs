@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class EmailRecipientInfo
-      {
-          /// <summary>
+{
+    public class EmailRecipientInfo
+    {
+        /// <summary>
         ///     Internal identifier of an extension
         /// </summary>
         public string extensionId { get; set; }
@@ -25,7 +25,7 @@ namespace RingCentral
 
         /// <summary>
         ///     List of user email addresses from extension notification settings.
-            ///     By default, main email address from contact information is returned
+        ///     By default, main email address from contact information is returned
         /// </summary>
         public string[] emailAddresses { get; set; }
 
@@ -34,5 +34,5 @@ namespace RingCentral
         ///     Enum: FullAccess, Messages, MemberManagement, None
         /// </summary>
         public string permission { get; set; }
-      }
-  }
+    }
+}

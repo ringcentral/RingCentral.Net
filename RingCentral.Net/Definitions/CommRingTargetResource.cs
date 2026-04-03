@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommRingTargetResource
-      {
-          /// <summary>
+{
+    public class CommRingTargetResource
+    {
+        /// <summary>
         /// </summary>
         public string name { get; set; }
 
@@ -12,5 +12,5 @@ namespace RingCentral
         ///     Enum: AllDesktopRingTarget, AllMobileRingTarget, CoworkerRingTarget, DeviceRingTarget, HotdeskRingTarget, ImsPhoneNumberRingTarget, FmcPhoneNumberRingTarget, IntegrationRingTarget, PhoneNumberRingTarget
         /// </summary>
         public string type { get; set; }
-      }
-  }
+    }
+}

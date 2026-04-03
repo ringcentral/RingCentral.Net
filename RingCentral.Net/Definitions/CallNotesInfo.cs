@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CallNotesInfo
-      {
-          /// <summary>
+{
+    public class CallNotesInfo
+    {
+        /// <summary>
         /// </summary>
         public bool? notifyByEmail { get; set; }
 
@@ -17,5 +17,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string[] advancedSmsEmailAddresses { get; set; }
-      }
-  }
+    }
+}

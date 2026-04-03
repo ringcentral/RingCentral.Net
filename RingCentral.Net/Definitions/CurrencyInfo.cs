@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Currency information
-/// </summary>
-      public class CurrencyInfo
-      {
-          /// <summary>
+    /// Currency information
+    /// </summary>
+    public class CurrencyInfo
+    {
+        /// <summary>
         ///     Internal identifier of a currency
         ///     Format: int64
         /// </summary>
@@ -30,5 +30,5 @@ namespace RingCentral
         ///     Minor graphic symbol of a currency
         /// </summary>
         public string minorSymbol { get; set; }
-      }
-  }
+    }
+}

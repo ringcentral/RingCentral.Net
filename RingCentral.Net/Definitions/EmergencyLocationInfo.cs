@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Emergency response location information
-/// </summary>
-      public class EmergencyLocationInfo
-      {
-          /// <summary>
+    /// Emergency response location information
+    /// </summary>
+    public class EmergencyLocationInfo
+    {
+        /// <summary>
         ///     Internal identifier of an emergency response location
         ///     Required
         /// </summary>
@@ -26,5 +26,5 @@ namespace RingCentral
         ///     Enum: Valid, Invalid, Provisioning, Deprovisioned
         /// </summary>
         public string addressStatus { get; set; }
-      }
-  }
+    }
+}

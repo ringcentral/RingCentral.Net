@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.SmsRegistrationBrands
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Index parent;
-public string tcrBrandId;
-public Index(Restapi.Account.Index parent, string tcrBrandId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.tcrBrandId = tcrBrandId;
-}
+        public Restapi.Account.Index parent;
+        public string tcrBrandId;
+        public Index(Restapi.Account.Index parent, string tcrBrandId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.tcrBrandId = tcrBrandId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && tcrBrandId != null)
@@ -30,10 +30,10 @@ this.tcrBrandId = tcrBrandId;
         /// Rate Limit Group: Light
         /// App Permission: ReadAccounts
         /// </summary>
-  public async Task<RingCentral.BrandListResponse> List(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.BrandListResponse>(this.Path(false), null, restRequestConfig);
-  }
+        public async Task<RingCentral.BrandListResponse> List(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.BrandListResponse>(this.Path(false), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns the TCR brand by ID.
@@ -43,13 +43,14 @@ return await rc.Get<RingCentral.BrandListResponse>(this.Path(false), null, restR
         /// App Permission: ReadAccounts
         /// User Permission: ReadSMSRegistration
         /// </summary>
-  public async Task<RingCentral.TcrBrandRecord> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (tcrBrandId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(tcrBrandId));
-    }return await rc.Get<RingCentral.TcrBrandRecord>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.TcrBrandRecord> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (tcrBrandId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(tcrBrandId));
+            }
+            return await rc.Get<RingCentral.TcrBrandRecord>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

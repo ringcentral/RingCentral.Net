@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ReferenceInfo
-      {
-          /// <summary>
+{
+    public class ReferenceInfo
+    {
+        /// <summary>
         ///     Non-RC identifier of an extension
         /// </summary>
         public string @ref { get; set; }
@@ -17,5 +17,5 @@ namespace RingCentral
         ///     Primary federation admin account identifier
         /// </summary>
         public string refAccId { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TMTeamList
-      {
-          /// <summary>
+{
+    public class TMTeamList
+    {
+        /// <summary>
         ///     List of teams
         ///     Required
         /// </summary>
@@ -11,5 +11,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public TMNavigationInfo navigation { get; set; }
-      }
-  }
+    }
+}

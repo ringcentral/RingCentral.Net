@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Site data
-/// </summary>
-      public class DeviceSiteInfo
-      {
-          /// <summary>
+    /// Site data
+    /// </summary>
+    public class DeviceSiteInfo
+    {
+        /// <summary>
         ///     Internal identifier of a site
         /// </summary>
         public string id { get; set; }
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Name of a site
         /// </summary>
         public string name { get; set; }
-      }
-  }
+    }
+}

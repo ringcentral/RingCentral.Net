@@ -1,13 +1,13 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Query parameters for operation listMessages
-/// </summary>
-      public class ListMessagesParameters
-      {
-          /// <summary>
+    /// Query parameters for operation listMessages
+    /// </summary>
+    public class ListMessagesParameters
+    {
+        /// <summary>
         ///     Filters shared messages based on the owner extension. 
-            ///     Supported if the 'SharedVoicemail' or 'CallQueueSmsRecipient' feature is enabled
+        ///     Supported if the 'SharedVoicemail' or 'CallQueueSmsRecipient' feature is enabled
         ///     Default: Personal
         ///     Enum: Any, Personal, Shared
         /// </summary>
@@ -15,7 +15,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Specifies the availability status for resulting messages.
-            ///     Multiple values are accepted
+        ///     Multiple values are accepted
         ///     Enum: Alive, Deleted, Purged
         /// </summary>
         public string[] availability { get; set; }
@@ -27,50 +27,50 @@ namespace RingCentral
 
         /// <summary>
         ///     Start date/time for resulting messages in ISO 8601 format
-            ///     including timezone, for example 2016-03-10T18:07:52.534Z. The default value
-            ///     is dateTo minus 24 hours
+        ///     including timezone, for example 2016-03-10T18:07:52.534Z. The default value
+        ///     is dateTo minus 24 hours
         ///     Format: date-time
         /// </summary>
         public string dateFrom { get; set; }
 
         /// <summary>
         ///     End date/time for resulting messages in ISO 8601 format including
-            ///     timezone, for example 2016-03-10T18:07:52.534Z. The default value is current
-            ///     time
+        ///     timezone, for example 2016-03-10T18:07:52.534Z. The default value is current
+        ///     time
         ///     Format: date-time
         /// </summary>
         public string dateTo { get; set; }
 
         /// <summary>
         ///     Direction for resulting messages. If not specified, both
-            ///     inbound and outbound messages are returned. Multiple values are accepted
+        ///     inbound and outbound messages are returned. Multiple values are accepted
         ///     Enum: Inbound, Outbound
         /// </summary>
         public string[] direction { get; set; }
 
         /// <summary>
         ///     If `true`, then the latest messages per every conversation ID
-            ///     are returned
+        ///     are returned
         /// </summary>
         public bool? distinctConversations { get; set; }
 
         /// <summary>
         ///     Type of resulting messages. If not specified, all messages
-            ///     without message type filtering are returned. Multiple values are accepted
+        ///     without message type filtering are returned. Multiple values are accepted
         ///     Enum: Fax, SMS, VoiceMail, Pager
         /// </summary>
         public string[] messageType { get; set; }
 
         /// <summary>
         ///     Read status for resulting messages. Multiple values are
-            ///     accepted
+        ///     accepted
         ///     Enum: Read, Unread
         /// </summary>
         public string[] readStatus { get; set; }
 
         /// <summary>
         ///     Indicates a page number to retrieve. Only positive number values
-            ///     are accepted
+        ///     are accepted
         ///     Format: int32
         ///     Default: 1
         /// </summary>
@@ -85,21 +85,21 @@ namespace RingCentral
 
         /// <summary>
         ///     Phone number. If specified, messages are returned for this
-            ///     particular phone number only
+        ///     particular phone number only
         /// </summary>
         public string phoneNumber { get; set; }
 
         /// <summary>
         ///     Deprecated. Filters voicemail messages based on the owner extension. Supported if the 'SharedVoicemail'
-            ///     feature is enabled.
+        ///     feature is enabled.
         /// </summary>
         public string[] voicemailOwner { get; set; }
 
         /// <summary>
         ///     Filters shared messages based on the owner extension type. Supported if "SharedVoicemail" or "CallQueueSmsRecipient"
-            ///     feature is enabled.
+        ///     feature is enabled.
         ///     Enum: User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup, DelegatedLinesGroup, GroupCallPickup, IvrMenu, ApplicationExtension, ProxyAdmin, RoomConnector, ParkLocation, Limited, Bot, Site, Room, FlexibleUser, TieLine, Unknown
         /// </summary>
         public string[] ownerExtensionType { get; set; }
-      }
-  }
+    }
+}

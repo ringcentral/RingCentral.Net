@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Filtering criteria when a number is selected from the number pool
-/// </summary>
-      public class PhoneNumberDefinitionTollType
-      {
-          /// <summary>
+    /// Filtering criteria when a number is selected from the number pool
+    /// </summary>
+    public class PhoneNumberDefinitionTollType
+    {
+        /// <summary>
         ///     Indicates if a number is toll or toll-free
         ///     Required
         ///     Example: Toll
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Enum: VoiceFax, VoiceOnly, FaxOnly
         /// </summary>
         public string type { get; set; }
-      }
-  }
+    }
+}

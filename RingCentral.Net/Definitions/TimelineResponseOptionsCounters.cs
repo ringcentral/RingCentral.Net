@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Options for selecting breakdown for calls count
-/// </summary>
-      public class TimelineResponseOptionsCounters
-      {
-          /// <summary>
+    /// Options for selecting breakdown for calls count
+    /// </summary>
+    public class TimelineResponseOptionsCounters
+    {
+        /// <summary>
         ///     Include data for total calls count
         /// </summary>
         public bool? allCalls { get; set; }
@@ -69,5 +69,5 @@ namespace RingCentral
         ///     Include breakdown of calls count by queue hours (BusinessHours, AfterHours)
         /// </summary>
         public bool? callsByQueueHours { get; set; }
-      }
-  }
+    }
+}

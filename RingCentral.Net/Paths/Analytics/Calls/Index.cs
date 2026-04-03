@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Analytics.Calls
     public partial class Index
     {
         public RestClient rc;
-public Analytics.Index parent;
-public Index(Analytics.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Analytics.Index parent;
+        public Index(Analytics.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path(false)}/calls";

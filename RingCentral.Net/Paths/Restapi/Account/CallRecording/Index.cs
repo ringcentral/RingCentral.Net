@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Index parent;
-public Index(Restapi.Account.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Index parent;
+        public Index(Restapi.Account.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/call-recording";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyInfo
         /// </summary>
-  public async Task<RingCentral.CallRecordingSettingsResource> Get(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.CallRecordingSettingsResource>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.CallRecordingSettingsResource> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.CallRecordingSettingsResource>(this.Path(), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates current call recording settings.
@@ -38,10 +38,10 @@ return await rc.Get<RingCentral.CallRecordingSettingsResource>(this.Path(), null
         /// App Permission: EditAccounts
         /// User Permission: EditCompanyInfo
         /// </summary>
-  public async Task<RingCentral.CallRecordingSettingsResource> Put(RingCentral.CallRecordingSettingsResource callRecordingSettingsResource, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Put<RingCentral.CallRecordingSettingsResource>(this.Path(), callRecordingSettingsResource, null, restRequestConfig);
-  }
+        public async Task<RingCentral.CallRecordingSettingsResource> Put(RingCentral.CallRecordingSettingsResource callRecordingSettingsResource, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Put<RingCentral.CallRecordingSettingsResource>(this.Path(), callRecordingSettingsResource, null, restRequestConfig);
+        }
     }
 }
 

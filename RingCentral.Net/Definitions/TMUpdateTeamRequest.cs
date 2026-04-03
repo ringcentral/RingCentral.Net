@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TMUpdateTeamRequest
-      {
-          /// <summary>
+{
+    public class TMUpdateTeamRequest
+    {
+        /// <summary>
         ///     Team access level
         /// </summary>
         public bool? @public { get; set; }
@@ -16,5 +16,5 @@ namespace RingCentral
         ///     Team description. Maximum number of characters supported is 1000
         /// </summary>
         public string description { get; set; }
-      }
-  }
+    }
+}

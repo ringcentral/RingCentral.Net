@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class RegistrantModelResponsePostWithQuestionnaire
-      {
-          /// <summary>
+{
+    public class RegistrantModelResponsePostWithQuestionnaire
+    {
+        /// <summary>
         ///     Internal object ID
         ///     Example: 78654321
         /// </summary>
@@ -105,5 +105,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? icalendarSequence { get; set; }
-      }
-  }
+    }
+}

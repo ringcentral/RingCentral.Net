@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Extension.Index parent;
-public string forwardingNumberId;
-public Index(Restapi.Account.Extension.Index parent, string forwardingNumberId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.forwardingNumberId = forwardingNumberId;
-}
+        public Restapi.Account.Extension.Index parent;
+        public string forwardingNumberId;
+        public Index(Restapi.Account.Extension.Index parent, string forwardingNumberId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.forwardingNumberId = forwardingNumberId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && forwardingNumberId != null)
@@ -25,19 +25,19 @@ this.forwardingNumberId = forwardingNumberId;
         }
         /// <summary>
         /// Returns the list of extension phone numbers used for call forwarding
-/// and call flip. The returned list contains all the extension phone numbers
-/// used for call forwarding and call flip.
-/// 
+        /// and call flip. The returned list contains all the extension phone numbers
+        /// used for call forwarding and call flip.
+        /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/forwarding-number
         /// Rate Limit Group: Light
         /// App Permission: ReadAccounts
         /// User Permission: ReadUserForwardingFlipNumbers
         /// </summary>
-  public async Task<RingCentral.GetExtensionForwardingNumberListResponse> List(RingCentral.ListForwardingNumbersParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.GetExtensionForwardingNumberListResponse>(this.Path(false), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.GetExtensionForwardingNumberListResponse> List(RingCentral.ListForwardingNumbersParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.GetExtensionForwardingNumberListResponse>(this.Path(false), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Adds a new forwarding number to the forwarding number list.
@@ -47,10 +47,10 @@ return await rc.Get<RingCentral.GetExtensionForwardingNumberListResponse>(this.P
         /// App Permission: EditExtensions
         /// User Permission: EditUserForwardingFlipNumbers
         /// </summary>
-  public async Task<RingCentral.ForwardingNumberInfo> Post(RingCentral.CreateForwardingNumberRequest createForwardingNumberRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<RingCentral.ForwardingNumberInfo>(this.Path(false), createForwardingNumberRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.ForwardingNumberInfo> Post(RingCentral.CreateForwardingNumberRequest createForwardingNumberRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.ForwardingNumberInfo>(this.Path(false), createForwardingNumberRequest, null, restRequestConfig);
+        }
 
         /// <summary>
         /// Deletes multiple forwarding numbers from the forwarding number list by IDs.
@@ -60,10 +60,10 @@ return await rc.Post<RingCentral.ForwardingNumberInfo>(this.Path(false), createF
         /// App Permission: EditExtensions
         /// User Permission: EditUserForwardingFlipNumbers
         /// </summary>
-  public async Task<string> DeleteAll(RingCentral.DeleteForwardingNumbersRequest deleteForwardingNumbersRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Delete<string>(this.Path(false), deleteForwardingNumbersRequest, null, restRequestConfig);
-  }
+        public async Task<string> DeleteAll(RingCentral.DeleteForwardingNumbersRequest deleteForwardingNumbersRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Delete<string>(this.Path(false), deleteForwardingNumbersRequest, null, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns a specific forwarding number.
@@ -73,13 +73,14 @@ return await rc.Delete<string>(this.Path(false), deleteForwardingNumbersRequest,
         /// App Permission: ReadAccounts
         /// User Permission: ReadUserForwardingFlipNumbers
         /// </summary>
-  public async Task<RingCentral.ForwardingNumberResource> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (forwardingNumberId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(forwardingNumberId));
-    }return await rc.Get<RingCentral.ForwardingNumberResource>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.ForwardingNumberResource> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (forwardingNumberId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(forwardingNumberId));
+            }
+            return await rc.Get<RingCentral.ForwardingNumberResource>(this.Path(), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates the existing forwarding number from the forwarding number list.
@@ -89,13 +90,14 @@ if (forwardingNumberId == null)
         /// App Permission: EditExtensions
         /// User Permission: EditUserForwardingFlipNumbers
         /// </summary>
-  public async Task<RingCentral.ForwardingNumberInfo> Put(RingCentral.UpdateForwardingNumberRequest updateForwardingNumberRequest, RestRequestConfig restRequestConfig = null)
-  {
-if (forwardingNumberId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(forwardingNumberId));
-    }return await rc.Put<RingCentral.ForwardingNumberInfo>(this.Path(), updateForwardingNumberRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.ForwardingNumberInfo> Put(RingCentral.UpdateForwardingNumberRequest updateForwardingNumberRequest, RestRequestConfig restRequestConfig = null)
+        {
+            if (forwardingNumberId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(forwardingNumberId));
+            }
+            return await rc.Put<RingCentral.ForwardingNumberInfo>(this.Path(), updateForwardingNumberRequest, null, restRequestConfig);
+        }
 
         /// <summary>
         /// Deletes a forwarding number from the forwarding number list by its ID.
@@ -105,13 +107,14 @@ if (forwardingNumberId == null)
         /// App Permission: EditExtensions
         /// User Permission: EditUserForwardingFlipNumbers
         /// </summary>
-  public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
-  {
-if (forwardingNumberId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(forwardingNumberId));
-    }return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
-  }
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
+        {
+            if (forwardingNumberId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(forwardingNumberId));
+            }
+            return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
+        }
     }
 }
 

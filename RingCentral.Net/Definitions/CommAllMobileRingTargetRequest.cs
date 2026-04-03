@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// All Mobile Ring target
-/// </summary>
-      public class CommAllMobileRingTargetRequest
-      {
-          /// <summary>
+    /// All Mobile Ring target
+    /// </summary>
+    public class CommAllMobileRingTargetRequest
+    {
+        /// <summary>
         ///     Ring target type
         ///     Required
         ///     Example: AllMobileRingTarget
@@ -16,5 +16,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CommReferencedExtensionResource extension { get; set; }
-      }
-  }
+    }
+}

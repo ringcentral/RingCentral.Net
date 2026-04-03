@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CallMonitoringGroup
-      {
-          /// <summary>
+{
+    public class CallMonitoringGroup
+    {
+        /// <summary>
         ///     Link to a call monitoring group resource
         ///     Format: uri
         /// </summary>
@@ -21,5 +21,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CallMonitoringGroupSite site { get; set; }
-      }
-  }
+    }
+}

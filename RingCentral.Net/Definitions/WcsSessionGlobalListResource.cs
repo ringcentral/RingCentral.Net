@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class WcsSessionGlobalListResource
-      {
-          /// <summary>
+{
+    public class WcsSessionGlobalListResource
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public SessionGlobalListEntry[] records { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public RcwPagingModel paging { get; set; }
-      }
-  }
+    }
+}

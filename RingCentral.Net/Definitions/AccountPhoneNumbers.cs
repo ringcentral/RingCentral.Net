@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class AccountPhoneNumbers
-      {
-          /// <summary>
+{
+    public class AccountPhoneNumbers
+    {
+        /// <summary>
         ///     Link to a list of account phone numbers
         ///     Format: uri
         /// </summary>
@@ -20,5 +20,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-      }
-  }
+    }
+}

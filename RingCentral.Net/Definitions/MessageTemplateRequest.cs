@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class MessageTemplateRequest
-      {
-          /// <summary>
+{
+    public class MessageTemplateRequest
+    {
+        /// <summary>
         ///     Name of a template
         ///     Required
         /// </summary>
@@ -16,5 +16,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public Site site { get; set; }
-      }
-  }
+    }
+}

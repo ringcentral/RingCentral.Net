@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Result breakdown by response
-/// </summary>
-      public class CallsByResponseBreakdown
-      {
-          /// <summary>
+    /// Result breakdown by response
+    /// </summary>
+    public class CallsByResponseBreakdown
+    {
+        /// <summary>
         ///     Value for Answered response
         ///     Required
         ///     Format: double
@@ -32,5 +32,5 @@ namespace RingCentral
         ///     Format: double
         /// </summary>
         public decimal? notConnected { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class EditPagingGroupRequest
-      {
-          /// <summary>
+{
+    public class EditPagingGroupRequest
+    {
+        /// <summary>
         ///     List of users that will be allowed to page a group specified
         /// </summary>
         public string[] addedUserIds { get; set; }
@@ -14,14 +14,14 @@ namespace RingCentral
 
         /// <summary>
         ///     List of account devices that will be assigned to a paging group
-            ///     specified
+        ///     specified
         /// </summary>
         public string[] addedDeviceIds { get; set; }
 
         /// <summary>
         ///     List of account devices that will be unassigned from a paging
-            ///     group specified
+        ///     group specified
         /// </summary>
         public string[] removedDeviceIds { get; set; }
-      }
-  }
+    }
+}

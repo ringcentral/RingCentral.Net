@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class AddPhoneNumbersTask
-      {
-          /// <summary>
+{
+    public class AddPhoneNumbersTask
+    {
+        /// <summary>
         ///     Internal identifier of a task
         /// </summary>
         public string id { get; set; }
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Example: Accepted
         /// </summary>
         public string status { get; set; }
-      }
-  }
+    }
+}

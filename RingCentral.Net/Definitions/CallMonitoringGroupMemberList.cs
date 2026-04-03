@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CallMonitoringGroupMemberList
-      {
-          /// <summary>
+{
+    public class CallMonitoringGroupMemberList
+    {
+        /// <summary>
         ///     Link to a call monitoring group members resource
         ///     Required
         ///     Format: uri
@@ -24,5 +24,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-      }
-  }
+    }
+}

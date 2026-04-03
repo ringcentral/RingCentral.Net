@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommWeeklyItemsResource
-      {
-          /// <summary>
+{
+    public class CommWeeklyItemsResource
+    {
+        /// <summary>
         /// </summary>
         public CommWeeklyRangeResource[] monday { get; set; }
 
@@ -29,5 +29,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CommWeeklyRangeResource[] sunday { get; set; }
-      }
-  }
+    }
+}

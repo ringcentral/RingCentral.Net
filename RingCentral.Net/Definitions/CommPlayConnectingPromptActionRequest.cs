@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Action information
-/// </summary>
-      public class CommPlayConnectingPromptActionRequest
-      {
-          /// <summary>
+    /// Action information
+    /// </summary>
+    public class CommPlayConnectingPromptActionRequest
+    {
+        /// <summary>
         ///     Required
         ///     Example: PlayConnectingPromptAction
         ///     Enum: PlayConnectingMessageAction, PlayConnectingPromptAction, PlayWelcomePromptAction, ScreeningAction, RingGroupAction, RingAlwaysGroupAction, TerminatingAction
@@ -22,5 +22,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public bool? enabled { get; set; }
-      }
-  }
+    }
+}

@@ -1,10 +1,10 @@
 using Newtonsoft.Json;
 
 namespace RingCentral
-  {
-      public class ScimUserResponse
-      {
-          /// <summary>
+{
+    public class ScimUserResponse
+    {
+        /// <summary>
         ///     User status
         /// </summary>
         public bool? active { get; set; }
@@ -66,5 +66,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ScimMeta meta { get; set; }
-      }
-  }
+    }
+}

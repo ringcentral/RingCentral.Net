@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class PartySuperviseRequest
-      {
-          /// <summary>
+{
+    public class PartySuperviseRequest
+    {
+        /// <summary>
         ///     Supervising mode
         ///     Required
         ///     Example: Listen
@@ -35,5 +35,5 @@ namespace RingCentral
         ///     Enum: sendOnly, sendRecv
         /// </summary>
         public string mediaSDP { get; set; }
-      }
-  }
+    }
+}

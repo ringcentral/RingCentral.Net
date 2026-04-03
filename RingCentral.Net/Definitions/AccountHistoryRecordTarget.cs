@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Action target object (company/extension)
-/// </summary>
-      public class AccountHistoryRecordTarget
-      {
-          /// <summary>
+    /// Action target object (company/extension)
+    /// </summary>
+    public class AccountHistoryRecordTarget
+    {
+        /// <summary>
         ///     Extension identifier of the affected entity or "0" for Company level
         ///     Example: 404611540004
         /// </summary>
@@ -35,5 +35,5 @@ namespace RingCentral
         ///     Example: 871836004
         /// </summary>
         public string siteId { get; set; }
-      }
-  }
+    }
+}

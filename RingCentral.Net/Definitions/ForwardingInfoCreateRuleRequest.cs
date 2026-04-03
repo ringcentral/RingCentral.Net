@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
-/// </summary>
-      public class ForwardingInfoCreateRuleRequest
-      {
-          /// <summary>
+    /// Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
+    /// </summary>
+    public class ForwardingInfoCreateRuleRequest
+    {
+        /// <summary>
         ///     Specifies if the first ring on desktop/mobile apps is enabled. The default value is `true`
         /// </summary>
         public bool? notifyMySoftPhones { get; set; }
@@ -42,5 +42,5 @@ namespace RingCentral
         ///     Deprecated parameter. Specifies if mobile timeout is activated for the rule
         /// </summary>
         public bool? mobileTimeout { get; set; }
-      }
-  }
+    }
+}

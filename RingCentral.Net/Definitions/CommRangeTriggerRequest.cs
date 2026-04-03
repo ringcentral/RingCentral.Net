@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommRangeTriggerRequest
-      {
-          /// <summary>
+{
+    public class CommRangeTriggerRequest
+    {
+        /// <summary>
         ///     Trigger type
         ///     Required
         ///     Example: Range
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CommRangeRequest[] ranges { get; set; }
-      }
-  }
+    }
+}

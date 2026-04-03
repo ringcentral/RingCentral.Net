@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Result breakdown by actions
-/// </summary>
-      public class CallsByActionsBreakdown
-      {
-          /// <summary>
+    /// Result breakdown by actions
+    /// </summary>
+    public class CallsByActionsBreakdown
+    {
+        /// <summary>
         ///     Value for ParkOn action
         ///     Required
         ///     Format: double
@@ -53,5 +53,5 @@ namespace RingCentral
         ///     Format: double
         /// </summary>
         public decimal? dtmfTransfer { get; set; }
-      }
-  }
+    }
+}

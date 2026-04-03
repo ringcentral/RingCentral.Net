@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommInteractionRuleStateConditionRequest
-      {
-          /// <summary>
+{
+    public class CommInteractionRuleStateConditionRequest
+    {
+        /// <summary>
         ///     Interaction condition type resource
         ///     Required
         ///     Example: State
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CommReferenceStateResource state { get; set; }
-      }
-  }
+    }
+}

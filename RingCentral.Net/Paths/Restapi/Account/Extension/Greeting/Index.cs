@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Greeting
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Extension.Index parent;
-public string greetingId;
-public Index(Restapi.Account.Extension.Index parent, string greetingId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.greetingId = greetingId;
-}
+        public Restapi.Account.Extension.Index parent;
+        public string greetingId;
+        public Index(Restapi.Account.Extension.Index parent, string greetingId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.greetingId = greetingId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && greetingId != null)
@@ -31,11 +31,11 @@ this.greetingId = greetingId;
         /// App Permission: EditExtensions
         /// User Permission: EditUserAnsweringRules
         /// </summary>
-  public async Task<RingCentral.CustomUserGreetingInfo> Post(RingCentral.CreateCustomUserGreetingRequest createCustomUserGreetingRequest, RingCentral.CreateCustomUserGreetingParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-var multipartFormDataContent = Utils.GetMultipartFormDataContent(createCustomUserGreetingRequest);
-return await rc.Post<RingCentral.CustomUserGreetingInfo>(this.Path(false), multipartFormDataContent, queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.CustomUserGreetingInfo> Post(RingCentral.CreateCustomUserGreetingRequest createCustomUserGreetingRequest, RingCentral.CreateCustomUserGreetingParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            var multipartFormDataContent = Utils.GetMultipartFormDataContent(createCustomUserGreetingRequest);
+            return await rc.Post<RingCentral.CustomUserGreetingInfo>(this.Path(false), multipartFormDataContent, queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns a custom user greeting by ID.
@@ -45,13 +45,14 @@ return await rc.Post<RingCentral.CustomUserGreetingInfo>(this.Path(false), multi
         /// App Permission: ReadAccounts
         /// User Permission: ReadUserInfo
         /// </summary>
-  public async Task<RingCentral.CustomUserGreetingInfo> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (greetingId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(greetingId));
-    }return await rc.Get<RingCentral.CustomUserGreetingInfo>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.CustomUserGreetingInfo> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (greetingId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(greetingId));
+            }
+            return await rc.Get<RingCentral.CustomUserGreetingInfo>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

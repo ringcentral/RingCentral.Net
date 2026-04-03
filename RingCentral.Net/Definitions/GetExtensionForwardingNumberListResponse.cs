@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class GetExtensionForwardingNumberListResponse
-      {
-          /// <summary>
+{
+    public class GetExtensionForwardingNumberListResponse
+    {
+        /// <summary>
         ///     Link to the forwarding number list resource
         ///     Format: uri
         /// </summary>
@@ -20,5 +20,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-      }
-  }
+    }
+}

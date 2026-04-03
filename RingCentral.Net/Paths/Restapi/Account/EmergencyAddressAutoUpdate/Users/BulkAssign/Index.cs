@@ -7,30 +7,30 @@ namespace RingCentral.Paths.Restapi.Account.EmergencyAddressAutoUpdate.Users.Bul
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.EmergencyAddressAutoUpdate.Users.Index parent;
-public Index(Restapi.Account.EmergencyAddressAutoUpdate.Users.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.EmergencyAddressAutoUpdate.Users.Index parent;
+        public Index(Restapi.Account.EmergencyAddressAutoUpdate.Users.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/bulk-assign";
         }
         /// <summary>
         /// Enables or disables Automatic Location Updates feature for multiple
-/// account users.
-/// 
+        /// account users.
+        /// 
         /// HTTP Method: post
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/emergency-address-auto-update/users/bulk-assign
         /// Rate Limit Group: Heavy
         /// App Permission: EditAccounts
         /// User Permission: ConfigureEmergencyMaps
         /// </summary>
-  public async Task<string> Post(RingCentral.EmergencyAddressAutoUpdateUsersBulkAssignResource emergencyAddressAutoUpdateUsersBulkAssignResource, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<string>(this.Path(), emergencyAddressAutoUpdateUsersBulkAssignResource, null, restRequestConfig);
-  }
+        public async Task<string> Post(RingCentral.EmergencyAddressAutoUpdateUsersBulkAssignResource emergencyAddressAutoUpdateUsersBulkAssignResource, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<string>(this.Path(), emergencyAddressAutoUpdateUsersBulkAssignResource, null, restRequestConfig);
+        }
     }
 }
 

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class InboundMessageEvent
-      {
-          /// <summary>
+{
+    public class InboundMessageEvent
+    {
+        /// <summary>
         /// </summary>
         public NotificationInfo aps { get; set; }
 
@@ -30,5 +30,5 @@ namespace RingCentral
         ///     Internal identifier of a subscription owner extension
         /// </summary>
         public string ownerId { get; set; }
-      }
-  }
+    }
+}

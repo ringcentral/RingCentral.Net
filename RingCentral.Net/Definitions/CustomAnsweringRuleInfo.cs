@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CustomAnsweringRuleInfo
-      {
-          /// <summary>
+{
+    public class CustomAnsweringRuleInfo
+    {
+        /// <summary>
         ///     Canonical URI to an answering rule resource
         ///     Format: uri
         /// </summary>
@@ -89,5 +89,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public MissedCallInfo missedCall { get; set; }
-      }
-  }
+    }
+}

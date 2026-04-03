@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class AccountHistorySearchPublicRequest
-      {
-          /// <summary>
+{
+    public class AccountHistorySearchPublicRequest
+    {
+        /// <summary>
         ///     The beginning of the time range to return records in ISO 8601 format in UTC timezone, default is "eventTimeFrom"-24 hours
         ///     Format: date-time
         /// </summary>
@@ -53,13 +53,13 @@ namespace RingCentral
 
         /// <summary>
         ///     The (sub)string to search, applied to the following fields:
-            ///     
-            ///     - initiator.name
-            ///     - initiator.role
-            ///     - initiator.extensionNumber
-            ///     - target.name
-            ///     - target.extensionNumber
-            ///     - details.parameters.value
+        ///     
+        ///     - initiator.name
+        ///     - initiator.role
+        ///     - initiator.extensionNumber
+        ///     - target.name
+        ///     - target.extensionNumber
+        ///     - details.parameters.value
         ///     Example: 542617
         /// </summary>
         public string searchString { get; set; }
@@ -69,5 +69,5 @@ namespace RingCentral
         ///     Example: CHANGE_SECRET_INFO,CHANGE_USER_INFO
         /// </summary>
         public string[] excludeActionIds { get; set; }
-      }
-  }
+    }
+}

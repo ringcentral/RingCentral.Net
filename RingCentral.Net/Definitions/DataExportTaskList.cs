@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class DataExportTaskList
-      {
-          /// <summary>
+{
+    public class DataExportTaskList
+    {
+        /// <summary>
         /// </summary>
         public DataExportTask[] tasks { get; set; }
 
@@ -13,5 +13,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public GlipDataExportPagingInfo paging { get; set; }
-      }
-  }
+    }
+}

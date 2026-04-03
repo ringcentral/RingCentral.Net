@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommInteractionRuleScheduleConditionResource
-      {
-          /// <summary>
+{
+    public class CommInteractionRuleScheduleConditionResource
+    {
+        /// <summary>
         ///     Interaction condition type resource
         ///     Required
         ///     Example: Schedule
@@ -14,5 +14,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CommInteractionRuleScheduleResource schedule { get; set; }
-      }
-  }
+    }
+}

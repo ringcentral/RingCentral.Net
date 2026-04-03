@@ -1,13 +1,13 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Query parameters for operation readA2PSMSOptOuts
-/// </summary>
-      public class ReadA2PSMSOptOutsParameters
-      {
-          /// <summary>
+    /// Query parameters for operation readA2PSMSOptOuts
+    /// </summary>
+    public class ReadA2PSMSOptOutsParameters
+    {
+        /// <summary>
         ///     The sender's phone number in [E.164](https://www.itu.int/rec/T-REC-E.164-201011-I) format for filtering messages.
-            ///     The asterisk value "*" means any number in `from` field
+        ///     The asterisk value "*" means any number in `from` field
         ///     Example: 15551234455
         /// </summary>
         public string from { get; set; }
@@ -39,5 +39,5 @@ namespace RingCentral
         ///     Default: 1000
         /// </summary>
         public long? perPage { get; set; }
-      }
-  }
+    }
+}

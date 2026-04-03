@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class MakeCallOutRequest
-      {
-          /// <summary>
+{
+    public class MakeCallOutRequest
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public MakeCallOutCallerInfoRequestFrom from { get; set; }
@@ -17,5 +17,5 @@ namespace RingCentral
         ///     Format: int64
         /// </summary>
         public long? countryId { get; set; }
-      }
-  }
+    }
+}

@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Paging information
-/// </summary>
-      public class BasicPaging
-      {
-          /// <summary>
+    /// Paging information
+    /// </summary>
+    public class BasicPaging
+    {
+        /// <summary>
         ///     Current offset token
         ///     Required
         /// </summary>
@@ -15,5 +15,5 @@ namespace RingCentral
         ///     Next page offset token
         /// </summary>
         public string nextPageToken { get; set; }
-      }
-  }
+    }
+}

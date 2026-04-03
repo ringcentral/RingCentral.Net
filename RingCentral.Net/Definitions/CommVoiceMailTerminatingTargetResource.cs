@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommVoiceMailTerminatingTargetResource
-      {
-          /// <summary>
+{
+    public class CommVoiceMailTerminatingTargetResource
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public string name { get; set; }
@@ -23,5 +23,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public CommTerminatingPromptResource prompt { get; set; }
-      }
-  }
+    }
+}

@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.CallLog
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Index parent;
-public string callRecordId;
-public Index(Restapi.Account.Index parent, string callRecordId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.callRecordId = callRecordId;
-}
+        public Restapi.Account.Index parent;
+        public string callRecordId;
+        public Index(Restapi.Account.Index parent, string callRecordId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.callRecordId = callRecordId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && callRecordId != null)
@@ -31,28 +31,29 @@ this.callRecordId = callRecordId;
         /// App Permission: ReadCallLog
         /// User Permission: FullCompanyCallLog
         /// </summary>
-  public async Task<RingCentral.CallLogResponse> List(RingCentral.ReadCompanyCallLogParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.CallLogResponse>(this.Path(false), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.CallLogResponse> List(RingCentral.ReadCompanyCallLogParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.CallLogResponse>(this.Path(false), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns individual call log record(s) by ID. 
-/// [Bulk syntax](https://developers.ringcentral.com/guide/basics/batch-requests) is supported.
-/// 
+        /// [Bulk syntax](https://developers.ringcentral.com/guide/basics/batch-requests) is supported.
+        /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/call-log/{callRecordId}
         /// Rate Limit Group: Heavy
         /// App Permission: ReadCallLog
         /// User Permission: FullCompanyCallLog
         /// </summary>
-  public async Task<RingCentral.CallLogRecord> Get(RingCentral.ReadCompanyCallRecordParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-if (callRecordId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(callRecordId));
-    }return await rc.Get<RingCentral.CallLogRecord>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.CallLogRecord> Get(RingCentral.ReadCompanyCallRecordParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            if (callRecordId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(callRecordId));
+            }
+            return await rc.Get<RingCentral.CallLogRecord>(this.Path(), queryParams, restRequestConfig);
+        }
     }
 }
 

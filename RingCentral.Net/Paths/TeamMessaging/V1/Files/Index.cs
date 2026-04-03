@@ -7,12 +7,12 @@ namespace RingCentral.Paths.TeamMessaging.V1.Files
     public partial class Index
     {
         public RestClient rc;
-public TeamMessaging.V1.Index parent;
-public Index(TeamMessaging.V1.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public TeamMessaging.V1.Index parent;
+        public Index(TeamMessaging.V1.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/files";
@@ -24,11 +24,11 @@ this.rc = parent.rc;
         /// Rate Limit Group: Heavy
         /// App Permission: TeamMessaging
         /// </summary>
-  public async Task<RingCentral.TMAddFile[]> Post(RingCentral.CreateGlipFileNewRequest createGlipFileNewRequest, RingCentral.CreateGlipFileNewParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-var multipartFormDataContent = Utils.GetMultipartFormDataContent(createGlipFileNewRequest);
-return await rc.Post<RingCentral.TMAddFile[]>(this.Path(), multipartFormDataContent, queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.TMAddFile[]> Post(RingCentral.CreateGlipFileNewRequest createGlipFileNewRequest, RingCentral.CreateGlipFileNewParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            var multipartFormDataContent = Utils.GetMultipartFormDataContent(createGlipFileNewRequest);
+            return await rc.Post<RingCentral.TMAddFile[]>(this.Path(), multipartFormDataContent, queryParams, restRequestConfig);
+        }
     }
 }
 

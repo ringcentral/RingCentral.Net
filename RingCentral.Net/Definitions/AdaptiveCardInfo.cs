@@ -1,10 +1,10 @@
 using Newtonsoft.Json;
 
 namespace RingCentral
-  {
-      public class AdaptiveCardInfo
-      {
-          /// <summary>
+{
+    public class AdaptiveCardInfo
+    {
+        /// <summary>
         ///     Internal identifier of an adaptive card
         /// </summary>
         public string id { get; set; }
@@ -92,5 +92,5 @@ namespace RingCentral
         ///     Enum: top, center, bottom
         /// </summary>
         public string verticalContentAlignment { get; set; }
-      }
-  }
+    }
+}

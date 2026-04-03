@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Dictionary.FaxCoverPage
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Dictionary.Index parent;
-public Index(Restapi.Dictionary.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Dictionary.Index parent;
+        public Index(Restapi.Dictionary.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/fax-cover-page";
@@ -23,10 +23,10 @@ this.rc = parent.rc;
         /// Endpoint: /restapi/{apiVersion}/dictionary/fax-cover-page
         /// Rate Limit Group: Light
         /// </summary>
-  public async Task<RingCentral.ListFaxCoverPagesResponse> Get(RingCentral.ListFaxCoverPagesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.ListFaxCoverPagesResponse>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.ListFaxCoverPagesResponse> Get(RingCentral.ListFaxCoverPagesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.ListFaxCoverPagesResponse>(this.Path(), queryParams, restRequestConfig);
+        }
     }
 }
 

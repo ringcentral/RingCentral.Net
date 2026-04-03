@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class AccountPhoneNumberInfo
-      {
-          /// <summary>
+{
+    public class AccountPhoneNumberInfo
+    {
+        /// <summary>
         ///     Phone number activation status. Determine whether phone number migration is completed on the partner side.
         ///     Enum: Active, Inactive
         /// </summary>
@@ -62,8 +62,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Status of a phone number. If the value is `Normal`, the phone
-            ///     number is ready to be used. Otherwise, it is an external number not yet
-            ///     ported to RingCentral
+        ///     number is ready to be used. Otherwise, it is an external number not yet
+        ///     ported to RingCentral
         ///     Required
         ///     Enum: Normal, Pending, PortedIn, Temporary, Unknown
         /// </summary>
@@ -83,5 +83,5 @@ namespace RingCentral
         ///     Internal identifier of a phone provider
         /// </summary>
         public string providerId { get; set; }
-      }
-  }
+    }
+}

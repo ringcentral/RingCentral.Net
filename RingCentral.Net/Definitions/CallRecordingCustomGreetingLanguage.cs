@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Custom greeting language
-/// </summary>
-      public class CallRecordingCustomGreetingLanguage
-      {
-          /// <summary>
+    /// Custom greeting language
+    /// </summary>
+    public class CallRecordingCustomGreetingLanguage
+    {
+        /// <summary>
         ///     Link to a language
         ///     Format: uri
         /// </summary>
@@ -25,5 +25,5 @@ namespace RingCentral
         ///     Language locale code
         /// </summary>
         public string localeCode { get; set; }
-      }
-  }
+    }
+}

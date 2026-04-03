@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TMMessageAttachmentInfo
-      {
-          /// <summary>
+{
+    public class TMMessageAttachmentInfo
+    {
+        /// <summary>
         ///     Internal identifier of an attachment
         /// </summary>
         public string id { get; set; }
@@ -112,5 +112,5 @@ namespace RingCentral
         ///     Event details
         /// </summary>
         public string description { get; set; }
-      }
-  }
+    }
+}

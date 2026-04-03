@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class AddressBookSync
-      {
-          /// <summary>
+{
+    public class AddressBookSync
+    {
+        /// <summary>
         ///     Format: uri
         /// </summary>
         public string uri { get; set; }
@@ -24,5 +24,5 @@ namespace RingCentral
         ///     Format: uri
         /// </summary>
         public string nextPageUri { get; set; }
-      }
-  }
+    }
+}

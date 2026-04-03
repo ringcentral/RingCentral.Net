@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommRangeRequest
-      {
-          /// <summary>
+{
+    public class CommRangeRequest
+    {
+        /// <summary>
         ///     Start date-time
         /// </summary>
         public string startDateTime { get; set; }
@@ -12,5 +12,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string endDateTime { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class UserBusinessHoursUpdateResponse
-      {
-          /// <summary>
+{
+    public class UserBusinessHoursUpdateResponse
+    {
+        /// <summary>
         ///     Canonical URI of a business-hours resource
         ///     Format: uri
         /// </summary>
@@ -11,5 +11,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public UserBusinessHoursScheduleInfo schedule { get; set; }
-      }
-  }
+    }
+}

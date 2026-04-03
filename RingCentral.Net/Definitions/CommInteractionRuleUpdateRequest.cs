@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Interaction rule update request
-/// </summary>
-      public class CommInteractionRuleUpdateRequest
-      {
-          /// <summary>
+    /// Interaction rule update request
+    /// </summary>
+    public class CommInteractionRuleUpdateRequest
+    {
+        /// <summary>
         /// </summary>
         public object[] conditions { get; set; }
 
@@ -22,5 +22,5 @@ namespace RingCentral
         ///     Custom name of a rule
         /// </summary>
         public string displayName { get; set; }
-      }
-  }
+    }
+}

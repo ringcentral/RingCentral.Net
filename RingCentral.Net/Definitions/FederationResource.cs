@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class FederationResource
-      {
-          /// <summary>
+{
+    public class FederationResource
+    {
+        /// <summary>
         /// </summary>
         public FederatedAccountResource[] accounts { get; set; }
 
@@ -29,5 +29,5 @@ namespace RingCentral
         ///     Enum: Regular, AdminOnly
         /// </summary>
         public string type { get; set; }
-      }
-  }
+    }
+}

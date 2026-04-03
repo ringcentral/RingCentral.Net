@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class MakeRingOutRequest
-      {
-          /// <summary>
+{
+    public class MakeRingOutRequest
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public MakeRingOutCallerInfoRequestFrom from { get; set; }
@@ -18,12 +18,12 @@ namespace RingCentral
 
         /// <summary>
         ///     Audio prompt that a calling party hears when a call
-            ///     is connected
+        ///     is connected
         /// </summary>
         public bool? playPrompt { get; set; }
 
         /// <summary>
         /// </summary>
         public MakeRingOutCountryInfo country { get; set; }
-      }
-  }
+    }
+}

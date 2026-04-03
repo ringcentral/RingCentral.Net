@@ -1,13 +1,13 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Query parameters for operation listContacts
-/// </summary>
-      public class ListContactsParameters
-      {
-          /// <summary>
+    /// Query parameters for operation listContacts
+    /// </summary>
+    public class ListContactsParameters
+    {
+        /// <summary>
         ///     If specified, only contacts which 'First name' or 'Last name' start
-            ///     with the mentioned substring will be returned. Case-insensitive
+        ///     with the mentioned substring will be returned. Case-insensitive
         /// </summary>
         public string startsWith { get; set; }
 
@@ -29,7 +29,7 @@ namespace RingCentral
 
         /// <summary>
         ///     The number of items per page. If the provided value in the request
-            ///     is greater than a maximum, the maximum value is applied
+        ///     is greater than a maximum, the maximum value is applied
         ///     Maximum: 1000
         ///     Minimum: 1
         ///     Format: int32
@@ -42,5 +42,5 @@ namespace RingCentral
         ///     Phone number in e.164 format
         /// </summary>
         public string[] phoneNumber { get; set; }
-      }
-  }
+    }
+}

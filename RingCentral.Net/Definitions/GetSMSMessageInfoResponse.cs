@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class GetSMSMessageInfoResponse
-      {
-          /// <summary>
+{
+    public class GetSMSMessageInfoResponse
+    {
+        /// <summary>
         ///     Internal identifier of a message
         ///     Format: int64
         /// </summary>
@@ -21,16 +21,16 @@ namespace RingCentral
 
         /// <summary>
         ///     Message availability status. Message in `Deleted` state is still
-            ///     preserved with all its attachments and can be restored. `Purged` means
-            ///     that all attachments are already deleted and the message itself is about
-            ///     to be physically deleted shortly
+        ///     preserved with all its attachments and can be restored. `Purged` means
+        ///     that all attachments are already deleted and the message itself is about
+        ///     to be physically deleted shortly
         ///     Enum: Alive, Deleted, Purged
         /// </summary>
         public string availability { get; set; }
 
         /// <summary>
         ///     SMS and Pager only. Identifier of a conversation that the message
-            ///     belongs to
+        ///     belongs to
         ///     Format: int64
         /// </summary>
         public long? conversationId { get; set; }
@@ -41,7 +41,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Message creation date/time in ISO 8601 format including timezone,
-            ///     for example 2016-03-10T18:07:52.534Z
+        ///     for example 2016-03-10T18:07:52.534Z
         ///     Format: date-time
         /// </summary>
         public string creationTime { get; set; }
@@ -58,19 +58,19 @@ namespace RingCentral
 
         /// <summary>
         ///     Date/time when the message was modified on server in ISO
-            ///     8601 format including timezone, for example 2016-03-10T18:07:52.534Z
+        ///     8601 format including timezone, for example 2016-03-10T18:07:52.534Z
         ///     Format: date-time
         /// </summary>
         public string lastModifiedTime { get; set; }
 
         /// <summary>
         ///     Message status. Different message types may have different
-            ///     allowed status values. For outbound faxes the aggregated message status
-            ///     is returned. If, for multi-recipient outbound message, a status for
-            ///     at least one recipient is `Queued`, then the `Queued` value is returned.
-            ///     If a status for at least one recipient is `SendingFailed`,
-            ///     then the 'SendingFailed' value is returned. In other cases,
-            ///     the `Sent` status is returned
+        ///     allowed status values. For outbound faxes the aggregated message status
+        ///     is returned. If, for multi-recipient outbound message, a status for
+        ///     at least one recipient is `Queued`, then the `Queued` value is returned.
+        ///     If a status for at least one recipient is `SendingFailed`,
+        ///     then the 'SendingFailed' value is returned. In other cases,
+        ///     the `Sent` status is returned
         ///     Enum: Queued, Sent, Delivered, DeliveryFailed, SendingFailed, Received
         /// </summary>
         public string messageStatus { get; set; }
@@ -89,23 +89,23 @@ namespace RingCentral
 
         /// <summary>
         ///     SMS only. The date/time when outbound SMS was delivered to
-            ///     recipient's handset in ISO 8601 format including timezone,
-            ///     for example 2016-03-10T18:07:52.534Z. It is filled only if
-            ///     the carrier sends a delivery receipt to RingCentral
+        ///     recipient's handset in ISO 8601 format including timezone,
+        ///     for example 2016-03-10T18:07:52.534Z. It is filled only if
+        ///     the carrier sends a delivery receipt to RingCentral
         ///     Format: date-time
         /// </summary>
         public string smsDeliveryTime { get; set; }
 
         /// <summary>
         ///     SMS only. Number of attempts made to send an outbound SMS to
-            ///     the Gateway (if Gateway is temporary unavailable)
+        ///     the Gateway (if Gateway is temporary unavailable)
         ///     Format: int32
         /// </summary>
         public long? smsSendingAttemptsCount { get; set; }
 
         /// <summary>
         ///     Message subject. For SMS and Pager messages it replicates message
-            ///     text which is also returned as an attachment
+        ///     text which is also returned as an attachment
         /// </summary>
         public string subject { get; set; }
 
@@ -119,5 +119,5 @@ namespace RingCentral
         ///     Enum: Fax, SMS, VoiceMail, Pager, Text
         /// </summary>
         public string type { get; set; }
-      }
-  }
+    }
+}

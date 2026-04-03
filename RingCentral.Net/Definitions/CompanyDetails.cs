@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CompanyDetails
-      {
-          /// <summary>
+{
+    public class CompanyDetails
+    {
+        /// <summary>
         ///     Business contact email
         ///     Format: email
         /// </summary>
@@ -36,5 +36,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public Contact contact { get; set; }
-      }
-  }
+    }
+}

@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport.Archive
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.MessageStoreReport.Index parent;
-public Index(Restapi.Account.MessageStoreReport.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.MessageStoreReport.Index parent;
+        public Index(Restapi.Account.MessageStoreReport.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/archive";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: ReadMessages
         /// User Permission: Users
         /// </summary>
-  public async Task<RingCentral.MessageStoreReportArchive> Get(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.MessageStoreReportArchive>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.MessageStoreReportArchive> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.MessageStoreReportArchive>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

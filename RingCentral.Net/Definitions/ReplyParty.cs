@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ReplyParty
-      {
-          /// <summary>
+{
+    public class ReplyParty
+    {
+        /// <summary>
         ///     Internal identifier of a party
         /// </summary>
         public string id { get; set; }
@@ -42,5 +42,5 @@ namespace RingCentral
         ///     Enum: Inbound, Outbound
         /// </summary>
         public string direction { get; set; }
-      }
-  }
+    }
+}

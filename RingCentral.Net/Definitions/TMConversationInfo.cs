@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TMConversationInfo
-      {
-          /// <summary>
+{
+    public class TMConversationInfo
+    {
+        /// <summary>
         ///     Internal identifier of a conversation
         /// </summary>
         public string id { get; set; }
@@ -28,5 +28,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public TMChatMemberInfo[] members { get; set; }
-      }
-  }
+    }
+}

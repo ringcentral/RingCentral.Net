@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.Directory.Entries.Search
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Directory.Entries.Index parent;
-public Index(Restapi.Account.Directory.Entries.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Directory.Entries.Index parent;
+        public Index(Restapi.Account.Directory.Entries.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/search";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: ReadAccounts
         /// User Permission: ReadExtensions
         /// </summary>
-  public async Task<RingCentral.DirectoryResource> Post(RingCentral.SearchDirectoryEntriesRequest searchDirectoryEntriesRequest, RingCentral.SearchDirectoryEntriesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<RingCentral.DirectoryResource>(this.Path(), searchDirectoryEntriesRequest, queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.DirectoryResource> Post(RingCentral.SearchDirectoryEntriesRequest searchDirectoryEntriesRequest, RingCentral.SearchDirectoryEntriesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.DirectoryResource>(this.Path(), searchDirectoryEntriesRequest, queryParams, restRequestConfig);
+        }
     }
 }
 

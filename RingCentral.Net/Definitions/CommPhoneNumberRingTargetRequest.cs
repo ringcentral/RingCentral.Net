@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommPhoneNumberRingTargetRequest
-      {
-          /// <summary>
+{
+    public class CommPhoneNumberRingTargetRequest
+    {
+        /// <summary>
         ///     Ring target type
         ///     Required
         ///     Example: PhoneNumberRingTarget
@@ -18,5 +18,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string name { get; set; }
-      }
-  }
+    }
+}

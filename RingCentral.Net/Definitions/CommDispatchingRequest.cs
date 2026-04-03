@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommDispatchingRequest
-      {
-          /// <summary>
+{
+    public class CommDispatchingRequest
+    {
+        /// <summary>
         /// </summary>
         public CommCallTypesResource callTypes { get; set; }
 
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Enum: RingAtOnce, RingInOrder, Custom, Terminate
         /// </summary>
         public string type { get; set; }
-      }
-  }
+    }
+}

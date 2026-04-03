@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Information on account brand
-/// </summary>
-      public class BrandInfo
-      {
-          /// <summary>
+    /// Information on account brand
+    /// </summary>
+    public class BrandInfo
+    {
+        /// <summary>
         ///     Internal identifier of a brand
         /// </summary>
         public string id { get; set; }
@@ -18,5 +18,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CountryInfoShortModel homeCountry { get; set; }
-      }
-  }
+    }
+}

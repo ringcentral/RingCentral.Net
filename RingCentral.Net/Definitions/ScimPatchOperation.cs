@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ScimPatchOperation
-      {
-          /// <summary>
+{
+    public class ScimPatchOperation
+    {
+        /// <summary>
         ///     Required
         ///     Enum: add, replace, remove
         /// </summary>
@@ -16,5 +16,5 @@ namespace RingCentral
         ///     Corresponding 'value' of that field specified by 'path'
         /// </summary>
         public string value { get; set; }
-      }
-  }
+    }
+}

@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Action information
-/// </summary>
-      public class CommScreeningActionRequest
-      {
-          /// <summary>
+    /// Action information
+    /// </summary>
+    public class CommScreeningActionRequest
+    {
+        /// <summary>
         ///     Action type
         ///     Required
         ///     Example: ScreeningAction
@@ -30,5 +30,5 @@ namespace RingCentral
         ///     Enum: AskToAnswer, PlayCallerNameOnly
         /// </summary>
         public string screeningResult { get; set; }
-      }
-  }
+    }
+}

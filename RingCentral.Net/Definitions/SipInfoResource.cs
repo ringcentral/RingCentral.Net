@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class SipInfoResource
-      {
-          /// <summary>
+{
+    public class SipInfoResource
+    {
+        /// <summary>
         ///     SIP domain
         /// </summary>
         public string domain { get; set; }
@@ -26,5 +26,5 @@ namespace RingCentral
         ///     Internal identifier for SIP authorization
         /// </summary>
         public string authorizationId { get; set; }
-      }
-  }
+    }
+}

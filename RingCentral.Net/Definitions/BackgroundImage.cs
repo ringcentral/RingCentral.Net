@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Specifies a background image oa a card. Acceptable formats are PNG, JPEG, and GIF
-/// </summary>
-      public class BackgroundImage
-      {
-          /// <summary>
+    /// Specifies a background image oa a card. Acceptable formats are PNG, JPEG, and GIF
+    /// </summary>
+    public class BackgroundImage
+    {
+        /// <summary>
         ///     Must be `BackgroundImage`
         ///     Enum: BackgroundImage
         /// </summary>
@@ -35,5 +35,5 @@ namespace RingCentral
         ///     Enum: top, center, bottom
         /// </summary>
         public string verticalAlignment { get; set; }
-      }
-  }
+    }
+}

@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
-/// </summary>
-      public class ForwardingInfo
-      {
-          /// <summary>
+    /// Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
+    /// </summary>
+    public class ForwardingInfo
+    {
+        /// <summary>
         ///     Specifies if the user's softphone(s) are notified before forwarding the incoming call to desk phones and forwarding numbers
         /// </summary>
         public bool? notifyMySoftPhones { get; set; }
@@ -47,5 +47,5 @@ namespace RingCentral
         ///     Deprecated parameter. Specifies if mobile timeout is activated for the rule
         /// </summary>
         public bool? mobileTimeout { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ParamsInfo
-      {
-          /// <summary>
+{
+    public class ParamsInfo
+    {
+        /// <summary>
         ///     Parameter name
         /// </summary>
         public string name { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Parameter value
         /// </summary>
         public string value { get; set; }
-      }
-  }
+    }
+}

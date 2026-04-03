@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class SiteUpdateRequest
-      {
-          /// <summary>
+{
+    public class SiteUpdateRequest
+    {
+        /// <summary>
         ///     Extension user first name
         /// </summary>
         public string name { get; set; }
@@ -14,7 +14,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Custom name of a caller. Max number of characters is 15 (only
-            ///     alphabetical symbols, numbers and commas are supported)
+        ///     alphabetical symbols, numbers and commas are supported)
         /// </summary>
         public string callerIdName { get; set; }
 
@@ -45,5 +45,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string[] accessibleSiteIds { get; set; }
-      }
-  }
+    }
+}

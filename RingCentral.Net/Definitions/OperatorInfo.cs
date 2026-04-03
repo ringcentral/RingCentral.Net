@@ -1,13 +1,13 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Site Fax/SMS recipient (operator) reference. Multi-level IVR should
-/// be enabled
-/// 
-/// </summary>
-      public class OperatorInfo
-      {
-          /// <summary>
+    /// Site Fax/SMS recipient (operator) reference. Multi-level IVR should
+    /// be enabled
+    /// 
+    /// </summary>
+    public class OperatorInfo
+    {
+        /// <summary>
         ///     Internal identifier of an operator
         /// </summary>
         public string id { get; set; }
@@ -27,5 +27,5 @@ namespace RingCentral
         ///     Operator extension user full name
         /// </summary>
         public string name { get; set; }
-      }
-  }
+    }
+}

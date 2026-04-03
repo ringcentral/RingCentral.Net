@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Interaction rule create request
-/// </summary>
-      public class CommInteractionRuleCreateRequest
-      {
-          /// <summary>
+    /// Interaction rule create request
+    /// </summary>
+    public class CommInteractionRuleCreateRequest
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public object[] conditions { get; set; }
@@ -26,5 +26,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string displayName { get; set; }
-      }
-  }
+    }
+}

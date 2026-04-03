@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.Recording
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Index parent;
-public string recordingId;
-public Index(Restapi.Account.Index parent, string recordingId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.recordingId = recordingId;
-}
+        public Restapi.Account.Index parent;
+        public string recordingId;
+        public Index(Restapi.Account.Index parent, string recordingId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.recordingId = recordingId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && recordingId != null)
@@ -31,13 +31,14 @@ this.recordingId = recordingId;
         /// App Permission: ReadCallRecording
         /// User Permission: ReadCallRecording
         /// </summary>
-  public async Task<RingCentral.GetCallRecordingResponse> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (recordingId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(recordingId));
-    }return await rc.Get<RingCentral.GetCallRecordingResponse>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.GetCallRecordingResponse> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (recordingId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(recordingId));
+            }
+            return await rc.Get<RingCentral.GetCallRecordingResponse>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

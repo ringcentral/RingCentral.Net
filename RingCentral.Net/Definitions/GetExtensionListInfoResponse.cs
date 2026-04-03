@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class GetExtensionListInfoResponse
-      {
-          /// <summary>
+{
+    public class GetExtensionListInfoResponse
+    {
+        /// <summary>
         ///     Internal identifier of an extension
         ///     Format: int64
         /// </summary>
@@ -25,7 +25,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Extension name. For user extension types the value is a combination
-            ///     of the specified first name and last name
+        ///     of the specified first name and last name
         /// </summary>
         public string name { get; set; }
 
@@ -39,13 +39,13 @@ namespace RingCentral
 
         /// <summary>
         ///     For Partner Applications Internal identifier of an extension
-            ///     created by partner. The RingCentral supports mapping of accounts and
-            ///     stores the corresponding account ID/extension ID for each partner ID of
-            ///     a client application. In request URIs partner IDs are accepted instead
-            ///     of regular RingCentral native IDs as path parameters using `pid=XXX` clause.
-            ///     Though in response URIs contain the corresponding account IDs and extension
-            ///     IDs. In all request and response bodies these values are reflected via
-            ///     partnerId attributes of account and extension
+        ///     created by partner. The RingCentral supports mapping of accounts and
+        ///     stores the corresponding account ID/extension ID for each partner ID of
+        ///     a client application. In request URIs partner IDs are accepted instead
+        ///     of regular RingCentral native IDs as path parameters using `pid=XXX` clause.
+        ///     Though in response URIs contain the corresponding account IDs and extension
+        ///     IDs. In all request and response bodies these values are reflected via
+        ///     partnerId attributes of account and extension
         /// </summary>
         public string partnerId { get; set; }
 
@@ -62,8 +62,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Type of the extension. For unrecognized types the `Unknown` value is returned.
-            ///     Please note that legacy 'Department' extension type corresponds to 'Call Queue'
-            ///     extensions in modern RingCentral product terminology
+        ///     Please note that legacy 'Department' extension type corresponds to 'Call Queue'
+        ///     extensions in modern RingCentral product terminology
         ///     Example: User
         ///     Enum: User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup, DelegatedLinesGroup, GroupCallPickup, IvrMenu, ApplicationExtension, ProxyAdmin, RoomConnector, ParkLocation, Limited, Bot, Site, Room, FlexibleUser, TieLine, Unknown
         /// </summary>
@@ -71,7 +71,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Extension subtype, if applicable.
-            ///     For unrecognized subtypes the `Unknown` value is returned
+        ///     For unrecognized subtypes the `Unknown` value is returned
         ///     Enum: VideoPro, VideoProPlus, DigitalSignageOnlyRooms, Unknown, Emergency
         /// </summary>
         public string subType { get; set; }
@@ -82,7 +82,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Hides extension from showing in company directory.
-            ///     Supported for extensions of User type only
+        ///     Supported for extensions of User type only
         /// </summary>
         public bool? hidden { get; set; }
 
@@ -115,5 +115,5 @@ namespace RingCentral
         ///     Enum: 5, 10, 15, 20, 30, 45, 60, 120, 180, 240, 300, 360, 420, 480, 540, 600
         /// </summary>
         public long? alertTimer { get; set; }
-      }
-  }
+    }
+}

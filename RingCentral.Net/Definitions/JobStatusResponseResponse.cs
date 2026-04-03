@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class JobStatusResponseResponse
-      {
-          /// <summary>
+{
+    public class JobStatusResponseResponse
+    {
+        /// <summary>
         ///     The number of speakers detected. Field is set only when enableSpeakerDiarization is true.
         ///     Format: int32
         ///     Example: 2
@@ -40,5 +40,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ConversationalInsightsUnit[] conversationalInsights { get; set; }
-      }
-  }
+    }
+}

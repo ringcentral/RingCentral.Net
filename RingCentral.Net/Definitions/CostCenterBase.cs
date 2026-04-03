@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CostCenterBase
-      {
-          /// <summary>
+{
+    public class CostCenterBase
+    {
+        /// <summary>
         ///     Internal identifier of a cost center
         ///     Format: int64
         ///     Example: 981086004
@@ -20,5 +20,5 @@ namespace RingCentral
         ///     Example: BC 101
         /// </summary>
         public string billingCode { get; set; }
-      }
-  }
+    }
+}

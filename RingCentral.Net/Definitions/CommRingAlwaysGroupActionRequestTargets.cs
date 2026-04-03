@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommRingAlwaysGroupActionRequestTargets
-      {
-          /// <summary>
+{
+    public class CommRingAlwaysGroupActionRequestTargets
+    {
+        /// <summary>
         ///     Ring target type
         ///     Example: AllMobileRingTarget
         ///     Enum: AllDesktopRingTarget, AllMobileRingTarget, CoworkerRingTarget, DeviceRingTarget, HotdeskRingTarget, ImsPhoneNumberRingTarget, FmcPhoneNumberRingTarget, IntegrationRingTarget, PhoneNumberRingTarget
@@ -12,5 +12,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CommReferencedExtensionResource extension { get; set; }
-      }
-  }
+    }
+}

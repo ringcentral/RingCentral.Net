@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class DeviceExtensionInfo
-      {
-          /// <summary>
+{
+    public class DeviceExtensionInfo
+    {
+        /// <summary>
         ///     Internal identifier of an extension
         ///     Format: int64
         /// </summary>
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Short extension number
         /// </summary>
         public string extensionNumber { get; set; }
-      }
-  }
+    }
+}

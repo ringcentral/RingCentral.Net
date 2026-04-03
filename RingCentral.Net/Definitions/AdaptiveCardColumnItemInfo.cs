@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class AdaptiveCardColumnItemInfo
-      {
-          /// <summary>
+{
+    public class AdaptiveCardColumnItemInfo
+    {
+        /// <summary>
         /// </summary>
         public string type { get; set; }
 
@@ -34,5 +34,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public bool? isSubtle { get; set; }
-      }
-  }
+    }
+}

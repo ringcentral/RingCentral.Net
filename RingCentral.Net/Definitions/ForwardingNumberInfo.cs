@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ForwardingNumberInfo
-      {
-          /// <summary>
+{
+    public class ForwardingNumberInfo
+    {
+        /// <summary>
         ///     Internal identifier of a forwarding/call flip phone number
         /// </summary>
         public string id { get; set; }
@@ -48,5 +48,5 @@ namespace RingCentral
         ///     Extension information. Returned only if extension type is 'ExtensionApps'
         /// </summary>
         public ForwardingNumberInfoExtension extension { get; set; }
-      }
-  }
+    }
+}

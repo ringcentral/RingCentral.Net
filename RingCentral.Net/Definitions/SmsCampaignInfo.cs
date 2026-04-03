@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class SmsCampaignInfo
-      {
-          /// <summary>
+{
+    public class SmsCampaignInfo
+    {
+        /// <summary>
         ///     Identifier of the associated TCR campaign
         /// </summary>
         public string id { get; set; }
@@ -36,5 +36,5 @@ namespace RingCentral
         ///     Enum: PhoneNumber, Account, Conversational, Informational, Promotional
         /// </summary>
         public string coverageType { get; set; }
-      }
-  }
+    }
+}

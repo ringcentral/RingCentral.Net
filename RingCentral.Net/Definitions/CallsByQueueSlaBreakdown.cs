@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Result breakdown by queue SLA
-/// </summary>
-      public class CallsByQueueSlaBreakdown
-      {
-          /// <summary>
+    /// Result breakdown by queue SLA
+    /// </summary>
+    public class CallsByQueueSlaBreakdown
+    {
+        /// <summary>
         ///     Value for InSla queue SLA
         ///     Required
         ///     Format: double
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Format: double
         /// </summary>
         public decimal? outOfSla { get; set; }
-      }
-  }
+    }
+}

@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Query parameters for operation analyticsCallsTimelineFetch
-/// </summary>
-      public class AnalyticsCallsTimelineFetchParameters
-      {
-          /// <summary>
+    /// Query parameters for operation analyticsCallsTimelineFetch
+    /// </summary>
+    public class AnalyticsCallsTimelineFetchParameters
+    {
+        /// <summary>
         ///     Aggregation interval
         ///     Enum: Hour, Day, Week, Month
         /// </summary>
@@ -25,5 +25,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? perPage { get; set; }
-      }
-  }
+    }
+}

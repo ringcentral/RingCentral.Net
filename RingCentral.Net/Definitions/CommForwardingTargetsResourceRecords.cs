@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommForwardingTargetsResourceRecords
-      {
-          /// <summary>
+{
+    public class CommForwardingTargetsResourceRecords
+    {
+        /// <summary>
         ///     Ring target type
         ///     Example: PhoneNumberRingTarget
         ///     Enum: CoworkerAppsRingTarget, CoworkerRingTarget, DeviceRingTarget, ImsPhoneNumberRingTarget, FmcPhoneNumberRingTarget, IntegrationRingTarget, PhoneNumberRingTarget
@@ -30,5 +30,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CommIntegrationResource integration { get; set; }
-      }
-  }
+    }
+}

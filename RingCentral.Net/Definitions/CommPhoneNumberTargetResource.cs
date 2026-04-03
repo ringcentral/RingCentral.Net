@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommPhoneNumberTargetResource
-      {
-          /// <summary>
+{
+    public class CommPhoneNumberTargetResource
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public CommPhoneNumberResource destination { get; set; }
@@ -13,5 +13,5 @@ namespace RingCentral
         ///     Enum: PhoneNumberRingTarget
         /// </summary>
         public string type { get; set; }
-      }
-  }
+    }
+}

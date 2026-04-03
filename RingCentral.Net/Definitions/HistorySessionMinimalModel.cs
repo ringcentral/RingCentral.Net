@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class HistorySessionMinimalModel
-      {
-          /// <summary>
+{
+    public class HistorySessionMinimalModel
+    {
+        /// <summary>
         ///     Session start time. If a session hasn't been started this fields should be set to "scheduledStartTime"
         ///     Format: date-time
         /// </summary>
@@ -32,5 +32,5 @@ namespace RingCentral
         ///     Example: Live session for US-based participants
         /// </summary>
         public string description { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ScimPhoneNumber
-      {
-          /// <summary>
+{
+    public class ScimPhoneNumber
+    {
+        /// <summary>
         ///     Required
         ///     Enum: work, mobile, other
         /// </summary>
@@ -12,5 +12,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string value { get; set; }
-      }
-  }
+    }
+}

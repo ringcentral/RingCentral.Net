@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Single (of potential multiple) error entry in an ASG error response
-/// </summary>
-      public class ErrorEntry
-      {
-          /// <summary>
+    /// Single (of potential multiple) error entry in an ASG error response
+    /// </summary>
+    public class ErrorEntry
+    {
+        /// <summary>
         ///     Error code
         ///     Required
         ///     Example: CMN-101
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Example: AccountId 1234 is invalid
         /// </summary>
         public string message { get; set; }
-      }
-  }
+    }
+}

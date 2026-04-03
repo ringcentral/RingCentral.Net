@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Meeting information
-/// </summary>
-      public class BasicMeeting
-      {
-          /// <summary>
+    /// Meeting information
+    /// </summary>
+    public class BasicMeeting
+    {
+        /// <summary>
         ///     Meeting id
         ///     Required
         /// </summary>
@@ -39,5 +39,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public Host hostInfo { get; set; }
-      }
-  }
+    }
+}

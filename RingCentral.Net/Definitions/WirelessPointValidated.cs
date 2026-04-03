@@ -1,15 +1,15 @@
 namespace RingCentral
-  {
-      public class WirelessPointValidated
-      {
-          /// <summary>
+{
+    public class WirelessPointValidated
+    {
+        /// <summary>
         ///     Internal identifier of a wireless point
         /// </summary>
         public string id { get; set; }
 
         /// <summary>
         ///     Unique 48-bit identifier of the wireless access point that
-            ///     follows MAC address conventions
+        ///     follows MAC address conventions
         /// </summary>
         public string bssid { get; set; }
 
@@ -22,5 +22,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ValidationError[] errors { get; set; }
-      }
-  }
+    }
+}

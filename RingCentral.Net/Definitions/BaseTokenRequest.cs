@@ -1,17 +1,17 @@
 namespace RingCentral
-  {
-      public class BaseTokenRequest
-      {
-          /// <summary>
+{
+    public class BaseTokenRequest
+    {
+        /// <summary>
         ///     The list of application permissions (OAuth scopes) requested.
-            ///     By default, it includes all permissions configured on
-            ///     the client application registration
+        ///     By default, it includes all permissions configured on
+        ///     the client application registration
         /// </summary>
         public string scope { get; set; }
 
         /// <summary>
         ///     The unique identifier of a client application instance. If not
-            ///     specified, the derived or auto-generated value will be used
+        ///     specified, the derived or auto-generated value will be used
         /// </summary>
         public string endpoint_id { get; set; }
 
@@ -31,5 +31,5 @@ namespace RingCentral
         ///     Default: 604800
         /// </summary>
         public long? refresh_token_ttl { get; set; }
-      }
-  }
+    }
+}

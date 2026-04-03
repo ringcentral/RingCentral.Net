@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class SiteMemberInfo
-      {
-          /// <summary>
+{
+    public class SiteMemberInfo
+    {
+        /// <summary>
         ///     Format: int64
         /// </summary>
         public long? id { get; set; }
@@ -23,5 +23,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string name { get; set; }
-      }
-  }
+    }
+}

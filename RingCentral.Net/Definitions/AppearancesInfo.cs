@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Appearance phone numbers information. Supported only for Delegated Lines Group extensions
-/// </summary>
-      public class AppearancesInfo
-      {
-          /// <summary>
+    /// Appearance phone numbers information. Supported only for Delegated Lines Group extensions
+    /// </summary>
+    public class AppearancesInfo
+    {
+        /// <summary>
         ///     Appearance phone number
         /// </summary>
         public string phoneNumber { get; set; }
@@ -21,5 +21,5 @@ namespace RingCentral
         ///     Enum: Seized, Released
         /// </summary>
         public string lineStatus { get; set; }
-      }
-  }
+    }
+}

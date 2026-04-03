@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class AccountPresenceEvent
-      {
-          /// <summary>
+{
+    public class AccountPresenceEvent
+    {
+        /// <summary>
         ///     Universally unique identifier of a notification
         /// </summary>
         public string uuid { get; set; }
@@ -26,5 +26,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public AccountPresenceEventBody body { get; set; }
-      }
-  }
+    }
+}

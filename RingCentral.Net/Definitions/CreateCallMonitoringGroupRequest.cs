@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CreateCallMonitoringGroupRequest
-      {
-          /// <summary>
+{
+    public class CreateCallMonitoringGroupRequest
+    {
+        /// <summary>
         ///     Name of a group
         ///     Required
         /// </summary>
@@ -11,5 +11,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CreateCallMonitoringGroupRequestSite site { get; set; }
-      }
-  }
+    }
+}

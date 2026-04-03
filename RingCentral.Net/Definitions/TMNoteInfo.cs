@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TMNoteInfo
-      {
-          /// <summary>
+{
+    public class TMNoteInfo
+    {
+        /// <summary>
         ///     Internal identifier of a note
         /// </summary>
         public string id { get; set; }
@@ -56,5 +56,5 @@ namespace RingCentral
         ///     Enum: Note
         /// </summary>
         public string type { get; set; }
-      }
-  }
+    }
+}

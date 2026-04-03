@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ExtensionBulkUpdateInfo
-      {
-          /// <summary>
+{
+    public class ExtensionBulkUpdateInfo
+    {
+        /// <summary>
         ///     Internal identifier of an extension
         /// </summary>
         public string id { get; set; }
@@ -49,7 +49,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Additional extension identifier created by partner application
-            ///     and applied on client side
+        ///     and applied on client side
         /// </summary>
         public string partnerId { get; set; }
 
@@ -90,8 +90,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Extension type. Please note that legacy 'Department' extension
-            ///     type corresponds to 'Call Queue' extensions in modern RingCentral
-            ///     product terminology
+        ///     type corresponds to 'Call Queue' extensions in modern RingCentral
+        ///     product terminology
         ///     Enum: User, FaxUser, VirtualUser, DigitalUser, Department, Announcement, Voicemail, SharedLinesGroup, PagingOnly, IvrMenu, ApplicationExtension, ParkLocation, DelegatedLinesGroup
         /// </summary>
         public string type { get; set; }
@@ -100,5 +100,5 @@ namespace RingCentral
         ///     List of non-RC internal identifiers assigned to an extension
         /// </summary>
         public ReferenceInfo[] references { get; set; }
-      }
-  }
+    }
+}

@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Company emergency response location details
-/// </summary>
-      public class CommonEmergencyLocationResource
-      {
-          /// <summary>
+    /// Company emergency response location details
+    /// </summary>
+    public class CommonEmergencyLocationResource
+    {
+        /// <summary>
         ///     Link to an emergency location resource
         /// </summary>
         public string uri { get; set; }
@@ -42,7 +42,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Resulting status of emergency address synchronization. Returned
-            ///     if `syncEmergencyAddress` parameter is set to `true`
+        ///     if `syncEmergencyAddress` parameter is set to `true`
         ///     Enum: Verified, Updated, Deleted, ActivationProcess, NotRequired, Unsupported, Failed
         /// </summary>
         public string syncStatus { get; set; }
@@ -54,8 +54,8 @@ namespace RingCentral
 
         /// <summary>
         ///     Visibility of an emergency response location. If `Private`
-            ///     is set, then location is visible only for the restricted number of users,
-            ///     specified in `owners` array
+        ///     is set, then location is visible only for the restricted number of users,
+        ///     specified in `owners` array
         ///     Default: Public
         ///     Enum: Private, Public
         /// </summary>
@@ -76,5 +76,5 @@ namespace RingCentral
         ///     Enum: Actual, Outdated, Deprecated
         /// </summary>
         public string addressFormatStatus { get; set; }
-      }
-  }
+    }
+}

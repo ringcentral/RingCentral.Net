@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class BulkUpdateInviteesRequestUpdatedInvitees
-      {
-          /// <summary>
+{
+    public class BulkUpdateInviteesRequestUpdatedInvitees
+    {
+        /// <summary>
         ///     Internal object ID
         ///     Example: 78654321
         /// </summary>
@@ -35,7 +35,7 @@ namespace RingCentral
 
         /// <summary>
         ///     The role of the webinar session participant/invitee.
-            ///     See also: [Understanding Webinar Roles](https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html)
+        ///     See also: [Understanding Webinar Roles](https://support.ringcentral.com/webinar/getting-started/understanding-ringcentral-webinar-roles.html)
         ///     Example: Panelist
         ///     Enum: Panelist, CoHost, Host, Attendee
         /// </summary>
@@ -50,10 +50,10 @@ namespace RingCentral
 
         /// <summary>
         ///     Indicates if invite/cancellation emails have to be sent to this invitee.
-            ///     For "Host" it cannot be set to false.
-            ///     If it is true it can't be changed back to false.
+        ///     For "Host" it cannot be set to false.
+        ///     If it is true it can't be changed back to false.
         ///     Default: true
         /// </summary>
         public bool? sendInvite { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class BulkAddDevicesResponseResults
-      {
-          /// <summary>
+{
+    public class BulkAddDevicesResponseResults
+    {
+        /// <summary>
         ///     Indicates if the provisioning operation was successful for this item, always `false` in this model
         /// </summary>
         public bool? successful { get; set; }
@@ -26,5 +26,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ApiErrorWithParameter[] errors { get; set; }
-      }
-  }
+    }
+}

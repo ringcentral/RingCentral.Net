@@ -7,14 +7,14 @@ namespace RingCentral.Paths.TeamMessaging.V1.Events
     public partial class Index
     {
         public RestClient rc;
-public TeamMessaging.V1.Index parent;
-public string eventId;
-public Index(TeamMessaging.V1.Index parent, string eventId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.eventId = eventId;
-}
+        public TeamMessaging.V1.Index parent;
+        public string eventId;
+        public Index(TeamMessaging.V1.Index parent, string eventId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.eventId = eventId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && eventId != null)
@@ -30,10 +30,10 @@ this.eventId = eventId;
         /// Rate Limit Group: Medium
         /// App Permission: TeamMessaging
         /// </summary>
-  public async Task<RingCentral.TMEventList> List(RingCentral.ReadGlipEventsNewParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.TMEventList>(this.Path(false), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.TMEventList> List(RingCentral.ReadGlipEventsNewParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.TMEventList>(this.Path(false), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Creates a new calendar event.
@@ -42,10 +42,10 @@ return await rc.Get<RingCentral.TMEventList>(this.Path(false), queryParams, rest
         /// Rate Limit Group: Medium
         /// App Permission: TeamMessaging
         /// </summary>
-  public async Task<RingCentral.TMEventInfo> Post(RingCentral.TMCreateEventRequest tMCreateEventRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<RingCentral.TMEventInfo>(this.Path(false), tMCreateEventRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.TMEventInfo> Post(RingCentral.TMCreateEventRequest tMCreateEventRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.TMEventInfo>(this.Path(false), tMCreateEventRequest, null, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns the specified calendar event(s) by ID(s).
@@ -54,13 +54,14 @@ return await rc.Post<RingCentral.TMEventInfo>(this.Path(false), tMCreateEventReq
         /// Rate Limit Group: Medium
         /// App Permission: TeamMessaging
         /// </summary>
-  public async Task<RingCentral.TMEventInfo> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (eventId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(eventId));
-    }return await rc.Get<RingCentral.TMEventInfo>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.TMEventInfo> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (eventId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(eventId));
+            }
+            return await rc.Get<RingCentral.TMEventInfo>(this.Path(), null, restRequestConfig);
+        }
 
         /// <summary>
         /// Updates the specified calendar event.
@@ -69,13 +70,14 @@ if (eventId == null)
         /// Rate Limit Group: Medium
         /// App Permission: TeamMessaging
         /// </summary>
-  public async Task<RingCentral.TMEventInfo> Put(RingCentral.TMCreateEventRequest tMCreateEventRequest, RestRequestConfig restRequestConfig = null)
-  {
-if (eventId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(eventId));
-    }return await rc.Put<RingCentral.TMEventInfo>(this.Path(), tMCreateEventRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.TMEventInfo> Put(RingCentral.TMCreateEventRequest tMCreateEventRequest, RestRequestConfig restRequestConfig = null)
+        {
+            if (eventId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(eventId));
+            }
+            return await rc.Put<RingCentral.TMEventInfo>(this.Path(), tMCreateEventRequest, null, restRequestConfig);
+        }
 
         /// <summary>
         /// Deletes the specified calendar event.
@@ -84,13 +86,14 @@ if (eventId == null)
         /// Rate Limit Group: Medium
         /// App Permission: TeamMessaging
         /// </summary>
-  public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
-  {
-if (eventId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(eventId));
-    }return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
-  }
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
+        {
+            if (eventId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(eventId));
+            }
+            return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
+        }
     }
 }
 

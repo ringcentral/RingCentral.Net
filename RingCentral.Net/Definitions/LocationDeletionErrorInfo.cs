@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class LocationDeletionErrorInfo
-      {
-          /// <summary>
+{
+    public class LocationDeletionErrorInfo
+    {
+        /// <summary>
         ///     Error code
         /// </summary>
         public string errorCode { get; set; }
@@ -16,5 +16,5 @@ namespace RingCentral
         ///     Additional attribute for this error, for example `parameterName`
         /// </summary>
         public string additionalInfo { get; set; }
-      }
-  }
+    }
+}

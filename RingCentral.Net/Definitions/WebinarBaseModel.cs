@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class WebinarBaseModel
-      {
-          /// <summary>
+{
+    public class WebinarBaseModel
+    {
+        /// <summary>
         ///     Webinar title
         ///     Example: All-Hands Webinar
         /// </summary>
@@ -17,5 +17,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public WcsWebinarSettingsModel settings { get; set; }
-      }
-  }
+    }
+}

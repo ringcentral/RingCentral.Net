@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CallRecordingExtensions
-      {
-          /// <summary>
+{
+    public class CallRecordingExtensions
+    {
+        /// <summary>
         ///     Link to call recording extension list resource
         ///     Format: uri
         /// </summary>
@@ -19,5 +19,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-      }
-  }
+    }
+}

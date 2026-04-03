@@ -7,12 +7,12 @@ namespace RingCentral.Paths.TeamMessaging.V1.Recent.Chats
     public partial class Index
     {
         public RestClient rc;
-public TeamMessaging.V1.Recent.Index parent;
-public Index(TeamMessaging.V1.Recent.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public TeamMessaging.V1.Recent.Index parent;
+        public Index(TeamMessaging.V1.Recent.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/chats";
@@ -24,10 +24,10 @@ this.rc = parent.rc;
         /// Rate Limit Group: Light
         /// App Permission: TeamMessaging
         /// </summary>
-  public async Task<RingCentral.TMChatListWithoutNavigation> Get(RingCentral.ListRecentChatsNewParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.TMChatListWithoutNavigation>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.TMChatListWithoutNavigation> Get(RingCentral.ListRecentChatsNewParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.TMChatListWithoutNavigation>(this.Path(), queryParams, restRequestConfig);
+        }
     }
 }
 

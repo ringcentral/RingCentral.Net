@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class TMPostsList
-      {
-          /// <summary>
+{
+    public class TMPostsList
+    {
+        /// <summary>
         ///     List of posts
         ///     Required
         /// </summary>
@@ -11,5 +11,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public TMNavigationInfo navigation { get; set; }
-      }
-  }
+    }
+}

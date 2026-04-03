@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class MultipartResponseEntryBase
-      {
-          /// <summary>
+{
+    public class MultipartResponseEntryBase
+    {
+        /// <summary>
         ///     Internal identifier of a resource
         ///     Required
         ///     Example: 1724099032020
@@ -16,5 +16,5 @@ namespace RingCentral
         ///     Example: 200
         /// </summary>
         public long? status { get; set; }
-      }
-  }
+    }
+}

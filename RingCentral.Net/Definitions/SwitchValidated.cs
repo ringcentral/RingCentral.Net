@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class SwitchValidated
-      {
-          /// <summary>
+{
+    public class SwitchValidated
+    {
+        /// <summary>
         ///     Internal identifier of a switch
         /// </summary>
         public string id { get; set; }
@@ -26,5 +26,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ValidationError[] errors { get; set; }
-      }
-  }
+    }
+}

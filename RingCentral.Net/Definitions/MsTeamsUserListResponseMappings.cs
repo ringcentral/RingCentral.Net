@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class MsTeamsUserListResponseMappings
-      {
-          /// <summary>
+{
+    public class MsTeamsUserListResponseMappings
+    {
+        /// <summary>
         ///     RingCentral extension ID of the user to connect
         /// </summary>
         public string extensionId { get; set; }
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Enum: Connected, Initial, RemoteNotFound, OutOfSync, Connecting, Disconnecting, DisconnectFailed, RemoteUserRemoved
         /// </summary>
         public string status { get; set; }
-      }
-  }
+    }
+}

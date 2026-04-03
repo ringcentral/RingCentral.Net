@@ -1,13 +1,13 @@
 using Newtonsoft.Json;
 
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Information on a notification
-/// </summary>
-      public class NotificationInfo
-      {
-          /// <summary>
+    /// Information on a notification
+    /// </summary>
+    public class NotificationInfo
+    {
+        /// <summary>
         /// </summary>
         public AlertInfo alert { get; set; }
 
@@ -31,5 +31,5 @@ namespace RingCentral
         ///     Category of a message
         /// </summary>
         public string category { get; set; }
-      }
-  }
+    }
+}

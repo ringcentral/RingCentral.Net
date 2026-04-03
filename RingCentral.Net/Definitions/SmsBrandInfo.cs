@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class SmsBrandInfo
-      {
-          /// <summary>
+{
+    public class SmsBrandInfo
+    {
+        /// <summary>
         ///     Identifier of the associated TCR brand
         /// </summary>
         public string id { get; set; }
@@ -16,5 +16,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ApiError[] errors { get; set; }
-      }
-  }
+    }
+}

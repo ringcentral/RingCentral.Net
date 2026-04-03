@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class RecordingDownloadModel
-      {
-          /// <summary>
+{
+    public class RecordingDownloadModel
+    {
+        /// <summary>
         ///     Download URI (available only for webinar host or admin)
         ///     Required
         ///     Format: uri
@@ -24,5 +24,5 @@ namespace RingCentral
         ///     Example: 20821092300
         /// </summary>
         public long? downloadSize { get; set; }
-      }
-  }
+    }
+}

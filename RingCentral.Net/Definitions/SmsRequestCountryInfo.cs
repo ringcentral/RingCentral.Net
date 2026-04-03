@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Target number country information. Either `id` or `isoCode` can be specified.
-/// </summary>
-      public class SmsRequestCountryInfo
-      {
-          /// <summary>
+    /// Target number country information. Either `id` or `isoCode` can be specified.
+    /// </summary>
+    public class SmsRequestCountryInfo
+    {
+        /// <summary>
         ///     Internal identifier of a country
         /// </summary>
         public string id { get; set; }
@@ -15,5 +15,5 @@ namespace RingCentral
         ///     Example: US
         /// </summary>
         public string isoCode { get; set; }
-      }
-  }
+    }
+}

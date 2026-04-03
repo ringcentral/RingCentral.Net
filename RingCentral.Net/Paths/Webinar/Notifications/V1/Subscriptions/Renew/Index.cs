@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Webinar.Notifications.V1.Subscriptions.Renew
     public partial class Index
     {
         public RestClient rc;
-public Webinar.Notifications.V1.Subscriptions.Index parent;
-public Index(Webinar.Notifications.V1.Subscriptions.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Webinar.Notifications.V1.Subscriptions.Index parent;
+        public Index(Webinar.Notifications.V1.Subscriptions.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/renew";
@@ -23,10 +23,10 @@ this.rc = parent.rc;
         /// Endpoint: /webinar/notifications/v1/subscriptions/{subscriptionId}/renew
         /// Rate Limit Group: Light
         /// </summary>
-  public async Task<RingCentral.SubscriptionInfo> Post(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<RingCentral.SubscriptionInfo>(this.Path(), null, null, restRequestConfig);
-  }
+        public async Task<RingCentral.SubscriptionInfo> Post(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.SubscriptionInfo>(this.Path(), null, null, restRequestConfig);
+        }
     }
 }
 

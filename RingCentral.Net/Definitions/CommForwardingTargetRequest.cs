@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommForwardingTargetRequest
-      {
-          /// <summary>
+{
+    public class CommForwardingTargetRequest
+    {
+        /// <summary>
         /// </summary>
         public string name { get; set; }
 
@@ -12,5 +12,5 @@ namespace RingCentral
         ///     Enum: CoworkerAppsRingTarget, CoworkerRingTarget, DeviceRingTarget, ImsPhoneNumberRingTarget, IntegrationRingTarget, PhoneNumberRingTarget
         /// </summary>
         public string type { get; set; }
-      }
-  }
+    }
+}

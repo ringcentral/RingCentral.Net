@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Ai.Audio.V1
     public partial class Index
     {
         public RestClient rc;
-public Ai.Audio.Index parent;
-public Index(Ai.Audio.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Ai.Audio.Index parent;
+        public Index(Ai.Audio.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path(false)}/v1";

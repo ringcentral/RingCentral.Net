@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommStatesResource
-      {
-          /// <summary>
+{
+    public class CommStatesResource
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public CommStateResource[] records { get; set; }
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-      }
-  }
+    }
+}

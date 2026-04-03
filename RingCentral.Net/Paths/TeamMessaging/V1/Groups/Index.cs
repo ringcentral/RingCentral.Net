@@ -7,14 +7,14 @@ namespace RingCentral.Paths.TeamMessaging.V1.Groups
     public partial class Index
     {
         public RestClient rc;
-public TeamMessaging.V1.Index parent;
-public string groupId;
-public Index(TeamMessaging.V1.Index parent, string groupId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.groupId = groupId;
-}
+        public TeamMessaging.V1.Index parent;
+        public string groupId;
+        public Index(TeamMessaging.V1.Index parent, string groupId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.groupId = groupId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && groupId != null)

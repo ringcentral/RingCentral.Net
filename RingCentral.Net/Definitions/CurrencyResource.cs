@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CurrencyResource
-      {
-          /// <summary>
+{
+    public class CurrencyResource
+    {
+        /// <summary>
         /// </summary>
         public string id { get; set; }
 
@@ -21,5 +21,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public string minorSymbol { get; set; }
-      }
-  }
+    }
+}

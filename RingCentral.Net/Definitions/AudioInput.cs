@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class AudioInput
-      {
-          /// <summary>
+{
+    public class AudioInput
+    {
+        /// <summary>
         ///     Publicly facing uri
         ///     Format: uri
         /// </summary>
@@ -35,5 +35,5 @@ namespace RingCentral
         ///     Enum: CallCenter, Meeting, EarningsCalls, Interview, PressConference, Voicemail
         /// </summary>
         public string audioType { get; set; }
-      }
-  }
+    }
+}

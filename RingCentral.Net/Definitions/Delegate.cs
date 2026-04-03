@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class Delegate
-      {
-          /// <summary>
+{
+    public class Delegate
+    {
+        /// <summary>
         ///     Delegate id (equal as extension id of delegate)
         /// </summary>
         public string id { get; set; }
@@ -22,5 +22,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public string extensionId { get; set; }
-      }
-  }
+    }
+}

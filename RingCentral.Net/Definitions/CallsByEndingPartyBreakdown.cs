@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CallsByEndingPartyBreakdown
-      {
-          /// <summary>
+{
+    public class CallsByEndingPartyBreakdown
+    {
+        /// <summary>
         ///     Value for Caller ending party
         ///     Required
         ///     Format: double
@@ -22,5 +22,5 @@ namespace RingCentral
         ///     Format: double
         /// </summary>
         public decimal? system { get; set; }
-      }
-  }
+    }
+}

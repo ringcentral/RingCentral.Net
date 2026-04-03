@@ -22,7 +22,8 @@ public class BatchApiTest
 
         var messages = await rc.Restapi().Account().Extension().MessageStore().List(new ListMessagesParameters
         {
-            perPage = 2, dateFrom = "2016-03-10T18:07:52.534Z"
+            perPage = 2,
+            dateFrom = "2016-03-10T18:07:52.534Z"
         });
 
         if (messages.records.Length == 2)

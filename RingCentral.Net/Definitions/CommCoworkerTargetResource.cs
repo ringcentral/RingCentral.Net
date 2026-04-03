@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Ring target
-/// </summary>
-      public class CommCoworkerTargetResource
-      {
-          /// <summary>
+    /// Ring target
+    /// </summary>
+    public class CommCoworkerTargetResource
+    {
+        /// <summary>
         ///     Required
         /// </summary>
         public CommReferencedExtensionResource extension { get; set; }
@@ -16,5 +16,5 @@ namespace RingCentral
         ///     Enum: CoworkerRingTarget
         /// </summary>
         public string type { get; set; }
-      }
-  }
+    }
+}

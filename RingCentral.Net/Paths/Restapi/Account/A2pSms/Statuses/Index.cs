@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Statuses
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.A2pSms.Index parent;
-public Index(Restapi.Account.A2pSms.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.A2pSms.Index parent;
+        public Index(Restapi.Account.A2pSms.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/statuses";
@@ -24,10 +24,10 @@ this.rc = parent.rc;
         /// Rate Limit Group: Light
         /// App Permission: A2PSMS
         /// </summary>
-  public async Task<RingCentral.MessageStatusesResponse> Get(RingCentral.AggregateA2PSMSStatusesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.MessageStatusesResponse>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.MessageStatusesResponse> Get(RingCentral.AggregateA2PSMSStatusesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.MessageStatusesResponse>(this.Path(), queryParams, restRequestConfig);
+        }
     }
 }
 

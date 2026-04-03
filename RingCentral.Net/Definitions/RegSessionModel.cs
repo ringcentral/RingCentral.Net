@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class RegSessionModel
-      {
-          /// <summary>
+{
+    public class RegSessionModel
+    {
+        /// <summary>
         ///     ID of the session
         ///     Required
         ///     Example: 123456789
@@ -62,5 +62,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public RegSessionModelSettings settings { get; set; }
-      }
-  }
+    }
+}

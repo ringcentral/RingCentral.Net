@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// For 'Connect' or 'Voicemail' actions only. Extension reference
-/// </summary>
-      public class IvrMenuExtensionInfo
-      {
-          /// <summary>
+    /// For 'Connect' or 'Voicemail' actions only. Extension reference
+    /// </summary>
+    public class IvrMenuExtensionInfo
+    {
+        /// <summary>
         ///     Link to an extension resource
         ///     Format: uri
         /// </summary>
@@ -25,5 +25,5 @@ namespace RingCentral
         ///     Extension number
         /// </summary>
         public string pin { get; set; }
-      }
-  }
+    }
+}

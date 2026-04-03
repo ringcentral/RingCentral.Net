@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ScimFilterSupported
-      {
-          /// <summary>
+{
+    public class ScimFilterSupported
+    {
+        /// <summary>
         ///     Format: int32
         /// </summary>
         public long? maxResults { get; set; }
@@ -10,5 +10,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public bool? supported { get; set; }
-      }
-  }
+    }
+}

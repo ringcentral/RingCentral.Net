@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Telephony.Index parent;
-public string telephonySessionId;
-public Index(Restapi.Account.Telephony.Index parent, string telephonySessionId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.telephonySessionId = telephonySessionId;
-}
+        public Restapi.Account.Telephony.Index parent;
+        public string telephonySessionId;
+        public Index(Restapi.Account.Telephony.Index parent, string telephonySessionId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.telephonySessionId = telephonySessionId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && telephonySessionId != null)
@@ -30,13 +30,14 @@ this.telephonySessionId = telephonySessionId;
         /// Rate Limit Group: Light
         /// App Permission: CallControl
         /// </summary>
-  public async Task<RingCentral.CallSessionObject> Get(RingCentral.ReadCallSessionStatusParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-if (telephonySessionId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(telephonySessionId));
-    }return await rc.Get<RingCentral.CallSessionObject>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.CallSessionObject> Get(RingCentral.ReadCallSessionStatusParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            if (telephonySessionId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(telephonySessionId));
+            }
+            return await rc.Get<RingCentral.CallSessionObject>(this.Path(), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Drops a call session.
@@ -45,13 +46,14 @@ if (telephonySessionId == null)
         /// Rate Limit Group: Light
         /// App Permission: CallControl
         /// </summary>
-  public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
-  {
-if (telephonySessionId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(telephonySessionId));
-    }return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
-  }
+        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
+        {
+            if (telephonySessionId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(telephonySessionId));
+            }
+            return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
+        }
     }
 }
 

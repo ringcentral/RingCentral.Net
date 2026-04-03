@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CallLogSyncInfo
-      {
-          /// <summary>
+{
+    public class CallLogSyncInfo
+    {
+        /// <summary>
         ///     Type of call log synchronization request: full or incremental sync
         ///     Required
         ///     Enum: FSync, ISync
@@ -21,5 +21,5 @@ namespace RingCentral
         ///     Format: date-time
         /// </summary>
         public string syncTime { get; set; }
-      }
-  }
+    }
+}

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommDispatchingRequestActionsTargets
-      {
-          /// <summary>
+{
+    public class CommDispatchingRequestActionsTargets
+    {
+        /// <summary>
         ///     Terminating target type
         ///     Example: ExtensionTerminatingTarget
         ///     Enum: ExtensionTerminatingTarget, PhoneNumberTerminatingTarget, PlayAnnouncementTerminatingTarget, VoiceMailTerminatingTarget
@@ -38,5 +38,5 @@ namespace RingCentral
         ///     Enum: Ringing, Terminating
         /// </summary>
         public string dispatchingType { get; set; }
-      }
-  }
+    }
+}

@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.Greeting
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Index parent;
-public Index(Restapi.Account.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Index parent;
+        public Index(Restapi.Account.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/greeting";
@@ -25,11 +25,11 @@ this.rc = parent.rc;
         /// App Permission: EditAccounts
         /// User Permission: ReadUserInfo
         /// </summary>
-  public async Task<RingCentral.CustomCompanyGreetingInfo> Post(RingCentral.CreateCompanyGreetingRequest createCompanyGreetingRequest, RestRequestConfig restRequestConfig = null)
-  {
-var multipartFormDataContent = Utils.GetMultipartFormDataContent(createCompanyGreetingRequest);
-return await rc.Post<RingCentral.CustomCompanyGreetingInfo>(this.Path(), multipartFormDataContent, null, restRequestConfig);
-  }
+        public async Task<RingCentral.CustomCompanyGreetingInfo> Post(RingCentral.CreateCompanyGreetingRequest createCompanyGreetingRequest, RestRequestConfig restRequestConfig = null)
+        {
+            var multipartFormDataContent = Utils.GetMultipartFormDataContent(createCompanyGreetingRequest);
+            return await rc.Post<RingCentral.CustomCompanyGreetingInfo>(this.Path(), multipartFormDataContent, null, restRequestConfig);
+        }
     }
 }
 

@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.CallOut
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Telephony.Index parent;
-public Index(Restapi.Account.Telephony.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Telephony.Index parent;
+        public Index(Restapi.Account.Telephony.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/call-out";
@@ -24,10 +24,10 @@ this.rc = parent.rc;
         /// Rate Limit Group: Heavy
         /// App Permission: CallControl
         /// </summary>
-  public async Task<RingCentral.CallSession> Post(RingCentral.MakeCallOutRequest makeCallOutRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<RingCentral.CallSession>(this.Path(), makeCallOutRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.CallSession> Post(RingCentral.MakeCallOutRequest makeCallOutRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.CallSession>(this.Path(), makeCallOutRequest, null, restRequestConfig);
+        }
     }
 }
 

@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.Device.Emergency
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Device.Index parent;
-public Index(Restapi.Account.Device.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Device.Index parent;
+        public Index(Restapi.Account.Device.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/emergency";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: EditAccounts
         /// User Permission: EditCompanyDevices
         /// </summary>
-  public async Task<RingCentral.DeviceResource> Put(RingCentral.AccountDeviceUpdate accountDeviceUpdate, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Put<RingCentral.DeviceResource>(this.Path(), accountDeviceUpdate, null, restRequestConfig);
-  }
+        public async Task<RingCentral.DeviceResource> Put(RingCentral.AccountDeviceUpdate accountDeviceUpdate, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Put<RingCentral.DeviceResource>(this.Path(), accountDeviceUpdate, null, restRequestConfig);
+        }
     }
 }
 

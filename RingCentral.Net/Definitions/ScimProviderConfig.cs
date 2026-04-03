@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ScimProviderConfig
-      {
-          /// <summary>
+{
+    public class ScimProviderConfig
+    {
+        /// <summary>
         /// </summary>
         public ScimAuthenticationScheme[] authenticationSchemes { get; set; }
 
@@ -38,5 +38,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public ScimSupported xmlDataFormat { get; set; }
-      }
-  }
+    }
+}

@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Data for all calls
-/// </summary>
-      public class AllCalls
-      {
-          /// <summary>
+    /// Data for all calls
+    /// </summary>
+    public class AllCalls
+    {
+        /// <summary>
         ///     Unit of the result value
         ///     Required
         ///     Enum: Percent, Seconds, Instances
@@ -18,5 +18,5 @@ namespace RingCentral
         ///     Format: double
         /// </summary>
         public decimal? values { get; set; }
-      }
-  }
+    }
+}

@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.CallRecording.BulkAssign
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.CallRecording.Index parent;
-public Index(Restapi.Account.CallRecording.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.CallRecording.Index parent;
+        public Index(Restapi.Account.CallRecording.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/bulk-assign";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: ReadAccounts
         /// User Permission: ReadCompanyInfo
         /// </summary>
-  public async Task<string> Post(RingCentral.BulkAccountCallRecordingsResource bulkAccountCallRecordingsResource, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<string>(this.Path(), bulkAccountCallRecordingsResource, null, restRequestConfig);
-  }
+        public async Task<string> Post(RingCentral.BulkAccountCallRecordingsResource bulkAccountCallRecordingsResource, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<string>(this.Path(), bulkAccountCallRecordingsResource, null, restRequestConfig);
+        }
     }
 }
 

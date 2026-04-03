@@ -14,7 +14,7 @@ public class ContactTest
         var addressBook = rc.Restapi().Account().Extension().AddressBook();
 
         var listt = await addressBook.Contact().List(new ListContactsParameters
-            { phoneNumber = new[] { phoneNumber } });
+        { phoneNumber = new[] { phoneNumber } });
         foreach (var item in listt.records) await addressBook.Contact(item.id.ToString()).Delete();
 
         // list

@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommInteractionRuleScheduleResource
-      {
-          /// <summary>
+{
+    public class CommInteractionRuleScheduleResource
+    {
+        /// <summary>
         ///     Start date-time
         /// </summary>
         public string startDateTime { get; set; }
@@ -16,5 +16,5 @@ namespace RingCentral
         ///     Trigger information
         /// </summary>
         public CommInteractionRuleScheduleResourceTriggers[] triggers { get; set; }
-      }
-  }
+    }
+}

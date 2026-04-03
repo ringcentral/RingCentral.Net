@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class RecordingInsights
-      {
-          /// <summary>
+{
+    public class RecordingInsights
+    {
+        /// <summary>
         ///     Title of the call
         ///     Required
         ///     Example: Call from 1234567890 to 0987654321
@@ -90,5 +90,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public AIInsights insights { get; set; }
-      }
-  }
+    }
+}

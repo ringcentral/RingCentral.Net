@@ -1,10 +1,10 @@
 using Newtonsoft.Json;
 
 namespace RingCentral
-  {
-      public class AdaptiveCardShortInfo
-      {
-          /// <summary>
+{
+    public class AdaptiveCardShortInfo
+    {
+        /// <summary>
         ///     Internal identifier of an adaptive card
         /// </summary>
         public string id { get; set; }
@@ -45,5 +45,5 @@ namespace RingCentral
         ///     Chat IDs where an adaptive card is posted or shared.
         /// </summary>
         public string[] chatIds { get; set; }
-      }
-  }
+    }
+}

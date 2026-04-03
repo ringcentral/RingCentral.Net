@@ -1,10 +1,10 @@
 namespace RingCentral
-  {
-      public class AdaptiveCardRequest
-      {
-          /// <summary>
+{
+    public class AdaptiveCardRequest
+    {
+        /// <summary>
         ///     Type of attachment. This field is mandatory and filled on server side -
-            ///     will be ignored if set in request body
+        ///     will be ignored if set in request body
         ///     Required
         ///     Enum: AdaptiveCard
         /// </summary>
@@ -12,7 +12,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Version. This field is mandatory and filled on server side -
-            ///     will be ignored if set in request body
+        ///     will be ignored if set in request body
         ///     Required
         ///     Default: 1.3
         /// </summary>
@@ -62,5 +62,5 @@ namespace RingCentral
         ///     Enum: top, center, bottom
         /// </summary>
         public string verticalContentAlignment { get; set; }
-      }
-  }
+    }
+}

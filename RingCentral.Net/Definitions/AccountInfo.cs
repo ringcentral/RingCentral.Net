@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class AccountInfo
-      {
-          /// <summary>
+{
+    public class AccountInfo
+    {
+        /// <summary>
         ///     Internal identifier of RingCentral account
         ///     Required
         ///     Example: 8000012345
@@ -11,7 +11,7 @@ namespace RingCentral
 
         /// <summary>
         ///     External account ID. Used as a primary key to link accounts between
-            ///     RingCentral and partner systems.
+        ///     RingCentral and partner systems.
         ///     Example: acme-us-12345
         /// </summary>
         public string externalAccountId { get; set; }
@@ -53,5 +53,5 @@ namespace RingCentral
         ///     Example: 0061800000DwZzJAAV
         /// </summary>
         public string opportunityId { get; set; }
-      }
-  }
+    }
+}

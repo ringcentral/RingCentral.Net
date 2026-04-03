@@ -1,13 +1,13 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Regional data (timezone, home country, language) of an extension.
-/// The default is Company (Auto-Receptionist) settings
-/// 
-/// </summary>
-      public class ExtensionRegionalSettingRequest
-      {
-          /// <summary>
+    /// Regional data (timezone, home country, language) of an extension.
+    /// The default is Company (Auto-Receptionist) settings
+    /// 
+    /// </summary>
+    public class ExtensionRegionalSettingRequest
+    {
+        /// <summary>
         /// </summary>
         public ExtensionCountryInfoRequest homeCountry { get; set; }
 
@@ -37,5 +37,5 @@ namespace RingCentral
         ///     Enum: 12h, 24h
         /// </summary>
         public string timeFormat { get; set; }
-      }
-  }
+    }
+}

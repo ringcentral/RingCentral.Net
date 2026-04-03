@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class ListCompanyAnsweringRuleInfo
-      {
-          /// <summary>
+{
+    public class ListCompanyAnsweringRuleInfo
+    {
+        /// <summary>
         ///     Internal identifier of an answering rule
         /// </summary>
         public string id { get; set; }
@@ -39,5 +39,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CompanyAnsweringRuleExtensionInfo extension { get; set; }
-      }
-  }
+    }
+}

@@ -1,13 +1,13 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Queue settings applied for department (call queue) extension type,
-/// with the 'AgentQueue' value specified as a call handling action
-/// 
-/// </summary>
-      public class QueueInfo
-      {
-          /// <summary>
+    /// Queue settings applied for department (call queue) extension type,
+    /// with the 'AgentQueue' value specified as a call handling action
+    /// 
+    /// </summary>
+    public class QueueInfo
+    {
+        /// <summary>
         ///     Specifies how calls are transferred to group members
         ///     Enum: Rotating, Simultaneous, FixedOrder
         /// </summary>
@@ -20,9 +20,9 @@ namespace RingCentral
 
         /// <summary>
         ///     Specifies the type of action to be taken if: members are available
-            ///     but no one answers, or all members are busy/unavailable. This option is
-            ///     available for Business hours only. For simultaneous transfer mode only
-            ///     'WaitPrimaryMembers' and 'WaitPrimaryAndOverflowMembers' are supported
+        ///     but no one answers, or all members are busy/unavailable. This option is
+        ///     available for Business hours only. For simultaneous transfer mode only
+        ///     'WaitPrimaryMembers' and 'WaitPrimaryAndOverflowMembers' are supported
         ///     Enum: WaitPrimaryMembers, WaitPrimaryAndOverflowMembers, Voicemail, TransferToExtension, UnconditionalForwarding
         /// </summary>
         public string noAnswerAction { get; set; }
@@ -46,9 +46,9 @@ namespace RingCentral
 
         /// <summary>
         ///     Specifies the type of action to be taken after the hold time
-            ///     (waiting for an available call queue member) expires. If 'TransferToExtension'
-            ///     option is selected, the extension specified in `transfer` field is used.
-            ///     The default value is `Voicemail`
+        ///     (waiting for an available call queue member) expires. If 'TransferToExtension'
+        ///     option is selected, the extension specified in `transfer` field is used.
+        ///     The default value is `Voicemail`
         ///     Default: Voicemail
         ///     Enum: TransferToExtension, UnconditionalForwarding, Voicemail
         /// </summary>
@@ -62,7 +62,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Minimum post-call wrap up time in seconds before agent status
-            ///     is automatically set; the value range is from 0 to 300 sec.
+        ///     is automatically set; the value range is from 0 to 300 sec.
         ///     Maximum: 300
         ///     Format: int32
         ///     Default: 15
@@ -91,5 +91,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public UnconditionalForwardingInfo[] unconditionalForwarding { get; set; }
-      }
-  }
+    }
+}

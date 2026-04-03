@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class CommStateResource
-      {
-          /// <summary>
+{
+    public class CommStateResource
+    {
+        /// <summary>
         ///     Id/Type of a state the rule is based on
         ///     Required
         ///     Enum: after-hours, work-hours, dnd, forward-all-calls, agent, busy
@@ -26,5 +26,5 @@ namespace RingCentral
         ///     Required
         /// </summary>
         public object[] conditions { get; set; }
-      }
-  }
+    }
+}

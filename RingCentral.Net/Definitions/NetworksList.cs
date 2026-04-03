@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class NetworksList
-      {
-          /// <summary>
+{
+    public class NetworksList
+    {
+        /// <summary>
         ///     Link to a networks resource
         ///     Format: uri
         /// </summary>
@@ -19,5 +19,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-      }
-  }
+    }
+}

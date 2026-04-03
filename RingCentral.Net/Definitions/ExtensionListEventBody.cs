@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Notification payload body
-/// </summary>
-      public class ExtensionListEventBody
-      {
-          /// <summary>
+    /// Notification payload body
+    /// </summary>
+    public class ExtensionListEventBody
+    {
+        /// <summary>
         ///     Internal identifier of an extension
         /// </summary>
         public string extensionId { get; set; }
@@ -20,5 +20,5 @@ namespace RingCentral
         ///     Internal identifier of a subscription owner extension
         /// </summary>
         public string ownerId { get; set; }
-      }
-  }
+    }
+}

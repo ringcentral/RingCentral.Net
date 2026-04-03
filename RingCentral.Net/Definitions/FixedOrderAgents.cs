@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class FixedOrderAgents
-      {
-          /// <summary>
+{
+    public class FixedOrderAgents
+    {
+        /// <summary>
         /// </summary>
         public FixedOrderAgentsExtensionInfo extension { get; set; }
 
@@ -11,5 +11,5 @@ namespace RingCentral
         ///     Format: int32
         /// </summary>
         public long? index { get; set; }
-      }
-  }
+    }
+}

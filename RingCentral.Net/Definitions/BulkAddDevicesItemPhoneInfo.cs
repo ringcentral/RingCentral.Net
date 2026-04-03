@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class BulkAddDevicesItemPhoneInfo
-      {
-          /// <summary>
+{
+    public class BulkAddDevicesItemPhoneInfo
+    {
+        /// <summary>
         ///     Indicates if a number is toll or toll-free
         ///     Example: Toll
         ///     Enum: Toll, TollFree
@@ -36,5 +36,5 @@ namespace RingCentral
         ///     Phone number identifier
         /// </summary>
         public string phoneNumberId { get; set; }
-      }
-  }
+    }
+}

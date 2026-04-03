@@ -7,32 +7,32 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallQueues
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Extension.Index parent;
-public Index(Restapi.Account.Extension.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Extension.Index parent;
+        public Index(Restapi.Account.Extension.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/call-queues";
         }
         /// <summary>
         /// Updates a list of call queues where the user is an agent. This
-/// is a full update request, which means that if any call queue where the user is
-/// an agent is not mentioned in request, then the user is automatically removed
-/// from this queue.
-/// 
+        /// is a full update request, which means that if any call queue where the user is
+        /// an agent is not mentioned in request, then the user is automatically removed
+        /// from this queue.
+        /// 
         /// HTTP Method: put
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-queues
         /// Rate Limit Group: Medium
         /// App Permission: EditAccounts
         /// User Permission: EditCallQueuePresence
         /// </summary>
-  public async Task<RingCentral.UserCallQueues> Put(RingCentral.UserCallQueues userCallQueues, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Put<RingCentral.UserCallQueues>(this.Path(), userCallQueues, null, restRequestConfig);
-  }
+        public async Task<RingCentral.UserCallQueues> Put(RingCentral.UserCallQueues userCallQueues, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Put<RingCentral.UserCallQueues>(this.Path(), userCallQueues, null, restRequestConfig);
+        }
     }
 }
 

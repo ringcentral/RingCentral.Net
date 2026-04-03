@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Attachment is a file to be uploaded
-/// </summary>
-      public class Attachment
-      {
-          /// <summary>
+    /// Attachment is a file to be uploaded
+    /// </summary>
+    public class Attachment
+    {
+        /// <summary>
         ///     Filename with extension, such as "image.png"
         /// </summary>
         public string filename { get; set; }
@@ -20,5 +20,5 @@ namespace RingCentral
         ///     Content type of the file, such as "image/png"
         /// </summary>
         public string contentType { get; set; }
-      }
-  }
+    }
+}

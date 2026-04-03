@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Webinar.Registration.V1
     public partial class Index
     {
         public RestClient rc;
-public Webinar.Registration.Index parent;
-public Index(Webinar.Registration.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Webinar.Registration.Index parent;
+        public Index(Webinar.Registration.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path(false)}/v1";

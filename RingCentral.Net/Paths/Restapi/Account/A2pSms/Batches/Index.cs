@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.A2pSms.Batches
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.A2pSms.Index parent;
-public string batchId;
-public Index(Restapi.Account.A2pSms.Index parent, string batchId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.batchId = batchId;
-}
+        public Restapi.Account.A2pSms.Index parent;
+        public string batchId;
+        public Index(Restapi.Account.A2pSms.Index parent, string batchId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.batchId = batchId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && batchId != null)
@@ -25,32 +25,32 @@ this.batchId = batchId;
         }
         /// <summary>
         /// Returns the list of A2P batches sent from the current account.
-/// The list can be filtered by message batch ID and/or from phone number.
-/// 
+        /// The list can be filtered by message batch ID and/or from phone number.
+        /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/a2p-sms/batches
         /// Rate Limit Group: Light
         /// App Permission: A2PSMS
         /// </summary>
-  public async Task<RingCentral.BatchListResponse> List(RingCentral.ListA2PBatchesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.BatchListResponse>(this.Path(false), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.BatchListResponse> List(RingCentral.ListA2PBatchesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.BatchListResponse>(this.Path(false), queryParams, restRequestConfig);
+        }
 
         /// <summary>
         /// Allows to send high volume of A2P (Application-to-Person) SMS messages
-/// (in message batches). Only phone number with the `A2PSmsSender` feature can
-/// be used as a sender.
-/// 
+        /// (in message batches). Only phone number with the `A2PSmsSender` feature can
+        /// be used as a sender.
+        /// 
         /// HTTP Method: post
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/a2p-sms/batches
         /// Rate Limit Group: Light
         /// App Permission: A2PSMS
         /// </summary>
-  public async Task<RingCentral.MessageBatchResponse> Post(RingCentral.MessageBatchCreateRequest messageBatchCreateRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<RingCentral.MessageBatchResponse>(this.Path(false), messageBatchCreateRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.MessageBatchResponse> Post(RingCentral.MessageBatchCreateRequest messageBatchCreateRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.MessageBatchResponse>(this.Path(false), messageBatchCreateRequest, null, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns information on a message batch.
@@ -59,13 +59,14 @@ return await rc.Post<RingCentral.MessageBatchResponse>(this.Path(false), message
         /// Rate Limit Group: Light
         /// App Permission: A2PSMS
         /// </summary>
-  public async Task<RingCentral.MessageBatchResponse> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (batchId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(batchId));
-    }return await rc.Get<RingCentral.MessageBatchResponse>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.MessageBatchResponse> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (batchId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(batchId));
+            }
+            return await rc.Get<RingCentral.MessageBatchResponse>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

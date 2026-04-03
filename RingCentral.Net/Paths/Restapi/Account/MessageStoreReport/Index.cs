@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreReport
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Index parent;
-public string taskId;
-public Index(Restapi.Account.Index parent, string taskId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.taskId = taskId;
-}
+        public Restapi.Account.Index parent;
+        public string taskId;
+        public Index(Restapi.Account.Index parent, string taskId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.taskId = taskId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && taskId != null)
@@ -25,18 +25,18 @@ this.taskId = taskId;
         }
         /// <summary>
         /// Creates a task to collect all account messages within the specified
-/// time interval. Maximum number of simultaneous tasks per account is 2.
-/// 
+        /// time interval. Maximum number of simultaneous tasks per account is 2.
+        /// 
         /// HTTP Method: post
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/message-store-report
         /// Rate Limit Group: Heavy
         /// App Permission: ReadMessages
         /// User Permission: Users
         /// </summary>
-  public async Task<RingCentral.MessageStoreReport> Post(RingCentral.CreateMessageStoreReportRequest createMessageStoreReportRequest, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Post<RingCentral.MessageStoreReport>(this.Path(false), createMessageStoreReportRequest, null, restRequestConfig);
-  }
+        public async Task<RingCentral.MessageStoreReport> Post(RingCentral.CreateMessageStoreReportRequest createMessageStoreReportRequest, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Post<RingCentral.MessageStoreReport>(this.Path(false), createMessageStoreReportRequest, null, restRequestConfig);
+        }
 
         /// <summary>
         /// Returns the current status of a task on report creation.
@@ -46,13 +46,14 @@ return await rc.Post<RingCentral.MessageStoreReport>(this.Path(false), createMes
         /// App Permission: ReadMessages
         /// User Permission: Users
         /// </summary>
-  public async Task<RingCentral.MessageStoreReport> Get(RestRequestConfig restRequestConfig = null)
-  {
-if (taskId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(taskId));
-    }return await rc.Get<RingCentral.MessageStoreReport>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.MessageStoreReport> Get(RestRequestConfig restRequestConfig = null)
+        {
+            if (taskId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(taskId));
+            }
+            return await rc.Get<RingCentral.MessageStoreReport>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

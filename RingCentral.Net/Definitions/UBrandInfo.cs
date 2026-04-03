@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Account sub-brand information
-/// </summary>
-      public class UBrandInfo
-      {
-          /// <summary>
+    /// Account sub-brand information
+    /// </summary>
+    public class UBrandInfo
+    {
+        /// <summary>
         ///     Sub-brand unique ID
         ///     Example: 111.222
         /// </summary>
@@ -16,5 +16,5 @@ namespace RingCentral
         ///     Example: Sub-brand name
         /// </summary>
         public string name { get; set; }
-      }
-  }
+    }
+}

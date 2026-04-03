@@ -1,13 +1,13 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Please note that legacy 'Department' extension type corresponds to
-/// 'Call Queue' extensions in modern RingCentral product terminology
-/// 
-/// </summary>
-      public class DepartmentMemberList
-      {
-          /// <summary>
+    /// Please note that legacy 'Department' extension type corresponds to
+    /// 'Call Queue' extensions in modern RingCentral product terminology
+    /// 
+    /// </summary>
+    public class DepartmentMemberList
+    {
+        /// <summary>
         ///     Canonical URL of the resource
         ///     Format: uri
         /// </summary>
@@ -25,5 +25,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-      }
-  }
+    }
+}

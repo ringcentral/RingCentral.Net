@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class MobileDeliveryMode
-      {
-          /// <summary>
+{
+    public class MobileDeliveryMode
+    {
+        /// <summary>
         ///     The transport type for this subscription
         ///     Required
         ///     Enum: RC/APNS, RC/GCM
@@ -28,5 +28,5 @@ namespace RingCentral
         ///     Enum: false
         /// </summary>
         public bool? encryption { get; set; }
-      }
-  }
+    }
+}

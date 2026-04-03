@@ -7,14 +7,14 @@ namespace RingCentral.Paths.Restapi.Account.Extension.MessageStore.Content
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Extension.MessageStore.Index parent;
-public string attachmentId;
-public Index(Restapi.Account.Extension.MessageStore.Index parent, string attachmentId = null)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-this.attachmentId = attachmentId;
-}
+        public Restapi.Account.Extension.MessageStore.Index parent;
+        public string attachmentId;
+        public Index(Restapi.Account.Extension.MessageStore.Index parent, string attachmentId = null)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+            this.attachmentId = attachmentId;
+        }
         public string Path(bool withParameter = true)
         {
             if (withParameter && attachmentId != null)
@@ -25,23 +25,24 @@ this.attachmentId = attachmentId;
         }
         /// <summary>
         /// Returns media content of a message attachment.
-/// The content is typically an audio file (`audio/mpeg` or `audio/wav`) for voicemails,
-/// TIFF or PDF for faxes and image/audio/video for MMS.
-/// 
-/// **This API must be called via media API entry point, e.g. https://media.ringcentral.com**
-/// 
+        /// The content is typically an audio file (`audio/mpeg` or `audio/wav`) for voicemails,
+        /// TIFF or PDF for faxes and image/audio/video for MMS.
+        /// 
+        /// **This API must be called via media API entry point, e.g. https://media.ringcentral.com**
+        /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/message-store/{messageId}/content/{attachmentId}
         /// Rate Limit Group: Medium
         /// App Permission: ReadMessages
         /// </summary>
-  public async Task<byte[]> Get(RingCentral.ReadMessageContentParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-if (attachmentId == null)
-    {
-        throw new System.ArgumentException("Parameter cannot be null", nameof(attachmentId));
-    }return await rc.Get<byte[]>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<byte[]> Get(RingCentral.ReadMessageContentParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            if (attachmentId == null)
+            {
+                throw new System.ArgumentException("Parameter cannot be null", nameof(attachmentId));
+            }
+            return await rc.Get<byte[]>(this.Path(), queryParams, restRequestConfig);
+        }
     }
 }
 

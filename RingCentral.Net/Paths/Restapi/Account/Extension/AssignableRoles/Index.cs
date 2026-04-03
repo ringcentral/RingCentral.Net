@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.AssignableRoles
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Extension.Index parent;
-public Index(Restapi.Account.Extension.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Extension.Index parent;
+        public Index(Restapi.Account.Extension.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/assignable-roles";
@@ -24,10 +24,10 @@ this.rc = parent.rc;
         /// Rate Limit Group: Medium
         /// App Permission: RoleManagement
         /// </summary>
-  public async Task<RingCentral.RolesCollectionResource> Get(RingCentral.ListOfAvailableForAssigningRolesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.RolesCollectionResource>(this.Path(), queryParams, restRequestConfig);
-  }
+        public async Task<RingCentral.RolesCollectionResource> Get(RingCentral.ListOfAvailableForAssigningRolesParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.RolesCollectionResource>(this.Path(), queryParams, restRequestConfig);
+        }
     }
 }
 

@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Call length data for the specified grouping
-/// </summary>
-      public class CallsTimers
-      {
-          /// <summary>
+    /// Call length data for the specified grouping
+    /// </summary>
+    public class CallsTimers
+    {
+        /// <summary>
         /// </summary>
         public AllCalls allCalls { get; set; }
 
@@ -48,5 +48,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CallsByQueueHours callsByQueueHours { get; set; }
-      }
-  }
+    }
+}

@@ -1,11 +1,11 @@
 namespace RingCentral
-  {
+{
     /// <summary>
-/// Task information
-/// </summary>
-      public class TaskRecurrenceInfo
-      {
-          /// <summary>
+    /// Task information
+    /// </summary>
+    public class TaskRecurrenceInfo
+    {
+        /// <summary>
         ///     Recurrence settings of a task. None for non-periodic tasks
         ///     Default: None
         ///     Enum: None, Daily, Weekdays, Weekly, Monthly, Yearly
@@ -29,9 +29,9 @@ namespace RingCentral
 
         /// <summary>
         ///     End date of a periodic task in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
-            ///     format, UTC time zone
+        ///     format, UTC time zone
         ///     Format: date-time
         /// </summary>
         public string endingOn { get; set; }
-      }
-  }
+    }
+}

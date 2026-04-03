@@ -7,12 +7,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Greeting.HoldMusic
     public partial class Index
     {
         public RestClient rc;
-public Restapi.Account.Extension.Greeting.Index parent;
-public Index(Restapi.Account.Extension.Greeting.Index parent)
-      {
-this.parent = parent;
-this.rc = parent.rc;
-}
+        public Restapi.Account.Extension.Greeting.Index parent;
+        public Index(Restapi.Account.Extension.Greeting.Index parent)
+        {
+            this.parent = parent;
+            this.rc = parent.rc;
+        }
         public string Path(bool withParameter = false)
         {
             return $"{parent.Path()}/hold-music";
@@ -25,10 +25,10 @@ this.rc = parent.rc;
         /// App Permission: ReadAccounts
         /// User Permission: ReadUserInfo
         /// </summary>
-  public async Task<RingCentral.CustomUserGreetingInfo> Get(RestRequestConfig restRequestConfig = null)
-  {
-return await rc.Get<RingCentral.CustomUserGreetingInfo>(this.Path(), null, restRequestConfig);
-  }
+        public async Task<RingCentral.CustomUserGreetingInfo> Get(RestRequestConfig restRequestConfig = null)
+        {
+            return await rc.Get<RingCentral.CustomUserGreetingInfo>(this.Path(), null, restRequestConfig);
+        }
     }
 }
 

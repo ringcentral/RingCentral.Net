@@ -1,9 +1,9 @@
 namespace RingCentral
-  {
-      public class DelegatorsListResult
-      {
-          /// <summary>
+{
+    public class DelegatorsListResult
+    {
+        /// <summary>
         /// </summary>
         public Delegate[] items { get; set; }
-      }
-  }
+    }
+}

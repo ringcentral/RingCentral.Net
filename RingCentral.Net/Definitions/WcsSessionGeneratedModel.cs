@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class WcsSessionGeneratedModel
-      {
-          /// <summary>
+{
+    public class WcsSessionGeneratedModel
+    {
+        /// <summary>
         ///     The RCV bridge id
         ///     Example: 839874770
         /// </summary>
@@ -33,5 +33,5 @@ namespace RingCentral
         ///     Calculated attribute indicating if there are any unsent/deferred invites to session participants
         /// </summary>
         public bool? hasUnsentInvites { get; set; }
-      }
-  }
+    }
+}

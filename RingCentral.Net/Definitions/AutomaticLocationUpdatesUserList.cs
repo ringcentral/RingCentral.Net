@@ -1,8 +1,8 @@
 namespace RingCentral
-  {
-      public class AutomaticLocationUpdatesUserList
-      {
-          /// <summary>
+{
+    public class AutomaticLocationUpdatesUserList
+    {
+        /// <summary>
         ///     Link to the users list resource
         ///     Format: uri
         /// </summary>
@@ -19,5 +19,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EnumeratedPagingModel paging { get; set; }
-      }
-  }
+    }
+}
