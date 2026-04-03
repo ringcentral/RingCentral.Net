@@ -47,9 +47,10 @@ public class MultipartTest
     public async void UpdateUserGreeting()
     {
         var rc = await ReusableRestClient.GetInstance();
-        var extension = rc.Restapi().Account().Extension();
-        var userAnsweringRuleList = await extension.AnsweringRule().List();
-        var answeringRule = userAnsweringRuleList.records.Last();
+        var rules = await rc.Restapi().V2().Accounts().Extensions().CommHandling().Voice().StateRules().List();
+        // var extension = rc.Restapi().Account().Extension();
+        // var userAnsweringRuleList = await extension.AnsweringRule().List();
+        // var answeringRule = userAnsweringRuleList.records.Last();
         // comment out because we don't want to update user greetings
 //                var customGreetingInfo = await extension.Greeting().Post(new CreateCustomUserGreetingRequest
 //                {

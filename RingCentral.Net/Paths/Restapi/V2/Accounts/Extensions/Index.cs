@@ -8,13 +8,19 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.Extensions
     {
         public RestClient rc;
 public Restapi.V2.Accounts.Index parent;
-public Index(Restapi.V2.Accounts.Index parent)
+public string extensionId;
+public Index(Restapi.V2.Accounts.Index parent, string extensionId = "~")
       {
 this.parent = parent;
 this.rc = parent.rc;
+this.extensionId = extensionId;
 }
-        public string Path(bool withParameter = false)
+        public string Path(bool withParameter = true)
         {
+            if (withParameter && extensionId != null)
+            {
+                return $"{parent.Path()}/extensions/{extensionId}";
+            }
             return $"{parent.Path()}/extensions";
         }
         /// <summary>
@@ -30,7 +36,7 @@ this.rc = parent.rc;
         /// </summary>
   public async Task<RingCentral.BulkDeleteUsersResponse> Delete(RingCentral.BulkDeleteUsersRequest bulkDeleteUsersRequest, RestRequestConfig restRequestConfig = null)
   {
-return await rc.Delete<RingCentral.BulkDeleteUsersResponse>(this.Path(), bulkDeleteUsersRequest, null, restRequestConfig);
+return await rc.Delete<RingCentral.BulkDeleteUsersResponse>(this.Path(false), bulkDeleteUsersRequest, null, restRequestConfig);
   }
     }
 }
@@ -39,9 +45,9 @@ namespace RingCentral.Paths.Restapi.V2.Accounts
 {
     public partial class Index
     {
-        public Restapi.V2.Accounts.Extensions.Index Extensions()
+        public Restapi.V2.Accounts.Extensions.Index Extensions(string extensionId = "~")
         {
-            return new Restapi.V2.Accounts.Extensions.Index(this);
+            return new Restapi.V2.Accounts.Extensions.Index(this, extensionId);
         }
     }
 }

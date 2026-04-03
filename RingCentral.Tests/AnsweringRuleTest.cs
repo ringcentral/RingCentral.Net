@@ -10,14 +10,14 @@ public class AnsweringRuleTest
     {
         var rc = await ReusableRestClient.GetInstance();
 
-        var answeringRules = await rc.Restapi().Account().Extension().AnsweringRule().List();
-        var answeringRule = answeringRules.records[0];
-        Assert.NotNull(answeringRule);
+        var states = await rc.Restapi().V2().Accounts().Extensions().CommHandling().States().List();
+        var stateRule = states.records[0];
+        Assert.NotNull(stateRule);
 
-        await rc.Restapi().Account().Extension().AnsweringRule(answeringRule.id).Put(
-            new UpdateAnsweringRuleRequest
+        await rc.Restapi().V2().Accounts().Extensions().CommHandling().States(stateRule.id).Patch(
+            new CommStateUpdateRequest
             {
-                enabled = answeringRule.enabled
+                enabled = stateRule.enabled
             });
     }
 }
