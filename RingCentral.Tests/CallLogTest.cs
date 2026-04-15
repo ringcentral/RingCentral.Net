@@ -45,13 +45,13 @@ public class CallLogTest
         // });
         // Assert.Single(callLogResponse.records);
 
-        var fromNumber = callLogResponse.records[0].from.phoneNumber;
+        var firstRecord = callLogResponse.records[0];
         callLogResponse = await rc.Restapi().Account().Extension().CallLog().List(new ReadUserCallLogParameters
         {
             perPage = 1,
             dateFrom = DateTime.UtcNow.AddMonths(-6).ToString("o"),
             dateTo = DateTime.UtcNow.AddDays(-3).ToString("o"),
-            phoneNumber = fromNumber.TrimStart('+') // 123456789
+            telephonySessionId = firstRecord.telephonySessionId,
         });
         Assert.Single(callLogResponse.records);
     }

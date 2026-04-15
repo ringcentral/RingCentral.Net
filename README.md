@@ -203,6 +203,18 @@ and benefits of the migration, I decided to keep using Newtonsoft.Json for now.
 Ref:
 https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/migrate-from-newtonsoft
 
+## Run tests
+
+```
+dotnet test RingCentral.Net.sln
+```
+
+### Run a specific test
+
+```
+dotnet test --filter "FullyQualifiedName=RingCentral.Tests.CallLogTest.FilterByPhoneNumber"
+```
+
 ## Code coverage
 
 Install the following globally if you haven't done so:
