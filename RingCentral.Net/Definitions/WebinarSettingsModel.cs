@@ -30,12 +30,6 @@ namespace RingCentral
         public bool? recordingDownloadEnabled { get; set; }
 
         /// <summary>
-        ///     DEPRECATED AND REPLACED BY 'pastSessionDeletionEnabled' setting.
-        ///     Indicates if recording can be deleted (this setting is read-only at webinar/session level)
-        /// </summary>
-        public bool? recordingDeletionEnabled { get; set; }
-
-        /// <summary>
         ///     Indicates if deletion of past session along with its artifacts is enabled for host.
         ///     This setting is read-only at webinar level
         /// </summary>

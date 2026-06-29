@@ -43,12 +43,5 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public EmergencyLocationInfo emergencyLocation { get; set; }
-
-        /// <summary>
-        ///     Emergency response location (address) internal identifier. 
-        ///     Only one of a pair `emergencyAddress` or `emergencyLocationId`
-        ///     can be specified, otherwise the error is returned
-        /// </summary>
-        public string emergencyLocationId { get; set; }
     }
 }

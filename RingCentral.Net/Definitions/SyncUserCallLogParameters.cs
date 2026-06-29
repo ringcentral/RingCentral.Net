@@ -54,14 +54,6 @@ namespace RingCentral
         public bool? showDeleted { get; set; }
 
         /// <summary>
-        ///     Deprecated, replaced with `recordingType` filter, still supported for compatibility reasons.
-        ///     Indicates if only recorded calls should be returned.
-        ///     
-        ///     If both `withRecording` and `recordingType` parameters are specified, then `withRecording` is ignored
-        /// </summary>
-        public bool? withRecording { get; set; }
-
-        /// <summary>
         ///     Indicates that call records with recordings of particular type should be returned.
         ///     If omitted, then calls with and without recordings are returned
         ///     Enum: Automatic, OnDemand, All

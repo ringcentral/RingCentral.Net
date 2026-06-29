@@ -11,11 +11,6 @@ namespace RingCentral
         public bool? notifyMySoftPhones { get; set; }
 
         /// <summary>
-        ///     Deprecated parameter. Specifies if the administrator's softphone is notified before forwarding the incoming call to desk phones and forwarding numbers. The default value is `false`
-        /// </summary>
-        public bool? notifyAdminSoftPhones { get; set; }
-
-        /// <summary>
         ///     Number of rings before forwarding starts
         ///     Format: int32
         /// </summary>
@@ -42,10 +37,5 @@ namespace RingCentral
         ///     Specifies if desktop and mobile applications of the user are notified before (true) or after (false) forwarding the incoming call to desk phones and forwarding numbers. Applicable only if `notifyMySoftPhones` parameter is set to `true`
         /// </summary>
         public bool? softPhonesPositionTop { get; set; }
-
-        /// <summary>
-        ///     Deprecated parameter. Specifies if mobile timeout is activated for the rule
-        /// </summary>
-        public bool? mobileTimeout { get; set; }
     }
 }

@@ -70,21 +70,6 @@ namespace RingCentral
         public string[] rights { get; set; }
 
         /// <summary>
-        ///     During meeting AI team analyze code and after meeting finished generates text summary about this meeting
-        /// </summary>
-        public string longSummary { get; set; }
-
-        /// <summary>
-        ///     During meeting AI team analyze code and after meeting finished generates text summary about this meeting
-        /// </summary>
-        public string shortSummary { get; set; }
-
-        /// <summary>
-        ///     During meeting AI team analyze code and after meeting finished generates key words used in meeting
-        /// </summary>
-        public string[] keywords { get; set; }
-
-        /// <summary>
         ///     List of the participants in the meeting
         ///     Required
         /// </summary>
