@@ -97,7 +97,7 @@ public class BinaryTest
             type = new[] { "Voice" },
             view = "Detailed",
             dateFrom = DateTime.UtcNow.AddDays(-365).ToString("o"),
-            withRecording = true,
+            recordingType="All",
             perPage = 10
         };
         var callLogs = await account.CallLog().List(queryParams);
