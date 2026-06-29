@@ -154,6 +154,26 @@ namespace RingCentral
         }
 
         // bridge methods to start the call chain, like rc.Restapi().Account()
+        public Paths.WellKnown.Index WellKnown() 
+        {
+            return new Paths.WellKnown.Index(this);
+        }
+
+        public Paths.Ai.Index Ai()
+        {
+            return new Paths.Ai.Index(this);
+        }
+
+        public Paths.Analytics.Index Analytics()
+        {
+            return new Paths.Analytics.Index(this);
+        }
+
+        public Paths.Rcvideo.Index Rcvideo()
+        {
+            return new Paths.Rcvideo.Index(this);
+        }
+
         public Index Restapi(string apiVersion = "v1.0")
         {
             return new Index(this, apiVersion);
@@ -164,24 +184,9 @@ namespace RingCentral
             return new Paths.Scim.Index(this, version);
         }
 
-        public Paths.Analytics.Index Analytics()
-        {
-            return new Paths.Analytics.Index(this);
-        }
-
         public Paths.TeamMessaging.Index TeamMessaging()
         {
             return new Paths.TeamMessaging.Index(this);
-        }
-
-        public Paths.Ai.Index Ai()
-        {
-            return new Paths.Ai.Index(this);
-        }
-
-        public Paths.Rcvideo.Index Rcvideo()
-        {
-            return new Paths.Rcvideo.Index(this);
         }
 
         public Paths.Webinar.Index Webinar()
