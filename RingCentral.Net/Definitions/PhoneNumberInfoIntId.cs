@@ -30,9 +30,9 @@ namespace RingCentral
         public string location { get; set; }
 
         /// <summary>
-        ///     Payment type. 'External' is returned for forwarded numbers 
+        ///     Payment type. 'External' is returned for forwarded numbers
         ///     which are not terminated in the RingCentral phone system
-        ///     Enum: External, ExternalNumberProvider, Local
+        ///     Enum: External, TollFree, Local, BusinessMobileNumberProvider, ExternalNumberProvider, ExternalNumberProviderTollFree, Mobile
         /// </summary>
         public string paymentType { get; set; }
 

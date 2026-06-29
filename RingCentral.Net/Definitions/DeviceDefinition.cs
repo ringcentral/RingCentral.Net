@@ -10,11 +10,6 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Required
-        /// </summary>
-        public DeviceDefinitionEmergency emergency { get; set; }
-
-        /// <summary>
         ///     Assign a specific phone number
         ///     Required
         /// </summary>

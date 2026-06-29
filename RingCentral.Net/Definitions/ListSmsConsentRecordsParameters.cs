@@ -23,12 +23,12 @@ namespace RingCentral
         public long? perPage { get; set; }
 
         /// <summary>
-        ///     The sender's phone number(s) used to filter records
+        ///     The internal party's phone number(s) used to filter records
         /// </summary>
         public string[] from { get; set; }
 
         /// <summary>
-        ///     The recipient's phone number(s) used to filter records
+        ///     The external party's phone number(s) used to filter records
         /// </summary>
         public string[] to { get; set; }
 

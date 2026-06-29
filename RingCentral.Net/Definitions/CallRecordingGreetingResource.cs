@@ -8,10 +8,12 @@ namespace RingCentral
         public string type { get; set; }
 
         /// <summary>
-        ///     Here `Default` indicates that all greetings of that type
-        ///     (in all languages) are default. If at least one greeting (in any language)
-        ///     of the specified type is custom, then `Custom` is returned.
-        ///     Enum: Default, Custom
+        ///     Greeting prompt mode for the given `type`. When at least one custom greeting
+        ///     exists for this type (in any language), the literal value `Custom` is returned.
+        ///     Otherwise the localized display name of the system default prompt is returned
+        ///     (for example `Default` in English or `Par défaut` in French), based on the
+        ///     request locale.
+        ///     Example: Default
         /// </summary>
         public string mode { get; set; }
     }

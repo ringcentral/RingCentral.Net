@@ -73,16 +73,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public CostCenterInfo costCenter { get; set; }
-
-        /// <summary>
-        /// </summary>
         public CustomFieldInfo[] customFields { get; set; }
-
-        /// <summary>
-        ///     Hides extension from showing in company directory. Supported for extensions of User type only
-        /// </summary>
-        public bool? hidden { get; set; }
 
         /// <summary>
         /// </summary>

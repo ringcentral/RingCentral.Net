@@ -73,13 +73,13 @@ namespace RingCentral.Paths.Restapi.Account.Extension.ForwardingNumber
         /// App Permission: ReadAccounts
         /// User Permission: ReadUserForwardingFlipNumbers
         /// </summary>
-        public async Task<RingCentral.ForwardingNumberResource> Get(RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.ForwardingNumberInfo> Get(RestRequestConfig restRequestConfig = null)
         {
             if (forwardingNumberId == null)
             {
                 throw new System.ArgumentException("Parameter cannot be null", nameof(forwardingNumberId));
             }
-            return await rc.Get<RingCentral.ForwardingNumberResource>(this.Path(), null, restRequestConfig);
+            return await rc.Get<RingCentral.ForwardingNumberInfo>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>

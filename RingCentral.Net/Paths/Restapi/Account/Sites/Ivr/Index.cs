@@ -32,7 +32,8 @@ namespace RingCentral.Paths.Restapi.Account.Sites.Ivr
         }
 
         /// <summary>
-        /// Updates IVR settings for a site specified in path.
+        /// Updates IVR settings for a site specified in path. Omitted fields are
+        /// not changed.
         /// 
         /// HTTP Method: put
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/sites/{siteId}/ivr

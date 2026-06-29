@@ -19,7 +19,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Forwarding phone number type
-        ///     Enum: Home, Mobile, Work, PhoneLine, Outage, Other, BusinessMobilePhone, ExternalCarrier
+        ///     Enum: Home, Mobile, Work, PhoneLine, Outage, Other, BusinessMobilePhone, ExtensionApps
         /// </summary>
         public string type { get; set; }
     }

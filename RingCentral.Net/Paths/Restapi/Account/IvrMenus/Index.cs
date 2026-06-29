@@ -43,9 +43,9 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         /// App Permission: EditAccounts
         /// User Permission: AutoReceptionist
         /// </summary>
-        public async Task<RingCentral.IvrMenuInfo> Post(RingCentral.IvrMenuInfo ivrMenuInfo, RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.IvrMenuInfo> Post(RingCentral.IvrMenuInfoCreate ivrMenuInfoCreate, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<RingCentral.IvrMenuInfo>(this.Path(false), ivrMenuInfo, null, restRequestConfig);
+            return await rc.Post<RingCentral.IvrMenuInfo>(this.Path(false), ivrMenuInfoCreate, null, restRequestConfig);
         }
 
         /// <summary>
@@ -66,20 +66,20 @@ namespace RingCentral.Paths.Restapi.Account.IvrMenus
         }
 
         /// <summary>
-        /// Updates a company IVR menu by ID.
+        /// Updates a company IVR menu by ID. Omitted fields are not changed.
         /// HTTP Method: put
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/ivr-menus/{ivrMenuId}
         /// Rate Limit Group: Medium
         /// App Permission: ReadAccounts
         /// User Permission: AutoReceptionist
         /// </summary>
-        public async Task<RingCentral.IvrMenuInfo> Put(RingCentral.IvrMenuInfo ivrMenuInfo, RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.IvrMenuInfo> Put(RingCentral.IvrMenuInfoUpdate ivrMenuInfoUpdate, RestRequestConfig restRequestConfig = null)
         {
             if (ivrMenuId == null)
             {
                 throw new System.ArgumentException("Parameter cannot be null", nameof(ivrMenuId));
             }
-            return await rc.Put<RingCentral.IvrMenuInfo>(this.Path(), ivrMenuInfo, null, restRequestConfig);
+            return await rc.Put<RingCentral.IvrMenuInfo>(this.Path(), ivrMenuInfoUpdate, null, restRequestConfig);
         }
     }
 }

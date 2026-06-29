@@ -44,9 +44,9 @@ namespace RingCentral.Paths.Restapi.Account.UserRole
         /// App Permission: RoleManagement
         /// User Permission: EditUserRoles
         /// </summary>
-        public async Task<string> Post(RingCentral.RoleResource roleResource, RingCentral.CreateCustomRoleParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.RoleResource> Post(RingCentral.RoleResource roleResource, RingCentral.CreateCustomRoleParameters queryParams = null, RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(this.Path(false), roleResource, queryParams, restRequestConfig);
+            return await rc.Post<RingCentral.RoleResource>(this.Path(false), roleResource, queryParams, restRequestConfig);
         }
 
         /// <summary>

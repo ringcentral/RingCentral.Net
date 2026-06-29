@@ -13,7 +13,6 @@ namespace RingCentral
 
         /// <summary>
         ///     For User extension type only. Extension user last name
-        ///     Required
         /// </summary>
         public string lastName { get; set; }
 

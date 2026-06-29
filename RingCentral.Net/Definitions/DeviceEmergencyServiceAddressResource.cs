@@ -141,5 +141,20 @@ namespace RingCentral
         ///     Internal identifier of a tax
         /// </summary>
         public string taxId { get; set; }
+
+        /// <summary>
+        ///     Apartment number (country-specific address field, e.g. Portugal)
+        /// </summary>
+        public string apartment { get; set; }
+
+        /// <summary>
+        ///     Floor number (country-specific address field, e.g. Portugal)
+        /// </summary>
+        public string floor { get; set; }
+
+        /// <summary>
+        ///     Designation (country-specific address field, e.g. Portugal)
+        /// </summary>
+        public string designation { get; set; }
     }
 }

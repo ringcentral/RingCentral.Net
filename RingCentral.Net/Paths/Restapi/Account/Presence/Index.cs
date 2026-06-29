@@ -18,11 +18,20 @@ namespace RingCentral.Paths.Restapi.Account.Presence
             return $"{parent.Path()}/presence";
         }
         /// <summary>
-        /// Returns presence status of all extensions of an account. Please
-        /// note: The presenceStatus is returned as Offline (the parameters telephonyStatus,
-        /// message, userStatus and dndStatus are not returned at all) for the following
-        /// extension types: Department, Announcement Only, Voicemail (Take Messages Only),
-        /// Fax User, Paging Only Group, Shared Lines Group, IVR Menu, Application Extension.
+        /// Returns the presence status of all extensions of an account.
+        /// 
+        /// Note: for the extension types listed below, `presenceStatus` is always returned
+        /// as `Offline`, and the `telephonyStatus`, `message`, `userStatus`, and `dndStatus`
+        /// attributes are not returned at all:
+        /// 
+        /// - Department
+        /// - Announcement Only
+        /// - Voicemail (Take Messages Only)
+        /// - Fax User
+        /// - Paging Only Group
+        /// - Shared Lines Group
+        /// - IVR Menu
+        /// - Application Extension
         /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/presence

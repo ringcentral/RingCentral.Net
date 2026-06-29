@@ -91,5 +91,13 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public UnconditionalForwardingInfo[] unconditionalForwarding { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public QueueInfoPositionInQueue positionInQueue { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public QueueInfoCallBack callBack { get; set; }
     }
 }

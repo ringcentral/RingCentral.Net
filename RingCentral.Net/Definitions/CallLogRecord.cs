@@ -83,7 +83,7 @@ namespace RingCentral
         /// <summary>
         ///     The internal action corresponding to the call operation
         ///     Required
-        ///     Enum: Accept Call, Barge In Call, Call Park, Call Return, CallOut-CallMe, Calling Card, Conference Call, E911 Update, Emergency, External Application, FindMe, FollowMe, FreeSPDL, Hunting, Incoming Fax, Monitoring, Move, Outgoing Fax, Paging, Park Location, Phone Call, Phone Login, Pickup, RC Meetings, Ring Directly, RingMe, RingOut Mobile, RingOut PC, RingOut Web, Sip Forwarding, Support, Text Relay, Transfer, Unknown, VoIP Call
+        ///     Enum: Accept Call, Barge In Call, Call Park, Call Return, CallOut-CallMe, Calling Card, Conference Call, E911 Update, Emergency, External Application, FindMe, FollowMe, FreeSPDL, Hunting, Incoming Fax, Monitoring, Move, Outgoing Fax, Paging, Park Location, Phone Call, Phone Login, Pickup, RC Meetings, Ring Directly, RingMe, RingOut Mobile, RingOut PC, RingOut Web, Sip Forwarding, Support, Text Relay, Transfer, Unknown, VoIP Call, VoiceChat Call
         /// </summary>
         public string action { get; set; }
 

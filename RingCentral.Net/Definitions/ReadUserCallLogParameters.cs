@@ -118,7 +118,7 @@ namespace RingCentral
         public long? page { get; set; }
 
         /// <summary>
-        ///     Indicates that deleted calls records should be returned
+        ///     Indicates that deleted call records should be returned
         /// </summary>
         public bool? showDeleted { get; set; }
     }

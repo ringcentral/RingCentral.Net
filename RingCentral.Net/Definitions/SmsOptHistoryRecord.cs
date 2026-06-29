@@ -1,0 +1,43 @@
+namespace RingCentral
+{
+    public class SmsOptHistoryRecord
+    {
+        /// <summary>
+        ///     Phone number in e.164 format (with '+' prefix)
+        ///     Required
+        ///     Example: +16501234567
+        /// </summary>
+        public string to { get; set; }
+
+        /// <summary>
+        ///     Consent status of a recipient's phone number:
+        ///     - `OptOut` - The number is opted out of receiving SMS.
+        ///     - `OptIn` - The number is opted in to receiving SMS (if it was previously opted out).
+        ///     Required
+        ///     Example: OptOut
+        ///     Enum: OptOut, OptIn
+        /// </summary>
+        public string optStatus { get; set; }
+
+        /// <summary>
+        ///     Phone number in e.164 format (with '+' prefix)
+        ///     Required
+        ///     Example: +16501234567
+        /// </summary>
+        public string from { get; set; }
+
+        /// <summary>
+        ///     The source of the consent record
+        ///     Required
+        ///     Enum: Recipient, Api, Upstream, Carrier
+        /// </summary>
+        public string source { get; set; }
+
+        /// <summary>
+        ///     The time when the record was last updated
+        ///     Required
+        ///     Format: date-time
+        /// </summary>
+        public string createdAt { get; set; }
+    }
+}

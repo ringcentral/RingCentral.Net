@@ -50,7 +50,12 @@ namespace RingCentral.Paths.Restapi.Account.Extension.CallLog
         }
 
         /// <summary>
-        /// Returns call log records by ID.
+        /// Returns the user's individual call log record(s) by ID(s).
+        /// [Bulk syntax](https://developers.ringcentral.com/guide/basics/batch-requests) is supported:
+        /// multiple IDs can be specified as a comma-separated list in `{callRecordId}` (up to 50 IDs).
+        /// A single ID returns HTTP 200 with `application/json`. Multiple IDs return HTTP 207 with
+        /// `multipart/mixed` (one status part, then one part per record).
+        /// 
         /// HTTP Method: get
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
         /// Rate Limit Group: Heavy

@@ -30,6 +30,11 @@ namespace RingCentral
         public string status { get; set; }
 
         /// <summary>
+        ///     Indicates if the billing is active.
+        /// </summary>
+        public bool? billingActive { get; set; }
+
+        /// <summary>
         ///     Company name
         ///     Example: Acme Inc.
         /// </summary>

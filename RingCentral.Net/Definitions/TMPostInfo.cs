@@ -13,6 +13,21 @@ namespace RingCentral
         public string groupId { get; set; }
 
         /// <summary>
+        ///     Boolean flag indicating that current post is a parent post of a thread. Populated only for parent posts
+        /// </summary>
+        public bool? isParent { get; set; }
+
+        /// <summary>
+        ///     Internal identifier of a parent post, in case post is a part of a thread
+        /// </summary>
+        public string parentPostId { get; set; }
+
+        /// <summary>
+        ///     Internal identifier of a thread, in case post is a part of a thread
+        /// </summary>
+        public string threadId { get; set; }
+
+        /// <summary>
         ///     Type of post
         ///     Enum: TextMessage, PersonJoined, PersonsAdded
         /// </summary>

@@ -30,6 +30,7 @@ namespace RingCentral.Paths.Restapi.Account.Extension.Features
         /// - `ServicePlanLimitation` -  a feature is not included in account service plan;
         /// - `AccountLimitation` - a feature is turned off for account;
         /// - `ExtensionTypeLimitation` - a feature is not applicable for extension type;
+        /// - `ExtensionSubTypeLimitation` - a feature is not applicable for extension sub-type;
         /// - `ExtensionLimitation` - a feature is not available for extension, e.g., additional license required;
         /// - `InsufficientPermissions` - required permission is not granted to the current user (not the one, who is specified in the URL, but the one who is calling this API);
         /// - `ConfigurationLimitation` - a feature is turned off for extension, e.g., by account administrator.

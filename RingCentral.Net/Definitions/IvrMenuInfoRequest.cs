@@ -1,0 +1,28 @@
+namespace RingCentral
+{
+    public class IvrMenuInfoRequest
+    {
+        /// <summary>
+        ///     First name of an IVR Menu user
+        /// </summary>
+        public string name { get; set; }
+
+        /// <summary>
+        ///     Number of an IVR Menu extension
+        /// </summary>
+        public string extensionNumber { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public IvrMenuSiteInfo site { get; set; }
+
+        /// <summary>
+        /// </summary>
+        public IvrMenuPromptInfo prompt { get; set; }
+
+        /// <summary>
+        ///     Keys handling settings
+        /// </summary>
+        public IvrMenuActionsInfo[] actions { get; set; }
+    }
+}

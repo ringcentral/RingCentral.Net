@@ -18,19 +18,6 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.Sms.Consents
             return $"{parent.Path()}/consents";
         }
         /// <summary>
-        /// Returns a list of account-level SMS consent records for opted-out and/or opted-in phone numbers.
-        /// 
-        /// HTTP Method: get
-        /// Endpoint: /restapi/v2/accounts/{accountId}/sms/consents
-        /// Rate Limit Group: Light
-        /// App Permission: SMS
-        /// </summary>
-        public async Task<RingCentral.OptRecordList> Get(RingCentral.ListSmsConsentRecordsParameters queryParams = null, RestRequestConfig restRequestConfig = null)
-        {
-            return await rc.Get<RingCentral.OptRecordList>(this.Path(), queryParams, restRequestConfig);
-        }
-
-        /// <summary>
         /// Adds or updates SMS consent records.
         /// 
         /// HTTP Method: patch

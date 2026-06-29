@@ -24,9 +24,9 @@ namespace RingCentral
         public string label { get; set; }
 
         /// <summary>
-        ///     Forwarding/call flip phone type. If specified, 'label' attribute value is ignored
+        ///     Forwarding phone number type
         ///     Default: Other
-        ///     Enum: PhoneLine, Home, Mobile, Work, Other
+        ///     Enum: Home, Mobile, Work, PhoneLine, Outage, Other, BusinessMobilePhone, ExtensionApps
         /// </summary>
         public string type { get; set; }
 

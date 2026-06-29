@@ -74,6 +74,12 @@ namespace RingCentral
         public bool? sharedVoicemails { get; set; }
 
         /// <summary>
+        ///     Specifies whether the current extension is configured as SMS Recipient
+        ///     for the call queue referenced in extension object
+        /// </summary>
+        public bool? callQueueSmsRecipient { get; set; }
+
+        /// <summary>
         ///     Specifies whether the current extension is configured as SMS Recipient for an extension
         /// </summary>
         public bool? smsRecipient { get; set; }

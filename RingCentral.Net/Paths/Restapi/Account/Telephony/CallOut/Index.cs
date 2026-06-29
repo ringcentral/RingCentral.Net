@@ -18,7 +18,11 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.CallOut
             return $"{parent.Path()}/call-out";
         }
         /// <summary>
-        /// Creates a new outbound call out session. Currently this method is supported for Softphone/Hardphone only, since device IDs for WebRTC/Mobile apps cannot be obtained.
+        /// Creates a new CallOut telephony session: an outbound call from the caller described in `from`
+        /// to the destination in `to`. The caller may be identified with `from.deviceId` or with
+        /// `from.extensionId` (internal extension / mailbox id); use one or the other, not both.
+        /// When using `from.deviceId`, only Softphone and Hardphone device instance ids are supported;
+        /// WebRTC/Mobile clients do not expose usable device ids for this API today.
         /// HTTP Method: post
         /// Endpoint: /restapi/{apiVersion}/account/{accountId}/telephony/call-out
         /// Rate Limit Group: Heavy
