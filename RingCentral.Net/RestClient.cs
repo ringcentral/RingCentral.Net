@@ -154,7 +154,7 @@ namespace RingCentral
         }
 
         // bridge methods to start the call chain, like rc.Restapi().Account()
-        public Paths.WellKnown.Index WellKnown() 
+        public Paths.WellKnown.Index WellKnown()
         {
             return new Paths.WellKnown.Index(this);
         }
