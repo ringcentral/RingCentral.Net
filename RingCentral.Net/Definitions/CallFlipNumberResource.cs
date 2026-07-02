@@ -17,7 +17,7 @@ namespace RingCentral
         /// <summary>
         ///     Flip number type
         ///     Example: PhoneLine
-        ///     Enum: PhoneLine, External
+        ///     Enum: PhoneLine, External, BusinessMobile
         /// </summary>
         public string type { get; set; }
 

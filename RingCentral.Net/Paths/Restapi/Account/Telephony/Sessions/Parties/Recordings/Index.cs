@@ -32,9 +32,9 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
         /// Rate Limit Group: Light
         /// App Permission: CallControl
         /// </summary>
-        public async Task<string> Post(RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.CallRecording> Post(RestRequestConfig restRequestConfig = null)
         {
-            return await rc.Post<string>(this.Path(false), null, null, restRequestConfig);
+            return await rc.Post<RingCentral.CallRecording>(this.Path(false), null, null, restRequestConfig);
         }
 
         /// <summary>
@@ -44,13 +44,13 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties.Recording
         /// Rate Limit Group: Light
         /// App Permission: CallControl
         /// </summary>
-        public async Task<RingCentral.CallRecording> Patch(RingCentral.CallRecordingUpdate callRecordingUpdate, RingCentral.PauseResumeCallRecordingParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.CallRecording> Patch(RingCentral.CallRecordingUpdate callRecordingUpdate, RestRequestConfig restRequestConfig = null)
         {
             if (recordingId == null)
             {
                 throw new System.ArgumentException("Parameter cannot be null", nameof(recordingId));
             }
-            return await rc.Patch<RingCentral.CallRecording>(this.Path(), callRecordingUpdate, queryParams, restRequestConfig);
+            return await rc.Patch<RingCentral.CallRecording>(this.Path(), callRecordingUpdate, null, restRequestConfig);
         }
     }
 }

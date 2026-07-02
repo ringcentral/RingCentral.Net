@@ -70,13 +70,13 @@ namespace RingCentral.Paths.Restapi.Account.MessageStoreTemplates
         /// Rate Limit Group: Medium
         /// App Permission: EditAccounts
         /// </summary>
-        public async Task<RingCentral.MessageTemplateResponse> Put(RingCentral.MessageTemplateUpdateRequest messageTemplateUpdateRequest, RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.MessageTemplateResponse> Put(RingCentral.MessageTemplateRequest messageTemplateRequest, RestRequestConfig restRequestConfig = null)
         {
             if (templateId == null)
             {
                 throw new System.ArgumentException("Parameter cannot be null", nameof(templateId));
             }
-            return await rc.Put<RingCentral.MessageTemplateResponse>(this.Path(), messageTemplateUpdateRequest, null, restRequestConfig);
+            return await rc.Put<RingCentral.MessageTemplateResponse>(this.Path(), messageTemplateRequest, null, restRequestConfig);
         }
 
         /// <summary>

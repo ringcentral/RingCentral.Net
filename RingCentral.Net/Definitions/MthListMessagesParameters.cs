@@ -34,15 +34,15 @@ namespace RingCentral
         public string[] threadIds { get; set; }
 
         /// <summary>
-        ///     Start date/time for resulting message threads or messages (depending on path resource) 
-        ///     in [RFC-3339](https://datatracker.ietf.org/doc/html/rfc3339) format including timezone. 
+        ///     Start date/time for resulting message threads or messages (depending on path resource)
+        ///     in [RFC-3339](https://datatracker.ietf.org/doc/html/rfc3339) format including timezone.
         ///     This parameter is supported if `creationTimeTo` is specified
         /// </summary>
         public string creationTimeFrom { get; set; }
 
         /// <summary>
-        ///     End date/time for resulting message threads or messages (depending on path resource) 
-        ///     in [RFC-3339](https://datatracker.ietf.org/doc/html/rfc3339) format including timezone. 
+        ///     End date/time for resulting message threads or messages (depending on path resource)
+        ///     in [RFC-3339](https://datatracker.ietf.org/doc/html/rfc3339) format including timezone.
         ///     This parameter is supported if `creationTimeFrom` is specified
         /// </summary>
         public string creationTimeTo { get; set; }

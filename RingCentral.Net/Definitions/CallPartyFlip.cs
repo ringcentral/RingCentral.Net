@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Call flip id
+        ///     Required
         /// </summary>
         public string callFlipId { get; set; }
     }

@@ -46,13 +46,13 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions.Parties
         /// Rate Limit Group: Light
         /// App Permission: CallControl
         /// </summary>
-        public async Task<string> Delete(RestRequestConfig restRequestConfig = null)
+        public async Task<string> Delete(RingCentral.DeletePartyRequest deletePartyRequest, RestRequestConfig restRequestConfig = null)
         {
             if (partyId == null)
             {
                 throw new System.ArgumentException("Parameter cannot be null", nameof(partyId));
             }
-            return await rc.Delete<string>(this.Path(), null, null, restRequestConfig);
+            return await rc.Delete<string>(this.Path(), deletePartyRequest, null, restRequestConfig);
         }
 
         /// <summary>

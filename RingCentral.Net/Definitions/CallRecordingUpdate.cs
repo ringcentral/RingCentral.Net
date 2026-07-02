@@ -4,6 +4,7 @@ namespace RingCentral
     {
         /// <summary>
         ///     Recording status
+        ///     Required
         /// </summary>
         public bool? active { get; set; }
     }

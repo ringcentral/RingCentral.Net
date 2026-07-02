@@ -30,13 +30,13 @@ namespace RingCentral.Paths.Restapi.Account.Telephony.Sessions
         /// Rate Limit Group: Light
         /// App Permission: CallControl
         /// </summary>
-        public async Task<RingCentral.CallSessionObject> Get(RingCentral.ReadCallSessionStatusParameters queryParams = null, RestRequestConfig restRequestConfig = null)
+        public async Task<RingCentral.CallSessionObject> Get(RestRequestConfig restRequestConfig = null)
         {
             if (telephonySessionId == null)
             {
                 throw new System.ArgumentException("Parameter cannot be null", nameof(telephonySessionId));
             }
-            return await rc.Get<RingCentral.CallSessionObject>(this.Path(), queryParams, restRequestConfig);
+            return await rc.Get<RingCentral.CallSessionObject>(this.Path(), null, restRequestConfig);
         }
 
         /// <summary>

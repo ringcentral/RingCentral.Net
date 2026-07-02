@@ -4742,14 +4742,14 @@ User Permission|`N/A`
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStoreTemplates(templateId).Put(messageTemplateUpdateRequest);
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).MessageStoreTemplates(templateId).Put(messageTemplateRequest);
 await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - Parameter `extensionId` is optional with default value `~`
-- `messageTemplateUpdateRequest` is of type [MessageTemplateUpdateRequest](./Definitions/MessageTemplateUpdateRequest.cs)
+- `messageTemplateRequest` is of type [MessageTemplateRequest](./Definitions/MessageTemplateRequest.cs)
 - `result` is of type [MessageTemplateResponse](./Definitions/MessageTemplateResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#SMS-Templates-updateUserMessageTemplate) in API Explorer.
@@ -5942,13 +5942,13 @@ User Permission|`N/A`
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreTemplates(templateId).Put(messageTemplateUpdateRequest);
+var result = await rc.Restapi(apiVersion).Account(accountId).MessageStoreTemplates(templateId).Put(messageTemplateRequest);
 await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `messageTemplateUpdateRequest` is of type [MessageTemplateUpdateRequest](./Definitions/MessageTemplateUpdateRequest.cs)
+- `messageTemplateRequest` is of type [MessageTemplateRequest](./Definitions/MessageTemplateRequest.cs)
 - `result` is of type [MessageTemplateResponse](./Definitions/MessageTemplateResponse.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#SMS-Templates-updateCompanyMessageTemplate) in API Explorer.
@@ -7058,13 +7058,12 @@ User Permission|`N/A`
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Get(readCallSessionStatusParameters);
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Get();
 await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `readCallSessionStatusParameters` is of type [ReadCallSessionStatusParameters](./Definitions/ReadCallSessionStatusParameters.cs)
 - `result` is of type [CallSessionObject](./Definitions/CallSessionObject.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-readCallSessionStatus) in API Explorer.
@@ -7131,12 +7130,13 @@ User Permission|`N/A`
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Delete();
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Delete(deletePartyRequest);
 await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
+- `deletePartyRequest` is of type [DeletePartyRequest](./Definitions/DeletePartyRequest.cs)
 - `result` is an empty string
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-deleteCallParty) in API Explorer.
@@ -7385,7 +7385,7 @@ await rc.Revoke();
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
-- `result` is an empty string
+- `result` is of type [CallRecording](./Definitions/CallRecording.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-startCallRecording) in API Explorer.
 
@@ -7403,14 +7403,13 @@ User Permission|`N/A`
 ```cs
 var rc = new RestClient("clientID", "clientSecret", "serverURL");
 await rc.Authorize("jwtToken");
-var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings(recordingId).Patch(callRecordingUpdate, pauseResumeCallRecordingParameters);
+var result = await rc.Restapi(apiVersion).Account(accountId).Telephony().Sessions(telephonySessionId).Parties(partyId).Recordings(recordingId).Patch(callRecordingUpdate);
 await rc.Revoke();
 ```
 
 - Parameter `apiVersion` is optional with default value `v1.0`
 - Parameter `accountId` is optional with default value `~`
 - `callRecordingUpdate` is of type [CallRecordingUpdate](./Definitions/CallRecordingUpdate.cs)
-- `pauseResumeCallRecordingParameters` is of type [PauseResumeCallRecordingParameters](./Definitions/PauseResumeCallRecordingParameters.cs)
 - `result` is of type [CallRecording](./Definitions/CallRecording.cs)
 
 [Try it out](https://developer.ringcentral.com/api-reference#Call-Control-pauseResumeCallRecording) in API Explorer.

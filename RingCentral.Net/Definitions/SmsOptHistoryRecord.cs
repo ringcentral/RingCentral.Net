@@ -34,7 +34,7 @@ namespace RingCentral
         public string source { get; set; }
 
         /// <summary>
-        ///     The time when the record was last updated
+        ///     The time when this history record was created
         ///     Required
         ///     Format: date-time
         /// </summary>

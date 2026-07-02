@@ -30,7 +30,7 @@ namespace RingCentral
 
         /// <summary>
         ///     The campaign type(s) used to filter records
-        ///     (if requested `coverage` is `Campaign`)
+        ///     (if requested `coverage` is `CampaignType`)
         ///     Enum: Conversational, Informational, Promotional
         /// </summary>
         public string[] campaignType { get; set; }
