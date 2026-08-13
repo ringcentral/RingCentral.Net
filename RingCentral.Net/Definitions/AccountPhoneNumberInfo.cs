@@ -75,6 +75,16 @@ namespace RingCentral
         public string callerIdName { get; set; }
 
         /// <summary>
+        ///     Custom user-defined name of a phone number, if any
+        /// </summary>
+        public string label { get; set; }
+
+        /// <summary>
+        ///     Indicates if a phone number is primary, i.e. displayed as 'main number' and called by default
+        /// </summary>
+        public bool? primary { get; set; }
+
+        /// <summary>
         ///     Reference to the extension this number is assigned to. Omitted for company numbers
         /// </summary>
         public AccountPhoneNumberInfoExtension extension { get; set; }

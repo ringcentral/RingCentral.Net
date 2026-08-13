@@ -56,7 +56,7 @@ namespace RingCentral.Paths.Restapi.V2.Accounts.Extensions.CommHandling.States
         /// HTTP Method: patch
         /// Endpoint: /restapi/v2/accounts/{accountId}/extensions/{extensionId}/comm-handling/states/{stateId}
         /// Rate Limit Group: Medium
-        /// App Permission: ReadAccounts
+        /// App Permission: EditExtensions
         /// </summary>
         public async Task<RingCentral.CommStateResource> Patch(RingCentral.CommStateUpdateRequest commStateUpdateRequest, RestRequestConfig restRequestConfig = null)
         {

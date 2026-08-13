@@ -22,7 +22,7 @@ namespace RingCentral
         ///     Internal identifier of a device model for filtering. Multiple
         ///     values are supported
         /// </summary>
-        public string modelId { get; set; }
+        public string[] modelId { get; set; }
 
         /// <summary>
         ///     Filters devices which support HELD protocol

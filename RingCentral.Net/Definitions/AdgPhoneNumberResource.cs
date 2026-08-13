@@ -26,7 +26,7 @@ namespace RingCentral
         /// <summary>
         ///     Usage type of phone number
         ///     Example: DirectNumber
-        ///     Enum: MobileNumber, ContactNumber, DirectNumber, ForwardedNumber, PartnerBusinessMobileNumber
+        ///     Enum: MainCompanyNumber, AdditionalCompanyNumber, DirectNumber, CompanyNumber, CompanyFaxNumber, ForwardedNumber, ForwardedCompanyNumber, ContactCenterNumber, ConferencingNumber, MeetingsNumber, NumberPool, ELIN, BusinessMobileNumber, ExternalMobileNumber, IntegrationNumber, PartnerBusinessMobileNumber, NumberPoolPartnerBusinessMobileNumber, NumberStorage, FmcBusinessMobileNumber, InventoryFmcBusinessMobileNumber, InventoryMobileNumber, MobileNumber, ContactNumber
         /// </summary>
         public string usageType { get; set; }
 

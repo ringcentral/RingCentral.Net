@@ -34,5 +34,11 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CustomGreetingAnsweringRuleInfo answeringRule { get; set; }
+
+        /// <summary>
+        ///     Text to be used for speech transcription
+        ///     Example: Welcome to RingCentral
+        /// </summary>
+        public string text { get; set; }
     }
 }

@@ -76,5 +76,11 @@ namespace RingCentral
         ///     Enum: Actual, Outdated, Deprecated
         /// </summary>
         public string addressFormatStatus { get; set; }
+
+        /// <summary>
+        ///     Specifies emergency address validation during the ERL creation/update.
+        ///     If set to 'true', then address validation for non-US addresses is skipped
+        /// </summary>
+        public bool? trusted { get; set; }
     }
 }

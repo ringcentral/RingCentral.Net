@@ -38,5 +38,11 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public CustomCompanyGreetingLanguageInfo language { get; set; }
+
+        /// <summary>
+        ///     Text to be used for speech transcription
+        ///     Example: Welcome to RingCentral
+        /// </summary>
+        public string text { get; set; }
     }
 }

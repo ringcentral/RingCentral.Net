@@ -4,8 +4,8 @@ namespace RingCentral
     {
         /// <summary>
         ///     Ring target type
-        ///     Example: PhoneNumberRingTarget
-        ///     Enum: CoworkerAppsRingTarget, CoworkerRingTarget, DeviceRingTarget, ImsPhoneNumberRingTarget, FmcPhoneNumberRingTarget, IntegrationRingTarget, PhoneNumberRingTarget
+        ///     Example: CloudConnectorRingTarget
+        ///     Enum: CoworkerAppsRingTarget, CoworkerRingTarget, DeviceRingTarget, ImsPhoneNumberRingTarget, FmcPhoneNumberRingTarget, IntegrationRingTarget, PhoneNumberRingTarget, CloudConnectorRingTarget
         /// </summary>
         public string type { get; set; }
 
@@ -25,7 +25,7 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public CommPhoneNumberResource destination { get; set; }
+        public CommCloudDestination destination { get; set; }
 
         /// <summary>
         /// </summary>

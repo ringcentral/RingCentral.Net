@@ -36,6 +36,6 @@ namespace RingCentral
         /// <summary>
         ///     Indicates whether the user has an RC App device configured in a PSTN gateway
         /// </summary>
-        public bool? pstnConfigured { get; set; }
+        public bool? persistGatewayConfigured { get; set; }
     }
 }

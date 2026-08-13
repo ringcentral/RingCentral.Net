@@ -3,13 +3,14 @@ namespace RingCentral
     public class CommRemoveForwardingTargetsRequestRecords
     {
         /// <summary>
+        ///     Example: Cloud Connector Contact
         /// </summary>
         public string name { get; set; }
 
         /// <summary>
         ///     Ring target type
-        ///     Example: PhoneNumberRingTarget
-        ///     Enum: CoworkerAppsRingTarget, CoworkerRingTarget, DeviceRingTarget, ImsPhoneNumberRingTarget, IntegrationRingTarget, PhoneNumberRingTarget
+        ///     Example: CloudConnectorRingTarget
+        ///     Enum: AllDesktopRingTarget, AllMobileRingTarget, CoworkerRingTarget, DeviceRingTarget, HotdeskRingTarget, ImsPhoneNumberRingTarget, FmcPhoneNumberRingTarget, IntegrationRingTarget, PhoneNumberRingTarget, CloudConnectorRingTarget
         /// </summary>
         public string type { get; set; }
 
@@ -27,6 +28,6 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public CommPhoneNumberResource destination { get; set; }
+        public CommCloudDestination destination { get; set; }
     }
 }

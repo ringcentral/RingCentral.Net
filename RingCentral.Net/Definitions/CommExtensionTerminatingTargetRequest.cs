@@ -6,7 +6,7 @@ namespace RingCentral
         ///     Terminating target type
         ///     Required
         ///     Example: ExtensionTerminatingTarget
-        ///     Enum: ExtensionTerminatingTarget, PhoneNumberTerminatingTarget, PlayAnnouncementTerminatingTarget, VoiceMailTerminatingTarget
+        ///     Enum: ExtensionTerminatingTarget, PhoneNumberTerminatingTarget, PlayAnnouncementTerminatingTarget, VoiceMailTerminatingTarget, CloudConnectorTerminatingTarget
         /// </summary>
         public string type { get; set; }
 

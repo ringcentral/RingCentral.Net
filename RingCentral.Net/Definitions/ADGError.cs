@@ -15,5 +15,10 @@ namespace RingCentral
         ///     Message that describes the error. This message can be used in UI.
         /// </summary>
         public string message { get; set; }
+
+        /// <summary>
+        ///     Name of invalid parameter.
+        /// </summary>
+        public string parameterName { get; set; }
     }
 }

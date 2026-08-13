@@ -39,16 +39,15 @@ namespace RingCentral
         public string[] feature { get; set; }
 
         /// <summary>
-        ///     Device type
-        ///     Default: HardPhone
-        ///     Enum: HardPhone, SoftPhone, OtherPhone, MobileDevice, BLA, Paging, WebPhone, WebRTC, Room
+        ///     Device type or multiple device types
+        ///     Enum: HardPhone, SoftPhone, OtherPhone, WebRTC, Room
         /// </summary>
-        public string type { get; set; }
+        public string[] type { get; set; }
 
         /// <summary>
-        ///     The type of phone line
+        ///     Phone line type or multiple phone line types
         ///     Enum: Unknown, Standalone, StandaloneFree, BlaPrimary, BlaSecondary
         /// </summary>
-        public string lineType { get; set; }
+        public string[] lineType { get; set; }
     }
 }

@@ -4,8 +4,8 @@ namespace RingCentral
     {
         /// <summary>
         ///     Terminating target type
-        ///     Example: ExtensionTerminatingTarget
-        ///     Enum: ExtensionTerminatingTarget, PhoneNumberTerminatingTarget, PlayAnnouncementTerminatingTarget, VoiceMailTerminatingTarget
+        ///     Example: CloudConnectorTerminatingTarget
+        ///     Enum: ExtensionTerminatingTarget, PhoneNumberTerminatingTarget, PlayAnnouncementTerminatingTarget, VoiceMailTerminatingTarget, CloudConnectorTerminatingTarget
         /// </summary>
         public string type { get; set; }
 
@@ -19,14 +19,15 @@ namespace RingCentral
 
         /// <summary>
         /// </summary>
-        public CommPhoneNumberResource destination { get; set; }
+        public CommCloudDestination destination { get; set; }
 
         /// <summary>
         /// </summary>
         public CommIntegrationRequest integration { get; set; }
 
         /// <summary>
-        ///     Phone number name
+        ///     The customised target name
+        ///     Example: Cloud Connector Contact
         /// </summary>
         public string name { get; set; }
 

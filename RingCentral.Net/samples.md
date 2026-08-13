@@ -5380,6 +5380,31 @@ await rc.Revoke();
 
 [Try it out](https://developer.ringcentral.com/api-reference#Video-Configuration-readUserVideoConfiguration) in API Explorer.
 
+## listWebAppDevices
+List User Web Phone Devices
+
+Name|Value
+-|-
+HTTP Method|`GET`
+Endpoint|`/restapi/{apiVersion}/account/{accountId}/extension/{extensionId}/webapp-devices`
+Rate Limit Group|`Medium`
+App Permission|`ReadAccounts`
+User Permission|`N/A`
+
+```cs
+var rc = new RestClient("clientID", "clientSecret", "serverURL");
+await rc.Authorize("jwtToken");
+var result = await rc.Restapi(apiVersion).Account(accountId).Extension(extensionId).WebappDevices().Get();
+await rc.Revoke();
+```
+
+- Parameter `apiVersion` is optional with default value `v1.0`
+- Parameter `accountId` is optional with default value `~`
+- Parameter `extensionId` is optional with default value `~`
+- `result` is of type [WebAppDevicesResponse](./Definitions/WebAppDevicesResponse.cs)
+
+[Try it out](https://developer.ringcentral.com/api-reference#Devices-listWebAppDevices) in API Explorer.
+
 ## getForwardAllCompanyCalls
 Get Forward All Company Calls
 
@@ -8911,7 +8936,7 @@ Name|Value
 HTTP Method|`PATCH`
 Endpoint|`/restapi/v2/accounts/{accountId}/extensions/{extensionId}/comm-handling/states/{stateId}`
 Rate Limit Group|`Medium`
-App Permission|`ReadAccounts`
+App Permission|`EditExtensions`
 User Permission|`N/A`
 
 ```cs

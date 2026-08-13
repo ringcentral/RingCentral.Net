@@ -13,7 +13,7 @@ namespace RingCentral
         ///     Ring target type
         ///     Required
         ///     Example: CoworkerRingTarget
-        ///     Enum: CoworkerAppsRingTarget, CoworkerRingTarget, DeviceRingTarget, ImsPhoneNumberRingTarget, IntegrationRingTarget, PhoneNumberRingTarget
+        ///     Enum: CoworkerAppsRingTarget, CoworkerRingTarget, DeviceRingTarget, ImsPhoneNumberRingTarget, IntegrationRingTarget, PhoneNumberRingTarget, CloudConnectorRingTarget
         /// </summary>
         public string type { get; set; }
 

@@ -76,7 +76,7 @@ namespace RingCentral
 
         /// <summary>
         ///     Call delegation type
-        ///     Enum: Coworker, Unknown
+        ///     Enum: Coworker, QueueForwarding, Unknown
         /// </summary>
         public string delegationType { get; set; }
 
@@ -179,5 +179,10 @@ namespace RingCentral
         ///     Enum: Local, LongDistance, International, Sip, RingMe, RingOut, Usual, TollFreeNumber, VerificationNumber, Vma, LocalNumber, ImsOutgoing, ImsIncoming, Unknown
         /// </summary>
         public string internalType { get; set; }
+
+        /// <summary>
+        ///     Indicates whether the call has reached a finished state
+        /// </summary>
+        public bool? finished { get; set; }
     }
 }
