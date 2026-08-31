@@ -116,14 +116,14 @@ namespace RingCentral
         ///     Please note that legacy 'Department' extension type corresponds to 'Call Queue'
         ///     extensions in modern RingCentral product terminology
         ///     Example: User
-        ///     Enum: User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup, DelegatedLinesGroup, GroupCallPickup, IvrMenu, ApplicationExtension, ProxyAdmin, RoomConnector, ParkLocation, Limited, Bot, Site, Room, FlexibleUser, TieLine, Unknown
+        ///     Enum: User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup, DelegatedLinesGroup, GroupCallPickup, IvrMenu, ApplicationExtension, ProxyAdmin, RoomConnector, ParkLocation, Limited, Bot, Site, Room, FlexibleUser, TieLine, VoiceAppIntegration, WebVoice, Unknown
         /// </summary>
         public string type { get; set; }
 
         /// <summary>
         ///     Extension subtype, if applicable.
         ///     For unrecognized subtypes the `Unknown` value is returned
-        ///     Enum: VideoPro, VideoProPlus, DigitalSignageOnlyRooms, Unknown, Emergency
+        ///     Enum: VideoPro, VideoProPlus, DigitalSignageOnlyRooms, Unknown, Emergency, Programmable, Air, AirPro
         /// </summary>
         public string subType { get; set; }
 

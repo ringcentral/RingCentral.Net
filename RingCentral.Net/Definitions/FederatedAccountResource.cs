@@ -28,5 +28,10 @@ namespace RingCentral
         /// <summary>
         /// </summary>
         public AdgPhoneNumberResource mainNumber { get; set; }
+
+        /// <summary>
+        ///     Indicates whether Contact Center is enabled for the account.
+        /// </summary>
+        public bool? contactCenterEnabled { get; set; }
     }
 }

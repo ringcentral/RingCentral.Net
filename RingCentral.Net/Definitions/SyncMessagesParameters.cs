@@ -87,7 +87,7 @@ namespace RingCentral
         /// <summary>
         ///     Filters shared messages based on the owner extension type. Supported if "SharedVoicemail" or "CallQueueSmsRecipient"
         ///     feature is enabled.
-        ///     Enum: User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup, DelegatedLinesGroup, GroupCallPickup, IvrMenu, ApplicationExtension, ProxyAdmin, RoomConnector, ParkLocation, Limited, Bot, Site, Room, FlexibleUser, TieLine, Unknown
+        ///     Enum: User, Department, Announcement, Voicemail, DigitalUser, VirtualUser, FaxUser, PagingOnly, SharedLinesGroup, DelegatedLinesGroup, GroupCallPickup, IvrMenu, ApplicationExtension, ProxyAdmin, RoomConnector, ParkLocation, Limited, Bot, Site, Room, FlexibleUser, TieLine, VoiceAppIntegration, WebVoice, Unknown
         /// </summary>
         public string[] ownerExtensionType { get; set; }
     }
