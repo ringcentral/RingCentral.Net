@@ -3,7 +3,8 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <PackageId>RingCentral.Net.Retry</PackageId>
-        <PackageVersion>1.0.1</PackageVersion>
+        <PackageVersion>1.0.2</PackageVersion>
+        <PackageReleaseNotes>Fix retry allowances leaking between requests, including shared configuration and concurrent calls. Requires RingCentral.Net 6.6.5 or later; upgrade core and Retry together.</PackageReleaseNotes>
         <Authors>Tyler Liu (tyler.liu@ringcentral.com)</Authors>
         <Description>Retry extension for RingCentral.Net</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>

@@ -162,6 +162,20 @@ personal preferences to choose which one to use.
 
 ## Release Notes
 
+### 6.6.5
+
+Release with `RingCentral.Net.Retry` 1.0.2 and `RingCentral.Net.RateLimit` 1.0.3 to fix retry
+allowances leaking between requests. Each new SDK request now has an independent counter, including
+authorization requests and concurrent calls sharing a configuration.
+
+Upgrade these packages together: the older Retry implementation accesses the removed
+`RestRequestConfig.retriesAttempted` field and is incompatible with core 6.6.5. Applications that
+accessed the field must remove those references and rebuild. Retry callbacks still receive the
+zero-based retry count. The RateLimit update requires the fixed Retry package; it does not change
+backoff, `Retry-After`, or proactive throttling behavior.
+
+The libraries still target .NET Standard 2.0. .NET 10 is the development and test toolchain.
+
 ### 6.0.0
 
 We have renamed all "glip" to "team-messaging". For example:
@@ -180,14 +194,19 @@ rc.TeamMessaging().Chats().List();
 
 ### Release
 
-Update the version number in `RingCentral.Net/RestClient.cs`.
+Update `PackageVersion` and release notes for each changed package. When releasing core, also
+update its user-agent version in `RingCentral.Net/RestClient.cs`. Check generated package
+dependencies, especially when releasing core and extensions together.
 
-Update version number in `<ProjectName>/<ProjectName>.csproj`
+Use .NET 10 to build, run the full tests, and pack the solution in Release configuration. Inspect
+the packages and verify installation in an isolated consumer project before publishing.
 
-```
-cd <ProjectName>
-dotnet pack
-```
+Commit the reviewed changes and push an annotated version tag (for example, `6.6.5`). The
+`Release` GitHub Actions workflow runs the full tests, then builds and publishes NuGet packages
+using the `prod` environment. It packs all package projects; unchanged published versions are
+skipped with `--skip-duplicate`. Verify each intended package and its dependency metadata on
+NuGet after the workflow succeeds. A tag push is the publication trigger, so do not also publish
+the same release manually.
 
 ## Todo
 

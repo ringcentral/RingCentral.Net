@@ -3,7 +3,8 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <PackageId>RingCentral.Net.RateLimit</PackageId>
-        <PackageVersion>1.0.2</PackageVersion>
+        <PackageVersion>1.0.3</PackageVersion>
+        <PackageReleaseNotes>Require RingCentral.Net.Retry 1.0.2 or later to fix request-scoped retry accounting. Upgrade with RingCentral.Net 6.6.5 or later.</PackageReleaseNotes>
         <Authors>Tyler Liu (tyler.liu@ringcentral.com)</Authors>
         <Description>Rate limit extension for RingCentral.Net</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>

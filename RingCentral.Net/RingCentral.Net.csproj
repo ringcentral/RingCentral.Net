@@ -3,7 +3,8 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <PackageId>RingCentral.Net</PackageId>
-        <PackageVersion>6.6.4</PackageVersion>
+        <PackageVersion>6.6.5</PackageVersion>
+        <PackageReleaseNotes>Fix request-scoped retry accounting with RingCentral.Net.Retry 1.0.2 and RingCentral.Net.RateLimit 1.0.3. Upgrade these packages together. RestRequestConfig.retriesAttempted was removed; callers that access it must remove those references and rebuild.</PackageReleaseNotes>
         <Authors>Tyler Liu (tyler.liu@ringcentral.com)</Authors>
         <Description>RingCentral SDK for .NET</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
