@@ -1,6 +1,6 @@
 using System;
-using System.IO;
-using System.Text;
+using System.Net;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -11,57 +11,35 @@ namespace RingCentral.Tests;
 public class CancellationTest
 {
     [Fact]
-    public async void CancelAfter()
+    public async Task CancelInFlightRequest()
     {
-        var rc = await ReusableRestClient.GetInstance();
-
-        var sendFaxMessageRequest = new CreateFaxMessageRequest
-        {
-            to = new[]
-            {
-                new FaxReceiver
-                {
-                    phoneNumber = Environment.GetEnvironmentVariable("RINGCENTRAL_RECEIVER"),
-                    name = "The Receiver"
-                }
-            },
-            attachments = new[]
-            {
-                new Attachment
-                {
-                    filename = "rc.png",
-                    content = File.ReadAllBytes("./rc.png")
-                },
-                new Attachment
-                {
-                    filename = "glip.png",
-                    content = File.ReadAllBytes("./glip.png")
-                },
-                new Attachment
-                {
-                    filename = "hello.txt",
-                    content = Encoding.UTF8.GetBytes("Hello 888")
-                }
-            }
-        };
-        var source = new CancellationTokenSource();
-        var token = source.Token;
-        source.CancelAfter(10); // impossible to send a fax within 10ms
-        var taskCanceledException = false;
+        using var source = new CancellationTokenSource();
+        using var client = new HttpClient(new CancelingHandler(source));
+        var originalClient = RestClient.httpClient;
+        RestClient.httpClient = client;
         try
         {
-            await rc.Restapi().Account().Extension().Fax().Post(sendFaxMessageRequest, new RestRequestConfig
+            var rc = new RestClient("test-client", "test-secret")
             {
-                cancellationToken = token
-            });
-        }
-        catch (TaskCanceledException)
-        {
-            taskCanceledException = true;
+                token = new TokenInfo { access_token = "fake-token" }
+            };
+            await Assert.ThrowsAnyAsync<OperationCanceledException>(() => rc.Get("/test",
+                restRequestConfig: new RestRequestConfig { cancellationToken = source.Token }));
         }
         finally
         {
-            Assert.True(taskCanceledException);
+            RestClient.httpClient = originalClient;
+        }
+    }
+
+    private sealed class CancelingHandler(CancellationTokenSource source) : HttpMessageHandler
+    {
+        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,
+            CancellationToken cancellationToken)
+        {
+            source.Cancel();
+            cancellationToken.ThrowIfCancellationRequested();
+            return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK));
         }
     }
 }
