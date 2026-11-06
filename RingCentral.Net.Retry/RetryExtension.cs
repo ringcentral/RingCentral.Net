@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Net.Http;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
 namespace RingCentral.Net.Retry
@@ -36,6 +37,7 @@ namespace RingCentral.Net.Retry
 
     public class RetryExtension : SdkExtension
     {
+        private const string RetryCountKey = "RingCentral.Net.Retry.RetriesAttempted";
         private readonly RetryOptions _options;
 
         public RetryExtension(RetryOptions options = null)
@@ -48,16 +50,23 @@ namespace RingCentral.Net.Retry
             var extensibleRequest = rc.extensibleRequest;
             rc.extensibleRequest = async (httpRequestMessage, restRequestConfig) =>
             {
+                if (!httpRequestMessage.Properties.TryGetValue(RetryCountKey, out var retryCount))
+                {
+                    retryCount = new StrongBox<int>();
+                    httpRequestMessage.Properties.Add(RetryCountKey, retryCount);
+                }
+
+                var retriesAttempted = (StrongBox<int>)retryCount;
                 try
                 {
                     return await extensibleRequest(await httpRequestMessage.CloneAsync(), restRequestConfig);
                 }
                 catch (RestException re)
                 {
-                    if (enabled && _options.shouldRetry(re, restRequestConfig.retriesAttempted))
+                    if (enabled && _options.shouldRetry(re, retriesAttempted.Value))
                     {
-                        await Task.Delay(_options.retryInterval(re, restRequestConfig.retriesAttempted));
-                        restRequestConfig.retriesAttempted += 1;
+                        await Task.Delay(_options.retryInterval(re, retriesAttempted.Value));
+                        retriesAttempted.Value += 1;
                         return await rc.extensibleRequest(httpRequestMessage, restRequestConfig);
                     }
 

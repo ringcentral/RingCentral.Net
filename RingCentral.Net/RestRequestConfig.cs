@@ -11,8 +11,5 @@ namespace RingCentral
         public CancellationToken cancellationToken = CancellationToken.None;
 
         public Dictionary<string, string> customHeaders = new Dictionary<string, string>();
-
-        // for Retry extension
-        public int retriesAttempted = 0;
     }
 }
