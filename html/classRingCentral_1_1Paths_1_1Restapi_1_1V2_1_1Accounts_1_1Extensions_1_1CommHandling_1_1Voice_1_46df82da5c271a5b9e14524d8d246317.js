@@ -1,0 +1,4 @@
+var classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_46df82da5c271a5b9e14524d8d246317 =
+[
+    [ "Get", "classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_46df82da5c271a5b9e14524d8d246317.html#abfc9fe39fd8ecee9ef4e2b7fb9a53ca1", null ]
+];

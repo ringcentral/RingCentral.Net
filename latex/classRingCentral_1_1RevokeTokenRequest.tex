@@ -1,47 +1,20 @@
-\hypertarget{classRingCentral_1_1RevokeTokenRequest}{}\doxysection{Ring\+Central.\+Revoke\+Token\+Request Class Reference}
-\label{classRingCentral_1_1RevokeTokenRequest}\index{RingCentral.RevokeTokenRequest@{RingCentral.RevokeTokenRequest}}
-\doxysubsection*{Properties}
+\doxysection{Ring\+Central.\+Revoke\+Token\+Request Class Reference}
+\hypertarget{classRingCentral_1_1RevokeTokenRequest}{}\label{classRingCentral_1_1RevokeTokenRequest}\index{RingCentral.RevokeTokenRequest@{RingCentral.RevokeTokenRequest}}
+\doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-string \mbox{\hyperlink{classRingCentral_1_1RevokeTokenRequest_ad25534a79755481d1d2c983ffab19861}{token}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Access or refresh token to be revoked (along with the entire OAuth session) Required \end{DoxyCompactList}\item 
-string \mbox{\hyperlink{classRingCentral_1_1RevokeTokenRequest_a66ce1aa3b5aa7560b4810840d537ef18}{client\+\_\+assertion\+\_\+type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Client assertion type \end{DoxyCompactList}\item 
-string \mbox{\hyperlink{classRingCentral_1_1RevokeTokenRequest_a69d1b26978b52deec1939d962cd84a03}{client\+\_\+assertion}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Client assertion \end{DoxyCompactList}\end{DoxyCompactItemize}
-
-
-\doxysubsection{Property Documentation}
-\mbox{\Hypertarget{classRingCentral_1_1RevokeTokenRequest_a69d1b26978b52deec1939d962cd84a03}\label{classRingCentral_1_1RevokeTokenRequest_a69d1b26978b52deec1939d962cd84a03}} 
-\index{RingCentral.RevokeTokenRequest@{RingCentral.RevokeTokenRequest}!client\_assertion@{client\_assertion}}
-\index{client\_assertion@{client\_assertion}!RingCentral.RevokeTokenRequest@{RingCentral.RevokeTokenRequest}}
-\doxysubsubsection{\texorpdfstring{client\_assertion}{client\_assertion}}
-{\footnotesize\ttfamily string Ring\+Central.\+Revoke\+Token\+Request.\+client\+\_\+assertion\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
-
-
-
-Client assertion 
-
-\mbox{\Hypertarget{classRingCentral_1_1RevokeTokenRequest_a66ce1aa3b5aa7560b4810840d537ef18}\label{classRingCentral_1_1RevokeTokenRequest_a66ce1aa3b5aa7560b4810840d537ef18}} 
-\index{RingCentral.RevokeTokenRequest@{RingCentral.RevokeTokenRequest}!client\_assertion\_type@{client\_assertion\_type}}
-\index{client\_assertion\_type@{client\_assertion\_type}!RingCentral.RevokeTokenRequest@{RingCentral.RevokeTokenRequest}}
-\doxysubsubsection{\texorpdfstring{client\_assertion\_type}{client\_assertion\_type}}
-{\footnotesize\ttfamily string Ring\+Central.\+Revoke\+Token\+Request.\+client\+\_\+assertion\+\_\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
-
-
-
-Client assertion type 
-
-\mbox{\Hypertarget{classRingCentral_1_1RevokeTokenRequest_ad25534a79755481d1d2c983ffab19861}\label{classRingCentral_1_1RevokeTokenRequest_ad25534a79755481d1d2c983ffab19861}} 
-\index{RingCentral.RevokeTokenRequest@{RingCentral.RevokeTokenRequest}!token@{token}}
-\index{token@{token}!RingCentral.RevokeTokenRequest@{RingCentral.RevokeTokenRequest}}
-\doxysubsubsection{\texorpdfstring{token}{token}}
-{\footnotesize\ttfamily string Ring\+Central.\+Revoke\+Token\+Request.\+token\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
-
-
-
-Access or refresh token to be revoked (along with the entire OAuth session) Required 
-
+\Hypertarget{classRingCentral_1_1RevokeTokenRequest_ad25534a79755481d1d2c983ffab19861}\label{classRingCentral_1_1RevokeTokenRequest_ad25534a79755481d1d2c983ffab19861} 
+string {\bfseries token}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Access or refresh token to be revoked (along with the entire OAuth session). Required, unless it is passed via the {\ttfamily \doxylink{classRingCentral_1_1RevokeTokenRequest_ad25534a79755481d1d2c983ffab19861}{token}} query parameter. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1RevokeTokenRequest_a0b3d88d59a60819f56fb493c296fe2ad}\label{classRingCentral_1_1RevokeTokenRequest_a0b3d88d59a60819f56fb493c296fe2ad} 
+string {\bfseries client\+\_\+id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The registered identifier of a client application. Used to identify a client ONLY if the client authentication is not required and corresponding credentials are not provided with this request Example\+: AZw\+EVw\+GEcf\+Get2\+PCou\+A7\+K6. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1RevokeTokenRequest_a66ce1aa3b5aa7560b4810840d537ef18}\label{classRingCentral_1_1RevokeTokenRequest_a66ce1aa3b5aa7560b4810840d537ef18} 
+string {\bfseries client\+\_\+assertion\+\_\+type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Client assertion type for the {\ttfamily client\+\_\+secret\+\_\+jwt} or {\ttfamily private\+\_\+key\+\_\+jwt} client authentication types, as defined by \href{https://datatracker.ietf.org/doc/html/rfc7523\#section-2.2}{\texttt{RFC-\/7523}}. This parameter is mandatory if the client authentication is required and a client decided to use one of these authentication types Enum\+: urn\+:ietf\+:params\+:oauth\+:client-\/assertion-\/type\+:jwt-\/bearer. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1RevokeTokenRequest_a69d1b26978b52deec1939d962cd84a03}\label{classRingCentral_1_1RevokeTokenRequest_a69d1b26978b52deec1939d962cd84a03} 
+string {\bfseries client\+\_\+assertion}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Client assertion (JWT) for the {\ttfamily client\+\_\+secret\+\_\+jwt} or {\ttfamily private\+\_\+key\+\_\+jwt} client authentication types, as defined by \href{https://datatracker.ietf.org/doc/html/rfc7523\#section-2.2}{\texttt{RFC-\/7523}}. This parameter is mandatory if the client authentication is required and a client decided to use one of these authentication types. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

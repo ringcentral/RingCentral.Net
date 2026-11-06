@@ -1,0 +1,64 @@
+\doxysection{Ring\+Central.\+Mth\+Sync\+Entries\+Parameters Class Reference}
+\hypertarget{classRingCentral_1_1MthSyncEntriesParameters}{}\label{classRingCentral_1_1MthSyncEntriesParameters}\index{RingCentral.MthSyncEntriesParameters@{RingCentral.MthSyncEntriesParameters}}
+
+
+Query parameters for operation mth\+Sync\+Entries.  
+
+
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1MthSyncEntriesParameters_a2e7ed6d092c0dde6151479d1b33b98b6}{scope}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Scope of synchronization ({\ttfamily \doxylink{classRingCentral_1_1MthSyncEntriesParameters_a6c8b89afd0d1406396bf2a5ce640be1c}{sync\+Type}=FSync} only)\+: \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MthSyncEntriesParameters_a2e6f43d9c474192772c09435e7d4a744}\label{classRingCentral_1_1MthSyncEntriesParameters_a2e6f43d9c474192772c09435e7d4a744} 
+string\mbox{[}$\,$\mbox{]} {\bfseries thread\+Ids}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of thread IDs to synchronize ({\ttfamily Explicit} scope only). \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1MthSyncEntriesParameters_a6c8b89afd0d1406396bf2a5ce640be1c}{sync\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of message synchronization request\+: \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MthSyncEntriesParameters_a91f03972661e078967bac00a0a6d4d1a}\label{classRingCentral_1_1MthSyncEntriesParameters_a91f03972661e078967bac00a0a6d4d1a} 
+string {\bfseries sync\+Token}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sync token (for "{}\+ISync"{} only). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation mth\+Sync\+Entries. 
+
+\label{doc-property-members}
+\Hypertarget{classRingCentral_1_1MthSyncEntriesParameters_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{classRingCentral_1_1MthSyncEntriesParameters_a2e7ed6d092c0dde6151479d1b33b98b6}\index{RingCentral.MthSyncEntriesParameters@{RingCentral.MthSyncEntriesParameters}!scope@{scope}}
+\index{scope@{scope}!RingCentral.MthSyncEntriesParameters@{RingCentral.MthSyncEntriesParameters}}
+\doxysubsubsection{\texorpdfstring{scope}{scope}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1MthSyncEntriesParameters_a2e7ed6d092c0dde6151479d1b33b98b6} 
+string Ring\+Central.\+Mth\+Sync\+Entries\+Parameters.\+scope\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Scope of synchronization ({\ttfamily \doxylink{classRingCentral_1_1MthSyncEntriesParameters_a6c8b89afd0d1406396bf2a5ce640be1c}{sync\+Type}=FSync} only)\+: 
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Accessible}\+: returns entries in threads monitored by the current user;
+\item {\ttfamily Unassigned}\+: returns entries in accessible unassigned threads;
+\item {\ttfamily Assigned\+To\+Me}\+: returns entries in threads that are assigned to the current user;
+\item {\ttfamily Assigned\+To\+Me\+And\+Unassigned}\+: returns entries in threads that are assigned to the current user or unassigned;
+\item {\ttfamily Explicit}\+: returns entries in threads specified through the {\ttfamily \doxylink{classRingCentral_1_1MthSyncEntriesParameters_a2e6f43d9c474192772c09435e7d4a744}{thread\+Ids}} parameter. Default\+: Assigned\+To\+Me Enum\+: Accessible, Unassigned, Assigned\+To\+Me, Assigned\+To\+Me\+And\+Unassigned, Explicit 
+\end{DoxyItemize}\Hypertarget{classRingCentral_1_1MthSyncEntriesParameters_a6c8b89afd0d1406396bf2a5ce640be1c}\index{RingCentral.MthSyncEntriesParameters@{RingCentral.MthSyncEntriesParameters}!syncType@{syncType}}
+\index{syncType@{syncType}!RingCentral.MthSyncEntriesParameters@{RingCentral.MthSyncEntriesParameters}}
+\doxysubsubsection{\texorpdfstring{syncType}{syncType}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1MthSyncEntriesParameters_a6c8b89afd0d1406396bf2a5ce640be1c} 
+string Ring\+Central.\+Mth\+Sync\+Entries\+Parameters.\+sync\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of message synchronization request\+: 
+
+
+\begin{DoxyItemize}
+\item FSync -- full sync
+\item ISync -- incremental sync Default\+: FSync Enum\+: FSync, ISync 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Mth\+Sync\+Entries\+Parameters.\+cs\end{DoxyCompactItemize}

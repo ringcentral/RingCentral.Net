@@ -1,0 +1,56 @@
+digraph "RingCentral.Net/Paths/Restapi/Account"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_e0b1baf5c0895f700b69bc84cc9a883f {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Restapi", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_e0b1baf5c0895f700b69bc84cc9a883f.html",tooltip=""]
+  subgraph clusterdir_a6ffe6393bdaec40200f64f834a93c35 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_a6ffe6393bdaec40200f64f834a93c35.html",tooltip=""]
+    dir_a6ffe6393bdaec40200f64f834a93c35 [shape=plaintext, label="Account"];
+  dir_2d35393273de7e8cf69e313a4e212195 [label="A2pSms", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_2d35393273de7e8cf69e313a4e212195.html",tooltip=""];
+  dir_d71d0f91b883b397f9c840cd68be4a8d [label="ActiveCalls", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_d71d0f91b883b397f9c840cd68be4a8d.html",tooltip=""];
+  dir_7b6b090b6366f790dfd28a31519e80cb [label="AddressBookBulkUpload", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_7b6b090b6366f790dfd28a31519e80cb.html",tooltip=""];
+  dir_079b33c998204c3225db2e06bd6536f8 [label="AnsweringRule", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_079b33c998204c3225db2e06bd6536f8.html",tooltip=""];
+  dir_39a77a69270e072aa53a5efc2186dc2a [label="AssignedRole", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_39a77a69270e072aa53a5efc2186dc2a.html",tooltip=""];
+  dir_adca79fecfa3df22e735abf7aab20f93 [label="AuditTrail", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_adca79fecfa3df22e735abf7aab20f93.html",tooltip=""];
+  dir_be73741076c39804a66d7df4a5af440c [label="BusinessAddress", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_be73741076c39804a66d7df4a5af440c.html",tooltip=""];
+  dir_d29f32b700d852f39e2bcc9702336b8a [label="BusinessHours", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_d29f32b700d852f39e2bcc9702336b8a.html",tooltip=""];
+  dir_7581a3f93fa8d108c22b14c4edeaef85 [label="CallLog", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_7581a3f93fa8d108c22b14c4edeaef85.html",tooltip=""];
+  dir_2bf489d4ed4d423e2f3c6e726f0af28e [label="CallLogExtractSync", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_2bf489d4ed4d423e2f3c6e726f0af28e.html",tooltip=""];
+  dir_d46ec728b460f3397e3ec1f20d600397 [label="CallLogSync", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_d46ec728b460f3397e3ec1f20d600397.html",tooltip=""];
+  dir_7ede684bfea1e45b1b1ebaf1e263c69e [label="CallMonitoringGroups", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_7ede684bfea1e45b1b1ebaf1e263c69e.html",tooltip=""];
+  dir_414c984af4a418f49e0135161522a2a0 [label="CallQueues", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_414c984af4a418f49e0135161522a2a0.html",tooltip=""];
+  dir_173184590b3b859d828e21150e02aa95 [label="CallRecording", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_173184590b3b859d828e21150e02aa95.html",tooltip=""];
+  dir_9e1d600d30e1f6dfadbf635c7bb9dfa6 [label="CallRecordings", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_9e1d600d30e1f6dfadbf635c7bb9dfa6.html",tooltip=""];
+  dir_f39f130d0ff05700930b3b1deeb763e9 [label="CustomFields", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_f39f130d0ff05700930b3b1deeb763e9.html",tooltip=""];
+  dir_5ba2fc61a742fe16034fd07b41497090 [label="Device", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_5ba2fc61a742fe16034fd07b41497090.html",tooltip=""];
+  dir_46199734f50824d6dc836f6c9b165b01 [label="Directory", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_46199734f50824d6dc836f6c9b165b01.html",tooltip=""];
+  dir_fb18266a3cb9497e23d7685d3495a690 [label="EmergencyAddressAutoUpdate", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_fb18266a3cb9497e23d7685d3495a690.html",tooltip=""];
+  dir_ea07ad72152f395c6611ed4b2c8880b1 [label="EmergencyLocations", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_ea07ad72152f395c6611ed4b2c8880b1.html",tooltip=""];
+  dir_80e6445ed81f273f27f379a81d4dbbb0 [label="Extension", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_80e6445ed81f273f27f379a81d4dbbb0.html",tooltip=""];
+  dir_ad154f63812ee5e884683f8269a9de6b [label="ExtensionBulkUpdate", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_ad154f63812ee5e884683f8269a9de6b.html",tooltip=""];
+  dir_767e151020f075f51e6563b882fd362d [label="ForwardAllCalls", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_767e151020f075f51e6563b882fd362d.html",tooltip=""];
+  dir_900ac78687939caac0e8e174082a741f [label="Greeting", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_900ac78687939caac0e8e174082a741f.html",tooltip=""];
+  dir_bb6af4128cfafcee625d7a40164f6558 [label="IvrMenus", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_bb6af4128cfafcee625d7a40164f6558.html",tooltip=""];
+  dir_81e06f0a7955660eab65d4f08d7ffb93 [label="IvrPrompts", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_81e06f0a7955660eab65d4f08d7ffb93.html",tooltip=""];
+  dir_f1520060996cd5300b1e22694c3a6b61 [label="MessageStoreConfiguration", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_f1520060996cd5300b1e22694c3a6b61.html",tooltip=""];
+  dir_8a2a9a0892d763a16d560eddbf436604 [label="MessageStoreReport", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_8a2a9a0892d763a16d560eddbf436604.html",tooltip=""];
+  dir_287c3e7b19de9edb1e3d0f4a8cc43d0f [label="MessageStoreTemplates", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_287c3e7b19de9edb1e3d0f4a8cc43d0f.html",tooltip=""];
+  dir_7172b8631d894e19d772376b92df7d71 [label="MessageThreads", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_7172b8631d894e19d772376b92df7d71.html",tooltip=""];
+  dir_aece494df8a79470adfe38ec1928a815 [label="MsTeams", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_aece494df8a79470adfe38ec1928a815.html",tooltip=""];
+  dir_e46fad0f190e1fcad22363e251b94318 [label="PagingOnlyGroups", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_e46fad0f190e1fcad22363e251b94318.html",tooltip=""];
+  dir_34560059fd3589802d47d864d9093eac [label="PhoneNumber", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_34560059fd3589802d47d864d9093eac.html",tooltip=""];
+  dir_60e7d0194e3622fcd852335e2b714819 [label="Presence", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_60e7d0194e3622fcd852335e2b714819.html",tooltip=""];
+  dir_28ac923e317aaa9bcad4403d6b929e9c [label="Recording", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_28ac923e317aaa9bcad4403d6b929e9c.html",tooltip=""];
+  dir_43801693cd5c9b0d8f465c2721dfbde1 [label="ServiceInfo", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_43801693cd5c9b0d8f465c2721dfbde1.html",tooltip=""];
+  dir_09651f85e3b629fa5b330bec95871ed2 [label="Sites", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_09651f85e3b629fa5b330bec95871ed2.html",tooltip=""];
+  dir_efd91fc21b7ccbb87746774c04d66ab8 [label="SmsRegistrationBrands", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_efd91fc21b7ccbb87746774c04d66ab8.html",tooltip=""];
+  dir_6a865685fa3d73414310efb4fe3302a2 [label="Telephony", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_6a865685fa3d73414310efb4fe3302a2.html",tooltip=""];
+  dir_65f4b99ac80de897d179c97b43451fcd [label="Templates", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_65f4b99ac80de897d179c97b43451fcd.html",tooltip=""];
+  dir_167ed79f3dc0d2cbf2b195955cf766ac [label="UserRole", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_167ed79f3dc0d2cbf2b195955cf766ac.html",tooltip=""];
+  }
+  }
+}

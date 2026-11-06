@@ -1,0 +1,17 @@
+digraph "RingCentral.Net/Paths/Restapi/Account/Directory"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_a6ffe6393bdaec40200f64f834a93c35 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Account", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_a6ffe6393bdaec40200f64f834a93c35.html",tooltip=""]
+  subgraph clusterdir_46199734f50824d6dc836f6c9b165b01 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_46199734f50824d6dc836f6c9b165b01.html",tooltip=""]
+    dir_46199734f50824d6dc836f6c9b165b01 [shape=plaintext, label="Directory"];
+  dir_6f2a5f0967253e873c99e74a602aeeb4 [label="Entries", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_6f2a5f0967253e873c99e74a602aeeb4.html",tooltip=""];
+  dir_bce4aad72d5477d4a226464827952d61 [label="Federation", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_bce4aad72d5477d4a226464827952d61.html",tooltip=""];
+  }
+  }
+}

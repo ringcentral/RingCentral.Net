@@ -1,0 +1,240 @@
+\doxysection{Ring\+Central.\+Number\+Parser\+Context Class Reference}
+\hypertarget{classRingCentral_1_1NumberParserContext}{}\label{classRingCentral_1_1NumberParserContext}\index{RingCentral.NumberParserContext@{RingCentral.NumberParserContext}}
+
+
+The manually set parsing context to override the context parameter values taken from the context source.  
+
+
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1NumberParserContext_a3e98f656b098bb680f8628798ca86825}{brand\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of the \doxylink{namespaceRingCentral}{Ring\+Central} brand. Brand context definition. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1NumberParserContext_a7b6ab4d5fc822096d8f95d643832f668}\label{classRingCentral_1_1NumberParserContext_a7b6ab4d5fc822096d8f95d643832f668} 
+\mbox{\hyperlink{classRingCentral_1_1CountryContext}{Country\+Context}} {\bfseries country}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{classRingCentral_1_1NumberParserContext_a267412a9221460c8ae9a8b60c6c6441b}{default\+Area\+Code}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Default area code of the caller. Provides support for the dial plan feature "{}\mbox{[}\+Default Area Code\mbox{]}(https\+://support.\+ringcentral.\+com/article/dial-\/plan-\/default-\/area-\/code-\/ringcentral-\/mvp.\+html)"{}. \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1NumberParserContext_a5a73be50e2cbc10bb079baf29b3d9728}{vanity\+Phone\+Numbers\+Allowed}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Vanity phone numbers are supported in the parsing input. Provides support for the feature "{}\mbox{[}\+Vanity Numbers dialing\mbox{]}(https\+://support.\+ringcentral.\+com/article/\+Requesting-\/a-\/toll-\/free-\/vanity-\/number.\+html)"{}. \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1NumberParserContext_ab9e3a5cd0cee43ef4eec098776ca632c}{max\+Extension\+Number\+Length}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The maximum allowed length of extension numbers on the account. Provides support for the dial plan feature "{}\mbox{[}\+Variable-\/length Extensions\mbox{]}(https\+://support.\+ringcentral.\+com/article/11277-\/\+Enterprise-\/\+Dial-\/\+Plan-\/\+Max-\/\+Extension-\/\+Length.\+html)"{}. \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1NumberParserContext_a2c2922bc11a3908a79281941601d0c6a}{short\+Codes\+Allowed}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Short codes are supported in the parsing input. Provides support for the feature "{}\+Shortcodes dialing"{}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1NumberParserContext_a5a370148715a31915e670bcff9a4fe89}{site\+Code}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The site code of caller. Together with parameter {\ttfamily context.\+short\+Extension\+Number\+Length} provides support for the feature "{}\mbox{[}\+Site Codes\mbox{]}(https\+://support.\+ringcentral.\+com/article/11279-\/\+Enterprise-\/\+Dial-\/\+Plan-\/\+Site-\/\+Codes.\+html)"{}. \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1NumberParserContext_aeed990bd63c838e82862a082c069e94d}{short\+Extension\+Number\+Length}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The allowed length of short extension numbers on the account. Together with parameter {\ttfamily context.\+site\+Code} provides support for the feature "{}\mbox{[}\+Site Codes\mbox{]}(https\+://support.\+ringcentral.\+com/article/11279-\/\+Enterprise-\/\+Dial-\/\+Plan-\/\+Site-\/\+Codes.\+html)"{}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1NumberParserContext_a8a66d4a975c02d78523aa2b9709eed08}{outbound\+Call\+Prefix}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Digit of outbound call prefix on the account. Provides support for the dial plan feature "{}\mbox{[}\+Outbound Call Prefix\mbox{]}(https\+://support.\+ringcentral.\+com/article/11278-\/\+Enterprise-\/\+Dial-\/\+Plan-\/\+Outbound-\/\+Call-\/\+Prefix.\+html)"{}. \end{DoxyCompactList}\item 
+bool? \mbox{\hyperlink{classRingCentral_1_1NumberParserContext_a031298a95cd278e235308e38ed325a2c}{masked\+Phone\+Numbers\+Allowed}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Masked phone numbers are supported in the the parsing input. Provides support for the feature "{}\mbox{[}\+Masked Numbers\mbox{]}(https\+://support.\+ringcentral.\+com/article/\+Number-\/\+Masking-\/\+French-\/\+Numbers.\+html)"{}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1NumberParserContext_a0564958cbd9c5f836f65e79ffb4de027}{mask\+Symbol}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A character used for masking phone numbers. \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1NumberParserContext_a4ad334435f54744db0262ed09cc8e213}{mask\+Length}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of last digits of the phone number which are masked. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1NumberParserContext_ad48823f9cd998eefa33f7b8b6587e67d}{conflict\+Handling}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Defines the logic of conflicts resolving when it\textquotesingle{}s impossible to detect whether the inputted string corresponds to an extension number or a phone number. Provides support for the feature "{}\+Smart Dial Plan Routing"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The manually set parsing context to override the context parameter values taken from the context source. 
+
+\label{doc-property-members}
+\Hypertarget{classRingCentral_1_1NumberParserContext_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{classRingCentral_1_1NumberParserContext_a3e98f656b098bb680f8628798ca86825}\index{RingCentral.NumberParserContext@{RingCentral.NumberParserContext}!brandId@{brandId}}
+\index{brandId@{brandId}!RingCentral.NumberParserContext@{RingCentral.NumberParserContext}}
+\doxysubsubsection{\texorpdfstring{brandId}{brandId}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1NumberParserContext_a3e98f656b098bb680f8628798ca86825} 
+string Ring\+Central.\+Number\+Parser\+Context.\+brand\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Internal identifier of the \doxylink{namespaceRingCentral}{Ring\+Central} brand. Brand context definition. 
+
+
+\begin{DoxyItemize}
+\item If the value is not specified, it\textquotesingle{}s taken from the context source\+:
+\begin{DoxyItemize}
+\item {\ttfamily Default} -\/\texorpdfstring{$>$}{>} {\ttfamily null}
+\item {\ttfamily Account} -\/\texorpdfstring{$>$}{>} brand from the request context header
+\end{DoxyItemize}
+\item Explicitly set value redefines the value taken from the context source.
+\item Explicitly set {\ttfamily null} value disables brand context for parsing. Example\+: 1210 
+\end{DoxyItemize}\Hypertarget{classRingCentral_1_1NumberParserContext_ad48823f9cd998eefa33f7b8b6587e67d}\index{RingCentral.NumberParserContext@{RingCentral.NumberParserContext}!conflictHandling@{conflictHandling}}
+\index{conflictHandling@{conflictHandling}!RingCentral.NumberParserContext@{RingCentral.NumberParserContext}}
+\doxysubsubsection{\texorpdfstring{conflictHandling}{conflictHandling}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1NumberParserContext_ad48823f9cd998eefa33f7b8b6587e67d} 
+string Ring\+Central.\+Number\+Parser\+Context.\+conflict\+Handling\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Defines the logic of conflicts resolving when it\textquotesingle{}s impossible to detect whether the inputted string corresponds to an extension number or a phone number. Provides support for the feature "{}\+Smart Dial Plan Routing"{}. 
+
+{\bfseries{Possible values}}\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Default} -\/ the ambiguous number will always be classified as an extension number;
+\item {\ttfamily Client} -\/ the ambiguous number will get {\ttfamily Ambiguous} category and the final decision whether the number is an extension number or a phone number should be made by the requester.
+\item If the value is not specified, it\textquotesingle{}s taken from the context source\+:
+\begin{DoxyItemize}
+\item {\ttfamily Default} -\/\texorpdfstring{$>$}{>} {\itshape Default}
+\item {\ttfamily Client} -\/\texorpdfstring{$>$}{>} the value from the requester\textquotesingle{}s account settings
+\end{DoxyItemize}
+\item Explicitly set value redefines the value taken from the context source. Example\+: Client Default\+: Default Enum\+: Default, Client 
+\end{DoxyItemize}\Hypertarget{classRingCentral_1_1NumberParserContext_a267412a9221460c8ae9a8b60c6c6441b}\index{RingCentral.NumberParserContext@{RingCentral.NumberParserContext}!defaultAreaCode@{defaultAreaCode}}
+\index{defaultAreaCode@{defaultAreaCode}!RingCentral.NumberParserContext@{RingCentral.NumberParserContext}}
+\doxysubsubsection{\texorpdfstring{defaultAreaCode}{defaultAreaCode}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1NumberParserContext_a267412a9221460c8ae9a8b60c6c6441b} 
+string Ring\+Central.\+Number\+Parser\+Context.\+default\+Area\+Code\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Default area code of the caller. Provides support for the dial plan feature "{}\mbox{[}\+Default Area Code\mbox{]}(https\+://support.\+ringcentral.\+com/article/dial-\/plan-\/default-\/area-\/code-\/ringcentral-\/mvp.\+html)"{}. 
+
+If the value is not specified or explicitly set to {\ttfamily null}, the feature "{}\+Default Area Code"{} context is disabled for parsing. Example\+: 650 \Hypertarget{classRingCentral_1_1NumberParserContext_a031298a95cd278e235308e38ed325a2c}\index{RingCentral.NumberParserContext@{RingCentral.NumberParserContext}!maskedPhoneNumbersAllowed@{maskedPhoneNumbersAllowed}}
+\index{maskedPhoneNumbersAllowed@{maskedPhoneNumbersAllowed}!RingCentral.NumberParserContext@{RingCentral.NumberParserContext}}
+\doxysubsubsection{\texorpdfstring{maskedPhoneNumbersAllowed}{maskedPhoneNumbersAllowed}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1NumberParserContext_a031298a95cd278e235308e38ed325a2c} 
+bool? Ring\+Central.\+Number\+Parser\+Context.\+masked\+Phone\+Numbers\+Allowed\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Masked phone numbers are supported in the the parsing input. Provides support for the feature "{}\mbox{[}\+Masked Numbers\mbox{]}(https\+://support.\+ringcentral.\+com/article/\+Number-\/\+Masking-\/\+French-\/\+Numbers.\+html)"{}. 
+
+
+\begin{DoxyItemize}
+\item If the value is not specified or explicitly set to {\ttfamily false}, the feature "{}\+Masked Numbers"{} context is disabled for parsing. 
+\end{DoxyItemize}\Hypertarget{classRingCentral_1_1NumberParserContext_a4ad334435f54744db0262ed09cc8e213}\index{RingCentral.NumberParserContext@{RingCentral.NumberParserContext}!maskLength@{maskLength}}
+\index{maskLength@{maskLength}!RingCentral.NumberParserContext@{RingCentral.NumberParserContext}}
+\doxysubsubsection{\texorpdfstring{maskLength}{maskLength}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1NumberParserContext_a4ad334435f54744db0262ed09cc8e213} 
+long? Ring\+Central.\+Number\+Parser\+Context.\+mask\+Length\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The number of last digits of the phone number which are masked. 
+
+Absent if the request\textquotesingle{}s parameter {\ttfamily context.\+masked\+Phone\+Numbers\+Allowed} value is set to {\ttfamily false}. Format\+: int32 Example\+: 4 \Hypertarget{classRingCentral_1_1NumberParserContext_a0564958cbd9c5f836f65e79ffb4de027}\index{RingCentral.NumberParserContext@{RingCentral.NumberParserContext}!maskSymbol@{maskSymbol}}
+\index{maskSymbol@{maskSymbol}!RingCentral.NumberParserContext@{RingCentral.NumberParserContext}}
+\doxysubsubsection{\texorpdfstring{maskSymbol}{maskSymbol}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1NumberParserContext_a0564958cbd9c5f836f65e79ffb4de027} 
+string Ring\+Central.\+Number\+Parser\+Context.\+mask\+Symbol\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+A character used for masking phone numbers. 
+
+Absent if the request\textquotesingle{}s parameter {\ttfamily context.\+masked\+Phone\+Numbers\+Allowed} value is set to {\ttfamily false}. Example\+: X \Hypertarget{classRingCentral_1_1NumberParserContext_ab9e3a5cd0cee43ef4eec098776ca632c}\index{RingCentral.NumberParserContext@{RingCentral.NumberParserContext}!maxExtensionNumberLength@{maxExtensionNumberLength}}
+\index{maxExtensionNumberLength@{maxExtensionNumberLength}!RingCentral.NumberParserContext@{RingCentral.NumberParserContext}}
+\doxysubsubsection{\texorpdfstring{maxExtensionNumberLength}{maxExtensionNumberLength}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1NumberParserContext_ab9e3a5cd0cee43ef4eec098776ca632c} 
+long? Ring\+Central.\+Number\+Parser\+Context.\+max\+Extension\+Number\+Length\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The maximum allowed length of extension numbers on the account. Provides support for the dial plan feature "{}\mbox{[}\+Variable-\/length Extensions\mbox{]}(https\+://support.\+ringcentral.\+com/article/11277-\/\+Enterprise-\/\+Dial-\/\+Plan-\/\+Max-\/\+Extension-\/\+Length.\+html)"{}. 
+
+
+\begin{DoxyItemize}
+\item If the value is not specified, it\textquotesingle{}s taken from the context source\+:
+\begin{DoxyItemize}
+\item {\ttfamily Default} -\/\texorpdfstring{$>$}{>} {\itshape 5}
+\item {\ttfamily Account} -\/\texorpdfstring{$>$}{>} the value from the requester\textquotesingle{}s account settings
+\end{DoxyItemize}
+\item Explicitly set value redefines the value taken from the context source.
+\item Explicitly set {\ttfamily null} value disables extension numbers detection. Maximum\+: 9 Minimum\+: 1 Format\+: int32 
+\end{DoxyItemize}\Hypertarget{classRingCentral_1_1NumberParserContext_a8a66d4a975c02d78523aa2b9709eed08}\index{RingCentral.NumberParserContext@{RingCentral.NumberParserContext}!outboundCallPrefix@{outboundCallPrefix}}
+\index{outboundCallPrefix@{outboundCallPrefix}!RingCentral.NumberParserContext@{RingCentral.NumberParserContext}}
+\doxysubsubsection{\texorpdfstring{outboundCallPrefix}{outboundCallPrefix}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1NumberParserContext_a8a66d4a975c02d78523aa2b9709eed08} 
+string Ring\+Central.\+Number\+Parser\+Context.\+outbound\+Call\+Prefix\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Digit of outbound call prefix on the account. Provides support for the dial plan feature "{}\mbox{[}\+Outbound Call Prefix\mbox{]}(https\+://support.\+ringcentral.\+com/article/11278-\/\+Enterprise-\/\+Dial-\/\+Plan-\/\+Outbound-\/\+Call-\/\+Prefix.\+html)"{}. 
+
+
+\begin{DoxyItemize}
+\item If the value is not specified, it\textquotesingle{}s taken from the context source\+:
+\begin{DoxyItemize}
+\item {\ttfamily Default} -\/\texorpdfstring{$>$}{>} {\ttfamily null}
+\item {\ttfamily Account} -\/\texorpdfstring{$>$}{>} the value from the requester\textquotesingle{}s account settings
+\end{DoxyItemize}
+\item Explicitly set value redefines the value taken from the context source.
+\item Explicitly set {\ttfamily null} value disables outbound call prefix detection. Example\+: 9 
+\end{DoxyItemize}\Hypertarget{classRingCentral_1_1NumberParserContext_a2c2922bc11a3908a79281941601d0c6a}\index{RingCentral.NumberParserContext@{RingCentral.NumberParserContext}!shortCodesAllowed@{shortCodesAllowed}}
+\index{shortCodesAllowed@{shortCodesAllowed}!RingCentral.NumberParserContext@{RingCentral.NumberParserContext}}
+\doxysubsubsection{\texorpdfstring{shortCodesAllowed}{shortCodesAllowed}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1NumberParserContext_a2c2922bc11a3908a79281941601d0c6a} 
+bool? Ring\+Central.\+Number\+Parser\+Context.\+short\+Codes\+Allowed\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Short codes are supported in the parsing input. Provides support for the feature "{}\+Shortcodes dialing"{}. 
+
+
+\begin{DoxyItemize}
+\item If the value is not specified, it\textquotesingle{}s taken from the context source\+:
+\begin{DoxyItemize}
+\item {\ttfamily Default} -\/\texorpdfstring{$>$}{>} {\ttfamily false}
+\item {\ttfamily Account} -\/\texorpdfstring{$>$}{>} the value from the requester\textquotesingle{}s account settings
+\end{DoxyItemize}
+\item Explicitly set value redefines the value taken from the context source. 
+\end{DoxyItemize}\Hypertarget{classRingCentral_1_1NumberParserContext_aeed990bd63c838e82862a082c069e94d}\index{RingCentral.NumberParserContext@{RingCentral.NumberParserContext}!shortExtensionNumberLength@{shortExtensionNumberLength}}
+\index{shortExtensionNumberLength@{shortExtensionNumberLength}!RingCentral.NumberParserContext@{RingCentral.NumberParserContext}}
+\doxysubsubsection{\texorpdfstring{shortExtensionNumberLength}{shortExtensionNumberLength}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1NumberParserContext_aeed990bd63c838e82862a082c069e94d} 
+long? Ring\+Central.\+Number\+Parser\+Context.\+short\+Extension\+Number\+Length\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The allowed length of short extension numbers on the account. Together with parameter {\ttfamily context.\+site\+Code} provides support for the feature "{}\mbox{[}\+Site Codes\mbox{]}(https\+://support.\+ringcentral.\+com/article/11279-\/\+Enterprise-\/\+Dial-\/\+Plan-\/\+Site-\/\+Codes.\+html)"{}. 
+
+
+\begin{DoxyItemize}
+\item The value is ignored and treated as {\ttfamily null} if parameter {\ttfamily context.\+site\+Code} is not specified or explicitly set to {\ttfamily null}.
+\item If the value is not specified, it\textquotesingle{}s taken from the context source\+:
+\begin{DoxyItemize}
+\item {\ttfamily Default} -\/\texorpdfstring{$>$}{>} {\itshape 3}
+\item {\ttfamily Account} -\/\texorpdfstring{$>$}{>} the value from the requester\textquotesingle{}s account settings
+\end{DoxyItemize}
+\item Explicitly set value redefines the value taken from the context source. Maximum\+: 8 Minimum\+: 1 Format\+: int32 Example\+: 4 
+\end{DoxyItemize}\Hypertarget{classRingCentral_1_1NumberParserContext_a5a370148715a31915e670bcff9a4fe89}\index{RingCentral.NumberParserContext@{RingCentral.NumberParserContext}!siteCode@{siteCode}}
+\index{siteCode@{siteCode}!RingCentral.NumberParserContext@{RingCentral.NumberParserContext}}
+\doxysubsubsection{\texorpdfstring{siteCode}{siteCode}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1NumberParserContext_a5a370148715a31915e670bcff9a4fe89} 
+string Ring\+Central.\+Number\+Parser\+Context.\+site\+Code\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The site code of caller. Together with parameter {\ttfamily context.\+short\+Extension\+Number\+Length} provides support for the feature "{}\mbox{[}\+Site Codes\mbox{]}(https\+://support.\+ringcentral.\+com/article/11279-\/\+Enterprise-\/\+Dial-\/\+Plan-\/\+Site-\/\+Codes.\+html)"{}. 
+
+
+\begin{DoxyItemize}
+\item If the value is not specified or explicitly set to {\ttfamily null}, the feature "{}\+Site Codes"{} context is disabled for parsing. Example\+: 13 
+\end{DoxyItemize}\Hypertarget{classRingCentral_1_1NumberParserContext_a5a73be50e2cbc10bb079baf29b3d9728}\index{RingCentral.NumberParserContext@{RingCentral.NumberParserContext}!vanityPhoneNumbersAllowed@{vanityPhoneNumbersAllowed}}
+\index{vanityPhoneNumbersAllowed@{vanityPhoneNumbersAllowed}!RingCentral.NumberParserContext@{RingCentral.NumberParserContext}}
+\doxysubsubsection{\texorpdfstring{vanityPhoneNumbersAllowed}{vanityPhoneNumbersAllowed}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1NumberParserContext_a5a73be50e2cbc10bb079baf29b3d9728} 
+bool? Ring\+Central.\+Number\+Parser\+Context.\+vanity\+Phone\+Numbers\+Allowed\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Vanity phone numbers are supported in the parsing input. Provides support for the feature "{}\mbox{[}\+Vanity Numbers dialing\mbox{]}(https\+://support.\+ringcentral.\+com/article/\+Requesting-\/a-\/toll-\/free-\/vanity-\/number.\+html)"{}. 
+
+
+\begin{DoxyItemize}
+\item If the value is not specified, it\textquotesingle{}s taken from the context source\+:
+\begin{DoxyItemize}
+\item {\ttfamily Default} -\/\texorpdfstring{$>$}{>} {\ttfamily false}
+\item {\ttfamily Account} -\/\texorpdfstring{$>$}{>} {\ttfamily true}
+\end{DoxyItemize}
+\item Explicitly set value redefines the value taken from the context source. Example\+: true 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Number\+Parser\+Context.\+cs\end{DoxyCompactItemize}

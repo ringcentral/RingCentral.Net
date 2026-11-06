@@ -1,0 +1,22 @@
+\doxysection{Ring\+Central.\+Event\+Recurrence\+Info Class Reference}
+\hypertarget{classRingCentral_1_1EventRecurrenceInfo}{}\label{classRingCentral_1_1EventRecurrenceInfo}\index{RingCentral.EventRecurrenceInfo@{RingCentral.EventRecurrenceInfo}}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1EventRecurrenceInfo_a0a6643b8b4c3b98dfffe3c49cf017d12}\label{classRingCentral_1_1EventRecurrenceInfo_a0a6643b8b4c3b98dfffe3c49cf017d12} 
+string {\bfseries schedule}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Event recurrence settings. For non-\/periodic events the value is {\ttfamily None}. Must be greater or equal to event duration\+: 1-\/ Day/\+Weekday; 7 -\/ Week; 28 -\/ Month; 365 -\/ Year Enum\+: None, Day, Weekday, Week, Month, Year. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1EventRecurrenceInfo_a192a3c6605bec5581226a29144bc3165}\label{classRingCentral_1_1EventRecurrenceInfo_a192a3c6605bec5581226a29144bc3165} 
+string {\bfseries ending\+Condition}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Condition of ending an event Enum\+: None, Count, Date. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1EventRecurrenceInfo_acab4f169a0955059750b62e0324c73b1}\label{classRingCentral_1_1EventRecurrenceInfo_acab4f169a0955059750b62e0324c73b1} 
+long? {\bfseries ending\+After}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Count of event iterations. For periodic events only. Value range is 1 -\/ 10. Must be specified if {\ttfamily \doxylink{classRingCentral_1_1EventRecurrenceInfo_a192a3c6605bec5581226a29144bc3165}{ending\+Condition}} is {\ttfamily Count} Format\+: int32. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1EventRecurrenceInfo_a4feead0e7fb034368765adb8bfda988e}\label{classRingCentral_1_1EventRecurrenceInfo_a4feead0e7fb034368765adb8bfda988e} 
+string {\bfseries ending\+On}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Iterations ending datetime for periodic events in \href{https://en.wikipedia.org/wiki/ISO_8601}{\texttt{ISO 8601}} format Format\+: date-\/time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Event\+Recurrence\+Info.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,12 @@
+digraph "RingCentral.Net/Paths/Restapi/Dictionary/Permission"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_5fe31065c7f927e0eadc2868f5b0bf27 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Dictionary", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_5fe31065c7f927e0eadc2868f5b0bf27.html",tooltip=""]
+  dir_4ed37cbc3da9103973118e7869b91761 [label="Permission", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_4ed37cbc3da9103973118e7869b91761.html",tooltip=""];
+  }
+}

@@ -1,8 +1,9 @@
 digraph "Graphical Class Hierarchy"
 {
  // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [label="RingCentral.MessageStore\lCallerInfoRequest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1MessageStoreCallerInfoRequest.html",tooltip="Message sender information. The phoneNumber value should be one the account phone numbers allowed to ..."];
+  Node0 [id="Node000000",label="RingCentral.GetExtension\lAccountInfo",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classRingCentral_1_1GetExtensionAccountInfo.html",tooltip="Account information."];
 }

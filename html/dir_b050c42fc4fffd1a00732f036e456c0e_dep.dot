@@ -1,0 +1,12 @@
+digraph "RingCentral.Net/Paths/TeamMessaging/V1/Notes/Publish"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_a66e53cc751a3534f7df171d53648c47 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Notes", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_a66e53cc751a3534f7df171d53648c47.html",tooltip=""]
+  dir_b050c42fc4fffd1a00732f036e456c0e [label="Publish", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_b050c42fc4fffd1a00732f036e456c0e.html",tooltip=""];
+  }
+}

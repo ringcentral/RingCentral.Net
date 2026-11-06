@@ -1,0 +1,47 @@
+\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Message\+Store\+Templates.\+Index Class Reference}
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index}{}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index}\index{RingCentral.Paths.Restapi.Account.MessageStoreTemplates.Index@{RingCentral.Paths.Restapi.Account.MessageStoreTemplates.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Message\+Store\+Templates.\+Index\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index_a7ce0d6835d32e80d9043af799fe7e745}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index_a7ce0d6835d32e80d9043af799fe7e745} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Restapi.\+Account.\+Index}} parent, string template\+Id=null)
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index_a81887513dee73f9538d66ab25062beb0}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index_a81887513dee73f9538d66ab25062beb0} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index_a49908e6bd2aaf22ddabc33c3c566ea75}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index_a49908e6bd2aaf22ddabc33c3c566ea75} 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1MessageTemplatesListResponse}{Ring\+Central.\+Message\+Templates\+List\+Response}} $>$ {\bfseries List} (\mbox{\hyperlink{classRingCentral_1_1ListCompanyMessageTemplatesParameters}{Ring\+Central.\+List\+Company\+Message\+Templates\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a list of company text message templates. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/message-\/store-\/templates Rate Limit Group\+: Light App Permission\+: Read\+Accounts. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index_adcb3f81a9db2e6dd9c4ae7e0335a331b}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index_adcb3f81a9db2e6dd9c4ae7e0335a331b} 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1MessageTemplateResponse}{Ring\+Central.\+Message\+Template\+Response}} $>$ {\bfseries Post} (\mbox{\hyperlink{classRingCentral_1_1MessageTemplateRequest}{Ring\+Central.\+Message\+Template\+Request}} message\+Template\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates a new text message template on a company level. Maximum number of company templates is 50. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/message-\/store-\/templates Rate Limit Group\+: Medium App Permission\+: Edit\+Accounts. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index_a34f55ca8138f84b510d770aca683b80b}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index_a34f55ca8138f84b510d770aca683b80b} 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1MessageTemplateResponse}{Ring\+Central.\+Message\+Template\+Response}} $>$ {\bfseries Get} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a company text message template by ID. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/message-\/store-\/templates/\{template\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index_a7642e9ffb8b6371b19a8054fe4994d10}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index_a7642e9ffb8b6371b19a8054fe4994d10} 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1MessageTemplateResponse}{Ring\+Central.\+Message\+Template\+Response}} $>$ {\bfseries Put} (\mbox{\hyperlink{classRingCentral_1_1MessageTemplateRequest}{Ring\+Central.\+Message\+Template\+Request}} message\+Template\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates a company text message template. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/message-\/store-\/templates/\{template\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Accounts. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index_aa6223811d74c12f4de687176dff818d8}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index_aa6223811d74c12f4de687176dff818d8} 
+async Task$<$ string $>$ {\bfseries Delete} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes a company text message template. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/message-\/store-\/templates/\{template\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Accounts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index_aa3e709b800b2df70bc4ed93ca19708b9}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index_aa3e709b800b2df70bc4ed93ca19708b9} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index_a04b44cb00f56ff4facc8fa43bf8844cb}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index_a04b44cb00f56ff4facc8fa43bf8844cb} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Index}{Restapi.\+Account.\+Index}} {\bfseries parent}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index_ac8e8e307e49f35d28f0d9f8d4f2928a3}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageStoreTemplates_1_1Index_ac8e8e307e49f35d28f0d9f8d4f2928a3} 
+string {\bfseries template\+Id}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Message\+Store\+Templates/Index.\+cs\end{DoxyCompactItemize}

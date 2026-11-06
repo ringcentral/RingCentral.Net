@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['authorize_20uri_20extension_5941',['Authorize URI extension',['../md_RingCentral_Net_AuthorizeUri_README.html',1,'']]],
-  ['auto_20refresh_20extension_5942',['Auto Refresh Extension',['../md_RingCentral_Net_AutoRefresh_README.html',1,'']]]
+  ['24_207_20long_20running_20applications_0',['24 * 7 long running applications',['../dir_2911b8baa319529cf998d62d7f517bda.html#autotoc_md2',1,'']]]
 ];

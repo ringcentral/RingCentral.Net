@@ -1,0 +1,5 @@
+var namespaceRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1Devices =
+[
+    [ "Replace", "namespaceRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1Devices_1_1Replace.html", "namespaceRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1Devices_1_1Replace" ],
+    [ "Index", "classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1Devices_1_1Index.html", null ]
+];

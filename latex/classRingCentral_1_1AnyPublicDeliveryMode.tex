@@ -1,0 +1,27 @@
+\doxysection{Ring\+Central.\+Any\+Public\+Delivery\+Mode Class Reference}
+\hypertarget{classRingCentral_1_1AnyPublicDeliveryMode}{}\label{classRingCentral_1_1AnyPublicDeliveryMode}\index{RingCentral.AnyPublicDeliveryMode@{RingCentral.AnyPublicDeliveryMode}}
+
+
+Notification delivery transport information.  
+
+
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1AnyPublicDeliveryMode_adc8fa309ef18902cc1799b472b222dde}\label{classRingCentral_1_1AnyPublicDeliveryMode_adc8fa309ef18902cc1799b472b222dde} 
+string {\bfseries transport\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The transport type for this subscription Required Enum\+: Web\+Hook, Web\+Socket. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1AnyPublicDeliveryMode_af7b02383ba34307300ca46ce9446c5fa}\label{classRingCentral_1_1AnyPublicDeliveryMode_af7b02383ba34307300ca46ce9446c5fa} 
+string {\bfseries address}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The URL to which notifications should be delivered. This is only applicable for the {\ttfamily Web\+Hook} transport type, for which it is a required field. Required Format\+: uri Example\+: \href{https://acme.com/myservice/webhook}{\texttt{https\+://acme.\+com/myservice/webhook}}. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1AnyPublicDeliveryMode_a2c5f383bbb161820d157e302faa10489}\label{classRingCentral_1_1AnyPublicDeliveryMode_a2c5f383bbb161820d157e302faa10489} 
+bool? {\bfseries encryption}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies if notification messages will be encrypted or not. Required Enum\+: false. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Notification delivery transport information. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Any\+Public\+Delivery\+Mode.\+cs\end{DoxyCompactItemize}

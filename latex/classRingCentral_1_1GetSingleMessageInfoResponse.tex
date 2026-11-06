@@ -1,0 +1,100 @@
+\doxysection{Ring\+Central.\+Get\+Single\+Message\+Info\+Response Class Reference}
+\hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse}{}\label{classRingCentral_1_1GetSingleMessageInfoResponse}\index{RingCentral.GetSingleMessageInfoResponse@{RingCentral.GetSingleMessageInfoResponse}}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_a3bbed9f1d80e1e3467c5ec4c4947f385}\label{classRingCentral_1_1GetSingleMessageInfoResponse_a3bbed9f1d80e1e3467c5ec4c4947f385} 
+long? {\bfseries id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a message Format\+: int64 Example\+: 1724099032020. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_a8b9db5329a497d16adf88ea75ec38ac2}\label{classRingCentral_1_1GetSingleMessageInfoResponse_a8b9db5329a497d16adf88ea75ec38ac2} 
+string {\bfseries uri}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Canonical URI of a message Format\+: uri. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_a462ffb8c504503f223cf0fb460477514}\label{classRingCentral_1_1GetSingleMessageInfoResponse_a462ffb8c504503f223cf0fb460477514} 
+string {\bfseries extension\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of an extension. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_a1e7d35fa74ae21af6189b95adc287c59}\label{classRingCentral_1_1GetSingleMessageInfoResponse_a1e7d35fa74ae21af6189b95adc287c59} 
+\mbox{\hyperlink{classRingCentral_1_1MessageAttachmentInfo}{Message\+Attachment\+Info}}\mbox{[}$\,$\mbox{]} {\bfseries attachments}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of message attachments. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_a79c64e3e72a7c7f9db777973c345c4bc}\label{classRingCentral_1_1GetSingleMessageInfoResponse_a79c64e3e72a7c7f9db777973c345c4bc} 
+string {\bfseries availability}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message availability status. Message in {\ttfamily Deleted} state is still preserved with all its attachments and can be restored. {\ttfamily Purged} means that all attachments are already deleted and the message itself is about to be physically deleted shortly Enum\+: Alive, Deleted, Purged. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_a91e94a3ca5f07100f8b0d2ce1219c39a}\label{classRingCentral_1_1GetSingleMessageInfoResponse_a91e94a3ca5f07100f8b0d2ce1219c39a} 
+long? {\bfseries conversation\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em SMS and Pager only. Identifier of a conversation the message belongs to Format\+: int64. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_aa04d8aec052fa23b762b6f154c9e9dda}\label{classRingCentral_1_1GetSingleMessageInfoResponse_aa04d8aec052fa23b762b6f154c9e9dda} 
+\mbox{\hyperlink{classRingCentral_1_1ConversationInfo}{Conversation\+Info}} {\bfseries conversation}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_ad24e8d9cf169572579cb1bfa939c1ca6}\label{classRingCentral_1_1GetSingleMessageInfoResponse_ad24e8d9cf169572579cb1bfa939c1ca6} 
+string {\bfseries creation\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message creation date/time in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z Format\+: date-\/time. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_af6e3a2b463ed4c691628e7101173a0aa}\label{classRingCentral_1_1GetSingleMessageInfoResponse_af6e3a2b463ed4c691628e7101173a0aa} 
+string {\bfseries delivery\+Error\+Code}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em SMS only. Delivery error code returned by gateway. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_a90e8183baad342679ad4051ac4e28e0d}\label{classRingCentral_1_1GetSingleMessageInfoResponse_a90e8183baad342679ad4051ac4e28e0d} 
+long? {\bfseries segment\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em SMS size in segments Format\+: int32. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_a1e97ea8edd97c3e4d9b8cc9e3d44a9a3}\label{classRingCentral_1_1GetSingleMessageInfoResponse_a1e97ea8edd97c3e4d9b8cc9e3d44a9a3} 
+string {\bfseries direction}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message direction (inbound or outbound) Enum\+: Inbound, Outbound. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_aedf8bda1900a04688ddccffe3c1365c4}\label{classRingCentral_1_1GetSingleMessageInfoResponse_aedf8bda1900a04688ddccffe3c1365c4} 
+long? {\bfseries fax\+Page\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Fax only. Page count in a fax message Format\+: int32. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_a0696c333b91330f7fa7db6417ac70337}\label{classRingCentral_1_1GetSingleMessageInfoResponse_a0696c333b91330f7fa7db6417ac70337} 
+string {\bfseries fax\+Resolution}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Fax only. Resolution of a fax message. \textquotesingle{}High\textquotesingle{} for black and white image scanned at 200 dpi, \textquotesingle{}Low\textquotesingle{} for black and white image scanned at 100 dpi Enum\+: High, Low. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_aa8aeba9a654135746114dc2c24dd4424}\label{classRingCentral_1_1GetSingleMessageInfoResponse_aa8aeba9a654135746114dc2c24dd4424} 
+\mbox{\hyperlink{classRingCentral_1_1MessageStoreCallerInfoResponseFrom}{Message\+Store\+Caller\+Info\+Response\+From}} {\bfseries from}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_aee372ea6c679f0ee22f9ade1c597615e}\label{classRingCentral_1_1GetSingleMessageInfoResponse_aee372ea6c679f0ee22f9ade1c597615e} 
+string {\bfseries last\+Modified\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The date/time when the message was modified on server in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z Format\+: date-\/time. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_ac7d9945a19908155f8bb1d2ae224cf05}\label{classRingCentral_1_1GetSingleMessageInfoResponse_ac7d9945a19908155f8bb1d2ae224cf05} 
+string {\bfseries message\+Status}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message status. Different message types may have different allowed status values. For outbound faxes the aggregated message status is returned. If, for multi-\/recipient outbound message, a status for at least one recipient is {\ttfamily Queued}, then the {\ttfamily Queued} value is returned. If a status for at least one recipient is {\ttfamily Sending\+Failed}, then the \textquotesingle{}Sending\+Failed\textquotesingle{} value is returned. In other cases, the {\ttfamily Sent} status is returned Enum\+: Queued, Sent, Delivered, Delivery\+Failed, Sending\+Failed, Received. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_a8c561523bd924a61163f1a6d5eb75d0b}\label{classRingCentral_1_1GetSingleMessageInfoResponse_a8c561523bd924a61163f1a6d5eb75d0b} 
+bool? {\bfseries pg\+To\+Department}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Pager only. {\ttfamily true} if at least one of the message recipients is \textquotesingle{}Department\textquotesingle{} extension. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_ae2339abcc9721c0f92d9763d04d94103}\label{classRingCentral_1_1GetSingleMessageInfoResponse_ae2339abcc9721c0f92d9763d04d94103} 
+string {\bfseries priority}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message priority Enum\+: Normal, High. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_a99c7eda9cd3aeb0f4f67531291c85461}\label{classRingCentral_1_1GetSingleMessageInfoResponse_a99c7eda9cd3aeb0f4f67531291c85461} 
+string {\bfseries read\+Status}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message read status Enum\+: Read, Unread. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_ad1b05b1231cb513781ff6041cba08fee}\label{classRingCentral_1_1GetSingleMessageInfoResponse_ad1b05b1231cb513781ff6041cba08fee} 
+string {\bfseries sms\+Delivery\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em SMS only. Date/time when outbound SMS was delivered to recipient\textquotesingle{}s handset in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z. It is filled only if a carrier sends a delivery receipt to \doxylink{namespaceRingCentral}{Ring\+Central} Format\+: date-\/time. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_a97607d03936a5500f3d5cd2525b2731e}\label{classRingCentral_1_1GetSingleMessageInfoResponse_a97607d03936a5500f3d5cd2525b2731e} 
+long? {\bfseries sms\+Sending\+Attempts\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em SMS only. Number of attempts made to send an outbound SMS to the Gateway (if Gateway is temporary unavailable) Format\+: int32. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_a18d5278c72d980a7f37c3199446aef8d}\label{classRingCentral_1_1GetSingleMessageInfoResponse_a18d5278c72d980a7f37c3199446aef8d} 
+string {\bfseries subject}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message subject. For SMS and Pager messages it replicates message text which is also returned as an attachment. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_a5bca1cb2f56b68989e94c9962a57a547}\label{classRingCentral_1_1GetSingleMessageInfoResponse_a5bca1cb2f56b68989e94c9962a57a547} 
+\mbox{\hyperlink{classRingCentral_1_1MessageStoreCallerInfoResponseTo}{Message\+Store\+Caller\+Info\+Response\+To}}\mbox{[}$\,$\mbox{]} {\bfseries to}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Recipient information. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_afad119319dcb98dbc1f7e00c678e4045}\label{classRingCentral_1_1GetSingleMessageInfoResponse_afad119319dcb98dbc1f7e00c678e4045} 
+string {\bfseries type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message type Enum\+: Fax, SMS, Voice\+Mail, Pager, Text. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_a19a17c38c0509e595cabae708048c2a2}\label{classRingCentral_1_1GetSingleMessageInfoResponse_a19a17c38c0509e595cabae708048c2a2} 
+string {\bfseries vm\+Transcription\+Status}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Voicemail only. Status of a voicemail to text transcription. If \textquotesingle{}Voicemail\+To\+Text\textquotesingle{} feature is not activated for account, the \textquotesingle{}Not\+Available\textquotesingle{} value is returned Enum\+: Not\+Available, In\+Progress, Timed\+Out, Completed, Completed\+Partially, Failed, Unknown. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_a3e7af984360f19a8fb1ed9f92258d1f3}\label{classRingCentral_1_1GetSingleMessageInfoResponse_a3e7af984360f19a8fb1ed9f92258d1f3} 
+long? {\bfseries cover\+Index}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Cover page identifier. If cover\+Index is set to \textquotesingle{}0\textquotesingle{} (zero) cover page is not attached. For the list of available cover page identifiers (1-\/13) please call the Fax Cover Pages method. If not specified, the default cover page is attached (which is configured in \textquotesingle{}Outbound Fax Settings\textquotesingle{}) Format\+: int32. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_a45fdfce1c0c17a6a96a76c7c8494a19a}\label{classRingCentral_1_1GetSingleMessageInfoResponse_a45fdfce1c0c17a6a96a76c7c8494a19a} 
+string {\bfseries cover\+Page\+Text}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Cover page text, entered by the fax sender and printed on the cover page. Maximum length is limited to 1024 symbols. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_a17299beed1c69a4f960545300f682ebd}\label{classRingCentral_1_1GetSingleMessageInfoResponse_a17299beed1c69a4f960545300f682ebd} 
+\mbox{\hyperlink{classRingCentral_1_1OwnerResource}{Owner\+Resource}} {\bfseries owner}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_ae7483c5d9286dd98df032a5f9bc96970}\label{classRingCentral_1_1GetSingleMessageInfoResponse_ae7483c5d9286dd98df032a5f9bc96970} 
+\mbox{\hyperlink{classRingCentral_1_1GetMessageForwardingInfo}{Get\+Message\+Forwarding\+Info}} {\bfseries forwarding}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{classRingCentral_1_1GetSingleMessageInfoResponse_ad666a480303641166871aee3015f2781}\label{classRingCentral_1_1GetSingleMessageInfoResponse_ad666a480303641166871aee3015f2781} 
+\mbox{\hyperlink{classRingCentral_1_1MessageStoreCallerInfoResponseTo}{Message\+Store\+Caller\+Info\+Response\+To}}\mbox{[}$\,$\mbox{]} {\bfseries vm\+Side\+Recipients}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of other users (side recipients) who also received the voicemail in case of VM sending to multiple users or VM forwarding to multiple users. Required. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Get\+Single\+Message\+Info\+Response.\+cs\end{DoxyCompactItemize}

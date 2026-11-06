@@ -1,0 +1,5 @@
+var namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1SmsRecipients =
+[
+    [ "BulkAssign", "namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1SmsRecipients_1_1BulkAssign.html", "namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1SmsRecipients_1_1BulkAssign" ],
+    [ "Index", "classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1SmsRecipients_1_1Index.html", "classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1SmsRecipients_1_1Index" ]
+];

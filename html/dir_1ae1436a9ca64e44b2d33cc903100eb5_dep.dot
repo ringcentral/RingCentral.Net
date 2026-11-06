@@ -1,0 +1,16 @@
+digraph "RingCentral.Net/Paths/Ai"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_4624619dc4b6fee1c25adb94504baa6a {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Paths", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_4624619dc4b6fee1c25adb94504baa6a.html",tooltip=""]
+  subgraph clusterdir_1ae1436a9ca64e44b2d33cc903100eb5 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_1ae1436a9ca64e44b2d33cc903100eb5.html",tooltip=""]
+    dir_1ae1436a9ca64e44b2d33cc903100eb5 [shape=plaintext, label="Ai"];
+  dir_d93ca0b711d2e31fb8bda9fc40f6c236 [label="Ringsense", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_d93ca0b711d2e31fb8bda9fc40f6c236.html",tooltip=""];
+  }
+  }
+}

@@ -1,0 +1,12 @@
+digraph "RingCentral.Net/Paths/Webinar/Registration/V1/Sessions/Registrants"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_fb78b817e59b910e1f07131c04c1e6a1 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Sessions", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_fb78b817e59b910e1f07131c04c1e6a1.html",tooltip=""]
+  dir_93be088455fc780acaca6d0ffa641790 [label="Registrants", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_93be088455fc780acaca6d0ffa641790.html",tooltip=""];
+  }
+}

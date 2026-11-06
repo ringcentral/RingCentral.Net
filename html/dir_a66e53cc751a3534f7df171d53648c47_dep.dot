@@ -1,0 +1,18 @@
+digraph "RingCentral.Net/Paths/TeamMessaging/V1/Notes"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_a14a16799be183b43dabfc63cb947b03 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="V1", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_a14a16799be183b43dabfc63cb947b03.html",tooltip=""]
+  subgraph clusterdir_a66e53cc751a3534f7df171d53648c47 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_a66e53cc751a3534f7df171d53648c47.html",tooltip=""]
+    dir_a66e53cc751a3534f7df171d53648c47 [shape=plaintext, label="Notes"];
+  dir_05b9be71fe01aae5ee68eca92ca4c48c [label="Lock", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_05b9be71fe01aae5ee68eca92ca4c48c.html",tooltip=""];
+  dir_b050c42fc4fffd1a00732f036e456c0e [label="Publish", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_b050c42fc4fffd1a00732f036e456c0e.html",tooltip=""];
+  dir_6ede89323e4664f16abbf9b30b504f33 [label="Unlock", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_6ede89323e4664f16abbf9b30b504f33.html",tooltip=""];
+  }
+  }
+}

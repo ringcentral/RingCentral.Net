@@ -1,0 +1,5 @@
+var namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1SmsRegistrationBrands_1_1Campaigns =
+[
+    [ "SubmitPhoneNumbers", "namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1SmsRegistrationBrands_1_1Campaigns_1_1SubmitPhoneNumbers.html", "namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1SmsRegistrationBrands_1_1Campaigns_1_1SubmitPhoneNumbers" ],
+    [ "Index", "classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1SmsRegistrationBrands_1_1Campaigns_1_1Index.html", "classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1SmsRegistrationBrands_1_1Campaigns_1_1Index" ]
+];

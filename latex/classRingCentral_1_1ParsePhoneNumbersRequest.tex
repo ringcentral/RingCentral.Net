@@ -1,0 +1,70 @@
+\doxysection{Ring\+Central.\+Parse\+Phone\+Numbers\+Request Class Reference}
+\hypertarget{classRingCentral_1_1ParsePhoneNumbersRequest}{}\label{classRingCentral_1_1ParsePhoneNumbersRequest}\index{RingCentral.ParsePhoneNumbersRequest@{RingCentral.ParsePhoneNumbersRequest}}
+
+
+Phone Number Parser service\textquotesingle{}s Parse Phone Numbers API request schema.  
+
+
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1ParsePhoneNumbersRequest_a20024a9b6670ecdec5094bd51d320ab8}{original\+Strings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Array of strings containing numbers to be parsed. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1ParsePhoneNumbersRequest_a468f2117c654cec97af524c9e3476bb0}{context\+Source}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The source of the parsing context. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1ParsePhoneNumbersRequest_aae88e1b84eb0e35d80e21b4100b50af2}\label{classRingCentral_1_1ParsePhoneNumbersRequest_aae88e1b84eb0e35d80e21b4100b50af2} 
+\mbox{\hyperlink{classRingCentral_1_1NumberParserContext}{Number\+Parser\+Context}} {\bfseries context}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{classRingCentral_1_1ParsePhoneNumbersRequest_afcf62a955488d9d149d8dc08ab6ef6a1}\label{classRingCentral_1_1ParsePhoneNumbersRequest_afcf62a955488d9d149d8dc08ab6ef6a1} 
+\mbox{\hyperlink{classRingCentral_1_1ResultContent}{Result\+Content}} {\bfseries result\+Content}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Phone Number Parser service\textquotesingle{}s Parse Phone Numbers API request schema. 
+
+\label{doc-property-members}
+\Hypertarget{classRingCentral_1_1ParsePhoneNumbersRequest_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{classRingCentral_1_1ParsePhoneNumbersRequest_a468f2117c654cec97af524c9e3476bb0}\index{RingCentral.ParsePhoneNumbersRequest@{RingCentral.ParsePhoneNumbersRequest}!contextSource@{contextSource}}
+\index{contextSource@{contextSource}!RingCentral.ParsePhoneNumbersRequest@{RingCentral.ParsePhoneNumbersRequest}}
+\doxysubsubsection{\texorpdfstring{contextSource}{contextSource}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1ParsePhoneNumbersRequest_a468f2117c654cec97af524c9e3476bb0} 
+string Ring\+Central.\+Parse\+Phone\+Numbers\+Request.\+context\+Source\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The source of the parsing context. 
+
+{\bfseries{Possible values}}\+: ~\newline
+-\/ {\ttfamily Default} -\/ using default values of parameters for the parsing; ~\newline
+-\/ {\ttfamily Account} -\/ populating parsing context from requester\textquotesingle{}s account settings. 
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}{\ttfamily context.}  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}{\ttfamily Default}  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}{\ttfamily Account}  \\
+{\ttfamily brand\+Id}  &{\ttfamily null}  &brand from the request context header  \\
+{\ttfamily country}  &{\ttfamily null}  &home country of the requester\textquotesingle{}s account  \\
+{\ttfamily default\+Area\+Code}  &{\ttfamily null}  &{\ttfamily null}  \\
+{\ttfamily vanity\+Phone\+Numbers\+Allowed}  &{\ttfamily false}  &{\ttfamily true}  \\
+{\ttfamily max\+Extension\+Number\+Length}  &{\itshape 5}  &the value from the requester\textquotesingle{}s account settings  \\
+{\ttfamily short\+Codes\+Allowed}  &{\ttfamily false}  &the value from the requester\textquotesingle{}s account settings  \\
+{\ttfamily site\+Code}  &{\ttfamily null}  &{\ttfamily null}  \\
+{\ttfamily short\+Extension\+Number\+Length}  &{\itshape 3}  &the value from the requester\textquotesingle{}s account settings  \\
+{\ttfamily outbound\+Call\+Prefix}  &{\ttfamily null}  &the value from the requester\textquotesingle{}s account settings  \\
+{\ttfamily masked\+Phone\+Numbers\+Allowed}  &{\ttfamily false}  &{\ttfamily false}  \\
+{\ttfamily conflict\+Handling}  &{\ttfamily Default}  &the value from the requester\textquotesingle{}s account settings  \\
+\end{DoxyTable}
+Example\+: Account Default\+: Default Enum\+: Default, Account \Hypertarget{classRingCentral_1_1ParsePhoneNumbersRequest_a20024a9b6670ecdec5094bd51d320ab8}\index{RingCentral.ParsePhoneNumbersRequest@{RingCentral.ParsePhoneNumbersRequest}!originalStrings@{originalStrings}}
+\index{originalStrings@{originalStrings}!RingCentral.ParsePhoneNumbersRequest@{RingCentral.ParsePhoneNumbersRequest}}
+\doxysubsubsection{\texorpdfstring{originalStrings}{originalStrings}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1ParsePhoneNumbersRequest_a20024a9b6670ecdec5094bd51d320ab8} 
+string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Parse\+Phone\+Numbers\+Request.\+original\+Strings\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Array of strings containing numbers to be parsed. 
+
+Empty strings or {\ttfamily null} values of the array are ignored and excluded from the request. Required 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Parse\+Phone\+Numbers\+Request.\+cs\end{DoxyCompactItemize}

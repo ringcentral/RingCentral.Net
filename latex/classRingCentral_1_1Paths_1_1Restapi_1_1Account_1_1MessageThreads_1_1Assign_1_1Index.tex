@@ -1,0 +1,46 @@
+\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Message\+Threads.\+Assign.\+Index Class Reference}
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Assign_1_1Index}{}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Assign_1_1Index}\index{RingCentral.Paths.Restapi.Account.MessageThreads.Assign.Index@{RingCentral.Paths.Restapi.Account.MessageThreads.Assign.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Message\+Threads.\+Assign.\+Index\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Assign_1_1Index_a2ede038d53d12184c4166ee71861bf40}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Assign_1_1Index_a2ede038d53d12184c4166ee71861bf40} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Index}{Restapi.\+Account.\+Message\+Threads.\+Index}} parent)
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Assign_1_1Index_a02f43b4d176f6bdb16d16a57082ecacb}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Assign_1_1Index_a02f43b4d176f6bdb16d16a57082ecacb} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1MessageThread}{Ring\+Central.\+Message\+Thread}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Assign_1_1Index_a0c4eda08acf7a367fa2b1ee928eb92b0}{Post}} (\mbox{\hyperlink{classRingCentral_1_1AssignMessageThreadRequest}{Ring\+Central.\+Assign\+Message\+Thread\+Request}} assign\+Message\+Thread\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Assigns, unassigns, or reassigns the thread. The authorized user must be in the list of thread monitors, otherwise the API returns a 403 error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Assign_1_1Index_aa85486d25665d6c6bb630e9baf616d94}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Assign_1_1Index_aa85486d25665d6c6bb630e9baf616d94} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Assign_1_1Index_a48f0b1ad81813297fac58f16c95d62d7}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Assign_1_1Index_a48f0b1ad81813297fac58f16c95d62d7} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Index}{Restapi.\+Account.\+Message\+Threads.\+Index}} {\bfseries parent}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Assign_1_1Index_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Assign_1_1Index_a0c4eda08acf7a367fa2b1ee928eb92b0}\index{RingCentral.Paths.Restapi.Account.MessageThreads.Assign.Index@{RingCentral.Paths.Restapi.Account.MessageThreads.Assign.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.MessageThreads.Assign.Index@{RingCentral.Paths.Restapi.Account.MessageThreads.Assign.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Assign_1_1Index_a0c4eda08acf7a367fa2b1ee928eb92b0} 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1MessageThread}{Ring\+Central.\+Message\+Thread}} $>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Message\+Threads.\+Assign.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1AssignMessageThreadRequest}{Ring\+Central.\+Assign\+Message\+Thread\+Request}}}]{assign\+Message\+Thread\+Request}{, }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assigns, unassigns, or reassigns the thread. The authorized user must be in the list of thread monitors, otherwise the API returns a 403 error. 
+
+HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/message-\/threads/\{thread\+Id\}/assign Rate Limit Group\+: Medium App Permission\+: SMS 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Message\+Threads/\+Assign/Index.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,49 @@
+\doxysection{Ring\+Central.\+Search\+Sms\+Consent\+Records\+Request Class Reference}
+\hypertarget{classRingCentral_1_1SearchSmsConsentRecordsRequest}{}\label{classRingCentral_1_1SearchSmsConsentRecordsRequest}\index{RingCentral.SearchSmsConsentRecordsRequest@{RingCentral.SearchSmsConsentRecordsRequest}}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1SearchSmsConsentRecordsRequest_a76e08f2846c8873c7764213570caaddb}\label{classRingCentral_1_1SearchSmsConsentRecordsRequest_a76e08f2846c8873c7764213570caaddb} 
+string\mbox{[}$\,$\mbox{]} {\bfseries from}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The internal party\textquotesingle{}s phone number(s) used to filter records (if requested {\ttfamily \doxylink{classRingCentral_1_1SearchSmsConsentRecordsRequest_a260756f43cfa9ab82b3f68890c99ff5e}{coverage}} is {\ttfamily Phone\+Number} or {\ttfamily Account}). \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1SearchSmsConsentRecordsRequest_a1c901059aa260606fae2a900d22d95f2}\label{classRingCentral_1_1SearchSmsConsentRecordsRequest_a1c901059aa260606fae2a900d22d95f2} 
+string\mbox{[}$\,$\mbox{]} {\bfseries to}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The external party\textquotesingle{}s phone number(s) used to filter records. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SearchSmsConsentRecordsRequest_ac165aa6ca923238761dde60841c255c9}{opt\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Consent status of a recipient\textquotesingle{}s phone number\+: \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1SearchSmsConsentRecordsRequest_a260756f43cfa9ab82b3f68890c99ff5e}\label{classRingCentral_1_1SearchSmsConsentRecordsRequest_a260756f43cfa9ab82b3f68890c99ff5e} 
+string\mbox{[}$\,$\mbox{]} {\bfseries coverage}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{classRingCentral_1_1SearchSmsConsentRecordsRequest_a260756f43cfa9ab82b3f68890c99ff5e}{coverage(s)} used to filter records Enum\+: Phone\+Number, Account, Campaign\+Type. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1SearchSmsConsentRecordsRequest_a3aa8b1517e325335af184227c982d2f1}\label{classRingCentral_1_1SearchSmsConsentRecordsRequest_a3aa8b1517e325335af184227c982d2f1} 
+string\mbox{[}$\,$\mbox{]} {\bfseries campaign\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The campaign type(s) used to filter records (if requested {\ttfamily \doxylink{classRingCentral_1_1SearchSmsConsentRecordsRequest_a260756f43cfa9ab82b3f68890c99ff5e}{coverage}} is {\ttfamily Campaign\+Type}) Enum\+: Conversational, Informational, Promotional. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1SearchSmsConsentRecordsRequest_a13ee97f38019a922c5928165ce7eac6e}\label{classRingCentral_1_1SearchSmsConsentRecordsRequest_a13ee97f38019a922c5928165ce7eac6e} 
+string {\bfseries page\+Token}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The token indicating the particular page of the result set to be retrieved. If omitted the first page will be returned. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1SearchSmsConsentRecordsRequest_a638709444a6ea258f8e7fbd3b9223486}\label{classRingCentral_1_1SearchSmsConsentRecordsRequest_a638709444a6ea258f8e7fbd3b9223486} 
+long? {\bfseries per\+Page}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of items per page. If provided value in the request is greater than a maximum, the maximum value is applied Maximum\+: 1000 Minimum\+: 1 Format\+: int32 Default\+: 100. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-property-members}
+\Hypertarget{classRingCentral_1_1SearchSmsConsentRecordsRequest_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{classRingCentral_1_1SearchSmsConsentRecordsRequest_ac165aa6ca923238761dde60841c255c9}\index{RingCentral.SearchSmsConsentRecordsRequest@{RingCentral.SearchSmsConsentRecordsRequest}!optStatus@{optStatus}}
+\index{optStatus@{optStatus}!RingCentral.SearchSmsConsentRecordsRequest@{RingCentral.SearchSmsConsentRecordsRequest}}
+\doxysubsubsection{\texorpdfstring{optStatus}{optStatus}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1SearchSmsConsentRecordsRequest_ac165aa6ca923238761dde60841c255c9} 
+string Ring\+Central.\+Search\+Sms\+Consent\+Records\+Request.\+opt\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Consent status of a recipient\textquotesingle{}s phone number\+: 
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Opt\+Out} -\/ The number is opted out of receiving SMS.
+\item {\ttfamily Opt\+In} -\/ The number is opted in to receiving SMS (if it was previously opted out). Example\+: Opt\+Out Enum\+: Opt\+Out, Opt\+In 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Search\+Sms\+Consent\+Records\+Request.\+cs\end{DoxyCompactItemize}

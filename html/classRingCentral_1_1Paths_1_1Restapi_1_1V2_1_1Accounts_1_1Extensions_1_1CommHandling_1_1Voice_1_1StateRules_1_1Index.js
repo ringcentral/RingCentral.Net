@@ -1,0 +1,6 @@
+var classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1StateRules_1_1Index =
+[
+    [ "Get", "classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1StateRules_1_1Index.html#a3cd13e1a80365a8cb404f72460bac70e", null ],
+    [ "List", "classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1StateRules_1_1Index.html#a02478b8de4c56df7f2667f4c70ffd3e7", null ],
+    [ "Patch", "classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1StateRules_1_1Index.html#aa8ceeb2b6a428a6839da1aede2cee78c", null ]
+];

@@ -1,0 +1,16 @@
+digraph "RingCentral.Net/Paths/Webinar/Configuration/V1/Webinars/Sessions"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_71bee7a1373577ca94542f737538dfbf {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Webinars", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_71bee7a1373577ca94542f737538dfbf.html",tooltip=""]
+  subgraph clusterdir_d0652bc64ad9139b9a029769e2f70d71 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_d0652bc64ad9139b9a029769e2f70d71.html",tooltip=""]
+    dir_d0652bc64ad9139b9a029769e2f70d71 [shape=plaintext, label="Sessions"];
+  dir_db5a8be7a57ea9358a61de58e0dc3d84 [label="Invitees", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_db5a8be7a57ea9358a61de58e0dc3d84.html",tooltip=""];
+  }
+  }
+}

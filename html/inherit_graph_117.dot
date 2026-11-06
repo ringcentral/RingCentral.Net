@@ -1,8 +1,9 @@
 digraph "Graphical Class Hierarchy"
 {
  // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [label="RingCentral.AssignedCountryInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1AssignedCountryInfo.html",tooltip="Information on a country assigned to an extension user. Returned for the User extension type only"];
+  Node0 [id="Node000000",label="RingCentral.AnsweringRule\lQueryRequest",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classRingCentral_1_1AnsweringRuleQueryRequest.html",tooltip="This parameter is not supported for all User type extensions if the new call handling service is acti..."];
 }

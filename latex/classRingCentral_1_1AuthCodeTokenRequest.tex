@@ -1,0 +1,30 @@
+\doxysection{Ring\+Central.\+Auth\+Code\+Token\+Request Class Reference}
+\hypertarget{classRingCentral_1_1AuthCodeTokenRequest}{}\label{classRingCentral_1_1AuthCodeTokenRequest}\index{RingCentral.AuthCodeTokenRequest@{RingCentral.AuthCodeTokenRequest}}
+
+
+Token endpoint request parameters used in the "{}\+Authorization Code"{} and "{}\+Authorization code with PKCE"{} flows with the {\ttfamily authorization\+\_\+code} grant type.  
+
+
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1AuthCodeTokenRequest_a03f4c53453f7deb6ac19bd4d04f45312}\label{classRingCentral_1_1AuthCodeTokenRequest_a03f4c53453f7deb6ac19bd4d04f45312} 
+string {\bfseries grant\+\_\+type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Grant type Required Enum\+: authorization\+\_\+code. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1AuthCodeTokenRequest_a47566926ef56922a9399e437cad310f3}\label{classRingCentral_1_1AuthCodeTokenRequest_a47566926ef56922a9399e437cad310f3} 
+string {\bfseries code}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For {\ttfamily authorization\+\_\+code} grant type only. \doxylink{classRingCentral_1_1User}{User}\textquotesingle{}s authorization code Required. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1AuthCodeTokenRequest_a637947255831b4985c788d481e800ead}\label{classRingCentral_1_1AuthCodeTokenRequest_a637947255831b4985c788d481e800ead} 
+string {\bfseries redirect\+\_\+uri}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For {\ttfamily authorization\+\_\+code} grant type only. This is a callback URI which determines where the response is sent. The value of this parameter must exactly match one of the URIs you have provided for your app upon registration Format\+: uri. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1AuthCodeTokenRequest_afa259bf43fe813688cbacb1f0dc03e8d}\label{classRingCentral_1_1AuthCodeTokenRequest_afa259bf43fe813688cbacb1f0dc03e8d} 
+string {\bfseries code\+\_\+verifier}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For {\ttfamily authorization\+\_\+code} grant type only. The code verifier as defined by the PKCE specification -\/ \href{https://datatracker.ietf.org/doc/html/rfc7636}{\texttt{RFC-\/7636 "{}\+Proof Key for Code Exchange by OAuth Public Clients"{}}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Token endpoint request parameters used in the "{}\+Authorization Code"{} and "{}\+Authorization code with PKCE"{} flows with the {\ttfamily authorization\+\_\+code} grant type. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Auth\+Code\+Token\+Request.\+cs\end{DoxyCompactItemize}

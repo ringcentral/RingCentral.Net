@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['❗❗❗_20code_20sample_20above_20may_20not_20work_0',['❗❗❗ Code sample above may not work',['../md_RingCentral_8Net_2samples.html#autotoc_md183',1,'❗❗❗ Code sample above may not work'],['../md_RingCentral_8Net_2samples.html#autotoc_md197',1,'❗❗❗ Code sample above may not work'],['../md_RingCentral_8Net_2samples.html#autotoc_md207',1,'❗❗❗ Code sample above may not work'],['../md_RingCentral_8Net_2samples.html#autotoc_md212',1,'❗❗❗ Code sample above may not work'],['../md_RingCentral_8Net_2samples.html#autotoc_md227',1,'❗❗❗ Code sample above may not work'],['../md_RingCentral_8Net_2samples.html#autotoc_md238',1,'❗❗❗ Code sample above may not work'],['../md_RingCentral_8Net_2samples.html#autotoc_md259',1,'❗❗❗ Code sample above may not work'],['../md_RingCentral_8Net_2samples.html#autotoc_md276',1,'❗❗❗ Code sample above may not work']]]
+];

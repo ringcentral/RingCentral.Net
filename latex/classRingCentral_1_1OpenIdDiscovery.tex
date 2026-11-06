@@ -1,0 +1,75 @@
+\doxysection{Ring\+Central.\+Open\+Id\+Discovery Class Reference}
+\hypertarget{classRingCentral_1_1OpenIdDiscovery}{}\label{classRingCentral_1_1OpenIdDiscovery}\index{RingCentral.OpenIdDiscovery@{RingCentral.OpenIdDiscovery}}
+
+
+The Open\+ID Connect configuration document as defined by the \href{https://openid.net/specs/openid-connect-discovery-1_0.html\#ProviderMetadata}{\texttt{Open\+ID Connect Discovery 1.\+0}} specification.  
+
+
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1OpenIdDiscovery_ad397980d04063032122d256f3b88592b}\label{classRingCentral_1_1OpenIdDiscovery_ad397980d04063032122d256f3b88592b} 
+string {\bfseries issuer}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An identifier of the ID token\textquotesingle{}s issuer. This value is identical to the {\ttfamily iss} Claim value in ID Tokens Required Format\+: uri Example\+: \href{https://platform.ringcentral.com}{\texttt{https\+://platform.\+ringcentral.\+com}}. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1OpenIdDiscovery_a59b9ae0080322c18d31d84c5ed0b9058}\label{classRingCentral_1_1OpenIdDiscovery_a59b9ae0080322c18d31d84c5ed0b9058} 
+string {\bfseries authorization\+\_\+endpoint}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em URL of the OAuth 2.\+0 authorization endpoint Required Format\+: uri Example\+: \href{https://platform.ringcentral.com/restapi/oauth/authorize}{\texttt{https\+://platform.\+ringcentral.\+com/restapi/oauth/authorize}}. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1OpenIdDiscovery_a0503867b7bbde4cb631492c6bfc892cf}\label{classRingCentral_1_1OpenIdDiscovery_a0503867b7bbde4cb631492c6bfc892cf} 
+string {\bfseries token\+\_\+endpoint}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em URL of the OAuth 2.\+0 token endpoint Required Format\+: uri Example\+: \href{https://platform.ringcentral.com/restapi/oauth/token}{\texttt{https\+://platform.\+ringcentral.\+com/restapi/oauth/token}}. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1OpenIdDiscovery_aad656c835e8706f66a63a32dde09a628}\label{classRingCentral_1_1OpenIdDiscovery_aad656c835e8706f66a63a32dde09a628} 
+string {\bfseries revocation\+\_\+endpoint}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em URL of the OAuth 2.\+0 revocation endpoint as defined by \href{https://datatracker.ietf.org/doc/html/rfc7009}{\texttt{RFC-\/7009}} Required Format\+: uri Example\+: \href{https://platform.ringcentral.com/restapi/oauth/revoke}{\texttt{https\+://platform.\+ringcentral.\+com/restapi/oauth/revoke}}. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1OpenIdDiscovery_a5498ff43993af14e6e741bf56cfe36de}\label{classRingCentral_1_1OpenIdDiscovery_a5498ff43993af14e6e741bf56cfe36de} 
+string {\bfseries userinfo\+\_\+endpoint}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em URL of the user info endpoint as defined by \href{https://openid.net/specs/openid-connect-core-1_0.html\#UserInfo}{\texttt{Open\+ID Connect Core 1.\+0}} specification Required Format\+: uri Example\+: \href{https://platform.ringcentral.com/restapi/oauth/userinfo}{\texttt{https\+://platform.\+ringcentral.\+com/restapi/oauth/userinfo}}. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1OpenIdDiscovery_a6048207264ae41708fb862a6e86c62ad}\label{classRingCentral_1_1OpenIdDiscovery_a6048207264ae41708fb862a6e86c62ad} 
+string {\bfseries jwks\+\_\+uri}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em URL of JSON Web Key Set document that contains public key(s) to be used by the Relying Party to validate ID Token signatures Required Format\+: uri Example\+: \href{https://platform.ringcentral.com/restapi/oauth/jwks}{\texttt{https\+://platform.\+ringcentral.\+com/restapi/oauth/jwks}}. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1OpenIdDiscovery_af8ade4cd3a6ad5312b825b89d53f28f3}\label{classRingCentral_1_1OpenIdDiscovery_af8ade4cd3a6ad5312b825b89d53f28f3} 
+string\mbox{[}$\,$\mbox{]} {\bfseries scopes\+\_\+supported}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of the OAuth 2.\+0 scope values that this server supports Required Example\+: openid,email,profile Enum\+: openid, email, profile. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1OpenIdDiscovery_a82e297d0cf9baa2af7f776625d348340}\label{classRingCentral_1_1OpenIdDiscovery_a82e297d0cf9baa2af7f776625d348340} 
+string\mbox{[}$\,$\mbox{]} {\bfseries token\+\_\+endpoint\+\_\+auth\+\_\+methods\+\_\+supported}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of Client Authentication methods supported by the Token Endpoint Required Example\+: client\+\_\+secret\+\_\+basic Enum\+: client\+\_\+secret\+\_\+basic, client\+\_\+secret\+\_\+jwt, private\+\_\+key\+\_\+jwt. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1OpenIdDiscovery_af4a162676617de289587e480230d146a}\label{classRingCentral_1_1OpenIdDiscovery_af4a162676617de289587e480230d146a} 
+string\mbox{[}$\,$\mbox{]} {\bfseries response\+\_\+types\+\_\+supported}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of the OAuth 2.\+0 {\ttfamily response\+\_\+type} values supported by the provider Required Example\+: code Enum\+: code. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1OpenIdDiscovery_a4333acc4d79c89bb58d9825c7294d3cc}\label{classRingCentral_1_1OpenIdDiscovery_a4333acc4d79c89bb58d9825c7294d3cc} 
+string\mbox{[}$\,$\mbox{]} {\bfseries subject\+\_\+types\+\_\+supported}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of the Subject Identifier types supported by the provider (only {\ttfamily public} is currently supported) Required Example\+: public Enum\+: public. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1OpenIdDiscovery_abbb7060b6187212649f74b05b6193f45}\label{classRingCentral_1_1OpenIdDiscovery_abbb7060b6187212649f74b05b6193f45} 
+string\mbox{[}$\,$\mbox{]} {\bfseries userinfo\+\_\+signing\+\_\+alg\+\_\+values\+\_\+supported}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of the JWS signing algorithms ({\ttfamily alg} values) supported by the User\+Info Endpoint to encode the Claims in a JWT Required Example\+: none Enum\+: none. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1OpenIdDiscovery_a5c13061e12b46400db5fb158b77dfab1}\label{classRingCentral_1_1OpenIdDiscovery_a5c13061e12b46400db5fb158b77dfab1} 
+string\mbox{[}$\,$\mbox{]} {\bfseries id\+\_\+token\+\_\+signing\+\_\+alg\+\_\+values\+\_\+supported}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of the JWS signing algorithms ({\ttfamily alg} values) supported by the provider for the ID Token to encode the Claims in a JWT Required Example\+: RS256,HS256 Enum\+: RS256, HS256. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1OpenIdDiscovery_a38936b5da1ca584a1eab24406fa9bc1d}\label{classRingCentral_1_1OpenIdDiscovery_a38936b5da1ca584a1eab24406fa9bc1d} 
+string\mbox{[}$\,$\mbox{]} {\bfseries display\+\_\+values\+\_\+supported}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of the {\ttfamily display} parameter values (in OAuth 2.\+0 Authorization Endpoint) supported by the provider Enum\+: page, popup, touch, mobile. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1OpenIdDiscovery_a0487424ed4e57f391f08587ac5af45b5}\label{classRingCentral_1_1OpenIdDiscovery_a0487424ed4e57f391f08587ac5af45b5} 
+string\mbox{[}$\,$\mbox{]} {\bfseries claims\+\_\+supported}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of the Claim Names of the Claims that the Open\+ID Provider MAY be able to supply values for Example\+: sub,iss,auth\+\_\+time,exp Enum\+: sub, iss, auth\+\_\+time, aud, exp, iat, jti, nonce, account\+\_\+id, email, email\+\_\+verified, given\+\_\+name, family\+\_\+name. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1OpenIdDiscovery_a3a3c2853de78868fa8bdb251821bfcc8}\label{classRingCentral_1_1OpenIdDiscovery_a3a3c2853de78868fa8bdb251821bfcc8} 
+string\mbox{[}$\,$\mbox{]} {\bfseries ui\+\_\+locales\+\_\+supported}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Language codes supported for the user interface, represented as language tags defined in \href{https://datatracker.ietf.org/doc/html/rfc5646}{\texttt{RFC-\/5646}} Example\+: en,en-\/\+US,en-\/\+GB,fr-\/\+CA. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1OpenIdDiscovery_ace0035251c96b221b45337714d7ea230}\label{classRingCentral_1_1OpenIdDiscovery_ace0035251c96b221b45337714d7ea230} 
+string\mbox{[}$\,$\mbox{]} {\bfseries code\+\_\+challenge\+\_\+methods\+\_\+supported}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of the PKCE challenge methods supported by the provider Required Example\+: plain,S256 Enum\+: plain, S256. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1OpenIdDiscovery_a8f436df86e4ba324eeb832e2b02c110e}\label{classRingCentral_1_1OpenIdDiscovery_a8f436df86e4ba324eeb832e2b02c110e} 
+bool? {\bfseries claims\+\_\+parameter\+\_\+supported}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Boolean value specifying whether the provide supports use of the {\ttfamily claims} parameter. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1OpenIdDiscovery_a14ae969c61cb27c1c09b6c7a2d9e60fb}\label{classRingCentral_1_1OpenIdDiscovery_a14ae969c61cb27c1c09b6c7a2d9e60fb} 
+bool? {\bfseries request\+\_\+parameter\+\_\+supported}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Boolean value specifying whether the provide supports use of the {\ttfamily request} parameter. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1OpenIdDiscovery_a41c25f959ee01ba2f6c49b1c22cf41f2}\label{classRingCentral_1_1OpenIdDiscovery_a41c25f959ee01ba2f6c49b1c22cf41f2} 
+bool? {\bfseries request\+\_\+uri\+\_\+parameter\+\_\+supported}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Boolean value specifying whether the provide supports use of the {\ttfamily request} parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Open\+ID Connect configuration document as defined by the \href{https://openid.net/specs/openid-connect-discovery-1_0.html\#ProviderMetadata}{\texttt{Open\+ID Connect Discovery 1.\+0}} specification. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Open\+Id\+Discovery.\+cs\end{DoxyCompactItemize}

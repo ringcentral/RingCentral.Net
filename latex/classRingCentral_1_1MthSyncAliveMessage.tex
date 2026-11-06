@@ -1,0 +1,43 @@
+\doxysection{Ring\+Central.\+Mth\+Sync\+Alive\+Message Class Reference}
+\hypertarget{classRingCentral_1_1MthSyncAliveMessage}{}\label{classRingCentral_1_1MthSyncAliveMessage}\index{RingCentral.MthSyncAliveMessage@{RingCentral.MthSyncAliveMessage}}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1MthSyncAliveMessage_ae51ebc05aaa2b6fa364c59377df4dba4}\label{classRingCentral_1_1MthSyncAliveMessage_ae51ebc05aaa2b6fa364c59377df4dba4} 
+string {\bfseries record\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Required Enum\+: Alive\+Message. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MthSyncAliveMessage_a63270eab79cf4d6d48a416c8e124ea91}\label{classRingCentral_1_1MthSyncAliveMessage_a63270eab79cf4d6d48a416c8e124ea91} 
+string {\bfseries id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a message Required. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MthSyncAliveMessage_a9ecab25fc45e6fb304727ec07495c249}\label{classRingCentral_1_1MthSyncAliveMessage_a9ecab25fc45e6fb304727ec07495c249} 
+string {\bfseries thread\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a message thread Required. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MthSyncAliveMessage_a0d1c7f869d1f77068e0d3c13fd248d37}\label{classRingCentral_1_1MthSyncAliveMessage_a0d1c7f869d1f77068e0d3c13fd248d37} 
+string {\bfseries availability}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Thread/message availability Required Enum\+: Alive, Deleted. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MthSyncAliveMessage_adc16f100b06ce37ac7b1d4d158412e40}\label{classRingCentral_1_1MthSyncAliveMessage_adc16f100b06ce37ac7b1d4d158412e40} 
+string {\bfseries creation\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message creation date/time Required Format\+: date-\/time. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MthSyncAliveMessage_a042cac66443c3383edc16d5bbce41097}\label{classRingCentral_1_1MthSyncAliveMessage_a042cac66443c3383edc16d5bbce41097} 
+string {\bfseries direction}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message direction (inbound or outbound) Required Enum\+: Inbound, Outbound. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MthSyncAliveMessage_ae4914be83e929adf2b15dabf55e1e3f1}\label{classRingCentral_1_1MthSyncAliveMessage_ae4914be83e929adf2b15dabf55e1e3f1} 
+string {\bfseries last\+Modified\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message last modification date/time Required Format\+: date-\/time. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MthSyncAliveMessage_a3baa43c3bf2784993c060fab71cbdd1f}\label{classRingCentral_1_1MthSyncAliveMessage_a3baa43c3bf2784993c060fab71cbdd1f} 
+string {\bfseries message\+Status}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message status. Different message types may have different allowed status values. For outbound faxes the aggregated message status is returned. If, for multi-\/recipient outbound message, a status for at least one recipient is {\ttfamily Queued}, then the {\ttfamily Queued} value is returned. If a status for at least one recipient is {\ttfamily Sending\+Failed}, then the \textquotesingle{}Sending\+Failed\textquotesingle{} value is returned. In other cases, the {\ttfamily Sent} status is returned Enum\+: Queued, Sent, Delivered, Delivery\+Failed, Sending\+Failed, Received. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MthSyncAliveMessage_a3f0efa7ba141189c5868ca763810afb0}\label{classRingCentral_1_1MthSyncAliveMessage_a3f0efa7ba141189c5868ca763810afb0} 
+string {\bfseries text}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message or note text Example\+: Hello, how are you doing today? \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MthSyncAliveMessage_a6b36815b07e93529c0a0064f29c5fc7b}\label{classRingCentral_1_1MthSyncAliveMessage_a6b36815b07e93529c0a0064f29c5fc7b} 
+\mbox{\hyperlink{classRingCentral_1_1MessageAttachmentResponseEntry}{Message\+Attachment\+Response\+Entry}}\mbox{[}$\,$\mbox{]} {\bfseries attachments}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message attachments (if any). \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MthSyncAliveMessage_af380385d46fa7adbb0883fe8174f2acf}\label{classRingCentral_1_1MthSyncAliveMessage_af380385d46fa7adbb0883fe8174f2acf} 
+\mbox{\hyperlink{classRingCentral_1_1MthSyncAliveMessageAuthor}{Mth\+Sync\+Alive\+Message\+Author}} {\bfseries author}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message author (for outbound messages only). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Mth\+Sync\+Alive\+Message.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,28 @@
+\doxysection{Ring\+Central.\+Net.\+Retry Directory Reference}
+\hypertarget{dir_83ed90cf2e04acc2a6ac36b75b807334}{}\label{dir_83ed90cf2e04acc2a6ac36b75b807334}\index{RingCentral.Net.Retry Directory Reference@{RingCentral.Net.Retry Directory Reference}}
+
+
+\doxysubsection{Detailed Description}
+\hypertarget{dir_83ed90cf2e04acc2a6ac36b75b807334_autotoc_md528}{}\doxysubsection{\texorpdfstring{Retry Extension}{Retry Extension}}\label{dir_83ed90cf2e04acc2a6ac36b75b807334_autotoc_md528}
+This extension allows you to retry a REST request if there is {\ttfamily Rest\+Exception}.
+
+Each new SDK request starts with its own retry count, including authorization requests. Reusing a {\ttfamily Rest\+Request\+Config} or making concurrent requests does not share retry allowances. Retries and request clones for the same request share the count, including when both {\ttfamily Retry\+Extension} and {\ttfamily Rate\+Limit\+Extension} are installed.
+
+The public {\ttfamily Rest\+Request\+Config.\+retries\+Attempted} field has been removed. Callers that referenced it must remove those references and rebuild; already compiled code that accesses the field is also incompatible. Retry callbacks still receive the zero-\/based number of retries attempted for the current request.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ rc\ =\ \textcolor{keyword}{new}\ RestClient(}
+\DoxyCodeLine{\ \ \ \ Environment.GetEnvironmentVariable(\textcolor{stringliteral}{"{}RINGCENTRAL\_CLIENT\_ID"{}}),}
+\DoxyCodeLine{\ \ \ \ Environment.GetEnvironmentVariable(\textcolor{stringliteral}{"{}RINGCENTRAL\_CLIENT\_SECRET"{}}),}
+\DoxyCodeLine{\ \ \ \ Environment.GetEnvironmentVariable(\textcolor{stringliteral}{"{}RINGCENTRAL\_SERVER\_URL"{}})}
+\DoxyCodeLine{);}
+\DoxyCodeLine{await\ rc.Authorize(}
+\DoxyCodeLine{\ \ \ \ Environment.GetEnvironmentVariable(\textcolor{stringliteral}{"{}RINGCENTRAL\_JWT\_TOKEN"{}})}
+\DoxyCodeLine{);}
+\DoxyCodeLine{var\ retryExtension\ =\ \textcolor{keyword}{new}\ RetryExtension();}
+\DoxyCodeLine{await\ rc.InstallExtension(retryExtension);}
+
+\end{DoxyCode}
+\hypertarget{dir_83ed90cf2e04acc2a6ac36b75b807334_autotoc_md529}{}\doxysubsection{\texorpdfstring{More documentation}{More documentation}}\label{dir_83ed90cf2e04acc2a6ac36b75b807334_autotoc_md529}
+This extension is inspired by \href{https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/retry}{\texttt{its Type\+Script counterpart}} , check its documentation for more information. 

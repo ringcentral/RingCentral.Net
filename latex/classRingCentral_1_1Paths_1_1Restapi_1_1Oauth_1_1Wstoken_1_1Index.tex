@@ -1,0 +1,48 @@
+\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Oauth.\+Wstoken.\+Index Class Reference}
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Wstoken_1_1Index}{}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Wstoken_1_1Index}\index{RingCentral.Paths.Restapi.Oauth.Wstoken.Index@{RingCentral.Paths.Restapi.Oauth.Wstoken.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Oauth.\+Wstoken.\+Index\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Wstoken_1_1Index_a07051a6b70a4fc3661dff531f0efdca7}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Wstoken_1_1Index_a07051a6b70a4fc3661dff531f0efdca7} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Index}{Restapi.\+Oauth.\+Index}} parent)
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Wstoken_1_1Index_a0022d20b714ac0ac68e4bd40a1d86761}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Wstoken_1_1Index_a0022d20b714ac0ac68e4bd40a1d86761} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1WsTokenResponse}{Ring\+Central.\+Ws\+Token\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Wstoken_1_1Index_a9e5a1a7dc8546599947c363749d7a98c}{Post}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a special short lived token to authorize a dedicated web socket connection between this client and a backend. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Wstoken_1_1Index_a8bb233529f2f9c8e6ff923972ad00dca}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Wstoken_1_1Index_a8bb233529f2f9c8e6ff923972ad00dca} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Wstoken_1_1Index_aeb08c53d00644ff5073159a8a86f89dd}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Wstoken_1_1Index_aeb08c53d00644ff5073159a8a86f89dd} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Index}{Restapi.\+Oauth.\+Index}} {\bfseries parent}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Wstoken_1_1Index_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Wstoken_1_1Index_a9e5a1a7dc8546599947c363749d7a98c}\index{RingCentral.Paths.Restapi.Oauth.Wstoken.Index@{RingCentral.Paths.Restapi.Oauth.Wstoken.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Oauth.Wstoken.Index@{RingCentral.Paths.Restapi.Oauth.Wstoken.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1Paths_1_1Restapi_1_1Oauth_1_1Wstoken_1_1Index_a9e5a1a7dc8546599947c363749d7a98c} 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1WsTokenResponse}{Ring\+Central.\+Ws\+Token\+Response}} $>$ Ring\+Central.\+Paths.\+Restapi.\+Oauth.\+Wstoken.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a special short lived token to authorize a dedicated web socket connection between this client and a backend. 
+
+This API needs to be called if a client plans to use "{}\+Websocket"{} transport to receive \doxylink{namespaceRingCentral}{Ring\+Central} push notifications. The token returned by this API should be provided when establishing a connection to the \doxylink{namespaceRingCentral}{Ring\+Central} Websocket Gateway.
+
+HTTP Method\+: post Endpoint\+: /restapi/oauth/wstoken Rate Limit Group\+: Auth App Permission\+: Web\+Socket 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Oauth/\+Wstoken/Index.\+cs\end{DoxyCompactItemize}

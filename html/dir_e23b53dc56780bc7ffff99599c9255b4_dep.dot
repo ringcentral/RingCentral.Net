@@ -1,0 +1,16 @@
+digraph "RingCentral.Net/Paths/WellKnown"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_4624619dc4b6fee1c25adb94504baa6a {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Paths", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_4624619dc4b6fee1c25adb94504baa6a.html",tooltip=""]
+  subgraph clusterdir_e23b53dc56780bc7ffff99599c9255b4 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_e23b53dc56780bc7ffff99599c9255b4.html",tooltip=""]
+    dir_e23b53dc56780bc7ffff99599c9255b4 [shape=plaintext, label="WellKnown"];
+  dir_0461c00ae35c884e8972643336b2875c [label="OpenidConfiguration", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_0461c00ae35c884e8972643336b2875c.html",tooltip=""];
+  }
+  }
+}

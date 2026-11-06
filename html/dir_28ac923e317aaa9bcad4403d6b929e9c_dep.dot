@@ -1,0 +1,16 @@
+digraph "RingCentral.Net/Paths/Restapi/Account/Recording"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_a6ffe6393bdaec40200f64f834a93c35 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Account", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_a6ffe6393bdaec40200f64f834a93c35.html",tooltip=""]
+  subgraph clusterdir_28ac923e317aaa9bcad4403d6b929e9c {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_28ac923e317aaa9bcad4403d6b929e9c.html",tooltip=""]
+    dir_28ac923e317aaa9bcad4403d6b929e9c [shape=plaintext, label="Recording"];
+  dir_3c2d518e9a7b8291935cf1cf72a4ba4c [label="Content", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_3c2d518e9a7b8291935cf1cf72a4ba4c.html",tooltip=""];
+  }
+  }
+}

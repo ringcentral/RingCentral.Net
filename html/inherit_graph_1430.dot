@@ -1,8 +1,9 @@
 digraph "Graphical Class Hierarchy"
 {
  // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [label="RingCentral.SipFlagsResponse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classRingCentral_1_1SipFlagsResponse.html",tooltip="SIP flags information"];
+  Node0 [id="Node000000",label="RingCentral.Paths.TeamMessaging.\lV1.Teams.Add.Index",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classRingCentral_1_1Paths_1_1TeamMessaging_1_1V1_1_1Teams_1_1Add_1_1Index.html",tooltip=" "];
 }

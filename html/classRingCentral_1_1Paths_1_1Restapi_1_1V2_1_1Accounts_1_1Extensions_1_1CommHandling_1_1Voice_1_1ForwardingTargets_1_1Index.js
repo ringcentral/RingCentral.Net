@@ -1,0 +1,5 @@
+var classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1ForwardingTargets_1_1Index =
+[
+    [ "Delete", "classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1ForwardingTargets_1_1Index.html#a269880da2255643b99d3a62059a2ff5b", null ],
+    [ "Get", "classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1ForwardingTargets_1_1Index.html#aaac7dcace1c20c340f9f692160b40771", null ]
+];

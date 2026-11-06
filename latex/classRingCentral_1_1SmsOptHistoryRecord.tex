@@ -1,0 +1,43 @@
+\doxysection{Ring\+Central.\+Sms\+Opt\+History\+Record Class Reference}
+\hypertarget{classRingCentral_1_1SmsOptHistoryRecord}{}\label{classRingCentral_1_1SmsOptHistoryRecord}\index{RingCentral.SmsOptHistoryRecord@{RingCentral.SmsOptHistoryRecord}}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1SmsOptHistoryRecord_aad1a01ccddae06cd15a6cbe365ca0e7f}\label{classRingCentral_1_1SmsOptHistoryRecord_aad1a01ccddae06cd15a6cbe365ca0e7f} 
+string {\bfseries to}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone number in e.\+164 format (with \textquotesingle{}+\textquotesingle{} prefix) Required Example\+: +16501234567. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SmsOptHistoryRecord_a8dc3e0a8e8ab4c80496ca6f61b21b72d}{opt\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Consent status of a recipient\textquotesingle{}s phone number\+: \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1SmsOptHistoryRecord_a2ff05e2a31298fdc1014cacfc2f378ee}\label{classRingCentral_1_1SmsOptHistoryRecord_a2ff05e2a31298fdc1014cacfc2f378ee} 
+string {\bfseries from}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone number in e.\+164 format (with \textquotesingle{}+\textquotesingle{} prefix) Required Example\+: +16501234567. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1SmsOptHistoryRecord_a1226b90ad99455a9f96986e0aff5a829}\label{classRingCentral_1_1SmsOptHistoryRecord_a1226b90ad99455a9f96986e0aff5a829} 
+string {\bfseries source}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The source of the consent record Required Enum\+: Recipient, Api, Upstream, Carrier. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1SmsOptHistoryRecord_afe421c39ee92b4f8036ce500c77fb380}\label{classRingCentral_1_1SmsOptHistoryRecord_afe421c39ee92b4f8036ce500c77fb380} 
+string {\bfseries created\+At}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time when this history record was created Required Format\+: date-\/time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-property-members}
+\Hypertarget{classRingCentral_1_1SmsOptHistoryRecord_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{classRingCentral_1_1SmsOptHistoryRecord_a8dc3e0a8e8ab4c80496ca6f61b21b72d}\index{RingCentral.SmsOptHistoryRecord@{RingCentral.SmsOptHistoryRecord}!optStatus@{optStatus}}
+\index{optStatus@{optStatus}!RingCentral.SmsOptHistoryRecord@{RingCentral.SmsOptHistoryRecord}}
+\doxysubsubsection{\texorpdfstring{optStatus}{optStatus}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1SmsOptHistoryRecord_a8dc3e0a8e8ab4c80496ca6f61b21b72d} 
+string Ring\+Central.\+Sms\+Opt\+History\+Record.\+opt\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Consent status of a recipient\textquotesingle{}s phone number\+: 
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Opt\+Out} -\/ The number is opted out of receiving SMS.
+\item {\ttfamily Opt\+In} -\/ The number is opted in to receiving SMS (if it was previously opted out). Required Example\+: Opt\+Out Enum\+: Opt\+Out, Opt\+In 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Sms\+Opt\+History\+Record.\+cs\end{DoxyCompactItemize}

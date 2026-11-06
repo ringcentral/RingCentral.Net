@@ -1,0 +1,27 @@
+\doxysection{Ring\+Central.\+Meeting\+Notes Class Reference}
+\hypertarget{classRingCentral_1_1MeetingNotes}{}\label{classRingCentral_1_1MeetingNotes}\index{RingCentral.MeetingNotes@{RingCentral.MeetingNotes}}
+
+
+This objects denotes availability of AI generated meeting notes of certain type as post meeting artefact. The note\textquotesingle{}s content can be accessed via POST \textquotesingle{}/rcvideo/v1/history/meetings/\{meeting\+Id\}/access-\/materials\textquotesingle{} or POST \textquotesingle{}/rcvideo/v1/history/links\textquotesingle{} APIs.  
+
+
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1MeetingNotes_a5812ee6bbda6d19b85d46f248f12cca0}\label{classRingCentral_1_1MeetingNotes_a5812ee6bbda6d19b85d46f248f12cca0} 
+string {\bfseries id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Required. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MeetingNotes_a543ba1ce6408a845ffcfac6d3d5d4268}\label{classRingCentral_1_1MeetingNotes_a543ba1ce6408a845ffcfac6d3d5d4268} 
+string {\bfseries type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Required Enum\+: Generated\+Notes. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MeetingNotes_acabfe16633e2509ca00b5b0721703615}\label{classRingCentral_1_1MeetingNotes_acabfe16633e2509ca00b5b0721703615} 
+string {\bfseries status}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Generated notes processing status {\ttfamily Processing} -\/ meeting is finished and generated notes haven\textquotesingle{}t been processed yet {\ttfamily Processed} -\/ generated notes successfully processed {\ttfamily Failed} -\/ generated notes processing finished with error {\ttfamily Purged} -\/ generated notes were removed Required Enum\+: Processing, Processed, Purged, Failed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This objects denotes availability of AI generated meeting notes of certain type as post meeting artefact. The note\textquotesingle{}s content can be accessed via POST \textquotesingle{}/rcvideo/v1/history/meetings/\{meeting\+Id\}/access-\/materials\textquotesingle{} or POST \textquotesingle{}/rcvideo/v1/history/links\textquotesingle{} APIs. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Meeting\+Notes.\+cs\end{DoxyCompactItemize}

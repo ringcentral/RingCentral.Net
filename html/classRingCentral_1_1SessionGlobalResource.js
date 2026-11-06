@@ -1,0 +1,27 @@
+var classRingCentral_1_1SessionGlobalResource =
+[
+    [ "attendeeCount", "classRingCentral_1_1SessionGlobalResource.html#a38f028cab01a2bb501c7ad0afc9b837c", null ],
+    [ "broadcastingEndTime", "classRingCentral_1_1SessionGlobalResource.html#a91c081abcb4ef8979f2a8dd716188d7d", null ],
+    [ "broadcastingStartTime", "classRingCentral_1_1SessionGlobalResource.html#a33f3f83473f61357632247fc15852e7e", null ],
+    [ "creationTime", "classRingCentral_1_1SessionGlobalResource.html#a1da4ede13a99b12d45fc533c0b47d24c", null ],
+    [ "description", "classRingCentral_1_1SessionGlobalResource.html#a23081ffab7a0b82219b5cef91af9b9bb", null ],
+    [ "duration", "classRingCentral_1_1SessionGlobalResource.html#a740a2851bf6838729f456312537081a1", null ],
+    [ "endTime", "classRingCentral_1_1SessionGlobalResource.html#a1e1c29104a5cd3b2af349f46c54c0eff", null ],
+    [ "id", "classRingCentral_1_1SessionGlobalResource.html#ab3d25e414d6dc794041f2b955c28dcee", null ],
+    [ "lastModifiedTime", "classRingCentral_1_1SessionGlobalResource.html#a2beae4c49b6f78836298cd5961086c91", null ],
+    [ "livestreams", "classRingCentral_1_1SessionGlobalResource.html#a75692870b072599dd92c26e3abd79fa6", null ],
+    [ "localeCode", "classRingCentral_1_1SessionGlobalResource.html#ae1ed052243d5c77c06a9b9d428dd0f8a", null ],
+    [ "panelJoinTimeOffset", "classRingCentral_1_1SessionGlobalResource.html#a8a801ae7517117851d3ef650123d0a2f", null ],
+    [ "participantCount", "classRingCentral_1_1SessionGlobalResource.html#a39accd2e7e5a3b90379ba5c2bfc616d8", null ],
+    [ "runtimeStatus", "classRingCentral_1_1SessionGlobalResource.html#a6ae5d7ea7b724ed1db058e4f22af0109", null ],
+    [ "scheduledDuration", "classRingCentral_1_1SessionGlobalResource.html#a641b2025b8676229c7d8573eef4a377d", null ],
+    [ "scheduledStartTime", "classRingCentral_1_1SessionGlobalResource.html#a860f71caa337b8afefc20d3ae1715fbb", null ],
+    [ "startTime", "classRingCentral_1_1SessionGlobalResource.html#ab22966aaa0714eea32679e15b9f2381a", null ],
+    [ "status", "classRingCentral_1_1SessionGlobalResource.html#add25f627ac5c75bcfed84a08ce17c63c", null ],
+    [ "timeZone", "classRingCentral_1_1SessionGlobalResource.html#a7bcc5eec6d6f493fb67643a31e8f8f24", null ],
+    [ "title", "classRingCentral_1_1SessionGlobalResource.html#a8f0eb1ab1ab9dd9904d132051a671a12", null ],
+    [ "uniqueAttendeeCount", "classRingCentral_1_1SessionGlobalResource.html#afe37c2098d9930978c7e70a0d3cdc285", null ],
+    [ "uniqueParticipantCount", "classRingCentral_1_1SessionGlobalResource.html#a05fff4804c1b893a24182b7b088b092f", null ],
+    [ "videoBridgeId", "classRingCentral_1_1SessionGlobalResource.html#a099e2555dcad5b9cbcaae291ef92db6b", null ],
+    [ "webinar", "classRingCentral_1_1SessionGlobalResource.html#a553c3aad13f86779bab1effd6ddd5b91", null ]
+];

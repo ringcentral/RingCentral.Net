@@ -1,0 +1,63 @@
+\doxysection{Ring\+Central.\+Message\+Thread Class Reference}
+\hypertarget{classRingCentral_1_1MessageThread}{}\label{classRingCentral_1_1MessageThread}\index{RingCentral.MessageThread@{RingCentral.MessageThread}}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1MessageThread_a45a0b460c291e692e0aace47f773f1f8}\label{classRingCentral_1_1MessageThread_a45a0b460c291e692e0aace47f773f1f8} 
+string {\bfseries id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Thread ID Required. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MessageThread_aadf4940ca80d28065cb4132cd7a2cf1e}\label{classRingCentral_1_1MessageThread_aadf4940ca80d28065cb4132cd7a2cf1e} 
+string {\bfseries label}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Thread human-\/readable label. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MessageThread_acbb43cc0b40116bffe18be85d5be6d03}\label{classRingCentral_1_1MessageThread_acbb43cc0b40116bffe18be85d5be6d03} 
+string {\bfseries status}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Thread status Required Enum\+: Open, Resolved. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1MessageThread_adddb076fb090108330eb920a42f60a99}{status\+Reason}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Thread status transition reason (for threads in {\ttfamily Resolved} status only)\+: \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MessageThread_a21cec628d3ee38673935e29c104446ec}\label{classRingCentral_1_1MessageThread_a21cec628d3ee38673935e29c104446ec} 
+string {\bfseries availability}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Thread/message availability Required Enum\+: Alive, Deleted. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MessageThread_a505057c4e37c1a8a713a2e3de7df913d}\label{classRingCentral_1_1MessageThread_a505057c4e37c1a8a713a2e3de7df913d} 
+\mbox{\hyperlink{classRingCentral_1_1OwnerResource}{Owner\+Resource}} {\bfseries owner}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Required. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MessageThread_a0a0a1cb3ed606edb3db6631c3441bf2f}\label{classRingCentral_1_1MessageThread_a0a0a1cb3ed606edb3db6631c3441bf2f} 
+\mbox{\hyperlink{classRingCentral_1_1MessageThreadOwnerParty}{Message\+Thread\+Owner\+Party}} {\bfseries owner\+Party}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Thread owner phone number information. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MessageThread_aa71323f51c34e14bfc4eacdb8794c1f3}\label{classRingCentral_1_1MessageThread_aa71323f51c34e14bfc4eacdb8794c1f3} 
+\mbox{\hyperlink{classRingCentral_1_1MessageThreadGuestParty}{Message\+Thread\+Guest\+Party}} {\bfseries guest\+Party}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Thread guest phone number information. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MessageThread_ac44da8563931f4e8272b2ca7b22cbc20}\label{classRingCentral_1_1MessageThread_ac44da8563931f4e8272b2ca7b22cbc20} 
+\mbox{\hyperlink{classRingCentral_1_1MessageThreadAssignee}{Message\+Thread\+Assignee}} {\bfseries assignee}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Cleared automatically when the thread is resolved or deleted. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MessageThread_af2b78cace7774d7e7dfab18d6928f86c}\label{classRingCentral_1_1MessageThread_af2b78cace7774d7e7dfab18d6928f86c} 
+string {\bfseries creation\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Thread creation time Required Format\+: date-\/time. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MessageThread_accefe2f028b9be81f48c0c710ce7f504}\label{classRingCentral_1_1MessageThread_accefe2f028b9be81f48c0c710ce7f504} 
+string {\bfseries last\+Modified\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Thread last modification time Required Format\+: date-\/time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-property-members}
+\Hypertarget{classRingCentral_1_1MessageThread_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{classRingCentral_1_1MessageThread_adddb076fb090108330eb920a42f60a99}\index{RingCentral.MessageThread@{RingCentral.MessageThread}!statusReason@{statusReason}}
+\index{statusReason@{statusReason}!RingCentral.MessageThread@{RingCentral.MessageThread}}
+\doxysubsubsection{\texorpdfstring{statusReason}{statusReason}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1MessageThread_adddb076fb090108330eb920a42f60a99} 
+string Ring\+Central.\+Message\+Thread.\+status\+Reason\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Thread status transition reason (for threads in {\ttfamily Resolved} status only)\+: 
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Manual} -\/ the thread was resolved manually;
+\item {\ttfamily Thread\+Expired} -\/ the thread was automatically resolved according to TTL settings;
+\item {\ttfamily Owner\+Deleted} -\/ the thread owner\textquotesingle{}s extension was deleted;
+\item {\ttfamily Owner\+Phone\+Number\+Deleted} -\/ the thread owner\textquotesingle{}s phone number this thread was created for was deleted. Enum\+: Manual, Thread\+Expired, Owner\+Deleted, Owner\+Phone\+Number\+Deleted 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Message\+Thread.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,27 @@
+var classRingCentral_1_1CallLogRecord =
+[
+    [ "action", "classRingCentral_1_1CallLogRecord.html#aa347efcd3b560acae2aa3de59ac1c902", null ],
+    [ "delegationType", "classRingCentral_1_1CallLogRecord.html#a211f7ff32292fe3aba75afc58ec46c55", null ],
+    [ "deleted", "classRingCentral_1_1CallLogRecord.html#a1243dcaf4e015ea4596e83668af623e6", null ],
+    [ "direction", "classRingCentral_1_1CallLogRecord.html#ac4a94b90dd4fec4fd9c864d9e359e1af", null ],
+    [ "duration", "classRingCentral_1_1CallLogRecord.html#a5f4c148192d25420d06f76a24673b976", null ],
+    [ "durationMs", "classRingCentral_1_1CallLogRecord.html#a9dfa931e83aba5f748abe013c0a3cabf", null ],
+    [ "finished", "classRingCentral_1_1CallLogRecord.html#a23b6cae99447060dd774127d99faf05c", null ],
+    [ "id", "classRingCentral_1_1CallLogRecord.html#a1543180683972e8d84819c75d66f5572", null ],
+    [ "internalType", "classRingCentral_1_1CallLogRecord.html#a8ee634995e9e5f48f40695e5a4afd479", null ],
+    [ "lastModifiedTime", "classRingCentral_1_1CallLogRecord.html#a4883c1725b123bf321046801cdc7d7fa", null ],
+    [ "legs", "classRingCentral_1_1CallLogRecord.html#aefc26f79c07bf3fe2a388e336ee86abd", null ],
+    [ "metadataCategories", "classRingCentral_1_1CallLogRecord.html#a99a4b90d062c81916f9a2fca18039e8d", null ],
+    [ "partyId", "classRingCentral_1_1CallLogRecord.html#a7eb6840d247243fbae9a050147c366a5", null ],
+    [ "reason", "classRingCentral_1_1CallLogRecord.html#a8020f47ea779193187a0f0477051c8d6", null ],
+    [ "reasonDescription", "classRingCentral_1_1CallLogRecord.html#a848d7a74e0938469f780ea42881d43c9", null ],
+    [ "result", "classRingCentral_1_1CallLogRecord.html#a3e0aea02e86d5b2203d9a4385433ad90", null ],
+    [ "sessionId", "classRingCentral_1_1CallLogRecord.html#aa29a7136269b2e034da6b5a0ff0c098a", null ],
+    [ "shortRecording", "classRingCentral_1_1CallLogRecord.html#a59736b18951cd9a4d28596fc56bc5eec", null ],
+    [ "sipUuidInfo", "classRingCentral_1_1CallLogRecord.html#ac2a09c6ce48fddd97399520629c8ba35", null ],
+    [ "startTime", "classRingCentral_1_1CallLogRecord.html#aae05f10ee53929c3fc027e3f40ec7c81", null ],
+    [ "telephonySessionId", "classRingCentral_1_1CallLogRecord.html#a52ff7ab1c5e1767cd2d1c465be7c92a5", null ],
+    [ "transport", "classRingCentral_1_1CallLogRecord.html#a643ffc6a545825987f90e3a0618068f0", null ],
+    [ "type", "classRingCentral_1_1CallLogRecord.html#a797dd8375dca56d9ca6b1bb2b1570379", null ],
+    [ "uri", "classRingCentral_1_1CallLogRecord.html#a23e8377f4ad3e107f149a1c07c5038f2", null ]
+];

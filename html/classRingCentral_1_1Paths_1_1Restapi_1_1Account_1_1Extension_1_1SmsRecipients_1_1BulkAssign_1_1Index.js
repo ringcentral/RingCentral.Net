@@ -1,0 +1,4 @@
+var classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1SmsRecipients_1_1BulkAssign_1_1Index =
+[
+    [ "Post", "classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1SmsRecipients_1_1BulkAssign_1_1Index.html#ae2f1fd09328270293de28aea351c563e", null ]
+];

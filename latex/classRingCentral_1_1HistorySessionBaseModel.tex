@@ -1,0 +1,64 @@
+\doxysection{Ring\+Central.\+History\+Session\+Base\+Model Class Reference}
+\hypertarget{classRingCentral_1_1HistorySessionBaseModel}{}\label{classRingCentral_1_1HistorySessionBaseModel}\index{RingCentral.HistorySessionBaseModel@{RingCentral.HistorySessionBaseModel}}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1HistorySessionBaseModel_abe90289bf9d7fd2614da33ade860e0a3}\label{classRingCentral_1_1HistorySessionBaseModel_abe90289bf9d7fd2614da33ade860e0a3} 
+string {\bfseries start\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session start time. If a session hasn\textquotesingle{}t been started this fields should be set to "{}scheduled\+Start\+Time"{} Format\+: date-\/time. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1HistorySessionBaseModel_a8d71a69347802252834dc7d85e20c152}\label{classRingCentral_1_1HistorySessionBaseModel_a8d71a69347802252834dc7d85e20c152} 
+string {\bfseries end\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session end time. If a session hasn\textquotesingle{}t been finished this fields should be set to ("{}start\+Time"{}+"{}scheduled\+Duration"{}) Format\+: date-\/time. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1HistorySessionBaseModel_a98e1f4319ec9cbe7a443fdf30657ed54}\label{classRingCentral_1_1HistorySessionBaseModel_a98e1f4319ec9cbe7a443fdf30657ed54} 
+long? {\bfseries duration}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session duration in seconds rounded up (returned if \textquotesingle{}start\+Time\textquotesingle{} and \textquotesingle{}end\+Time\textquotesingle{} are not empty) Format\+: int32 Example\+: 3600. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1HistorySessionBaseModel_a14b0ea5a807d954515bd5516c826d097}\label{classRingCentral_1_1HistorySessionBaseModel_a14b0ea5a807d954515bd5516c826d097} 
+string {\bfseries title}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session title. If blank -\/ derived from webinar title. Example\+: Live Broadcasting US. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1HistorySessionBaseModel_aeebcf6c0c23b8e9e54c1872af597b40a}\label{classRingCentral_1_1HistorySessionBaseModel_aeebcf6c0c23b8e9e54c1872af597b40a} 
+string {\bfseries description}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em User-\/friendly description of the Session. If blank -\/ derived from webinar title. Example\+: Live session for US-\/based participants. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1HistorySessionBaseModel_a75db2f558f5ddc0b79b9fcc4c971787c}\label{classRingCentral_1_1HistorySessionBaseModel_a75db2f558f5ddc0b79b9fcc4c971787c} 
+string {\bfseries scheduled\+Start\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session scheduled start time. Format\+: date-\/time. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1HistorySessionBaseModel_ac938839bd9af724e8af61ff00dd9ada3}\label{classRingCentral_1_1HistorySessionBaseModel_ac938839bd9af724e8af61ff00dd9ada3} 
+long? {\bfseries scheduled\+Duration}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The scheduled duration of the Session in seconds. Format\+: int32 Example\+: 1800. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1HistorySessionBaseModel_ac0a7c8752dc00924f085df5178f0fad0}\label{classRingCentral_1_1HistorySessionBaseModel_ac0a7c8752dc00924f085df5178f0fad0} 
+string {\bfseries time\+Zone}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em IANA-\/compatible time zone name (see \href{https://www.iana.org/time-zones}{\texttt{https\+://www.\+iana.\+org/time-\/zones}}). Example\+: America/\+New\+\_\+\+York. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1HistorySessionBaseModel_a51a1aef0e57509751e3ce260b7d0508a}\label{classRingCentral_1_1HistorySessionBaseModel_a51a1aef0e57509751e3ce260b7d0508a} 
+string {\bfseries locale\+Code}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session locale code. Can\textquotesingle{}t be blank or null. Example\+: en-\/\+US Default\+: en-\/\+US. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1HistorySessionBaseModel_aecba04188855134dcaa87a0857959ab9}\label{classRingCentral_1_1HistorySessionBaseModel_aecba04188855134dcaa87a0857959ab9} 
+long? {\bfseries panel\+Join\+Time\+Offset}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time offset (positive, in seconds) indicating how much in advance (comparing to "{}scheduled\+Start\+Time"{}) panel members should join for the pre-\/webinar team sync Format\+: int32 Example\+: 900. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1HistorySessionBaseModel_a2abc1c487750bb721b11066c5f34662a}\label{classRingCentral_1_1HistorySessionBaseModel_a2abc1c487750bb721b11066c5f34662a} 
+string {\bfseries broadcasting\+Start\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time when broadcasting started. Format\+: date-\/time. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1HistorySessionBaseModel_aad540102dc1434b8222b24eccb8313ec}\label{classRingCentral_1_1HistorySessionBaseModel_aad540102dc1434b8222b24eccb8313ec} 
+string {\bfseries broadcasting\+End\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time when broadcasting ended. Format\+: date-\/time. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1HistorySessionBaseModel_a3145cd2c9e22d2273c5e595471641383}\label{classRingCentral_1_1HistorySessionBaseModel_a3145cd2c9e22d2273c5e595471641383} 
+string {\bfseries status}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Webinar session status Example\+: Finished Enum\+: Scheduled, Active, Finished. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1HistorySessionBaseModel_af12d1366dcc0e83b42eef15e10c70432}\label{classRingCentral_1_1HistorySessionBaseModel_af12d1366dcc0e83b42eef15e10c70432} 
+string {\bfseries runtime\+Status}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Session runtime status (for \textquotesingle{}Active\textquotesingle{} Sessions only). Please note that \textquotesingle{}Idle\textquotesingle{} status shouldn\textquotesingle{}t be returned in the API (but can be delivered in an event) Example\+: Live Enum\+: Idle, Practice, Going\+Live, Live, Break, Debrief. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1HistorySessionBaseModel_ad134c004f48c897a4aaa8168ed3e4eb9}\label{classRingCentral_1_1HistorySessionBaseModel_ad134c004f48c897a4aaa8168ed3e4eb9} 
+long? {\bfseries participant\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of participants (of all roles) who joined the webinar Format\+: int32 Example\+: 150. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1HistorySessionBaseModel_a49e71ffa88428189041d0f12efc3ba1e}\label{classRingCentral_1_1HistorySessionBaseModel_a49e71ffa88428189041d0f12efc3ba1e} 
+long? {\bfseries attendee\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of attendees who joined the webinar Format\+: int32 Example\+: 145. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1HistorySessionBaseModel_a18f93dee709cc892136c164904bc4cd1}\label{classRingCentral_1_1HistorySessionBaseModel_a18f93dee709cc892136c164904bc4cd1} 
+long? {\bfseries unique\+Participant\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Unique number of participants (of all roles) who joined the webinar Format\+: int32 Example\+: 140. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1HistorySessionBaseModel_aa574b1b754974322f7e8b18ab06d5399}\label{classRingCentral_1_1HistorySessionBaseModel_aa574b1b754974322f7e8b18ab06d5399} 
+long? {\bfseries unique\+Attendee\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Unique number of attendees who joined the webinar Format\+: int32 Example\+: 135. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/History\+Session\+Base\+Model.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,21 @@
+digraph "RingCentral.Net/Paths/Restapi"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_4624619dc4b6fee1c25adb94504baa6a {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Paths", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_4624619dc4b6fee1c25adb94504baa6a.html",tooltip=""]
+  subgraph clusterdir_e0b1baf5c0895f700b69bc84cc9a883f {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_e0b1baf5c0895f700b69bc84cc9a883f.html",tooltip=""]
+    dir_e0b1baf5c0895f700b69bc84cc9a883f [shape=plaintext, label="Restapi"];
+  dir_a6ffe6393bdaec40200f64f834a93c35 [label="Account", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_a6ffe6393bdaec40200f64f834a93c35.html",tooltip=""];
+  dir_13c1df25da55ea8ed3f77268c050216c [label="ClientInfo", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_13c1df25da55ea8ed3f77268c050216c.html",tooltip=""];
+  dir_5fe31065c7f927e0eadc2868f5b0bf27 [label="Dictionary", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_5fe31065c7f927e0eadc2868f5b0bf27.html",tooltip=""];
+  dir_820fd049b989a778f5da44ecda2130bc [label="Oauth", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_820fd049b989a778f5da44ecda2130bc.html",tooltip=""];
+  dir_44d44cb883fac761e9459712b6267c81 [label="Subscription", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_44d44cb883fac761e9459712b6267c81.html",tooltip=""];
+  dir_e915ba6ba9c26e50345125e22dff3e61 [label="V2", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_e915ba6ba9c26e50345125e22dff3e61.html",tooltip=""];
+  }
+  }
+}

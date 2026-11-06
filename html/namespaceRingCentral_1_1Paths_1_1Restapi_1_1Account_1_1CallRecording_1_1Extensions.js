@@ -1,0 +1,4 @@
+var namespaceRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallRecording_1_1Extensions =
+[
+    [ "Index", "classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallRecording_1_1Extensions_1_1Index.html", "classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1CallRecording_1_1Extensions_1_1Index" ]
+];

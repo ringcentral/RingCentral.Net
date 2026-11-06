@@ -1,0 +1,12 @@
+digraph "RingCentral.Net/Definitions"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_7f4cf7501a22a3c88fc9c5ff5cb98820 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="RingCentral.Net", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_7f4cf7501a22a3c88fc9c5ff5cb98820.html",tooltip=""]
+  dir_87cbf182cb53bb632805b214c9e8861c [label="Definitions", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_87cbf182cb53bb632805b214c9e8861c.html",tooltip=""];
+  }
+}

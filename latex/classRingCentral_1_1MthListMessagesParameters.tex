@@ -1,0 +1,45 @@
+\doxysection{Ring\+Central.\+Mth\+List\+Messages\+Parameters Class Reference}
+\hypertarget{classRingCentral_1_1MthListMessagesParameters}{}\label{classRingCentral_1_1MthListMessagesParameters}\index{RingCentral.MthListMessagesParameters@{RingCentral.MthListMessagesParameters}}
+
+
+Query parameters for operation mth\+List\+Messages.  
+
+
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1MthListMessagesParameters_af195852f696f99d1fcdaafd01aa48791}\label{classRingCentral_1_1MthListMessagesParameters_af195852f696f99d1fcdaafd01aa48791} 
+string {\bfseries thread\+Status}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Thread status Enum\+: Open, Resolved. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MthListMessagesParameters_afa68bf34a5f263da274c9b7e71df1d9f}\label{classRingCentral_1_1MthListMessagesParameters_afa68bf34a5f263da274c9b7e71df1d9f} 
+string\mbox{[}$\,$\mbox{]} {\bfseries owner\+Extension\+Ids}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Thread owner extension IDs. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MthListMessagesParameters_a098caa12cec665d8898e9de7e9f5e0cc}\label{classRingCentral_1_1MthListMessagesParameters_a098caa12cec665d8898e9de7e9f5e0cc} 
+string\mbox{[}$\,$\mbox{]} {\bfseries availability}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Availability filter (by default only {\ttfamily Alive} records are returned) Default\+: Alive Enum\+: Alive, Deleted. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MthListMessagesParameters_a3ba9f20f073922663cd23e196ced34b1}\label{classRingCentral_1_1MthListMessagesParameters_a3ba9f20f073922663cd23e196ced34b1} 
+string\mbox{[}$\,$\mbox{]} {\bfseries message\+Ids}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message IDs to filter the list of results. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MthListMessagesParameters_a4eee6cd4f4054bc334ff3c0acdbdd026}\label{classRingCentral_1_1MthListMessagesParameters_a4eee6cd4f4054bc334ff3c0acdbdd026} 
+string\mbox{[}$\,$\mbox{]} {\bfseries thread\+Ids}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Thread ID(s) to filter messages. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MthListMessagesParameters_a08e3f253f81aec67fa75349c910e875d}\label{classRingCentral_1_1MthListMessagesParameters_a08e3f253f81aec67fa75349c910e875d} 
+string {\bfseries creation\+Time\+From}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Start date/time for resulting message threads or messages (depending on path resource) in \href{https://datatracker.ietf.org/doc/html/rfc3339}{\texttt{RFC-\/3339}} format including timezone. This parameter is supported if {\ttfamily \doxylink{classRingCentral_1_1MthListMessagesParameters_adebfa5a1f15773ff7166c0573c22e1b1}{creation\+Time\+To}} is specified. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MthListMessagesParameters_adebfa5a1f15773ff7166c0573c22e1b1}\label{classRingCentral_1_1MthListMessagesParameters_adebfa5a1f15773ff7166c0573c22e1b1} 
+string {\bfseries creation\+Time\+To}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em End date/time for resulting message threads or messages (depending on path resource) in \href{https://datatracker.ietf.org/doc/html/rfc3339}{\texttt{RFC-\/3339}} format including timezone. This parameter is supported if {\ttfamily \doxylink{classRingCentral_1_1MthListMessagesParameters_a08e3f253f81aec67fa75349c910e875d}{creation\+Time\+From}} is specified. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MthListMessagesParameters_ac4cc84eb50471e099c05e2b484f31b0f}\label{classRingCentral_1_1MthListMessagesParameters_ac4cc84eb50471e099c05e2b484f31b0f} 
+long? {\bfseries per\+Page}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of items per page. If the provided value in the request is greater than a maximum, the maximum value is applied Maximum\+: 1000 Minimum\+: 1 Format\+: int32 Example\+: 100 Default\+: 100. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1MthListMessagesParameters_ad5c1a86498a5f2296fdfabce907c9a67}\label{classRingCentral_1_1MthListMessagesParameters_ad5c1a86498a5f2296fdfabce907c9a67} 
+long? {\bfseries page}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The result set page number (1-\/indexed) to return Maximum\+: 1000 Minimum\+: 1 Format\+: int32 Example\+: 1 Default\+: 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation mth\+List\+Messages. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Mth\+List\+Messages\+Parameters.\+cs\end{DoxyCompactItemize}

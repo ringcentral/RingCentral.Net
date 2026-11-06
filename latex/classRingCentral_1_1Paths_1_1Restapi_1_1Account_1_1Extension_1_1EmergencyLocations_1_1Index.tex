@@ -1,94 +1,69 @@
-\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Emergency\+Locations.\+Index Class Reference}
-\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index}\index{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index@{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index}}
+\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Emergency\+Locations.\+Index Class Reference}
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index}{}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index}\index{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index@{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index}}
 
 
 Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Emergency\+Locations.\+Index\+:
 % FIG 0
-\doxysubsection*{Public Member Functions}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_ac6526589c112fa20270489d612f7e6e5}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_ac6526589c112fa20270489d612f7e6e5}} 
-{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} parent, string location\+Id=null)
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a9c5c3fc38efda0e64c15d4dd54630894}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a9c5c3fc38efda0e64c15d4dd54630894} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Restapi.\+Account.\+Extension.\+Index}} parent, string location\+Id=null)
 \item 
-\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a2037ec515c6525d3acae58ffc379c358}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a2037ec515c6525d3acae58ffc379c358}} 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a2037ec515c6525d3acae58ffc379c358}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a2037ec515c6525d3acae58ffc379c358} 
 string {\bfseries Path} (bool with\+Parameter=true)
 \item 
-async Task$<$ \mbox{\hyperlink{classRingCentral_1_1EmergencyLocationsResource}{Emergency\+Locations\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a1177748e1c8ba48a9fe3b140145b9e2e}{List}} (\mbox{\hyperlink{classRingCentral_1_1GetExtensionEmergencyLocationsParameters}{Get\+Extension\+Emergency\+Locations\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
-\begin{DoxyCompactList}\small\item\em Returns a list of emergency response locations available for the particular extension. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/emergency-\/locations Rate Limit Group\+: Light App Permission\+: Read\+Accounts \end{DoxyCompactList}\item 
-async Task$<$ \mbox{\hyperlink{classRingCentral_1_1EmergencyLocationResponseResource}{Emergency\+Location\+Response\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a014dbe0d26488a846ad0b634bfc6a055}{Post}} (\mbox{\hyperlink{classRingCentral_1_1CreateUserEmergencyLocationRequest}{Create\+User\+Emergency\+Location\+Request}} create\+User\+Emergency\+Location\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
-\begin{DoxyCompactList}\small\item\em Creates a personal emergency response location for the current user. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/emergency-\/locations Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Emergency\+Framework \end{DoxyCompactList}\item 
-async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CommonEmergencyLocationResource}{Common\+Emergency\+Location\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_aa069200a183028b2960d6e89400f713e}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
-\begin{DoxyCompactList}\small\item\em Returns a personal emergency response location for the current user. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/emergency-\/locations/\{location\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts \end{DoxyCompactList}\item 
-async Task$<$ \mbox{\hyperlink{classRingCentral_1_1EmergencyLocationResponseResource}{Emergency\+Location\+Response\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a48d6b552b1550744f4c727131e1e3f36}{Put}} (\mbox{\hyperlink{classRingCentral_1_1EmergencyLocationRequestResource}{Emergency\+Location\+Request\+Resource}} emergency\+Location\+Request\+Resource, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
-\begin{DoxyCompactList}\small\item\em Updates a personal emergency response location by the current user or admin. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/emergency-\/locations/\{location\+Id\} Rate Limit Group\+: Light App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Emergency\+Framework \end{DoxyCompactList}\item 
-async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a36d0e56a43743135b208966fb9de5ae1}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1DeleteExtensionEmergencyLocationParameters}{Delete\+Extension\+Emergency\+Location\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
-\begin{DoxyCompactList}\small\item\em Deletes a personal emergency response location by ID by the current user or admin. Multiple personal emergency response locations can be deleted by single API call. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/emergency-\/locations/\{location\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Emergency\+Framework \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_abcfa287e34e891c1675c47cdbce8dd91}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_abcfa287e34e891c1675c47cdbce8dd91} 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1EmergencyLocationsResource}{Ring\+Central.\+Emergency\+Locations\+Resource}} $>$ {\bfseries List} (\mbox{\hyperlink{classRingCentral_1_1GetExtensionEmergencyLocationsParameters}{Ring\+Central.\+Get\+Extension\+Emergency\+Locations\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a list of emergency response locations available for the particular extension. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/emergency-\/locations Rate Limit Group\+: Light App Permission\+: Read\+Accounts. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a3ff20061268ea6337f774f148548f04c}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a3ff20061268ea6337f774f148548f04c} 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1EmergencyLocationResponseResource}{Ring\+Central.\+Emergency\+Location\+Response\+Resource}} $>$ {\bfseries Post} (\mbox{\hyperlink{classRingCentral_1_1CreateUserEmergencyLocationRequest}{Ring\+Central.\+Create\+User\+Emergency\+Location\+Request}} create\+User\+Emergency\+Location\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates a personal emergency response location for the current user. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/emergency-\/locations Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \doxylink{classRingCentral_1_1User}{User} Permission\+: Emergency\+Framework. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_ab3df3d9889752614176ea64a5c094e27}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_ab3df3d9889752614176ea64a5c094e27} 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CommonEmergencyLocationResource}{Ring\+Central.\+Common\+Emergency\+Location\+Resource}} $>$ {\bfseries Get} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a personal emergency response location for the current user. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/emergency-\/locations/\{location\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1EmergencyLocationResponseResource}{Ring\+Central.\+Emergency\+Location\+Response\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a015a667fd4912655626bbc3301e1bb67}{Put}} (\mbox{\hyperlink{classRingCentral_1_1EmergencyLocationRequestResource}{Ring\+Central.\+Emergency\+Location\+Request\+Resource}} emergency\+Location\+Request\+Resource, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates a personal emergency response location by the current user or admin. \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_aec53f2f5f0732e262d57cf6e29e0bf1f}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1DeleteExtensionEmergencyLocationParameters}{Ring\+Central.\+Delete\+Extension\+Emergency\+Location\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes a personal emergency response location by ID by the current user or admin. Multiple personal emergency response locations can be deleted by single API call. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_ad355fcc3bf9b4356d6bdba0807763f32}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_ad355fcc3bf9b4356d6bdba0807763f32}} 
-string {\bfseries location\+Id}
-\item 
-\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a6cdb1970be83e23fc30b211c0cb9e989}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a6cdb1970be83e23fc30b211c0cb9e989}} 
-\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Extension.\+Index}} {\bfseries parent}
-\item 
-\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a96a29d8dcc65bad68129f260dc4828bc}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a96a29d8dcc65bad68129f260dc4828bc}} 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a96a29d8dcc65bad68129f260dc4828bc}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a96a29d8dcc65bad68129f260dc4828bc} 
 \mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a79e45472ef3d07b2d90b49066f0202aa}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a79e45472ef3d07b2d90b49066f0202aa} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1Index}{Restapi.\+Account.\+Extension.\+Index}} {\bfseries parent}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_ad355fcc3bf9b4356d6bdba0807763f32}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_ad355fcc3bf9b4356d6bdba0807763f32} 
+string {\bfseries location\+Id}
 \end{DoxyCompactItemize}
 
 
+\label{doc-func-members}
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a36d0e56a43743135b208966fb9de5ae1}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a36d0e56a43743135b208966fb9de5ae1}} 
-\index{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index@{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index}!Delete@{Delete}}
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_aec53f2f5f0732e262d57cf6e29e0bf1f}\index{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index@{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index}!Delete@{Delete}}
 \index{Delete@{Delete}!RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index@{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index}}
 \doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
-{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Emergency\+Locations.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1DeleteExtensionEmergencyLocationParameters}{Delete\+Extension\+Emergency\+Location\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_aec53f2f5f0732e262d57cf6e29e0bf1f} 
+async Task$<$ string $>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Emergency\+Locations.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1DeleteExtensionEmergencyLocationParameters}{Ring\+Central.\+Delete\+Extension\+Emergency\+Location\+Parameters}}}]{query\+Params}{ = {\ttfamily null}, }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Deletes a personal emergency response location by ID by the current user or admin. Multiple personal emergency response locations can be deleted by single API call. HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/emergency-\/locations/\{location\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Emergency\+Framework 
+Deletes a personal emergency response location by ID by the current user or admin. Multiple personal emergency response locations can be deleted by single API call. 
 
-\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_aa069200a183028b2960d6e89400f713e}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_aa069200a183028b2960d6e89400f713e}} 
-\index{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index@{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index}!Get@{Get}}
-\index{Get@{Get}!RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index@{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index}}
-\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
-{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1CommonEmergencyLocationResource}{Common\+Emergency\+Location\+Resource}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Emergency\+Locations.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Returns a personal emergency response location for the current user. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/emergency-\/locations/\{location\+Id\} Rate Limit Group\+: Light App Permission\+: Read\+Accounts 
-
-\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a1177748e1c8ba48a9fe3b140145b9e2e}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a1177748e1c8ba48a9fe3b140145b9e2e}} 
-\index{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index@{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index}!List@{List}}
-\index{List@{List}!RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index@{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index}}
-\doxysubsubsection{\texorpdfstring{List()}{List()}}
-{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1EmergencyLocationsResource}{Emergency\+Locations\+Resource}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Emergency\+Locations.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1GetExtensionEmergencyLocationsParameters}{Get\+Extension\+Emergency\+Locations\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Returns a list of emergency response locations available for the particular extension. HTTP Method\+: get Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/emergency-\/locations Rate Limit Group\+: Light App Permission\+: Read\+Accounts 
-
-\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a014dbe0d26488a846ad0b634bfc6a055}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a014dbe0d26488a846ad0b634bfc6a055}} 
-\index{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index@{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index}!Post@{Post}}
-\index{Post@{Post}!RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index@{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index}}
-\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
-{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1EmergencyLocationResponseResource}{Emergency\+Location\+Response\+Resource}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Emergency\+Locations.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CreateUserEmergencyLocationRequest}{Create\+User\+Emergency\+Location\+Request}}}]{create\+User\+Emergency\+Location\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Creates a personal emergency response location for the current user. HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/emergency-\/locations Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Emergency\+Framework 
-
-\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a48d6b552b1550744f4c727131e1e3f36}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a48d6b552b1550744f4c727131e1e3f36}} 
-\index{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index@{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index}!Put@{Put}}
+HTTP Method\+: delete Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/emergency-\/locations/\{location\+Id\} Rate Limit Group\+: Heavy App Permission\+: Edit\+Accounts \doxylink{classRingCentral_1_1User}{User} Permission\+: Emergency\+Framework \Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a015a667fd4912655626bbc3301e1bb67}\index{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index@{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index}!Put@{Put}}
 \index{Put@{Put}!RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index@{RingCentral.Paths.Restapi.Account.Extension.EmergencyLocations.Index}}
 \doxysubsubsection{\texorpdfstring{Put()}{Put()}}
-{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1EmergencyLocationResponseResource}{Emergency\+Location\+Response\+Resource}}$>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Emergency\+Locations.\+Index.\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1EmergencyLocationRequestResource}{Emergency\+Location\+Request\+Resource}}}]{emergency\+Location\+Request\+Resource,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1EmergencyLocations_1_1Index_a015a667fd4912655626bbc3301e1bb67} 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1EmergencyLocationResponseResource}{Ring\+Central.\+Emergency\+Location\+Response\+Resource}} $>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Extension.\+Emergency\+Locations.\+Index.\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1EmergencyLocationRequestResource}{Ring\+Central.\+Emergency\+Location\+Request\+Resource}}}]{emergency\+Location\+Request\+Resource}{, }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Updates a personal emergency response location by the current user or admin. HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/emergency-\/locations/\{location\+Id\} Rate Limit Group\+: Light App Permission\+: Edit\+Accounts \mbox{\hyperlink{classRingCentral_1_1User}{User}} Permission\+: Emergency\+Framework 
+Updates a personal emergency response location by the current user or admin. 
 
-
+HTTP Method\+: put Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/extension/\{extension\+Id\}/emergency-\/locations/\{location\+Id\} Rate Limit Group\+: Light App Permission\+: Edit\+Accounts \doxylink{classRingCentral_1_1User}{User} Permission\+: Emergency\+Framework 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

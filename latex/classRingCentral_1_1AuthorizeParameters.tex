@@ -1,0 +1,77 @@
+\doxysection{Ring\+Central.\+Authorize\+Parameters Class Reference}
+\hypertarget{classRingCentral_1_1AuthorizeParameters}{}\label{classRingCentral_1_1AuthorizeParameters}\index{RingCentral.AuthorizeParameters@{RingCentral.AuthorizeParameters}}
+
+
+Query parameters for operation authorize.  
+
+
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1AuthorizeParameters_a18c509b6e5937a95973658ff28cac72f}\label{classRingCentral_1_1AuthorizeParameters_a18c509b6e5937a95973658ff28cac72f} 
+string {\bfseries client\+\_\+id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The registered identifier of a client application Example\+: AZw\+EVw\+GEcf\+Get2\+PCou\+A7\+K6. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1AuthorizeParameters_a5c97f934154ed725489d5a4300fb0cbf}\label{classRingCentral_1_1AuthorizeParameters_a5c97f934154ed725489d5a4300fb0cbf} 
+string {\bfseries response\+\_\+type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines authorization flow type. The only supported value is {\ttfamily code} which corresponds to OAuth 2.\+0 "{}\+Authorization Code Flow"{} Enum\+: code. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1AuthorizeParameters_a82fa31858a46d7a19b75be335dd360e6}\label{classRingCentral_1_1AuthorizeParameters_a82fa31858a46d7a19b75be335dd360e6} 
+string {\bfseries redirect\+\_\+uri}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This is the URI where the Authorization Server redirects the \doxylink{classRingCentral_1_1User}{User} Agent to at the end of the authorization flow. The value of this parameter must exactly match one of the URIs registered for this client application. This parameter is required if there are more than one redirect URIs registered for the app. Format\+: uri. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1AuthorizeParameters_a7a3f4f0eb2db4e3c2abef6e3291771de}\label{classRingCentral_1_1AuthorizeParameters_a7a3f4f0eb2db4e3c2abef6e3291771de} 
+string {\bfseries state}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An opaque value used by the client to maintain state between the request and callback. The authorization server includes this value when redirecting the \doxylink{classRingCentral_1_1User}{User} Agent back to the client. Using this parameter is strongly recommended to prevent cross-\/site request forgery attacks. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1AuthorizeParameters_ab4c50c6f23acad56dc93f1db6891da62}\label{classRingCentral_1_1AuthorizeParameters_ab4c50c6f23acad56dc93f1db6891da62} 
+string {\bfseries scope}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of space separated application permissions (OAuth scopes). \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1AuthorizeParameters_a966fe7d48ea5cb669079afac43421a59}\label{classRingCentral_1_1AuthorizeParameters_a966fe7d48ea5cb669079afac43421a59} 
+string {\bfseries display}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies how the Authorization Server displays the authentication and consent user interface pages to the End-\/\+User. Default\+: page Enum\+: page, popup, touch, mobile. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1AuthorizeParameters_ab12a1510f1fc066a34e85cb8fd3f6625}{prompt}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Space-\/delimited, case-\/sensitive list of ASCII string values that specifies whether the Authorization Server prompts the End-\/\+User for re-\/authentication and consent. The defined values are\+: \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1AuthorizeParameters_a77898893b6e3dd8a6da2f57534d253b2}\label{classRingCentral_1_1AuthorizeParameters_a77898893b6e3dd8a6da2f57534d253b2} 
+string {\bfseries ui\+\_\+locales}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em End-\/\+User\textquotesingle{}s preferred languages and scripts for the user interface, represented as a space-\/separated list of \href{https://datatracker.ietf.org/doc/html/rfc5646}{\texttt{RFC-\/5646}} language tag values, ordered by preference. Example\+: en-\/\+US. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1AuthorizeParameters_a9278a970f8eef65ca4217a794c65d8c0}\label{classRingCentral_1_1AuthorizeParameters_a9278a970f8eef65ca4217a794c65d8c0} 
+string {\bfseries code\+\_\+challenge}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The code challenge value as defined by the PKCE specification -\/ \href{https://datatracker.ietf.org/doc/html/rfc7636}{\texttt{RFC-\/7636 "{}\+Proof Key for Code Exchange by OAuth Public Clients"{}}}. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1AuthorizeParameters_a8c84cec85964f19eeee2976c7d32843e}\label{classRingCentral_1_1AuthorizeParameters_a8c84cec85964f19eeee2976c7d32843e} 
+string {\bfseries code\+\_\+challenge\+\_\+method}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The code challenge method as defined by the PKCE specification -\/ \href{https://datatracker.ietf.org/doc/html/rfc7636}{\texttt{RFC-\/7636 "{}\+Proof Key for Code Exchange by OAuth Public Clients"{}}}. This parameter is mandatory when the {\ttfamily \doxylink{classRingCentral_1_1AuthorizeParameters_a9278a970f8eef65ca4217a794c65d8c0}{code\+\_\+challenge}} is provided Default\+: plain Enum\+: plain, S256. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1AuthorizeParameters_a2321fe59d1f63f86483beeff12986aa9}\label{classRingCentral_1_1AuthorizeParameters_a2321fe59d1f63f86483beeff12986aa9} 
+string {\bfseries nonce}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em String value used to associate a Client session with an ID Token, and to mitigate replay attacks. The value is passed through unmodified from the Authentication Request to the ID Token. (This parameter is defined in Open\+ID Connect 1.\+0 specification). \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1AuthorizeParameters_ab753a06a542748371a86d77478458120}\label{classRingCentral_1_1AuthorizeParameters_ab753a06a542748371a86d77478458120} 
+string {\bfseries login\+\_\+hint}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Hint to the Authorization Server about the login identifier the End-\/\+User might use to log in. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1AuthorizeParameters_aa4c52e72aea3939af21d39428e63217b}\label{classRingCentral_1_1AuthorizeParameters_aa4c52e72aea3939af21d39428e63217b} 
+string {\bfseries brand\+\_\+id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespaceRingCentral}{Ring\+Central} Brand identifier. If it is not provided in the request, server will try to determine brand from the client application profile. Example\+: 1210. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation authorize. 
+
+\label{doc-property-members}
+\Hypertarget{classRingCentral_1_1AuthorizeParameters_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{classRingCentral_1_1AuthorizeParameters_ab12a1510f1fc066a34e85cb8fd3f6625}\index{RingCentral.AuthorizeParameters@{RingCentral.AuthorizeParameters}!prompt@{prompt}}
+\index{prompt@{prompt}!RingCentral.AuthorizeParameters@{RingCentral.AuthorizeParameters}}
+\doxysubsubsection{\texorpdfstring{prompt}{prompt}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1AuthorizeParameters_ab12a1510f1fc066a34e85cb8fd3f6625} 
+string Ring\+Central.\+Authorize\+Parameters.\+prompt\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Space-\/delimited, case-\/sensitive list of ASCII string values that specifies whether the Authorization Server prompts the End-\/\+User for re-\/authentication and consent. The defined values are\+: 
+
+
+\begin{DoxyItemize}
+\item {\ttfamily login} -\/ \doxylink{namespaceRingCentral}{Ring\+Central} native login form;
+\item {\ttfamily sso} -\/ Single Sign-\/\+On login form;
+\item {\ttfamily consent} -\/ form to show the requested scope and prompt user for consent;
+\item {\ttfamily none} -\/ indicates that non-\/interactive authorization is requested (the flow will succeed only if the user has been already authenticated within the same browser session). Cannot be combined with any other prompt option. Default\+: login sso 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Authorize\+Parameters.\+cs\end{DoxyCompactItemize}

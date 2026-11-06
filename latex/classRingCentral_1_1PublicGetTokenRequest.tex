@@ -1,0 +1,57 @@
+\doxysection{Ring\+Central.\+Public\+Get\+Token\+Request Class Reference}
+\hypertarget{classRingCentral_1_1PublicGetTokenRequest}{}\label{classRingCentral_1_1PublicGetTokenRequest}\index{RingCentral.PublicGetTokenRequest@{RingCentral.PublicGetTokenRequest}}
+
+
+Token endpoint request parameters used in the "{}\+Refresh Token"{} flow with the {\ttfamily \doxylink{classRingCentral_1_1PublicGetTokenRequest_aa84ca43756ced02f44d81c41a8c4ba81}{refresh\+\_\+token}} grant type.  
+
+
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1PublicGetTokenRequest_adc6678d51577669cf7f0a2bc047c281f}\label{classRingCentral_1_1PublicGetTokenRequest_adc6678d51577669cf7f0a2bc047c281f} 
+string {\bfseries client\+\_\+id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The registered identifier of a client application. Used to identify a client ONLY if the client authentication is not required and corresponding credentials are not provided with this request Example\+: AZw\+EVw\+GEcf\+Get2\+PCou\+A7\+K6. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1PublicGetTokenRequest_a339ba98be596bd7158b4bff4b18bbb51}\label{classRingCentral_1_1PublicGetTokenRequest_a339ba98be596bd7158b4bff4b18bbb51} 
+string {\bfseries client\+\_\+assertion\+\_\+type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Client assertion type for the {\ttfamily client\+\_\+secret\+\_\+jwt} or {\ttfamily private\+\_\+key\+\_\+jwt} client authentication types, as defined by \href{https://datatracker.ietf.org/doc/html/rfc7523\#section-2.2}{\texttt{RFC-\/7523}}. This parameter is mandatory if the client authentication is required and a client decided to use one of these authentication types Enum\+: urn\+:ietf\+:params\+:oauth\+:client-\/assertion-\/type\+:jwt-\/bearer. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1PublicGetTokenRequest_ac6131d1a63be4ad2d9e7b95e48dc6abc}\label{classRingCentral_1_1PublicGetTokenRequest_ac6131d1a63be4ad2d9e7b95e48dc6abc} 
+string {\bfseries client\+\_\+assertion}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Client assertion (JWT) for the {\ttfamily client\+\_\+secret\+\_\+jwt} or {\ttfamily private\+\_\+key\+\_\+jwt} client authentication types, as defined by \href{https://datatracker.ietf.org/doc/html/rfc7523\#section-2.2}{\texttt{RFC-\/7523}}. This parameter is mandatory if the client authentication is required and a client decided to use one of these authentication types. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1PublicGetTokenRequest_a27775841e74e2e6eeaef97905be43142}\label{classRingCentral_1_1PublicGetTokenRequest_a27775841e74e2e6eeaef97905be43142} 
+string {\bfseries scope}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of application permissions (OAuth scopes) requested. By default, it includes all permissions configured on the client application registration. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1PublicGetTokenRequest_a7ff4fe1e23ee578d96809aecfb5981c2}\label{classRingCentral_1_1PublicGetTokenRequest_a7ff4fe1e23ee578d96809aecfb5981c2} 
+string {\bfseries endpoint\+\_\+id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The unique identifier of a client application instance. If not specified, the derived or auto-\/generated value will be used. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1PublicGetTokenRequest_ab8220f1c3d7272f22c7067e52db7d7f8}\label{classRingCentral_1_1PublicGetTokenRequest_ab8220f1c3d7272f22c7067e52db7d7f8} 
+long? {\bfseries access\+\_\+token\+\_\+ttl}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Access token lifetime in seconds Maximum\+: 3600 Minimum\+: 600 Format\+: int32 Default\+: 3600. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1PublicGetTokenRequest_a19e2ac2b0aefa71274d294d40a541ca2}\label{classRingCentral_1_1PublicGetTokenRequest_a19e2ac2b0aefa71274d294d40a541ca2} 
+long? {\bfseries refresh\+\_\+token\+\_\+ttl}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Refresh token lifetime in seconds Maximum\+: 2592000 Format\+: int32 Default\+: 604800. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1PublicGetTokenRequest_acb200aaca431cdb065e7426809dc823e}\label{classRingCentral_1_1PublicGetTokenRequest_acb200aaca431cdb065e7426809dc823e} 
+string {\bfseries grant\+\_\+type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Grant type Required Enum\+: authorization\+\_\+code, urn\+:ietf\+:params\+:oauth\+:grant-\/type\+:jwt-\/bearer, partner\+\_\+jwt, refresh\+\_\+token. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1PublicGetTokenRequest_a8513a6dc8da45f49ff87b1f6b614bcb6}\label{classRingCentral_1_1PublicGetTokenRequest_a8513a6dc8da45f49ff87b1f6b614bcb6} 
+string {\bfseries code}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For {\ttfamily authorization\+\_\+code} grant type only. \doxylink{classRingCentral_1_1User}{User}\textquotesingle{}s authorization code Required. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1PublicGetTokenRequest_a57b8cf72bf45e3df0d402b03832b0e2b}\label{classRingCentral_1_1PublicGetTokenRequest_a57b8cf72bf45e3df0d402b03832b0e2b} 
+string {\bfseries redirect\+\_\+uri}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For {\ttfamily authorization\+\_\+code} grant type only. This is a callback URI which determines where the response is sent. The value of this parameter must exactly match one of the URIs you have provided for your app upon registration Format\+: uri. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1PublicGetTokenRequest_aecc20850a43866e8c3c9cbc73ee2a837}\label{classRingCentral_1_1PublicGetTokenRequest_aecc20850a43866e8c3c9cbc73ee2a837} 
+string {\bfseries code\+\_\+verifier}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For {\ttfamily authorization\+\_\+code} grant type only. The code verifier as defined by the PKCE specification -\/ \href{https://datatracker.ietf.org/doc/html/rfc7636}{\texttt{RFC-\/7636 "{}\+Proof Key for Code Exchange by OAuth Public Clients"{}}}. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1PublicGetTokenRequest_a3aad013626afa48440405967f5bd85fb}\label{classRingCentral_1_1PublicGetTokenRequest_a3aad013626afa48440405967f5bd85fb} 
+string {\bfseries assertion}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For {\ttfamily urn\+:ietf\+:params\+:oauth\+:grant-\/type\+:jwt-\/bearer} or {\ttfamily partner\+\_\+jwt} grant types only. Authorization grant assertion (JWT) as defined by \href{https://datatracker.ietf.org/doc/html/rfc7523\#section-2.1}{\texttt{RFC-\/7523}}. Required. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1PublicGetTokenRequest_aa84ca43756ced02f44d81c41a8c4ba81}\label{classRingCentral_1_1PublicGetTokenRequest_aa84ca43756ced02f44d81c41a8c4ba81} 
+string {\bfseries refresh\+\_\+token}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For {\ttfamily \doxylink{classRingCentral_1_1PublicGetTokenRequest_aa84ca43756ced02f44d81c41a8c4ba81}{refresh\+\_\+token}} grant type only. Previously issued refresh token. Required. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Token endpoint request parameters used in the "{}\+Refresh Token"{} flow with the {\ttfamily \doxylink{classRingCentral_1_1PublicGetTokenRequest_aa84ca43756ced02f44d81c41a8c4ba81}{refresh\+\_\+token}} grant type. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Public\+Get\+Token\+Request.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,50 @@
+\doxysection{Ring\+Central.\+Extract\+Sync\+Account\+Call\+Log\+Parameters Class Reference}
+\hypertarget{classRingCentral_1_1ExtractSyncAccountCallLogParameters}{}\label{classRingCentral_1_1ExtractSyncAccountCallLogParameters}\index{RingCentral.ExtractSyncAccountCallLogParameters@{RingCentral.ExtractSyncAccountCallLogParameters}}
+
+
+Query parameters for operation extract\+Sync\+Account\+Call\+Log.  
+
+
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1ExtractSyncAccountCallLogParameters_adbb5816c2d4f15f0fe5bbe5527e3ab2f}\label{classRingCentral_1_1ExtractSyncAccountCallLogParameters_adbb5816c2d4f15f0fe5bbe5527e3ab2f} 
+string {\bfseries sync\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of call log synchronization request -\/ full or incremental sync Default\+: FSync Enum\+: FSync, ISync. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1ExtractSyncAccountCallLogParameters_afc9a62c142f800971c0b9d8bdba0eaee}\label{classRingCentral_1_1ExtractSyncAccountCallLogParameters_afc9a62c142f800971c0b9d8bdba0eaee} 
+string {\bfseries sync\+Token}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Value of {\ttfamily \doxylink{classRingCentral_1_1ExtractSyncAccountCallLogParameters_afc9a62c142f800971c0b9d8bdba0eaee}{sync\+Token}} property of the last extract-\/sync request response. Mandatory for \textquotesingle{}ISync\textquotesingle{} type. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1ExtractSyncAccountCallLogParameters_a38f4b6d91696b80c5f3dd10b8c2fad55}\label{classRingCentral_1_1ExtractSyncAccountCallLogParameters_a38f4b6d91696b80c5f3dd10b8c2fad55} 
+string {\bfseries date\+From}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Starting datetime for resulting records in ISO 8601 format including timezone, for example 2016-\/03-\/10T18\+:07\+:52.\+534Z. The default value is one hour before the current moment Format\+: date-\/time. \end{DoxyCompactList}\item 
+long? \mbox{\hyperlink{classRingCentral_1_1ExtractSyncAccountCallLogParameters_a8483416603b002053a406343d1330c77}{record\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Allowed for {\ttfamily FSync} mode only. It limits the number of records to be returned in response (the maximum number of records is 1000, the default value is 250). \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1ExtractSyncAccountCallLogParameters_a81c76b3fdce8cf5df46a62d813d53dd8}\label{classRingCentral_1_1ExtractSyncAccountCallLogParameters_a81c76b3fdce8cf5df46a62d813d53dd8} 
+string {\bfseries view}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Defines the level of details for returned call records Default\+: Simple Enum\+: Simple, Detailed. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1ExtractSyncAccountCallLogParameters_a0824c30652c52e141e27a39c49d141dd}\label{classRingCentral_1_1ExtractSyncAccountCallLogParameters_a0824c30652c52e141e27a39c49d141dd} 
+string\mbox{[}$\,$\mbox{]} {\bfseries metadata\+Category}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Category of metadata to be returned. If omitted, all call records are returned. Multiple values are supported. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Query parameters for operation extract\+Sync\+Account\+Call\+Log. 
+
+\label{doc-property-members}
+\Hypertarget{classRingCentral_1_1ExtractSyncAccountCallLogParameters_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{classRingCentral_1_1ExtractSyncAccountCallLogParameters_a8483416603b002053a406343d1330c77}\index{RingCentral.ExtractSyncAccountCallLogParameters@{RingCentral.ExtractSyncAccountCallLogParameters}!recordCount@{recordCount}}
+\index{recordCount@{recordCount}!RingCentral.ExtractSyncAccountCallLogParameters@{RingCentral.ExtractSyncAccountCallLogParameters}}
+\doxysubsubsection{\texorpdfstring{recordCount}{recordCount}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1ExtractSyncAccountCallLogParameters_a8483416603b002053a406343d1330c77} 
+long? Ring\+Central.\+Extract\+Sync\+Account\+Call\+Log\+Parameters.\+record\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Allowed for {\ttfamily FSync} mode only. It limits the number of records to be returned in response (the maximum number of records is 1000, the default value is 250). 
+
+Actual number of calls could extend the limit in case there are several calls at borderline modification time (millisecond precision). Minimum\+: 1 Format\+: int32 Default\+: 250 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Extract\+Sync\+Account\+Call\+Log\+Parameters.\+cs\end{DoxyCompactItemize}

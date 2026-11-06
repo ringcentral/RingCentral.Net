@@ -1,0 +1,39 @@
+\doxysection{Ring\+Central.\+Paths.\+Restapi.\+V2.\+Accounts.\+Extensions.\+Comm\+Handling.\+Voice.\+Forwarding\+Targets.\+Index Class Reference}
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1ForwardingTargets_1_1Index}{}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1ForwardingTargets_1_1Index}\index{RingCentral.Paths.Restapi.V2.Accounts.Extensions.CommHandling.Voice.ForwardingTargets.Index@{RingCentral.Paths.Restapi.V2.Accounts.Extensions.CommHandling.Voice.ForwardingTargets.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+V2.\+Accounts.\+Extensions.\+Comm\+Handling.\+Voice.\+Forwarding\+Targets.\+Index\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1ForwardingTargets_1_1Index_a4345ef3d6e432adb105d7ee95b761899}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1ForwardingTargets_1_1Index_a4345ef3d6e432adb105d7ee95b761899} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_ae36a9fe1af287df3d5cba34460520f0}{Restapi.\+V2.\+Accounts.\+Extensions.\+Comm\+Handling.\+Voice.\+Forwarding\+Targets.\+Devices.\+Index}} {\bfseries Devices} (string device\+Id=null)
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1ForwardingTargets_1_1Index_a7a74bc4aa78cf073c82486d878e3cbdc}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1ForwardingTargets_1_1Index_a7a74bc4aa78cf073c82486d878e3cbdc} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1Index}{Restapi.\+V2.\+Accounts.\+Extensions.\+Comm\+Handling.\+Voice.\+Index}} parent)
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1ForwardingTargets_1_1Index_a5841e828dab498e1af86df7c8bf106e2}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1ForwardingTargets_1_1Index_a5841e828dab498e1af86df7c8bf106e2} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1ForwardingTargets_1_1Index_aaac7dcace1c20c340f9f692160b40771}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1ForwardingTargets_1_1Index_aaac7dcace1c20c340f9f692160b40771} 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CommForwardingTargetsResource}{Ring\+Central.\+Comm\+Forwarding\+Targets\+Resource}} $>$ {\bfseries Get} (\mbox{\hyperlink{classRingCentral_1_1ReadForwardingTargetsParameters}{Ring\+Central.\+Read\+Forwarding\+Targets\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the extension\textquotesingle{}s forwarding targets. HTTP Method\+: get Endpoint\+: /restapi/v2/accounts/\{account\+Id\}/extensions/\{extension\+Id\}/comm-\/handling/voice/forwarding-\/targets Rate Limit Group\+: Medium App Permission\+: Read\+Accounts. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1ForwardingTargets_1_1Index_a269880da2255643b99d3a62059a2ff5b}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1ForwardingTargets_1_1Index_a269880da2255643b99d3a62059a2ff5b} 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CommRemoveForwardingTargetsResponse}{Ring\+Central.\+Comm\+Remove\+Forwarding\+Targets\+Response}} $>$ {\bfseries Delete} (\mbox{\hyperlink{classRingCentral_1_1CommRemoveForwardingTargetsRequest}{Ring\+Central.\+Comm\+Remove\+Forwarding\+Targets\+Request}} comm\+Remove\+Forwarding\+Targets\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Removes the specified forwarding targets from the extension\textquotesingle{}s communication handling rules. HTTP Method\+: delete Endpoint\+: /restapi/v2/accounts/\{account\+Id\}/extensions/\{extension\+Id\}/comm-\/handling/voice/forwarding-\/targets Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1ForwardingTargets_1_1Index_a61ca025de42dbac2cc56311d42cf9a16}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1ForwardingTargets_1_1Index_a61ca025de42dbac2cc56311d42cf9a16} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1ForwardingTargets_1_1Index_a245c5db1e772f757854b32ddeda54390}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1ForwardingTargets_1_1Index_a245c5db1e772f757854b32ddeda54390} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1Index}{Restapi.\+V2.\+Accounts.\+Extensions.\+Comm\+Handling.\+Voice.\+Index}} {\bfseries parent}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+V2/\+Accounts/\+Extensions/\+Comm\+Handling/\+Voice/\+Forwarding\+Targets/\+Devices/Index.\+cs\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+V2/\+Accounts/\+Extensions/\+Comm\+Handling/\+Voice/\+Forwarding\+Targets/Index.\+cs\end{DoxyCompactItemize}

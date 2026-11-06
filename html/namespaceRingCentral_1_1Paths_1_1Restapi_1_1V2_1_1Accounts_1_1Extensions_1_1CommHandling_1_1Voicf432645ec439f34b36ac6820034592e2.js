@@ -1,0 +1,5 @@
+var namespaceRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voicf432645ec439f34b36ac6820034592e2 =
+[
+    [ "Extensions", "namespaceRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice475ed33899553eba12984511c96efbc.html", "namespaceRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice475ed33899553eba12984511c96efbc" ],
+    [ "Index", "classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_ae36a9fe1af287df3d5cba34460520f0.html", null ]
+];

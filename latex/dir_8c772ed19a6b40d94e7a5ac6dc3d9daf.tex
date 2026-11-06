@@ -1,0 +1,18 @@
+\doxysection{Ring\+Central.\+Net.\+Auto\+Refresh Directory Reference}
+\hypertarget{dir_8c772ed19a6b40d94e7a5ac6dc3d9daf}{}\label{dir_8c772ed19a6b40d94e7a5ac6dc3d9daf}\index{RingCentral.Net.AutoRefresh Directory Reference@{RingCentral.Net.AutoRefresh Directory Reference}}
+
+
+\doxysubsection{Detailed Description}
+\hypertarget{dir_8c772ed19a6b40d94e7a5ac6dc3d9daf_autotoc_md522}{}\doxysubsection{\texorpdfstring{Auto Refresh Extension}{Auto Refresh Extension}}\label{dir_8c772ed19a6b40d94e7a5ac6dc3d9daf_autotoc_md522}
+This extension will auto refresh your token every 30 minutes(customizable).
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ rc\ =\ \textcolor{keyword}{new}\ RestClient(...);}
+\DoxyCodeLine{var\ autoRefreshExtension\ =\ \textcolor{keyword}{new}\ AutoRefreshExtension(...);}
+\DoxyCodeLine{await\ rc.InstallExtension(autoRefreshExtension);}
+\DoxyCodeLine{autoRefreshExtension.Start();}
+
+\end{DoxyCode}
+\hypertarget{dir_8c772ed19a6b40d94e7a5ac6dc3d9daf_autotoc_md523}{}\doxysubsection{\texorpdfstring{Disclaimer}{Disclaimer}}\label{dir_8c772ed19a6b40d94e7a5ac6dc3d9daf_autotoc_md523}
+\href{https://medium.com/ringcentral-developers/ringcentral-token-management-477578f00954}{\texttt{Token management}} is a complicated topic. There is no one-\/fit-\/all solution. This extension is an quick-\/and-\/dirty out-\/of-\/box solution to refresh your token. It is by no means the best practice. It simply starts a background timers to refresh your token periodically. For serious production applications, you may need better token management strategy. 

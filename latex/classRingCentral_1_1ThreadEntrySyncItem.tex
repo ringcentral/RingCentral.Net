@@ -1,0 +1,52 @@
+\doxysection{Ring\+Central.\+Thread\+Entry\+Sync\+Item Class Reference}
+\hypertarget{classRingCentral_1_1ThreadEntrySyncItem}{}\label{classRingCentral_1_1ThreadEntrySyncItem}\index{RingCentral.ThreadEntrySyncItem@{RingCentral.ThreadEntrySyncItem}}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1ThreadEntrySyncItem_af500c3cdd9ad15e7c8efeffcb843c262}\label{classRingCentral_1_1ThreadEntrySyncItem_af500c3cdd9ad15e7c8efeffcb843c262} 
+string {\bfseries record\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Required Enum\+: Alive\+Message, Deleted\+Message, Alive\+Note, Deleted\+Note, Thread\+Created\+Hint, Thread\+Resolved\+Hint, Thread\+Deleted\+Hint, Thread\+Assigned\+Hint. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1ThreadEntrySyncItem_abc50230386b3c9c2ee70846200aed1be}\label{classRingCentral_1_1ThreadEntrySyncItem_abc50230386b3c9c2ee70846200aed1be} 
+string {\bfseries id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a system message Required. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1ThreadEntrySyncItem_a6cd3f6a0de6273cad42feaa3ad0c5566}\label{classRingCentral_1_1ThreadEntrySyncItem_a6cd3f6a0de6273cad42feaa3ad0c5566} 
+string {\bfseries thread\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal identifier of a message thread Required. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1ThreadEntrySyncItem_aa5607ec1532a5ce5c97cc09b56b8533b}\label{classRingCentral_1_1ThreadEntrySyncItem_aa5607ec1532a5ce5c97cc09b56b8533b} 
+string {\bfseries availability}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Thread/message availability Required Enum\+: Alive, Deleted. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1ThreadEntrySyncItem_a2047719fff99a18ec44ec524b84c3f59}\label{classRingCentral_1_1ThreadEntrySyncItem_a2047719fff99a18ec44ec524b84c3f59} 
+string {\bfseries creation\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Note creation date/time Required Format\+: date-\/time. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1ThreadEntrySyncItem_ad6a5efd27e6ede1bb0243fe1f343b053}\label{classRingCentral_1_1ThreadEntrySyncItem_ad6a5efd27e6ede1bb0243fe1f343b053} 
+string {\bfseries direction}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message direction (inbound or outbound) Required Enum\+: Inbound, Outbound. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1ThreadEntrySyncItem_a4f15a02cada88436b59022e016c8cec4}\label{classRingCentral_1_1ThreadEntrySyncItem_a4f15a02cada88436b59022e016c8cec4} 
+string {\bfseries last\+Modified\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Last modification date/time (always the same as a creation time since the system hints are immutable) Required Format\+: date-\/time. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1ThreadEntrySyncItem_ac3b0a778c07063f2d39b28efe002e1d7}\label{classRingCentral_1_1ThreadEntrySyncItem_ac3b0a778c07063f2d39b28efe002e1d7} 
+string {\bfseries message\+Status}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message status. Different message types may have different allowed status values. For outbound faxes the aggregated message status is returned. If, for multi-\/recipient outbound message, a status for at least one recipient is {\ttfamily Queued}, then the {\ttfamily Queued} value is returned. If a status for at least one recipient is {\ttfamily Sending\+Failed}, then the \textquotesingle{}Sending\+Failed\textquotesingle{} value is returned. In other cases, the {\ttfamily Sent} status is returned Enum\+: Queued, Sent, Delivered, Delivery\+Failed, Sending\+Failed, Received. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1ThreadEntrySyncItem_a36c498458c92ceaf34694a7e7c099b2c}\label{classRingCentral_1_1ThreadEntrySyncItem_a36c498458c92ceaf34694a7e7c099b2c} 
+string {\bfseries text}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message or note text Example\+: Hello, how are you doing today? \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1ThreadEntrySyncItem_a5a67920c1ed7496fc075ee6c299032e6}\label{classRingCentral_1_1ThreadEntrySyncItem_a5a67920c1ed7496fc075ee6c299032e6} 
+\mbox{\hyperlink{classRingCentral_1_1MessageAttachmentResponseEntry}{Message\+Attachment\+Response\+Entry}}\mbox{[}$\,$\mbox{]} {\bfseries attachments}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Message attachments (if any). \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1ThreadEntrySyncItem_aee356a1bcb52fda74ed59f4424d2cf1b}\label{classRingCentral_1_1ThreadEntrySyncItem_aee356a1bcb52fda74ed59f4424d2cf1b} 
+\mbox{\hyperlink{classRingCentral_1_1ThreadEntrySyncItemAuthor}{Thread\+Entry\+Sync\+Item\+Author}} {\bfseries author}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Thread note author. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1ThreadEntrySyncItem_a7ce9cb13922d5c947cf37a0ae691f484}\label{classRingCentral_1_1ThreadEntrySyncItem_a7ce9cb13922d5c947cf37a0ae691f484} 
+\mbox{\hyperlink{classRingCentral_1_1ThreadEntrySyncItemInitiator}{Thread\+Entry\+Sync\+Item\+Initiator}} {\bfseries initiator}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Initiator of the action. Can be missing if the action was initiated by the system. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1ThreadEntrySyncItem_ac387a660bfb941a07dcf018243e60914}\label{classRingCentral_1_1ThreadEntrySyncItem_ac387a660bfb941a07dcf018243e60914} 
+\mbox{\hyperlink{classRingCentral_1_1ThreadUserModel}{Thread\+User\+Model}} {\bfseries assignee}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{classRingCentral_1_1ThreadEntrySyncItem_afb7f0ddf3fafec316152f11112a6dda2}\label{classRingCentral_1_1ThreadEntrySyncItem_afb7f0ddf3fafec316152f11112a6dda2} 
+\mbox{\hyperlink{classRingCentral_1_1ThreadUserModel}{Thread\+User\+Model}} {\bfseries previous\+Assignee}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Thread\+Entry\+Sync\+Item.\+cs\end{DoxyCompactItemize}

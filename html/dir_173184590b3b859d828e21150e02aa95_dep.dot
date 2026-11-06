@@ -1,0 +1,18 @@
+digraph "RingCentral.Net/Paths/Restapi/Account/CallRecording"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_a6ffe6393bdaec40200f64f834a93c35 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Account", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_a6ffe6393bdaec40200f64f834a93c35.html",tooltip=""]
+  subgraph clusterdir_173184590b3b859d828e21150e02aa95 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_173184590b3b859d828e21150e02aa95.html",tooltip=""]
+    dir_173184590b3b859d828e21150e02aa95 [shape=plaintext, label="CallRecording"];
+  dir_8bcef042a58ba90a1818752afc1b4498 [label="BulkAssign", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_8bcef042a58ba90a1818752afc1b4498.html",tooltip=""];
+  dir_e6ca7e48f737829f3eb35c0872105294 [label="CustomGreetings", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_e6ca7e48f737829f3eb35c0872105294.html",tooltip=""];
+  dir_b0b180d363ad8bf9c6e4750dbd99ad31 [label="Extensions", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_b0b180d363ad8bf9c6e4750dbd99ad31.html",tooltip=""];
+  }
+  }
+}

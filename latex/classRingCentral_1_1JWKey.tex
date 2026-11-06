@@ -1,0 +1,36 @@
+\doxysection{Ring\+Central.\+JWKey Class Reference}
+\hypertarget{classRingCentral_1_1JWKey}{}\label{classRingCentral_1_1JWKey}\index{RingCentral.JWKey@{RingCentral.JWKey}}
+
+
+Public key definition in JWK format (see \href{https://www.rfc-editor.org/rfc/rfc7517.html\#section-4}{\texttt{RFC-\/7517}}).  
+
+
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1JWKey_a9dc0ffcce5c0ba701b54bc91d8748508}\label{classRingCentral_1_1JWKey_a9dc0ffcce5c0ba701b54bc91d8748508} 
+string {\bfseries kty}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Identifies the cryptographic algorithm family used with the key Required Example\+: RSA. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1JWKey_a37e9202422980a4c4026e323f6de216b}\label{classRingCentral_1_1JWKey_a37e9202422980a4c4026e323f6de216b} 
+string {\bfseries alg}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Identifies the algorithm intended for use with the key Required Example\+: RS256. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1JWKey_acc9fcaed6ac3fbc2ec0e86ef3e183415}\label{classRingCentral_1_1JWKey_acc9fcaed6ac3fbc2ec0e86ef3e183415} 
+string {\bfseries use}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Identifies the intended use of the public key. This parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Required Example\+: sig Enum\+: sig, enc. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1JWKey_a6c278c75a0265141ada70037644e99a7}\label{classRingCentral_1_1JWKey_a6c278c75a0265141ada70037644e99a7} 
+string {\bfseries kid}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An ID of the specific key within this keyset. It is used to match the {\ttfamily \doxylink{classRingCentral_1_1JWKey_a6c278c75a0265141ada70037644e99a7}{kid}} parameter in JOSE header of JWT. Required. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1JWKey_ac48c73a28e6f61081dd80c04d2f54d17}\label{classRingCentral_1_1JWKey_ac48c73a28e6f61081dd80c04d2f54d17} 
+string {\bfseries n}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The "{}n"{} (modulus) parameter contains the modulus value for the RSA public key. It is represented as a Base64url\+UInt-\/encoded value. (\doxylink{classRingCentral_1_1User}{User} with "{}\+RSA"{} key type) Required. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1JWKey_a5391442f0f0eb5afa6fc5ab4433177e6}\label{classRingCentral_1_1JWKey_a5391442f0f0eb5afa6fc5ab4433177e6} 
+string {\bfseries e}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The "{}e"{} (exponent) parameter contains the exponent value for the RSA public key. It is represented as a Base64url\+UInt-\/encoded value. (\doxylink{classRingCentral_1_1User}{User} with "{}\+RSA"{} key type) Required. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Public key definition in JWK format (see \href{https://www.rfc-editor.org/rfc/rfc7517.html\#section-4}{\texttt{RFC-\/7517}}). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/JWKey.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,48 @@
+\doxysection{Ring\+Central.\+Country\+Context Class Reference}
+\hypertarget{classRingCentral_1_1CountryContext}{}\label{classRingCentral_1_1CountryContext}\index{RingCentral.CountryContext@{RingCentral.CountryContext}}
+
+
+Country context definition.  
+
+
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1CountryContext_af683c9e0b5224b0bee79591f7a3bd9b7}\label{classRingCentral_1_1CountryContext_af683c9e0b5224b0bee79591f7a3bd9b7} 
+string {\bfseries iso\+Code}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Two-\/letter country code in \href{https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2}{\texttt{ISO 3166-\/1 alpha-\/2}} format Example\+: US. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1CountryContext_abe64c12b8c23382958fffc8373ca540b}\label{classRingCentral_1_1CountryContext_abe64c12b8c23382958fffc8373ca540b} 
+string {\bfseries name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The official name of the country. Example\+: United States. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1CountryContext_ad08e5e0d1c866e4d1c7960724b064f51}\label{classRingCentral_1_1CountryContext_ad08e5e0d1c866e4d1c7960724b064f51} 
+string {\bfseries calling\+Code}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Country calling code defined by \href{http://en.wikipedia.org/wiki/ITU-T}{\texttt{ITU-\/T}} recommendations, \href{http://en.wikipedia.org/wiki/E.123}{\texttt{E.\+123}} and \href{http://en.wikipedia.org/wiki/E.164}{\texttt{E.\+164}}. See also \href{http://en.wikipedia.org/wiki/List_of_country_calling_codes}{\texttt{Calling Codes}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Country context definition. 
+
+{\bfseries{In the request}}\+:
+
+Country context can be identified by {\ttfamily country.\+iso\+Code} value only\+:
+\begin{DoxyItemize}
+\item If the value is not specified, it\textquotesingle{}s taken from the context source\+:
+\begin{DoxyItemize}
+\item {\ttfamily Default} -\/\texorpdfstring{$>$}{>} {\ttfamily null}
+\item {\ttfamily Account} -\/\texorpdfstring{$>$}{>} home country of the requester\textquotesingle{}s account
+\end{DoxyItemize}
+\item Explicitly set value redefines the value taken from the context source.
+\item Explicitly set {\ttfamily null} value disables country context for parsing.
+\end{DoxyItemize}
+
+{\bfseries{In the response}}\+:
+
+Country context is returned with additional attributes.
+
+{\bfseries{In particular result items}}\+:
+
+Country attribute is absent for the {\ttfamily results.\+category} response\textquotesingle{}s attribute values\+: {\ttfamily Unknown} and {\ttfamily Extension}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Country\+Context.\+cs\end{DoxyCompactItemize}

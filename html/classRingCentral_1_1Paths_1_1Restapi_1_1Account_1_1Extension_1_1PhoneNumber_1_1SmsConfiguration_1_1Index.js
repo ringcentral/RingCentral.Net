@@ -1,0 +1,4 @@
+var classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1PhoneNumber_1_1SmsConfiguration_1_1Index =
+[
+    [ "Get", "classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Extension_1_1PhoneNumber_1_1SmsConfiguration_1_1Index.html#a7267c68c49b36b2b64b90b8918973d6a", null ]
+];

@@ -1,0 +1,43 @@
+\doxysection{Ring\+Central.\+Sms\+Opt\+Record Class Reference}
+\hypertarget{classRingCentral_1_1SmsOptRecord}{}\label{classRingCentral_1_1SmsOptRecord}\index{RingCentral.SmsOptRecord@{RingCentral.SmsOptRecord}}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1SmsOptRecord_a6583f845b358925177e081fee37e2581}\label{classRingCentral_1_1SmsOptRecord_a6583f845b358925177e081fee37e2581} 
+string {\bfseries to}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone number in e.\+164 format (with \textquotesingle{}+\textquotesingle{} prefix) Required Example\+: +16501234567. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classRingCentral_1_1SmsOptRecord_a95b2efb93c96acb8d30f03e920d927f1}{opt\+Status}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Consent status of a recipient\textquotesingle{}s phone number\+: \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1SmsOptRecord_ab2f4885f09613826554422dc9ae0cc37}\label{classRingCentral_1_1SmsOptRecord_ab2f4885f09613826554422dc9ae0cc37} 
+string {\bfseries from}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phone number in e.\+164 format (with \textquotesingle{}+\textquotesingle{} prefix) Required Example\+: +16501234567. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1SmsOptRecord_accc1abd5132388f096db20c409b6d268}\label{classRingCentral_1_1SmsOptRecord_accc1abd5132388f096db20c409b6d268} 
+string {\bfseries source}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The source of the consent record Required Enum\+: Recipient, Api, Upstream, Carrier. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1SmsOptRecord_ac68bfa398e9e40d276b949cafd558638}\label{classRingCentral_1_1SmsOptRecord_ac68bfa398e9e40d276b949cafd558638} 
+string {\bfseries last\+Modified\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time when the record was last updated Required Format\+: date-\/time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-property-members}
+\Hypertarget{classRingCentral_1_1SmsOptRecord_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{classRingCentral_1_1SmsOptRecord_a95b2efb93c96acb8d30f03e920d927f1}\index{RingCentral.SmsOptRecord@{RingCentral.SmsOptRecord}!optStatus@{optStatus}}
+\index{optStatus@{optStatus}!RingCentral.SmsOptRecord@{RingCentral.SmsOptRecord}}
+\doxysubsubsection{\texorpdfstring{optStatus}{optStatus}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1SmsOptRecord_a95b2efb93c96acb8d30f03e920d927f1} 
+string Ring\+Central.\+Sms\+Opt\+Record.\+opt\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Consent status of a recipient\textquotesingle{}s phone number\+: 
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Opt\+Out} -\/ The number is opted out of receiving SMS.
+\item {\ttfamily Opt\+In} -\/ The number is opted in to receiving SMS (if it was previously opted out). Required Example\+: Opt\+Out Enum\+: Opt\+Out, Opt\+In 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Sms\+Opt\+Record.\+cs\end{DoxyCompactItemize}

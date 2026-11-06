@@ -1,0 +1,12 @@
+digraph "RingCentral.Net/Paths/TeamMessaging/V1/Notes/Lock"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_a66e53cc751a3534f7df171d53648c47 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Notes", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_a66e53cc751a3534f7df171d53648c47.html",tooltip=""]
+  dir_05b9be71fe01aae5ee68eca92ca4c48c [label="Lock", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_05b9be71fe01aae5ee68eca92ca4c48c.html",tooltip=""];
+  }
+}

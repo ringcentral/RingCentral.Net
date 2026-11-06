@@ -1,0 +1,26 @@
+digraph "RingCentral.Net/Paths/Restapi/Dictionary"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_e0b1baf5c0895f700b69bc84cc9a883f {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Restapi", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_e0b1baf5c0895f700b69bc84cc9a883f.html",tooltip=""]
+  subgraph clusterdir_5fe31065c7f927e0eadc2868f5b0bf27 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_5fe31065c7f927e0eadc2868f5b0bf27.html",tooltip=""]
+    dir_5fe31065c7f927e0eadc2868f5b0bf27 [shape=plaintext, label="Dictionary"];
+  dir_7d40d6e324e58899335084b894f99e79 [label="Brand", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_7d40d6e324e58899335084b894f99e79.html",tooltip=""];
+  dir_e31f488a230e8d363d7917948965c0cd [label="Country", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_e31f488a230e8d363d7917948965c0cd.html",tooltip=""];
+  dir_71a557f3af1f046864373fa5a0475489 [label="FaxCoverPage", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_71a557f3af1f046864373fa5a0475489.html",tooltip=""];
+  dir_58b11c92aa58bc37538d90d669c24b99 [label="Greeting", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_58b11c92aa58bc37538d90d669c24b99.html",tooltip=""];
+  dir_33e2b8706448a79859ca5f3cc5964daa [label="Language", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_33e2b8706448a79859ca5f3cc5964daa.html",tooltip=""];
+  dir_6ba06a3e3d8377f4b0783a490c7f4dc3 [label="Location", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_6ba06a3e3d8377f4b0783a490c7f4dc3.html",tooltip=""];
+  dir_4ed37cbc3da9103973118e7869b91761 [label="Permission", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_4ed37cbc3da9103973118e7869b91761.html",tooltip=""];
+  dir_6e542585d4356ecfe572cdf089c12734 [label="PermissionCategory", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_6e542585d4356ecfe572cdf089c12734.html",tooltip=""];
+  dir_4731f362d71325630cba3c9927b5d479 [label="State", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_4731f362d71325630cba3c9927b5d479.html",tooltip=""];
+  dir_e4bfb154a7b7df2e1af38b6963ca4d19 [label="Timezone", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_e4bfb154a7b7df2e1af38b6963ca4d19.html",tooltip=""];
+  dir_eb61746b28a0776e9850a348d40c4d19 [label="UserRole", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_eb61746b28a0776e9850a348d40c4d19.html",tooltip=""];
+  }
+  }
+}

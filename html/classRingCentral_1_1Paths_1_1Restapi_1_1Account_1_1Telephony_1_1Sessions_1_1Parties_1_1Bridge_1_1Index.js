@@ -1,0 +1,4 @@
+var classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Bridge_1_1Index =
+[
+    [ "Post", "classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1Telephony_1_1Sessions_1_1Parties_1_1Bridge_1_1Index.html#aeb0aa07b5d1fc968f91bf7e5102e2311", null ]
+];

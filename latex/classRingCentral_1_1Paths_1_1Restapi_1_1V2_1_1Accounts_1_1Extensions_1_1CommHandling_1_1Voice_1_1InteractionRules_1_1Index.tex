@@ -1,0 +1,89 @@
+\doxysection{Ring\+Central.\+Paths.\+Restapi.\+V2.\+Accounts.\+Extensions.\+Comm\+Handling.\+Voice.\+Interaction\+Rules.\+Index Class Reference}
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index}{}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index}\index{RingCentral.Paths.Restapi.V2.Accounts.Extensions.CommHandling.Voice.InteractionRules.Index@{RingCentral.Paths.Restapi.V2.Accounts.Extensions.CommHandling.Voice.InteractionRules.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+V2.\+Accounts.\+Extensions.\+Comm\+Handling.\+Voice.\+Interaction\+Rules.\+Index\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_a57f114338c9087468558c4ad158532ff}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_a57f114338c9087468558c4ad158532ff} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1Index}{Restapi.\+V2.\+Accounts.\+Extensions.\+Comm\+Handling.\+Voice.\+Index}} parent, string rule\+Id=null)
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_a35b1275028625e1e0aea6e7b84b188ad}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_a35b1275028625e1e0aea6e7b84b188ad} 
+string {\bfseries Path} (bool with\+Parameter=true)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CommInteractionRulesResource}{Ring\+Central.\+Comm\+Interaction\+Rules\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_ad512716ed1716e4fde2000312f2c419c}{List}} (\mbox{\hyperlink{classRingCentral_1_1ListVoiceInteractionRulesParameters}{Ring\+Central.\+List\+Voice\+Interaction\+Rules\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a list of extension\textquotesingle{}s interaction rules with the detailed information on each rule. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CommInteractionRuleResource}{Ring\+Central.\+Comm\+Interaction\+Rule\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_a91f63c32169f175c34485ed715f2153a}{Post}} (\mbox{\hyperlink{classRingCentral_1_1CommInteractionRuleCreateRequest}{Ring\+Central.\+Comm\+Interaction\+Rule\+Create\+Request}} comm\+Interaction\+Rule\+Create\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Creates the extension\textquotesingle{}s interaction rule. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CommInteractionRuleResource}{Ring\+Central.\+Comm\+Interaction\+Rule\+Resource}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_a0d6a69ce3e96e047f4318581d038e4b5}{Get}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns the extension\textquotesingle{}s interaction rule by ID specified in URL. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_ac73e36366d2c2dafe9b8de6cb963c517}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_ac73e36366d2c2dafe9b8de6cb963c517} 
+async Task$<$ string $>$ {\bfseries Delete} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes the extension\textquotesingle{}s interaction rule by ID specified in URL. HTTP Method\+: delete Endpoint\+: /restapi/v2/accounts/\{account\+Id\}/extensions/\{extension\+Id\}/comm-\/handling/voice/interaction-\/rules/\{rule\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_a63cd5120065bd4aff4fa4c9686e0d3f8}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_a63cd5120065bd4aff4fa4c9686e0d3f8} 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CommInteractionRuleResource}{Ring\+Central.\+Comm\+Interaction\+Rule\+Resource}} $>$ {\bfseries Patch} (\mbox{\hyperlink{classRingCentral_1_1CommInteractionRuleUpdateRequest}{Ring\+Central.\+Comm\+Interaction\+Rule\+Update\+Request}} comm\+Interaction\+Rule\+Update\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates the extension\textquotesingle{}s interaction rule by ID specified in URL. HTTP Method\+: patch Endpoint\+: /restapi/v2/accounts/\{account\+Id\}/extensions/\{extension\+Id\}/comm-\/handling/voice/interaction-\/rules/\{rule\+Id\} Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_a3ef6dbb0841c506c0015395f80b4d195}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_a3ef6dbb0841c506c0015395f80b4d195} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_a1935f5708d8a79e80171ab4cc5a0fd2d}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_a1935f5708d8a79e80171ab4cc5a0fd2d} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1Index}{Restapi.\+V2.\+Accounts.\+Extensions.\+Comm\+Handling.\+Voice.\+Index}} {\bfseries parent}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_ad47303a964aa7afacc8ff1a3ea592077}\label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_ad47303a964aa7afacc8ff1a3ea592077} 
+string {\bfseries rule\+Id}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_a0d6a69ce3e96e047f4318581d038e4b5}\index{RingCentral.Paths.Restapi.V2.Accounts.Extensions.CommHandling.Voice.InteractionRules.Index@{RingCentral.Paths.Restapi.V2.Accounts.Extensions.CommHandling.Voice.InteractionRules.Index}!Get@{Get}}
+\index{Get@{Get}!RingCentral.Paths.Restapi.V2.Accounts.Extensions.CommHandling.Voice.InteractionRules.Index@{RingCentral.Paths.Restapi.V2.Accounts.Extensions.CommHandling.Voice.InteractionRules.Index}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_a0d6a69ce3e96e047f4318581d038e4b5} 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CommInteractionRuleResource}{Ring\+Central.\+Comm\+Interaction\+Rule\+Resource}} $>$ Ring\+Central.\+Paths.\+Restapi.\+V2.\+Accounts.\+Extensions.\+Comm\+Handling.\+Voice.\+Interaction\+Rules.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the extension\textquotesingle{}s interaction rule by ID specified in URL. 
+
+{\itshape Interaction} rule is a call handling rule, managing voice call on the basis of the user\textquotesingle{}s {\bfseries{contact}} or a {\bfseries{phone number}} which is calling and/or being called.
+
+HTTP Method\+: get Endpoint\+: /restapi/v2/accounts/\{account\+Id\}/extensions/\{extension\+Id\}/comm-\/handling/voice/interaction-\/rules/\{rule\+Id\} Rate Limit Group\+: Medium App Permission\+: Read\+Accounts \Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_ad512716ed1716e4fde2000312f2c419c}\index{RingCentral.Paths.Restapi.V2.Accounts.Extensions.CommHandling.Voice.InteractionRules.Index@{RingCentral.Paths.Restapi.V2.Accounts.Extensions.CommHandling.Voice.InteractionRules.Index}!List@{List}}
+\index{List@{List}!RingCentral.Paths.Restapi.V2.Accounts.Extensions.CommHandling.Voice.InteractionRules.Index@{RingCentral.Paths.Restapi.V2.Accounts.Extensions.CommHandling.Voice.InteractionRules.Index}}
+\doxysubsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_ad512716ed1716e4fde2000312f2c419c} 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CommInteractionRulesResource}{Ring\+Central.\+Comm\+Interaction\+Rules\+Resource}} $>$ Ring\+Central.\+Paths.\+Restapi.\+V2.\+Accounts.\+Extensions.\+Comm\+Handling.\+Voice.\+Interaction\+Rules.\+Index.\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1ListVoiceInteractionRulesParameters}{Ring\+Central.\+List\+Voice\+Interaction\+Rules\+Parameters}}}]{query\+Params}{ = {\ttfamily null}, }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a list of extension\textquotesingle{}s interaction rules with the detailed information on each rule. 
+
+{\itshape Interaction} rule is a call handling rule, managing voice call on the basis of the user\textquotesingle{}s {\bfseries{contact}} or a {\bfseries{phone number}} which is calling and/or being called.
+
+{\bfseries{Please note\+:}} Interaction rules are applicable to the \doxylink{classRingCentral_1_1User}{User} extension types only\+: \doxylink{classRingCentral_1_1User}{User}, Digital\+User, Fax\+User, Virtual\+User.
+
+HTTP Method\+: get Endpoint\+: /restapi/v2/accounts/\{account\+Id\}/extensions/\{extension\+Id\}/comm-\/handling/voice/interaction-\/rules Rate Limit Group\+: Medium App Permission\+: Read\+Accounts \Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_a91f63c32169f175c34485ed715f2153a}\index{RingCentral.Paths.Restapi.V2.Accounts.Extensions.CommHandling.Voice.InteractionRules.Index@{RingCentral.Paths.Restapi.V2.Accounts.Extensions.CommHandling.Voice.InteractionRules.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.V2.Accounts.Extensions.CommHandling.Voice.InteractionRules.Index@{RingCentral.Paths.Restapi.V2.Accounts.Extensions.CommHandling.Voice.InteractionRules.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_1InteractionRules_1_1Index_a91f63c32169f175c34485ed715f2153a} 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1CommInteractionRuleResource}{Ring\+Central.\+Comm\+Interaction\+Rule\+Resource}} $>$ Ring\+Central.\+Paths.\+Restapi.\+V2.\+Accounts.\+Extensions.\+Comm\+Handling.\+Voice.\+Interaction\+Rules.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1CommInteractionRuleCreateRequest}{Ring\+Central.\+Comm\+Interaction\+Rule\+Create\+Request}}}]{comm\+Interaction\+Rule\+Create\+Request}{, }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates the extension\textquotesingle{}s interaction rule. 
+
+{\itshape Interaction} rule is a call handling rule, managing voice call on the basis of the user\textquotesingle{}s {\bfseries{contact}} or a {\bfseries{phone number}} which is calling and/or being called.
+
+{\bfseries{Please note\+:}} Interaction rules are applicable to the \doxylink{classRingCentral_1_1User}{User} extension types only\+: \doxylink{classRingCentral_1_1User}{User}, Digital\+User, Fax\+User, Virtual\+User.
+
+HTTP Method\+: post Endpoint\+: /restapi/v2/accounts/\{account\+Id\}/extensions/\{extension\+Id\}/comm-\/handling/voice/interaction-\/rules Rate Limit Group\+: Medium App Permission\+: Edit\+Extensions 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+V2/\+Accounts/\+Extensions/\+Comm\+Handling/\+Voice/\+Interaction\+Rules/Index.\+cs\end{DoxyCompactItemize}

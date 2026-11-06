@@ -1,0 +1,18 @@
+digraph "RingCentral.Net/Paths/Restapi/Account/Telephony"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_a6ffe6393bdaec40200f64f834a93c35 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Account", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_a6ffe6393bdaec40200f64f834a93c35.html",tooltip=""]
+  subgraph clusterdir_6a865685fa3d73414310efb4fe3302a2 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_6a865685fa3d73414310efb4fe3302a2.html",tooltip=""]
+    dir_6a865685fa3d73414310efb4fe3302a2 [shape=plaintext, label="Telephony"];
+  dir_1377f9b3a1d56ec89bb5a4fb296cd72f [label="CallOut", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_1377f9b3a1d56ec89bb5a4fb296cd72f.html",tooltip=""];
+  dir_4ac5a16b65f0fdb723b305922f66c200 [label="Conference", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_4ac5a16b65f0fdb723b305922f66c200.html",tooltip=""];
+  dir_34c7ba66b0c6b7c855051a2c8e0c03c3 [label="Sessions", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_34c7ba66b0c6b7c855051a2c8e0c03c3.html",tooltip=""];
+  }
+  }
+}

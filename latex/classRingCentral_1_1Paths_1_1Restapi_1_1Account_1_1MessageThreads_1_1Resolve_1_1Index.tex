@@ -1,0 +1,48 @@
+\doxysection{Ring\+Central.\+Paths.\+Restapi.\+Account.\+Message\+Threads.\+Resolve.\+Index Class Reference}
+\hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Resolve_1_1Index}{}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Resolve_1_1Index}\index{RingCentral.Paths.Restapi.Account.MessageThreads.Resolve.Index@{RingCentral.Paths.Restapi.Account.MessageThreads.Resolve.Index}}
+
+
+Collaboration diagram for Ring\+Central.\+Paths.\+Restapi.\+Account.\+Message\+Threads.\+Resolve.\+Index\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Resolve_1_1Index_ad43c5be7ea4c895bc7f1be6894062f92}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Resolve_1_1Index_ad43c5be7ea4c895bc7f1be6894062f92} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Index}{Restapi.\+Account.\+Message\+Threads.\+Index}} parent)
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Resolve_1_1Index_a7d51ca2ea38786be40f7dbb11699466a}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Resolve_1_1Index_a7d51ca2ea38786be40f7dbb11699466a} 
+string {\bfseries Path} (bool with\+Parameter=false)
+\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1MessageThread}{Ring\+Central.\+Message\+Thread}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Resolve_1_1Index_a2847160dbdab1782ea5fcd5a512f479f}{Post}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Resolves a message thread (sets the status to {\ttfamily Resolved}). The current status of the thread must be {\ttfamily Open} for this operation to succeed. The authorized user must be in the list of thread monitors, otherwise the API returns a 403 error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Resolve_1_1Index_abbb07e3d42b983ae66c622cc72434880}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Resolve_1_1Index_abbb07e3d42b983ae66c622cc72434880} 
+\mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Resolve_1_1Index_af52e5a9c5f34aaef48dfbee7c11bef0e}\label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Resolve_1_1Index_af52e5a9c5f34aaef48dfbee7c11bef0e} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Index}{Restapi.\+Account.\+Message\+Threads.\+Index}} {\bfseries parent}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Resolve_1_1Index_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Resolve_1_1Index_a2847160dbdab1782ea5fcd5a512f479f}\index{RingCentral.Paths.Restapi.Account.MessageThreads.Resolve.Index@{RingCentral.Paths.Restapi.Account.MessageThreads.Resolve.Index}!Post@{Post}}
+\index{Post@{Post}!RingCentral.Paths.Restapi.Account.MessageThreads.Resolve.Index@{RingCentral.Paths.Restapi.Account.MessageThreads.Resolve.Index}}
+\doxysubsubsection{\texorpdfstring{Post()}{Post()}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1Paths_1_1Restapi_1_1Account_1_1MessageThreads_1_1Resolve_1_1Index_a2847160dbdab1782ea5fcd5a512f479f} 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1MessageThread}{Ring\+Central.\+Message\+Thread}} $>$ Ring\+Central.\+Paths.\+Restapi.\+Account.\+Message\+Threads.\+Resolve.\+Index.\+Post (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resolves a message thread (sets the status to {\ttfamily Resolved}). The current status of the thread must be {\ttfamily Open} for this operation to succeed. The authorized user must be in the list of thread monitors, otherwise the API returns a 403 error. 
+
+Once the thread is resolved its {\ttfamily assignee} attribute is cleared automatically.
+
+HTTP Method\+: post Endpoint\+: /restapi/\{api\+Version\}/account/\{account\+Id\}/message-\/threads/\{thread\+Id\}/resolve Rate Limit Group\+: Medium App Permission\+: SMS 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Paths/\+Restapi/\+Account/\+Message\+Threads/\+Resolve/Index.\+cs\end{DoxyCompactItemize}

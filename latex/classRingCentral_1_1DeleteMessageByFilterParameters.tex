@@ -1,58 +1,32 @@
-\hypertarget{classRingCentral_1_1DeleteMessageByFilterParameters}{}\doxysection{Ring\+Central.\+Delete\+Message\+By\+Filter\+Parameters Class Reference}
-\label{classRingCentral_1_1DeleteMessageByFilterParameters}\index{RingCentral.DeleteMessageByFilterParameters@{RingCentral.DeleteMessageByFilterParameters}}
+\doxysection{Ring\+Central.\+Delete\+Message\+By\+Filter\+Parameters Class Reference}
+\hypertarget{classRingCentral_1_1DeleteMessageByFilterParameters}{}\label{classRingCentral_1_1DeleteMessageByFilterParameters}\index{RingCentral.DeleteMessageByFilterParameters@{RingCentral.DeleteMessageByFilterParameters}}
 
 
-Query parameters for operation delete\+Message\+By\+Filter  
+Query parameters for operation delete\+Message\+By\+Filter.  
 
 
-\doxysubsection*{Properties}
+\doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classRingCentral_1_1DeleteMessageByFilterParameters_afd71ab73de8634569c3171383ee82481}{conversation\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
-string \mbox{\hyperlink{classRingCentral_1_1DeleteMessageByFilterParameters_acca9ccdfe9aca9290b8ca44ca3048d58}{date\+To}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Messages received earlier then the date specified will be deleted. The default value is current date/time Format\+: date-\/time \end{DoxyCompactList}\item 
-string \mbox{\hyperlink{classRingCentral_1_1DeleteMessageByFilterParameters_a4f0cf74c6f733af86a6b43e23a90968d}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Type of messages to be deleted Default\+: All Enum\+: Fax, SMS, Voice\+Mail, Pager, Text, All \end{DoxyCompactList}\end{DoxyCompactItemize}
+\Hypertarget{classRingCentral_1_1DeleteMessageByFilterParameters_a68c3e80917b7b0560bf694bd5079ea47}\label{classRingCentral_1_1DeleteMessageByFilterParameters_a68c3e80917b7b0560bf694bd5079ea47} 
+string\mbox{[}$\,$\mbox{]} {\bfseries owner}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filters shared messages based on the owner extension. Supported if the \textquotesingle{}Shared\+Voicemail\textquotesingle{} or \textquotesingle{}Call\+Queue\+Sms\+Recipient\textquotesingle{} feature is enabled Default\+: Personal Enum\+: Any, Personal, Shared. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1DeleteMessageByFilterParameters_afd71ab73de8634569c3171383ee82481}\label{classRingCentral_1_1DeleteMessageByFilterParameters_afd71ab73de8634569c3171383ee82481} 
+string\mbox{[}$\,$\mbox{]} {\bfseries conversation\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em ID(s) of a conversation to delete. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1DeleteMessageByFilterParameters_acca9ccdfe9aca9290b8ca44ca3048d58}\label{classRingCentral_1_1DeleteMessageByFilterParameters_acca9ccdfe9aca9290b8ca44ca3048d58} 
+string {\bfseries date\+To}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Messages received earlier then the date specified will be deleted. The default value is current date/time Format\+: date-\/time. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1DeleteMessageByFilterParameters_a4f0cf74c6f733af86a6b43e23a90968d}\label{classRingCentral_1_1DeleteMessageByFilterParameters_a4f0cf74c6f733af86a6b43e23a90968d} 
+string {\bfseries type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of messages to be deleted Default\+: All Enum\+: Fax, SMS, Voice\+Mail, Pager, Text, All. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1DeleteMessageByFilterParameters_a95a8d0feb02b3a3cf3a4ca98f274508b}\label{classRingCentral_1_1DeleteMessageByFilterParameters_a95a8d0feb02b3a3cf3a4ca98f274508b} 
+bool? {\bfseries purge}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If the value is {\ttfamily true}, then the messages are purged immediately with all the attachments. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Query parameters for operation delete\+Message\+By\+Filter 
-
-
-
-\doxysubsection{Property Documentation}
-\mbox{\Hypertarget{classRingCentral_1_1DeleteMessageByFilterParameters_afd71ab73de8634569c3171383ee82481}\label{classRingCentral_1_1DeleteMessageByFilterParameters_afd71ab73de8634569c3171383ee82481}} 
-\index{RingCentral.DeleteMessageByFilterParameters@{RingCentral.DeleteMessageByFilterParameters}!conversationId@{conversationId}}
-\index{conversationId@{conversationId}!RingCentral.DeleteMessageByFilterParameters@{RingCentral.DeleteMessageByFilterParameters}}
-\doxysubsubsection{\texorpdfstring{conversationId}{conversationId}}
-{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Ring\+Central.\+Delete\+Message\+By\+Filter\+Parameters.\+conversation\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
-
-
-
-
-
-\mbox{\Hypertarget{classRingCentral_1_1DeleteMessageByFilterParameters_acca9ccdfe9aca9290b8ca44ca3048d58}\label{classRingCentral_1_1DeleteMessageByFilterParameters_acca9ccdfe9aca9290b8ca44ca3048d58}} 
-\index{RingCentral.DeleteMessageByFilterParameters@{RingCentral.DeleteMessageByFilterParameters}!dateTo@{dateTo}}
-\index{dateTo@{dateTo}!RingCentral.DeleteMessageByFilterParameters@{RingCentral.DeleteMessageByFilterParameters}}
-\doxysubsubsection{\texorpdfstring{dateTo}{dateTo}}
-{\footnotesize\ttfamily string Ring\+Central.\+Delete\+Message\+By\+Filter\+Parameters.\+date\+To\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
-
-
-
-Messages received earlier then the date specified will be deleted. The default value is current date/time Format\+: date-\/time 
-
-\mbox{\Hypertarget{classRingCentral_1_1DeleteMessageByFilterParameters_a4f0cf74c6f733af86a6b43e23a90968d}\label{classRingCentral_1_1DeleteMessageByFilterParameters_a4f0cf74c6f733af86a6b43e23a90968d}} 
-\index{RingCentral.DeleteMessageByFilterParameters@{RingCentral.DeleteMessageByFilterParameters}!type@{type}}
-\index{type@{type}!RingCentral.DeleteMessageByFilterParameters@{RingCentral.DeleteMessageByFilterParameters}}
-\doxysubsubsection{\texorpdfstring{type}{type}}
-{\footnotesize\ttfamily string Ring\+Central.\+Delete\+Message\+By\+Filter\+Parameters.\+type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
-
-
-
-Type of messages to be deleted Default\+: All Enum\+: Fax, SMS, Voice\+Mail, Pager, Text, All 
-
-
+Query parameters for operation delete\+Message\+By\+Filter. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

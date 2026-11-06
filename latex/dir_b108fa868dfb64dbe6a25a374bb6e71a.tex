@@ -1,0 +1,28 @@
+\doxysection{Ring\+Central.\+Net.\+Authorize\+Uri Directory Reference}
+\hypertarget{dir_b108fa868dfb64dbe6a25a374bb6e71a}{}\label{dir_b108fa868dfb64dbe6a25a374bb6e71a}\index{RingCentral.Net.AuthorizeUri Directory Reference@{RingCentral.Net.AuthorizeUri Directory Reference}}
+
+
+\doxysubsection{Detailed Description}
+\hypertarget{dir_b108fa868dfb64dbe6a25a374bb6e71a_autotoc_md519}{}\doxysubsection{\texorpdfstring{Authorize URI extension}{Authorize URI extension}}\label{dir_b108fa868dfb64dbe6a25a374bb6e71a_autotoc_md519}
+This extension provides utility methods to build URI for OAuth authorization purpose.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ rc\ =\ \textcolor{keyword}{new}\ RestClient(...);}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ authorizeUriExtension\ =\ \textcolor{keyword}{new}\ AuthorizeUriExtension(...);}
+\DoxyCodeLine{await\ rc.InstallExtension(authorizeUriExtension);}
+\DoxyCodeLine{var\ uri\ =\ authorizeUriExtension.BuildUri(\textcolor{keyword}{new}\ AuthorizeRequest}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ redirect\_uri\ =\ \textcolor{stringliteral}{"{}http://localhost:3000/callback"{}},}
+\DoxyCodeLine{\ \ \ \ state\ =\ \textcolor{stringliteral}{"{}myState"{}}}
+\DoxyCodeLine{\});}
+
+\end{DoxyCode}
+\hypertarget{dir_b108fa868dfb64dbe6a25a374bb6e71a_autotoc_md520}{}\doxysubsection{\texorpdfstring{PKCE}{PKCE}}\label{dir_b108fa868dfb64dbe6a25a374bb6e71a_autotoc_md520}
+Please refer to the \href{https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/authorize-uri\#pkce}{\texttt{Type\+Script SDK documentation}} for more information. These two SDKs are very similar.
+
+In short, when you invoke the {\ttfamily Build\+Uri} method, if you can pass in a {\ttfamily code\+\_\+challenge\+\_\+method} property with value {\ttfamily "{}S256"{}}, the method will auto generate {\ttfamily code\+Verifer} and {\ttfamily code\+\_\+challenge} for you. code\+Verifier is accessible via {\ttfamily authorize\+Uri\+Extension.\+code\+Verifier} after the method is called. {\ttfamily code\+\_\+challenge} is included in the URI.
+
+Please note that, if you are using PKCE, you should not specify {\ttfamily client\+Secret}, leave it as {\ttfamily null}. It will not break your app if you specify a {\ttfamily client\+Secret}, but it defeats the purpose of PKCE.\hypertarget{dir_b108fa868dfb64dbe6a25a374bb6e71a_autotoc_md521}{}\doxysubsection{\texorpdfstring{More documentation}{More documentation}}\label{dir_b108fa868dfb64dbe6a25a374bb6e71a_autotoc_md521}
+This extension is inspired by \href{https://github.com/ringcentral/ringcentral-extensible/tree/master/packages/extensions/authorize-uri}{\texttt{its Type\+Script counterpart}} , check its documentation for more information. 

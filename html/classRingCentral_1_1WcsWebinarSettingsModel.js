@@ -1,0 +1,25 @@
+var classRingCentral_1_1WcsWebinarSettingsModel =
+[
+    [ "artifactsAccessAuthentication", "classRingCentral_1_1WcsWebinarSettingsModel.html#aa2572aacf9e3764db5e9c4f5ecfd0f7c", null ],
+    [ "attendeeAuthentication", "classRingCentral_1_1WcsWebinarSettingsModel.html#a3d694bd4133b861f6c31d322fafe18d9", null ],
+    [ "autoRecord", "classRingCentral_1_1WcsWebinarSettingsModel.html#afa309c72e0451301a1982c1092fcdb71", null ],
+    [ "externalLivestreamEnabled", "classRingCentral_1_1WcsWebinarSettingsModel.html#a9f9f6dd363707b1c65ae7ad6f8f84e76", null ],
+    [ "moderatedQnaEnabled", "classRingCentral_1_1WcsWebinarSettingsModel.html#ad7bfd0e5d0a8023ccb24952a38578e87", null ],
+    [ "panelistAuthentication", "classRingCentral_1_1WcsWebinarSettingsModel.html#a0c04b4b3996a27d45ba563a3c1c5dbb8", null ],
+    [ "panelistMuteControlEnabled", "classRingCentral_1_1WcsWebinarSettingsModel.html#a81000df70dd2058db7c7e6622d3f9ef7", null ],
+    [ "panelistScreenSharingEnabled", "classRingCentral_1_1WcsWebinarSettingsModel.html#acac8cf92b03fce359d856d64d86bfdb5", null ],
+    [ "panelistVideoEnabled", "classRingCentral_1_1WcsWebinarSettingsModel.html#aba929d8d59dc7fc3331dd28e6035d897", null ],
+    [ "panelistWaitingRoom", "classRingCentral_1_1WcsWebinarSettingsModel.html#af9b86cdf15fc7ab18036a8a78a6524c6", null ],
+    [ "password", "classRingCentral_1_1WcsWebinarSettingsModel.html#a6bf3323e3244bea80ebc88403492b13f", null ],
+    [ "pastSessionDeletionEnabled", "classRingCentral_1_1WcsWebinarSettingsModel.html#aa1052e2f8d2e31398dec13c7278bb92b", null ],
+    [ "pollsAnonymousEnabled", "classRingCentral_1_1WcsWebinarSettingsModel.html#ae39004315706620a9a6f244899b7d0fe", null ],
+    [ "pollsEnabled", "classRingCentral_1_1WcsWebinarSettingsModel.html#a401b1026ce2a94be6d456dfce42bd30d", null ],
+    [ "postWebinarRedirectUri", "classRingCentral_1_1WcsWebinarSettingsModel.html#a1c5299b27887f804d7994b23c415e792", null ],
+    [ "pstnEnabled", "classRingCentral_1_1WcsWebinarSettingsModel.html#af1aae7436689f1855a82e5570f310a41", null ],
+    [ "qnaAnonymousEnabled", "classRingCentral_1_1WcsWebinarSettingsModel.html#a52fdad4a06ab1c3f277637b624d7c548", null ],
+    [ "qnaEnabled", "classRingCentral_1_1WcsWebinarSettingsModel.html#ac3e538c1d5f2153cffdffb0401a73ffd", null ],
+    [ "recordingDownloadEnabled", "classRingCentral_1_1WcsWebinarSettingsModel.html#a363486a4be5723708d8c40bb75e29de9", null ],
+    [ "recordingEnabled", "classRingCentral_1_1WcsWebinarSettingsModel.html#aa7b8d76296dc6b3afb0671f4d14c0fcf", null ],
+    [ "recordingSharingEnabled", "classRingCentral_1_1WcsWebinarSettingsModel.html#a1a6c13a9496d1226544e5cd49d4c87ff", null ],
+    [ "registrationEnabled", "classRingCentral_1_1WcsWebinarSettingsModel.html#acdfb6cd9428b0bac5f9374f53b89f2de", null ]
+];

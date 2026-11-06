@@ -1,0 +1,4 @@
+var namespaceRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice475ed33899553eba12984511c96efbc =
+[
+    [ "Index", "classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_46df82da5c271a5b9e14524d8d246317.html", "classRingCentral_1_1Paths_1_1Restapi_1_1V2_1_1Accounts_1_1Extensions_1_1CommHandling_1_1Voice_1_46df82da5c271a5b9e14524d8d246317" ]
+];

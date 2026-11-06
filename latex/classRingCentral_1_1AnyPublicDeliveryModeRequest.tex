@@ -1,0 +1,27 @@
+\doxysection{Ring\+Central.\+Any\+Public\+Delivery\+Mode\+Request Class Reference}
+\hypertarget{classRingCentral_1_1AnyPublicDeliveryModeRequest}{}\label{classRingCentral_1_1AnyPublicDeliveryModeRequest}\index{RingCentral.AnyPublicDeliveryModeRequest@{RingCentral.AnyPublicDeliveryModeRequest}}
+
+
+Notification delivery transport information.  
+
+
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classRingCentral_1_1AnyPublicDeliveryModeRequest_ae7ce0be74f1bc98957080c75d2daee49}\label{classRingCentral_1_1AnyPublicDeliveryModeRequest_ae7ce0be74f1bc98957080c75d2daee49} 
+string {\bfseries transport\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The transport type for this subscription, or the channel by which an app should be notified of an event Required Enum\+: Web\+Hook. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1AnyPublicDeliveryModeRequest_ac8b9dc5137f87c157d71a2882e6cfcac}\label{classRingCentral_1_1AnyPublicDeliveryModeRequest_ac8b9dc5137f87c157d71a2882e6cfcac} 
+string {\bfseries address}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The URL to which notifications should be delivered. This is only applicable for the {\ttfamily Web\+Hook} transport type, for which it is a required field. Required Format\+: uri Example\+: \href{https://acme.com/myservice/webhook}{\texttt{https\+://acme.\+com/myservice/webhook}}. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1AnyPublicDeliveryModeRequest_aed9ad55506840f87e03c00fedb415944}\label{classRingCentral_1_1AnyPublicDeliveryModeRequest_aed9ad55506840f87e03c00fedb415944} 
+string {\bfseries verification\+Token}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An optional validation token used to verify the authenticity of the incoming webhook. Applicable only for the {\ttfamily Web\+Hook} transport type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Notification delivery transport information. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Ring\+Central.\+Net/\+Definitions/Any\+Public\+Delivery\+Mode\+Request.\+cs\end{DoxyCompactItemize}

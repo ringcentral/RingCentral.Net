@@ -1,74 +1,68 @@
-\hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index}{}\doxysection{Ring\+Central.\+Paths.\+Rcvideo.\+V2.\+Bridges.\+Index Class Reference}
-\label{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index}\index{RingCentral.Paths.Rcvideo.V2.Bridges.Index@{RingCentral.Paths.Rcvideo.V2.Bridges.Index}}
+\doxysection{Ring\+Central.\+Paths.\+Rcvideo.\+V2.\+Bridges.\+Index Class Reference}
+\hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index}{}\label{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index}\index{RingCentral.Paths.Rcvideo.V2.Bridges.Index@{RingCentral.Paths.Rcvideo.V2.Bridges.Index}}
 
 
 Collaboration diagram for Ring\+Central.\+Paths.\+Rcvideo.\+V2.\+Bridges.\+Index\+:
 % FIG 0
-\doxysubsection*{Public Member Functions}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_a185b25dddd084e97e0053b0d26024bb8}\label{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_a185b25dddd084e97e0053b0d26024bb8}} 
-{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Index}{V2.\+Index}} parent, string bridge\+Id=null)
+\Hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_a765f74a0ddd566b589076e21f9d0e229}\label{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_a765f74a0ddd566b589076e21f9d0e229} 
+{\bfseries Index} (\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Index}{Rcvideo.\+V2.\+Index}} parent, string bridge\+Id=null)
 \item 
-\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_a2154269b11e8bf49733e759554680f57}\label{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_a2154269b11e8bf49733e759554680f57}} 
+\Hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_a2154269b11e8bf49733e759554680f57}\label{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_a2154269b11e8bf49733e759554680f57} 
 string {\bfseries Path} (bool with\+Parameter=true)
 \item 
-async Task$<$ \mbox{\hyperlink{classRingCentral_1_1BridgeResponse}{Bridge\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_af16832cd1d61a6787aa7b23e3a03de61}{Get}} (\mbox{\hyperlink{classRingCentral_1_1GetBridgeParameters}{Get\+Bridge\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
-\begin{DoxyCompactList}\small\item\em Returns a bridge by {\bfseries{bridge\+Id}} identifier. HTTP Method\+: get Endpoint\+: /rcvideo/v2/bridges/\{bridge\+Id\} Rate Limit Group\+: Medium App Permission\+: Video \end{DoxyCompactList}\item 
-async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_a65b602e725aba088597f4d6ca1943a6f}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
-\begin{DoxyCompactList}\small\item\em Deletes a bridge by {\bfseries{bridge\+Id}} identifier. Deletion can only be done by bridge owner, his delegate or any user who has the {\bfseries{Super Admin}} privilege. HTTP Method\+: delete Endpoint\+: /rcvideo/v2/bridges/\{bridge\+Id\} Rate Limit Group\+: Medium App Permission\+: Video \end{DoxyCompactList}\item 
-async Task$<$ \mbox{\hyperlink{classRingCentral_1_1BridgeResponse}{Bridge\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_aedce18057241d0f65819192cc9b42250}{Patch}} (\mbox{\hyperlink{classRingCentral_1_1UpdateBridgeRequest}{Update\+Bridge\+Request}} update\+Bridge\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
-\begin{DoxyCompactList}\small\item\em Updates a bridge by {\bfseries{bridge\+Id}} identifier. The request body should contain JSON object with updating properties. Update can only be done by bridge owner, his delegate or any user who has the {\bfseries{Super Admin}} privilege. HTTP Method\+: patch Endpoint\+: /rcvideo/v2/bridges/\{bridge\+Id\} Rate Limit Group\+: Medium App Permission\+: Video \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_ad99285bb23f68822423e0cfe9747a5bb}\label{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_ad99285bb23f68822423e0cfe9747a5bb}} 
-\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Pin_1_1Index}{Pin.\+Index}} {\bfseries Pin} ()
+\Hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_a9198d197a566424e9e5529663a9f9a1b}\label{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_a9198d197a566424e9e5529663a9f9a1b} 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1BridgeResponse}{Ring\+Central.\+Bridge\+Response}} $>$ {\bfseries Get} (\mbox{\hyperlink{classRingCentral_1_1GetBridgeParameters}{Ring\+Central.\+Get\+Bridge\+Parameters}} query\+Params=null, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Returns a bridge by {\ttfamily bridge\+Id} identifier. HTTP Method\+: get Endpoint\+: /rcvideo/v2/bridges/\{bridge\+Id\} Rate Limit Group\+: Medium App Permission\+: Video. \end{DoxyCompactList}\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_ab971ee39ffaded93c9565a30ca15b234}{Delete}} (\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Deletes a bridge by {\ttfamily bridge\+Id} identifier. Deletion can only be done by the bridge owner, an owner\textquotesingle{}s delegate or any user who has the {\bfseries{Super Admin}} privilege. \end{DoxyCompactList}\item 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1BridgeResponse}{Ring\+Central.\+Bridge\+Response}} $>$ \mbox{\hyperlink{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_ac607f9f1ce934f524fa32a423eae18a1}{Patch}} (\mbox{\hyperlink{classRingCentral_1_1UpdateBridgeRequest}{Ring\+Central.\+Update\+Bridge\+Request}} update\+Bridge\+Request, \mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}} rest\+Request\+Config=null)
+\begin{DoxyCompactList}\small\item\em Updates a bridge by {\ttfamily bridge\+Id} identifier. The request body should contain JSON object with updating properties. Update can only be done by the bridge owner, an owner\textquotesingle{}s delegate or any user who has the {\bfseries{Super Admin}} privilege. \end{DoxyCompactList}\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_acf5ee7ac581c404def4483e1f31b45ee}\label{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_acf5ee7ac581c404def4483e1f31b45ee} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Pin_1_1Index}{Rcvideo.\+V2.\+Bridges.\+Pin.\+Index}} {\bfseries Pin} ()
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
+\doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_aa24858c228f3d827bc1a45e4c8db0a80}\label{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_aa24858c228f3d827bc1a45e4c8db0a80}} 
-string {\bfseries bridge\+Id}
-\item 
-\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_aa3842dbc0a18eb562ef1639867263f4c}\label{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_aa3842dbc0a18eb562ef1639867263f4c}} 
-\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Index}{V2.\+Index}} {\bfseries parent}
-\item 
-\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_acfdff4df9040e45ce1efd99b32772f43}\label{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_acfdff4df9040e45ce1efd99b32772f43}} 
+\Hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_acfdff4df9040e45ce1efd99b32772f43}\label{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_acfdff4df9040e45ce1efd99b32772f43} 
 \mbox{\hyperlink{classRingCentral_1_1RestClient}{Rest\+Client}} {\bfseries rc}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_a3e22aba4c4ffada9955731f9d8037000}\label{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_a3e22aba4c4ffada9955731f9d8037000} 
+\mbox{\hyperlink{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Index}{Rcvideo.\+V2.\+Index}} {\bfseries parent}
+\item 
+\Hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_aa24858c228f3d827bc1a45e4c8db0a80}\label{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_aa24858c228f3d827bc1a45e4c8db0a80} 
+string {\bfseries bridge\+Id}
 \end{DoxyCompactItemize}
 
 
+\label{doc-func-members}
+\Hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_a65b602e725aba088597f4d6ca1943a6f}\label{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_a65b602e725aba088597f4d6ca1943a6f}} 
-\index{RingCentral.Paths.Rcvideo.V2.Bridges.Index@{RingCentral.Paths.Rcvideo.V2.Bridges.Index}!Delete@{Delete}}
+\Hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_ab971ee39ffaded93c9565a30ca15b234}\index{RingCentral.Paths.Rcvideo.V2.Bridges.Index@{RingCentral.Paths.Rcvideo.V2.Bridges.Index}!Delete@{Delete}}
 \index{Delete@{Delete}!RingCentral.Paths.Rcvideo.V2.Bridges.Index@{RingCentral.Paths.Rcvideo.V2.Bridges.Index}}
 \doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
-{\footnotesize\ttfamily async Task$<$string$>$ Ring\+Central.\+Paths.\+Rcvideo.\+V2.\+Bridges.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_ab971ee39ffaded93c9565a30ca15b234} 
+async Task$<$ string $>$ Ring\+Central.\+Paths.\+Rcvideo.\+V2.\+Bridges.\+Index.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Deletes a bridge by {\bfseries{bridge\+Id}} identifier. Deletion can only be done by bridge owner, his delegate or any user who has the {\bfseries{Super Admin}} privilege. HTTP Method\+: delete Endpoint\+: /rcvideo/v2/bridges/\{bridge\+Id\} Rate Limit Group\+: Medium App Permission\+: Video 
+Deletes a bridge by {\ttfamily bridge\+Id} identifier. Deletion can only be done by the bridge owner, an owner\textquotesingle{}s delegate or any user who has the {\bfseries{Super Admin}} privilege. 
 
-\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_af16832cd1d61a6787aa7b23e3a03de61}\label{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_af16832cd1d61a6787aa7b23e3a03de61}} 
-\index{RingCentral.Paths.Rcvideo.V2.Bridges.Index@{RingCentral.Paths.Rcvideo.V2.Bridges.Index}!Get@{Get}}
-\index{Get@{Get}!RingCentral.Paths.Rcvideo.V2.Bridges.Index@{RingCentral.Paths.Rcvideo.V2.Bridges.Index}}
-\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
-{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1BridgeResponse}{Bridge\+Response}}$>$ Ring\+Central.\+Paths.\+Rcvideo.\+V2.\+Bridges.\+Index.\+Get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1GetBridgeParameters}{Get\+Bridge\+Parameters}}}]{query\+Params = {\ttfamily null},  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Returns a bridge by {\bfseries{bridge\+Id}} identifier. HTTP Method\+: get Endpoint\+: /rcvideo/v2/bridges/\{bridge\+Id\} Rate Limit Group\+: Medium App Permission\+: Video 
-
-\mbox{\Hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_aedce18057241d0f65819192cc9b42250}\label{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_aedce18057241d0f65819192cc9b42250}} 
-\index{RingCentral.Paths.Rcvideo.V2.Bridges.Index@{RingCentral.Paths.Rcvideo.V2.Bridges.Index}!Patch@{Patch}}
+HTTP Method\+: delete Endpoint\+: /rcvideo/v2/bridges/\{bridge\+Id\} Rate Limit Group\+: Medium App Permission\+: Video \Hypertarget{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_ac607f9f1ce934f524fa32a423eae18a1}\index{RingCentral.Paths.Rcvideo.V2.Bridges.Index@{RingCentral.Paths.Rcvideo.V2.Bridges.Index}!Patch@{Patch}}
 \index{Patch@{Patch}!RingCentral.Paths.Rcvideo.V2.Bridges.Index@{RingCentral.Paths.Rcvideo.V2.Bridges.Index}}
 \doxysubsubsection{\texorpdfstring{Patch()}{Patch()}}
-{\footnotesize\ttfamily async Task$<$\mbox{\hyperlink{classRingCentral_1_1BridgeResponse}{Bridge\+Response}}$>$ Ring\+Central.\+Paths.\+Rcvideo.\+V2.\+Bridges.\+Index.\+Patch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1UpdateBridgeRequest}{Update\+Bridge\+Request}}}]{update\+Bridge\+Request,  }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{classRingCentral_1_1Paths_1_1Rcvideo_1_1V2_1_1Bridges_1_1Index_ac607f9f1ce934f524fa32a423eae18a1} 
+async Task$<$ \mbox{\hyperlink{classRingCentral_1_1BridgeResponse}{Ring\+Central.\+Bridge\+Response}} $>$ Ring\+Central.\+Paths.\+Rcvideo.\+V2.\+Bridges.\+Index.\+Patch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRingCentral_1_1UpdateBridgeRequest}{Ring\+Central.\+Update\+Bridge\+Request}}}]{update\+Bridge\+Request}{, }\item[{\mbox{\hyperlink{classRingCentral_1_1RestRequestConfig}{Rest\+Request\+Config}}}]{rest\+Request\+Config}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Updates a bridge by {\bfseries{bridge\+Id}} identifier. The request body should contain JSON object with updating properties. Update can only be done by bridge owner, his delegate or any user who has the {\bfseries{Super Admin}} privilege. HTTP Method\+: patch Endpoint\+: /rcvideo/v2/bridges/\{bridge\+Id\} Rate Limit Group\+: Medium App Permission\+: Video 
+Updates a bridge by {\ttfamily bridge\+Id} identifier. The request body should contain JSON object with updating properties. Update can only be done by the bridge owner, an owner\textquotesingle{}s delegate or any user who has the {\bfseries{Super Admin}} privilege. 
 
+HTTP Method\+: patch Endpoint\+: /rcvideo/v2/bridges/\{bridge\+Id\} Rate Limit Group\+: Medium App Permission\+: Video 
 
-
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Ring\+Central.\+Net/\+Paths/\+Rcvideo/\+V2/\+Bridges/Index.\+cs\end{DoxyCompactItemize}
+Ring\+Central.\+Net/\+Paths/\+Rcvideo/\+V2/\+Bridges/Index.\+cs\item 
+Ring\+Central.\+Net/\+Paths/\+Rcvideo/\+V2/\+Bridges/\+Pin/Index.\+cs\end{DoxyCompactItemize}

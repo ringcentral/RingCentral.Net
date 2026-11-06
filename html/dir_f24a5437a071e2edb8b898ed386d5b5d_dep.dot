@@ -1,0 +1,12 @@
+digraph "RingCentral.Net/Paths/Restapi/Account/A2pSms/Statuses"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_2d35393273de7e8cf69e313a4e212195 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="A2pSms", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_2d35393273de7e8cf69e313a4e212195.html",tooltip=""]
+  dir_f24a5437a071e2edb8b898ed386d5b5d [label="Statuses", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_f24a5437a071e2edb8b898ed386d5b5d.html",tooltip=""];
+  }
+}

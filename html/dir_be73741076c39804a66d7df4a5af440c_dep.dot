@@ -1,0 +1,12 @@
+digraph "RingCentral.Net/Paths/Restapi/Account/BusinessAddress"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_a6ffe6393bdaec40200f64f834a93c35 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Account", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_a6ffe6393bdaec40200f64f834a93c35.html",tooltip=""]
+  dir_be73741076c39804a66d7df4a5af440c [label="BusinessAddress", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_be73741076c39804a66d7df4a5af440c.html",tooltip=""];
+  }
+}
